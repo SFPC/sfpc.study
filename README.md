@@ -1,5 +1,5 @@
-# sfpc-notion
-A simple Node-Express app testing out using the notion api to load page content from notion.
+# sfpc.study
+Working draft on new sfpc.study homepage. A Node+Express app using jQuery and the Notion API to dynamically load content.
 
 To Set up:
 - clone this repo into a folder.
