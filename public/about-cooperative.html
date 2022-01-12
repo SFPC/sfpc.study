@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>School for Poetic Computation</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="School for Poetic Computation">
+    <meta name="description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://sfpc.io/">
+    <meta property="og:title" content="SFPC Summer 2021 Cocoon">
+    <meta property="og:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="og:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://sfpc.io/">
+    <meta property="twitter:title" content="SFPC Summer 2021 Cocoon">
+    <meta property="twitter:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="twitter:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
+    <link href="styles.css" rel="stylesheet">
+    <link id="mode" rel="stylesheet" type="text/css" href="crt.css" />
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="animsition.css">
+    <script src="animsition.js"></script>
+
+
+</head>
+
+<body>
+
+      <div id="header">
+
+        <div class="definition-marquee">
+          <marquee id="marquee-definition"></marquee>
+        </div>
+
+        <div class="grid-2">
+          <div class="grid-2 def-div">
+            <span id="definition" class="defintion"></span>
+            <nav class="mobile-menu">Menu</nav>
+          </div>
+        </div>
+        <div class="grid-2">
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-participate" href="participate.html">participate</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-about" href="about.html">about</a></li>
+                  <li><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">blog</a></li>
+                  <li><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">support us</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">newsletter</a></li>
+                  <li><a id="" href="mailto:info@sfpc.io">email</a></li>
+                  <li><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a> / <a href="https://twitter.com/sfpc" target="_blank">TW</a> / <a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <div class="nav logo">
+                  <a href="index.html"><img src="images/sfpc-logo.svg"></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+
+
+
+      <div class="mobile-menu-content">
+        <h2><a id="link-participate" href="participate.html">Participate</a></h2>
+
+        <h2><a id="link-about" href="about.html">About</a></h2>
+
+        <h2><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">Blog</a></h2>
+
+        <h2><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">Support Us</a></h2>
+
+        <h2><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">Newsletter</a></h2>
+
+        <h2><a id="" href="mailto:info@sfpc.io">Email</a></h2>
+
+        <h2><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a></h2>
+
+        <h2><a href="https://twitter.com/sfpc" target="_blank">TW</a></h2>
+
+        <h2><a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></h2>
+
+      </div>
+
+      <div id="footer">
+        <div class="mode"><button id="mode-toggle"></button></a></div>
+      </div>
+
+
+      <div class="website-grid grid-hide">
+        <div class="grid-inner">
+        <section>
+          <div class="grid-2">
+            <div class="chars chars1"></div>
+            <p class="large">School</p>
+          </div>
+          <div class="grid-2">
+            <div class="chars chars2"></div>
+            <p class="large">for</p>
+          </div>
+          <div class="grid-2">
+            <div class="chars chars3"></div>
+            <p class="large">Poetic</p>
+          </div>
+          <div class="grid-2">
+            <div class="chars chars4"></div>
+            <p class="large">Computation</p>
+          </div>
+        </section>
+      </div>
+      </div>
+
+
+      <div class="crt-overlay crt-overlay-fullsize"></div>
+
+      <div id="shell" class="shell shell-fullsize about">
+
+
+        <select id= "allSections" onchange="sectionJump(this.value)">
+          <option value ="">Jump to section...</option>
+          <option value ="mission">Our Mission</option>
+          <option value ="pedagogy">Our Pedagogy</option>
+          <option value ="poetic-computation">Poetic Computation</option>
+        </select>
+
+
+        <h4 class="breadcrumb">
+          <a href="about.html">about</a>
+          <span class="caret"></span>
+          <a href="about-cooperative.html">cooperative</a>
+        </h4>
+
+        <div id="about" class="shell-content">
+
+
+
+                <section id="mission">
+                    <div class="grid-2">
+                      <h1>Our Cooperative</h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        The School for Poetic Computation is cooperatively <a class="citation cit-a">stewarded</a><sup>(1)</sup> by artists, teachers, and creative practitioners who are engaged and self-motivated in communities of practice spanning art, computation, poetry, critical theory, publishing and community organizing.
+                   <BR><BR>
+</p>
+<ul>
+<li>Our cooperative is rooted in shared values informed by a <a class="citation cit-a">communist</a><sup>(2)</sup> politic which emphasizes: trust, friendship, healthy conflict & boundaries, and support. The legacy of SFPC depends on us explicitly stating our values so they can exist beyond the current members and be passed onto future generations.
+</li><li>Our cooperative exists within a broader community and is accountable to that community.
+</li><li>Our cooperative consists of members who hold many identities: artist, teacher, student, learner, participant, community member, and so on.
+</li><li>Our cooperative structure is formed through coalition and federation, beginning with the way we organize ourselves individually and extending into the ways we organize collectively with other people and beings. Cooperative members and participants are encouraged to be active members of their community, including outreach and volunteering within grassroots organizations.
+</li><li>Our cooperative collectively empowers individuals to act as temporary leaders or stewards who embody the values of the organization enough to be trusted with taking responsibility for seeing the vision of the cooperative through.
+</li><li>Our cooperative leadership structure must be: explicit, democratic, and accountable.
+</li><li>Our cooperative must define clear and shifting roles in order to prevent the harmful effects of hierarchy.
+</li><li>Our cooperative acknowledges the <a class="citation cit-3">material conditions</a> of the lives of its teachers, participants, and workers or more specifically, how social codes surrounding race, sex, gender, class, and disability affect our ability to work cooperatively. Participants, teachers, and community members are the most important part of any cooperative educational organization.
+<sup>(3)</sup>
+</li><li>Our cooperative strives to be healthy. A healthy cooperative is only as healthy as its most vulnerable member. When we’re equally invested in everyone’s success, only then does everyone benefit. The work only supports itself if it supports its workers. A healthy cooperative is a people-first organization.
+</li><li>Our cooperative protects its workers against economic precarity. Contracts must be issued and signed before workers begin work. Contracts must clearly lay out the roles and responsibilities for each worker. No unpaid positions or internships, even for school credit.
+</li><li>Our cooperative members always have a vote when electing new members into the cooperative.
+</li><li>Our cooperative is not driven by profits. Money is a currency for stability and security. Ideas are a currency for bringing new worlds into being. We must budget for these different currencies in our accounting. Money is a logistical limit, but not an ideological limit.
+</li><li>Our cooperative is a platform for knowledge and wealth redistribution. No one should be denied an educational opportunity because of their inability to pay. Wealth should be actively redistributed via scholarships and funds should be invested in under-represented, oppressed and minoritized communities.
+</li><li>Our cooperative practices financial transparency. The budget, income from tuition, income from donors, and salaries of workers should be public.
+
+</ul>
+                    </div>
+                </section>
+
+
+                <div class="break"></div>
+
+
+                <section id="pedagogy">
+                    <div class="grid-2">
+
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                      <span id="ref-1" class="reference"><sup>(1)</sup> <b>stewarded:</b> Steward is an invitation to fundamentally shift away from privileging an individuated sense of ownership over people, objects or ideas, and instead, emphasize relationships rooted in collaboration, equity, and mutuality. We recognize the shortcomings of the term steward and its meaning in other contexts, more specifically within Indigenous scholarship and practices.
+                      </span>
+
+                      <span id="ref-2" class="reference"><sup>(2)</sup> <b>communist:</b> SFPC follows Ruth Wilson Gilmore's definition of small-c communism.
+                      </span>
+
+                      <span id="ref-3" class="reference"><sup>(3)</sup> <b>material conditions:</b> Inspired by <a href="">A Call For Complaint: for Plague Speech, for Sick Speech</a>.
+                      </span>
+
+
+
+                      </p>
+                    </div>
+                </section>
+
+
+               <div class="break-endpage"></div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+<script src="outside.js"></script>
+<script src="carousel.js"></script>
+</p>
+
+</body>
+</html>

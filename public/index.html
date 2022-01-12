@@ -1,7 +1,312 @@
-<h1 id="title">Title Goes Here</h1>
-<h3>Teachers: <span id="teachers"></span></h3>
-<h4>Cost: <span id="cost"></span></h4>
-<p id="description"></p>
-<div id="images"></div>
-<script src="js/jquery.min.js"></script>
-<script src="js/main.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>School for Poetic Computation</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="School for Poetic Computation">
+    <meta name="description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://sfpc.io/">
+    <meta property="og:title" content="SFPC Summer 2021 Cocoon">
+    <meta property="og:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="og:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://sfpc.io/">
+    <meta property="twitter:title" content="SFPC Summer 2021 Cocoon">
+    <meta property="twitter:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="twitter:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
+    <link href="styles.css" rel="stylesheet">
+    <link id="mode" rel="stylesheet" type="text/css" href="crt.css" />
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="animsition.css">
+    <script src="animsition.js"></script>
+    <!-- <script>
+    $(function(){
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+    });
+    </script> -->
+
+
+</head>
+
+<body>
+
+      <div id="header">
+
+        <div class="definition-marquee">
+          <marquee id="marquee-definition"></marquee>
+        </div>
+
+        <div class="grid-2">
+          <div class="grid-2 def-div">
+            <span id="definition" class="defintion"></span>
+            <nav class="mobile-menu">Menu</nav>
+          </div>
+        </div>
+
+        <div class="grid-2">
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-participate" href="participate.html">participate</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-about" href="about.html">about</a></li>
+                  <li><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">blog</a></li>
+                  <li><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">support us</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">newsletter</a></li>
+                  <li><a id="" href="mailto:info@sfpc.io">email</a></li>
+                  <li><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a> / <a href="https://twitter.com/sfpc" target="_blank">TW</a> / <a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <div class="nav logo">
+                  <a href="index.html"><img src="images/sfpc-logo.svg"></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+
+      <div class="mobile-menu-content">
+        <h2><a id="link-participate" href="participate.html">Participate</a></h2>
+
+        <h2><a id="link-about" href="about.html">About</a></h2>
+
+        <h2><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">Blog</a></h2>
+
+        <h2><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">Support Us</a></h2>
+
+        <h2><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">Newsletter</a></h2>
+
+        <h2><a id="" href="mailto:info@sfpc.io">Email</a></h2>
+
+        <h2><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a></h2>
+
+        <h2><a href="https://twitter.com/sfpc" target="_blank">TW</a></h2>
+
+        <h2><a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></h2>
+
+      </div>
+
+      <div id="footer">
+        <div class="mode"><button id="mode-toggle"></button></a></div>
+
+      </div>
+
+
+      <div class="website-grid grid-hide">
+        <div class="grid-inner">
+        <section>
+          <div class="grid-2">
+            <!-- <div class="chars chars1"></div> -->
+            <p class="large">School</p>
+          </div>
+          <div class="grid-2">
+            <!-- <div class="chars chars1"></div> -->
+            <p class="large">for</p>
+          </div>
+          <div class="grid-2">
+            <!-- <div class="chars chars3"></div> -->
+            <p class="large">Poetic</p>
+          </div>
+          <div class="grid-2">
+            <!-- <div class="chars chars4"></div> -->
+            <p class="large">Computation</p>
+          </div>
+        </section>
+      </div>
+      </div>
+
+
+      <div class="crt-overlay crt-overlay-fullsize"></div>
+
+      <div id="shell" class="shell shell-fullsize home animsition">
+
+
+
+
+        <div id="home" class="shell-content">
+
+              <div class="intro">
+
+                <p tabindex="0" class="large letter">
+                  Dear visitor,
+                  <BR><BR>
+                  We are softly launching this website while it's in progress; over the next year, we will be migrating content from the School for Poetic Computation's old website and <a class="citation cit-1">building out our archive</a><sup>(1)</sup> of programs, projects, publications and community members.
+                  Our URL change from sfpc.io to sfpc.study is an embrace of a vision of our school as "<a class="citation cit-2">a place where we explore computation, but computation isn't the point</a>."<sup>(2)</sup> Our old website now lives at <a href="https://legacy.sfpc.study">legacy.sfpc.study</a>...
+
+                  <a class="expand-intro"><BR><BR>Keep reading</a>
+                </p>
+
+
+                <div class="expanded-intro hide-expanded">
+
+                      <p tabindex="0" class="large letter">
+                          <BR><BR>
+                        <img src="https://dgross.ca/static/alto-677bf1c5f587a65a6c11fa32be898fba.jpg" class="img-4">
+                        The first thing you might notice is this website has two modes.
+                        By default, you've entered into cathode-ray mode —inspired by the displays of early CRT computers—, but you can switch into
+                        liquid crystal (LCD) mode at any time through the footer fixed to the bottom as you scroll.
+                        The default being a dark mode is a counter to "<a class="citation cit-3">the positioning of white as neutral within interfaces</a>,"<sup>(3)</sup>
+                        a positioning which this website turns in on itself.
+                        <!-- The CRT mode has a funky type treatment inspired by Alec Lownes; the LCD mode can update with each program's theme. -->
+                        <BR><BR>
+                        <!-- <img src="images/space/9.jpg" class="img-4"> <img src="images/space/11.jpg" class="img-4">   -->
+                        <img src="images/space/0.jpg" class="img-4">
+                        If you've ever visited SFPC's <a href="about-space.html">previous space</a>, in the Westbeth Artists Community of the West Village NYC, you'll remember four large windows in front of the courtyard. It's where you may have peeked into before an event, or where you may have stood in front of to take a group picture at the end of your session.
+                        The <a class="citation link-show-grid">four column grid</a> of this website, and its black frame through which the poetics of relation is realized, is inspired by those four prominent floor to ceiling windows.
+                        <BR><BR>
+                        <img src="images/sfpc-logo-variations.jpg" class="img-4"> Something tender about those windows is how participants and visitors would leave on them visual iterations of "school for poetic computation" over the years, refiguring the identity of the school through post-its, hand lettering and hand drawn sketches.
+                        The notion of "<a class="citation cit-4">poetic computation" belongs to everyone</a>,<sup>(4)</sup> and in a similar vein, within the header of this website is a cycling through of various definitions of "poetic computation" as contributed by people in our community.
+                      </p>
+                      <br><BR><br><BR>
+
+                      <div class="grid-1 grid-1-img">
+                        <div class="grid-4">
+                          <img src="images/space/11.jpg">
+                        </div>
+                        <div class="grid-4">
+                          <img src="images/community/95.jpg">
+                        </div>
+                        <div class="grid-4">
+                          <img src="images/community/18.jpg">
+                        </div>
+                        <div class="grid-4">
+                          <img src="images/community/70.jpg">
+                        </div>
+                      </div>
+
+                    <br><BR>
+
+                    <p tabindex="0" class="large letter">
+                    <!-- I contributed a definition I remember nervously babbling during a "Meet the Participants" event at the beginning of the Fall 2019 session,
+                    the day after I sat with Laolu, Tsige, Galen, Neta and Melanie on the floor of Koenig Clinton, as we listened to Fred Moten read his poetry aloud.
+                    Fred said "resistance is making yourself into a conductive thread." Later, I responded,
+                    "poetic computation is an act of resistance against utilitarian notions of progress and efficiency." -->
+
+                    "Poetic computation begins with the interfacing between two or more beings" is a definition that resonates.
+                     <!-- because I'm reminded of the first circuit I made (ever?) for Che-wei & Taylor's hardware class where Fran and I made 2 LEDs light up by high-fiving each other. -->
+                    <!-- <BR><BR> -->
+                    This website holds within itself that particular yearning of interfacing, as we continue into our third round of online classes this Spring.
+                    <BR><BR>
+                    Visit us online from 9am to 9pm from Monday to Friday! The website is closed otherwise, while we sleep and rest.
+                    <br><br>
+                    In collective study, <BR>
+                    SFPC Stewards
+                    </p>
+
+                  </div>
+
+                      <section class="expanded-intro hide-expanded">
+                        <div class="grid-2">
+                        </div>
+                      <div class="grid-2">
+                        <p>
+                        <i>This letter was published on ??, 2022. </i>
+                        <br><BR><br>
+                        <span id="ref-1" class="reference"><sup>(1)</sup> <b>building out our archive:</b> more about website
+                          <!-- This website was designed by Zainab Aliyu and built with Todd Anderson. It is fully keyboard accessibile for non-mouse users, and is typeset in Hershey Naoille and Courier. -->
+                        </span>
+
+                        <span id="ref-2" class="reference"><sup>(2)</sup> <b>a place where we explore computation, but computation isn't the point:</b> A quote from <a href="">a letter</a> SFPC Stewards authored in April 2021, which was originally posted in SFPC's Slack under the username "sfpcstudy."</span>
+
+                        <span id="ref-3" class="reference"><sup>(3)</sup> <b>the positioning of white as neutral within interfaces:</b> A framing from <a href="">Black Gooey Universe</a> by American Artist.</span>
+
+                        <span id="ref-4" class="reference"><sup>(4)</sup> <b>"poetic computation" belongs to everyone:</b> Poetic computation is an ever blooming definition. We invite you in to study in pursuit of both defining and resisting reductive definitions of poetic computation. You can submit your own definition <a href="">here</a>.</span>
+
+
+                        </p>
+                      </div>
+                      </section>
+
+
+
+
+<div class="intro crt">
+  <div class="break"></div>
+                <p tabindex="0" class="large">
+                    The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.
+                    <!-- Learn about our recent transformation <a href="">here</a>, or visit our old website <a href="">here</a>. -->
+                    Learn more about us <a href="about.html">here</a>. <BR><BR>
+                </p>
+              </div>
+
+              <div class="intro-featured">
+                  <!-- <h4 class="breadcrumb">current & upcoming</h4> -->
+
+                  <div class="grid-1 currently">
+
+                    <div class="grid-2 featured spring-2022">
+                      <div class="featured-text">
+                        <div class="top">
+                          <h4 class="type"><a href="spring-2022.html">session</a></h4>
+                          <h2 class="title">Spring 2022</h2>
+                        </div>
+                        <div class="bottom">
+                          <h4 class="details">March 15 - May 28, 2022 <span class="dot">·</span> 4 classes · Coming soon</h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="grid-4 featured fallwinter-2122">
+                      <div class="featured-text">
+                        <div class="top">
+                          <h4 class="type"><a href="https://sfpc.io/fall-2021/">session</a></h4>
+                          <h2 class="title">Fall/Winter 2021-22</h2>
+                        </div>
+                        <div class="bottom">
+                          <h4 class="details">October 26, 2021 - March 10, 2022 <span class="dot">·</span> 2 classes · Applications closed </h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="grid-4 featured newsletter">
+                      <div class="featured-text">
+                        <div class="top">
+                          <h4 class="type"><a href="https://stats.sender.net/forms/e09QVa/view">newsletter</a></h4>
+                          <h3>Stay updated about upcoming programs!</h3>
+                            <!-- <h3>email...</h3> -->
+                        </div>
+                        <div class="bottom">
+                          <!-- <h4><u>submit</u></h4> -->
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+              </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+<script src="outside.js"></script>
+
+
+</body>
+</html>

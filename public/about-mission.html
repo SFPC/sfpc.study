@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>School for Poetic Computation</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="School for Poetic Computation">
+    <meta name="description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://sfpc.io/">
+    <meta property="og:title" content="SFPC Summer 2021 Cocoon">
+    <meta property="og:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="og:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://sfpc.io/">
+    <meta property="twitter:title" content="SFPC Summer 2021 Cocoon">
+    <meta property="twitter:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="twitter:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
+    <link href="styles.css" rel="stylesheet">
+    <link id="mode" rel="stylesheet" type="text/css" href="crt.css" />
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="animsition.css">
+    <script src="animsition.js"></script>
+
+
+</head>
+
+<body>
+
+      <div id="header">
+
+        <div class="definition-marquee">
+          <marquee id="marquee-definition"></marquee>
+        </div>
+
+        <div class="grid-2">
+          <div class="grid-2 def-div">
+            <span id="definition" class="defintion"></span>
+            <nav class="mobile-menu">Menu</nav>
+          </div>
+        </div>
+        <div class="grid-2">
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-participate" href="participate.html">participate</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-about" href="about.html">about</a></li>
+                  <li><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">blog</a></li>
+                  <li><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">support us</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">newsletter</a></li>
+                  <li><a id="" href="mailto:info@sfpc.io">email</a></li>
+                  <li><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a> / <a href="https://twitter.com/sfpc" target="_blank">TW</a> / <a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <div class="nav logo">
+                  <a href="index.html"><img src="images/sfpc-logo.svg"></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+
+
+
+      <div class="mobile-menu-content">
+        <h2><a id="link-participate" href="participate.html">Participate</a></h2>
+
+        <h2><a id="link-about" href="about.html">About</a></h2>
+
+        <h2><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">Blog</a></h2>
+
+        <h2><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">Support Us</a></h2>
+
+        <h2><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">Newsletter</a></h2>
+
+        <h2><a id="" href="mailto:info@sfpc.io">Email</a></h2>
+
+        <h2><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a></h2>
+
+        <h2><a href="https://twitter.com/sfpc" target="_blank">TW</a></h2>
+
+        <h2><a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></h2>
+
+      </div>
+
+      <div id="footer">
+        <div class="mode"><button id="mode-toggle"></button></a></div>
+      </div>
+
+
+      <div class="website-grid grid-hide">
+        <div class="grid-inner">
+        <section>
+          <div class="grid-2">
+            <div class="chars chars1"></div>
+            <p class="large">School</p>
+          </div>
+          <div class="grid-2">
+            <div class="chars chars2"></div>
+            <p class="large">for</p>
+          </div>
+          <div class="grid-2">
+            <div class="chars chars3"></div>
+            <p class="large">Poetic</p>
+          </div>
+          <div class="grid-2">
+            <div class="chars chars4"></div>
+            <p class="large">Computation</p>
+          </div>
+        </section>
+      </div>
+      </div>
+
+
+      <div class="crt-overlay crt-overlay-fullsize"></div>
+
+      <div id="shell" class="shell shell-fullsize about">
+
+
+        <select id= "allSections" onchange="sectionJump(this.value)">
+          <option value ="">Jump to section...</option>
+          <option value ="mission">Our Mission</option>
+          <option value ="pedagogy">Our Pedagogy</option>
+          <option value ="poetic-computation">Poetic Computation</option>
+        </select>
+
+
+        <h4 class="breadcrumb">
+          <a href="about.html">about</a>
+          <span class="caret"></span>
+          <a href="about-mission.html">mission</a>
+        </h4>
+
+        <div id="about" class="shell-content">
+
+
+
+                <section id="mission">
+                    <div class="grid-2">
+                      <h1>Our Mission</h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        The School for Poetic Computation is an experimental school in New York that was founded in 2013. Our school supports interdisciplinary study in art, code, hardware and critical theory. It is a place for unlearning and learning.
+                        <BR><BR>
+                        Our programs challenge the capitalistic, heteronormative and patriarchal canon of social and computer sciences. SFPC attracts self-motivated creative thinkers and radical teachers. All participants are treated as collaborators and we formally encourage the power of learners to determine their experience & education. The unique culture of our institution is one based on communal care and solidarity across social differences. This pedagogical space framed in intimacy ideally allows for participants that are LGBTQIA+, Black, Indigenous, and/or Disabled to feel empowered that their ideas are important, necessary and central.
+                        <BR><BR>
+                        <i>Note: Our school has been undergoing significant transformation since 2020. Learn more about SFPC's recent history <a href="https://sfpc.medium.com/dear-sfpc-community-c195d3dc1d00">here</a>, <a href="https://zachlieberman.medium.com/stepping-down-from-sfpc-6e1a0fe998f8">here</a> and <a href="https://tchoi8.medium.com/open-letter-to-sfpc-community-58d658b92d79">here</a>.
+                        </i>
+                      </p>
+                    </div>
+                </section>
+
+
+                <div class="break"></div>
+
+
+                <section id="pedagogy">
+                    <div class="grid-2">
+                      <h1>Our Pedagogy</h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                      We value the craft necessary to realize an idea, recognizing that every creative practitioner needs space and time to hone their trade. Our school aims to provide a safe haven for you to get acquainted with the craft of coding at your own pace, make it your own, and investigate the space between creative process and craft. This takes conversations with peers and the right push at the right time.
+                    </p>
+                      <p>
+                        SFPC is an opportunity to work intensively with a small group of peers, teachers, and artists to explore questions about the poetics of computation. For us, computation is poetic when technology is used for critical thinking and aesthetic inquiry – a space where logic meets electricity (hardware), math meets language (software) and analytical thinking meets creative experimentation.
+                      </p><p>
+                        We aim to cultivate completely strange, whimsical, and beautiful work – work that is meaningful and not the sorts of things necessarily useful for building a portfolio for finding a job.
+                      </p><p>
+                        This is not a program to get a degree or vocational skills, there are other programs for that. This is a program for self-initiated learners who want to explore new possibilities. This is a program for thinkers in search of a community to realize greater dreams. SFPC is a dynamic possibility space to imagine and cultivate new learning environments with and for each other.
+
+                        </p>
+                    </div>
+                </section>
+
+
+                <div class="break"></div>
+
+                <section id="poetic-computation">
+                    <div class="grid-2">
+                      <h1>What is poetic computation?</h1>
+                    </div>
+                    <div class="grid-2">
+                      <p>Poetic computation is an ever blooming definition. We invite you in to study in pursuit of both defining and resisting reductive definitions of poetic computation. You can submit your own definition <a href="">here</a>.
+                    </div>
+                </section>
+
+
+                      <div class="grid-container">
+
+                        <main class="grid-item main">
+                          <main class="grid-item main">
+                            <div class="carousel-items items carousel-content press-content">
+
+                              <figure class="block-text show-test">
+                                Poetic computation is a relational practice organized around communal study.
+                                <!-- <h4>Source</h4> -->
+                              </figure>
+                              <figure class="block-text show-test">
+                                Poetic computation begins with the interfacing between two or more beings.
+                                <!-- <h4>Source</h4> -->
+                              </figure>
+                              <figure class="block-text show-test">
+                                Poetic computation engages the computer as a medium for critical and artistic expression.
+                                <!-- <h4>Source</h4> -->
+                              </figure>
+                              <figure class="block-text show-test">
+                                Poetic computation is an invitation to think about using computational material for non-computational purposes or non-computational material for computational purposes.
+                                <!-- <h4>Source</h4> -->
+                              </figure>
+                              <figure class="block-text show-test">
+                                Poetic computation is both an aesthetic and affective experience of code.
+                                <!-- <h4>Source</h4> -->
+                              </figure>
+                              <figure class="block-text show-test">
+                                Poetic computation can’t be separated from its historical, political and social impact.
+                                <!-- <h4>Source</h4> -->
+                              </figure>
+                              <figure class="block-text show-test">
+                                Poetic computation is social science.
+                                <!-- <h4>Source</h4> -->
+                              </figure>
+                              <figure class="block-text show-test">
+                                Poetic computation is cooperative.
+                                <!-- <h4>Source</h4> -->
+                              </figure>
+                              <figure class="block-text show-test">
+                                Poetic computation is when technology is used for critical thinking and aesthetic inquiry.
+                                <!-- <h4>Source</h4> -->
+                              </figure>
+                              <figure class="block-text show-test">
+                                Poetic computation is when logic meets electricity, math where meets language and where analytical thinking meets creative experimentation.
+                                <!-- <h4>Source</h4> -->
+                              </figure>
+                              <figure class="block-text show-test">
+                                Poetic computation is an act of resistance against utilitarian notions of progress and efficiency.
+                                <!-- <h4>Source</h4> -->
+                              </figure>
+
+
+
+
+
+                            </div>
+
+
+                          </main>
+                        </main>
+
+
+
+
+                    </div>
+
+
+
+
+
+
+               <div class="break-endpage"></div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+<script src="outside.js"></script>
+<script src="carousel.js"></script>
+</p>
+
+</body>
+</html>

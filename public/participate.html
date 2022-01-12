@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>School for Poetic Computation</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="School for Poetic Computation">
+    <meta name="description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://sfpc.io/">
+    <meta property="og:title" content="SFPC Summer 2021 Cocoon">
+    <meta property="og:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="og:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://sfpc.io/">
+    <meta property="twitter:title" content="SFPC Summer 2021 Cocoon">
+    <meta property="twitter:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="twitter:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
+    <link href="styles.css" rel="stylesheet">
+    <link id="mode" rel="stylesheet" type="text/css" href="crt.css" />
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="animsition.css">
+    <script src="animsition.js"></script>
+
+
+</head>
+
+<body>
+
+      <div id="header">
+        <div class="definition-marquee">
+          <marquee id="marquee-definition"></marquee>
+        </div>
+
+        <div class="grid-2">
+          <div class="grid-2 def-div">
+            <span id="definition" class="defintion"></span>
+            <nav class="mobile-menu">Menu</nav>
+          </div>
+        </div>
+
+        <div class="grid-2">
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-participate" href="participate.html">participate</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-about" href="about.html">about</a></li>
+                  <li><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">blog</a></li>
+                  <li><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">support us</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">newsletter</a></li>
+                  <li><a id="" href="mailto:info@sfpc.io">email</a></li>
+                  <li><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a> / <a href="https://twitter.com/sfpc" target="_blank">TW</a> / <a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <div class="nav logo">
+                  <a href="index.html"><img src="images/sfpc-logo.svg"></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+
+      <div class="mobile-menu-content">
+        <h2><a id="link-participate" href="participate.html">Participate</a></h2>
+
+        <h2><a id="link-about" href="about.html">About</a></h2>
+
+        <h2><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">Blog</a></h2>
+
+        <h2><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">Support Us</a></h2>
+
+        <h2><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">Newsletter</a></h2>
+
+        <h2><a id="" href="mailto:info@sfpc.io">Email</a></h2>
+
+        <h2><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a></h2>
+
+        <h2><a href="https://twitter.com/sfpc" target="_blank">TW</a></h2>
+
+        <h2><a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></h2>
+
+      </div>
+
+      <div id="footer">
+        <div class="mode"><button id="mode-toggle"></button></a></div>
+      </div>
+
+
+      <div class="website-grid grid-hide">
+        <div class="grid-inner">
+        <section>
+          <div class="grid-2">
+            <div class="chars chars1"></div>
+            <p class="large">School</p>
+          </div>
+          <div class="grid-2">
+            <div class="chars chars2"></div>
+            <p class="large">for</p>
+          </div>
+          <div class="grid-2">
+            <div class="chars chars3"></div>
+            <p class="large">Poetic</p>
+          </div>
+          <div class="grid-2">
+            <div class="chars chars4"></div>
+            <p class="large">Computation</p>
+          </div>
+        </section>
+      </div>
+      </div>
+
+      <div class="crt-overlay crt-overlay-fullsize"></div>
+
+      <div id="shell" class="shell shell-fullsize about animsition">
+
+
+        <select id= "allSections" onchange="sectionJump(this.value)">
+          <option value ="">Jump to section...</option>
+          <option value ="current">Current & Upcoming</option>
+          <option value ="2021">2021</option>
+          <option value ="2020">2020</option>
+        </select>
+
+        <h4 class="breadcrumb"><a href="">participate</a></h4>
+
+        <div id="spring-22" class="shell-content">
+
+                <section id="current">
+                    <div class="grid-2">
+                      <h1>Current & Upcoming</h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        Our school supports interdisciplinary study in art, code, hardware and critical theory through events, classes, workshops, projects and residencies.
+                        <!-- We are still working on archiving all our past programs. View our old website <a href="">here</a>. -->
+                      </p><p>
+                        <a href="about-participating.html">more about what we look for in participants...</a>
+                      </p>
+
+
+                      <div class="stacked body-margin-top">
+
+
+                        <div class="grid-1 stacked-2 participate">
+
+
+
+                        <div class="grid-4 featured spring-2022 session" >
+                          <div class="featured-text">
+                            <img src="images/sessions/spring-2022/cover.jpg">
+                            <div class="top">
+                              <h4 class="type"><a href="spring-2022.html">session</a></h4>
+                              <h2 class="title">Spring 2022</h2>
+                            </div>
+                            <div class="bottom">
+                              <h4 class="details">March 16 - May 26, 2021<span class="dot">·</span>Online (Zoom) <span class="dot">·</span> 4 classes<span class="dot">·</span>Coming soon </h4>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="grid-4 featured fallwinter-2122 session">
+                          <div class="featured-text">
+                            <img src="images/sessions/fallwinter-2122/cover.gif">
+                            <div class="top">
+                              <h4 class="type"><a href="https://sfpc.io/fall-2021/">session</a></h4>
+                              <h2 class="title">Fall/Winter 2021-22</h2>
+                            </div>
+                            <div class="bottom">
+                              <h4 class="details">October 26, 2021 - March 10, 2022<span class="dot">·</span>Online (Zoom) <span class="dot">·</span> 2 classes<span class="dot">·</span>Applications closed </h4>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                      </div>
+                  </div>
+
+
+
+
+                </div>
+                </section>
+
+                <div class="break"></div>
+
+
+
+                <section id="2021" class="stacked stacked-4">
+                    <div class="grid-1">
+                      <h1>2021</h1>
+                    </div>
+
+                    <div class="grid-1 participate">
+
+
+                      <div class="grid-4 featured">
+                        <div class="featured-text">
+                          <img src="images/events/2021-fall-mtp.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="https://withfriends.co/event/13268385/meet_the_participants_of_fall_2021">event</a></h4>
+                            <h2 class="title">Meet the Participants of Fall 2021</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">January 4, 2021 <span class="dot">·</span>6pm<span class="dot">·</span>Online (Zoom) </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-4 featured">
+                        <div class="featured-text">
+                          <img src="images/events/2021-aandme-montez.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="https://radio.montezpress.com/#/show/2297">event</a></h4>
+                            <h2 class="title">AncestryandMe x Montez Press Radio</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">January 4, 2021 <span class="dot">·</span> 4pm </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-4 featured">
+                        <div class="featured-text">
+                          <img src="images/events/2021-rwc-show.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="https://withfriends.co/event/13268385/meet_the_participants_of_fall_2021">event</a></h4>
+                            <h2 class="title">Reading, Writing & Compiling Showcase</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">January 4, 2021 <span class="dot">·</span>6pm </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-4 featured cocoon-2021 session">
+
+                        <div class="featured-text">
+                          <img src="images/sessions/cocoon-2021/cover.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="https://sfpc.io/cocoon/">session</a></h4>
+                            <h2 class="title">COCOON</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">July 11 - August 26, 2021 <span class="dot">·</span> 5 classes </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                        <!-- <div class="grid-4 featured" >
+                          <div class="featured-text">
+                            <img src="images/events/2021-reading-ddm.jpg">
+                            <div class="top">
+                              <h4 class="type"><a href="spring-2022.html">event</a></h4>
+                              <h2 class="title">Dictionary of Dark Matters x Montez Press Radio</h2>
+                            </div>
+                            <div class="bottom">
+                              <h4 class="details">January 29, 2021 <span class="dot">·</span> 4pm </h4>
+                            </div>
+                          </div>
+                        </div> -->
+
+
+                    </div>
+                </section>
+
+
+                <div class="break"></div>
+
+
+
+                <section id="2020" class="stacked stacked-4">
+                    <div class="grid-1">
+                      <h1>2020</h1>
+                    </div>
+
+                    <div class="grid-1 participate">
+
+                      <div class="grid-4 featured" >
+                        <div class="featured-text">
+                          <img src="images/events/2020-poetic-hardware-screen-walk.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="spring-2022.html">event</a></h4>
+                            <h2 class="title">Poetic Hardware Open Screen Walk</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">September 18, 2020 <span class="dot">·</span> 1-4pm </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-4 featured" >
+                        <div class="featured-text">
+                          <img src="images/events/2020-dll-sharing-sessions.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="spring-2022.html">event</a></h4>
+                            <h2 class="title">Digital Love Languages Sharing Sessions</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">August 18, 2020, 1-3:30pm <span class="dot">·</span> August 19, 2020, 5-7:30pm </h4>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="grid-4 featured" >
+                        <div class="featured-text">
+                          <img src="images/events/2020-reading-ddm.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="spring-2022.html">event</a></h4>
+                            <h2 class="title">Reading the Dictionary of Dark Matters</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">July 22, 2020 <span class="dot">·</span> 1:30-3pm & 6:30-8pm </h4>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="grid-4 featured spring-2022 session" >
+                        <div class="featured-text">
+                          <img src="images/sessions/spring-2022/cover.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="spring-2022.html">session</a></h4>
+                            <h2 class="title">Summer 2020</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">March 16 - May 26, 2021 <span class="dot">·</span> 4 classes </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-4 featured" >
+                        <div class="featured-text">
+                          <img src="images/events/2020-code-societies-showcase.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="spring-2022.html">event</a></h4>
+                            <h2 class="title">Code Societies Showcase</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">January 25, 2020 <span class="dot">·</span> 4pm </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-4 featured" >
+                        <div class="featured-text">
+                          <img src="images/events/2020-perf-night.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="spring-2022.html">event</a></h4>
+                            <h2 class="title">Performance Night</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">January 18, 2020 <span class="dot">·</span> 6-10pm </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-4 featured" >
+                        <div class="featured-text">
+                          <img src="images/events/2020-math-as-rel.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="spring-2022.html">event</a></h4>
+                            <h2 class="title">Math as a Religious Experience</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">January 18, 2020 <span class="dot">·</span> 12-3pm </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-4 featured" >
+                        <div class="featured-text">
+                          <img src="images/events/2020-crit-theory-retro.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="spring-2022.html">event</a></h4>
+                            <h2 class="title">Critical Theory Retrospective</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">January 12, 2020 <span class="dot">·</span> 4pm </h4>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="grid-4 featured" >
+                        <div class="featured-text">
+                          <img src="images/events/2020-seven-years.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="spring-2022.html">event</a></h4>
+                            <h2 class="title">Seven Years of Poetic Computation</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">January 12 - 23, 2020 <span class="dot">·</span> 4pm </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-4 featured codesocieties-2020 session">
+                        <div class="featured-text">
+                          <img src="images/sessions/codesocieties-2020/cover.gif">
+                          <div class="top">
+                            <h4 class="type"><a href="https://sfpc.io/code-societies/">session</a></h4>
+                            <h2 class="title">Code Societies (Winter 2020)</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">Jan 4 - Jan 25, 2020 <span class="dot">·</span> 14 workshops </h4>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                </section>
+
+
+                <div class="break"></div>
+
+                <section id="section-outro">
+                  <p tabindex="0" class="large">
+                    We are still working on archiving all our past programs. View our old website <a href="">here</a>.
+                  </p>
+                </section>
+
+
+
+                <div class="break-endpage"></div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+<script src="outside.js"></script>
+</p>
+
+</body>
+</html>

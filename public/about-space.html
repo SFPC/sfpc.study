@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>School for Poetic Computation</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="School for Poetic Computation">
+    <meta name="description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://sfpc.io/">
+    <meta property="og:title" content="SFPC Summer 2021 Cocoon">
+    <meta property="og:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="og:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://sfpc.io/">
+    <meta property="twitter:title" content="SFPC Summer 2021 Cocoon">
+    <meta property="twitter:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="twitter:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
+    <link href="styles.css" rel="stylesheet">
+    <link id="mode" rel="stylesheet" type="text/css" href="crt.css" />
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="animsition.css">
+    <script src="animsition.js"></script>
+
+
+</head>
+
+<body>
+
+      <div id="header">
+
+        <div class="definition-marquee">
+          <marquee id="marquee-definition"></marquee>
+        </div>
+
+        <div class="grid-2">
+          <div class="grid-2 def-div">
+            <span id="definition" class="defintion"></span>
+            <nav class="mobile-menu">Menu</nav>
+          </div>
+        </div>
+        <div class="grid-2">
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-participate" href="participate.html">participate</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-about" href="about.html">about</a></li>
+                  <li><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">blog</a></li>
+                  <li><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">support us</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">newsletter</a></li>
+                  <li><a id="" href="mailto:info@sfpc.io">email</a></li>
+                  <li><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a> / <a href="https://twitter.com/sfpc" target="_blank">TW</a> / <a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <div class="nav logo">
+                  <a href="index.html"><img src="images/sfpc-logo.svg"></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+
+
+
+      <div class="mobile-menu-content">
+        <h2><a id="link-participate" href="participate.html">Participate</a></h2>
+
+        <h2><a id="link-about" href="about.html">About</a></h2>
+
+        <h2><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">Blog</a></h2>
+
+        <h2><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">Support Us</a></h2>
+
+        <h2><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">Newsletter</a></h2>
+
+        <h2><a id="" href="mailto:info@sfpc.io">Email</a></h2>
+
+        <h2><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a></h2>
+
+        <h2><a href="https://twitter.com/sfpc" target="_blank">TW</a></h2>
+
+        <h2><a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></h2>
+
+      </div>
+
+      <div id="footer">
+        <div class="mode"><button id="mode-toggle"></button></a></div>
+      </div>
+
+
+      <div class="website-grid grid-hide">
+        <div class="grid-inner">
+        <section>
+          <div class="grid-2">
+            <div class="chars chars1"></div>
+            <p class="large">School</p>
+          </div>
+          <div class="grid-2">
+            <div class="chars chars2"></div>
+            <p class="large">for</p>
+          </div>
+          <div class="grid-2">
+            <div class="chars chars3"></div>
+            <p class="large">Poetic</p>
+          </div>
+          <div class="grid-2">
+            <div class="chars chars4"></div>
+            <p class="large">Computation</p>
+          </div>
+        </section>
+      </div>
+      </div>
+
+
+      <div class="crt-overlay crt-overlay-fullsize"></div>
+
+      <div id="shell" class="shell shell-fullsize about">
+
+
+        <select id= "allSections" onchange="sectionJump(this.value)">
+          <option value ="">Jump to section...</option>
+          <option value ="mission">Our Mission</option>
+          <option value ="pedagogy">Our Pedagogy</option>
+          <option value ="poetic-computation">Poetic Computation</option>
+        </select>
+
+
+        <h4 class="breadcrumb">
+          <a href="about.html">about</a>
+          <span class="caret"></span>
+          <a href="about-space.html">space</a>
+        </h4>
+
+        <div id="about" class="shell-content">
+
+
+
+                <section id="mission">
+                    <div class="grid-2">
+                      <h1>Our Space</h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        The School for Poetic Computation does not currently have a physical location and since Spring 2020 we have been operating and learning online as we navigate the COVID-19 pandemic. From 2015 to 2020, we were located in the Westbeth Artists Community of West Village, New York City, on the unceded land of the Lenape people. We studied within the computational history lineage of Bell Labs that occupied that space many years before. We are in search for a new temporary and permanent space; please <a href="">contact us</a> if you have any leads!
+                      </p>
+                    </div>
+                </section>
+
+                <div class="break"></div>
+
+                <section id="mission">
+                    <div class="grid-2">
+                      <h1>Westbeth Artists Community (2015-2020)</h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        SFPC offered classes and events at its space on 155 Bank Street, hosted by the WestBeth. 155 Bank Street has a complex history of technological innovation, military operations and creative arts. The building was the Bell Telephone Laboratories Headquarters, as well as the Manhattan Project, which led the development of the first Nuclear weapon during WWII. Later on, historical engineers such as Claude Shannon “The Father of Information Age” worked at the Bell Labs in the building. There’s also a record of Alan Turing visiting and working in the building for a short while. Since the 1970s, WestBeth Artists Community, a nonprofit housing and commercial complex, has offered live and work spaces for artists and organizations. Contemporary artists such as Merce Cunningham, Martha Graham and others involved in Fluxus, Experiments in Art and Technology (E.A.T) and various New York art movements lived or worked at WestBeth. SFPC has been fortunate to be a tenant of the WestBeth. Since the COVID-19 pandemic, SFPC has not offered events or classes onsite.
+                      </p>
+                    </div>
+                </section>
+
+
+
+
+               <div class="break-endpage"></div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+<script src="outside.js"></script>
+<script src="carousel.js"></script>
+</p>
+
+</body>
+</html>
