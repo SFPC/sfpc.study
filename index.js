@@ -1,10 +1,12 @@
 const express = require("express")
 const {getPage} = require('./lib/notion')
+const classList = require("./lib/classNotionPageList")
 const app = express()
 const PORT = process.env.PORT || 3000
 
 app.use(express.static("public"))
-
+app.set('views', './public/templates')
+app.set('view engine', 'hbs');
 app.get("/page/:pageId", async (req,res) => {
   const pageInfo = await getPage(req.params.pageId)
   res.json(pageInfo.properties)
@@ -13,6 +15,13 @@ app.get("/page/:pageId", async (req,res) => {
 app.get("/name/:pageId", async (req,res) => {
   const pageInfo = await getPage(req.params.pageId)
   res.json(pageInfo.properties.Name.title[0].plain_text)
+})
+
+app.get("/class/:slug", async (req, res) => {
+  console.log(req.params)
+  const pageId = classList[req.params.slug]
+  const pageInfo = await getPage(pageId)
+  res.render("template-class-concurrent", pageInfo.properties)
 })
 
 app.listen(PORT, console.log(`server started on ${PORT}`))
