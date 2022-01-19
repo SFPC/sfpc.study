@@ -7,3 +7,4 @@ To Set up:
 - cd into this folder and run `npm install` in the terminal
 - run `npm start` 
 - go to https://localhost:3000 in your browser
+- template test currently at http://localhost:3000/class/rpwf
