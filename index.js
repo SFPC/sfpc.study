@@ -16,12 +16,24 @@ app.get("/name/:pageId", async (req,res) => {
   const pageInfo = await getPage(req.params.pageId)
   res.json(pageInfo.properties.Name.title[0].plain_text)
 })
+app.get("/participate/:session", async (req, res) => {
+  // TODO: load session page
+  
+})
 
-app.get("/class/:slug", async (req, res) => {
+app.get("/participate/:session/:slug", async (req, res) => {
   console.log(req.params)
-  const pageId = classList[req.params.slug]
+  const pageId = classList[req.params.session][req.params.slug]
   const pageInfo = await getPage(pageId)
+  console.log(pageInfo.properties)
   res.render("template-class-concurrent", pageInfo.properties)
+})
+app.get("/participate/:session/:slug/test", async (req, res) => {
+  console.log(req.params)
+  const pageId = classList[req.params.session][req.params.slug]
+  const pageInfo = await getPage(pageId)
+  console.log(pageInfo.properties)
+  res.render("test", pageInfo.properties)
 })
 
 app.listen(PORT, console.log(`server started on ${PORT}`))

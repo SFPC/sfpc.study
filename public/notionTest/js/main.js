@@ -13,6 +13,7 @@ const getNameFromId = async(id) => {
 
 const addDataToDom = async (pageId) => {
   const data = await getPageInfoFromBackend(pageId);
+  window.notionData = data
   console.log(data)
   $('[data-notion="title"]').text(data.Name.title[0].plain_text)
   $('[data-notion="cost"]').text(data.Cost.number)
