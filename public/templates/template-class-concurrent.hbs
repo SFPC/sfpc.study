@@ -165,18 +165,18 @@
 
                 <section id="section-class-details">
                     <div class="grid-2">
-                      <h1><span id="class-name">{{Name.title.0.plain_text}}</span></h1>
+                      <h1><span id="class-name">{{name}}</span></h1>
                     </div>
 
                     <div class="grid-2 class-details">
 
 
 
-                      <img id="class-image" src="/images/sessions/spring-2022/classes/darkmatters/cover.jpg">
+                      <img id="class-image" src="{{promoImage}}">
 
                       <div class="details">
                         <div class="labels">Teachers</div>
-                        <div class="labels-info" id="teachers-list">Teacher with Assistant Teacher</div>
+                        <div class="labels-info" id="teachers-list">{{teachers.[0]}} with {{teachers.[1]}}</div>
                       </div>
                       <div class="details show-duringClass">
                         <div class="labels">Participants</div>
@@ -189,30 +189,30 @@
                       </div>
                       <div class="details">
                         <div class="labels">Date </div>
-                        <div class="labels-info"><span id="day-of-week">Thursdays</span>, <span id="date">March 15 to May 26, 2022</span> (<span id="number-classes">10</span> classes)</div>
+                        <div class="labels-info"><span id="day-of-week">{{daysOfWeek}}</span>, <span id="date">March 15 to May 26, 2022</span> (<span id="number-classes">10</span> classes)</div>
                       </div>
                       <div class="details">
                         <div class="labels">Time </div>
-                        <div class="labels-info" id="time">1pm to 4pm ET</div>
+                        <div class="labels-info" id="time">{{time}}</div>
                       </div>
                       <div class="details">
                         <div class="labels">Location </div>
-                        <div class="labels-info" id="location">Online (Zoom)</div>
+                        <div class="labels-info" id="location">{{location}}</div>
                       </div>
                       <div class="details">
                         <div class="labels">Cost </div>
-                        <div class="labels-info"><span id="cost">$1200</span> Scholarships available <a class="more-about-cost">learn more...</a></div>
+                        <div class="labels-info"><span id="cost">${{cost}}</span> Scholarships available <a class="more-about-cost">learn more...</a></div>
                       </div>
                       <div class="details">
                         <div class="labels">Deadline </div>
                         <div class="labels-info">
                           <span class="hide-appsClosed">Applications open until</span>
                           <span class="hide-appsOpen">Applications closed on</span>
-                          <span id="deadline">February 22nd, 2022</span></div>
+                          <span id="deadline">{{applicationEndDate}}</span></div>
                       </div>
 
                       <p class="large apply hide-appsClosed">
-                        <a href="#" id="application-link">Apply Now</a>
+                        <a href="{{applicationLink}}" target="_blank" id="application-link">Apply Now</a>
                       </p>
 
 
@@ -229,10 +229,8 @@
 
                     <div class="grid-2">
                       <p>
-                        In this critical theory of technology course, together we will consider the racialized history of surveillance and the positioning of white as neutral within interfaces as forms of violence enacted through high technology. We will discuss in small groups, large discussions, and one-on-one how we all can use computational systems to create change while holding them accountable for their origins and biases. By reading critical texts, streaming artworks and interacting with professional guests we will learn how these structures are compromised so that we can begin to imagine what an outside to them might look like.
-                      </p><p>
-                        This class relies on an expanded notion of study, where we will challenge one another to think outside the box about what learning is and ultimately can be. We will also look at the practices of contemporary artists critiquing (and expanding the imaginary within) technology as examples of how radical imagination can be evoked through artistic practice. By the end of the class we will publish a digital publication containing original contributions from every member of the class.
-                          </p>
+                        {{description}}
+                        </p>
                     </div>
                 </section>
 
@@ -458,7 +456,7 @@
 
                     <div class="grid-2">
                       <p class="large apply hide-appsClosed">
-                        <a href="#" id="application-link">Apply Now</a>
+                        <a href="{{applicationLink}}" id="application-link">Apply Now</a>
                       </p>
 
                       <p>
@@ -485,7 +483,7 @@
 
                     <div class="grid-2">
                       <p>
-                            <span id="cost">$1200</span> + Withfriends payment processing fees for <span id="number-classes">10</span> classes.
+                            <span id="cost">${{cost}}</span> + Withfriends payment processing fees for <span id="number-classes">10</span> classes.
                             </p><p>Upon payment, your space in the class will be reserved.
                          We offer scholarships for those who cannot pay full tuition. Read more about scholarships below.
 
@@ -578,7 +576,7 @@
                               <h6>with American Artist</h6>
                             </div>
                             <div class="bottom">
-                              <h4 class="details">March 16 - May 26, 2022 <span class="dot">·</span> 4 classes<span class="dot">·</span>Applications open </h4>
+                              <h4 class="details">March 16 - May 26, 2022 <span class="dot">·</span> {{numberOfClasses}} classes<span class="dot">·</span>Applications open </h4>
                             </div>
                           </div>
                         </div>

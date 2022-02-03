@@ -24,9 +24,10 @@ app.get("/participate/:session", async (req, res) => {
 app.get("/sessions/:session/:slug", async (req, res) => {
   console.log(req.params)
   const pageId = classList[req.params.session][req.params.slug]
-  const pageInfo = await getPage(pageId)
-  console.log(pageInfo.properties)
-  res.render("template-class-concurrent", pageInfo.properties)
+  const classData = await getPage(pageId)
+  const response = parseClassData(classData)
+  console.log(response)
+  res.render("template-class-concurrent", response)
 })
 app.get("/sessions/:session/:slug/test", async (req, res) => {
   console.log(req.params)
@@ -55,23 +56,37 @@ app.get("/sessions/:session", async (req, res) => {
   for(let key in classes){
     const pageId = classes[key]
     const classData = await getPage(pageId)
-    const classInfo = classData.properties
-    response.classes.push({
-      name: classInfo.Name.title[0].plain_text,
-      teachers: parseRollup(classInfo["Teacher Names"]),
-      promoImage: classInfo["Promo Image"]?.files[0].file.url,
-      startDate: classInfo["Date"]?.date.start,
-      endDate: classInfo["Date"]?.date.end,
-      applicationEndDate: classInfo["Application End Date"]?.date.start
-    })
-
+    response.classes.push(parseClassData(classData))
   }
   console.log(response)
   res.render("session", response)
 })
 app.listen(PORT, console.log(`server started on ${PORT}`))
 
+function parseClassData(apiResponse){
+  const classInfo = apiResponse.properties;
+  //this is the data that will be passes to the class template
+  return {
+    name: classInfo.Name.title[0].plain_text,
+    teachers: parseRollup(classInfo["Teacher Names"]),
+    //need teacher bios, website and social
+    promoImage: classInfo["Promo Image"]?.files[0]?.file?.url,
+    promoImages: classInfo["Promo Image"]?.files,
+    dateClass1: classInfo["Date Class 1"]?.date?.start,
+    dateClass2: classInfo["Date Class 2"]?.date?.start,
+    daysOfWeek: classInfo["Days of Week"].rich_text[0]?.plain_text,
+    numberOfClasses: classInfo["Number of Classes"].number,
+    time: classInfo["Time"].rich_text[0]?.plain_text,
+    location: classInfo["Location"]?.select?.name,
+    cost: classInfo["Cost"]?.number,
+    applicationEndDate: classInfo["Application End Date"]?.date?.start,
+    applicationLink: classInfo["Application URL"]?.url,
+    description: classInfo["Short Description"]?.rich_text[0]?.plain_text,
+    active: classInfo["Active"]?.formula.boolean,
+    url: classInfo["Webpage URL"]?.url
 
+  }
+}
 function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
   let data = [];
