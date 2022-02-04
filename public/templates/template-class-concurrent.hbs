@@ -152,7 +152,7 @@
           <span class="caret"></span>
           <a href="sessions.html">sessions</a>
           <span class="caret"></span>
-          <a href="spring-2022.html" id="session-link"><span id="session-name">Spring 2022</span></a>
+          <a href="spring-2022.html" id="session-link"><span id="session-name">{{session}}</span></a>
         </h4>
 
 
@@ -176,7 +176,7 @@
 
                       <div class="details">
                         <div class="labels">Teachers</div>
-                        <div class="labels-info" id="teachers-list">{{teachers.[0]}} with {{teachers.[1]}}</div>
+                        <div class="labels-info" id="teachers-list">{{teachers.[0].name}} with {{teachers.[1].name}}</div>
                       </div>
                       <div class="details show-duringClass">
                         <div class="labels">Participants</div>
@@ -351,14 +351,14 @@
 
                           <div class="entity">
                               <dt>
-                                <span class="bio bio-float" style="background-image: url('images/people/american-artist.jpg')" role="img"></span>
+                                <span class="bio bio-float" style="background-image: url('{{teachers.[0].photo}}')" role="img"></span>
 
-                                <h4 id="role">teacher</h4> <h3>Name </h3>
+                                <h4 id="role">teacher</h4> <h3>{{teachers.[0].name}} </h3>
                                   <div class="clear"></div>
-                                  <dd><span class="bio" style="background-image: url('images/people/american-artist.jpg')" role="img"></span>
-                                  <p>American Artist makes thought experiments that mine the history of technology, race, and knowledge production, beginning with their legal name change in 2013. Their artwork primarily takes the form of sculpture, software, and single-channel video. Artist is a resident of Red Bull Arts Detroit, a recipient of the Queens Museum Jerome Foundation Fellowship, a former resident of EYEBEAM, Pioneer Works, and the Whitney Museum Independent Study Program. They have exhibited at the Whitney Museum of American Art; MoMA PS1; Studio Museum in Harlem; Museum of Contemporary Art Chicago; and Nam June Paik Center, Seoul. They have had solo museum exhibitions at The Queens Museum, New York and The Museum of African Diaspora, California. Their work has been featured in the New York Times, Artforum, and Huffington Post. Artist is a 2021 Regents’ Lecturer at UCLA and teaches critical theory at the School for Poetic Computation.
+                                  <dd><span class="bio" style="background-image: url('{{teachers.[0].photo}}')" role="img"></span>
+                                  <p>{{teachers.[0].bio}}
                                   <BR><BR>
-                                    <a href="">website</a> · <a href="">instagram</a>
+                                    <a href="{{teachers.[0].website}}">website</a> · <a href="https://instagram.com/{{teachers.[0].instagram}}">instagram</a>
                                   </p>
                                   </dd>
                               </dt>
@@ -367,12 +367,12 @@
 
                           <div class="entity">
                               <dt>
-                                <span class="bio bio-float" style="background-image: url('images/people/american-artist.jpg')" role="img"></span>
+                                <span class="bio bio-float" style="background-image: url('{{teachers.[1].photo}}')" role="img"></span>
                                 <h4 id="role">assistant teacher</h4> <h3>Name</h3>
 
-                                  <dd><span class="bio" style="background-image: url('images/people/american-artist.jpg')" role="img"></span>
-                                  <p>bio<BR><BR>
-                                    <a href="">website</a> · <a href="">instagram</a>
+                                  <dd><span class="bio" style="background-image: url('{{teachers.[1].photo}}')" role="img"></span>
+                                  <p>{{teachers.[1].bio}}<BR><BR>
+                                    <a href="{{teachers.[1].website}}">website</a> · <a href="https://instagram.com/{{teachers.[1].website}}">instagram</a>
                                   </p>
                                   </dd>
                               </dt>
@@ -557,7 +557,7 @@
                       <div class="featured-text">
                         <div class="top">
                           <h4 class="type"><a href="spring-2022.html">session</a></h4>
-                          <h2 class="title">Spring 2022</h2>
+                          <h2 class="title">{{session}}</h2>
                         </div>
                         <div class="bottom">
                           <h4 class="details">4 classes</h4>

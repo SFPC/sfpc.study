@@ -68,8 +68,7 @@ function parseClassData(apiResponse){
   //this is the data that will be passes to the class template
   return {
     name: classInfo.Name.title[0].plain_text,
-    teachers: parseRollup(classInfo["Teacher Names"]),
-    //need teacher bios, website and social
+    teachers: parseTeachers(classInfo),
     promoImage: classInfo["Promo Image"]?.files[0]?.file?.url,
     promoImages: classInfo["Promo Image"]?.files,
     dateClass1: classInfo["Date Class 1"]?.date?.start,
@@ -83,15 +82,44 @@ function parseClassData(apiResponse){
     applicationLink: classInfo["Application URL"]?.url,
     description: classInfo["Short Description"]?.rich_text[0]?.plain_text,
     active: classInfo["Active"]?.formula.boolean,
-    url: classInfo["Webpage URL"]?.url
+    url: classInfo["Webpage URL"]?.url,
+    session: parseRollup(classInfo["Session Name"])[0]
 
   }
+}
+function parseTeachers(classInfo){
+  const teacherNames = parseRollup(classInfo["Teacher Names"])
+  const teacherBios = parseRollup(classInfo["Teacher Bios"])
+  const teacherPhotos = parseRollup(classInfo["Teacher Photos"])
+  const teacherWebsites = parseRollup(classInfo["Teacher Websites"])
+  const teacherTwitters = parseRollup(classInfo["Teacher Twitters"])
+  const teacherInstas = parseRollup(classInfo["Teacher Instagrams"])
+  const teachers = [];
+  for(let i = 0; i < teacherNames.length; i++){
+    teachers.push({
+      name: teacherNames[i],
+      bio: teacherBios[i],
+      photo: teacherPhotos[i],
+      website: teacherWebsites[i],
+      twitter: teacherTwitters[i],
+      instagram: teacherInstas[i],
+    })
+  }
+  console.log(teachers)
+  return teachers;
 }
 function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
   let data = [];
   for(let i = 0; i<rollupArray.length; i++){
-    data.push(rollupArray[i].title[0].plain_text)
+    if(rollupArray[i].title)
+      data.push(rollupArray[i]?.title[0]?.plain_text)
+    else if (rollupArray[i].rich_text)
+      data.push(rollupArray[i]?.rich_text[0]?.plain_text)
+    else if (rollupArray[i].url)
+      data.push(rollupArray[i].url)
+    else if (rollupArray[i].files)
+      data.push(rollupArray[i].files[0]?.url)
   } 
   return data
 }
