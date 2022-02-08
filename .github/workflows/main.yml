@@ -8,6 +8,7 @@ on:
 jobs:
   deployment:
     runs-on: self-hosted
+    environment: .env
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v2
@@ -17,4 +18,9 @@ jobs:
           node-version: '16.x'
       - name: Install dependencies
         run: npm ci
+      - name: Create env file
+        run: |
+          touch .env
+          echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} >> .env
+          cat .env
 
