@@ -88,11 +88,11 @@ let spaceImages = [];
 let spaceImagesFeatured = [];
 
 for (let i = 0; i <= 4; i += 1) {
-    participateImagesFeatured.push("images/community/featured/" + i.toString() + ".jpg");
+    participateImagesFeatured.push("/images/community/featured/" + i.toString() + ".jpg");
 }
 
 for (let i = 0; i <= 2; i += 1) {
-    spaceImagesFeatured.push("images/space/featured/" + i.toString() + ".jpg");
+    spaceImagesFeatured.push("/images/space/featured/" + i.toString() + ".jpg");
 }
 
 var pi1 = participateImagesFeatured[Math.floor( Math.random() * participateImagesFeatured.length )];
@@ -116,11 +116,11 @@ a = shuffle(a);
 b = shuffle(b);
 
 for (let i = 0; i <= 9; i += 1) {
-    spaceImages.push("images/space/" + b[i].toString() + ".jpg");
+    spaceImages.push("/images/space/" + b[i].toString() + ".jpg");
 }
 
 for (let i = 0; i <= 19; i += 1) {
-    participateImages.push("images/community/" + a[i].toString() + ".jpg");
+    participateImages.push("/images/community/" + a[i].toString() + ".jpg");
 }
 
 var c1 = participateImages[Math.floor( Math.random() * participateImages.length )];

@@ -1043,6 +1043,10 @@ span.reference {
           text-decoration-thickness: 3px;
         }
 
+        .all-refs a {
+          text-decoration-thickness: 2px;
+        }
+
         p a:after {
             /* content: '';
             width: 100%;
