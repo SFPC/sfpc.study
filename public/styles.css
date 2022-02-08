@@ -459,7 +459,7 @@ img {
 
 
 .expand-intro {
-  cursor: pointer
+  cursor: pointer;
 }
 
 
@@ -1041,6 +1041,10 @@ span.reference {
         .intro a, p.large a {
           text-underline-offset: 4px;
           text-decoration-thickness: 3px;
+        }
+
+        .all-refs a {
+          text-decoration-thickness: 2px;
         }
 
         p a:after {

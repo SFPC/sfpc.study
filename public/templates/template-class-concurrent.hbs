@@ -19,7 +19,7 @@
     <meta property="twitter:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
     <link href="/styles.css" rel="stylesheet">
     <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
-    <link rel="shortcut icon" type="image/png" href="../favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
     <script src="/jquery-3.6.0.min.js"></script>
 
@@ -189,11 +189,13 @@
                       </div>
                       <div class="details">
                         <div class="labels">Date </div>
-                        <div class="labels-info"><span id="day-of-week">{{daysOfWeek}}</span>, <span id="date">March 15 to May 26, 2022</span> (<span id="number-classes">10</span> classes)</div>
+                        <div class="labels-info">
+                          <span id="date">{{startDate}} to {{endDate}}</span> (<span id="number-classes">{{numberOfClasses}}</span> classes)</div>
                       </div>
                       <div class="details">
                         <div class="labels">Time </div>
-                        <div class="labels-info" id="time">{{time}}</div>
+                        <div class="labels-info" id="time">{{time}}
+                         </div>
                       </div>
                       <div class="details">
                         <div class="labels">Location </div>
@@ -256,7 +258,7 @@
                          <h4>Francisco Rojo, Fall 2019</h4></figure>
 
                        <div id="carousel-images" class="class-images after-launch">
-                         <figure class="item participate-img"><img src="/images/sessions/spring-2022/classes/darkmatters/0.jpg"> Pages from Fall 2019 zine </figure>
+                         <figure class="item participate-img"><img src="{{promoImages.[1]}}"> Pages from Fall 2019 zine </figure>
                          <figure class="item participate-img"><img src="/images/sessions/spring-2022/classes/darkmatters/1.jpg"></figure>
                          <figure class="item participate-img"><img src="/images/sessions/spring-2022/classes/darkmatters/2.jpg"></figure>
                          <figure class="item participate-img"><img src="/images/sessions/spring-2022/classes/darkmatters/3.jpg"></figure>
@@ -351,11 +353,12 @@
 
                           <div class="entity">
                               <dt>
-                                <span class="bio bio-float" style="background-image: url('{{teachers.[0].photo}}')" role="img"></span>
+                                <span class="bio bio-float" style="background-image: url('{{teachers.[0].image}}')" role="img"></span>
 
-                                <h4 id="role">teacher</h4> <h3>{{teachers.[0].name}} </h3>
+                                <!-- <h4 id="role">teacher</h4>  -->
+                                <h3>{{teachers.[0].name}} </h3>
                                   <div class="clear"></div>
-                                  <dd><span class="bio" style="background-image: url('{{teachers.[0].photo}}')" role="img"></span>
+                                  <dd><span class="bio" style="background-image: url('{{teachers.[0].image}}')" role="img"></span>
                                   <p>{{teachers.[0].bio}}
                                   <BR><BR>
                                     <a href="{{teachers.[0].website}}">website</a> · <a href="https://instagram.com/{{teachers.[0].instagram}}">instagram</a>
@@ -367,25 +370,13 @@
 
                           <div class="entity">
                               <dt>
-                                <span class="bio bio-float" style="background-image: url('{{teachers.[1].photo}}')" role="img"></span>
-                                <h4 id="role">assistant teacher</h4> <h3>Name</h3>
+                                <span class="bio bio-float" style="background-image: url('{{teachers.[1].image}}')" role="img"></span>
+                                <!-- <h4 id="role">assistant teacher</h4>  -->
+                                <h3>{{teachers.[1].name}}</h3>
 
-                                  <dd><span class="bio" style="background-image: url('{{teachers.[1].photo}}')" role="img"></span>
+                                  <dd><span class="bio" style="background-image: url('{{teachers.[1].image}}')" role="img"></span>
                                   <p>{{teachers.[1].bio}}<BR><BR>
-                                    <a href="{{teachers.[1].website}}">website</a> · <a href="https://instagram.com/{{teachers.[1].website}}">instagram</a>
-                                  </p>
-                                  </dd>
-                              </dt>
-                          </div>
-
-                          <div class="entity">
-                              <dt>
-                                <span class="bio bio-float" style="background-image: url('images/people/american-artist.jpg')" role="img"></span>
-                                <h4 id="role">session organizer</h4> <h3>Name</h3>
-
-                                  <dd><span class="bio" style="background-image: url('images/people/american-artist.jpg')" role="img"></span>
-                                  <p>bio<BR><BR>
-                                    <a href="">website</a> · <a href="">instagram</a>
+                                    <a href="{{teachers.[1].website}}">website</a> · <a href="https://instagram.com/{{teachers.[1].instagram}}">instagram</a>
                                   </p>
                                   </dd>
                               </dt>
