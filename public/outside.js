@@ -341,10 +341,10 @@ $(document).ready(function() {
 $(document).ready(function() {
 
         // WEB GRID ASCII
-        $('.chars1').html(makeChars(2000));
-        $('.chars2').html(makeChars(2000));
-        $('.chars3').html(makeChars(2000));
-        $('.chars4').html(makeChars(2000));
+        $('.chars1').html(makeChars(2500));
+        $('.chars2').html(makeChars(2500));
+        $('.chars3').html(makeChars(2500));
+        $('.chars4').html(makeChars(2500));
 
 
         // INTRO BIO EXPAND
