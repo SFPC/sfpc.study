@@ -18,7 +18,7 @@ app.get("/name/:pageId", async (req,res) => {
 })
 app.get("/participate/:session", async (req, res) => {
   // TODO: load session page
-  
+
 })
 
 app.get("/sessions/:session/:slug", async (req, res) => {
@@ -38,7 +38,7 @@ app.get("/sessions/:session/:slug/test", async (req, res) => {
 })
 app.get("/sessions/:session", async (req, res) => {
   console.log(req.params)
-  
+
   const session = await getPage(classList.sessions[req.params.session])
   const sessionInfo = session.properties
   let response={
@@ -70,10 +70,9 @@ function parseClassData(apiResponse){
     name: classInfo.Name.title[0].plain_text,
     teachers: parseTeachers(classInfo),
     promoImage: classInfo["Promo Image"]?.files[0]?.file?.url,
-    promoImages: classInfo["Promo Image"]?.files,
-    dateClass1: classInfo["Date Class 1"]?.date?.start,
-    dateClass2: classInfo["Date Class 2"]?.date?.start,
-    daysOfWeek: classInfo["Days of Week"].rich_text[0]?.plain_text,
+    promoImages: promoImgs(classInfo),
+    startDate: classInfo["Date"]?.date?.start,
+    endDate: classInfo["Date"]?.date?.end,
     numberOfClasses: classInfo["Number of Classes"].number,
     time: classInfo["Time"].rich_text[0]?.plain_text,
     location: classInfo["Location"]?.select?.name,
@@ -83,7 +82,7 @@ function parseClassData(apiResponse){
     description: classInfo["Short Description"]?.rich_text[0]?.plain_text,
     active: classInfo["Active"]?.formula.boolean,
     url: classInfo["Webpage URL"]?.url,
-    session: parseRollup(classInfo["Session Name"])[0]
+    session: parseRollup(classInfo["Session Name"])[0]?.plain_text
 
   }
 }
@@ -99,7 +98,7 @@ function parseTeachers(classInfo){
     teachers.push({
       name: teacherNames[i],
       bio: teacherBios[i],
-      photo: teacherPhotos[i],
+      image: teacherPhotos[i]?.files[i]?.file?.url,
       website: teacherWebsites[i],
       twitter: teacherTwitters[i],
       instagram: teacherInstas[i],
@@ -108,6 +107,21 @@ function parseTeachers(classInfo){
   console.log(teachers)
   return teachers;
 }
+
+
+function promoImgs(classInfo){
+  const allImgs = classInfo["Promo Image"]?.files
+  const imgs = [];
+  for(let i = 0; i < 1; i++){
+    imgs.push({
+      image: classInfo["Promo Image"]?.files[i]?.file?.url
+    })
+  }
+  console.log(imgs)
+  return imgs;
+}
+
+
 function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
   let data = [];
@@ -120,7 +134,7 @@ function parseRollup(rollupData){
       data.push(rollupArray[i].url)
     else if (rollupArray[i].files)
       data.push(rollupArray[i].files[0]?.url)
-  } 
+  }
   return data
 }
 // getPage("c03e32537c054d7aa788a4c37b20695f")
