@@ -20,6 +20,7 @@ app.get("/name/:pageId", async (req,res) => {
 app.get("/participate/:session", async (req, res) => {
   // TODO: load session page
 
+
 })
 
 app.get("/sessions/:session/:slug", async (req, res) => {
@@ -35,7 +36,7 @@ app.get("/sessions/:session/:slug/test", async (req, res) => {
   const pageId = classList[req.params.session][req.params.slug]
   const pageInfo = await getPage(pageId)
   console.log(pageInfo.properties)
-  res.render("test", pageInfo.properties)
+  res.render("template-class-concurrent", pageInfo.properties)
 })
 app.get("/sessions/:session", async (req, res) => {
   console.log(req.params)
