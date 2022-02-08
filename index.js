@@ -4,7 +4,7 @@ const classList = require("./lib/classNotionPageList")
 const app = express()
 const PORT = process.env.PORT || 3000
 
-console.log("staring up")
+console.log("starting up")
 app.use(express.static("public"))
 app.set('views', './public/templates')
 app.set('view engine', 'hbs');
