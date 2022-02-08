@@ -6,19 +6,17 @@ on:
       - main
 
 jobs:
+
   deployment:
     runs-on: self-hosted
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v2
-
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'
-
       - name: Install dependencies
         run: npm ci
-
       - name: Restart server application
         run: pm2 restart sfpc.study
