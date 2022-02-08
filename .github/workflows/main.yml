@@ -17,6 +17,4 @@ jobs:
           node-version: '16.x'
       - name: Install dependencies
         run: npm ci
-      - name: Restart server
-        run: pm2 restart all
 
