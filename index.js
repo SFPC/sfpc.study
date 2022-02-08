@@ -36,7 +36,7 @@ app.get("/sessions/:session/:slug/test", async (req, res) => {
   const pageId = classList[req.params.session][req.params.slug]
   const pageInfo = await getPage(pageId)
   console.log(pageInfo.properties)
-  res.render("template-class-concurrent", pageInfo.properties)
+  res.render("test", pageInfo.properties)
 })
 app.get("/sessions/:session", async (req, res) => {
   console.log(req.params)
