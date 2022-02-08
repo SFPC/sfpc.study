@@ -8,6 +8,7 @@ on:
 jobs:
   deployment:
     runs-on: self-hosted
+    environment: .env
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v2
