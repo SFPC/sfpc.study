@@ -6,7 +6,6 @@ on:
       - main
 
 jobs:
-
   deployment:
     runs-on: self-hosted
     steps:
