@@ -23,23 +23,33 @@ app.get("/participate/:session", async (req, res) => {
 
 })
 
+app.get("/sessions/spring-22/:slug", async (req, res) => {
+  console.log(req.params)
+  try {
+    const pageId = classList["spring-22"][req.params.slug]
+    const classData = await getPage(pageId)
+    const response = parseClassData(classData)
+    res.render(`spring-22/${req.params.slug}`, response)
+  } catch (err) {
+    console.error(err)
+  }
+
+})
+
 app.get("/sessions/:session/:slug", async (req, res) => {
   console.log(req.params)
   const pageId = classList[req.params.session][req.params.slug]
   const classData = await getPage(pageId)
   const response = parseClassData(classData)
-  console.log(response)
   res.render("template-class-concurrent", response)
 })
 app.get("/sessions/:session/:slug/test", async (req, res) => {
-  console.log(req.params)
   const pageId = classList[req.params.session][req.params.slug]
   const pageInfo = await getPage(pageId)
   console.log(pageInfo.properties)
   res.render("template-class-concurrent", pageInfo.properties)
 })
 app.get("/sessions/:session", async (req, res) => {
-  console.log(req.params)
 
   const session = await getPage(classList.sessions[req.params.session])
   const sessionInfo = session.properties
@@ -67,6 +77,7 @@ app.listen(PORT, console.log(`server started on ${PORT}`))
 
 function parseClassData(apiResponse){
   const classInfo = apiResponse.properties;
+  console.log(classInfo)
   //this is the data that will be passes to the class template
   return {
     name: classInfo.Name.title[0].plain_text,
@@ -92,6 +103,7 @@ function parseTeachers(classInfo){
   const teacherNames = parseRollup(classInfo["Teacher Names"])
   const teacherBios = parseRollup(classInfo["Teacher Bios"])
   const teacherPhotos = parseRollup(classInfo["Teacher Photos"])
+  console.log(teacherPhotos)
   const teacherWebsites = parseRollup(classInfo["Teacher Websites"])
   const teacherTwitters = parseRollup(classInfo["Teacher Twitters"])
   const teacherInstas = parseRollup(classInfo["Teacher Instagrams"])
