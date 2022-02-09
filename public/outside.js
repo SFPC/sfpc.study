@@ -310,9 +310,9 @@ $(window).on("load", function() {
 // $(".hide-content").fadeIn(2000);
 $(".hide-content").fadeIn(1000);
 
-setTimeout(function() {
-       $('.website-grid').addClass('grid-hide')
-   }, 1000);
+// setTimeout(function() {
+//        $('.website-grid').addClass('grid-hide')
+//    }, 1000);
 
 
 // $('.website-grid').addClass('grid-hide').delay(1000);
