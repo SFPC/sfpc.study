@@ -275,12 +275,12 @@ function sectionJump(value){
 $('.shell').scroll(function () {
 
 
-
-  if ($(this).scrollTop + $(this).offsetHeight === $(this).scrollHeight) {
-       $('.fixed-support').addClass('hide-apply');
-   } else {
-     $('.fixed-support').removeClass('hide-apply');
-   }
+  //
+  // if ($(this).scrollTop + $(this).offsetHeight === $(this).scrollHeight) {
+  //      $('.fixed-support').addClass('hide-apply');
+  //  } else {
+  //    $('.fixed-support').removeClass('hide-apply');
+  //  }
 
   //
   // if($(window).scrollTop() + $(window).height() == $(document).height()) {
