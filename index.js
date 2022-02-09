@@ -95,7 +95,7 @@ function parseClassData(apiResponse){
     description: classInfo["Short Description"]?.rich_text[0]?.plain_text,
     active: classInfo["Active"]?.formula.boolean,
     url: classInfo["Webpage URL"]?.url,
-    session: parseRollup(classInfo["Session Name"])[0]?.plain_text
+    session: parseRollup(classInfo["Session Name"])[0]?.plain_text,
     notifyDate: parseRollup(classInfo["Notification Date"])[0]?.date?.start
 
   }
