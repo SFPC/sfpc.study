@@ -307,6 +307,7 @@ $('#shell').bind('scroll', function()
 /////////////////////// ON LOAD //////////////////////////
 
 $(window).on("load", function() {
+$(".hide-content").fadeIn(2000);
 });
 
 
