@@ -1993,7 +1993,7 @@ section.stacked-4 {
         }
 
 
-        select#allSections, .fixed-apply {
+        select#allSections, .fixed-apply, .fixed-support {
           font-size: var(--small-text);
         }
 
