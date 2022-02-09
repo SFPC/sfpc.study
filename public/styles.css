@@ -1006,7 +1006,7 @@ section ul {
     list-style-type: circle;
 }
 
-p a, .details a {
+p a, .details a, li a, ul a {
     color: var(--text-color);
     /* text-decoration-thickness: 3px; */
     text-decoration: underline;
