@@ -66,7 +66,7 @@ if (isClosed) {
 
       if(!$target.hasClass('active')){
          // allPanels.removeClass('active').slideUp();
-         $target.addClass('active').slideDown();
+         $target.toggleClass('active').slideDown();
       }
 
       $this.scrollIntoView({
