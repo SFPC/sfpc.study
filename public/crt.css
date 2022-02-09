@@ -22,6 +22,10 @@ body {
   color: var(--text-color);
 }
 
+a {
+  color: var(--text-link);
+}
+
 .shell {
   border: 2px solid #fff;
   box-sizing: border-box;
