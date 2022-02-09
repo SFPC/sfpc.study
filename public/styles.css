@@ -708,6 +708,53 @@ section {
           pointer-events: none;
         }
 
+
+
+        .fixed-support {
+          text-decoration: none;
+          z-index: 9999999999999;
+          position: fixed;
+          right: calc(4px + var(--body-margin)/2);
+          bottom: calc(4px + var(--footer-height));
+          border-radius: 100%;
+          display: table;
+          width: auto;
+          border: 0px;
+          cursor: pointer;
+            background: var(--text-link);
+            color: var(--background);
+          font-family: var(--main-title-font);
+          font-weight: bold;
+          font-size: var(--medium-text);
+          padding: var(--program-margin);
+          transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          ms-transition: all .2s ease-in-out;
+          o-transition: all .2s ease-in-out;
+          backdrop-filter: blur(3px);
+          line-height: var(--medium-line-height);
+          width: calc(var(--medium-text)*2);
+          height: calc(var(--medium-text)*2);
+          text-align: center;
+          vertical-align: middle;
+          width: calc(var(--medium-text)*2);
+          height: calc(var(--medium-text)*2);
+          padding:1.1vw;
+        }
+
+        .fixed-support span {
+          display: table-cell;
+          vertical-align: middle;
+          transform: rotate(5deg);
+        }
+
+
+                .fixed-support:hover {
+                color: #000;
+                background: rgba(255,255,255,.8);
+                }
+
+
 select#allSections {
   z-index: 9999999999999;
   position: fixed;
