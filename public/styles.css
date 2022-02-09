@@ -202,6 +202,10 @@ h3, section .grid-2 p, .block-text, section .grid-2 ul {
   o-transition: all .2s ease-in-out;
 }
 
+      section .grid-2 ul ul  {
+          padding-inline-start: calc(var(--body-margin)*6 * -1);
+      }
+
       section .grid-2 ul li{
         margin-bottom: var(--body-margin);
 
