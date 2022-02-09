@@ -476,6 +476,10 @@ img {
   opacity: 0;
 }
 
+.hide-content {
+  display: none;
+}
+
 .show {
   display: block;
   height: auto;

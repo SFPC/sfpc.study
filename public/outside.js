@@ -309,6 +309,12 @@ $('#shell').bind('scroll', function()
 $(window).on("load", function() {
 });
 
+$(window).load(function() {
+  // When the page has loaded
+  $("hide-content").fadeIn(2000);
+});
+
+
 
 $(document).ready(function() {
   $(".animsition").animsition({
