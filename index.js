@@ -142,7 +142,8 @@ function promoImgs(classInfo){
 }
 
 function prettyDateString(uglyDateString){
-  return new Date(Date.parse(uglyDateString)).toLocaleDateString("en-us", {month:'long', day:'numeric', year:'numeric', timeZone:"America/New_York"})
+  let parts = uglyDateString.split('-');
+  return new Date(parts[0], parts[1]-1, parts[2]).toLocaleDateString("en-us", {month:'long', day:'numeric', year:'numeric'})
 }
 function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
