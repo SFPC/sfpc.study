@@ -1,4 +1,5 @@
 const express = require("express")
+const hbs = require("hbs")
 const {getPage} = require('./lib/notion')
 const classList = require("./lib/classNotionPageList")
 const app = express()
@@ -8,6 +9,7 @@ console.log("starting up")
 app.use(express.static("public"))
 app.set('views', './public/templates')
 app.set('view engine', 'hbs');
+hbs.registerPartials("./public/templates/partials")
 app.get("/page/:pageId", async (req,res) => {
   const pageInfo = await getPage(req.params.pageId)
   res.json(pageInfo.properties)
