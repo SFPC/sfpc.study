@@ -17,10 +17,13 @@ app.get("/name/:pageId", async (req,res) => {
   const pageInfo = await getPage(req.params.pageId)
   res.json(pageInfo.properties.Name.title[0].plain_text)
 })
-app.get("/participate/:session", async (req, res) => {
+app.get("/participate/spring-22", async (req, res) => {
   // TODO: load session page
+  res.render("session")
 
-
+})
+app.get("/sessions/spring-22", (req,res) => {
+  res.render("session")
 })
 
 app.get("/sessions/spring-22/:slug", async (req, res) => {
@@ -36,43 +39,43 @@ app.get("/sessions/spring-22/:slug", async (req, res) => {
 
 })
 
-app.get("/sessions/:session/:slug", async (req, res) => {
-  console.log(req.params)
-  const pageId = classList[req.params.session][req.params.slug]
-  const classData = await getPage(pageId)
-  const response = parseClassData(classData)
-  res.render("template-class-concurrent", response)
-})
-app.get("/sessions/:session/:slug/test", async (req, res) => {
-  const pageId = classList[req.params.session][req.params.slug]
-  const pageInfo = await getPage(pageId)
-  console.log(pageInfo.properties)
-  res.render("template-class-concurrent", pageInfo.properties)
-})
-app.get("/sessions/:session", async (req, res) => {
+// app.get("/sessions/:session/:slug", async (req, res) => {
+//   console.log(req.params)
+//   const pageId = classList[req.params.session][req.params.slug]
+//   const classData = await getPage(pageId)
+//   const response = parseClassData(classData)
+//   res.render("template-class-concurrent", response)
+// })
+// app.get("/sessions/:session/:slug/test", async (req, res) => {
+//   const pageId = classList[req.params.session][req.params.slug]
+//   const pageInfo = await getPage(pageId)
+//   console.log(pageInfo.properties)
+//   res.render("template-class-concurrent", pageInfo.properties)
+// })
+// app.get("/sessions/:session", async (req, res) => {
 
-  const session = await getPage(classList.sessions[req.params.session])
-  const sessionInfo = session.properties
-  let response={
-    title: sessionInfo.Name.title[0].plain_text,
-    description: sessionInfo.Description.rich_text[0]?.plain_text,
-    organizers: parseRollup(sessionInfo["Organizer Names"]),
-    teachers: parseRollup(sessionInfo["Teacher Names"]),
-    startDate: sessionInfo["Dates"]?.date.start,
-    endDate: sessionInfo["Dates"]?.date.end,
-    location: sessionInfo.Location?.multi_select[0]?.name,
-    classes: []
-  }
-  const classes = classList[req.params.session]
+//   const session = await getPage(classList.sessions[req.params.session])
+//   const sessionInfo = session.properties
+//   let response={
+//     title: sessionInfo.Name.title[0].plain_text,
+//     description: sessionInfo.Description.rich_text[0]?.plain_text,
+//     organizers: parseRollup(sessionInfo["Organizer Names"]),
+//     teachers: parseRollup(sessionInfo["Teacher Names"]),
+//     startDate: sessionInfo["Dates"]?.date.start,
+//     endDate: sessionInfo["Dates"]?.date.end,
+//     location: sessionInfo.Location?.multi_select[0]?.name,
+//     classes: []
+//   }
+//   const classes = classList[req.params.session]
 
-  for(let key in classes){
-    const pageId = classes[key]
-    const classData = await getPage(pageId)
-    response.classes.push(parseClassData(classData))
-  }
-  console.log(response)
-  res.render("session", response)
-})
+//   for(let key in classes){
+//     const pageId = classes[key]
+//     const classData = await getPage(pageId)
+//     response.classes.push(parseClassData(classData))
+//   }
+//   console.log(response)
+//   res.render("session", {})
+// })
 app.listen(PORT, console.log(`server started on ${PORT}`))
 
 function parseClassData(apiResponse){
@@ -84,13 +87,13 @@ function parseClassData(apiResponse){
     teachers: parseTeachers(classInfo),
     promoImage: classInfo["Promo Image"]?.files[0]?.file?.url,
     promoImages: promoImgs(classInfo),
-    startDate: classInfo["Date"]?.date?.start,
-    endDate: classInfo["Date"]?.date?.end,
+    startDate: prettyDateString(classInfo["Date"]?.date?.start),
+    endDate: prettyDateString(classInfo["Date"]?.date?.end),
     numberOfClasses: classInfo["Number of Classes"].number,
     time: classInfo["Time"].rich_text[0]?.plain_text,
     location: classInfo["Location"]?.select?.name,
     cost: classInfo["Cost"]?.number,
-    applicationEndDate: classInfo["Application End Date"]?.date?.start,
+    applicationEndDate: prettyDateString(classInfo["Application End Date"]?.date?.start),
     applicationLink: classInfo["Application URL"]?.url,
     description: classInfo["Short Description"]?.rich_text[0]?.plain_text,
     active: classInfo["Active"]?.formula.boolean,
@@ -138,7 +141,9 @@ function promoImgs(classInfo){
   return imgs;
 }
 
-
+function prettyDateString(uglyDateString){
+  return new Date(Date.parse(uglyDateString)).toLocaleDateString("en-us", {month:'long', day:'numeric', year:'numeric', timeZone:"America/New_York"})
+}
 function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
   let data = [];
