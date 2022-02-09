@@ -1007,7 +1007,7 @@ section ul {
 }
 
 p a, .details a, li a, ul a {
-    color: var(x--text-color);
+    color: var(--text-color);
     /* text-decoration-thickness: 3px; */
     text-decoration: underline;
     position: relative;
