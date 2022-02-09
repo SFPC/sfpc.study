@@ -264,7 +264,7 @@ function sectionJump(value){
 // SHOW APPLY ON SCROLL
 $('.shell').scroll(function () {
 
-  if($(window).scrollTop() + $(window).height() <= $(document).height() - 100) {
+  if($(window).scrollTop() + $(window).height() == $(document).height()) {
        $('.fixed-support').addClass('hide-apply');
    } else {
      $('.fixed-support').removeClass('hide-apply');
