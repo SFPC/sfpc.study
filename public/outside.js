@@ -263,6 +263,14 @@ function sectionJump(value){
 
 // SHOW APPLY ON SCROLL
 $('.shell').scroll(function () {
+
+  if($(window).scrollTop() + $(window).height() == $(document).height()) {
+       $('.fixed-apply').addClass('hide-apply');
+   } else {
+     $('.fixed-apply').removeClass('hide-apply');
+   }
+
+
     var y = $(this).scrollTop();
     if (y > 800) {
       $('.fixed-apply').removeClass('hide-apply');
