@@ -265,9 +265,9 @@ function sectionJump(value){
 $('.shell').scroll(function () {
 
   if($(window).scrollTop() + $(window).height() == $(document).height()) {
-       $('.fixed-apply').addClass('hide-apply');
+       $('.fixed-support').addClass('hide-apply');
    } else {
-     $('.fixed-apply').removeClass('hide-apply');
+     $('.fixed-support').removeClass('hide-apply');
    }
 
 
