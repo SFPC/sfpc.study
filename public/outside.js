@@ -262,7 +262,6 @@ function sectionJump(value){
 }
 
 
- var isBottom = node.scrollTop + node.offsetHeight === node.scrollHeight;
 
  var node = $('.shell'); // gets the html element
   if(node) {
@@ -277,7 +276,7 @@ $('.shell').scroll(function () {
 
   var isBottom = $(this).scrollTop + $(this).offsetHeight === $(this).scrollHeight;
 
-  if isBottom {
+  if (isBottom) {
        $('.fixed-support').addClass('hide-apply');
    } else {
      $('.fixed-support').removeClass('hide-apply');
