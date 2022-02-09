@@ -275,9 +275,8 @@ function sectionJump(value){
 $('.shell').scroll(function () {
 
 
-  var isBottom = $(this).scrollTop + $(this).offsetHeight === $(this).scrollHeight;
 
-  if isBottom {
+  if ($(this).scrollTop + $(this).offsetHeight === $(this).scrollHeight) {
        $('.fixed-support').addClass('hide-apply');
    } else {
      $('.fixed-support').removeClass('hide-apply');
