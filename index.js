@@ -157,6 +157,8 @@ function parseRollup(rollupData){
       data.push(rollupArray[i].url)
     else if (rollupArray[i].files)
       data.push(rollupArray[i].files[0]?.url)
+    else
+      data.push(null)
   }
   return data
 }
