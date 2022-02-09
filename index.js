@@ -107,6 +107,7 @@ function parseTeachers(classInfo){
   const teacherWebsites = parseRollup(classInfo["Teacher Websites"])
   const teacherTwitters = parseRollup(classInfo["Teacher Twitters"])
   const teacherInstas = parseRollup(classInfo["Teacher Instagrams"])
+  const teacherPronouns = parseRollup(classInfo["Teacher Pronouns"])
   const teachers = [];
   for(let i = 0; i < teacherNames.length; i++){
     teachers.push({
@@ -116,6 +117,7 @@ function parseTeachers(classInfo){
       website: teacherWebsites[i],
       twitter: teacherTwitters[i],
       instagram: teacherInstas[i],
+      pronouns: teacherPronouns[i],
     })
   }
   console.log(teachers)
