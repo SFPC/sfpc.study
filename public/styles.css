@@ -716,10 +716,8 @@ section {
           position: fixed;
           right: calc(4px + var(--body-margin)/2);
           bottom: calc(4px + var(--footer-height));
-          /* border-radius: 100%; */
-          border-radius: calc(var(--border-rad));
-          /* display: table; */
-          display: inline;
+          border-radius: 100%;
+          display: table;
           width: auto;
           border: 0px;
           cursor: pointer;
@@ -737,17 +735,17 @@ section {
           line-height: var(--medium-line-height);
           width: calc(var(--medium-text)*2);
           height: calc(var(--medium-text)*2);
-          /* text-align: center;
+          text-align: center;
           vertical-align: middle;
           width: calc(var(--medium-text)*2);
           height: calc(var(--medium-text)*2);
-          padding:1.1vw; */
+          padding:1.2vw;
         }
 
         .fixed-support span {
           display: table-cell;
           vertical-align: middle;
-          transform: rotate(5deg);
+          transform: rotate(8deg);
         }
 
 
