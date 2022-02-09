@@ -443,8 +443,8 @@ $(document).ready(function() {
               // $(".shell").addClass('shell-halfsize').removeClass('shell-fullsize');
               $(".shell").toggleClass('shell-halfsize');
               $(".shell").toggleClass('shell-fullsize');
-              $(".crt-overlay").toggleClass('crt-overlay-halfsize');
-              $(".crt-overlay").toggleClass('crt-overlay--fullsize');
+              $(".crt-overlay").toggleClass('/crt-overlay-halfsize');
+              $(".crt-overlay").toggleClass('/crt-overlay--fullsize');
               $(".mobile-menu-content").toggleClass('mobile-menu-content-show');
 
               if ($(".mobile-menu").text() == "Menu") {
@@ -481,7 +481,7 @@ $(document).ready(function() {
 
         // MODE TEXT
 
-          if (modeStyles.href.includes('lcd')) {
+          if (modeStyles.href.includes('/lcd')) {
             themeToggle.innerText = inLCD
             $('#current-mode').html('liquid crystal')
           } else {
@@ -589,12 +589,12 @@ const currentMode = document.getElementById('current-mode');
 document.addEventListener('DOMContentLoaded', () => {
 
   themeToggle.addEventListener('click', () => {
-    if (modeStyles.href.includes('lcd')) {
-      modeStyles.href = 'crt.css';
-      // $('#shell').addClass('crt');
+    if (modeStyles.href.includes('/lcd')) {
+      modeStyles.href = '/crt.css';
+      // $('#shell').addClass('/crt');
       themeToggle.innerText = inCRT;
     } else {
-      modeStyles.href = 'lcd.css';
+      modeStyles.href = '/lcd.css';
       themeToggle.innerText = inLCD;
     }
     localStorage.setItem('mode',modeStyles.href)
