@@ -261,20 +261,35 @@ function sectionJump(value){
   });
 }
 
-// CHECK IF AT BOTTOM OF SHELL, HIDE SUPPORT
-function chk_scroll(e) {
-    var elem = $('.shell');
-    if (elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight()) {
 
-          $('.fixed-support').addClass('hide-apply');
-    } else {
-      $('.fixed-support').removeClass('hide-apply');
-    }
-}
+ var isBottom = node.scrollTop + node.offsetHeight === node.scrollHeight;
+
+ var node = $('.shell'); // gets the html element
+  if(node) {
+     var isBottom = node.scrollTop + node.offsetHeight === node.scrollHeight;
+  }
+
 
 
 // SHOW APPLY ON SCROLL
 $('.shell').scroll(function () {
+
+
+  var isBottom = $(this).scrollTop + $(this).offsetHeight === $(this).scrollHeight;
+
+  if isBottom {
+       $('.fixed-support').addClass('hide-apply');
+   } else {
+     $('.fixed-support').removeClass('hide-apply');
+   }
+
+  //
+  // if($(window).scrollTop() + $(window).height() == $(document).height()) {
+  //      $('.fixed-support').addClass('hide-apply');
+  //  } else {
+  //    $('.fixed-support').removeClass('hide-apply');
+  //  }
+
 
     var y = $(this).scrollTop();
     if (y > 800) {
@@ -335,11 +350,6 @@ $(".hide-content").fadeIn(1000);
 
 
 $(document).ready(function() {
-
-// CHECK IF AT BOTTOM OF SHELL, HIDE SUPPORT
-  $('div').bind('scroll',chk_scroll);
-
-
   $(".animsition").animsition({
     inClass: 'zoom-in',
     outClass: 'zoom-out',
