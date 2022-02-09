@@ -61,12 +61,12 @@ if (isClosed) {
       $this = $(this);
       $target =  $this.parent().next();
 
-      $(this).toggleClass('active');
-      $(this).parent().toggleClass('active');
+      $(this).addClass('active');
+      $(this).parent().addClass('active');
 
       if(!$target.hasClass('active')){
-         allPanels.removeClass('active').slideUp();
-         $target.toggleClass('active').slideDown();
+         // allPanels.removeClass('active').slideUp();
+         $target.addClass('active').slideDown();
       }
 
       $this.scrollIntoView({
