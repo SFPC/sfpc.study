@@ -65,7 +65,7 @@ if (isClosed) {
       $(this).parent().toggleClass('active');
 
       if(!$target.hasClass('active')){
-         // allPanels.removeClass('active').slideUp();
+         allPanels.removeClass('active').slideUp();
          $target.toggleClass('active').slideDown();
       }
 
