@@ -265,10 +265,10 @@ function sectionJump(value){
 function chk_scroll(e) {
     var elem = $(e.currentTarget);
     if (elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight()) {
+
           $('.fixed-support').addClass('hide-apply');
-           } else {
-             $('.fixed-support').removeClass('hide-apply');
-           }
+    } else {
+      $('.fixed-support').removeClass('hide-apply');
     }
 }
 
