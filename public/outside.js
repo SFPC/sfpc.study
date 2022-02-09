@@ -263,7 +263,7 @@ function sectionJump(value){
 
 // CHECK IF AT BOTTOM OF SHELL, HIDE SUPPORT
 function chk_scroll(e) {
-    var elem = $(e.currentTarget);
+    var elem = $('.shell');
     if (elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight()) {
 
           $('.fixed-support').addClass('hide-apply');
@@ -337,7 +337,7 @@ $(".hide-content").fadeIn(1000);
 $(document).ready(function() {
 
 // CHECK IF AT BOTTOM OF SHELL, HIDE SUPPORT
-  $('.shell').bind('scroll',chk_scroll);
+  $('div').bind('scroll',chk_scroll);
 
 
   $(".animsition").animsition({
