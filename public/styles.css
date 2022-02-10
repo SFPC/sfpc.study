@@ -746,6 +746,10 @@ section {
           display: table-cell;
           vertical-align: middle;
           transform: rotate(8deg);
+
+          padding:3.2vw;
+          right: calc(8px + var(--body-margin)/2);
+    bottom: calc(8px + var(--footer-height));
         }
 
 
