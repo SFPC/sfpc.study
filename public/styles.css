@@ -737,8 +737,8 @@ section {
           height: calc(var(--medium-text)*2);
           text-align: center;
           vertical-align: middle;
-          width: calc(var(--medium-text)*2);
-          height: calc(var(--medium-text)*2);
+          /* width: calc(var(--medium-text)*2);
+          height: calc(var(--medium-text)*2); */
           padding:1.2vw;
         }
 
