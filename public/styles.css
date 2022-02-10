@@ -717,7 +717,7 @@ section {
           right: calc(4px + var(--body-margin)/2);
           bottom: calc(4px + var(--footer-height));
           border-radius: 100%;
-          display: table;
+          display: block;
           width: auto;
           border: 0px;
           cursor: pointer;
