@@ -101,7 +101,7 @@ function parseClassData(apiResponse){
     active: classInfo["Active"]?.formula.boolean,
     url: classInfo["Webpage URL"]?.url,
     session: parseRollup(classInfo["Session Name"])[0]?.plain_text,
-    notifyDate: classInfo["Notification Date"]?.date?.start
+    notifyDate: prettyDateString(classInfo["Notification Date"]?.date?.start)
 
   }
 }
