@@ -46,13 +46,13 @@ app.get("/sessions/spring-22/:slug", async (req, res) => {
 //   const pageId = classList[req.params.session][req.params.slug]
 //   const classData = await getPage(pageId)
 //   const response = parseClassData(classData)
-//   res.render("template-class-concurrent", response)
+//   res.render("class-concurrent", response)
 // })
 // app.get("/sessions/:session/:slug/test", async (req, res) => {
 //   const pageId = classList[req.params.session][req.params.slug]
 //   const pageInfo = await getPage(pageId)
 //   console.log(pageInfo.properties)
-//   res.render("template-class-concurrent", pageInfo.properties)
+//   res.render("class-concurrent", pageInfo.properties)
 // })
 // app.get("/sessions/:session", async (req, res) => {
 
