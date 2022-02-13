@@ -754,6 +754,10 @@ section {
                 background: rgba(255,255,255,.8);
                 }
 
+                .fixed-support:hover span{
+                transform: rotate(-8deg);
+                }
+
 
 select#allSections {
   z-index: 9999999999999;
