@@ -250,7 +250,7 @@ select#allSections, .fixed-apply  {
   opacity: 0;
   z-index: 999999999999999999999999999;
   pointer-events: none;
-  animation: flicker 1s infinite;
+  /* animation: flicker 1s infinite; */
   /* height: calc(100% - var(--footer-height) - var(--header-height)); */
 }
 /* #shell::before  */
