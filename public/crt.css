@@ -288,7 +288,7 @@ select#allSections, .fixed-apply  {
   text-shadow: 3px 0 1px rgba(0,30,255,0.5), -3px 0 1px rgba(255,0,80,0.3), 0 0 3px;
     /* animation: textShadowBig 1s infinite; */
 }
-
+/*
 .crt-overlay img::after, .crt-overlay .featured::after,
 .featured::after,
 img::after{
@@ -304,7 +304,7 @@ img::after{
   opacity: 0;
   z-index: 999999999999999999999999999;
   pointer-events: none;
-}
+} */
 
 
 
