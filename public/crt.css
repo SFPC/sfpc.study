@@ -292,7 +292,7 @@ select#allSections, .fixed-apply  {
 .crt-overlay img::after, .crt-overlay .featured::after,
 .featured::after,
 img::after{
-  animation: flicker 1s infinite;
+  animation: flicker 3s infinite;
   content: " ";
   display: block;
   position: fixed;
