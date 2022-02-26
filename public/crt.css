@@ -289,6 +289,15 @@ select#allSections, .fixed-apply  {
     /* animation: textShadowBig 1s infinite; */
 }
 
+.crt-overlay img::before{
+  animation: flicker 1s infinite;
+}
+
+
+.crt-overlay .featured::before{
+  animation: flicker 1s infinite;
+}
+
 
 @media (max-width: 768px) {
 
