@@ -289,12 +289,12 @@ select#allSections, .fixed-apply  {
     /* animation: textShadowBig 1s infinite; */
 }
 
-.crt-overlay img::before{
+.crt-overlay img::after{
   animation: flicker 1s infinite;
 }
 
 
-.crt-overlay .featured::before{
+.crt-overlay .featured::after{
   animation: flicker 1s infinite;
 }
 
