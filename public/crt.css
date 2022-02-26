@@ -289,14 +289,21 @@ select#allSections, .fixed-apply  {
     /* animation: textShadowBig 1s infinite; */
 }
 
-.crt-overlay img::after{
+.crt-overlay img::after, .crt-overlay .featured::after{
   animation: flicker 1s infinite;
+  content: " ";
+  display: block;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 999999999999999999999999999;
+  pointer-events: none;
 }
 
-
-.crt-overlay .featured::after{
-  animation: flicker 1s infinite;
-}
 
 
 @media (max-width: 768px) {
