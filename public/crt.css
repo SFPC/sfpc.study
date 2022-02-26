@@ -289,7 +289,7 @@ select#allSections, .fixed-apply  {
     /* animation: textShadowBig 1s infinite; */
 }
 
-.crt-overlay img::after, .crt-overlay .featured::after{
+.crt-overlay img::after, .crt-overlay .featured::after, .featured::after, img::after{
   animation: flicker 1s infinite;
   content: " ";
   display: block;
