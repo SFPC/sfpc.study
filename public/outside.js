@@ -35,6 +35,7 @@ function closed() {
   var currentHour = currentTime.getHours();
   var isWeekend = currentTime.getDay()%6==0;
 
+
   if ((currentHour < 9) || (currentHour > 21) || isWeekend) {
     window.location.replace("closed.html");
   }
@@ -45,6 +46,9 @@ var notClosed = window.location.href.indexOf('closed') == 1;
 
 if (isClosed) {
    closed();
+   console.log(currentTime.getDay());
+   console.log(currentTime.getHours());
+
 } else {
   $('.mobile-menu').addClass('hide-menu');
 }
