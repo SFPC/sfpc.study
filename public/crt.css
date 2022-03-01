@@ -238,6 +238,10 @@ select#allSections, .fixed-apply  {
   }
 }
 /* #shell::after, */
+
+.flickering::after {
+   animation: flicker 1s infinite;
+}
 .crt-overlay::after {
   content: " ";
   display: block;
