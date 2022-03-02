@@ -42,7 +42,7 @@ app.get("/sessions/spring-22/:slug", async (req, res) => {
   }
 
 })
-app.get("/projects", async (req,res) => {
+app.get("/projects_staging", async (req,res) => {
   const response = await getDatabaseEntries("713f24806a524c5e892971e4fbf5c9dd")
   const projectData = response.results.map((project) => {
     return parseNotionPage(project)
