@@ -171,7 +171,7 @@ h1 {
           /* margin-bottom: var(--text-margin); */
         }
 
-.session .title{
+.session .title, .project .title{
   font-size: var(--large-text) !important;
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
