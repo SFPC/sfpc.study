@@ -46,9 +46,6 @@ var notClosed = window.location.href.indexOf('closed') == 1;
 
 if (isClosed) {
    closed();
-   console.log(currentTime.getDay());
-   console.log(currentTime.getHours());
-
 } else {
   $('.mobile-menu').addClass('hide-menu');
 }
