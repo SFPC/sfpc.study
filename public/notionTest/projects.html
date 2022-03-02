@@ -1,0 +1,13 @@
+
+<pre></pre>
+<script src="js/jquery.min.js"></script>
+<script>
+  const getProjectEntries = async () => {
+    const res = await fetch("http://localhost:3000/projects");
+    const data = await res.json()
+    $('pre').html(JSON.stringify(data))
+    console.log(data)
+  }
+
+  getProjectEntries()
+</script>

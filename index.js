@@ -1,7 +1,9 @@
 const express = require("express")
 const hbs = require("hbs")
-const {getPage} = require('./lib/notion')
+const {getPage, getDatabaseEntries} = require('./lib/notion')
 const classList = require("./lib/classNotionPageList")
+const res = require("express/lib/response")
+const { response } = require("express")
 const app = express()
 const PORT = process.env.PORT || 3000
 
@@ -40,7 +42,14 @@ app.get("/sessions/spring-22/:slug", async (req, res) => {
   }
 
 })
-
+app.get("/projects", async (req,res) => {
+  const response = await getDatabaseEntries("713f24806a524c5e892971e4fbf5c9dd")
+  const projectData = response.results.map((project) => {
+    return parseNotionPage(project)
+  })
+  console.log(projectData)
+  res.render("projectList", {projects: projectData})
+})
 // app.get("/sessions/:session/:slug", async (req, res) => {
 //   console.log(req.params)
 //   const pageId = classList[req.params.session][req.params.slug]
@@ -144,6 +153,7 @@ function promoImgs(classInfo){
 }
 
 function prettyDateString(uglyDateString){
+  if(!uglyDateString) return null
   let parts = uglyDateString.split('-');
   return new Date(parts[0], parts[1]-1, parts[2]).toLocaleDateString("en-us", {month:'long', day:'numeric', year:'numeric'})
 }
@@ -151,18 +161,42 @@ function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
   let data = [];
   for(let i = 0; i<rollupArray.length; i++){
-    if(rollupArray[i].title)
-      data.push(rollupArray[i]?.title[0]?.plain_text)
-    else if (rollupArray[i].rich_text)
-      data.push(rollupArray[i]?.rich_text[0]?.plain_text)
-    else if (rollupArray[i].url)
-      data.push(rollupArray[i].url)
-    else if (rollupArray[i].files)
-      data.push(rollupArray[i].files[0]?.url)
-    else
-      data.push(null)
+    data.push(parseNotionData(rollupArray[i]))
   }
   return data
+}
+function parseNotionPage(pageData){
+  let data = pageData.properties
+  let parsedData = {}
+  for(let key in data){
+    if(!data[key].relation) parsedData[key] = parseNotionData(data[key])
+  }
+  return parsedData
+
+}
+
+function parseNotionData(dataObj){
+  if(dataObj.title)
+    return dataObj?.title[0]?.plain_text
+  else if (dataObj.rich_text)
+    return dataObj?.rich_text[0]?.plain_text
+  else if (dataObj.url)
+    return dataObj.url
+  else if (dataObj.files)
+    return dataObj.files[0]?.url
+  else if (dataObj.date)
+    return dataObj.date
+  else if (dataObj.multi_select){
+    let ms = []
+    for(let i = 0; i < dataObj.multi_select.length; i++){
+      ms.push(dataObj.multi_select[i].name)
+    }
+    return ms
+  }
+  else if (dataObj.rollup)
+    return parseRollup(dataObj)
+  else
+    return null
 }
 // getPage("c03e32537c054d7aa788a4c37b20695f")
 //00184f83-7465-4e26-8cfc-9e03c009becc

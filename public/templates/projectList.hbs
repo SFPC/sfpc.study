@@ -1,0 +1,27 @@
+<style>
+  .container {
+    height:100vh;
+    display:flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-flow: column wrap;
+  }
+  .project-card {
+    width:200px; 
+    background-color:lightblue; 
+    border: 2px solid teal; 
+    border-radius:20px; 
+    margin:10px;
+    padding: 10px;
+  }
+</style>
+<div class="container">
+  {{#each projects}}
+  <div class="project-card">
+  <h3><a href="{{this.[Website URL]}}">{{this.Name}}</a></h3>
+  <p>Organizers: {{#each this.[Website-Organizers]}}<span>{{this}}, </span>{{/each}}</p>
+  <p>Project Type: {{#each this.[Project Type]}}<span>{{this}} </span>{{/each}}</p>
+  </div>
+  {{/each}}
+</div>
+
