@@ -99,8 +99,30 @@
             </div>
         </section>
 
-        <section id="section-outro">
-          <div class="container">
+        <section id="section-projects">
+
+            <div class="grid-1 projects">
+
+              {{#each projects}}
+              <div class="grid-4 featured spring-22 session" data-location="">
+                <div class="featured-text">
+                  <img src="/images/sessions/spring-22/classes/darkmatters/cover.jpg">
+                  <div class="top">
+                    <h4 class="type"><a href="{{this.[Website URL]}}">{{#each this.[Project Type]}} {{this}} {{/each}}</a></h4>
+                    <h2 class="title">{{this.Name}}</h2>
+                    <h6>Description</h6>
+                  </div>
+                  <div class="bottom">
+                    <h4 class="details">Organized by {{#each this.[Website-Organizers]}}<span>{{this}}, </span>{{/each}}</h4>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+
+            </div>
+
+
+          <!-- <div class="container">
             {{#each projects}}
             <div class="project-card">
             <h3><a href="{{this.[Website URL]}}">{{this.Name}}</a></h3>
@@ -108,7 +130,7 @@
             <p>Project Type: {{#each this.[Project Type]}}<span>{{this}} </span>{{/each}}</p>
             </div>
             {{/each}}
-          </div>
+          </div> -->
         </section>
 
 
