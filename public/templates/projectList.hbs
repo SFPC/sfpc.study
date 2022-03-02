@@ -1,27 +1,159 @@
-<style>
-  .container {
-    height:100vh;
-    display:flex;
-    justify-content: flex-start;
-    align-content: flex-start;
-    flex-flow: column wrap;
-  }
-  .project-card {
-    width:200px; 
-    background-color:lightblue; 
-    border: 2px solid teal; 
-    border-radius:20px; 
-    margin:10px;
-    padding: 10px;
-  }
-</style>
-<div class="container">
-  {{#each projects}}
-  <div class="project-card">
-  <h3><a href="{{this.[Website URL]}}">{{this.Name}}</a></h3>
-  <p>Organizers: {{#each this.[Website-Organizers]}}<span>{{this}}, </span>{{/each}}</p>
-  <p>Project Type: {{#each this.[Project Type]}}<span>{{this}} </span>{{/each}}</p>
-  </div>
-  {{/each}}
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <title>School for Poetic Computation</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="School for Poetic Computation">
+    <meta name="description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sfpc.study/">
+    <meta property="og:title" content="School for Poetic Computationn">
+    <meta property="og:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sfpc.study/">
+    <meta property="twitter:title" content="School for Poetic Computation">
+    <meta property="twitter:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
+    <link href="/styles.css" rel="stylesheet">
+    <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
+    <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico"/>
+
+    <script src="/jquery-3.6.0.min.js"></script>
+
+    <!-- stats -->
+    <script type="text/javascript">
+    var sc_project=12714909;
+    var sc_invisible=1;
+    var sc_security="6086a46c";
+    </script>
+    <script type="text/javascript"
+    src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript><div class="statcounter"><a title="website statistics"
+    href="https://statcounter.com/" target="_blank"><img class="statcounter"
+    src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+
+    <script data-goatcounter="https://sfpc.goatcounter.com/count"
+    async src="//gc.zgo.at/count.js"></script>
+
+
+    <style>
+      .container {
+        height:100vh;
+        display:flex;
+        justify-content: flex-start;
+        align-content: flex-start;
+        flex-flow: column wrap;
+      }
+      .project-card {
+        width:200px;
+        background-color:lightblue;
+        border: 2px solid teal;
+        border-radius:20px;
+        margin:10px;
+        padding: 10px;
+      }
+    </style>
+
+    <!-- end stats -->
+</head>
+
+
+<body>
+      {{> header}}
+      {{> footer}}
+
+      <div class="crt-overlay crt-overlay-fullsize"></div>
+
+      <div id="shell" class="shell shell-fullsize about shell-content">
+
+        <!-- <select id= "allSections" onchange="sectionJump(this.value)">
+          <option value ="">Jump to section...</option>
+          <option value ="introduction">Introduction</option>
+          <option value ="classes">Classes</option>
+        </select> -->
+
+
+        <h4 class="breadcrumb hide-content">
+          <a href="/projects.html">projects</a>
+        </h4>
+
+
+
+
+
+        <section>
+            <div class="grid-2">
+            <h1>Our Projects</h1>
+            </div>
+
+            <div class="grid-2">
+
+              <div class="container">
+                {{#each projects}}
+                <div class="project-card">
+                <h3><a href="{{this.[Website URL]}}">{{this.Name}}</a></h3>
+                <p>Organizers: {{#each this.[Website-Organizers]}}<span>{{this}}, </span>{{/each}}</p>
+                <p>Project Type: {{#each this.[Project Type]}}<span>{{this}} </span>{{/each}}</p>
+                </div>
+                {{/each}}
+              </div>
+
+            </div>
+        </section>
+
+
+
+         <div class="break"></div>
+
+
+
+
+
+
+
+
+
+
+
+                <div class="break-noline"></div>
+
+
+                <section id="section-outro">
+                  <p tabindex="0" class="large">
+                    Interested in more learning opportunities at the School for Poetic Computation?
+                    Join our <a href="https://stats.sender.net/forms/e09QVa/view">newsletter</a> to stay up to date on future sessions and events, and
+                    follow us on <a href="https://instagram.com/sfpc_nyc">Instagram</a> and <a href="https://twitter.com/sfpc">Twitter</a>.
+                    Support our programming through <a href="https://withfriends.co/school_for_poetic_computation/join">scholarships</a>.
+                    Get in touch over <a href="mailto:info@sfpc.study">email</a>.
+                  </p>
+                </section>
+
+
+                <div class="break-endpage"></div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+<script src="/outside.js"></script>
+<script src="/carousel.js"></script>
+</p>
+
+</body>
+</html>
