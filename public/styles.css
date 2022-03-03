@@ -1154,6 +1154,22 @@ span.reference {
               hyphens: auto;
         }
 
+        /* .project {
+          overflow-wrap: break-word;
+          -webkit-hyphens: auto;
+         -moz-hyphens: auto;
+              hyphens: auto;
+        } */
+
+        .project .top h2 {
+          /* overflow: hidden; */
+          overflow-wrap: anywhere;
+          /* word-break: break-word; */
+          -webkit-hyphens: auto;
+         -moz-hyphens: auto;
+              hyphens: auto;
+        }
+
 .intro .bio {
   display: inline-block;
   vertical-align: bottom;

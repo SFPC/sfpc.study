@@ -117,7 +117,7 @@
                   <div class="bottom">
                     <h4 class="details">{{#each this.[Status]}} {{this}} {{/each}} {{#each this.[Release Date]}}{{this}}{{/each}}</h4>
                     <h4 class="details">Organized by {{#each this.[Website-Organizers]}}<span>{{this}}, </span>{{/each}}</h4>
-                    <h4 class="details">{{#each this.[Partnership?]}} {{#each this.[Partner]}}<span>{{this}}, </span>{{/each}}</h4>
+                      <h4 class="details">{{#each this.[Partnership?]}} {{this}} {{/each}} {{this.[Partners]}}</h4>
                   </div>
                 </div>
               </div>
@@ -157,7 +157,7 @@
                 <section id="section-outro">
                   <p tabindex="0" class="large">
                     Interested in working with us on a special project? Get in touch over <a href="mailto:info@sfpc.study">email</a>.
-                    Support our programming and future projects through a <a href="https://withfriends.co/school_for_poetic_computation/join">membership</a>.
+                    Support our programming and future projects through <a href="https://withfriends.co/school_for_poetic_computation/join">funding</a>.
 
                   </p>
                 </section>
