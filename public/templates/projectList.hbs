@@ -106,11 +106,11 @@
               {{#each projects}}
               <div class="grid-4 featured project" data-location="">
                 <div class="featured-text">
-                  <!-- <img src="/images/sessions/spring-22/classes/darkmatters/cover.jpg"> -->
+                  <img src="{{this.[Image]}}">
                   <div class="top">
                     <h4 class="type"><a href="{{this.[Website URL]}}">{{#each this.[Project Type]}} {{this}} {{/each}}</a></h4>
                     <h2 class="title">{{this.Name}}</h2>
-                    <h6>Description</h6>
+                    <h6>{{this.[Short Description]}}</h6>
                   </div>
                   <div class="bottom">
                     <h4 class="details">Organized by {{#each this.[Website-Organizers]}}<span>{{this}}, </span>{{/each}}</h4>
