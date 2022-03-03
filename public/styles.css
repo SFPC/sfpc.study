@@ -183,6 +183,9 @@ h1 {
           color: var(--text-link) ;
         }
 
+.project h4.type {
+  text-transform: lowercase;
+}
 
 h2, .mobile-menu-content h2 a {
   font-size: var(--medium-text);
