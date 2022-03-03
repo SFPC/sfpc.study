@@ -42,7 +42,7 @@ app.get("/sessions/spring-22/:slug", async (req, res) => {
   }
 
 })
-app.get("/projects_staging", async (req,res) => {
+app.get("/projects", async (req,res) => {
   const response = await getDatabaseEntries("713f24806a524c5e892971e4fbf5c9dd", [{property:"Release Date", direction:"descending"}])
   const projectData = response.results.map((project) => {
     return parseNotionPage(project)
@@ -183,9 +183,7 @@ function parseNotionData(dataObj){
   else if (dataObj.url)
     return dataObj.url
   else if (dataObj.files){
-    if(dataObj?.files?.length === 1)
-      return dataObj?.files[0]?.file.url
-    else if(dataObj?.files?.length > 1) {
+    if(dataObj?.files?.length >= 1) {
       let imageUrls = [];
       for(let i = 0; i < dataObj.files.length; i++){
         imageUrls.push(dataObj.files[i]?.file?.url)
