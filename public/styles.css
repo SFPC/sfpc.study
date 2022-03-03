@@ -187,6 +187,12 @@ h1 {
   text-transform: lowercase;
 }
 
+
+        .project h2, .project h6 {
+          font-size: var(--medium-text);
+        }
+
+
 h2, .mobile-menu-content h2 a {
   font-size: var(--medium-text);
   font-family: var(--main-title-font);
@@ -2098,6 +2104,14 @@ section.stacked-4 {
           text-align: center;
         } */
 
+
+        .project .title {
+          font-size: var(--medium-text) !important;
+        }
+
+        .project h6 {
+          font-size: var(--small-text) !important;
+        }
 
 
 
