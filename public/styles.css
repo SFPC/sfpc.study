@@ -818,7 +818,7 @@ select#allSections:focus {
 }
 
 
-        .home, .about, .closed, .blog, .people p{
+        .home, .about, .closed, .blog, .people, .projects p{
             font-family: var(--main-title-font);
             color: var(--text-color);
         }
