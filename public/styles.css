@@ -1176,6 +1176,91 @@ span.reference {
               hyphens: auto;
         }
 
+        .type-list-comma i:last-of-type {
+          display: none;
+        }
+
+        .organizers-comma i:last-of-type{
+          display: none;
+        }
+
+        /* .organizers-comma i:nth-last-child(2)::after {
+          content: ' and';
+          font-style: normal;
+        } */
+
+
+        #projects.allProjects .project.Radio,
+        #projects.allProjects .project.Publication,
+        #projects.allProjects .project.Event.Series,
+        #projects.allProjects .project.Exhibition,
+        #projects.allProjects .project.Website
+        {
+          display: inline-block;
+        }
+
+
+        #projects.radioProjects .project.Publication,
+        #projects.radioProjects .project.Event.Series,
+        #projects.radioProjects .project.Exhibition,
+        #projects.radioProjects .project.Website
+        {
+          display: none;
+        }
+        #projects.radioProjects .project.Radio {
+          display: inline-block;
+        }
+
+
+
+        #projects.publicationProjects .project.Radio,
+        #projects.publicationProjects .project.Event.Series,
+        #projects.publicationProjects .project.Exhibition,
+        #projects.publicationProjects .project.Website
+        {
+          display: none;
+        }
+        #projects.publicationProjects .project.Publication {
+          display: inline-block;
+        }
+
+
+        #projects.eventProjects .project.Radio,
+        #projects.eventProjects .project.Publication,
+        #projects.eventProjects .project.Exhibition,
+        #projects.eventProjects .project.Website
+        {
+          display: none;
+        }
+        #projects.eventProjects .project.Event.Series {
+          display: inline-block;
+        }
+
+
+        #projects.websiteProjects .project.Radio,
+        #projects.websiteProjects .project.Event.Series,
+        #projects.websiteProjects .project.Exhibition,
+        #projects.websiteProjects .project.Publication
+        {
+          display: none;
+        }
+        #projects.websiteProjects .project.Website {
+          display: inline-block;
+        }
+
+
+        #projects.exhibitionProjects .project.Radio,
+        #projects.exhibitionProjects .project.Event.Series,
+        #projects.exhibitionProjects .project.Website,
+        #projects.exhibitionProjects .project.Publication
+        {
+          display: none;
+        }
+        #projects.exhibitionProjects .project.Exhibition   {
+          display: inline-block;
+        }
+
+
 .intro .bio {
   display: inline-block;
   vertical-align: bottom;

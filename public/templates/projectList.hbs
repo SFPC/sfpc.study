@@ -71,11 +71,15 @@
 
       <div id="shell" class="shell shell-fullsize projects">
 
-        <!-- <select id= "allSections" onchange="sectionJump(this.value)">
-          <option value ="">Jump to section...</option>
-          <option value ="introduction">Introduction</option>
+        <select id= "allSections" class="projectChange" onchange="projectFilter(this.value)">
+          <option value ="allProjects">All project types...</option>
+          <option value ="publicationProjects">Publications</option>
+          <option value ="exhibitionProjects">Exhibitions</option>
+          <option value ="eventProjects">Event Series</option>
+          <option value ="websiteProjects">Websites</option>
+          <option value ="radioProjects">Radio</option>
           <option value ="classes">Classes</option>
-        </select> -->
+        </select>
 
 
         <h4 class="breadcrumb hide-content">
@@ -84,7 +88,7 @@
 
 
 
-        <div id="projects" class="shell-content hide-content">
+        <div id="projects" class="shell-content hide-content allProjects">
 
         <section>
             <div class="grid-2">
@@ -97,7 +101,7 @@
               <p>
                 Our school supports interdisciplinary study in art, code, hardware and critical theory through events, classes, workshops, projects and residencies.
                  </p><p>
-                <a href="about-participating.html">inquire about a special project...</a>
+                <a href="mailto:info@sfpc.study">work with us on a special project...</a>
               </p>
 
             </div>
@@ -110,11 +114,11 @@
             <div class="grid-1 participate">
 
               {{#each projects}}
-              <div class="grid-4 featured project" data-location="">
+              <div class="grid-4 featured project {{#each this.[Project Type]}}{{this}} {{/each}}" data-location="">
                 <div class="featured-text">
                   <img src="{{this.[Image].[0]}}">
                   <div class="top">
-                    <h4 class="type list-comma"><a href="{{this.[Website URL]}}">{{#each this.[Project Type]}} {{this}}<i class="comma">,</i> {{/each}}</a></h4>
+                    <h4 class="type type-list-comma"><a href="{{this.[Website URL]}}">{{#each this.[Project Type]}} {{this}}<i class="comma">,</i> {{/each}}</a></h4>
                     <h2 class="title">{{this.Name}}</h2>
                     <h6>{{this.[Short Description]}}</h6>
                   </div>
