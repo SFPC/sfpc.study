@@ -69,7 +69,7 @@
 
       <div class="crt-overlay crt-overlay-fullsize"></div>
 
-      <div id="shell" class="shell shell-fullsize about shell-content">
+      <div id="shell" class="shell shell-fullsize projects">
 
         <!-- <select id= "allSections" onchange="sectionJump(this.value)">
           <option value ="">Jump to section...</option>
@@ -84,7 +84,7 @@
 
 
 
-
+        <div id="projects" class="shell-content hide-content">
 
         <section>
             <div class="grid-2">
@@ -116,7 +116,7 @@
                   </div>
                   <div class="bottom">
                     <h4 class="details">{{#each this.[Status]}} {{this}} {{/each}} {{#each this.[Release Date]}}{{this}}{{/each}}</h4>
-                    <h4 class="details">Organized by {{#each this.[Website-Organizers]}}<span>{{this}}, </span>{{/each}}</h4>
+                    <h4 class="details">Organized by {{#each this.[Website-Organizers]}}{{this}}, {{/each}}</h4>
                       <h4 class="details">{{#each this.[Partnership?]}} {{this}} {{/each}} {{this.[Partners]}}</h4>
                   </div>
                 </div>
@@ -168,6 +168,7 @@
 
 
 
+        </div>
         </div>
 
 
