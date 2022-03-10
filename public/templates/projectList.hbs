@@ -71,14 +71,14 @@
 
       <div id="shell" class="shell shell-fullsize projects">
 
-        <select id= "allSections" class="projectChange" onchange="projectFilter(this.value)">
+        <select id= "allSections" name ="projectChange" class="projectChange" onchange="projectFilter(this.value)">
           <option value ="allProjects">All project types...</option>
           <option value ="publicationProjects">Publications</option>
           <option value ="exhibitionProjects">Exhibitions</option>
           <option value ="eventProjects">Event Series</option>
+          <option value ="sessionProjects">Special Sessions</option>
           <option value ="websiteProjects">Websites</option>
           <option value ="radioProjects">Radio</option>
-          <option value ="classes">Classes</option>
         </select>
 
 
@@ -88,7 +88,7 @@
 
 
 
-        <div id="projects" class="shell-content hide-content allProjects">
+        <div id="projects" class="shell-content hide-content allProjects projectsDiv">
 
         <section>
             <div class="grid-2">
