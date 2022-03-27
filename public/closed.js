@@ -7,7 +7,7 @@ function closed() {
 
 
   if ((currentHour < 9) || (currentHour > 21) || isWeekend) {
-    window.location.replace("closed.html");
+    window.location.replace("/closed.html");
   }
 }
 
