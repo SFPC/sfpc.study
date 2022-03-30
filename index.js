@@ -1,6 +1,6 @@
 const express = require("express")
 const hbs = require("hbs")
-const {getPage, getDatabaseEntries} = require('./lib/notion')
+const {getPage, getDatabaseEntries, getDatabaseEntry} = require('./lib/notion')
 const classList = require("./lib/classNotionPageList")
 const res = require("express/lib/response")
 const { response } = require("express")
@@ -44,11 +44,23 @@ app.get("/sessions/spring-22/:slug", async (req, res) => {
 })
 app.get("/projects", async (req,res) => {
   const response = await getDatabaseEntries("713f24806a524c5e892971e4fbf5c9dd", [{property:"Release Date", direction:"descending"}])
-  const projectData = response.results.map((project) => {
+  const projectData = response.map((project) => {
+    console.log(project)
     return parseNotionPage(project)
   })
   console.log(projectData)
   res.render("projectList", {projects: projectData})
+})
+app.get("/projects/:slug", async (req,res) => {
+  //filter by slug here
+  console.log(req.params.slug)
+  const response = await getDatabaseEntry("713f24806a524c5e892971e4fbf5c9dd", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  console.log(response)
+  if(response){
+    const projectData = parseNotionPage(response)
+    console.log(projectData)
+    res.render("projectPage", projectData)
+  }
 })
 // app.get("/sessions/:session/:slug", async (req, res) => {
 //   console.log(req.params)

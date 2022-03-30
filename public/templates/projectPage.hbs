@@ -71,49 +71,59 @@
         <div id="class" class=" hide-content appsClosed beforeClass shell-content">
 
 
-          <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
+          <a class="fixed-apply hide-apply hide-appsClosed" href="">Apply Now</a>
 
                 <section id="section-class-details">
                     <div class="grid-2">
                       <h1><span id="class-name">
-                        {{name}}
+                        {{Name}}
                       </span></h1>
                     </div>
 
                     <div class="grid-2 class-details">
 
 
-
-                      <img id="class-image" src="{{image}}">
-
+                      <div class="carousel">
+                      {{#each Image}}
+                      <img id="class-image" src="{{this}}">
+                      {{/each}}
+                      </div>
                       <div class="details">
                         <div class="labels">Project Type</div>
-                        <div class="labels-info" id="teachers-list">{{projectType}}</div>
+                        <div class="labels-info" id="teachers-list">{{#each "Project Type"}}{{this}}{{#unless @last}},{{/unless}} {{/each}}</div>
                       </div>
                       <div class="details">
                         <div class="labels">Status</div>
-                        <div class="labels-info" id="teachers-list">{{status}} {{releaseDate}}</div>
+                        <div class="labels-info" id="teachers-list">{{Status.[0]}} {{[Release Date].start}}</div>
                       </div>
+                      {{#if Website-Organizers}}
                       <div class="details">
                         <div class="labels">Organizers</div>
-                        <div class="labels-info" id="teachers-list">{{organizers}}</div>
+                        <div class="labels-info" id="teachers-list">{{#each Website-Organizers}}{{this}}{{#unless @last}},{{/unless}} {{/each}}</div>
                       </div>
+                      {{/if}}
+
+                      {{#if Website-Contributors}}
                       <div class="details">
                         <div class="labels">Contributors</div>
-                        <div class="labels-info"><span tabindex="0" class="expand"><a class="link">{{number}} contributors...</a>
+                        <div class="labels-info"><span tabindex="0" class="expand"><a class="link">{{Website-Contributors.length}} contributors...</a>
                           <span class="expanded hide-expanded">
-                          Anna Rulloda, Heidi He, Hermann Zschiegner, Hiroyuki Sakamoto, Jenna Murphy, Joanne Magbitang, Kate Yourke, Ladan Bahmani, Lillian-Yvonne Bertram, Matthis Grunsky, Mauricio Román, Maya Charles, Michelle Chang, Salem Abdulla, Sara K.R., Sara Martinez, Shen-Shen Wu, Thomas (Luca) Bailey and Yadira Sanchez
+                          {{#each Website-Contributors}}{{this}}{{#unless @last}},{{/unless}} {{/each}}
                         </span></span>
                         </div>
                       </div>
+                      {{/if}}
+                      {{#if Partnership?}}
                       <div class="details">
                         <div class="labels">Partners</div>
-                        <div class="labels-info" id="teachers-list">{{partnership}} {{partners}}</div>
+                        <div class="labels-info" id="teachers-list">{{Partnership?}} {{Partners}}</div>
                       </div>
+                      {{/if}}
 
                       <p class="large apply">
-                        <a href="{{websiteURL}}" target="_blank" id="application-link">Visit Website</a>
+                        <a href="{{"Website URL"}}" target="_blank" id="application-link">Visit Website</a>
                       </p>
+
 
 
                     </div>
@@ -129,7 +139,7 @@
 
                     <div class="grid-2">
                       <p>
-                        {{description}}
+                        {{"Short Description"}}
                         </p>
 
 
