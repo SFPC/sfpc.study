@@ -89,7 +89,7 @@
                       {{/each}}
                       </div>
                       <div class="details">
-                        <div class="labels">Project Type</div>
+                        <div class="labels">Type</div>
                         <div class="labels-info" id="teachers-list">{{#each [Project-Type]}}{{this}}{{#unless @last}},{{/unless}} {{/each}}</div>
                       </div>
                       <div class="details">
@@ -111,6 +111,12 @@
                           {{#each Website-Contributors}}{{this}}{{#unless @last}},{{/unless}} {{/each}}
                         </span></span>
                         </div>
+                      </div>
+                      {{/if}}
+                      {{#if Website-Class}}
+                      <div class="details">
+                        <div class="labels">Class</div>
+                        <div class="labels-info" id="teachers-list">{{Website-Session}} {{Website-Class}}</div>
                       </div>
                       {{/if}}
                       {{#if Partnership?}}
