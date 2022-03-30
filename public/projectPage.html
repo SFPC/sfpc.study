@@ -1,0 +1,201 @@
+
+
+<head>
+    <title>School for Poetic Computation</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="School for Poetic Computation">
+    <meta name="description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sfpc.study/">
+    <meta property="og:title" content="School for Poetic Computationn">
+    <meta property="og:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sfpc.study/">
+    <meta property="twitter:title" content="School for Poetic Computation">
+    <meta property="twitter:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
+    <link href="/styles.css" rel="stylesheet">
+    <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
+    <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico"/>
+
+    <script src="/jquery-3.6.0.min.js"></script>
+
+    <!-- stats -->
+    <script type="text/javascript">
+    var sc_project=12714909;
+    var sc_invisible=1;
+    var sc_security="6086a46c";
+    </script>
+    <script type="text/javascript"
+    src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript><div class="statcounter"><a title="website statistics"
+    href="https://statcounter.com/" target="_blank"><img class="statcounter"
+    src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+
+    <script data-goatcounter="https://sfpc.goatcounter.com/count"
+    async src="//gc.zgo.at/count.js"></script>
+    <!-- end stats -->
+</head>
+
+
+<body>
+{{> header}}
+{{> footer}}
+
+      <div class="crt-overlay crt-overlay-fullsize"></div>
+
+      <div id="shell" class="shell shell-fullsize about">
+
+        <!-- <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
+              <option value="class">Jump to section...</option>
+              <option value="section-class-details">ABOUT </option>
+            </select> -->
+
+
+
+
+
+            <h4 class="breadcrumb hide-content">
+              <a href="/projects">projects</a>
+              <!-- <span class="caret"></span>  -->
+            </h4>
+
+
+
+
+        <div id="class" class=" hide-content appsClosed beforeClass shell-content">
+
+
+          <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
+
+                <section id="section-class-details">
+                    <div class="grid-2">
+                      <h1><span id="class-name">
+                        {{name}}
+                      </span></h1>
+                    </div>
+
+                    <div class="grid-2 class-details">
+
+
+
+                      <img id="class-image" src="{{image}}">
+
+                      <div class="details">
+                        <div class="labels">Project Type</div>
+                        <div class="labels-info" id="teachers-list">{{projectType}}</div>
+                      </div>
+                      <div class="details">
+                        <div class="labels">Status</div>
+                        <div class="labels-info" id="teachers-list">{{status}} {{releaseDate}}</div>
+                      </div>
+                      <div class="details">
+                        <div class="labels">Organizers</div>
+                        <div class="labels-info" id="teachers-list">{{organizers}}</div>
+                      </div>
+                      <div class="details">
+                        <div class="labels">Contributors</div>
+                        <div class="labels-info"><span tabindex="0" class="expand"><a class="link">{{number}} contributors...</a>
+                          <span class="expanded hide-expanded">
+                          Anna Rulloda, Heidi He, Hermann Zschiegner, Hiroyuki Sakamoto, Jenna Murphy, Joanne Magbitang, Kate Yourke, Ladan Bahmani, Lillian-Yvonne Bertram, Matthis Grunsky, Mauricio Román, Maya Charles, Michelle Chang, Salem Abdulla, Sara K.R., Sara Martinez, Shen-Shen Wu, Thomas (Luca) Bailey and Yadira Sanchez
+                        </span></span>
+                        </div>
+                      </div>
+                      <div class="details">
+                        <div class="labels">Partners</div>
+                        <div class="labels-info" id="teachers-list">{{partnership}} {{partners}}</div>
+                      </div>
+
+                      <p class="large apply">
+                        <a href="{{websiteURL}}" target="_blank" id="application-link">Visit Website</a>
+                      </p>
+
+
+                    </div>
+                </section>
+
+                <div class="break"></div>
+
+
+                <section id="section-description">
+                    <div class="grid-2">
+                      <h1>Description </h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        {{description}}
+                        </p>
+
+
+                      <!-- <p class="large apply">
+                        <a href="{{websiteURL}}" target="_blank" id="application-link">Visit Website</a>
+                      </p> -->
+                    </div>
+                </section>
+
+                <div class="break-noline"></div>
+
+
+               <div class="grid-container" id="participate-archive">
+
+                 <main class="grid-item main">
+                   <main class="grid-item main">
+                     <div class="carousel-items items carousel-content participate-content">
+
+
+                       <div id="carousel-images" class="class-images after-launch">
+                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/0.jpg"></figure>
+                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/1.jpg"></figure>
+                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/2.jpg"></figure>
+                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/3.jpg"></figure>
+                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/4.jpg"></figure>
+                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/5.jpg"></figure>
+                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/6.jpg"></figure>
+                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/7.jpg"></figure>
+                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/8.jpg"></figure>
+                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/9.jpg"></figure>
+                       </div>
+
+
+                     </div>
+
+
+                   </main>
+                 </main>
+
+               </div>
+
+
+                <div class="break-endpage"></div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+<script src="/outside.js"></script>
+<script src="/carousel.js"></script>
+<script src="/closed.js"></script>
+</p>
+
+</body>
+</html>
