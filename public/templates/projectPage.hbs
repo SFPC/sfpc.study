@@ -84,9 +84,7 @@
 
 
                       <div class="carousel">
-                      {{#each Image}}
-                      <img id="class-image" src="{{this}}">
-                      {{/each}}
+                      <img id="class-image" src="{{Image.[0]}}">
                       </div>
                       <div class="details">
                         <div class="labels">Type</div>
@@ -165,7 +163,13 @@
                      <div class="carousel-items items carousel-content participate-content">
 
 
-                       <div id="carousel-images" class="class-images after-launch">
+                       <div id="carousel-images" class="class-images ">
+
+                         {{#each Image}}
+                         <figure class="item participate-img"><img src="{{this}}"></figure>
+                         {{/each}}
+
+                         <!--
                          <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/0.jpg"></figure>
                          <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/1.jpg"></figure>
                          <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/2.jpg"></figure>
@@ -175,7 +179,7 @@
                          <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/6.jpg"></figure>
                          <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/7.jpg"></figure>
                          <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/8.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/9.jpg"></figure>
+                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/9.jpg"></figure> -->
                        </div>
 
 
