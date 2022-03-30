@@ -119,7 +119,7 @@
                 <div class="featured-text">
                   <img src="{{this.[Image].[0]}}">
                   <div class="top">
-                    <h4 class="type type-list-comma"><a href="{{this.[Website URL]}}">{{#each this.[Project Type]}} {{this}}<i class="comma">,</i> {{/each}}</a></h4>
+                    <h4 class="type type-list-comma"><a href="/projects/{{this.[Website-Slug]}}">{{#each this.[Project Type]}} {{this}}<i class="comma">,</i> {{/each}}</a></h4>
                     <h2 class="title">{{this.Name}}</h2>
                     <h6>{{this.[Short Description]}}</h6>
                   </div>
@@ -136,15 +136,7 @@
             </div>
 
 
-          <!-- <div class="container">
-            {{#each projects}}
-            <div class="project-card">
-            <h3><a href="{{this.[Website URL]}}">{{this.Name}}</a></h3>
-            <p>Organizers: {{#each this.[Website-Organizers]}}<span>{{this}}, </span>{{/each}}</p>
-            <p>Project Type: {{#each this.[Project Type]}}<span>{{this}} </span>{{/each}}</p>
-            </div>
-            {{/each}}
-          </div> -->
+
         </section>
 
 
