@@ -115,11 +115,11 @@
             <div class="grid-1 participate">
 
               {{#each projects}}
-              <div class="grid-4 featured project {{#each this.[Project Type]}}{{this}} {{/each}}" data-location="">
+              <div class="grid-4 featured project {{#each this.[Project-Type]}}{{this}} {{/each}}" data-location="">
                 <div class="featured-text">
                   <img src="{{this.[Image].[0]}}">
                   <div class="top">
-                    <h4 class="type type-list-comma"><a href="/projects/{{this.[Website-Slug]}}">{{#each this.[Project Type]}} {{this}}<i class="comma">,</i> {{/each}}</a></h4>
+                    <h4 class="type type-list-comma"><a href="/projects/{{this.[Website-Slug]}}">{{#each this.[Project-Type]}} {{this}}<i class="comma">,</i> {{/each}}</a></h4>
                     <h2 class="title">{{this.Name}}</h2>
                     <h6>{{this.[Short Description]}}</h6>
                   </div>
