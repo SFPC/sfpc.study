@@ -1785,6 +1785,13 @@ section.stacked-4 {
 
 
 
+
+  .labels-info   span.expand {
+    line-height: calc(var(--medium-line-height)*1.5) !important;
+  }
+
+
+
   span.expand {
       display: inline;
       /* margin: 0 3px; */
@@ -1811,6 +1818,7 @@ section.stacked-4 {
 
   .labels-info .expanded {
     color: var(--text-color);
+      line-height: calc(var(--medium-line-height)*1.5) !important;
   }
 
   span.expand.active {

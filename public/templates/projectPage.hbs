@@ -83,9 +83,9 @@
                     <div class="grid-2 class-details">
 
 
-                      <div class="carousel">
+
                       <img id="class-image" src="{{Image.[0]}}">
-                      </div>
+
                       <div class="details">
                         <div class="labels">Type</div>
                         <div class="labels-info" id="teachers-list">{{#each [Project-Type]}}{{this}}{{#unless @last}},{{/unless}} {{/each}}</div>
@@ -104,7 +104,8 @@
                       {{#if Website-Contributors}}
                       <div class="details">
                         <div class="labels">Contributors</div>
-                        <div class="labels-info"><span tabindex="0" class="expand"><a class="link">{{Website-Contributors.length}} contributors...</a>
+                        <div class="labels-info">
+                          <span tabindex="0" class="expand"><a class="link">{{Website-Contributors.length}} contributors...</a>
                           <span class="expanded hide-expanded">
                           {{#each Website-Contributors}}{{this}}{{#unless @last}},{{/unless}} {{/each}}
                         </span></span>
@@ -125,7 +126,7 @@
                       {{/if}}
 
                       <p class="large apply">
-                        <a href="{{"Website URL"}}" target="_blank" id="application-link">Visit Website</a>
+                        <a href="{{"Website URL"}}" target="_blank" id="application-link">{{"Website URL CTA"}}</a>
                       </p>
 
 
@@ -133,6 +134,8 @@
                     </div>
                 </section>
 
+
+                {{#if Long-Description}}
                 <div class="break"></div>
 
 
@@ -143,7 +146,7 @@
 
                     <div class="grid-2">
                       <p>
-                        {{"Short Description"}}
+                        {{Long-Description}}
                         </p>
 
 
@@ -152,9 +155,11 @@
                       </p> -->
                     </div>
                 </section>
+                {{/if}}
+
+                {{#if Images}}
 
                 <div class="break-noline"></div>
-
 
                <div class="grid-container" id="participate-archive">
 
@@ -165,7 +170,7 @@
 
                        <div id="carousel-images" class="class-images ">
 
-                         {{#each Image}}
+                         {{#each Images}}
                          <figure class="item participate-img"><img src="{{this}}"></figure>
                          {{/each}}
 
@@ -190,6 +195,7 @@
                  </main>
 
                </div>
+               {{/if}}
 
 
                 <div class="break-endpage"></div>
