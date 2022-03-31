@@ -453,7 +453,7 @@ img {
 
 
         .loader-content {
-          padding-top: 2vh;
+          padding-top: 4vh;
           display: block;
           z-index:99999999999999999999999999999999;
           width: 100%;
