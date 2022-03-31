@@ -579,7 +579,7 @@ setInterval(function(){
 
 
   if (checkMobile()) {
-    numberChar = 15;
+    numberChar = 10;
   } else {
     numberChar = 40;
   }

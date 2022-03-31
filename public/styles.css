@@ -453,6 +453,7 @@ img {
 
 
         .loader-content {
+          padding-top: 2vh;
           display: block;
           z-index:99999999999999999999999999999999;
           width: 100%;
@@ -472,7 +473,7 @@ img {
          white-space: nowrap;
          overflow: hidden;
          width: 30em;
-        animation: type 4s steps(60, end);
+        animation: type 8s steps(60, end);
         word-break: break-all;
         line-height: var(--large-line-height);
     white-space: pre;

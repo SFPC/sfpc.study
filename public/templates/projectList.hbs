@@ -124,7 +124,7 @@
             <div class="grid-1 participate">
 
               {{#each projects}}
-              <div class="grid-4 featured project {{#each this.[Project-Type]}}{{this}} {{/each}}" data-location="">
+              <div id="{{this.[Website-Slug]}}" class="grid-4 featured project {{#each this.[Project-Type]}}{{this}} {{/each}}" data-location="">
                 <div class="featured-text">
                   <img src="{{this.[Image].[0]}}">
                   <div class="top">
