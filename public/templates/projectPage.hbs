@@ -51,6 +51,12 @@
 
       <div id="shell" class="shell shell-fullsize about">
 
+        <div class="loader-content">
+            <p tabindex="0" class="large">
+              loading<span>...</span>
+            </p>
+        </div>
+
         <!-- <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
               <option value="class">Jump to section...</option>
               <option value="section-class-details">ABOUT </option>
@@ -112,18 +118,25 @@
                         </div>
                       </div>
                       {{/if}}
-                      {{#if Website-Class}}
-                      <div class="details">
-                        <div class="labels">Class</div>
-                        <div class="labels-info" id="teachers-list">{{Website-Session}} {{Website-Class}}</div>
-                      </div>
-                      {{/if}}
+
                       {{#if Partnership?}}
                       <div class="details">
                         <div class="labels">Partners</div>
                         <div class="labels-info" id="teachers-list">{{Partnership?}} {{Partners}}</div>
                       </div>
                       {{/if}}
+
+
+                      {{#if Website-Class}}
+                      <div class="details">
+                        <div class="labels">Program</div>
+                        <div class="labels-info" id="teachers-list">
+                          {{#each Website-Class}}{{this}}{{#unless @last}},{{/unless}} {{/each}}
+                          ({{#each Website-Session}}{{this}}{{#unless @last}},{{/unless}} {{/each}})
+                        </div>
+                      </div>
+                      {{/if}}
+
 
                       <p class="large apply">
                         <a href="{{"Website URL"}}" target="_blank" id="application-link">{{"Website URL CTA"}}</a>

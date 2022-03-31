@@ -1,7 +1,8 @@
 
 // CHECK MOBILE
 let mobileBrowser = checkMobile()
-
+let loadText = "";
+let loadTextArray = [];
 
 // MODES CONTENT
 
@@ -297,7 +298,8 @@ $('#shell').bind('scroll', function()
 
 $(window).on("load", function() {
 // $(".hide-content").fadeIn(2000);
-$(".hide-content").fadeIn(1000);
+$(".loader-content").fadeOut(100);
+$(".hide-content").fadeIn(700);
 
 // setTimeout(function() {
 //        $('.website-grid').addClass('grid-hide')
@@ -559,6 +561,65 @@ function makeChars(length) {
    }
    return result;
 }
+
+
+function loadingChar() {
+  loadText = "";
+  var possible = ",·*.◌▫◦........";
+
+  for (var i = 0; i < 1; i++)
+    loadText += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return loadText;
+}
+
+
+setInterval(function(){
+  let numberChar;
+
+
+  if (checkMobile()) {
+    numberChar = 15;
+  } else {
+    numberChar = 40;
+  }
+
+
+  loadTextArray.push(loadingChar());
+
+  if (loadTextArray.length < (numberChar * 12)) {
+      $( ".loader-content p span" ).append(loadingChar());
+    }
+
+
+  if (loadTextArray.length % 20 == 0) {
+    $( ".loader-content p span" ).append("<br>");
+  }
+
+
+}, 200);
+
+
+
+//
+// $(function() {
+//     var srcText = $("#src").html();
+//     var i = 0;
+//     var result = srcText[i];
+//     setInterval(function() {
+//             if(i == srcText.length) {
+//                 clearInterval(this);
+//                 return;
+//             };
+//             i++;
+//             result += srcText[i].replace("\n", "<br />");
+//             $("#target").html( result);
+//     },
+//     50); // the period between every character and next one, in milliseonds.
+// });
+
+
+
 
 
 

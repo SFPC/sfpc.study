@@ -69,9 +69,18 @@
 
       <div class="crt-overlay crt-overlay-fullsize"></div>
 
+
       <div id="shell" class="shell shell-fullsize projects">
 
-        <select id= "allSections" name ="projectChange" class="projectChange" onchange="projectFilter(this.value)">
+
+              <div class="loader-content">
+                  <p tabindex="0" class="large">
+                    loading<span>...</span>
+                  </p>
+              </div>
+
+
+        <!-- <select id= "allSections" name ="projectChange" class="projectChange" onchange="projectFilter(this.value)">
           <option value ="allProjects">All project types...</option>
           <option value ="publicationProjects">Publications</option>
           <option value ="exhibitionProjects">Exhibitions</option>
@@ -79,11 +88,11 @@
           <option value ="sessionProjects">Special Sessions</option>
           <option value ="websiteProjects">Websites</option>
           <option value ="radioProjects">Radio</option>
-        </select>
+        </select> -->
 
 
         <h4 class="breadcrumb hide-content">
-          <a href="/projects.html">projects</a>
+          <a href="/projects">projects</a>
         </h4>
 
 
