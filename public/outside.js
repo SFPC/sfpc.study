@@ -592,7 +592,7 @@ setInterval(function(){
     }
 
 
-  if (loadTextArray.length % 20 == 0) {
+  if (loadTextArray.length % numberChar == 0) {
     $( ".loader-content p span" ).append("<br>");
   }
 
