@@ -139,7 +139,15 @@
 
 
                       <p class="large apply">
-                        <a href="{{"Website URL"}}" target="_blank" id="application-link">{{"Website URL CTA"}}</a>
+                        {{#if Website-URL}}
+                        <a href="{{"Website-URL"}}" target="_blank" id="application-link">
+                        {{/if}}
+
+                          {{"Website URL CTA"}}
+
+                        {{#if Website-URL}}
+                        </a>
+                        {{/if}}
                       </p>
 
 
