@@ -51,6 +51,7 @@ app.get("/projects", async (req,res) => {
   console.log(projectData)
   res.render("projectList", {projects: projectData})
 })
+
 app.get("/projects/:slug", async (req,res) => {
   //filter by slug here
   console.log(req.params.slug)
@@ -62,6 +63,10 @@ app.get("/projects/:slug", async (req,res) => {
     res.render("projectPage", projectData)
   }
 })
+
+
+
+
 // app.get("/sessions/:session/:slug", async (req, res) => {
 //   console.log(req.params)
 //   const pageId = classList[req.params.session][req.params.slug]
@@ -202,7 +207,7 @@ function parseNotionData(dataObj){
       }
       return imageUrls
     }
-    else return null 
+    else return null
   }
   else if (dataObj.date)
     return {start: prettyDateString(dataObj.date.start), end: prettyDateString(dataObj.date.end)}
