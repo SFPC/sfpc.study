@@ -38,7 +38,7 @@ if (checkMobile()) {
 
   var allPanels = $('.accordion > .entity > dd').hide();
 
-  $('.accordion > .entity > dt > h3, .accordion > .entity > dt > h4').click(function() {
+  $('.accordion > .entity > dt > h3, .accordion > .entity > dt > h4, .accordion > .entity > dt > h7').click(function() {
       $this = $(this);
       $target =  $this.parent().next();
 

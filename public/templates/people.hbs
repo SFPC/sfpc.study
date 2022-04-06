@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>School for Poetic Computation</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="School for Poetic Computation">
+    <meta name="description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sfpc.study/">
+    <meta property="og:title" content="School for Poetic Computationn">
+    <meta property="og:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sfpc.study/">
+    <meta property="twitter:title" content="School for Poetic Computation">
+    <meta property="twitter:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
+    <link href="/styles.css" rel="stylesheet">
+    <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
+    <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico"/>
+
+    <script src="/jquery-3.6.0.min.js"></script>
+
+    <!-- stats -->
+    <script type="text/javascript">
+    var sc_project=12714909;
+    var sc_invisible=1;
+    var sc_security="6086a46c";
+    </script>
+    <script type="text/javascript"
+    src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript><div class="statcounter"><a title="website statistics"
+    href="https://statcounter.com/" target="_blank"><img class="statcounter"
+    src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+
+    <script data-goatcounter="https://sfpc.goatcounter.com/count"
+    async src="//gc.zgo.at/count.js"></script>
+
+
+    <style>
+      .container {
+        height:100vh;
+        display:flex;
+        justify-content: flex-start;
+        align-content: flex-start;
+        flex-flow: column wrap;
+      }
+      .project-card {
+        width:200px;
+        border: 2px solid teal;
+        border-radius:20px;
+        margin:10px;
+        padding: 10px;
+      }
+    </style>
+
+    <!-- end stats -->
+</head>
+
+
+<body>
+      {{> header}}
+      {{> footer}}
+
+      <div class="crt-overlay crt-overlay-fullsize"></div>
+
+
+      <div id="shell" class="shell shell-fullsize projects">
+
+
+              <div class="loader-content">
+                  <p tabindex="0" class="large">
+                    loading<span>...</span>
+                  </p>
+              </div>
+
+
+        <!-- <select id= "allSections" name ="projectChange" class="projectChange" onchange="projectFilter(this.value)">
+          <option value ="allProjects">All project types...</option>
+          <option value ="publicationProjects">Publications</option>
+          <option value ="exhibitionProjects">Exhibitions</option>
+          <option value ="eventProjects">Event Series</option>
+          <option value ="sessionProjects">Special Sessions</option>
+          <option value ="websiteProjects">Websites</option>
+          <option value ="radioProjects">Radio</option>
+        </select> -->
+
+
+        <h4 class="breadcrumb hide-content">
+          <a href="/people">people</a>
+        </h4>
+
+
+
+        <div id="projects" class="shell-content hide-content allProjects projectsDiv">
+
+        <section>
+            <div class="grid-2">
+            <h1>Our Yearbook</h1>
+            </div>
+
+            <div class="grid-2">
+
+
+              <!-- <p>
+                Our organizers, teachers and participants regularly collaborate on a space of experimentation to define and redefine “poetic computation” and imagine just and beautiful futures.
+                Collectively, we have produced publications, online and in person showcases and exhibitions, websites, special sessions, event series, radio productions and other outcomes.
+              </p><p>
+                <a href="mailto:info@sfpc.study">work with us on a special project...</a>
+              </p> -->
+
+            </div>
+        </section>
+
+        <div class="break-noline"></div>
+
+        <section id="section-projects" class="stacked stacked-8">
+
+            <div class="grid-1 participate">
+
+              <!-- <dl class="accordion a-stewards"> -->
+
+              {{#each projects}}
+              <div id="" class="grid-8 entity featured" data-location="">
+                <div class="featured-text">
+
+                  <span class="bio bio-people" style="background-image: url('{{this.[Image].[0]}}')" role="img"></span>
+
+
+                  <div class="top">
+                    <h4 class="type type-list-comma"><a href="/projects/{{this.[Website-Slug]}}">{{#each this.[Project-Type]}} {{this}}<i class="comma">,</i> {{/each}}</a></h4>
+
+                    <h7>{{this.Name}}</h7>
+                  </div>
+                </div>
+              </div>
+
+
+<!--
+              <div class="entity grid-8 ">
+
+                  <dt>
+                    <span class="bio bio-people" style="background-image: url('{{this.[Image].[0]}}')" role="img"></span>
+                    <div class="clear"></div>
+                    <h4 id="role">Archives, Communications, Community, Programming, Publishing</h4>
+                    <h7>{{this.Name}}</h7>
+                    <div class="clear"></div>
+                      <dd><span class="bio" style="background-image: url('images/people/zainab-aliyu.jpg')" role="img"></span>
+                      <p>Zainab "Zai" Aliyu is an artist and cultural worker whose work is about the material affect of the "immaterial." She contextualizes the cybernetic and temporal entanglement embedded within societal dynamics to understand how all sociotechnological systems of control are interconnected, and how we are all implicated through time. She often dreams, experiments and inquires through built virtual environments, printed matter, video, archives, writing, installation and community-participatory (un)learning.
+                        Zai is currently a 2022 fellow at NYU Tisch's Future Imagination Collaboratory, design director for the African Film Festival at the Film at Lincoln Center in NYC, a co-director of the School for Poetic Computation, and is tending to her creative practice at a collective studio warehouse named Soft Surplus.
+                          <BR><BR>
+                        <i>she/her</i> · <a href="mailto:zai@sfpc.study">email</a> · <a href="https://zai.zone">website</a> · <a href="https://www.instagram.com/beatsbyzai/">instagram</a>
+                      </p>
+                      </dd>
+                  </dt>
+              </div> -->
+
+
+              {{/each}}
+
+            <!-- </dl> -->
+
+            </div>
+
+
+
+        </section>
+
+
+         <div class="break"></div>
+
+
+
+
+
+
+
+
+
+<!--
+
+                <div class="break-noline"></div>
+
+
+                <section id="section-outro">
+                  <p tabindex="0" class="large">
+                    Interested in working with us on a special project? Get in touch over <a href="mailto:info@sfpc.study">email</a>.
+                    Support our programming and future projects through <a href="https://withfriends.co/school_for_poetic_computation/join">funding</a>.
+
+                  </p>
+                </section> -->
+
+
+                <div class="break-endpage"></div>
+
+
+
+
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+<script src="/outside.js"></script>
+<script src="/carousel.js"></script>
+</p>
+
+</body>
+</html>

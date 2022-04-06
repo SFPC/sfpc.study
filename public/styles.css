@@ -321,6 +321,19 @@ h6 {
   o-transition: all .2s ease-in-out;
 }
 
+h7 {
+  font-family: var(--main-special-font);
+  font-size: var(--small-text);
+  line-height: var(--small-line-height);
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: lighter;
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  ms-transition: all .2s ease-in-out;
+  o-transition: all .2s ease-in-out;
+}
+
 
 img {
     display: block;
@@ -897,6 +910,17 @@ select#allSections:focus {
         width: calc(50% + var(--body-margin));
       }
 
+      .grid-8 {
+        display: flex;
+        width: 12.5%;
+      }
+
+      .stacked-8 .grid-8 {
+        display: flex;
+        width: 100%;
+      }
+
+
 
 .featured {
   box-sizing: border-box;
@@ -1367,6 +1391,29 @@ span.reference {
       }
 
 
+      .entity .bio.bio-people {
+      display: inline-block;
+      float: left;
+      vertical-align: middle;
+      width:  calc(12.5vw - var(--body-margin)*2 - var(--program-margin)/2);
+      height: calc(12.5vw - var(--body-margin)*2 - var(--program-margin)/2);
+      /* margin-right: var(--body-margin);
+      margin-left: calc(var(--body-margin)/2); */
+      /* margin-bottom: calc(var(--body-margin)/2); */
+      /* margin-top: calc(var(--medium-text)* -1); */
+      background-size: cover;
+      -moz-transition: all .2s ease-in-out;
+      ms-transition: all .2s ease-in-out;
+      o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      border-radius: 100%;
+      position: relative;
+      right: 0px;
+      top: 0px;
+      margin-bottom: calc(var(--program-margin)*2);
+      }
+
+
       .entity dd .bio {
       display: inline-block;
       float: left;
@@ -1537,6 +1584,10 @@ section.stacked-4 {
 
       .stacked-4{
         grid-template-columns: repeat(4,1.2fr);
+      }
+
+      .stacked.stacked-8 .grid-1, .stacked-8{
+        grid-template-columns: repeat(8,1.2fr) !important;
       }
 
       .stacked .grid-1.stacked-2{
