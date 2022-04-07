@@ -64,7 +64,15 @@ app.get("/projects/:slug", async (req,res) => {
   }
 })
 app.get("/people", async (req,res) => {
-  const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [{timestamp:"created_time", direction:"descending"}], {property:"Roles", "multi_select": {"contains":"Participant"}})
+  const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [{timestamp:"created_time", direction:"descending"}], {
+    "or":[
+      {property:"Roles", "multi_select": {"contains":"Participant"}}, 
+      {property:"Roles", "multi_select": {"contains":"Organizer"}}, 
+      {property:"Roles", "multi_select": {"contains":"Teacher"}}, 
+      {property:"Roles", "multi_select": {"contains":"Guest Teacher"}}, 
+      {property:"Roles", "multi_select": {"contains":"Accountability Steward"}}, 
+      {property:"Roles", "multi_select": {"contains":"Co-Director"}} 
+    ]})
   const peopleData = response.map((person) => {
     console.log(person)
     return parseNotionPage(person)
@@ -73,7 +81,22 @@ app.get("/people", async (req,res) => {
   res.render("people", {people: peopleData})
 })
 
-
+app.get("/people/:session", async (req,res) => {
+  console.log(req.params.session)
+  const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
+    "or":[
+      {property:"Sessions-Organizer", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}, 
+      {property:"Sessions-Teacher", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}, 
+      {property:"Sessions-Participant", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}, 
+      {property:"Sessions-Guest", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}} 
+    ]
+  })
+  const peopleData = response.map((person) => {
+    return parseNotionPage(person)
+  })
+  console.log(peopleData)
+  res.render("people", {people: peopleData})
+})
 
 
 // app.get("/sessions/:session/:slug", async (req, res) => {
