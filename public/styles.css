@@ -829,11 +829,15 @@ section {
                 }
 
 
-select#allSections {
+
+.selectors {
   z-index: 9999999999999;
   position: fixed;
   left: calc(4px + var(--body-margin)/2);
   bottom: calc(4px + var(--footer-height));
+}
+
+select#allSections {
   border-radius: calc(var(--border-rad));
   display: inline;
   width: auto;
