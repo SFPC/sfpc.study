@@ -63,6 +63,15 @@ app.get("/projects/:slug", async (req,res) => {
     res.render("projectPage", projectData)
   }
 })
+app.get("/people", async (req,res) => {
+  const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [{timestamp:"created_time", direction:"descending"}], {property:"Roles", "multi_select": {"contains":"Participant"}})
+  const peopleData = response.map((person) => {
+    console.log(person)
+    return parseNotionPage(person)
+  })
+  console.log(peopleData)
+  res.render("people", {people: peopleData})
+})
 
 
 
