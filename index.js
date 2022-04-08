@@ -82,7 +82,6 @@ app.get("/people", async (req,res) => {
 })
 
 app.get("/people/:session", async (req,res) => {
-  console.log(req.params.session)
   const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
     "or":[
       {property:"Sessions-Organizer", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}, 
@@ -94,48 +93,12 @@ app.get("/people/:session", async (req,res) => {
   const peopleData = response.map((person) => {
     return parseNotionPage(person)
   })
-  console.log(peopleData)
-  res.render("people", {people: peopleData})
+  const sessionInfo =  await getDatabaseEntry("ce519f031eb340f58e3693cf4e041a67", {property:"Website-Slug", "rich_text": {"equals":req.params.session}})
+  const classesInfo = parseNotionData(sessionInfo.properties["Website-Classes"])
+  console.log(classesInfo)
+  res.render("peopleSession", {people: peopleData, classes:classesInfo})
 })
 
-
-// app.get("/sessions/:session/:slug", async (req, res) => {
-//   console.log(req.params)
-//   const pageId = classList[req.params.session][req.params.slug]
-//   const classData = await getPage(pageId)
-//   const response = parseClassData(classData)
-//   res.render("class-concurrent", response)
-// })
-// app.get("/sessions/:session/:slug/test", async (req, res) => {
-//   const pageId = classList[req.params.session][req.params.slug]
-//   const pageInfo = await getPage(pageId)
-//   console.log(pageInfo.properties)
-//   res.render("class-concurrent", pageInfo.properties)
-// })
-// app.get("/sessions/:session", async (req, res) => {
-
-//   const session = await getPage(classList.sessions[req.params.session])
-//   const sessionInfo = session.properties
-//   let response={
-//     title: sessionInfo.Name.title[0].plain_text,
-//     description: sessionInfo.Description.rich_text[0]?.plain_text,
-//     organizers: parseRollup(sessionInfo["Organizer Names"]),
-//     teachers: parseRollup(sessionInfo["Teacher Names"]),
-//     startDate: sessionInfo["Dates"]?.date.start,
-//     endDate: sessionInfo["Dates"]?.date.end,
-//     location: sessionInfo.Location?.multi_select[0]?.name,
-//     classes: []
-//   }
-//   const classes = classList[req.params.session]
-
-//   for(let key in classes){
-//     const pageId = classes[key]
-//     const classData = await getPage(pageId)
-//     response.classes.push(parseClassData(classData))
-//   }
-//   console.log(response)
-//   res.render("session", {})
-// })
 app.listen(PORT, console.log(`server started on ${PORT}`))
 
 function parseClassData(apiResponse){
@@ -208,11 +171,19 @@ function prettyDateString(uglyDateString){
 }
 function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
-  let data = [];
-  for(let i = 0; i<rollupArray.length; i++){
-    data.push(parseNotionData(rollupArray[i]))
-  }
-  return data
+  // console.log(rollupArray)
+  if(rollupArray.length > 1){
+    let data = [];
+    for(let i = 0; i<rollupArray.length; i++){
+      data.push(parseNotionData(rollupArray[i]))
+    }
+    return data
+  } 
+  else if(rollupArray[0]) 
+    return parseNotionData(rollupArray[0])
+  else
+    return null
+
 }
 function parseNotionPage(pageData){
   let data = pageData.properties
@@ -225,10 +196,27 @@ function parseNotionPage(pageData){
 }
 
 function parseNotionData(dataObj){
-  if(dataObj.title)
-    return dataObj?.title[0]?.plain_text
-  else if (dataObj.rich_text)
-    return dataObj?.rich_text[0]?.plain_text
+  // console.log(dataObj)
+  if(dataObj.title){
+    if(dataObj.title.length > 1){
+      let returnData = []
+      for(let i = 0; i < dataObj.title.length; i++){
+        returnData.push(dataObj.title[i]?.plain_text)
+      }
+      return returnData
+    } else 
+      return dataObj?.title[0]?.plain_text
+  }
+  else if (dataObj.rich_text){
+    if(dataObj.rich_text.length > 1){
+      let returnData = []
+      for(let i = 0; i < dataObj.rich_text.length; i++){
+        returnData.push(dataObj.rich_text[i]?.plain_text)
+      }
+      return returnData
+    } else 
+      return dataObj?.rich_text[0]?.plain_text
+  }
   else if (dataObj.url)
     return dataObj.url
   else if (dataObj.files){
