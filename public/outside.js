@@ -469,6 +469,11 @@ $(document).ready(function() {
         if ($('.breadcrumb:contains("about")').length > 0) {
             $('a#link-about').addClass('underline');
         }
+
+        if ($('.breadcrumb:contains("projects")').length > 0) {
+            $('a#link-projects').addClass('underline');
+        }
+
         //
         // if (window.location.href.indexOf("about") > -1) {
         //     $('#link-about').addClass('underline');
