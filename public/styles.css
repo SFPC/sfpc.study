@@ -1394,6 +1394,10 @@ span.reference {
       top: 0px;
       }
 
+      .entity .bio.notPerson {
+        border-radius: var(--border-rad);
+      }
+
 
       .entity .bio.bio-people {
       display: inline-block;
@@ -1961,6 +1965,12 @@ section.stacked-4 {
   display: inherit !important;
 }
 
+
+/* #class.getNotified .afterLaunch
+
+ {
+  display: none !important;
+} */
 
 .supporters {
 }
