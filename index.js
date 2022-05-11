@@ -1,6 +1,6 @@
 const express = require("express")
 const hbs = require("hbs")
-const hbsHelpers = require('just-handlebars-helpers');
+const helpers = require('handlebars-helpers')();
 const {getPage, getDatabaseEntries, getDatabaseEntry, getBlocks} = require('./lib/notion')
 const classList = require("./lib/classNotionPageList")
 const res = require("express/lib/response")
@@ -13,7 +13,9 @@ app.use(express.static("public"))
 app.set('views', './public/templates')
 app.set('view engine', 'hbs');
 hbs.registerPartials("./public/templates/partials")
-hbsHelpers.registerHelpers(hbs);
+for (let helper in helpers) {
+  hbs.registerHelper(helper, helpers[helper]);
+}
 app.get("/page/:pageId", async (req,res) => {
   const pageInfo = await getPage(req.params.pageId)
   res.json(pageInfo.properties)

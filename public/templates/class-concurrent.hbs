@@ -200,13 +200,13 @@
             {{#each teachers}}
             <div class="entity">
               <dt>
-                <span class="bio bio-float" style="background-image: url('/images/people/{{sanitize this.name}}.jpg')"
+                <span class="bio bio-float" style="background-image: url('/images/people/{{dashcase this.name}}.jpg')"
                   role="img"></span>
 
                 <h4 id="role">teacher</h4>
                 <h3>{{this.name}} </h3>
                 <div class="clear"></div>
-              <dd><span class="bio" style="background-image:url('/images/people/{{sanitize this.name}}.jpg')"
+              <dd><span class="bio" style="background-image:url('/images/people/{{dashcase this.name}}.jpg')"
                   role="img"></span>
                 <p>{{this.bio}}
                   <BR><BR>
@@ -229,7 +229,7 @@
 
       {{#each pageContent}}
 
-      <section id="section-{{sanitize @key}}">
+      <section id="section-{{dashcase @key}}">
         <div class="grid-2">
           <h1>{{@key}}</h1>
         </div>
