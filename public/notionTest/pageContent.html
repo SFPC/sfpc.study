@@ -1,0 +1,74 @@
+<pre style="width:600px;"></pre>
+<script src="js/jquery.min.js"></script>
+<script>
+
+  const getProjectEntries = async () => {
+    const res = await fetch("http://localhost:3000/pageContent/af4beabd9a1f4cada9f19fdcfd33bf74");
+    const dataInit = await res.json()
+    const contentBlockId = dataInit.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content").id
+    console.log(contentBlockId)
+    const pageContentRes = await fetch("http://localhost:3000/pageContent/" + contentBlockId)
+    console.log(pageContentRes)
+    const data = await pageContentRes.json()
+    console.log(data)
+    let pageContent = parsePageContent(data)
+    console.log(pageContent)
+    // $('pre').html(JSON.stringify(pageContent))
+    for (let section in pageContent) {
+      $('body').append(`<div style="background-color:lightblue; width:1000px; padding:20px; margin:20px;">
+        <h3>${section}</h3>
+        ${pageContent[section]}  
+      </div>`)
+    }
+  }
+  getProjectEntries()
+
+  function parsePageContent(data) {
+    let pageContent = {}
+    for (let i = 0; i < data.length; i++) {
+      parseBlock(data[i], pageContent)
+    }
+    return pageContent
+  }
+
+  function parseBlock(block, contentObj) {
+    const lastEntry = Object.keys(contentObj).pop();
+    if (!lastEntry && block.type !== 'heading_2') return
+    switch (block.type) {
+      case 'heading_2':
+        // For a heading
+        contentObj[block['heading_2'].text[0].plain_text] = "";
+        break;
+      case 'image':
+        // For an image
+        contentObj[lastEntry] += `<img src=${block['image'].external.url} />`
+        break;
+      case 'bulleted_list_item':
+        // For an unordered list
+        let bulletText = formatRichText(block['bulleted_list_item'].text)
+
+        contentObj[lastEntry] += `<ul><li>${bulletText}</li></ul >`
+        break;
+      case 'paragraph':
+        // For a paragraph
+        let pText = formatRichText(block['paragraph'].text)
+        contentObj[lastEntry] += `<p>${pText}</p>`
+        break;
+      default:
+        // For an extra type
+        return
+    }
+  }
+  function formatRichText(textArray) {
+    let formattedText = ""
+    for (let i = 0; i < textArray.length; i++) {
+      let tempText = textArray[i].plain_text
+      if (textArray[i].annotations.bold)
+        tempText = `<b>${tempText}</b>`
+      if (textArray[i].annotations.italic)
+        tempText = `<em>${tempText}</em>`
+      formattedText += tempText
+    }
+    return formattedText
+  }
+</script>

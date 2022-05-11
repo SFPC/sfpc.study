@@ -1,6 +1,7 @@
 const express = require("express")
 const hbs = require("hbs")
-const {getPage, getDatabaseEntries, getDatabaseEntry} = require('./lib/notion')
+const hbsHelpers = require('just-handlebars-helpers');
+const {getPage, getDatabaseEntries, getDatabaseEntry, getBlocks} = require('./lib/notion')
 const classList = require("./lib/classNotionPageList")
 const res = require("express/lib/response")
 const { response } = require("express")
@@ -12,19 +13,34 @@ app.use(express.static("public"))
 app.set('views', './public/templates')
 app.set('view engine', 'hbs');
 hbs.registerPartials("./public/templates/partials")
+hbsHelpers.registerHelpers(hbs);
 app.get("/page/:pageId", async (req,res) => {
   const pageInfo = await getPage(req.params.pageId)
   res.json(pageInfo.properties)
 })
 
-app.get("/name/:pageId", async (req,res) => {
-  const pageInfo = await getPage(req.params.pageId)
-  res.json(pageInfo.properties.Name.title[0].plain_text)
+
+app.get("/pageContent/:id", async (req, res) => {
+  const response = await getBlocks(req.params.id);
+  console.log(response)
+  res.json(response);
 })
+
 app.get("/participate/spring-22", async (req, res) => {
   // TODO: load session page
   res.render("session")
 
+})
+
+app.get("/classTest/:id", async (req, res) => {
+  const fullPageContent = await getBlocks(req.params.id);
+  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
+  const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
+  const classData = await getPage(req.params.id)
+  let response = parseClassData(classData)
+  response.pageContent =  parsePageContent(webContent);
+  console.log(response)
+  res.render("class-concurrent", response);
 })
 app.get("/sessions/spring-22", (req,res) => {
   res.render("session")
@@ -41,6 +57,17 @@ app.get("/sessions/spring-22/:slug", async (req, res) => {
     console.error(err)
   }
 
+})
+app.get("/sessions/:session/:class", async(req,res) => {
+  const classData = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.class}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}]})
+  const fullPageContent = await getBlocks(classData.id);
+  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
+  const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
+  //const classData = await getPage(req.params.id)
+  let response = parseClassData(classData)
+  response.pageContent =  parsePageContent(webContent);
+  console.log(response)
+  res.render("class-concurrent", response);
 })
 app.get("/projects", async (req,res) => {
   const response = await getDatabaseEntries("713f24806a524c5e892971e4fbf5c9dd", [{property:"Release Date", direction:"descending"}])
@@ -101,15 +128,22 @@ app.get("/people/:session", async (req,res) => {
 
 app.listen(PORT, console.log(`server started on ${PORT}`))
 
+
+
+// 
+// Notion Parsing Functions Below 
+// 
+
 function parseClassData(apiResponse){
   const classInfo = apiResponse.properties;
-  console.log(classInfo)
+  console.log("promo image", classInfo["Promo Image"])
+  // console.log(classInfo)
   //this is the data that will be passes to the class template
   return {
     name: classInfo.Name.title[0].plain_text,
     teachers: parseTeachers(classInfo),
-    promoImage: classInfo["Promo Image"]?.files[0]?.file?.url,
-    promoImages: promoImgs(classInfo),
+    promoImage: parseNotionData(classInfo["Promo Image"])[0],
+    promoImages: parseNotionData(classInfo["Promo Image"]),
     startDate: prettyDateString(classInfo["Date"]?.date?.start),
     endDate: prettyDateString(classInfo["Date"]?.date?.end),
     numberOfClasses: classInfo["Number of Classes"].number,
@@ -129,8 +163,9 @@ function parseClassData(apiResponse){
 function parseTeachers(classInfo){
   const teacherNames = parseRollup(classInfo["Teacher Names"])
   const teacherBios = parseRollup(classInfo["Teacher Bios"])
+  console.log("Teacher Photos", )
+  console.log(classInfo["Teacher Photos"].rollup.array[0].files)
   const teacherPhotos = parseRollup(classInfo["Teacher Photos"])
-  console.log(teacherPhotos)
   const teacherWebsites = parseRollup(classInfo["Teacher Websites"])
   const teacherTwitters = parseRollup(classInfo["Teacher Twitters"])
   const teacherInstas = parseRollup(classInfo["Teacher Instagrams"])
@@ -140,27 +175,28 @@ function parseTeachers(classInfo){
     teachers.push({
       name: teacherNames[i],
       bio: teacherBios[i],
-      image: teacherPhotos[i]?.files[i]?.file?.url,
+      image: teacherPhotos[i],
       website: teacherWebsites[i],
       twitter: teacherTwitters[i],
       instagram: teacherInstas[i],
       pronouns: teacherPronouns[i],
     })
   }
-  console.log(teachers)
+  // console.log(teachers)
   return teachers;
 }
 
 
 function promoImgs(classInfo){
   const allImgs = classInfo["Promo Image"]?.files
+  console.log('allImgs', allImgs)
   const imgs = [];
-  for(let i = 0; i < 1; i++){
+  for(let i = 0; i < allImgs.length; i++){
     imgs.push({
-      image: classInfo["Promo Image"]?.files[i]?.file?.url
+      image: allImgs[i]?.file?.url
     })
   }
-  console.log(imgs)
+  console.log("imgs", imgs)
   return imgs;
 }
 
@@ -171,19 +207,21 @@ function prettyDateString(uglyDateString){
 }
 function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
-  // console.log(rollupArray)
+  if(rollupArray[0].external) console.log("rollup array", rollupArray)
   if(rollupArray.length > 1){
-    let data = [];
-    for(let i = 0; i<rollupArray.length; i++){
-      data.push(parseNotionData(rollupArray[i]))
-    }
-    return data
+    return parseArray(rollupArray)
   } 
   else if(rollupArray[0]) 
     return parseNotionData(rollupArray[0])
   else
     return null
-
+}
+function parseArray(arr){
+  let data = [];
+  for(let i = 0; i<arr.length; i++){
+    data.push(parseNotionData(arr[i]))
+  }
+  return data
 }
 function parseNotionPage(pageData){
   let data = pageData.properties
@@ -196,7 +234,6 @@ function parseNotionPage(pageData){
 }
 
 function parseNotionData(dataObj){
-  // console.log(dataObj)
   if(dataObj.title){
     if(dataObj.title.length > 1){
       let returnData = []
@@ -223,7 +260,8 @@ function parseNotionData(dataObj){
     if(dataObj?.files?.length >= 1) {
       let imageUrls = [];
       for(let i = 0; i < dataObj.files.length; i++){
-        imageUrls.push(dataObj.files[i]?.file?.url)
+        console.log("file", dataObj.files[i])
+        imageUrls.push(dataObj.files[i].file ? dataObj.files[i]?.file?.url : dataObj.files[i]?.external?.url)
       }
       return imageUrls
     }
@@ -242,6 +280,95 @@ function parseNotionData(dataObj){
     return parseRollup(dataObj)
   else
     return null
+}
+function parsePageContent(data) {
+  let pageContent = {}
+  for (let i = 0; i < data.length; i++) {
+    parseBlock(data[i], pageContent)
+  }
+  return pageContent
+}
+
+function parseBlock(block, contentObj) {
+  const lastEntry = Object.keys(contentObj).pop();
+  if (!lastEntry && block.type !== 'heading_2') return
+  switch (block.type) {
+    case 'heading_2':
+      // For a heading
+      contentObj[block['heading_2'].text[0].plain_text] = "";
+      break;
+    case 'image':
+      // For an image
+      contentObj[lastEntry] += `<img src=${block['image'].external.url} />`
+      break;
+    case 'bulleted_list_item':
+      // For an unordered list
+      let bulletText = formatRichText(block['bulleted_list_item'].text)
+
+      contentObj[lastEntry] += `<ul><li>${bulletText}</li></ul >`
+      break;
+    case 'paragraph':
+      // For a paragraph
+      let pText = formatRichText(block['paragraph'].text)
+      contentObj[lastEntry] += `<p>${pText}</p>`
+      break;
+    default:
+      // For an extra type
+      return
+  }
+}
+function formatRichText(textArray) {
+  let formattedText = ""
+  for (let i = 0; i < textArray.length; i++) {
+    let tempText = textArray[i].plain_text
+    if (textArray[i].annotations.bold)
+      tempText = `<b>${tempText}</b>`
+    if (textArray[i].annotations.italic)
+      tempText = `<em>${tempText}</em>`
+    formattedText += tempText
+  }
+  return formattedText
+}
+
+function parseBlock(block, contentObj) {
+  const lastEntry = Object.keys(contentObj).pop();
+  if (!lastEntry && block.type !== 'heading_2') return
+  switch (block.type) {
+    case 'heading_2':
+      // For a heading
+      contentObj[block['heading_2'].text[0].plain_text] = "";
+      break;
+    case 'image':
+      // For an image
+      contentObj[lastEntry] += `<img src=${block['image'].external.url} />`
+      break;
+    case 'bulleted_list_item':
+      // For an unordered list
+      let bulletText = formatRichText(block['bulleted_list_item'].text)
+
+      contentObj[lastEntry] += `<ul><li>${bulletText}</li></ul >`
+      break;
+    case 'paragraph':
+      // For a paragraph
+      let pText = formatRichText(block['paragraph'].text)
+      contentObj[lastEntry] += `<p>${pText}</p>`
+      break;
+    default:
+      // For an extra type
+      return
+  }
+}
+function formatRichText(textArray) {
+  let formattedText = ""
+  for (let i = 0; i < textArray.length; i++) {
+    let tempText = textArray[i].plain_text
+    if (textArray[i].annotations.bold)
+      tempText = `<b>${tempText}</b>`
+    if (textArray[i].annotations.italic)
+      tempText = `<em>${tempText}</em>`
+    formattedText += tempText
+  }
+  return formattedText
 }
 // getPage("c03e32537c054d7aa788a4c37b20695f")
 //00184f83-7465-4e26-8cfc-9e03c009becc
