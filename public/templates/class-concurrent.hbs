@@ -210,8 +210,9 @@
                   role="img"></span>
                 <p>{{this.bio}}
                   <BR><BR>
-                  <i>{{this.pronouns}}</i> · <a href="{{this.website}}">website</a> · <a
-                    href="https://instagram.com/{{this.instagram}}">instagram</a>
+                  <i>{{this.pronouns}}</i>{{#if this.website}} · <a href="{{this.website}}">website</a> {{/if}}{{#if
+                  this.twitter}} · <a href="https://twitter.com/{{this.website}}">twitter</a> {{/if}}{{#if
+                  this.instagram}} · <a href="https://instagram.com/{{this.instagram}}">instagram</a>{{/if}}
                 </p>
               </dd>
               </dt>

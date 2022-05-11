@@ -24,7 +24,6 @@ app.get("/page/:pageId", async (req,res) => {
 
 app.get("/pageContent/:id", async (req, res) => {
   const response = await getBlocks(req.params.id);
-  console.log(response)
   res.json(response);
 })
 
@@ -41,7 +40,6 @@ app.get("/classTest/:id", async (req, res) => {
   const classData = await getPage(req.params.id)
   let response = parseClassData(classData)
   response.pageContent =  parsePageContent(webContent);
-  console.log(response)
   res.render("class-concurrent", response);
 })
 app.get("/sessions/spring-22", (req,res) => {
@@ -124,7 +122,6 @@ app.get("/people/:session", async (req,res) => {
   })
   const sessionInfo =  await getDatabaseEntry("ce519f031eb340f58e3693cf4e041a67", {property:"Website-Slug", "rich_text": {"equals":req.params.session}})
   const classesInfo = parseNotionData(sessionInfo.properties["Website-Classes"])
-  console.log(classesInfo)
   res.render("peopleSession", {people: peopleData, classes:classesInfo})
 })
 
@@ -138,7 +135,6 @@ app.listen(PORT, console.log(`server started on ${PORT}`))
 
 function parseClassData(apiResponse){
   const classInfo = apiResponse.properties;
-  console.log("promo image", classInfo["Promo Image"])
   // console.log(classInfo)
   //this is the data that will be passes to the class template
   return {
@@ -165,12 +161,11 @@ function parseClassData(apiResponse){
 function parseTeachers(classInfo){
   const teacherNames = parseRollup(classInfo["Teacher Names"])
   const teacherBios = parseRollup(classInfo["Teacher Bios"])
-  console.log("Teacher Photos", )
-  console.log(classInfo["Teacher Photos"].rollup.array[0].files)
   const teacherPhotos = parseRollup(classInfo["Teacher Photos"])
   const teacherWebsites = parseRollup(classInfo["Teacher Websites"])
   const teacherTwitters = parseRollup(classInfo["Teacher Twitters"])
   const teacherInstas = parseRollup(classInfo["Teacher Instagrams"])
+  console.log("pronouns", classInfo["Teacher Pronouns"].rollup.array[0].rich_text[0])
   const teacherPronouns = parseRollup(classInfo["Teacher Pronouns"])
   const teachers = [];
   for(let i = 0; i < teacherNames.length; i++){
@@ -179,8 +174,8 @@ function parseTeachers(classInfo){
       bio: teacherBios[i],
       image: teacherPhotos[i],
       website: teacherWebsites[i],
-      twitter: teacherTwitters[i],
-      instagram: teacherInstas[i],
+      twitter: teacherTwitters[i] && teacherTwitters[i][0] == "@" ? teacherTwitters[i].slice(1) : teacherTwitters[i],
+      instagram: teacherInstas[i] && teacherInstas[i][0] == "@" ? teacherInstas[i].slice(1) : teacherInstas[i],
       pronouns: teacherPronouns[i],
     })
   }
@@ -189,18 +184,6 @@ function parseTeachers(classInfo){
 }
 
 
-function promoImgs(classInfo){
-  const allImgs = classInfo["Promo Image"]?.files
-  console.log('allImgs', allImgs)
-  const imgs = [];
-  for(let i = 0; i < allImgs.length; i++){
-    imgs.push({
-      image: allImgs[i]?.file?.url
-    })
-  }
-  console.log("imgs", imgs)
-  return imgs;
-}
 
 function prettyDateString(uglyDateString){
   if(!uglyDateString) return null
@@ -209,7 +192,6 @@ function prettyDateString(uglyDateString){
 }
 function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
-  if(rollupArray[0].external) console.log("rollup array", rollupArray)
   if(rollupArray.length > 1){
     return parseArray(rollupArray)
   } 
@@ -262,7 +244,6 @@ function parseNotionData(dataObj){
     if(dataObj?.files?.length >= 1) {
       let imageUrls = [];
       for(let i = 0; i < dataObj.files.length; i++){
-        console.log("file", dataObj.files[i])
         imageUrls.push(dataObj.files[i].file ? dataObj.files[i]?.file?.url : dataObj.files[i]?.external?.url)
       }
       return imageUrls
