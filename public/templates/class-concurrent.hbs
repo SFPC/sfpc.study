@@ -156,13 +156,12 @@
         </div>
 
         <div class="grid-2">
-          <p>
-            {{description}}
+          <p style="white-space:pre-line">
+            {{trim description}}
           </p>
         </div>
       </section>
 
-      <div class="break-noline"></div>
 
 
       <div class="grid-container" id="participate-archive">
@@ -198,31 +197,13 @@
 
           <dl class="accordion">
             {{#each teachers}}
-            <div class="entity">
-              <dt>
-                <span class="bio bio-float" style="background-image: url('/images/people/{{dashcase this.name}}.jpg')"
-                  role="img"></span>
-
-                <h4 id="role">teacher</h4>
-                <h3>{{this.name}} </h3>
-                <div class="clear"></div>
-              <dd><span class="bio" style="background-image:url('/images/people/{{dashcase this.name}}.jpg')"
-                  role="img"></span>
-                <p>{{this.bio}}
-                  <BR><BR>
-                  <i>{{this.pronouns}}</i>{{#if this.website}} · <a href="{{this.website}}">website</a> {{/if}}{{#if
-                  this.twitter}} · <a href="https://twitter.com/{{this.website}}">twitter</a> {{/if}}{{#if
-                  this.instagram}} · <a href="https://instagram.com/{{this.instagram}}">instagram</a>{{/if}}
-                </p>
-              </dd>
-              </dt>
-            </div>
+            {{>teacher teacher=this}}
             {{/each}}
 
 
 
 
-
+          </dl>
         </div>
       </section>
 

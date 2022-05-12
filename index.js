@@ -29,22 +29,38 @@ app.get("/pageContent/:id", async (req, res) => {
 
 app.get("/participate/spring-22", async (req, res) => {
   // TODO: load session page
-  res.render("session")
+  res.render("spring-22/session")
 
 })
 
-app.get("/classTest/:id", async (req, res) => {
-  const fullPageContent = await getBlocks(req.params.id);
-  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
-  const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
-  const classData = await getPage(req.params.id)
-  let response = parseClassData(classData)
-  response.pageContent =  parsePageContent(webContent);
-  res.render("class-concurrent", response);
-})
+
 app.get("/sessions/spring-22", (req,res) => {
-  res.render("session")
+  res.render("spring-22/session")
 })
+
+app.get("/sessions/:slug", async (req, res) => {
+  const sessionData = await getDatabaseEntry("51d48d4644b2439cb64c2018ad05d2b1", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  const sessionType = sessionData.properties['Session Type']?.multi_select[0]?.name
+  console.log(sessionType)
+  if(sessionType == "Special"){
+    const classData = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.slug}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.slug } }}}]})
+    const fullPageContent = await getBlocks(classData.id);
+    const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
+    const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
+    let response = parseClassData(classData)
+    response.pageContent =  parsePageContent(webContent);
+    console.log(response)
+    res.render("class-concurrent", response);
+  }
+  else if(sessionType == "Intensive"){
+
+  }
+  else if(sessionType == "Concurrent"){
+
+  }
+
+})
+
 
 app.get("/sessions/spring-22/:slug", async (req, res) => {
   console.log(req.params)
@@ -140,7 +156,7 @@ function parseClassData(apiResponse){
   return {
     name: classInfo.Name.title[0].plain_text,
     teachers: parseTeachers(classInfo),
-    promoImage: parseNotionData(classInfo["Promo Image"])[0],
+    promoImage: parseNotionData(classInfo["Promo Image"])?.[0],
     promoImages: parseNotionData(classInfo["Promo Image"]),
     startDate: prettyDateString(classInfo["Date"]?.date?.start),
     endDate: prettyDateString(classInfo["Date"]?.date?.end),
@@ -173,7 +189,7 @@ function parseTeachers(classInfo){
       name: teacherNames[i],
       bio: teacherBios[i],
       image: teacherPhotos[i],
-      website: teacherWebsites[i],
+      website: teacherWebsites[i].indexOf("http") > 0 ? teacherWebsites[i] : "http://"+teacherWebsites[i],
       twitter: teacherTwitters[i] && teacherTwitters[i][0] == "@" ? teacherTwitters[i].slice(1) : teacherTwitters[i],
       instagram: teacherInstas[i] && teacherInstas[i][0] == "@" ? teacherInstas[i].slice(1) : teacherInstas[i],
       pronouns: teacherPronouns[i],
