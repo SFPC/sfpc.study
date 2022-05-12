@@ -339,7 +339,10 @@ function parseBlock(block, contentObj) {
       break;
     case 'image':
       // For an image
-      contentObj[lastEntry] += `<img src=${block['image'].external.url} />`
+      if(block['image']?.external?.url)
+        contentObj[lastEntry] += `<img src=${block['image'].external.url} />`
+      else if(block['image']?.file?.url)
+        contentObj[lastEntry] += `<img src=${block['image'].file.url} />`
       break;
     case 'bulleted_list_item':
       // For an unordered list
