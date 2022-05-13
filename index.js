@@ -185,6 +185,11 @@ async function prepareClassData(classData, classSlug){
       guests.unshift(personData)
     }
   })
+
+  const foundIdx = teachers.findIndex(el => el.Name == response['Teacher Names'][0])
+  const foundItem = teachers[foundIdx]
+  teachers.splice(foundIdx, 1)
+  teachers.unshift(foundItem)
   response.guests = cleanPersonData(guests);
   response.teachers = cleanPersonData(teachers);
   return response

@@ -136,8 +136,14 @@
 </section>
 
 
-<div class="break-noline"></div>
+<div class="break"></div>
+{{#eq [Session Slug] "summer-22"}}
+{{> summer22classBlock}}
+{{else}}
+{{> spring22classBlock}}
+{{/eq}}
 
+<div class="break-noline"></div>
 
 <section id="section-outro">
   <p tabindex="0" class="large">
