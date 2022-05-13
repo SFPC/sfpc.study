@@ -208,7 +208,6 @@ async function prepareSessionData(sessionData, session){
   let teachers = []
   let organizers = []
   people.map((person) => {
-    console.log(person)
     const personData = parseNotionPage(person)
     if(typeof personData["Sessions-Teacher"]  == 'string') personData["Sessions-Teacher"] = [personData["Sessions-Teacher"]]
     if(personData["Sessions-Teacher"] && personData["Sessions-Teacher"].includes(session)){
@@ -220,7 +219,6 @@ async function prepareSessionData(sessionData, session){
       organizers.unshift(personData)
     }
   })
-  console.log("teachers", teachers)
   response.organizers = cleanPersonData(organizers);
   response.teachers = cleanPersonData(teachers);
   return response
@@ -252,7 +250,6 @@ function parseClassData(apiResponse){
   returnObj.url=classInfo["Webpage URL"]?.url,
   returnObj.session=parseRollup(classInfo["Session Name"])[0]?.plain_text,
   returnObj.notifyDate=prettyDateString(classInfo["Notification Date"]?.date?.start)
-  console.log("class info", returnObj)
   return returnObj
 }
 function parseTeachers(classInfo){
