@@ -63,13 +63,8 @@ app.get("/sessions/:slug", async (req, res) => {
   const sessionType = sessionData.properties['Session Type']?.multi_select[0]?.name
   console.log(sessionType)
   if(sessionType == "Special"){
-    const classData = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.slug}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.slug } }}}]})
-    const fullPageContent = await getBlocks(classData.id);
-    const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
-    const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
-    let response = parseClassData(classData)
-    response.pageContent =  parsePageContent(webContent);
-    console.log(response)
+    const data = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.slug}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.slug } }}}]})
+    const response = await prepareClassData(data, req.params.slug)
     res.render("class-concurrent", response);
   }
   else if(sessionType == "Intensive"){
@@ -95,15 +90,10 @@ app.get("/sessions/spring-22/:slug", async (req, res) => {
 
 })
 app.get("/sessions/:session/:class", async(req,res) => {
-  const classData = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.class}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}]})
-  const fullPageContent = await getBlocks(classData.id);
-  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
-  const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
-  //const classData = await getPage(req.params.id)
-  let response = parseClassData(classData)
-  response.pageContent =  parsePageContent(webContent);
-  console.log(response)
+  const data = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.class}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}]})
+  const response = await prepareClassData(data, req.params.class)
   res.render("class-concurrent", response);
+
 })
 app.get("/projects", async (req,res) => {
   const response = await getDatabaseEntries("713f24806a524c5e892971e4fbf5c9dd", [{property:"Release Date", direction:"descending"}])
@@ -164,10 +154,50 @@ app.get("/people/:session", async (req,res) => {
 app.listen(PORT, console.log(`server started on ${PORT}`))
 
 
+<<<<<<< HEAD
 
 //
 // Notion Parsing Functions Below
 //
+=======
+//
+// Rendering functions
+//
+// 
+async function prepareClassData(classData, classSlug){
+  const fullPageContent = await getBlocks(classData.id);
+  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
+  const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
+  let response = parseClassData(classData)
+  response.pageContent =  parsePageContent(webContent);
+  const people = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
+    "or":[
+      {property:"Classes-Teacher", "rollup": { "any": { "rich_text": { "equals": classSlug } }}}, 
+      {property:"Classes-Guest", "rollup": { "any": { "rich_text": { "equals": classSlug } }}} 
+    ]
+  })
+  let teachers = []
+  let guests = []
+  people.map((person) => {
+    console.log(person)
+    const personData = parseNotionPage(person)
+    if(typeof personData["Classes-Teacher"]  == 'string') personData["Classes-Teacher"] = [personData["Classes-Teacher"]]
+    if(personData["Classes-Teacher"] && personData["Classes-Teacher"].includes(classSlug)){
+      personData.role = "teacher"
+      teachers.unshift(personData)
+    }
+    else if(personData["Classes-Guest"]){
+      personData.role = "guest"
+      guests.unshift(personData)
+    }
+  })
+  response.guests = cleanPersonData(guests);
+  response.teachers = cleanPersonData(teachers);
+  return response
+}
+// Notion Parsing Functions Below 
+// 
+>>>>>>> 9c6541ba5c9d5b4cdbabfd0967f8d02ba5405773
 
 function parseClassData(apiResponse){
   const classInfo = apiResponse.properties;
@@ -201,7 +231,6 @@ function parseTeachers(classInfo){
   const teacherWebsites = parseRollup(classInfo["Teacher Websites"])
   const teacherTwitters = parseRollup(classInfo["Teacher Twitters"])
   const teacherInstas = parseRollup(classInfo["Teacher Instagrams"])
-  console.log("pronouns", classInfo["Teacher Pronouns"].rollup.array[0].rich_text[0])
   const teacherPronouns = parseRollup(classInfo["Teacher Pronouns"])
   const teachers = [];
   for(let i = 0; i < teacherNames.length; i++){
@@ -209,7 +238,7 @@ function parseTeachers(classInfo){
       name: teacherNames[i],
       bio: teacherBios[i],
       image: teacherPhotos[i],
-      website: teacherWebsites[i].indexOf("http") > 0 ? teacherWebsites[i] : "http://"+teacherWebsites[i],
+      website: teacherWebsites[i] && teacherWebsites[i].indexOf("http") > 0 ? teacherWebsites[i] : "http://"+teacherWebsites[i],
       twitter: teacherTwitters[i] && teacherTwitters[i][0] == "@" ? teacherTwitters[i].slice(1) : teacherTwitters[i],
       instagram: teacherInstas[i] && teacherInstas[i][0] == "@" ? teacherInstas[i].slice(1) : teacherInstas[i],
       pronouns: teacherPronouns[i],
@@ -219,7 +248,14 @@ function parseTeachers(classInfo){
   return teachers;
 }
 
-
+function cleanPersonData(personArray){
+  for(let i = 0; i < personArray.length; i++){
+    personArray[i].Website = personArray[i].Website && personArray[i].Website.indexOf("http") > 0 ? personArray[i].Website : "http://"+personArray[i].Website
+    personArray[i].Twitter = personArray[i].Twitter && personArray[i].Twitter[0] == "@" ? personArray[i].Twitter.slice(1) : personArray[i].Twitter
+    personArray[i].Instagram = personArray[i].Instagram && personArray[i].Instagram[0] == "@" ? personArray[i].Instagram.slice(1) : personArray[i].Instagram
+  }
+  return personArray
+}
 
 function prettyDateString(uglyDateString){
   if(!uglyDateString) return null
@@ -318,47 +354,6 @@ function parseBlock(block, contentObj) {
       break;
     case 'image':
       // For an image
-      contentObj[lastEntry] += `<img src=${block['image'].external.url} />`
-      break;
-    case 'bulleted_list_item':
-      // For an unordered list
-      let bulletText = formatRichText(block['bulleted_list_item'].text)
-
-      contentObj[lastEntry] += `<ul><li>${bulletText}</li></ul >`
-      break;
-    case 'paragraph':
-      // For a paragraph
-      let pText = formatRichText(block['paragraph'].text)
-      contentObj[lastEntry] += `<p>${pText}</p>`
-      break;
-    default:
-      // For an extra type
-      return
-  }
-}
-function formatRichText(textArray) {
-  let formattedText = ""
-  for (let i = 0; i < textArray.length; i++) {
-    let tempText = textArray[i].plain_text
-    if (textArray[i].annotations.bold)
-      tempText = `<b>${tempText}</b>`
-    if (textArray[i].annotations.italic)
-      tempText = `<em>${tempText}</em>`
-    formattedText += tempText
-  }
-  return formattedText
-}
-
-function parseBlock(block, contentObj) {
-  const lastEntry = Object.keys(contentObj).pop();
-  if (!lastEntry && block.type !== 'heading_2') return
-  switch (block.type) {
-    case 'heading_2':
-      // For a heading
-      contentObj[block['heading_2'].text[0].plain_text] = "";
-      break;
-    case 'image':
-      // For an image
       if(block['image']?.external?.url)
         contentObj[lastEntry] += `<img src=${block['image'].external.url} />`
       else if(block['image']?.file?.url)
@@ -392,5 +387,4 @@ function formatRichText(textArray) {
   }
   return formattedText
 }
-// getPage("c03e32537c054d7aa788a4c37b20695f")
-//00184f83-7465-4e26-8cfc-9e03c009becc
+

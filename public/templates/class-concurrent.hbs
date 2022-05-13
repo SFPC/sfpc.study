@@ -105,7 +105,7 @@
 
           <div class="details">
             <div class="labels">Teachers</div>
-            <div class="labels-info" id="teachers-list">{{#each teachers}}{{this.name}}{{#unless
+            <div class="labels-info" id="teachers-list">{{#each teachers}}{{this.Name}}{{#unless
               @last}}, {{/unless}}{{/each}}
             </div>
           </div>
@@ -189,7 +189,7 @@
 
       <section id="section-teachers">
         <div class="grid-2">
-          <h1>Meet the Teachers & Organizers</h1>
+          <h1>Meet the Teachers</h1>
         </div>
 
         <div class="grid-2 class-details">
@@ -197,7 +197,29 @@
 
           <dl class="accordion">
             {{#each teachers}}
-            {{>teacher teacher=this}}
+            {{>personCard person=this}}
+            {{/each}}
+
+
+
+
+          </dl>
+        </div>
+
+      </section>
+      <div class="break"></div>
+      {{#if guests}}
+      <section id="section-guests">
+        <div class="grid-2">
+          <h1>Guest Teachers and Visiting Artists</h1>
+        </div>
+
+        <div class="grid-2 class-details">
+
+
+          <dl class="accordion">
+            {{#each guests}}
+            {{>personCard person=this}}
             {{/each}}
 
 
@@ -208,7 +230,7 @@
       </section>
 
       <div class="break"></div>
-
+      {{/if}}
       {{#each pageContent}}
 
       <section id="section-{{dashcase @key}}">
