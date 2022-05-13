@@ -64,6 +64,7 @@ app.get("/sessions/:slug", async (req, res) => {
   console.log(sessionType)
   if(sessionType == "Special"){
     const classData = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.slug}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.slug } }}}]})
+    if(!classData) return
     const response = await prepareClassData(classData, req.params.slug)
     res.render("class-concurrent", response);
   }
@@ -93,6 +94,7 @@ app.get("/sessions/spring-22/:slug", async (req, res) => {
 })
 app.get("/sessions/:session/:class", async(req,res) => {
   const data = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.class}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}]})
+  if(!data) return
   const response = await prepareClassData(data, req.params.class)
   res.render("class-concurrent", response);
 
