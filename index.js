@@ -66,6 +66,7 @@ app.get("/sessions/:slug", async (req, res) => {
     const classData = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.slug}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.slug } }}}]})
     if(!classData) return
     const response = await prepareClassData(classData, req.params.slug)
+    console.log(response)
     res.render("class-concurrent", response);
   }
   else if(sessionType == "Intensive"){
@@ -175,7 +176,6 @@ async function prepareClassData(classData, classSlug){
   let teachers = []
   let guests = []
   people.map((person) => {
-    console.log(person)
     const personData = parseNotionPage(person)
     if(typeof personData["Classes-Teacher"]  == 'string') personData["Classes-Teacher"] = [personData["Classes-Teacher"]]
     if(personData["Classes-Teacher"] && personData["Classes-Teacher"].includes(classSlug)){
@@ -245,7 +245,7 @@ function parseClassData(apiResponse){
   returnObj.location=classInfo["Location"]?.select?.name,
   returnObj.cost=classInfo["Cost"]?.number,
   returnObj.applicationEndDate=prettyDateString(classInfo["Application End Date"]?.date?.start),
-  returnObj.apllicationsOpen = new Date() <= new Date(returnObj?.applicationEndDate)
+  returnObj.applicationsOpen = new Date() <= new Date(returnObj?.applicationEndDate)
   returnObj.applicationLink=classInfo["Application URL"]?.url,
   returnObj.description=classInfo["Short Description"]?.rich_text[0]?.plain_text,
   returnObj.active=classInfo["Active"]?.formula.boolean,
