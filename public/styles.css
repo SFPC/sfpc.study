@@ -252,7 +252,9 @@ h3, section .grid-2 p, .block-text, section .grid-2 ul {
          }
 
 
-
+         .no-margin-bottom {
+           margin-bottom: 0px !important
+         }
 
         .top h3 {
           margin: 0px !important;
