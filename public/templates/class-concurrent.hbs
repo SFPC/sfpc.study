@@ -133,8 +133,8 @@
           <div class="details">
             <div class="labels">Deadline </div>
             <div class="labels-info">
-              <span class="hide-appsClosed">Applications open until</span>
-              <span class="hide-appsOpen">Applications closed on</span>
+              <span class="hide-appsOpen">Applications {{#if applicationsOpen}}closed on {{else}}open
+                until{{/if}}</span>
               <span id="deadline">{{applicationEndDate}}</span>
             </div>
           </div>
