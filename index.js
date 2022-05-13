@@ -47,9 +47,9 @@ app.get("/participate/summer-22", async (req, res) => {
 })
 
 
-app.get("/sessions/spring-22", (req,res) => {
-  res.render("summer-22/session")
-})
+// app.get("/sessions/summer-22", (req,res) => {
+//   res.render("summer-22/session")
+// })
 
 app.get("/sessions/sex-ed", (req,res) => {
   res.render("get-notified-sexed")
@@ -63,15 +63,17 @@ app.get("/sessions/:slug", async (req, res) => {
   const sessionType = sessionData.properties['Session Type']?.multi_select[0]?.name
   console.log(sessionType)
   if(sessionType == "Special"){
-    const data = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.slug}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.slug } }}}]})
-    const response = await prepareClassData(data, req.params.slug)
+    const classData = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.slug}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.slug } }}}]})
+    const response = await prepareClassData(classData, req.params.slug)
     res.render("class-concurrent", response);
   }
   else if(sessionType == "Intensive"){
 
   }
   else if(sessionType == "Concurrent"){
-
+    const response = await prepareSessionData(sessionData, req.params.slug)
+    console.log("Concurrent Session data", response)
+    res.render(req.params.slug+"/session", response)
   }
 
 })
@@ -187,7 +189,37 @@ async function prepareClassData(classData, classSlug){
   response.teachers = cleanPersonData(teachers);
   return response
 }
-//
+
+async function prepareSessionData(sessionData, session){
+  let response = parseNotionPage(sessionData)
+  const classData = await getDatabaseEntries("57406c3b209e4bfba3953de6328086ac", [], {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": session } }}})
+  response.classes = parseNotionPageArray(classData);
+  const people = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
+  "or":[
+    {property:"Sessions-Organizer", "rollup": { "any": { "rich_text": { "equals": session } }}},
+    {property:"Sessions-Teacher", "rollup": { "any": { "rich_text": { "equals": session } }}},
+  ]
+  })
+  let teachers = []
+  let organizers = []
+  people.map((person) => {
+    console.log(person)
+    const personData = parseNotionPage(person)
+    if(typeof personData["Sessions-Teacher"]  == 'string') personData["Sessions-Teacher"] = [personData["Sessions-Teacher"]]
+    if(personData["Sessions-Teacher"] && personData["Sessions-Teacher"].includes(session)){
+      personData.role = "teacher"
+      teachers.unshift(personData)
+    }
+    else if(personData["Sessions-Organizer"]){
+      personData.role = "organizer"
+      organizers.unshift(personData)
+    }
+  })
+  response.organizers = cleanPersonData(organizers);
+  response.teachers = cleanPersonData(teachers);
+  return response
+}
+  //
 // Notion Parsing Functions Below 
 // 
 
@@ -279,6 +311,9 @@ function parseNotionPage(pageData){
   }
   return parsedData
 
+}
+function parseNotionPageArray(pageDataArray){
+  return pageDataArray.map(item => parseNotionPage(item)) 
 }
 
 function parseNotionData(dataObj){
