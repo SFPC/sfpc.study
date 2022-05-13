@@ -220,6 +220,7 @@ async function prepareSessionData(sessionData, session){
       organizers.unshift(personData)
     }
   })
+  console.log("teachers", teachers)
   response.organizers = cleanPersonData(organizers);
   response.teachers = cleanPersonData(teachers);
   return response
