@@ -51,6 +51,11 @@ app.get("/sessions/spring-22", (req,res) => {
   res.render("summer-22/session")
 })
 
+app.get("/sessions/sex-ed", (req,res) => {
+  res.render("get-notified-sexed")
+})
+
+
 
 
 app.get("/sessions/:slug", async (req, res) => {
@@ -166,28 +171,28 @@ app.listen(PORT, console.log(`server started on ${PORT}`))
 
 function parseClassData(apiResponse){
   const classInfo = apiResponse.properties;
-  // console.log(classInfo)
+  let returnObj = parseNotionPage(apiResponse);
   //this is the data that will be passes to the class template
-  return {
-    name: classInfo.Name.title[0].plain_text,
-    teachers: parseTeachers(classInfo),
-    promoImage: parseNotionData(classInfo["Promo Image"])?.[0],
-    promoImages: parseNotionData(classInfo["Promo Image"]),
-    startDate: prettyDateString(classInfo["Date"]?.date?.start),
-    endDate: prettyDateString(classInfo["Date"]?.date?.end),
-    numberOfClasses: classInfo["Number of Classes"].number,
-    time: classInfo["Time"].rich_text[0]?.plain_text,
-    location: classInfo["Location"]?.select?.name,
-    cost: classInfo["Cost"]?.number,
-    applicationEndDate: prettyDateString(classInfo["Application End Date"]?.date?.start),
-    applicationLink: classInfo["Application URL"]?.url,
-    description: classInfo["Short Description"]?.rich_text[0]?.plain_text,
-    active: classInfo["Active"]?.formula.boolean,
-    url: classInfo["Webpage URL"]?.url,
-    session: parseRollup(classInfo["Session Name"])[0]?.plain_text,
-    notifyDate: prettyDateString(classInfo["Notification Date"]?.date?.start)
 
-  }
+  returnObj.name=classInfo.Name.title[0].plain_text,
+  returnObj.teachers=parseTeachers(classInfo),
+  returnObj.promoImage=parseNotionData(classInfo["Promo Image"])?.[0],
+  returnObj.promoImages=parseNotionData(classInfo["Promo Image"]),
+  returnObj.startDate=prettyDateString(classInfo["Date"]?.date?.start),
+  returnObj.endDate=prettyDateString(classInfo["Date"]?.date?.end),
+  returnObj.numberOfClasses=classInfo["Number of Classes"].number,
+  returnObj.time=classInfo["Time"].rich_text[0]?.plain_text,
+  returnObj.location=classInfo["Location"]?.select?.name,
+  returnObj.cost=classInfo["Cost"]?.number,
+  returnObj.applicationEndDate=prettyDateString(classInfo["Application End Date"]?.date?.start),
+  returnObj.applicationLink=classInfo["Application URL"]?.url,
+  returnObj.description=classInfo["Short Description"]?.rich_text[0]?.plain_text,
+  returnObj.active=classInfo["Active"]?.formula.boolean,
+  returnObj.url=classInfo["Webpage URL"]?.url,
+  returnObj.session=parseRollup(classInfo["Session Name"])[0]?.plain_text,
+  returnObj.notifyDate=prettyDateString(classInfo["Notification Date"]?.date?.start)
+  console.log("class info", returnObj)
+  return returnObj
 }
 function parseTeachers(classInfo){
   const teacherNames = parseRollup(classInfo["Teacher Names"])
