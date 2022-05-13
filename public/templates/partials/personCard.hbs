@@ -1,0 +1,19 @@
+<div class="entity">
+  <dt>
+    <span class="bio bio-float" style="background-image: url('{{person.Image.[0]}}')" role="img"></span>
+
+    <h4 id="role">{{person.role}}</h4>
+    <h3>{{person.Name}} </h3>
+    <div class="clear"></div>
+  <dd><span class="bio" style="background-image:url('{{person.Image.[0]}}')" role="img"></span>
+    <p>{{person.Bio}}
+      <BR><BR>
+      <i>{{person.Pronouns}}</i>{{#if person.Website}} · <a target="_blank" href="{{person.Website}}">website</a>
+      {{/if}}{{#if
+      person.Twitter}} · <a target="_blank" href="https://twitter.com/{{person.Twitter}}">twitter</a>
+      {{/if}}{{#if
+      person.Instagram}} · <a target="_blank" href="https://instagram.com/{{person.Instagram}}">instagram</a>{{/if}}
+    </p>
+  </dd>
+  </dt>
+</div>
