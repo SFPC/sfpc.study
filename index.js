@@ -244,6 +244,7 @@ function parseClassData(apiResponse){
   returnObj.location=classInfo["Location"]?.select?.name,
   returnObj.cost=classInfo["Cost"]?.number,
   returnObj.applicationEndDate=prettyDateString(classInfo["Application End Date"]?.date?.start),
+  returnObj.apllicationsOpen = new Date() <= new Date(returnObj?.applicationEndDate)
   returnObj.applicationLink=classInfo["Application URL"]?.url,
   returnObj.description=classInfo["Short Description"]?.rich_text[0]?.plain_text,
   returnObj.active=classInfo["Active"]?.formula.boolean,
@@ -279,7 +280,7 @@ function parseTeachers(classInfo){
 
 function cleanPersonData(personArray){
   for(let i = 0; i < personArray.length; i++){
-    personArray[i].Website = personArray[i].Website && personArray[i].Website.indexOf("http") > 0 ? personArray[i].Website : "http://"+personArray[i].Website
+    personArray[i].Website = personArray[i].Website && personArray[i].Website.indexOf("http") < 0 ?  "http://"+personArray[i].Website : personArray[i].Website
     personArray[i].Twitter = personArray[i].Twitter && personArray[i].Twitter[0] == "@" ? personArray[i].Twitter.slice(1) : personArray[i].Twitter
     personArray[i].Instagram = personArray[i].Instagram && personArray[i].Instagram[0] == "@" ? personArray[i].Instagram.slice(1) : personArray[i].Instagram
   }
@@ -408,6 +409,7 @@ function parseBlock(block, contentObj) {
   }
 }
 function formatRichText(textArray) {
+  if(textArray.length == 0) return ""
   let formattedText = ""
   for (let i = 0; i < textArray.length; i++) {
     let tempText = textArray[i].plain_text
