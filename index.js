@@ -153,17 +153,9 @@ app.get("/people/:session", async (req,res) => {
 
 app.listen(PORT, console.log(`server started on ${PORT}`))
 
-
-<<<<<<< HEAD
-
-//
-// Notion Parsing Functions Below
-//
-=======
 //
 // Rendering functions
 //
-// 
 async function prepareClassData(classData, classSlug){
   const fullPageContent = await getBlocks(classData.id);
   const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
@@ -195,9 +187,9 @@ async function prepareClassData(classData, classSlug){
   response.teachers = cleanPersonData(teachers);
   return response
 }
+//
 // Notion Parsing Functions Below 
 // 
->>>>>>> 9c6541ba5c9d5b4cdbabfd0967f8d02ba5405773
 
 function parseClassData(apiResponse){
   const classInfo = apiResponse.properties;
