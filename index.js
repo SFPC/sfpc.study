@@ -38,6 +38,21 @@ app.get("/sessions/spring-22", (req,res) => {
   res.render("spring-22/session")
 })
 
+
+
+app.get("/participate/summer-22", async (req, res) => {
+  // TODO: load session page
+  res.render("summer-22/session")
+
+})
+
+
+app.get("/sessions/spring-22", (req,res) => {
+  res.render("summer-22/session")
+})
+
+
+
 app.get("/sessions/:slug", async (req, res) => {
   const sessionData = await getDatabaseEntry("51d48d4644b2439cb64c2018ad05d2b1", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
   const sessionType = sessionData.properties['Session Type']?.multi_select[0]?.name
@@ -109,12 +124,12 @@ app.get("/projects/:slug", async (req,res) => {
 app.get("/people", async (req,res) => {
   const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [{timestamp:"created_time", direction:"descending"}], {
     "or":[
-      {property:"Roles", "multi_select": {"contains":"Participant"}}, 
-      {property:"Roles", "multi_select": {"contains":"Organizer"}}, 
-      {property:"Roles", "multi_select": {"contains":"Teacher"}}, 
-      {property:"Roles", "multi_select": {"contains":"Guest Teacher"}}, 
-      {property:"Roles", "multi_select": {"contains":"Accountability Steward"}}, 
-      {property:"Roles", "multi_select": {"contains":"Co-Director"}} 
+      {property:"Roles", "multi_select": {"contains":"Participant"}},
+      {property:"Roles", "multi_select": {"contains":"Organizer"}},
+      {property:"Roles", "multi_select": {"contains":"Teacher"}},
+      {property:"Roles", "multi_select": {"contains":"Guest Teacher"}},
+      {property:"Roles", "multi_select": {"contains":"Accountability Steward"}},
+      {property:"Roles", "multi_select": {"contains":"Co-Director"}}
     ]})
   const peopleData = response.map((person) => {
     console.log(person)
@@ -127,10 +142,10 @@ app.get("/people", async (req,res) => {
 app.get("/people/:session", async (req,res) => {
   const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
     "or":[
-      {property:"Sessions-Organizer", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}, 
-      {property:"Sessions-Teacher", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}, 
-      {property:"Sessions-Participant", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}, 
-      {property:"Sessions-Guest", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}} 
+      {property:"Sessions-Organizer", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}},
+      {property:"Sessions-Teacher", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}},
+      {property:"Sessions-Participant", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}},
+      {property:"Sessions-Guest", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}
     ]
   })
   const peopleData = response.map((person) => {
@@ -145,9 +160,9 @@ app.listen(PORT, console.log(`server started on ${PORT}`))
 
 
 
-// 
-// Notion Parsing Functions Below 
-// 
+//
+// Notion Parsing Functions Below
+//
 
 function parseClassData(apiResponse){
   const classInfo = apiResponse.properties;
@@ -210,8 +225,8 @@ function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
   if(rollupArray.length > 1){
     return parseArray(rollupArray)
-  } 
-  else if(rollupArray[0]) 
+  }
+  else if(rollupArray[0])
     return parseNotionData(rollupArray[0])
   else
     return null
@@ -241,7 +256,7 @@ function parseNotionData(dataObj){
         returnData.push(dataObj.title[i]?.plain_text)
       }
       return returnData
-    } else 
+    } else
       return dataObj?.title[0]?.plain_text
   }
   else if (dataObj.rich_text){
@@ -251,7 +266,7 @@ function parseNotionData(dataObj){
         returnData.push(dataObj.rich_text[i]?.plain_text)
       }
       return returnData
-    } else 
+    } else
       return dataObj?.rich_text[0]?.plain_text
   }
   else if (dataObj.url)
