@@ -220,11 +220,14 @@
 
 
           <!-- <dl class="accordion"> -->
+
+          {{#if guests}}
+
             {{#each guests}}
             {{>personCard person=this}}
             {{/each}}
 
-
+            {{/if}}
 
 
           </dl>
