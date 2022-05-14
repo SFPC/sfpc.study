@@ -1871,6 +1871,10 @@ section.stacked-4 {
         .program-content img {
           border-radius: var(--border-rad);
           margin-bottom: calc(var(--text-margin)/2);
+          transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          ms-transition: all .2s ease-in-out;
+          o-transition: all .2s ease-in-out;
         }
 
         .program-content img:hover {
