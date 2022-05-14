@@ -8,7 +8,7 @@
     content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sfpc.study/">
-  <meta property="og:title" content="School for Poetic Computationn">
+  <meta property="og:title" content="School for Poetic Computation">
   <meta property="og:description"
     content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
   <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
@@ -189,9 +189,10 @@
 
       <div class="break"></div>
 
+
       <section id="section-teachers">
         <div class="grid-2">
-          <h1>Meet the Teachers</h1>
+          <h1>Meet the Teachers {{#if guests}}and Guests{{/if}}</h1>
         </div>
 
         <div class="grid-2 class-details">
@@ -202,40 +203,44 @@
             {{>personCard person=this}}
             {{/each}}
 
+            {{#if guests}}
 
+              {{#each guests}}
+              {{>personCard person=this}}
+              {{/each}}
 
+              {{/if}}
 
           </dl>
+
+
         </div>
 
       </section>
-      <div class="break"></div>
-      {{#if guests}}
-      <section id="section-guests">
-        <div class="grid-2">
-          <h1>Guest Teachers and Visiting Artists</h1>
-        </div>
-
-        <div class="grid-2 class-details">
-
-
-          <dl class="accordion">
-            {{#each guests}}
-            {{>personCard person=this}}
-            {{/each}}
 
 
 
 
-          </dl>
-        </div>
-      </section>
 
-      <div class="break"></div>
-      {{/if}}
+
+
+
+
+
+
+
+
+
+
+
+
       {{#each pageContent}}
 
-      <section id="section-{{dashcase @key}}">
+
+            <div class="break"></div>
+
+
+      <section id="section-{{dashcase @key}}" class="program-content">
         <div class="grid-2">
           <h1>{{@key}}</h1>
         </div>
@@ -245,11 +250,11 @@
         </div>
       </section>
 
-      <div class="break"></div>
 
       {{/each}}
 
 
+      <div class="break"></div>
 
 
       {{> classBoilerplate}}
