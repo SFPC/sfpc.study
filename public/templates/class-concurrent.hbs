@@ -203,39 +203,35 @@
             {{>personCard person=this}}
             {{/each}}
 
-          <!-- </dl> -->
+            {{#if guests}}
 
-<!--
-        </div>
+              {{#each guests}}
+              {{>personCard person=this}}
+              {{/each}}
 
-      </section>
-      <div class="break"></div>
-      {{#if guests}}
-      <section id="section-guests">
-        <div class="grid-2">
-          <h1>Guest Teachers and Visiting Artists</h1>
-        </div>
-
-        <div class="grid-2 class-details"> -->
-
-
-          <!-- <dl class="accordion"> -->
-
-          {{#if guests}}
-
-            {{#each guests}}
-            {{>personCard person=this}}
-            {{/each}}
-
-            {{/if}}
-
+              {{/if}}
 
           </dl>
-        </div>
-      </section>
 
-      <!-- <div class="break"></div> -->
-      <!-- {{/if}} -->
+
+        </div>
+
+      </section> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       {{#each pageContent}}
