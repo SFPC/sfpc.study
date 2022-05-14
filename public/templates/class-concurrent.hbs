@@ -189,6 +189,7 @@
 
       <div class="break"></div>
 
+
       <section id="section-teachers">
         <div class="grid-2">
           <h1>Meet the Teachers {{#if guests}}and Guests{{/if}}</h1>
@@ -202,10 +203,9 @@
             {{>personCard person=this}}
             {{/each}}
 
-
+          <!-- </dl> -->
 
 <!--
-          </dl>
         </div>
 
       </section>
@@ -219,7 +219,7 @@
         <div class="grid-2 class-details"> -->
 
 
-          <dl class="accordion">
+          <!-- <dl class="accordion"> -->
             {{#each guests}}
             {{>personCard person=this}}
             {{/each}}
@@ -231,11 +231,15 @@
         </div>
       </section>
 
-      <div class="break"></div>
+      <!-- <div class="break"></div> -->
       <!-- {{/if}} -->
 
 
       {{#each pageContent}}
+
+
+            <div class="break"></div>
+
 
       <section id="section-{{dashcase @key}}">
         <div class="grid-2">
@@ -247,7 +251,6 @@
         </div>
       </section>
 
-      <div class="break"></div>
 
       {{/each}}
 
