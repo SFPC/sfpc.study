@@ -191,7 +191,7 @@
 
       <section id="section-teachers">
         <div class="grid-2">
-          <h1>Meet the Teachers</h1>
+          <h1>Meet the Teachers {{#if guests}}and Guests{{/if}}</h1>
         </div>
 
         <div class="grid-2 class-details">
@@ -232,7 +232,9 @@
       </section>
 
       <div class="break"></div>
-      {{/if}}
+      <!-- {{/if}} -->
+
+
       {{#each pageContent}}
 
       <section id="section-{{dashcase @key}}">
