@@ -55,6 +55,9 @@ app.get("/sessions/sex-ed", (req,res) => {
   res.render("get-notified-sexed")
 })
 
+app.get("/sessions/networked-performance", (req,res) => {
+  res.render("networked-performance/session")
+})
 
 
 
@@ -169,8 +172,8 @@ async function prepareClassData(classData, classSlug){
   response.pageContent =  parsePageContent(webContent);
   const people = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
     "or":[
-      {property:"Classes-Teacher", "rollup": { "any": { "rich_text": { "equals": classSlug } }}}, 
-      {property:"Classes-Guest", "rollup": { "any": { "rich_text": { "equals": classSlug } }}} 
+      {property:"Classes-Teacher", "rollup": { "any": { "rich_text": { "equals": classSlug } }}},
+      {property:"Classes-Guest", "rollup": { "any": { "rich_text": { "equals": classSlug } }}}
     ]
   })
   let teachers = []
@@ -226,8 +229,8 @@ async function prepareSessionData(sessionData, session){
   return response
 }
   //
-// Notion Parsing Functions Below 
-// 
+// Notion Parsing Functions Below
+//
 
 function parseClassData(apiResponse){
   const classInfo = apiResponse.properties;
@@ -319,7 +322,7 @@ function parseNotionPage(pageData){
 
 }
 function parseNotionPageArray(pageDataArray){
-  return pageDataArray.map(item => parseNotionPage(item)) 
+  return pageDataArray.map(item => parseNotionPage(item))
 }
 
 function parseNotionData(dataObj){
@@ -421,4 +424,3 @@ function formatRichText(textArray) {
   }
   return formattedText
 }
-

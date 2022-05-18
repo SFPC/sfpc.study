@@ -91,10 +91,58 @@
 
       <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
 
+
+      <section class="intro {{Website-Slug}}" id="introduction">
+        <p tabindex="0" class="large">
+          <span id="introduction-text">
+            {{{"Short Description"}}}
+
+          </span>
+          <BR><BR>
+          <span id="session-name">{{"Session Name"}}</span> is organized and taught by
+          <!-- {{#each Organizers}}
+          {{#if @last}}and{{/if}}
+          <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
+
+          <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">
+              {{this.Bio}} </span></span>{{#if @last}}.{{/if}}
+          {{/each}} -->
+
+
+          <!-- It includes classes with -->
+          {{#each teachers}}
+          {{#if @last}}and{{/if}}
+          <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
+
+          <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">
+              {{this.Bio}} </span></span>{{#if @last}}.{{/if}}
+          {{/each}}
+
+          Guests include
+          {{#each guests}}
+          {{#if @last}}and{{/if}}
+          <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
+
+          <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">
+              {{this.Bio}} </span></span>{{#if @last}}.{{/if}}
+          {{/each}}
+
+
+
+          <!-- <BR><BR> -->
+          <!-- Applications launching soon. <a href="">Get Notified</a>. -->
+
+          <!-- <a href="{{applicationLink}}" class="hide-appsClosed">Apply Now</a> -->
+        </p>
+      </section>
+
+      <div class="break-noline"></div>
+
       <section id="section-class-details">
         <div class="grid-2">
           <h1><span id="class-name">
-              {{name}}
+              <!-- {{name}} -->
+              Details
             </span></h1>
         </div>
 
@@ -102,14 +150,14 @@
 
 
 
-          <img id="class-image" src="{{promoImage}}">
+          <!-- <img id="class-image" src="{{promoImage}}"> -->
 
-          <div class="details">
+          <!-- <div class="details">
             <div class="labels">Teachers</div>
             <div class="labels-info" id="teachers-list">{{#each teachers}}{{this.Name}}{{#unless
               @last}}, {{/unless}}{{/each}}
             </div>
-          </div>
+          </div> -->
           <div class="details">
             <div class="labels">Date </div>
             <div class="labels-info">
@@ -148,10 +196,10 @@
         </div>
       </section>
 
-      <div class="break"></div>
+      <!-- <div class="break"></div> -->
 
 
-      <section id="section-description">
+      <!-- <section id="section-description">
         <div class="grid-2">
           <h1>Description </h1>
         </div>
@@ -161,7 +209,7 @@
             {{trim description}}
           </p>
         </div>
-      </section>
+      </section> -->
 
 
       {{#if promoImages.[1]}}
@@ -228,7 +276,7 @@
 
       <section id="section-teachers">
         <div class="grid-2">
-          <h1>Meet the Teachers {{#if guests}}and Guests{{/if}}</h1>
+          <h1>Meet the Teachers {{#if guests}}& Guests{{/if}}</h1>
         </div>
 
         <div class="grid-2 class-details">

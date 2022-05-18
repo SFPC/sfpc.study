@@ -234,12 +234,16 @@ h3, section .grid-2 p, .block-text, section .grid-2 ul {
   font-size: var(--medium-text);
   font-weight: lighter;
   line-height: var(--medium-line-height);
-  /* margin-bottom: calc(var(--text-margin)/3); */
   letter-spacing: -.5px;
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   ms-transition: all .2s ease-in-out;
   o-transition: all .2s ease-in-out;
+}
+
+h3, section .grid-2 p, .block-text {
+margin-bottom: calc(var(--text-margin)/3);
+
 }
 
       section .grid-2 ul ul  {
