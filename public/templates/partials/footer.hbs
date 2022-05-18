@@ -1,9 +1,13 @@
-<div id="footer">
+<div id="footer" class="footer">
         <div class="mode"><button id="mode-toggle"></button></a></div>
       </div>
 
-      <div class="website-grid grid-hide">
-        <div class="grid-inner">
+
+
+      <div class="website-grid grid-hide {{#if "Session Slug"}} {{"Session Slug"}} {{else}} sfpc {{/if}}
+
+        ">
+        <div class="grid-inner {{#if "Session Slug"}} {{"Session Slug"}} {{else}} sfpc {{/if}}">
         <section>
           <div class="grid-2">
             <div class="chars chars1"></div>

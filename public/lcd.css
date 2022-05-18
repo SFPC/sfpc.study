@@ -1,35 +1,27 @@
 :root {
 
-    --background: var(--spring-2022-background);
-    --text-color: var(--spring-2022-text);
-    --text-link: var(--spring-2022-link);
+    --background: #e5e3e4 ;
+     --text-color: #555658  ;
+    --text-link: var(--summer-22-link) ;
     --box-shadow: rgba(0,0,0,.3);
-/*
-    --background: var(--cocoon-2021-background);
-    --text-color: var(--cocoon-2021-text);
-    --text-link: var(--cocoon-2021-link);
-    --box-shadow: rgba(0,0,0,.3); */
-
-    /* --spring-2022-background: rgb(232, 232, 232);
-    --spring-2022-text: rgb(48, 155, 80);
-    --spring-2022-link: #777744; */
-
-
-/*
-    --spring-2022-background: #dedede;
-    --spring-2022-text: #0F2BD4;
-    --spring-2022-link: #58595b; */
-
-    /* --spring-2022-background: #e5e3e4;
-    --spring-2022-text: #555658;
-    --spring-2022-link: #ff5e4a; */
-
-    --spring-2022-background: #e5e3e4;
-    --spring-2022-text: #555658;
-    --spring-2022-link:  rgb(48, 155, 80);
 
 
 
+
+     /* --summer-22-background: #FF4C00;
+     --summer-22-text: #ffffff;
+     --summer-22-link:  #E2FF2F;
+      --summer-22-special-text:  #FF4C00; */
+      --summer-22-background: #fff;
+      --summer-22-text: #FF4C00;
+      --summer-22-text-on-bg: #fff;
+      --summer-22-link:  #458DF9;
+       --summer-22-special-text:  #FF4C00;
+
+
+    --spring-22-background: #e5e3e4;
+    --spring-22-text: #555658;
+    --spring-22-link:  rgb(48, 155, 80);
 
     --fallwinter-2122-background: #fff;
     --fallwinter-2122-text: #000;
@@ -45,17 +37,20 @@
 
 }
 
-/* .shell {
-  background-image: url('images/sessions/cocoon-2021/bg.png');
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-blend-mode: screen;
-} */
+
+
+
+
+/* /////////// start SFPC GENERAL STYLES  ///////////////////////////////*/
+
 
 select#allSections {
-  background: rgba(255,255,255,.8);
+  /* background: rgba(255,255,255,.8); */
   backdrop-filter: blur(3px);
+}
+
+.shell {
+  border-color: #fff !important;
 }
 
 
@@ -63,20 +58,511 @@ select#allSections {
   border-color: var(--text-color);
 }
 
-.spring-2022 {
-  background-color: var(--spring-2022-background);
-  color: var(--spring-2022-text);
+
+
+.sfpc,
+.sfpc.featured.session,
+.shell .sfpc,
+.sfpc.featured  {
+  background-color: var(--background)  !important;
+  color: var(--text-color);
   box-sizing: border-box;
-  border-color: var(--spring-2022-text);
+  border-color: var(--text-color);
 }
 
-        .spring-2022 a:hover, .spring-2022.featured:hover h2 {
-          color: var(--spring-2022-link) !important;
+
+      .sfpc p,
+      .sfpc p a,
+      .sfpc a,
+      .sfpc.featured h4,
+      .sfpc h4 a,
+      .sfpc .intro a,
+      .sfpc p.large a,
+      .sfpc p a:hover,
+      .sfpc.session.featured,
+      .sfpc.session.featured a
+      {
+        color: var(--text-color) !important;
+      }
+
+      .sfpc h4 a:hover,
+      /* .sfpc .intro a, */
+      .sfpc p.large a:hover,
+      .sfpc.featured:hover h6,
+      .sfpc.featured:hover .title,
+      .sfpc .details a:hover,
+      .sfpc.featured .title:hover,
+      .sfpc p a:hover,
+      .sfpc h4 a:hover,
+      .sfpc section .grid-2 ul li::before,
+      .sfpc .chars,
+      .sfpc p a:hover,
+      .sfpc a:hover,
+      .sfpc h4 a:hover,
+      .sfpc .intro a:hover,
+      .sfpc .details a:hover,
+      .sfpc .entity:hover .accordion dt h3:after,
+      .sfpc .accordion dt h3:after{
+          color: var(--text-link) !important;
+      }
+
+      .sfpc #cost,
+      .sfpc .fixed-apply,
+      .sfpc .fixed-support {
+          color: var(--background) !important;
+      }
+
+      .sfpc .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .sfpc .block-text {
+        background-color: var(--background);
+      }
+
+
+      .sfpc .break {
+        border-bottom: 1px dashed var(--text-color);
+      }
+
+      .sfpc .grid-inner, .sfpc.grid-inner {
+        border: 2px dotted var(--text-color) !important;
+        color: var(--text-link) !important;
+      }
+
+      .sfpc #class .entity,
+      .sfpc.website-grid .grid-2 {
+        border-color: var(--text-color);
+      }
+
+      .sfpc #class .entity:hover {
+        border-color: var(--text-link);
+      }
+
+      .sfpc .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--background) !important;
+      }
+
+      .sfpc select#allSections:hover,
+      .sfpc .loader-content p::after,
+      .sfpc span#cost
+      {
+        background: var(--text-link) !important;
+        color: var(--background) !important;
+      }
+
+      .sfpc .breadcrumb.fixed,
+      .sfpc .breadcrumb.fixed::before,
+      .sfpc .breadcrumb.fixed a,
+      .sfpc .breadcrumb.fixed a:hover {
+        background: rgba(255,255,255,.8) !important;
+        color: #000 !important;
+      }
+
+
+      .sfpc .breadcrumb,
+      .sfpc .breadcrumb a,
+      .sfpc .text-on-bg,
+      .sfpc .breadcrumb a:hover {
+          color: var(--text-color) !important;
+          /* text-shadow: 2px 2px 0px var(--text-link); */
+      }
+
+
+      .sfpc section#section-outro,
+      #class .intro.sfpc,
+      .shell.sfpc .class-details,
+      .sfpc #class section,
+      .sfpc #class .entity,
+      .sfpc .accordion dd.active,
+      .sfpc section ul,
+      .sfpc .website-grid
+       {
+        background-color: var(--background);
+        color:  var(--text-color) !important;
+        border-radius: var(--border-rad);
+      }
+
+      .sfpc #class section,
+      #class .intro.sfpc {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .sfpc #class section.stacked,
+      .sfpc .section-testimonials,
+      .sfpc .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important
+      }
+
+
+      .shell.sfpc {
+        background: var(--background);
+      }
+
+
+/* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+
+
+
+
+
+
+/* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+
+
+
+
+
+
+
+
+/* /////////// start SUMMER 22  ///////////////////////////////*/
+
+.summer-22,
+.summer-22.featured.session,
+.shell .summer-22,
+.summer-22.featured  {
+  background-color: var(--summer-22-background)  !important;
+  color: var(--summer-22-text);
+  box-sizing: border-box;
+  border-color: var(--summer-22-text);
+}
+
+
+      .summer-22 p,
+      .summer-22 p a,
+      .summer-22 a,
+      .summer-22.featured h4,
+      .summer-22 h4 a,
+      .summer-22 .intro a,
+      .summer-22 p.large a,
+      .summer-22 p a:hover,
+      .summer-22.session.featured,
+      .summer-22.session.featured a,
+      .summer-22.featured h4.type a,
+      .sfpc .summer-22 a
+      {
+        color: var(--summer-22-text) !important;
+      }
+
+      .summer-22 h4 a:hover,
+      .summer-22 .intro a,
+      .summer-22 p.large a:hover,
+      .summer-22.featured:hover h6,
+      .summer-22.featured:hover .title,
+      .summer-22 .details a:hover,
+      .summer-22.featured .title:hover,
+      .summer-22 p a:hover,
+      .summer-22 h4 a:hover,
+      .summer-22 section .grid-2 ul li::before,
+      .summer-22 .chars,
+      .summer-22 p a:hover,
+      .summer-22 a:hover,
+      .summer-22 h4 a:hover,
+      .summer-22 .intro a:hover,
+      .summer-22 .details a:hover,
+      .summer-22 .entity:hover .accordion dt h3:after,
+      .summer-22 .accordion dt h3:after{
+          color: var(--summer-22-link) !important;
+      }
+
+      .summer-22 #cost,
+      .summer-22 .fixed-apply,
+      .summer-22 .fixed-support {
+          color: var(--summer-22-background) !important;
+      }
+
+      .summer-22 span#cost {
+        background: var(--summer-22-link) !important;
+      }
+
+
+      .summer-22 .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .summer-22 .block-text {
+        background-color: var(--summer-22-background);
+      }
+
+
+
+      .summer-22.grid-inner, .summer-22 .grid-inner {
+        border: 2px dotted var(--summer-22-text);
+        color: var(--summer-22-link) !important;
+      }
+
+      .summer-22 #class .entity,
+      .summer-22.website-grid .grid-2 {
+        border-color: var(--summer-22-text);
+      }
+
+      .summer-22 #class .entity:hover {
+        border-color: var(--summer-22-link);
+      }
+
+      .summer-22 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--summer-22-background) !important;
+      }
+
+
+      .summer-22 select#allSections:hover,
+      .summer-22 .loader-content p::after,
+      .summer-22 span#cost
+      {
+        background: var(--summer-22-link) !important;
+        color: var(--summer-22-background) !important;
+      }
+
+
+      .summer-22 .breadcrumb.fixed,
+      .summer-22 .breadcrumb.fixed::before,
+      .summer-22 .breadcrumb.fixed a,
+      .summer-22 .breadcrumb.fixed a:hover {
+        background: rgba(255,255,255,.8) !important;
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .summer-22 .breadcrumb,
+      .summer-22 .breadcrumb a,
+      .summer-22 .text-on-bg,
+      .summer-22 .breadcrumb a:hover {
+          color: var(--summer-22-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--summer-22-link);
+      }
+
+
+      .summer-22 section#section-outro,
+      #class .intro.summer-22,
+      .shell.summer-22 .class-details,
+      .summer-22 #class section,
+      .summer-22 #class .entity,
+      .summer-22 .accordion dd.active,
+      .summer-22 section ul,
+      .summer-22 .website-grid
+       {
+        background-color: var(--summer-22-background);
+        color:  var(--summer-22-text) !important;
+        border-radius: var(--border-rad);
+      }
+
+      .summer-22 #class section,
+      #class .intro.summer-22 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .summer-22 #class section.stacked,
+      .summer-22 .section-testimonials,
+      .summer-22 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important
+      }
+
+      .summer-22 .break {
+        border: 0px !important;
+        margin-bottom: 0px !important;
+        border-color: var(--summer-22-text);
+      }
+
+      .shell.summer-22 {
+        background-image: url('images/sessions/summer-22/bg-b.jpg');
+        background-size: cover;
+      }
+
+
+/* /////////// end SUMMER 22  ///////////////////////////////*/
+
+
+
+
+
+
+
+
+/* /////////// start SPRING 22  ///////////////////////////////*/
+
+.spring-22,
+.spring-22.featured.session,
+.shell .spring-22,
+.spring-22.featured  {
+  background-color: var(--spring-22-background)  !important;
+  color: var(--spring-22-text);
+  box-sizing: border-box;
+  border-color: var(--spring-22-text);
+}
+
+
+      .spring-22 p,
+      .spring-22 p a,
+      .spring-22 a,
+      .spring-22.featured h4,
+      .spring-22 h4 a,
+      .spring-22 .intro a,
+      .spring-22 p.large a,
+      .spring-22 p a:hover,
+      .spring-22.session.featured,
+      .spring-22.session.featured a
+      {
+        color: var(--spring-22-text) !important;
+      }
+
+      .spring-22 h4 a:hover,
+      .spring-22 .intro a,
+      .spring-22 p.large a:hover,
+      .spring-22.featured:hover h6,
+      .spring-22.featured:hover .title,
+      .spring-22.featured .title:hover,
+      .spring-22 p a:hover,
+      .spring-22 h4 a:hover,
+      .spring-22 section .grid-2 ul li::before,
+      .spring-22 .chars,
+      .spring-22 p a:hover,
+      .spring-22 a:hover,
+      .spring-22 h4 a:hover,
+      .spring-22 .intro a:hover,
+      .spring-22 .details a:hover,
+      .spring-22 .entity:hover .accordion dt h3:after,
+      .spring-22 .accordion dt h3:after
+      {
+          color: var(--spring-22-link) !important;
+      }
+
+      .spring-22 #cost,
+      .spring-22 .fixed-apply,
+      .spring-22 .fixed-support {
+          color: var(--spring-22-background) !important;
+      }
+
+      .spring-22 .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .spring-22 .block-text {
+        background-color: var(--spring-22-background);
+      }
+
+
+      .spring-22 .break {
+        border-bottom: 1px dashed var(--spring-22-text) !important;
+      }
+
+      .spring-22.grid-inner, .spring-22 .var(--sex-ed-link)ner {
+        border: 2px dotted var(--spring-22-text);
+        color: var(--spring-22-link) !important;
+      }
+
+      .spring-22 #class .entity,
+      .spring-22.website-grid .grid-2 {
+        border-color: var(--spring-22-text);
+      }
+
+      .spring-22 #class .entity:hover {
+        border-color: var(--spring-22-link);
+      }
+
+      .spring-22 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--spring-22-background) !important;
+      }
+
+
+      .spring-22 .breadcrumb.fixed,
+      .spring-22 .breadcrumb.fixed::before,
+      .spring-22 .breadcrumb.fixed a,
+      .spring-22 .breadcrumb.fixed a:hover {
+        background: rgba(255,255,255,.8) !important;
+        color: #000 !important;
+      }
+
+      .spring-22 select#allSections:hover,
+      .spring-22 .loader-content p::after,
+      .spring-22 span#cost
+      {
+        background: var(--spring-22-link) !important;
+        color: var(--spring-22-background) !important;
+      }
+
+      .spring-22 .breadcrumb,
+      .spring-22 .breadcrumb a,
+      .spring-22 .text-on-bg,
+      .spring-22 .breadcrumb a:hover {
+          color: var(--spring-22-text-on-bg) !important;
+      }
+
+
+      .spring-22 section#section-outro,
+      #class .intro.spring-22,
+      .shell.spring-22 .class-details,
+      .spring-22 #class section,
+      .spring-22 #class .entity,
+      .spring-22 .accordion dd.active,
+      .spring-22 section ul,
+      .spring-22 .website-grid
+       {
+        background-color: var(--spring-22-background);
+        color:  var(--spring-22-text) !important;
+        border-radius: var(--border-rad);
+      }
+
+      .spring-22 #class section,
+      #class .intro.spring-22 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .spring-22 #class section.stacked,
+      .spring-22 .section-testimonials,
+      .spring-22 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important
+      }
+
+
+      .shell.spring-22 {
+        background-image: url('images/sessions/spring-22/bg-b.jpg');
+        background-size: cover;
+      }
+
+
+/* /////////// end SPRING 22  ///////////////////////////////*/
+
+
+
+
+
+/* .spring-22 {
+  background-color: var(--spring-22-background);
+  color: var(--spring-22-text);
+  box-sizing: border-box;
+  border-color: var(--spring-22-text);
+}
+
+        .spring-22 a:hover,
+        .spring-22.featured:hover h2,
+        .spring-22.featured:hover .title,
+        .spring-22.featured .title:hover,
+        .spring-22.featured:hover h6,
+        .spring-22 .expanded
+        {
+          color: var(--spring-22-link) !important;
         }
 
-        .spring-2022.featured h4.type  {
-          color: var(--spring-2022-text);
+        .spring-22.featured h4.type  {
+          color: var(--spring-22-text);
         }
+
+        .spring-22 span#cost,
+        .spring-22 .fixed-apply {
+            color: var(--spring-22-background) !important;
+        } */
+
 
 .fallwinter-2122 {
   background-color: var(--fallwinter-2122-background);
@@ -111,8 +597,12 @@ select#allSections {
 }
 
 
-        .cocoon-2021 a:hover, .cocoon-2021.featured:hover h2 {
+        .cocoon-2021 a:hover, .cocoon-2021.featured:hover h2  {
           color: var(--cocoon-2021-link) !important;
+        }
+
+        .cocoon-2021.featured h4 a {
+          color: var(--cocoon-2021-text) !important;
         }
 
 

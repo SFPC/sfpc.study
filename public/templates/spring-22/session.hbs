@@ -46,11 +46,40 @@
 
 <body>
       {{> header}}
-      {{> footer}}
+
+
+      <div id="footer" class="footer">
+              <div class="mode"><button id="mode-toggle"></button></a></div>
+            </div>
+
+            <div class="website-grid grid-hide spring-22 {{Website-Slug}} {{"Session Slug"}}">
+              <div class="grid-inner {{Website-Slug}} {{"Session Slug"}}">
+              <section>
+                <div class="grid-2">
+                  <div class="chars chars1"></div>
+                  <p class="large">School</p>
+                </div>
+                <div class="grid-2">
+                  <div class="chars chars2"></div>
+                  <p class="large">for</p>
+                </div>
+                <div class="grid-2">
+                  <div class="chars chars3"></div>
+                  <p class="large">Poetic</p>
+                </div>
+                <div class="grid-2">
+                  <div class="chars chars4"></div>
+                  <p class="large">Computation</p>
+                </div>
+              </section>
+            </div>
+            </div>
+
+
 
       <div class="crt-overlay crt-overlay-fullsize"></div>
 
-      <div id="shell" class="shell shell-fullsize about shell-content">
+      <div id="shell" class="shell shell-fullsize about shell-content {{Website-Slug}} {{"Session Slug"}} spring-22">
 
         <!--<div class="selectors">
          <select id= "allSections" onchange="sectionJump(this.value)">
@@ -69,10 +98,10 @@
           <a href="/sessions/spring-22" id="session-link"><span id="session-name">spring 2022</span></a>
         </h4>
 
-        <div id="class" class="spring-22 hide-content appsClosed beforeClass">
+        <div id="class" class="{{Website-Slug}} hide-content appsClosed beforeClass">
 
 
-          <a class="fixed-apply hide-apply hide-appsClosed" href="https://forms.gle/TB8w74XuvEZNdCA29">Apply Now</a>
+          <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
 
 
 
@@ -135,11 +164,11 @@
                         <BR><BR>
                         <!-- Applications launching soon. <a href="">Get Notified</a>. -->
 
-                        <a href="https://forms.gle/TB8w74XuvEZNdCA29" class="hide-appsClosed">Apply Now</a>
+                        <a href="{{applicationLink}}" class="hide-appsClosed">Apply Now</a>
                       </p>
                     </section>
 
-                <div class="break"></div>
+                <!-- <div class="break"></div> -->
 
 
 
@@ -148,9 +177,9 @@
 
 
                <section id="classes" class="stacked stacked-4">
-                   <div class="grid-1">
+                   <!-- <div class="grid-1">
                      <h1>Classes</h1>
-                   </div>
+                   </div> -->
 
                    {{> spring22classBlock}}
 

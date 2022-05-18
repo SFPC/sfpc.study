@@ -48,10 +48,10 @@
   {{> footer}}
   <div class="crt-overlay crt-overlay-fullsize"></div>
 
-  <div id="shell" class="shell shell-fullsize about">
+  <div id="shell" class="shell shell-fullsize about {{"Session Slug"}} sfpc">
 
     <div class="selectors">
-      <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
+      <select id="allSections" onchange="sectionJump(this.value)" class="{{"Session Slug"}} hide-content">
         <option value="class">Jump to section...</option>
         <option value="section-class-details">ABOUT </option>
         <option value="section-class-details">--Details & Description</option>
@@ -79,7 +79,7 @@
       <span class="caret"></span>
       <a href="">sessions</a>
       <span class="caret"></span>
-      <a href="/sessions/{{'Session Slug'}} " id=" session-link"><span id="session-name">{{"Session Name"}}</span></a>
+      <a href="/sessions/{{'Session Slug'}} " id=" session-link">{{"Session Name"}}</a>
     </h4>
 
 

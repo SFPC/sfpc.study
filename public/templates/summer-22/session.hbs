@@ -52,7 +52,7 @@
 
   <div class="crt-overlay crt-overlay-fullsize"></div>
 
-  <div id="shell" class="shell shell-fullsize about shell-content">
+  <div id="shell" class="shell shell-fullsize about shell-content {{Website-Slug}} {{"Session Slug"}}">
 
     <!--<div class="selectors">
          <select id= "allSections" onchange="sectionJump(this.value)">
@@ -63,27 +63,27 @@
       </div> -->
 
 
-    <h4 class="breadcrumb hide-content">
+    <h4 class="breadcrumb hide-content text-on-bg">
       <a href="/participate.html">participate</a>
       <span class="caret"></span>
       <a href="">sessions</a>
       <span class="caret"></span>
-      <a href="/sessions/summer-22" id="session-link"><span id="session-name">summer 2022</span></a>
+      <a href="/sessions/summer-22" id="session-link">summer 2022</a>
     </h4>
 
-    <div id="class" class="summer-22 hide-content appsClosed beforeClass">
+    <div id="class" class=" hide-content appsOpen beforeClass">
 
 
-      <a class="fixed-apply hide-apply hide-appsClosed" href="https://forms.gle/TB8w74XuvEZNdCA29">Apply Now</a>
+      <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
 
 
 
-      <section class="intro" id="introduction">
+      <section class="intro {{Website-Slug}}" id="introduction">
         <p tabindex="0" class="large">
           <span id="introduction-text">
             {{Description}}</span>
           <BR><BR>
-          <span id="session-name">summer 2022</span> is organized by
+          <span id="session-name">Summer 2022</span> is organized by
           {{#each organizers}}
           {{#if @last}}and{{/if}}
           <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
@@ -105,11 +105,11 @@
           <BR><BR>
           <!-- Applications launching soon. <a href="">Get Notified</a>. -->
 
-          <a href="https://forms.gle/TB8w74XuvEZNdCA29" class="hide-appsClosed">Apply Now</a>
+          <a href="{{applicationLink}}" class="hide-appsClosed">Apply Now</a>
         </p>
       </section>
 
-      <div class="break"></div>
+      <!-- <div class="break"></div> -->
 
 
 
@@ -117,10 +117,10 @@
 
 
 
-      <section id="classes" class="stacked stacked-4 ">
-        <div class="grid-1 no-margin-bottom">
-          <h1>Classes</h1>
-        </div>
+      <section id="classes" class="stacked stacked-4">
+        <!-- <div class="grid-1 no-margin-bottom">
+          <h1 class="text-on-bg">Classes</h1>
+        </div> -->
 
         {{> summer22classBlock}}
 
@@ -230,13 +230,13 @@
 
       </div>
 
-      <section>
+      <section class="section-testimonials">
         <div class="grid-2">
           <p>
-            <span id="test-text">You are viewing photos from past sessions. Read participant <a href="#testimonials"
-                class="testimonials">testimonials</a>.</span>
-            <span id="photos-text" class="hide-text">You are viewing participant testimonials. View <a href="#photos"
-                class="participate-photos">photos</a> from past sessions.</span>
+            <span id="test-text" class="text-on-bg">You are viewing photos from past sessions. Read participant <a href="#summer-monials"
+                class="testimonials text-on-bg">testimonials</a>.</span>
+            <span id="photos-text" class="hide-text text-on-bg">You are viewing participant testimonials. View <a href="#photos"
+                class="participate-photos text-on-bg">photos</a> from past sessions.</span>
           </p>
         </div>
 
