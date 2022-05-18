@@ -55,9 +55,9 @@ app.get("/sessions/sex-ed", (req,res) => {
   res.render("get-notified-sexed")
 })
 
-app.get("/sessions/networked-performance", (req,res) => {
-  res.render("networked-performance/session")
-})
+// app.get("/sessions/networked-performance", (req,res) => {
+//   res.render("networked-performance/session")
+// })
 
 
 
@@ -70,7 +70,8 @@ app.get("/sessions/:slug", async (req, res) => {
     if(!classData) return
     const response = await prepareClassData(classData, req.params.slug)
     console.log(response)
-    res.render("class-concurrent", response);
+    res.render(req.params.slug+"/session", response)
+    // res.render("class-concurrent", response);
   }
   else if(sessionType == "Intensive"){
 
