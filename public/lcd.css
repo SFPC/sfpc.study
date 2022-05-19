@@ -7,16 +7,20 @@
 
 
 
+    --networked-performance-background: #2E2E2E;
+    --networked-performance-text: #fff;
+    --networked-performance-text-on-bg: #fff;
+    --networked-performance-link:  #EDBBE8;
+     --networked-performance-special-text:  #14a057;
 
-     /* --summer-22-background: #FF4C00;
-     --summer-22-text: #ffffff;
-     --summer-22-link:  #E2FF2F;
-      --summer-22-special-text:  #FF4C00; */
-      --summer-22-background: #fff;
-      --summer-22-text: #FF4C00;
-      --summer-22-text-on-bg: #fff;
-      --summer-22-link:  #458DF9;
-       --summer-22-special-text:  #FF4C00;
+
+
+
+    --summer-22-background: #fff;
+    --summer-22-text: #FF4C00;
+    --summer-22-text-on-bg: #fff;
+    --summer-22-link:  #458DF9;
+     --summer-22-special-text:  #FF4C00;
 
 
     --spring-22-background: #e5e3e4;
@@ -45,7 +49,7 @@
 
 
 select#allSections {
-  /* background: rgba(255,255,255,.8); */
+  background: rgba(255,255,255,.8);
   backdrop-filter: blur(3px);
 }
 
@@ -102,7 +106,8 @@ select#allSections {
       .sfpc .intro a:hover,
       .sfpc .details a:hover,
       .sfpc .entity:hover .accordion dt h3:after,
-      .sfpc .accordion dt h3:after{
+      .sfpc .accordion dt h3:after,
+      .sfpc .expanded{
           color: var(--text-link) !important;
       }
 
@@ -145,6 +150,7 @@ select#allSections {
       }
 
       .sfpc select#allSections:hover,
+      .sfpc .loader-content p::after,
       .sfpc span#cost
       {
         background: var(--text-link) !important;
@@ -152,15 +158,16 @@ select#allSections {
       }
 
 
-      .sfpc .loader-content p::after {
-        background: var(--text-color);
+      .sfpc .breadcrumb.fixed {
+
+          background: rgba(255,255,255,.8) !important;
       }
 
       .sfpc .breadcrumb.fixed,
       .sfpc .breadcrumb.fixed::before,
       .sfpc .breadcrumb.fixed a,
       .sfpc .breadcrumb.fixed a:hover {
-        background: rgba(255,255,255,.8) !important;
+        /* background: rgba(255,255,255,.8) !important; */
         color: #000 !important;
       }
 
@@ -190,7 +197,7 @@ select#allSections {
 
       .sfpc #class section,
       #class .intro.sfpc {
-        padding: var(--body-margin) calc(var(--body-margin)/2);
+        /* padding: var(--body-margin) calc(var(--body-margin)/2); */
       }
 
       .sfpc #class section.stacked,
@@ -214,7 +221,182 @@ select#allSections {
 
 
 
-/* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+
+
+/* /////////// start NETWORKED PERFORMANCE ///////////////////////////////*/
+
+.networked-performance,
+.networked-performance.featured.session,
+.shell .networked-performance,
+.networked-performance.featured  {
+  background-color: var(--networked-performance-background)  !important;
+  color: var(--networked-performance-text);
+  box-sizing: border-box;
+  border-color: var(--networked-performance-text);
+}
+
+
+      .networked-performance p,
+      .networked-performance p a,
+      .networked-performance a,
+      .networked-performance.featured h4,
+      .networked-performance h4 a,
+      .networked-performance .intro a,
+      .networked-performance p.large a,
+      .networked-performance p a:hover,
+      .networked-performance.session.featured,
+      .networked-performance.session.featured a,
+      .networked-performance.featured h4.type a,
+      .sfpc .networked-performance a
+      {
+        color: var(--networked-performance-text) !important;
+      }
+
+      .networked-performance h4 a:hover,
+      .networked-performance .intro a,
+      .networked-performance p.large a:hover,
+      .networked-performance.featured:hover h6,
+      .networked-performance.featured:hover .title,
+      .networked-performance .details a:hover,
+      .networked-performance.featured .title:hover,
+      .networked-performance p a:hover,
+      .networked-performance h4 a:hover,
+      .networked-performance section .grid-2 ul li::before,
+      .networked-performance .chars,
+      .networked-performance p a:hover,
+      .networked-performance a:hover,
+      .networked-performance h4 a:hover,
+      .networked-performance .intro a:hover,
+      .networked-performance .details a:hover,
+      .networked-performance .entity:hover .accordion dt h3:after,
+      .networked-performance .accordion dt h3:after,
+      .networked-performance .expanded
+      {
+          color: var(--networked-performance-link) !important;
+      }
+
+      .networked-performance #cost,
+      .networked-performance .fixed-apply,
+      .networked-performance .fixed-support {
+          color: var(--networked-performance-background) !important;
+          background: var(--networked-performance-link) !important;
+      }
+
+      .networked-performance span#cost {
+        background: var(--networked-performance-link) !important;
+      }
+
+
+      .networked-performance .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .networked-performance .block-text {
+        background-color: var(--networked-performance-background);
+      }
+
+
+
+      .networked-performance.grid-inner, .networked-performance .grid-inner {
+        border: 2px dotted var(--networked-performance-text);
+        color: var(--networked-performance-link) !important;
+      }
+
+      .networked-performance #class .entity,
+      .networked-performance.website-grid .grid-2 {
+        border-color: var(--networked-performance-text);
+      }
+
+      .networked-performance #class .entity:hover {
+        border-color: var(--networked-performance-link);
+      }
+
+      .networked-performance .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--networked-performance-background) !important;
+      }
+
+
+      .networked-performance select#allSections:hover,
+      .networked-performance .loader-content p::after,
+      .networked-performance span#cost
+      {
+        background: var(--networked-performance-link) !important;
+        color: var(--networked-performance-background) !important;
+      }
+
+
+      .networked-performance .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+
+        }
+
+        .networked-performance .breadcrumb.fixed,
+      .networked-performance .breadcrumb.fixed::before,
+      .networked-performance .breadcrumb.fixed a,
+      .networked-performance .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+        background: none;
+      }
+
+
+      .networked-performance .breadcrumb,
+      .networked-performance .breadcrumb a,
+      .networked-performance .text-on-bg,
+      .networked-performance .breadcrumb a:hover
+      {
+          color: var(--networked-performance-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--networked-performance-special-text);
+      }
+
+
+
+
+
+
+
+      .networked-performance section#section-outro,
+      #class .intro.networked-performance,
+      .shell.networked-performance .class-details,
+      .networked-performance #class section,
+      .networked-performance #class .entity,
+      .networked-performance .accordion dd.active,
+      .networked-performance section ul,
+      .networked-performance .website-grid
+       {
+        background-color: var(--networked-performance-background);
+        color:  var(--networked-performance-text) !important;
+        border-radius: var(--border-rad);
+      }
+
+      .networked-performance #class section,
+      #class .intro.networked-performance {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .networked-performance #class section.stacked,
+      .networked-performance .section-testimonials,
+      .networked-performance .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important
+      }
+
+      .networked-performance .break {
+        border: 0px !important;
+        margin-bottom: 0px !important;
+        border-color: var(--networked-performance-text);
+      }
+
+      .shell.networked-performance {
+        background-image: url('images/sessions/networked-performance/bg.jpg');
+        background-size: cover;
+      }
+
+
+/* /////////// end NETWORKED PERFORMANCE  ///////////////////////////////*/
+
 
 
 
@@ -269,7 +451,8 @@ select#allSections {
       .summer-22 .intro a:hover,
       .summer-22 .details a:hover,
       .summer-22 .entity:hover .accordion dt h3:after,
-      .summer-22 .accordion dt h3:after{
+      .summer-22 .accordion dt h3:after,
+      .summer-22 .expanded{
           color: var(--summer-22-link) !important;
       }
 
@@ -277,6 +460,7 @@ select#allSections {
       .summer-22 .fixed-apply,
       .summer-22 .fixed-support {
           color: var(--summer-22-background) !important;
+          background: var(--summer-22-link) !important;
       }
 
       .summer-22 span#cost {
@@ -322,12 +506,13 @@ select#allSections {
         color: var(--summer-22-background) !important;
       }
 
-
+      .summer-22 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
       .summer-22 .breadcrumb.fixed,
       .summer-22 .breadcrumb.fixed::before,
       .summer-22 .breadcrumb.fixed a,
       .summer-22 .breadcrumb.fixed a:hover {
-        background: rgba(255,255,255,.8) !important;
         color: #000 !important;
         text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
       }
@@ -336,10 +521,7 @@ select#allSections {
       .summer-22 .breadcrumb,
       .summer-22 .breadcrumb a,
       .summer-22 .text-on-bg,
-      .summer-22 .breadcrumb a:hover,
-      .loader-content p
-
-         {
+      .summer-22 .breadcrumb a:hover {
           color: var(--summer-22-text-on-bg) !important;
           text-shadow: 2px 2px 0px var(--summer-22-link);
       }
@@ -436,7 +618,8 @@ select#allSections {
       .spring-22 .intro a:hover,
       .spring-22 .details a:hover,
       .spring-22 .entity:hover .accordion dt h3:after,
-      .spring-22 .accordion dt h3:after
+      .spring-22 .accordion dt h3:after,
+      .spring-22 .expanded
       {
           color: var(--spring-22-link) !important;
       }
@@ -445,6 +628,7 @@ select#allSections {
       .spring-22 .fixed-apply,
       .spring-22 .fixed-support {
           color: var(--spring-22-background) !important;
+          background: var(--spring-22-link) !important;
       }
 
       .spring-22 .fixed-apply:hover {
@@ -461,7 +645,7 @@ select#allSections {
         border-bottom: 1px dashed var(--spring-22-text) !important;
       }
 
-      .spring-22.grid-inner, .spring-22 .var(--sex-ed-link)ner {
+      .spring-22 .grid-inner, .spring-22.grid-inner {
         border: 2px dotted var(--spring-22-text);
         color: var(--spring-22-link) !important;
       }
@@ -520,7 +704,7 @@ select#allSections {
 
       .spring-22 #class section,
       #class .intro.spring-22 {
-        padding: var(--body-margin) calc(var(--body-margin)/2);
+        /* padding: var(--body-margin) calc(var(--body-margin)/2); */
       }
 
       .spring-22 #class section.stacked,

@@ -22,31 +22,35 @@
     --main-large-text: calc(24px + 2vw);
     --main-large-line-height: 1;
 
+    --networked-performance-title-font: soda-script, sans-serif;
+    --networked-performance-header-font: soda-script, sans-serif;
+    --networked-performance-body-font: soda-script, sans-serif;
+    --networked-performance-special-font: soda-script, sans-serif;
 
-    --summer-22-title-font: 'Boris', sans-serif;
-    --summer-22-header-font: 'Boris', sans-serif;
-    --summer-22-body-font: 'Boris', sans-serif;
-    --summer-22-special-font: 'Boris', sans-serif;
+    --summer-22-title-font: 'Boris', 'Hershey', sans-serif;
+    --summer-22-header-font: 'Boris', 'Hershey', sans-serif;
+    --summer-22-body-font: 'Boris', 'Hershey', sans-serif;
+    --summer-22-special-font: 'Boris', 'Hershey', sans-serif;
 
     --main-title-font: 'Hershey', sans-serif;
     --main-header-font: 'Hershey', sans-serif;
     --main-body-font: 'Hershey', sans-serif;
     --main-special-font: Courier, sans-serif;
 
-    --fallwinter-2122-title-font: 'Alte', sans-serif;
-    --fallwinter-2122-header-font: 'Alte', sans-serif;
-    --fallwinter-2122-body-font: 'Alte', sans-serif;
-    --fallwinter-2122-special-font: 'Alte', sans-serif;
+    --fallwinter-2122-title-font: 'Alte', 'Hershey', sans-serif;
+    --fallwinter-2122-header-font: 'Alte', 'Hershey', sans-serif;
+    --fallwinter-2122-body-font: 'Alte', 'Hershey', sans-serif;
+    --fallwinter-2122-special-font: 'Alte', 'Hershey', sans-serif;
 
-    --cocoon-2021-title-font: 'Self Modern', serif;
-    --cocoon-2021-header-font: 'Self Modern', serif;
-    --cocoon-2021-body-font: 'Self Modern', serif;
-    --cocoon-2021-special-font: 'Self Modern', serif;
+    --cocoon-2021-title-font: 'Self Modern', 'Hershey', serif;
+    --cocoon-2021-header-font: 'Self Modern', 'Hershey', serif;
+    --cocoon-2021-body-font: 'Self Modern', 'Hershey', serif;
+    --cocoon-2021-special-font: 'Self Modern', 'Hershey', serif;
 
-    --codesocieties-2020-title-font: 'Violet', sans-serif;
-    --codesocieties-2020-header-font: 'Violet', sans-serif;
-    --codesocieties-2020-body-font: 'Violet', sans-serif;
-    --codesocieties-2020-special-font: 'Violet', sans-serif;
+    --codesocieties-2020-title-font: 'Violet', 'Hershey', sans-serif;
+    --codesocieties-2020-header-font: 'Violet', 'Hershey', sans-serif;
+    --codesocieties-2020-body-font: 'Violet', 'Hershey', sans-serif;
+    --codesocieties-2020-special-font: 'Violet', 'Hershey', sans-serif;
 
 
 
@@ -118,6 +122,16 @@
         .sfpc .title, .spfc.featured .title {
           font-family: var(--main-title-font) !important;
           font-weight: lighter;
+        }
+
+
+
+        .networked-performance.featured .title,
+        .networked-performance #session-name {
+          font-family: var(--networked-performance-title-font) !important;
+          font-weight: 400;
+          font-style: normal;
+          text-transform: uppercase;
         }
 
 
@@ -891,7 +905,7 @@ select#allSections {
   border: 0px;
   cursor: pointer;
   appearance: none;
-  background: rgba(255,255,255,.8);
+  background: rgba(255,255,255,.8) !important;
   font-family: var(--main-title-font);
   font-weight: bold;
   font-size: var(--medium-text);
@@ -1989,7 +2003,7 @@ section.stacked-4 {
   }
 
   .expanded {
-      color: var(--text-link);
+      /* color: var(--text-link); */
       text-decoration: none !important;
       line-height: var(--large-line-height);
   }
