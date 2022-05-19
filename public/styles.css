@@ -853,7 +853,7 @@ section {
           border: 0px;
           cursor: pointer;
             background: var(--text-link);
-            /* color: var(--background); */
+            color: var(--background);
           font-family: var(--main-title-font);
           font-weight: bold;
           font-size: var(--medium-text);
