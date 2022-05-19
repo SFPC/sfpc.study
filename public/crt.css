@@ -84,9 +84,9 @@ select#allSections, .fixed-apply  {
 }
 
 
-
-
-
+.fixed-support {
+    background: var(--text-link);  
+}
 
 @keyframes flicker {
   0% {
