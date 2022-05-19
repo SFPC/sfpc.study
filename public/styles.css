@@ -1095,7 +1095,9 @@ select#allSections:focus {
 }
 
 h4.breadcrumb {
-  line-height: 3;
+  /* line-height: 3; */
+  line-height: var(--small-line-height);
+  margin: calc(var(--body-margin) / 2) 0 var(--body-margin) 0;
   text-transform: lowercase;
   display: inline-block !important;
 }
@@ -1118,6 +1120,7 @@ h4.breadcrumb.hide-content{
         }
 
         .breadcrumb.fixed {
+          margin: 0;
           position: fixed;
             z-index: 9999999999999;
             left: calc(4px + var(--body-margin)/2);
@@ -2391,6 +2394,10 @@ section.stacked-4 {
 
         .project h6 {
           font-size: var(--small-text) !important;
+        }
+
+        h4.breadcrumb {
+          margin: calc(var(--body-margin) * 4) 0 calc(var(--body-margin) * 4) 0;
         }
 
 

@@ -145,11 +145,15 @@ select#allSections {
       }
 
       .sfpc select#allSections:hover,
-      .sfpc .loader-content p::after,
       .sfpc span#cost
       {
         background: var(--text-link) !important;
         color: var(--background) !important;
+      }
+
+
+      .sfpc .loader-content p::after {
+        background: var(--text-color);
       }
 
       .sfpc .breadcrumb.fixed,
@@ -332,7 +336,10 @@ select#allSections {
       .summer-22 .breadcrumb,
       .summer-22 .breadcrumb a,
       .summer-22 .text-on-bg,
-      .summer-22 .breadcrumb a:hover {
+      .summer-22 .breadcrumb a:hover,
+      .loader-content p
+
+         {
           color: var(--summer-22-text-on-bg) !important;
           text-shadow: 2px 2px 0px var(--summer-22-link);
       }
