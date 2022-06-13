@@ -62,6 +62,12 @@ app.get("/participate/summer-22", async (req, res) => {
 app.get("/sessions/sex-ed", (req,res) => {
   res.render("get-notified-sexed")
 })
+app.get("/sex-ed", (req,res) => {
+  res.render("sex-ed/home")
+})
+app.get("/sex-ed/:slug", (req,res) => {
+  res.render("sex-ed/"+req.params.slug)
+})
 
 // app.get("/sessions/networked-performance", (req,res) => {
 //   res.render("networked-performance/session")
