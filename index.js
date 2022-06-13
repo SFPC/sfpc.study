@@ -47,6 +47,14 @@ app.get("/participate/summer-22", async (req, res) => {
 })
 
 
+//
+// app.get("/sex-ed", (req,res) => {
+//   res.render("sex-ed/ask-sfpc-sex-ed")
+// })
+
+
+
+
 // app.get("/sessions/summer-22", (req,res) => {
 //   res.render("summer-22/session")
 // })
@@ -174,9 +182,11 @@ async function prepareClassData(classData, classSlug){
   const people = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
     "or":[
       {property:"Classes-Teacher", "rollup": { "any": { "rich_text": { "equals": classSlug } }}},
-      {property:"Classes-Guest", "rollup": { "any": { "rich_text": { "equals": classSlug } }}}
+      {property:"Classes-Guest", "rollup": { "any": { "rich_text": { "equals": classSlug } }}},
+        {property:"Classes-Organizer", "rollup": { "any": { "rich_text": { "equals": classSlug } }}}
     ]
   })
+  let organizers = []
   let teachers = []
   let guests = []
   people.map((person) => {
@@ -190,6 +200,11 @@ async function prepareClassData(classData, classSlug){
       personData.role = "guest"
       guests.unshift(personData)
     }
+    else if(personData["Classes-Organizer"]){
+      personData.role = "organizer"
+      organizers.unshift(personData)
+    }
+
   })
 
   const foundIdx = teachers.findIndex(el => el.Name == response['Teacher Names'][0])
@@ -198,6 +213,7 @@ async function prepareClassData(classData, classSlug){
   teachers.unshift(foundItem)
   response.guests = cleanPersonData(guests);
   response.teachers = cleanPersonData(teachers);
+  response.organizers = cleanPersonData(organizers);
   return response
 }
 

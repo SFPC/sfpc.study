@@ -7,13 +7,19 @@
 
 
 
+
+    --sex-ed-background: #e5e3e4 ;
+    --sex-ed-text: #555658  ;
+    --sex-ed-link: var(--summer-22-link);
+    --sex-ed-text-on-bg:#555658  ;
+    --sex-ed-special-text:  #555658  ;
+
+
     --networked-performance-background: #2E2E2E;
     --networked-performance-text: #fff;
     --networked-performance-text-on-bg: #fff;
     --networked-performance-link:  #EDBBE8;
      --networked-performance-special-text:  #14a057;
-
-
 
 
     --summer-22-background: #fff;
@@ -215,6 +221,187 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+
+
+
+
+
+
+
+/* /////////// start SEX ED ///////////////////////////////*/
+
+.sex-ed,
+.sex-ed.featured.session,
+.shell .sex-ed,
+.sex-ed.featured  {
+  background-color: var(--sex-ed-background)  !important;
+  color: var(--sex-ed-text);
+  box-sizing: border-box;
+  border-color: var(--sex-ed-text);
+}
+
+
+      .sex-ed p,
+      .sex-ed p a,
+      .sex-ed a,
+      .sex-ed.featured h4,
+      .sex-ed h4 a,
+      .sex-ed .intro a,
+      .sex-ed p.large a,
+      .sex-ed p a:hover,
+      .sex-ed.session.featured,
+      .sex-ed.session.featured a,
+      .sex-ed.featured h4.type a,
+      .sfpc .sex-ed a
+      {
+        color: var(--sex-ed-text) !important;
+      }
+
+      .sex-ed h4 a:hover,
+      .sex-ed .intro a,
+      .sex-ed p.large a:hover,
+      .sex-ed.featured:hover h6,
+      .sex-ed.featured:hover .title,
+      .sex-ed .details a:hover,
+      .sex-ed.featured .title:hover,
+      .sex-ed p a:hover,
+      .sex-ed h4 a:hover,
+      .sex-ed section .grid-2 ul li::before,
+      .sex-ed .chars,
+      .sex-ed p a:hover,
+      .sex-ed a:hover,
+      .sex-ed h4 a:hover,
+      .sex-ed .intro a:hover,
+      .sex-ed .details a:hover,
+      .sex-ed .entity:hover .accordion dt h3:after,
+      .sex-ed .accordion dt h3:after,
+      .sex-ed .expanded
+      {
+          color: var(--sex-ed-link) !important;
+      }
+
+      .sex-ed #cost,
+      .sex-ed .fixed-apply,
+      .sex-ed .fixed-support {
+          color: var(--sex-ed-background) !important;
+          background: var(--sex-ed-link) !important;
+      }
+
+      .sex-ed span#cost {
+        background: var(--sex-ed-link) !important;
+      }
+
+
+      .sex-ed .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .sex-ed .block-text {
+        background-color: var(--sex-ed-background);
+      }
+
+
+
+      .sex-ed.grid-inner, .sex-ed .grid-inner {
+        border: 2px dotted var(--sex-ed-text);
+        color: var(--sex-ed-link) !important;
+      }
+
+      .sex-ed #class .entity,
+      .sex-ed.website-grid .grid-2 {
+        border-color: var(--sex-ed-text);
+      }
+
+      .sex-ed #class .entity:hover {
+        border-color: var(--sex-ed-link);
+      }
+
+      .sex-ed .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--sex-ed-background) !important;
+      }
+
+
+      .sex-ed select#allSections:hover,
+      .sex-ed .loader-content p::after,
+      .sex-ed span#cost
+      {
+        background: var(--sex-ed-link) !important;
+        color: var(--sex-ed-background) !important;
+      }
+
+
+      .sex-ed .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+
+        }
+
+        .sex-ed .breadcrumb.fixed,
+      .sex-ed .breadcrumb.fixed::before,
+      .sex-ed .breadcrumb.fixed a,
+      .sex-ed .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+        background: none;
+      }
+
+
+      .sex-ed .breadcrumb,
+      .sex-ed .breadcrumb a,
+      .sex-ed .text-on-bg,
+      .sex-ed .breadcrumb a:hover
+      {
+          color: var(--sex-ed-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--sex-ed-special-text);
+      }
+
+
+
+
+
+
+
+      .sex-ed section#section-outro,
+      #class .intro.sex-ed,
+      .shell.sex-ed .class-details,
+      .sex-ed #class section,
+      .sex-ed #class .entity,
+      .sex-ed .accordion dd.active,
+      .sex-ed section ul,
+      .sex-ed .website-grid
+       {
+        background-color: var(--sex-ed-background);
+        color:  var(--sex-ed-text) !important;
+        border-radius: var(--border-rad);
+      }
+
+      .sex-ed #class section,
+      #class .intro.sex-ed {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .sex-ed #class section.stacked,
+      .sex-ed .section-testimonials,
+      .sex-ed .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important
+      }
+
+      .sex-ed .break {
+        border: 0px !important;
+        margin-bottom: 0px !important;
+        border-color: var(--sex-ed-text);
+      }
+
+      .shell.sex-ed {
+        background-image: url('images/sessions/sex-ed/bg.jpg');
+        background-size: cover;
+      }
+
+
+/* /////////// end SEX ED ///////////////////////////////*/
+
 
 
 
