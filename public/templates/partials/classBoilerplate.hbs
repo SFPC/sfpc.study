@@ -17,7 +17,12 @@
   </div>
 </section>
 
-<div class="break"></div>
+
+
+
+  {{#if applicationEndDate}}
+
+  <div class="break"></div>
 
 
 <section id="section-apply">
@@ -26,6 +31,9 @@
   </div>
 
   <div class="grid-2">
+
+
+
     <p class="large apply hide-appsClosed">
       <a href="{{applicationLink}}" id="application-link">Apply Now</a>
     </p>
@@ -43,6 +51,7 @@
     </p>
   </div>
 </section>
+{{/if}}
 
 <div class="break"></div>
 

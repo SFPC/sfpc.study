@@ -59,11 +59,11 @@ app.get("/participate/summer-22", async (req, res) => {
 //   res.render("summer-22/session")
 // })
 
-app.get("/sessions/sex-ed", (req,res) => {
-  res.render("get-notified-sexed")
-})
+// app.get("/sessions/sex-ed", (req,res) => {
+//   res.render("get-notified-sexed")
+// })
 app.get("/sex-ed", (req,res) => {
-  res.render("sex-ed/home")
+  res.render("sex-ed/advice-column")
 })
 app.get("/sex-ed/:slug", (req,res) => {
   res.render("sex-ed/"+req.params.slug)
