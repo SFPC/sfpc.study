@@ -189,7 +189,7 @@ async function prepareClassData(classData, classSlug){
     "or":[
       {property:"Classes-Teacher", "rollup": { "any": { "rich_text": { "equals": classSlug } }}},
       {property:"Classes-Guest", "rollup": { "any": { "rich_text": { "equals": classSlug } }}},
-        {property:"Classes-Organizer", "rollup": { "any": { "rich_text": { "equals": classSlug } }}}
+      {property:"Classes-Organizer", "rollup": { "any": { "rich_text": { "equals": classSlug } }}}
     ]
   })
   let organizers = []
@@ -210,9 +210,8 @@ async function prepareClassData(classData, classSlug){
       personData.role = "organizer"
       organizers.unshift(personData)
     }
-
   })
-
+  //list main teacher first
   const foundIdx = teachers.findIndex(el => el.Name == response['Teacher Names'][0])
   const foundItem = teachers[foundIdx]
   teachers.splice(foundIdx, 1)
@@ -231,10 +230,12 @@ async function prepareSessionData(sessionData, session){
   "or":[
     {property:"Sessions-Organizer", "rollup": { "any": { "rich_text": { "equals": session } }}},
     {property:"Sessions-Teacher", "rollup": { "any": { "rich_text": { "equals": session } }}},
+    {property:"Sessions-Guest", "rollup": { "any": { "rich_text": { "equals": session } }}},
   ]
   })
   let teachers = []
   let organizers = []
+  let guests = []
   people.map((person) => {
     const personData = parseNotionPage(person)
     if(typeof personData["Sessions-Teacher"]  == 'string') personData["Sessions-Teacher"] = [personData["Sessions-Teacher"]]
@@ -246,7 +247,12 @@ async function prepareSessionData(sessionData, session){
       personData.role = "organizer"
       organizers.unshift(personData)
     }
+    else if(personData["Sessions-Guest"]){
+      personData.role = "guest"
+      guests.unshift(personData)
+    }
   })
+  response.guests = cleanPersonData(guests);
   response.organizers = cleanPersonData(organizers);
   response.teachers = cleanPersonData(teachers);
   return response
