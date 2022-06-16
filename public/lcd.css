@@ -229,15 +229,32 @@ select#allSections {
 
 
 /* /////////// start SEX ED ///////////////////////////////*/
+ 
+
+select#allSections {
+  background: rgba(255,255,255,.8);
+  backdrop-filter: blur(3px);
+}
+
+.shell {
+  border-color: #fff !important;
+}
+
+
+.test, .block-text {
+  border-color: var(--text-color);
+}
+
+
 
 .sex-ed,
 .sex-ed.featured.session,
 .shell .sex-ed,
 .sex-ed.featured  {
-  background-color: var(--sex-ed-background)  !important;
-  color: var(--sex-ed-text);
+  background-color: var(--background)  !important;
+  color: var(--text-color);
   box-sizing: border-box;
-  border-color: var(--sex-ed-text);
+  border-color: var(--text-color);
 }
 
 
@@ -250,15 +267,13 @@ select#allSections {
       .sex-ed p.large a,
       .sex-ed p a:hover,
       .sex-ed.session.featured,
-      .sex-ed.session.featured a,
-      .sex-ed.featured h4.type a,
-      .sfpc .sex-ed a
+      .sex-ed.session.featured a
       {
-        color: var(--sex-ed-text) !important;
+        color: var(--text-color) !important;
       }
 
       .sex-ed h4 a:hover,
-      .sex-ed .intro a,
+      /* .sex-ed .intro a, */
       .sex-ed p.large a:hover,
       .sex-ed.featured:hover h6,
       .sex-ed.featured:hover .title,
@@ -275,22 +290,15 @@ select#allSections {
       .sex-ed .details a:hover,
       .sex-ed .entity:hover .accordion dt h3:after,
       .sex-ed .accordion dt h3:after,
-      .sex-ed .expanded
-      {
-          color: var(--sex-ed-link) !important;
+      .sex-ed .expanded{
+          color: var(--text-link) !important;
       }
 
       .sex-ed #cost,
       .sex-ed .fixed-apply,
       .sex-ed .fixed-support {
-          color: var(--sex-ed-background) !important;
-          background: var(--sex-ed-link) !important;
+          color: var(--background) !important;
       }
-
-      .sex-ed span#cost {
-        background: var(--sex-ed-link) !important;
-      }
-
 
       .sex-ed .fixed-apply:hover {
         color: #000 !important;
@@ -298,67 +306,62 @@ select#allSections {
       }
 
       .sex-ed .block-text {
-        background-color: var(--sex-ed-background);
+        background-color: var(--background);
       }
 
 
+      .sex-ed .break {
+        border-bottom: 1px dashed var(--text-color);
+      }
 
-      .sex-ed.grid-inner, .sex-ed .grid-inner {
-        border: 2px dotted var(--sex-ed-text);
-        color: var(--sex-ed-link) !important;
+      .sex-ed .grid-inner, .sex-ed.grid-inner {
+        border: 2px dotted var(--text-color) !important;
+        color: var(--text-link) !important;
       }
 
       .sex-ed #class .entity,
       .sex-ed.website-grid .grid-2 {
-        border-color: var(--sex-ed-text);
+        border-color: var(--text-color);
       }
 
       .sex-ed #class .entity:hover {
-        border-color: var(--sex-ed-link);
+        border-color: var(--text-link);
       }
 
       .sex-ed .website-grid .grid-2 p.large {
-        text-shadow: 3px 3px var(--sex-ed-background) !important;
+        text-shadow: 3px 3px var(--background) !important;
       }
-
 
       .sex-ed select#allSections:hover,
       .sex-ed .loader-content p::after,
       .sex-ed span#cost
       {
-        background: var(--sex-ed-link) !important;
-        color: var(--sex-ed-background) !important;
+        background: var(--text-link) !important;
+        color: var(--background) !important;
       }
 
 
       .sex-ed .breadcrumb.fixed {
-        background: rgba(255,255,255,.8) !important;
 
-        }
+          background: rgba(255,255,255,.8) !important;
+      }
 
-        .sex-ed .breadcrumb.fixed,
+      .sex-ed .breadcrumb.fixed,
       .sex-ed .breadcrumb.fixed::before,
       .sex-ed .breadcrumb.fixed a,
       .sex-ed .breadcrumb.fixed a:hover {
+        /* background: rgba(255,255,255,.8) !important; */
         color: #000 !important;
-        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
-        background: none;
       }
 
 
       .sex-ed .breadcrumb,
       .sex-ed .breadcrumb a,
       .sex-ed .text-on-bg,
-      .sex-ed .breadcrumb a:hover
-      {
-          color: var(--sex-ed-text-on-bg) !important;
-          text-shadow: 2px 2px 0px var(--sex-ed-special-text);
+      .sex-ed .breadcrumb a:hover {
+          color: var(--text-color) !important;
+          /* text-shadow: 2px 2px 0px var(--text-link); */
       }
-
-
-
-
-
 
 
       .sex-ed section#section-outro,
@@ -370,14 +373,14 @@ select#allSections {
       .sex-ed section ul,
       .sex-ed .website-grid
        {
-        background-color: var(--sex-ed-background);
-        color:  var(--sex-ed-text) !important;
+        background-color: var(--background);
+        color:  var(--text-color) !important;
         border-radius: var(--border-rad);
       }
 
       .sex-ed #class section,
       #class .intro.sex-ed {
-        padding: var(--body-margin) calc(var(--body-margin)/2);
+        /* padding: var(--body-margin) calc(var(--body-margin)/2); */
       }
 
       .sex-ed #class section.stacked,
@@ -388,16 +391,11 @@ select#allSections {
         padding: 0px !important
       }
 
-      .sex-ed .break {
-        border: 0px !important;
-        margin-bottom: 0px !important;
-        border-color: var(--sex-ed-text);
-      }
 
       .shell.sex-ed {
-        background-image: url('images/sessions/sex-ed/bg.jpg');
-        background-size: cover;
+        background: var(--background);
       }
+
 
 
 /* /////////// end SEX ED ///////////////////////////////*/
