@@ -205,11 +205,11 @@ async function prepareClassData(classData, classSlug){
         personData.role = "teacher"
       teachers.unshift(personData)
     }
-    else if(personData["Classes-Guest"]){
+    else if(personData["Classes-Guest"].includes(classSlug)){
       personData.role = "guest"
       guests.unshift(personData)
     }
-    else if(personData["Classes-Organizer"]){
+    else if(personData["Classes-Organizer"].includes(classSlug)){
       personData.role = "organizer"
       organizers.unshift(personData)
     }
