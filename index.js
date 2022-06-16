@@ -199,7 +199,10 @@ async function prepareClassData(classData, classSlug){
     const personData = parseNotionPage(person)
     if(typeof personData["Classes-Teacher"]  == 'string') personData["Classes-Teacher"] = [personData["Classes-Teacher"]]
     if(personData["Classes-Teacher"] && personData["Classes-Teacher"].includes(classSlug)){
-      personData.role = "teacher"
+      if(personData["Classes-Organizer"].includes(classSlug))
+        personData.role = "organizer and teacher"
+      else  
+        personData.role = "teacher"
       teachers.unshift(personData)
     }
     else if(personData["Classes-Guest"]){
