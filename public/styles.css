@@ -821,6 +821,10 @@ section {
         margin-bottom: var(--text-margin);
       }
 
+      .break-noline-small {
+        margin-bottom: calc(var(--text-margin)/3);
+      }
+
         section .left, section .grid-2 {
           width: 50%;
         }
