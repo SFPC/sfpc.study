@@ -22,6 +22,12 @@
     --main-large-text: calc(24px + 2vw);
     --main-large-line-height: 1;
 
+
+    --sex-ed-title-font: 'Avara', sans-serif;
+    --sex-ed-header-font: 'Avara', sans-serif;
+    --sex-ed-body-font: 'Avara', sans-serif;
+    --sex-ed-special-font: Courier, sans-serif;
+
     --networked-performance-title-font: soda-script, sans-serif;
     --networked-performance-header-font: soda-script, sans-serif;
     --networked-performance-body-font: soda-script, sans-serif;
@@ -64,6 +70,25 @@
     src: url('fonts/bretagne_self-modern_italic_web.ttf');
     font-weight: normal;
     font-style: italic;
+    font-display: block;
+}
+
+
+@font-face {
+    font-family: 'Krona';
+    src: url('fonts/KronaOne-Regular.ttf');
+    font-weight: normal;
+    font-style: italic;
+    font-display: block;
+}
+
+
+@font-face {
+    font-family: 'Avara';
+    src: url('fonts/Avara-Bold.woff2') format('woff2'),
+        url('fonts/Avara-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
     font-display: block;
 }
 
@@ -125,6 +150,12 @@
         }
 
 
+        .sex-ed.featured .title,
+        .sex-ed #session-name {
+          font-family: var(--sex-ed-title-font) !important;
+          /* text-transform: lowercase; */
+          font-weight: lighter;
+        }
 
         .networked-performance.featured .title,
         .networked-performance #session-name {

@@ -47,15 +47,23 @@ app.get("/participate/summer-22", async (req, res) => {
 })
 
 
+//
+// app.get("/sex-ed", (req,res) => {
+//   res.render("sex-ed/ask-sfpc-sex-ed")
+// })
+
+
+
+
 // app.get("/sessions/summer-22", (req,res) => {
 //   res.render("summer-22/session")
 // })
 
-app.get("/sessions/sex-ed", (req,res) => {
-  res.render("get-notified-sexed")
-})
+// app.get("/sessions/sex-ed", (req,res) => {
+//   res.render("get-notified-sexed")
+// })
 app.get("/sex-ed", (req,res) => {
-  res.render("sex-ed/session")
+  res.render("sex-ed/advice-column")
 })
 app.get("/sex-ed/:slug", (req,res) => {
   res.render("sex-ed/"+req.params.slug)
@@ -184,9 +192,9 @@ async function prepareClassData(classData, classSlug){
       {property:"Classes-Organizer", "rollup": { "any": { "rich_text": { "equals": classSlug } }}}
     ]
   })
+  let organizers = []
   let teachers = []
   let guests = []
-  let organizers = []
   people.map((person) => {
     const personData = parseNotionPage(person)
     if(typeof personData["Classes-Teacher"]  == 'string') personData["Classes-Teacher"] = [personData["Classes-Teacher"]]
