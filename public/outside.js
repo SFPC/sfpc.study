@@ -382,7 +382,8 @@ $(document).ready(function() {
                , "Poetic computation can’t be separated from its historical, political and social impact."
                , "Poetic computation is when technology is used for critical thinking and aesthetic inquiry."
                , "Poetic computation is a colorful theory of culpability."
-               , "Poetic computation is transforming binary through feeling."
+               , "Poetic computation is transforming binary through feeling." 
+          ];
 
           randDef = poeticcomputation[Math.floor( Math.random() * poeticcomputation.length )];
           $('#definition').text(randDef);
