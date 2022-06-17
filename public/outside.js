@@ -383,13 +383,6 @@ $(document).ready(function() {
                , "Poetic computation is when technology is used for critical thinking and aesthetic inquiry."
                , "Poetic computation is a colorful theory of culpability."
                , "Poetic computation is transforming binary through feeling."
-               , "Poetic computation uses the grammar of the 'digital' world to reveal, resist, explore and express ideas about our lived experiences."
-               , "Poetic computation is to make beautiful code with beautiful intentions."
-               , "Poetic computation is the creative application of digital mechanic for means that are revelatory, affective, and emancipatory."
-               , "Poetic computation is creative expression with computational approaches."
-               , "Poetic computation is the speculative, critical, and artistic application of computational media."
-               , "Poetic computation is a counterculture movement for a world where computation overwhelmingly serves the interests of extractive production."
-          ];
 
           randDef = poeticcomputation[Math.floor( Math.random() * poeticcomputation.length )];
           $('#definition').text(randDef);
