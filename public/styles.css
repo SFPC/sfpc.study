@@ -205,7 +205,32 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+
+  /* --lh: 1.4rem;
+  line-height: var(--lh); */
 }
+/*
+.truncate-overflow {
+  --max-lines: 3;
+  max-height: calc(var(--lh) * var(--max-lines));
+  overflow: hidden;
+}
+
+.truncate-overflow::before {
+  content: "...";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.truncate-overflow::after {
+  content: "";
+  position: absolute;
+  right: 0; /* note: not using bottom */
+  width: 1rem;
+  height: 1rem;
+  background: white;
+} */
 
 *,
 *:before,
@@ -673,6 +698,13 @@ a {
     line-height: 1.25;
 }
 
+        .definition {
+          display: -webkit-box;
+          max-width: 100%;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
 
         .definition-marquee {
           display: none;
