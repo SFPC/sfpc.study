@@ -229,7 +229,7 @@ select#allSections {
 
 
 /* /////////// start SEX ED ///////////////////////////////*/
- 
+
 
 select#allSections {
   background: rgba(255,255,255,.8);
@@ -251,150 +251,161 @@ select#allSections {
 .sex-ed.featured.session,
 .shell .sex-ed,
 .sex-ed.featured  {
-  background-color: var(--background)  !important;
-  color: var(--text-color);
-  box-sizing: border-box;
-  border-color: var(--text-color);
+ /* background-color: var(--sex-ed-background)  !important; */
+ color: var(--sex-ed-text);
+ box-sizing: border-box;
+ border-color: var(--sex-ed-text);
+ background-image:url('images/sessions/sex-ed/bg.jpg');
 }
 
 
-      .sex-ed p,
-      .sex-ed p a,
-      .sex-ed a,
-      .sex-ed.featured h4,
-      .sex-ed h4 a,
-      .sex-ed .intro a,
-      .sex-ed p.large a,
-      .sex-ed p a:hover,
-      .sex-ed.session.featured,
-      .sex-ed.session.featured a
+
+     .shell.sex-ed {
+       /* background-color: var(--sex-ed-background); */
+       background-image:url('images/sessions/sex-ed/bg.jpg');
+     }
+
+
+     .sex-ed p,
+     .sex-ed p a,
+     .sex-ed a,
+     .sex-ed.featured h4,
+     .sex-ed h4 a,
+     .sex-ed .intro a,
+     .sex-ed p.large a,
+     .sex-ed p a:hover,
+     .sex-ed.session.featured,
+     .sex-ed.session.featured a
+     {
+       color: var(--sex-ed-text) !important;
+     }
+
+     .sex-ed h4 a:hover,
+     /* .sex-ed .intro a, */
+     .sex-ed p.large a:hover,
+     .sex-ed.featured:hover h6,
+     .sex-ed.featured:hover .title,
+     .sex-ed .details a:hover,
+     .sex-ed.featured .title:hover,
+     .sex-ed p a:hover,
+     .sex-ed h4 a:hover,
+     .sex-ed section .grid-2 ul li::before,
+     .sex-ed .chars,
+     .sex-ed p a:hover,
+     .sex-ed a:hover,
+     .sex-ed h4 a:hover,
+     .sex-ed .intro a:hover,
+     .sex-ed .details a:hover,
+     .sex-ed .entity:hover .accordion dt h3:after,
+     .sex-ed .accordion dt h3:after,
+     .sex-ed .expanded{
+         color: var(--sex-ed-link) !important;
+     }
+
+     .sex-ed #cost,
+     .sex-ed .fixed-apply,
+     .sex-ed .fixed-support {
+         color: var(--sex-ed-background) !important;
+     }
+
+     .sex-ed .fixed-apply:hover {
+       color: #000 !important;
+       background: rgba(255,255,255,.8) !important;
+     }
+
+     .sex-ed .block-text {
+       background-color: var(--sex-ed-background);
+     }
+
+
+     .sex-ed .break {
+       border-bottom: 1px dashed var(--sex-ed-text);
+     }
+
+     .sex-ed .grid-inner, .sex-ed.grid-inner {
+       border: 2px dotted var(--sex-ed-text) !important;
+       color: var(--sex-ed-link) !important;
+     }
+
+     .sex-ed #class .entity,
+     .sex-ed.website-grid .grid-2 {
+       border-color: var(--sex-ed-text);
+     }
+
+     .sex-ed #class .entity:hover {
+       border-color: var(--sex-ed-link);
+     }
+
+     .sex-ed .website-grid .grid-2 p.large {
+       text-shadow: 3px 3px var(--sex-ed-background) !important;
+     }
+
+     .sex-ed select#allSections:hover,
+     .sex-ed .loader-content p::after,
+     .sex-ed span#cost
+     {
+       background: var(--sex-ed-link) !important;
+       color: var(--sex-ed-background) !important;
+     }
+
+
+     .sex-ed .breadcrumb.fixed {
+
+         background: rgba(255,255,255,.8) !important;
+     }
+
+
+
+
+
+
+     .sex-ed .breadcrumb.fixed,
+     .sex-ed .breadcrumb.fixed::before,
+     .sex-ed .breadcrumb.fixed a,
+     .sex-ed .breadcrumb.fixed a:hover {
+       /* background: rgba(255,255,255,.8) !important; */
+       color: #000 !important;
+     }
+
+
+     .sex-ed .breadcrumb,
+     .sex-ed .breadcrumb a,
+     .sex-ed .text-on-bg,
+     .sex-ed .breadcrumb a:hover {
+         color: var(--sex-ed-text) !important;
+         /* text-shadow: 2px 2px 0px var(--sex-ed-link); */
+     }
+
+
+     .sex-ed section#section-outro,
+     #class .intro.sex-ed,
+     .shell.sex-ed .class-details,
+     .sex-ed #class section,
+     .sex-ed #class .entity,
+     .sex-ed .accordion dd.active,
+     .sex-ed section ul,
+     .sex-ed .website-grid
       {
-        color: var(--text-color) !important;
-      }
+       background-color: var(--sex-ed-background);
+       color:  var(--sex-ed-text) !important;
+       border-radius: var(--border-rad);
+     }
 
-      .sex-ed h4 a:hover,
-      /* .sex-ed .intro a, */
-      .sex-ed p.large a:hover,
-      .sex-ed.featured:hover h6,
-      .sex-ed.featured:hover .title,
-      .sex-ed .details a:hover,
-      .sex-ed.featured .title:hover,
-      .sex-ed p a:hover,
-      .sex-ed h4 a:hover,
-      .sex-ed section .grid-2 ul li::before,
-      .sex-ed .chars,
-      .sex-ed p a:hover,
-      .sex-ed a:hover,
-      .sex-ed h4 a:hover,
-      .sex-ed .intro a:hover,
-      .sex-ed .details a:hover,
-      .sex-ed .entity:hover .accordion dt h3:after,
-      .sex-ed .accordion dt h3:after,
-      .sex-ed .expanded{
-          color: var(--text-link) !important;
-      }
+     .sex-ed #class section,
+     #class .intro.sex-ed {
+       /* padding: var(--body-margin) calc(var(--body-margin)/2); */
+     }
 
-      .sex-ed #cost,
-      .sex-ed .fixed-apply,
-      .sex-ed .fixed-support {
-          color: var(--background) !important;
-      }
-
-      .sex-ed .fixed-apply:hover {
-        color: #000 !important;
-        background: rgba(255,255,255,.8) !important;
-      }
-
-      .sex-ed .block-text {
-        background-color: var(--background);
-      }
-
-
-      .sex-ed .break {
-        border-bottom: 1px dashed var(--text-color);
-      }
-
-      .sex-ed .grid-inner, .sex-ed.grid-inner {
-        border: 2px dotted var(--text-color) !important;
-        color: var(--text-link) !important;
-      }
-
-      .sex-ed #class .entity,
-      .sex-ed.website-grid .grid-2 {
-        border-color: var(--text-color);
-      }
-
-      .sex-ed #class .entity:hover {
-        border-color: var(--text-link);
-      }
-
-      .sex-ed .website-grid .grid-2 p.large {
-        text-shadow: 3px 3px var(--background) !important;
-      }
-
-      .sex-ed select#allSections:hover,
-      .sex-ed .loader-content p::after,
-      .sex-ed span#cost
+     .sex-ed #class section.stacked,
+     .sex-ed .section-testimonials,
+     .sex-ed .section-testimonials p
       {
-        background: var(--text-link) !important;
-        color: var(--background) !important;
-      }
+       background: none !important;
+       padding: 0px !important
+     }
 
 
-      .sex-ed .breadcrumb.fixed {
 
-          background: rgba(255,255,255,.8) !important;
-      }
-
-      .sex-ed .breadcrumb.fixed,
-      .sex-ed .breadcrumb.fixed::before,
-      .sex-ed .breadcrumb.fixed a,
-      .sex-ed .breadcrumb.fixed a:hover {
-        /* background: rgba(255,255,255,.8) !important; */
-        color: #000 !important;
-      }
-
-
-      .sex-ed .breadcrumb,
-      .sex-ed .breadcrumb a,
-      .sex-ed .text-on-bg,
-      .sex-ed .breadcrumb a:hover {
-          color: var(--text-color) !important;
-          /* text-shadow: 2px 2px 0px var(--text-link); */
-      }
-
-
-      .sex-ed section#section-outro,
-      #class .intro.sex-ed,
-      .shell.sex-ed .class-details,
-      .sex-ed #class section,
-      .sex-ed #class .entity,
-      .sex-ed .accordion dd.active,
-      .sex-ed section ul,
-      .sex-ed .website-grid
-       {
-        background-color: var(--background);
-        color:  var(--text-color) !important;
-        border-radius: var(--border-rad);
-      }
-
-      .sex-ed #class section,
-      #class .intro.sex-ed {
-        /* padding: var(--body-margin) calc(var(--body-margin)/2); */
-      }
-
-      .sex-ed #class section.stacked,
-      .sex-ed .section-testimonials,
-      .sex-ed .section-testimonials p
-       {
-        background: none !important;
-        padding: 0px !important
-      }
-
-
-      .shell.sex-ed {
-        background: var(--background);
-      }
 
 
 
