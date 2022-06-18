@@ -82,10 +82,31 @@ select#allSections, .fixed-apply  {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+ 
+.sex-ed.featured.session,
+.sex-ed.featured {
+background-image:url('images/sessions/sex-ed/bg-dark.jpg');
+background-position: bottom;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.sex-ed.featured .title{
+  text-shadow:
+ 0 0 7px #fff ;
+}
+
+
+.sex-ed.featured:hover .title {
+  text-shadow:
+ 0 0 7px #fff,
+ 0 0 10px #fff ;
+}
+
 
 
 .fixed-support {
-    background: var(--text-link);  
+    background: var(--text-link);
 }
 
 @keyframes flicker {
