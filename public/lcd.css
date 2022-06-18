@@ -297,12 +297,14 @@ select#allSections {
     .sex-ed .details .labels,
     .sex-ed .details .labels-info,
     .sex-ed li,
-    .sex-ed ul
+    .sex-ed ul,
+    .sex-ed .class-details
         {
        text-shadow:  0 0 7px #fff,  0 0 10px #fff;
       }
 
-      .sex-ed .details .labels-info #cost
+      .sex-ed .details .labels-info #cost,
+      .sex-ed span#cost
           {
          text-shadow:  0 0 7px var(--sex-ed-link),  0 0 10px var(--sex-ed-link);
         }
@@ -382,6 +384,7 @@ select#allSections {
      .sex-ed #class .entity,
      .sex-ed.website-grid .grid-2 {
        border-color: var(--sex-ed-text);
+       background: none !important;
      }
 
      .sex-ed #class .entity:hover {
@@ -441,6 +444,7 @@ select#allSections {
        /* background-color: var(--sex-ed-background); */
        color:  var(--sex-ed-text) !important;
        border-radius: var(--border-rad);
+       background: none !important;
      }
 
      .sex-ed #class section,
