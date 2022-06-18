@@ -82,13 +82,17 @@ select#allSections, .fixed-apply  {
   background-repeat: no-repeat;
   background-size: 100%;
 }
- 
+
 .sex-ed.featured.session,
 .sex-ed.featured {
 background-image:url('images/sessions/sex-ed/bg-dark.jpg');
 background-position: bottom;
 background-repeat: no-repeat;
-background-size: cover;
+background-size: 100%;
+}
+
+.sex-ed.featured:hover {
+  background-size: 150%;
 }
 
 .sex-ed.featured .title{
