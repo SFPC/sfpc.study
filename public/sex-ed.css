@@ -307,12 +307,17 @@ body {
   }
 
   .question {
-    width: 80%;
+    width: 78%;
     padding-top: 8vw;
   }
 
-  .topic { 
-    width: calc(20% - 2vw);
+  .submission-info {
+    width: 78%;
+  }
+
+
+  .topic {
+    width: calc(22% - 2vw);
   }
 
 
