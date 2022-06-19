@@ -62,12 +62,37 @@ app.get("/participate/summer-22", async (req, res) => {
 // app.get("/sessions/sex-ed", (req,res) => {
 //   res.render("get-notified-sexed")
 // })
-app.get("/sex-ed", (req,res) => {
-  res.render("sex-ed/advice-column")
+// app.get("/sex-ed", (req,res) => {
+//   res.render("sex-ed/advice-column")
+// })
+// app.get("/sex-ed/:slug", (req,res) => {
+//   res.render("sex-ed/"+req.params.slug)
+// })
+
+
+app.get("/sex-ed", async (req,res) => {
+  const response = await getDatabaseEntries("eedc3ea6ba904a9fa8631e12b03a955d", [{property:"Date submitted", direction:"descending"}])
+  const projectData = response.map((project) => {
+    console.log(project)
+    return parseNotionPage(project)
+  })
+  console.log(projectData)
+  res.render("sex-ed/ask-sfpc-sex-ed", {projects: projectData})
 })
-app.get("/sex-ed/:slug", (req,res) => {
-  res.render("sex-ed/"+req.params.slug)
+
+app.get("/sex-ed/:slug", async (req,res) => {
+  //filter by slug here
+  console.log(req.params.slug)
+  const response = await getDatabaseEntry("eedc3ea6ba904a9fa8631e12b03a955d", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  console.log(response)
+  if(response){
+    const projectData = parseNotionPage(response)
+    console.log(projectData)
+    res.render("projectPage", projectData)
+  }
 })
+
+
 
 // app.get("/sessions/networked-performance", (req,res) => {
 //   res.render("networked-performance/session")
@@ -201,7 +226,7 @@ async function prepareClassData(classData, classSlug){
     if(personData["Classes-Teacher"] && personData["Classes-Teacher"].includes(classSlug)){
       if(personData["Classes-Organizer"].includes(classSlug))
         personData.role = "organizer and teacher"
-      else  
+      else
         personData.role = "teacher"
       teachers.unshift(personData)
     }
