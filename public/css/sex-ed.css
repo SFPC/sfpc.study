@@ -23,6 +23,7 @@
   @font-face {
       font-family: 'Avara';
       src: url('fonts/Avara-Bold.woff2') format('woff2'),
+        url('fonts/Avara-Bold.ttf') format('ttf'),
           url('fonts/Avara-Bold.woff') format('woff');
       font-weight: bold;
       font-style: normal;
@@ -32,6 +33,7 @@
   @font-face {
       font-family: 'Avara';
       src: url('fonts/Avara-BoldItalic.woff2') format('woff2'),
+        url('fonts/Avara-BoldItalic.ttf') format('ttf'),
           url('fonts/Avara-BoldItalic.woff') format('woff');
       font-weight: bold;
       font-style: italic;
@@ -41,6 +43,7 @@
   @font-face {
       font-family: 'Avara Black';
       src: url('fonts/Avara-Black.woff2') format('woff2'),
+        url('fonts/Avara-Black.ttf') format('ttf'),
           url('fonts/Avara-Black.woff') format('woff');
       font-weight: bold;
       font-style: normal;
