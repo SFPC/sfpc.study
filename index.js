@@ -230,17 +230,17 @@ async function prepareClassData(classData, classSlug){
     const personData = parseNotionPage(person)
     if(typeof personData["Classes-Teacher"]  == 'string') personData["Classes-Teacher"] = [personData["Classes-Teacher"]]
     if(personData["Classes-Teacher"] && personData["Classes-Teacher"].includes(classSlug)){
-      if(personData["Classes-Organizer"].includes(classSlug))
+      if(personData["Classes-Organizer"] && personData["Classes-Organizer"].includes(classSlug))
         personData.role = "organizer and teacher"
       else
         personData.role = "teacher"
       teachers.unshift(personData)
     }
-    else if(personData["Classes-Guest"].includes(classSlug)){
+    else if(personData["Classes-Guest"] && personData["Classes-Guest"].includes(classSlug)){
       personData.role = "guest"
       guests.unshift(personData)
     }
-    else if(personData["Classes-Organizer"].includes(classSlug)){
+    else if(personData["Classes-Organizer"] && personData["Classes-Organizer"].includes(classSlug)){
       personData.role = "organizer"
       organizers.unshift(personData)
     }
@@ -277,11 +277,11 @@ async function prepareSessionData(sessionData, session){
       personData.role = "teacher"
       teachers.unshift(personData)
     }
-    else if(personData["Sessions-Organizer"]){
+    else if(personData["Sessions-Organizer"] && personData["Sessions-Organizer"].includes(session)){
       personData.role = "organizer"
       organizers.unshift(personData)
     }
-    else if(personData["Sessions-Guest"]){
+    else if(personData["Sessions-Guest"] && personData["Sessions-Guest"].includes(session)){
       personData.role = "guest"
       guests.unshift(personData)
     }
