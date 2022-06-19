@@ -271,11 +271,11 @@ body {
 
 
   :root {
-      --font-small: calc(12px + 0.1vw);
+      --font-small: calc(11px + 0.1vw);
       --font-medium: 5vw;
       --font-body: 6vw;
       --font-large: 7.5vw;
-      --font-small-italic: calc(12px + 0.3vw);
+      --font-small-italic: calc(11px + 0.3vw);
     }
 
 
@@ -307,7 +307,7 @@ body {
   }
 
   .question {
-    width: 78%;
+    width: 80%;
     padding-top: 8vw;
   }
 
