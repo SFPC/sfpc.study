@@ -306,9 +306,17 @@ body {
         hyphens: manual;
   }
 
-  .question {
-    width: 80%;
+  .question .excerpt {
+    width: 83%;
     padding-top: 8vw;
+  }
+
+  .question .excerpt {
+    width: 96%;
+  }
+
+  .question .full-question {
+    width: 100%;
   }
 
   .submission-info {
