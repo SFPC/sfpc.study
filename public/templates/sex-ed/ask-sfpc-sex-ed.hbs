@@ -108,9 +108,12 @@
 
                     <div class="metadata">
                       <div class="submission-info">
-                        Added to queue on {{#each this.[Publish Date]}}{{this}}{{/each}} · Asked by {{"Submitter Name"}}
+                        <span class="submitter">
+                          Added to queue on {{#each this.[Publish Date]}}{{this}}{{/each}} · Asked by {{"Submitter Name"}}
+                        </span>
+
                           {{#if "Response Count"}}
-                          · <span class="response-count">{{"Response Count"}} responses</a>
+                          · <span class="response-count">Responses: {{"Response Count"}}</a>
                             {{/if}}
                       </div>
                       <div class="topic">
@@ -118,7 +121,7 @@
                       </div>
                     </div>
 
-                    <div class="question">
+                    <div class="question medium">
                         <p class="excerpt">
                           <span class="three-dot">...</span>{{"Pullout quote"}}<span class="three-dot">...</span>
                         </p>
@@ -131,7 +134,7 @@
 
                             {{#if "Has Response"}}
                             <span class="responses">
-                              <a href="/projects/{{this.[Website-Slug]}}">View {{"Response Count"}} responses...</a>
+                              <a href="/projects/{{this.[Website-Slug]}}">View responses...</a>
                             </span>
                             {{else}}
 

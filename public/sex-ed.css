@@ -13,9 +13,10 @@
     --program-margin: .5vw;
 
 
-    --font-small: calc(12px + 0.1vw);
+    --font-meta: calc(12px + 0.1vw);
     --font-medium: 2vw;
     --font-large: 3.5vw;
+    --font-small: calc(16px + 0.3vw);
     --font-small-italic: calc(12px + 0.3vw);
   }
 
@@ -170,7 +171,6 @@ body {
           width: 83%;
           background: none;
           color: var(--dark-purple);
-          font-size: var(--font-medium);
           font-family: 'Avara';
           text-shadow:  0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff;
           padding-top: 1vh;
@@ -202,7 +202,7 @@ body {
           float: left;
           width: 83%;
           color: var(--dark-purple) !important ;
-          font-size: var(--font-small);
+          font-size: var(--font-meta);
           font-family: 'Avara Black';
           text-shadow:  0 0 7px var(--green),  0 0 10px var(--green);
         }
@@ -224,19 +224,82 @@ body {
         }
 
         .response-count {
-          border-radius:calc(var(--font-small) * 1.4);
+          border-radius:calc(var(--font-meta) * 1.4);
           background: #fff;
-          min-width: calc(var(--font-small) * 1.4);
+          min-width: calc(var(--font-meta) * 1.4);
           padding: 0 6px;
-          height: calc(var(--font-small) * 1.4);
-          line-height: calc(var(--font-small) * 1.8);
+          height: calc(var(--font-meta) * 1.4);
+          line-height: calc(var(--font-meta) * 1.8);
           display: inline-block;
           text-align: center;
           text-shadow: none !important;
           box-shadow:  0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff,0 0 10px #fff;
-
+          z-index: 5;
         }
 
+        .submitter {
+          z-index: 10;
+        }
+
+
+p a {
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  ms-transition: all .2s ease-in-out;
+  o-transition: all .2s ease-in-out;
+  text-decoration: none;
+}
+
+p.medium a {
+  color: var(--green);
+}
+
+p.small a {
+  color: var(--light-purple);
+  border-bottom: 2px dotted var(--light-purple); 
+}
+
+p a:hover {
+  color: var(--bright-purple);
+  /* border-bottom: 3px dotted var(--bright-purple); */
+}
+
+.small {
+  font-size: var(--font-small);
+  line-height: 1.5;
+}
+
+        .medium {
+          font-size: var(--font-medium);
+          line-height: 1.3;
+        }
+
+        .large, h1 {
+          font-size: var(--font-large);
+          line-height: 1.3;
+          font-family: 'Avara Black';
+        }
+
+        .caption {
+          text-align: center;
+          font-style: italic;
+        }
+
+
+
+h1, .margin-top {
+  margin-top: 6vw;
+  margin-bottom: 0px;
+}
+
+.about {
+  width: 83%;
+  background: none;
+  color: var(--dark-purple);
+  font-family: 'Avara';
+  text-shadow:  0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff;
+  padding-top: 1vh;
+}
 
 .responses a, .responses{
     transition: all .2s ease-in-out;
@@ -251,6 +314,7 @@ body {
     font-family: 'Avara Black';
     text-shadow:  0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff;
     text-decoration: none;
+    border-bottom: none;
 }
 
         .responses-none {
@@ -285,7 +349,7 @@ body {
 
 
   :root {
-      --font-small: calc(11px + 0.1vw);
+      --font-meta: calc(11px + 0.1vw);
       --font-medium: 5vw;
       --font-body: 6vw;
       --font-large: 7.5vw;
@@ -298,6 +362,11 @@ body {
     left: 3vw;
     position: absolute;
     padding-top: 30vw;
+  }
+
+  h1, .margin-top {
+    margin-top: 30vw;
+    margin-bottom: 0px;
   }
 
   .header {
@@ -336,11 +405,26 @@ body {
 
   .submission-info {
     width: 75%;
+    line-height: 1.5;
   }
 
 
   .topic {
     width: calc(22% - 2vw);
+  }
+
+  .response-count {
+    border-radius:calc(var(--font-meta) * 1.4);
+    min-width: calc(var(--font-meta) * 1.4);
+    padding: 0 2px;
+    height: calc(var(--font-meta) * 1.4);
+    line-height: calc(var(--font-meta) * 1.8);
+    box-shadow:  0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff ;
+  }
+
+  .header {
+    text-shadow:  0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff,0 0 10px #fff,
+    0 0 15px #fff, 0 0 15px #fff, 0 0 15px #fff,  0 0 20px #fff,  0 0 20px #fff, 0 0 20px #fff;
   }
 
 

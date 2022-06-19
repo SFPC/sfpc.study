@@ -69,9 +69,13 @@ app.get("/participate/summer-22", async (req, res) => {
 //   res.render("sex-ed/"+req.params.slug)
 // })
 
+app.get("/sex-ed-about", (req,res) => {
+  res.render("sex-ed/about")
+})
+
 
 app.get("/sex-ed", async (req,res) => {
-  const response = await getDatabaseEntries("eedc3ea6ba904a9fa8631e12b03a955d", [{property:"Date submitted", direction:"descending"}])
+  const response = await getDatabaseEntries("eedc3ea6ba904a9fa8631e12b03a955d", [{property:"Publish Date", direction:"descending"}])
   const projectData = response.map((project) => {
     console.log(project)
     return parseNotionPage(project)
@@ -92,9 +96,6 @@ app.get("/sex-ed/:slug", async (req,res) => {
   }
 })
 
-app.get("/sex-ed/about", (req,res) => {
-  res.render("sex-ed/about")
-})
 
 
 
