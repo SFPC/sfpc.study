@@ -92,6 +92,11 @@ app.get("/sex-ed/:slug", async (req,res) => {
   }
 })
 
+app.get("/sex-ed/about", (req,res) => {
+  res.render("sex-ed/about")
+})
+
+
 
 
 // app.get("/sessions/networked-performance", (req,res) => {

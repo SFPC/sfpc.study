@@ -60,38 +60,13 @@
         <a href="/sex-ed">
           <div class="header">
             <span class="logo">Ask SFPC: Sex Ed</span>
-            <span class="title">Advice Queue</span>
+            <span class="title">About</span>
           </div>
         </a>
 
         <div class="footer">
           <span class="byline">A peer-to-peer sex advice column.</span>
         </div>
-
-<!--
-              <div class="loader-content">
-                  <p tabindex="0" class="large">
-                    loading<span>...</span>
-                  </p>
-              </div> -->
-
-
-        <!--<div class="selectors">
-         <select id= "allSections" name ="projectChange" class="projectChange" onchange="projectFilter(this.value)">
-          <option value ="allProjects">All project types...</option>
-          <option value ="publicationProjects">Publications</option>
-          <option value ="exhibitionProjects">Exhibitions</option>
-          <option value ="eventProjects">Event Series</option>
-          <option value ="sessionProjects">Special Sessions</option>
-          <option value ="websiteProjects">Websites</option>
-          <option value ="radioProjects">Radio</option>
-        </select>
-      </div> -->
-
-<!--
-        <h4 class="breadcrumb hide-content">
-          <a href="/projects">projects</a>
-        </h4> -->
 
 
 
@@ -109,9 +84,6 @@
                     <div class="metadata">
                       <div class="submission-info">
                         Added to queue on {{#each this.[Publish Date]}}{{this}}{{/each}} · Asked by {{"Submitter Name"}}
-                          {{#if "Response Count"}}
-                          · <span class="response-count">{{"Response Count"}} responses</a>
-                            {{/if}}
                       </div>
                       <div class="topic">
                         {{#each this.[Topic]}} {{this}} {{/each}}
@@ -129,7 +101,7 @@
                           <i>— {{"Sign name"}}</i>
 
 
-                            {{#if "Has Response"}}
+                            {{#if ["Response Count"].length}}
                             <span class="responses">
                               <a href="/projects/{{this.[Website-Slug]}}">View {{"Response Count"}} responses...</a>
                             </span>

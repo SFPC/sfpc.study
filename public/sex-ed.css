@@ -223,6 +223,20 @@ body {
           letter-spacing: 2px;
         }
 
+        .response-count {
+          border-radius:calc(var(--font-small) * 1.4);
+          background: #fff;
+          min-width: calc(var(--font-small) * 1.4);
+          padding: 0 6px;
+          height: calc(var(--font-small) * 1.4);
+          line-height: calc(var(--font-small) * 1.8);
+          display: inline-block;
+          text-align: center;
+          text-shadow: none !important;
+          box-shadow:  0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff,0 0 10px #fff;
+
+        }
+
 
 .responses a, .responses{
     transition: all .2s ease-in-out;
@@ -317,6 +331,7 @@ body {
 
   .question .full-question {
     width: 100%;
+    padding-top: 8vw;
   }
 
   .submission-info {
