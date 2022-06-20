@@ -182,7 +182,6 @@ body {
           font-family: 'Avara';
           text-shadow:  0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff;
           padding-top: 1vh;
-          cursor: pointer;
         }
 
         .excerpt {
@@ -191,6 +190,7 @@ body {
             -moz-transition: all .2s ease-in-out;
             ms-transition: all .2s ease-in-out;
             o-transition: all .2s ease-in-out;
+            cursor: pointer;
         }
 
         .question:hover .excerpt {
@@ -374,6 +374,53 @@ h1, .margin-top {
             padding-bottom: 3vh;
         }
 
+
+.clear {
+  clear:both;
+}
+
+
+.response {
+  padding: 2vw;
+  margin-bottom: calc(var(--font-meta) * 5);
+}
+
+      .response .response-count {
+        border-radius:calc(var(--font-meta) * 1.4);
+        min-width: calc(var(--font-meta) * 1.4);
+        padding: 0 6px;
+        height: calc(var(--font-meta) * 1.4);
+        line-height: calc(var(--font-meta) * 1.8);
+        display: inline-block;
+        text-align: center;
+        text-shadow: none !important;
+        z-index: 5;
+        margin-bottom: calc(var(--font-meta) * 3);
+      }
+
+      .response.columnist {
+        border-left: calc(5px + 0.1vw) solid var(--green);
+      }
+
+      .response.columnist .response-count {
+        background: var(--green);
+        box-shadow:  0 0 7px var(--green), 0 0 7px var(--green), 0 0 7px var(--green),  0 0 10px var(--green), 0 0 10px var(--green),0 0 10px var(--green);
+
+      }
+
+      .response.sfpc {
+        border-left: calc(5px + 0.1vw) solid var(--bright-purple);
+      }
+
+      .response.sfpc .response-count {
+        background: var(--bright-purple);
+        box-shadow:  0 0 7px var(--bright-purple), 0 0 7px var(--bright-purple), 0 0 7px var(--bright-purple),  0 0 10px var(--bright-purple), 0 0 10px var(--bright-purple),0 0 10px var(--bright-purple);
+
+      }
+
+      .response.participant {
+        border-left: calc(5px + 0.1vw) solid var(--blue);
+      }
 
 
 

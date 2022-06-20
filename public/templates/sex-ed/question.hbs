@@ -57,12 +57,12 @@
 
       <div id="shell" class="shell">
 
-        <a href="/sex-ed/about"><img class="orb" src="/images/sessions/sex-ed/orb.png"></a>
+        <a href="/sex-ed"><img class="orb" src="/images/sessions/sex-ed/orb-back.png"></a>
 
         <a href="/sex-ed">
           <div class="header">
             <span class="logo">Ask SFPC: Sex Ed</span>
-            <span class="title">Advice Queue</span>
+            <span class="title">Question</span>
           </div>
         </a>
 
@@ -70,40 +70,14 @@
           <span class="byline">A peer-to-peer sex advice column.</span>
         </div>
 
-<!--
-              <div class="loader-content">
-                  <p tabindex="0" class="large">
-                    loading<span>...</span>
-                  </p>
-              </div> -->
 
-
-        <!--<div class="selectors">
-         <select id= "allSections" name ="projectChange" class="projectChange" onchange="projectFilter(this.value)">
-          <option value ="allProjects">All project types...</option>
-          <option value ="publicationProjects">Publications</option>
-          <option value ="exhibitionProjects">Exhibitions</option>
-          <option value ="eventProjects">Event Series</option>
-          <option value ="sessionProjects">Special Sessions</option>
-          <option value ="websiteProjects">Websites</option>
-          <option value ="radioProjects">Radio</option>
-        </select>
-      </div> -->
-
-<!--
-        <h4 class="breadcrumb hide-content">
-          <a href="/projects">projects</a>
-        </h4> -->
 
 
 
         <div id="main" class="">
 
 
-
-
         <section id="queue" class="">
-
 
           <div id="{{this.[Website-Slug]}}" class="question-block" data-location="">
 
@@ -111,11 +85,11 @@
                 <div class="metadata">
                   <div class="submission-info">
                     <span class="submitter">
-                      ✼ Pinned to queue {{#each this.[Publish Date]}}{{this}}{{/each}} · Asked by SFPC: Sex Ed Organizers
+                      Added to queue on June 19, 2022 · Asked by SFPC: Sex Ed Organizers
                     </span>
 
 
-                      · <span class="response-count">Many responses!</a>
+                      · <span class="response-count">Responses: 3</a>
 
                   </div>
                   <div class="topic"> Sex Ed: 101
@@ -123,98 +97,66 @@
                 </div>
 
                 <div class="question medium">
-                    <p class="excerpt">
-                      <span class="three-dot">...</span>Did you have any formal sexual education in school?<span class="three-dot">...</span>
-                    </p>
 
-                    <p class="full-question hide">
+                    <p class="full-question ">
                       <i>Dear SFPC: Sex Ed,</i> <BR><BR>
                       Did you have any formal sexual education in school? What was your experience like? Is there a memory you'd like to share? If you have not had formal sex education before, what has sex education meant to you in your life? <BR><BR>
                       <i>— SFPC: Sex Ed Organizers</i>
 
-
-                        {{#if "Has Response"}}
-                        <!-- {{this.[Website-Slug]}} -->
-                        <span class="responses">
+                        <!-- <span class="responses">
                           <a href="/sex-ed/question"
-                          onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=500,height=768');return false;">
-                          View responses...</a>
-                        </span>
-                        {{else}}
-                        <!-- <a href="terms.html" onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=600');return false;" />Terms & Conditions</a> -->
+                          onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=600');return false;">
+                          3 responses...</a>
+                        </span> -->
 
-
-                        <span class="responses-none">
-                          No responses yet.
-                        </span>
-                        {{/if}}
                     </p>
+                </div>
+
+                <div class="question medium">
+
+                    <p class="full-question ">
+
+                        <i>Dear SFPC: Sex Ed Organizers,</i> <BR><BR>
+                    </p>
+                </div>
 
 
-                      <!-- <a href="/questions/{{this.[Website-Slug]}}"> -->
+                <div class="about">
+
+                    <div class="response columnist small">
+                      <div class="submission-info"><span class="response-count">Guest Columnist Response</span></div>
+                      <div class="clear"></div>
+
+                      I would love to understand better the irrationality of sexual preferences. Are others puzzled by the incoherence in their wants and desires? In almost any other part of my life I can use reason to help me to pick what I want, but when it comes to sex it makes no sense! How do others deal with this?
+                      <BR><BR><i>— Shawné Michaelain Holloway</i>
+                    </div>
+
+
+
+                    <div class="response sfpc small">
+                      <div class="submission-info"><span class="response-count">Notes from SFPC: Sex Ed  </span></div>
+                      <div class="clear"></div>
+
+                      I would love to understand better the irrationality of sexual preferences. Are others puzzled by the incoherence in their wants and desires? In almost any other part of my life I can use reason to help me to pick what I want, but when it comes to sex it makes no sense! How do others deal with this?
+                      <BR><BR><i>— SFPC: Sex Ed Organizers</i>
+                    </div>
+
+
+                    <div class="response participant small">
+
+                      I would love to understand better the irrationality of sexual preferences. Are others puzzled by the incoherence in their wants and desires? In almost any other part of my life I can use reason to help me to pick what I want, but when it comes to sex it makes no sense! How do others deal with this?
+                      <BR><BR><i>— Anonymous participant of SFPC: Sex Ed  </i>
+                    </div>
+
+
                 </div>
 
 
           </div>
 
 
-              {{#each projects}}
-              <div id="{{this.[Website-Slug]}}" class="question-block" data-location="">
-
-
-                    <div class="metadata">
-                      <div class="submission-info">
-                        <span class="submitter">
-                          Added to queue on {{#each this.[Publish Date]}}{{this}}{{/each}} · Asked by {{"Submitter Name"}}
-                        </span>
-
-                          {{#if "Response Count"}}
-                          · <span class="response-count">Responses: {{"Response Count"}}</a>
-                            {{/if}}
-                      </div>
-                      <div class="topic">
-                        {{#each this.[Topic]}} {{this}} {{/each}}
-                      </div>
-                    </div>
-
-                    <div class="question medium">
-                        <p class="excerpt">
-                          <span class="three-dot">...</span>{{"Pullout quote"}}<span class="three-dot">...</span>
-                        </p>
-
-                        <p class="full-question hide">
-                          <i>Dear SFPC: Sex Ed,</i> <BR><BR>
-                          {{"Question"}} <BR><BR>
-                          <i>— {{"Sign name"}}</i>
-
-
-                            {{#if "Has Response"}}
-                            <span class="responses">
-                              <a href="/projects/{{this.[Website-Slug]}}">View responses...</a>
-                            </span>
-                            {{else}}
-
-
-                            <span class="responses-none">
-                              No responses yet.
-                            </span>
-                            {{/if}}
-                        </p>
-
-
-                          <!-- <a href="/questions/{{this.[Website-Slug]}}"> -->
-                    </div>
-
-
-              </div>
-
-              {{/each}}
-
-
-
 
         </section>
-
 
          <div class="break"></div>
 

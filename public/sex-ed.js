@@ -17,7 +17,10 @@ $(document).ready(function() {
         // INTRO BIO EXPAND
         $(".question").click(function() {
           $(this).children("p").toggleClass('hide');
+          // $(this).children(".full-question").removeClass('hide');
+          // $(this).children(".excerpt").addClass('hide');
           // $(this).toggleClass('active');
+
 
           // $(".full-question").not(this).removeClass('hide');
 
