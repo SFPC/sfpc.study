@@ -57,7 +57,14 @@
 
       <div id="shell" class="shell">
 
-        <a href="/sex-ed/about"><img class="orb" src="/images/sessions/sex-ed/orb.png"></a>
+        <!-- <a href="/sex-ed/about"><img class="orb" src="/images/sessions/sex-ed/orb.png"></a> -->
+
+        <a href="/sex-ed/about">
+        <div class="orb">
+          <img src="/images/sessions/sex-ed/orb-1.png">
+        </div>
+        </a>
+
 
         <a href="/sex-ed">
           <div class="header">
@@ -191,7 +198,9 @@
 
                             {{#if Response-Count}}
                             <span class="responses">
-                              <a href="/projects/{{this.[Website-Slug]}}">View responses...</a>
+                              <a href="/sex-ed/question"
+                              onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=500,height=768 ');return false;">
+                              View responses...</a>
                             </span>
                             {{else}}
 
