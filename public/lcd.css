@@ -257,11 +257,11 @@ select#allSections {
  background-image:url('images/sessions/sex-ed/bg.jpg');
  background-position: bottom;
  background-repeat: repeat;
- background-size: 100%;
+ background-size: 300%;
 }
 
 .sex-ed.featured:hover {
-  background-size: 150%;
+  background-size: 350%;
 }
 
 

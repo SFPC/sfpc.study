@@ -166,18 +166,21 @@
 
 
               {{#each projects}}
+
+
               <div id="{{this.[Website-Slug]}}" class="question-block" data-location="">
 
 
                     <div class="metadata">
                       <div class="submission-info">
                         <span class="submitter">
-                          Added to queue on {{#each this.[Publish Date]}}{{this}}{{/each}} · Asked by {{Submitter-Name}}
+                          Added to queue on {{#each this.[Publish Date]}}{{this}}{{/each}} ·
+                          {{#if Submitter-Name}}Asked by {{Submitter-Name}} {{else}}Asked anonymously {{/if}}
                         </span>
 
-                          {{#if "Response Count"}}
+
                           · <span class="response-count">Responses: {{#if Response-Count}} {{Response-Count}} {{else}} 0 {{/if}}</a>
-                            {{/if}}
+
                       </div>
                       <div class="topic">
                         {{#each this.[Topic]}} {{this}} {{/each}}
@@ -186,7 +189,9 @@
 
                     <div class="question medium">
                         <p class="excerpt">
-                          <span class="three-dot">...</span>{{"Pullout quote"}}<span class="three-dot">...</span>
+                          <span class="three-dot">...</span>
+
+                          {{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot">...</span>
                         </p>
 
                         <p class="full-question hide">
@@ -217,6 +222,8 @@
 
 
               </div>
+
+
 
               {{/each}}
 
