@@ -137,7 +137,7 @@
                         <!-- {{this.[Website-Slug]}} -->
                         <span class="responses">
                           <a href="/sex-ed/question"
-                          onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=500,height=768');return false;">
+                          onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=500,height=768 ');return false;">
                           View responses...</a>
                         </span>
                         {{else}}
@@ -169,7 +169,7 @@
                         </span>
 
                           {{#if "Response Count"}}
-                          · <span class="response-count">Responses: {{"Response Count"}}</a>
+                          · <span class="response-count">Responses: {{#if Response-Count}} {{Response-Count}} {{else}} 0 {{/if}}</a>
                             {{/if}}
                       </div>
                       <div class="topic">
@@ -188,7 +188,8 @@
                           <i>— {{"Sign name"}}</i>
 
 
-                            {{#if "Has Response"}}
+
+                            {{#if Response-Count}}
                             <span class="responses">
                               <a href="/projects/{{this.[Website-Slug]}}">View responses...</a>
                             </span>
@@ -196,7 +197,7 @@
 
 
                             <span class="responses-none">
-                              No responses yet.
+                              <!-- No responses yet. -->
                             </span>
                             {{/if}}
                         </p>
