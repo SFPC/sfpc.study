@@ -167,6 +167,8 @@
 
               {{#each projects}}
 
+              {{#if Website-Slug}}
+
 
               <div id="{{this.[Website-Slug]}}" class="question-block" data-location="">
 
@@ -223,6 +225,7 @@
 
               </div>
 
+              {{/if}}
 
 
               {{/each}}
