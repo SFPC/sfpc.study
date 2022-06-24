@@ -240,7 +240,7 @@ async function prepareClassData(classData, classSlug){
       teachers.unshift(personData)
     }
     else if(personData["Classes-Guest"] && personData["Classes-Guest"].includes(classSlug)){
-      personData.role = "guest"
+      personData.role = "guest teacher"
       guests.unshift(personData)
     }
     else if(personData["Classes-Organizer"] && personData["Classes-Organizer"].includes(classSlug)){
@@ -285,7 +285,7 @@ async function prepareSessionData(sessionData, session){
       organizers.unshift(personData)
     }
     else if(personData["Sessions-Guest"] && personData["Sessions-Guest"].includes(session)){
-      personData.role = "guest"
+      personData.role = "guest teacher"
       guests.unshift(personData)
     }
   })

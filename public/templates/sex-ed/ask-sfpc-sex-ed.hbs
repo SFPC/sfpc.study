@@ -57,6 +57,12 @@
 
       <div id="shell" class="shell">
 
+        <img class="mover mover-one" onload="startMoving(this)" src="/images/sessions/sex-ed/bg1.jpg" border="0">
+        <img class="mover mover-two" onload="startMoving(this)" src="/images/sessions/sex-ed/bg2.jpg" border="0">
+        <img class="mover mover-three" onload="startMoving(this)" src="/images/sessions/sex-ed/bg3.jpg" border="0">
+
+
+
         <!-- <a href="/sex-ed/about"><img class="orb" src="/images/sessions/sex-ed/orb.png"></a> -->
 
         <a href="/sex-ed/about">
@@ -69,7 +75,7 @@
         <a href="/sex-ed">
           <div class="header">
             <span class="logo">Ask SFPC: Sex Ed</span>
-            <span class="title">Advice Queue</span>
+            <span class="title">Advice Column</span>
           </div>
         </a>
 
@@ -109,6 +115,7 @@
 
 
 
+
         <section id="queue" class="">
 
 
@@ -118,7 +125,7 @@
                 <div class="metadata">
                   <div class="submission-info">
                     <span class="submitter">
-                      ✼ Pinned to queue {{#each this.[Publish Date]}}{{this}}{{/each}} · Asked by SFPC: Sex Ed Organizers
+                      ✼ Pinned to queue {{#each this.[Publish Date]}}{{this}}{{/each}} · Asked by the Editors
                     </span>
 
 
@@ -137,7 +144,7 @@
                     <p class="full-question hide">
                       <i>Dear SFPC: Sex Ed,</i> <BR><BR>
                       Did you have any formal sexual education in school? What was your experience like? Is there a memory you'd like to share? If you have not had formal sex education before, what has sex education meant to you in your life? <BR><BR>
-                      <i>— SFPC: Sex Ed Organizers</i>
+                      <i>— Learning Sex</i>
 
 
                         {{#if "Has Response"}}
@@ -145,7 +152,7 @@
                         <span class="responses">
                           <a href="/sex-ed/question"
                           onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=500,height=768 ');return false;">
-                          View responses...</a>
+                          Read responses...</a>
                         </span>
                         {{else}}
                         <!-- <a href="terms.html" onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=600');return false;" />Terms & Conditions</a> -->
@@ -176,8 +183,8 @@
                     <div class="metadata">
                       <div class="submission-info">
                         <span class="submitter">
-                          Added to queue on {{#each this.[Publish Date]}}{{this}}{{/each}} ·
-                          {{#if Submitter-Name}}Asked by {{Submitter-Name}} {{else}}Asked anonymously {{/if}}
+                          Posted to queue on {{#each this.[Publish Date]}}{{this}}{{/each}} · Asked by
+                          {{#if Submitter-Name}}{{Submitter-Name}} {{else}}Anonymous {{/if}}
                         </span>
 
 
@@ -191,9 +198,7 @@
 
                     <div class="question medium">
                         <p class="excerpt">
-                          <span class="three-dot">...</span>
-
-                          {{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot">...</span>
+                          <span class="three-dot">...</span>{{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot">...</span>
                         </p>
 
                         <p class="full-question hide">
@@ -207,7 +212,7 @@
                             <span class="responses">
                               <a href="/sex-ed/question"
                               onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=500,height=768 ');return false;">
-                              View responses...</a>
+                              Read responses...</a>
                             </span>
                             {{else}}
 

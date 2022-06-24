@@ -239,6 +239,30 @@
       </section>
 
 
+      {{#if promoImages.[1]}}
+      <div class="grid-container" id="participate-archive">
+
+        <main class="grid-item main">
+          <main class="grid-item main">
+            <div class="carousel-items items carousel-content participate-content">
+              <div id="carousel-images" class="class-images after-launch">
+                {{#each promoImages}}
+                <figure class="item participate-img"><img src="{{this}}">
+                </figure>
+                {{/each}}
+              </div>
+
+
+            </div>
+
+
+          </main>
+        </main>
+
+      </div>
+      {{/if}}
+
+
 
         <div class="break"></div>
 
@@ -292,28 +316,7 @@
       </section> -->
 
 
-      {{#if promoImages.[1]}}
-      <div class="grid-container" id="participate-archive">
 
-        <main class="grid-item main">
-          <main class="grid-item main">
-            <div class="carousel-items items carousel-content participate-content">
-              <div id="carousel-images" class="class-images after-launch">
-                {{#each promoImages}}
-                <figure class="item participate-img"><img src="{{this}}">
-                </figure>
-                {{/each}}
-              </div>
-
-
-            </div>
-
-
-          </main>
-        </main>
-
-      </div>
-      {{/if}}
 
 
 

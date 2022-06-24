@@ -12,7 +12,71 @@ $( document ).ready(function() {
 
 
 
+// var randomMoveRate = Math.random(500, 1000);
+var moveRate = 70;
+
+function startMoving(img, rate) {
+    var img$ = $(img);
+    var imgWidth = img$.width();
+    var screenWidth = $(window).width();
+    var amount = screenWidth - (parseInt(img$.css("left"), 10) || 0);
+    // if already past right edge, reset to
+    // just left of left edge
+    if (amount <=0 ) {
+        img$.css("left", -imgWidth);
+        amount = screenWidth + imgWidth;
+        randomMoveRate =  Math.random(500, 1000);
+
+        $('img.mover').each(function () {
+          var curSrc = $(this).attr('src');
+          if ( curSrc === 'http://photos.smugmug.com/photos/344291068_HdnTo-Ti.jpg' ) {
+
+              $(this).attr('src',
+              'http://photos.smugmug.com/photos/344290962_h6JjS-Ti.jpg');
+          }
+        });
+
+    }
+
+    var moveRate = 70;
+    var time = amount * screenWidth / moveRate;
+    img$.stop(true)
+        .animate({left: "+=" + amount}, time, "linear", function() {
+            // when animation finishes, start over
+            startMoving(this);
+        })
+}
+
+
+
 $(document).ready(function() {
+
+        $(".mover-one").each(function() {
+            startMoving(this, 50);
+        });
+
+        $(".mover-two").each(function() {
+            startMoving(this, 70);
+        });
+
+        $(".mover-three").each(function() {
+            startMoving(this, 200);
+        });
+
+        // readjust if window changes size
+        $(window).resize(function() {
+            $(".mover-one").each(function() {
+                startMoving(this, 50);
+            });
+
+            $(".mover-two").each(function() {
+                startMoving(this, 70);
+            });
+
+            $(".mover-three").each(function() {
+                startMoving(this, 200);
+            });
+        });
 
         // INTRO BIO EXPAND
         $(".question").click(function() {
