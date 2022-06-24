@@ -51,6 +51,19 @@ function startMoving(img, rate) {
 
 $(document).ready(function() {
 
+        // $("#shell").append(
+        //   '<img class="mover mover-one" onload="startMoving(this)" src="/images/sessions/sex-ed/bg1.jpg" border="0">
+        //   ');
+        //
+        //   $("#shell").append(
+        //     '<img class="mover mover-two" onload="startMoving(this)" src="/images/sessions/sex-ed/bg2.jpg" border="0">
+        //     ');
+        //     $("#shell").append(
+        //       '<img class="mover mover-three" onload="startMoving(this)" src="/images/sessions/sex-ed/bg3.jpg" border="0">
+        //       ');
+
+
+
         $(".mover-one").each(function() {
             startMoving(this, 50);
         });

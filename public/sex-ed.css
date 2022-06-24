@@ -348,6 +348,7 @@ p.medium a {
 
 
 
+
 .about img {
   margin: 2vw 0 2vw 0;
   transition: all .5s ease-in-out;
@@ -365,19 +366,25 @@ p.medium a {
 
 .about .people-images .img {
   border-radius: 100%;
-width: calc(100% / 8);
+width: calc(90% / 7);
 height: 13vw;
 /* height: auto; */
 /* margin: 0 2% 0 0; */
 background-size: cover;
 background-position: center;
 display: inline-block;
-background-color: red;
 box-shadow:  0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff,0 0 10px #fff,
 0 0 15px #fff, 0 0 15px #fff, 0 0 15px #fff, 0 0 25px #fff, 0 0 25px #fff, 0 0 25px #fff;
 }
 
+.person.people-images .img {
+  float: left;
+  margin-right: 2vw;
+}
 
+.person.people-images {
+  margin-bottom: 4vw;
+}
 
 img.margin-top {
   margin-top: 8vw;
@@ -514,6 +521,9 @@ h1, .margin-top {
       }
 
 
+.orb-click {
+  pointer: cursor
+}
 
 .orb {
   transition: all .2s ease-in-out;
@@ -557,8 +567,84 @@ h1, .margin-top {
             -0.05vw 0 2.7vw #f0f,
               -0.05vw 0 42.7vw  #0ff;         */
 
-
+              animation: pulse 8s infinite;
 }
+
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow:
+        inset 0 0 3vw #fff,      /* inner white */
+        inset 1.1vw 0 3.5vw #f0f,   /* inner left magenta short */
+        inset -1.1vw 0 3.5vw #0ff,  /* inner right cyan short */
+        inset 1.1vw 0 11.7vw #f0f,  /* inner left magenta broad */
+        inset -1.1vw 0 11.7vw #0ff, /* inner right cyan broad */
+        0 0 3vw #fff,            /* outer white */
+        -0.58vw 0 4.7vw #f0f,        /* outer left magenta */
+        0.58vw 0 4.7vw  #0ff;
+        width: 10vw;
+        height: 10vw;
+        margin-left: 0vw;
+        margin-top: 0vw;
+  }
+  /* 70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  } */
+  20% {
+    box-shadow:
+        inset 0 0 3vw #fff,      /* inner white */
+        inset 1.1vw 0 3.5vw #f0f,   /* inner left magenta short */
+        inset -1.1vw 0 3.5vw #0ff,  /* inner right cyan short */
+        inset 1.1vw 0 11.7vw #f0f,  /* inner left magenta broad */
+        inset -1.1vw 0 11.7vw #0ff, /* inner right cyan broad */
+        0 0 3vw #fff,            /* outer white */
+        -0.58vw 0 4.7vw #fff,        /* outer left magenta */
+        0.58vw 0 4.7vw  #fff;
+        /* width: 12vw;
+        height: 12vw;
+        transform: scale(1);
+        margin-left: -1vw;
+        margin-top: -1vw; */
+        width: 16vw;
+        height: 16vw;
+        transform: scale(1);
+        margin-left: -2.5vw;
+        margin-top: -2.5vw;
+  }
+
+  40% {
+    box-shadow:
+        inset 0 0 3vw #fff,      /* inner white */
+        inset 1.1vw 0 3.5vw #f0f,   /* inner left magenta short */
+        inset -1.1vw 0 3.5vw #0ff,  /* inner right cyan short */
+        inset 1.1vw 0 11.7vw #f0f,  /* inner left magenta broad */
+        inset -1.1vw 0 11.7vw #0ff, /* inner right cyan broad */
+        0 0 3vw #fff,            /* outer white */
+        -0.58vw 0 4.7vw #f0f,        /* outer left magenta */
+        0.58vw 0 4.7vw  #0ff;
+        width: 10vw;
+        height: 10vw;
+        margin-left: 0vw;
+        margin-top: 0vw;
+  }
+
+  100% {
+    box-shadow:
+        inset 0 0 3vw #fff,      /* inner white */
+        inset 1.1vw 0 3.5vw #f0f,   /* inner left magenta short */
+        inset -1.1vw 0 3.5vw #0ff,  /* inner right cyan short */
+        inset 1.1vw 0 11.7vw #f0f,  /* inner left magenta broad */
+        inset -1.1vw 0 11.7vw #0ff, /* inner right cyan broad */
+        0 0 3vw #fff,            /* outer white */
+        -0.58vw 0 4.7vw #f0f,        /* outer left magenta */
+        0.58vw 0 4.7vw  #0ff;
+        width: 10vw;
+        height: 10vw;
+        margin-left: 0vw;
+        margin-top: 0vw;
+  }
+}
+
 
   .orb img {
     width: 100%;
@@ -569,21 +655,21 @@ h1, .margin-top {
 
 
       .orb:hover {
-        width: 16vw;
+        /* width: 16vw;
         height: 16vw;
         transform: scale(1);
         margin-left: -2.5vw;
-        margin-top: -2.5vw;
+        margin-top: -2.5vw; */
         box-shadow:
-            inset 0 0 3vw #fff,      /* inner white */
-            inset 1.1vw 0 3.5vw #f0f,   /* inner left magenta short */
-            inset -1.1vw 0 3.5vw #0ff,  /* inner right cyan short */
-            inset 1.1vw 0 11.7vw #f0f,  /* inner left magenta broad */
-            inset -1.1vw 0 11.7vw #0ff, /* inner right cyan broad */
-            0 0 3vw #fff,            /* outer white */
-            -0.58vw 0 4.7vw #fff,        /* outer left magenta */
-            0.58vw 0 4.7vw  #fff;         /* outer right cyan */
-
+            inset 0 0 3vw #fff,
+            inset 1.1vw 0 3.5vw #f0f,
+            inset -1.1vw 0 3.5vw #0ff,
+            inset 1.1vw 0 11.7vw #f0f,
+            inset -1.1vw 0 11.7vw #0ff,
+            0 0 3vw #fff,
+            -0.58vw 0 4.7vw #fff,
+            0.58vw 0 4.7vw  #fff;
+            cursor: pointer;
       }
 
       img.orb {
@@ -659,6 +745,7 @@ img.mover-three {
       width: 20vw;
       height: 20vw;
       margin: 0px;
+        animation: none;
     }
 
   #main {
@@ -745,10 +832,18 @@ img.mover-three {
   img.mover-two {
     width: 300%;
   }
-/*
-  .about img {
-    margin: 15vw 0 2vw 0;
-  } */
+
+  .about .people-images.person .img {
+    border-radius: 100%;
+    width:  40%;
+    height: 30vh;
+}
+
+.person.people-images {
+  margin-bottom: 6vw;
+  margin-top: 6vw;
+}
+
 
 
 
