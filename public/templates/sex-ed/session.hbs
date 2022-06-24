@@ -152,11 +152,12 @@
           {{/if}}
           <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
 
-          <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">
+          {{#if @last}}and
+          {{/if}}
+          <span tabindex="0" class="expand"><a class="link">  {{this.Name}}</a><span class="expanded hide-expanded">
               {{this.Bio}} </span></span>
-              {{#if @last}}
-              {{/if}}
-          {{/each}} and others.
+
+          {{/each}}.
 
 
 
@@ -383,7 +384,7 @@
               {{/if}}
 
           </dl>
-         
+
 
         </div>
 
