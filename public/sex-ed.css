@@ -92,6 +92,9 @@ body {
       z-index: 1;
 }
 
+p {
+  margin: 0 0 2vw 0;
+}
 
 #main {
   width: 60vw;
@@ -102,8 +105,8 @@ body {
   z-index: 1000;
 }
 
-#queue {
-
+.queue {
+  padding-top: 6vh;
 }
 
 
@@ -329,6 +332,7 @@ p.medium a {
         .medium, h2 {
           font-size: var(--font-medium);
           line-height: 1.3;
+          padding-bottom: 1vw;
         }
 
         .large, h1 {
@@ -339,6 +343,7 @@ p.medium a {
 
         h2 {
           font-style: italic;
+          margin: 0px;
         }
 
         .caption {
@@ -347,7 +352,29 @@ p.medium a {
         }
 
 
+.about .section-img{
+transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+ms-transition: all .5s ease-in-out;
+o-transition: all .5s ease-in-out;
+  width: 20vw;
+  height: 28vw;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  margin: 8vw 0 4vw 0;
+  border-radius: 100%;
+  box-shadow:  0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff,0 0 10px #fff,
+  0 0 15px #fff, 0 0 15px #fff, 0 0 15px #fff, 0 0 25px #fff, 0 0 25px #fff, 0 0 25px #fff;
+}
 
+.about .section-img:hover {
+  border-radius: 1vw;
+  box-shadow:  0 0 7px var(--bright-purple), 0 0 7px var(--bright-purple), 0 0 7px var(--bright-purple),  0 0 10px var(--bright-purple), 0 0 10px var(--bright-purple),0 0 10px var(--bright-purple),
+  0 0 15px var(--bright-purple), 0 0 15px var(--bright-purple), 0 0 15px var(--bright-purple), 0 0 25px var(--bright-purple), 0 0 25px var(--bright-purple), 0 0 25px var(--bright-purple),
+  0 0 35px var(--bright-purple), 0 0 35px var(--bright-purple), 0 0 35px var(--bright-purple), 0 0 45px var(--bright-purple), 0 0 45px var(--bright-purple), 0 0 45px var(--bright-purple);
+
+}
 
 .about img {
   margin: 2vw 0 2vw 0;
@@ -364,9 +391,30 @@ p.medium a {
 
 }
 
-.about .people-images .img {
+.about .people-images {
+  width: 100%;
+  display: flex;
+    column-gap: 1vw;
+    margin: 8vw 0 2vw 0;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    ms-transition: all .5s ease-in-out;
+    o-transition: all .5s ease-in-out;
+}
+
+.about .people-images:hover .img {
+  box-shadow:  0 0 7px var(--bright-purple), 0 0 7px var(--bright-purple), 0 0 7px var(--bright-purple),  0 0 10px var(--bright-purple), 0 0 10px var(--bright-purple),0 0 10px var(--bright-purple),
+  0 0 15px var(--bright-purple), 0 0 15px var(--bright-purple), 0 0 15px var(--bright-purple), 0 0 25px var(--bright-purple), 0 0 25px var(--bright-purple), 0 0 25px var(--bright-purple),
+  0 0 35px var(--bright-purple), 0 0 35px var(--bright-purple), 0 0 35px var(--bright-purple), 0 0 45px var(--bright-purple), 0 0 45px var(--bright-purple), 0 0 45px var(--bright-purple);
+
+}
+
+
+
+.about .people-images   .img {
   border-radius: 100%;
-width: calc(90% / 7);
+/* width: calc(90% / 7); */
+width: 100%;
 height: 13vw;
 /* height: auto; */
 /* margin: 0 2% 0 0; */
@@ -375,15 +423,34 @@ background-position: center;
 display: inline-block;
 box-shadow:  0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff,0 0 10px #fff,
 0 0 15px #fff, 0 0 15px #fff, 0 0 15px #fff, 0 0 25px #fff, 0 0 25px #fff, 0 0 25px #fff;
+transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+ms-transition: all .5s ease-in-out;
+o-transition: all .5s ease-in-out;
 }
 
-.person.people-images .img {
+
+.person .img {
   float: left;
   margin-right: 2vw;
+  transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  ms-transition: all .5s ease-in-out;
+  o-transition: all .5s ease-in-out;
+    width: 6.5vw;
+    height: 13vw;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    /* margin: 8vw 0 2vw 0; */
+    border-radius: 100%;
+    box-shadow:  0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff,0 0 10px #fff,
+    0 0 15px #fff, 0 0 15px #fff, 0 0 15px #fff, 0 0 25px #fff, 0 0 25px #fff, 0 0 25px #fff;
 }
 
-.person.people-images {
-  margin-bottom: 4vw;
+.person  {
+  margin-bottom: 3vw;
+  margin-top: 3vw;
 }
 
 img.margin-top {
@@ -408,7 +475,7 @@ h1, .margin-top {
   color: var(--dark-purple);
   font-family: 'Avara';
   text-shadow:  0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff;
-  padding-top: 1vh;
+  /* padding-top: 1vh; */
 }
 
 .responses a, .responses{
@@ -833,10 +900,12 @@ img.mover-three {
     width: 300%;
   }
 
-  .about .people-images.person .img {
+.person .img {
     border-radius: 100%;
-    width:  40%;
-    height: 30vh;
+    width: 40vw;
+    height: 55vw;
+    margin-right: 4vw;
+    margin-bottom: 4vw;
 }
 
 .person.people-images {
@@ -844,6 +913,26 @@ img.mover-three {
   margin-top: 6vw;
 }
 
+
+.person  {
+  margin-bottom: 6vw;
+  margin-top: 6vw;
+}
+
+.about .section-img  {
+  width: 40vw;
+  height: 55vw;
+  margin-top: 25vw;
+}
+
+.about .people-images {
+  margin: 20vw 0 4vw 0;
+}
+
+
+p {
+  margin: 0 0 8vw 0;
+}
 
 
 
