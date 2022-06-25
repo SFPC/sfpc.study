@@ -923,6 +923,7 @@ img.mover-three {
   width: 40vw;
   height: 55vw;
   margin-top: 25vw;
+  margin-bottom: 6vw;
 }
 
 .about .people-images {
@@ -932,6 +933,9 @@ img.mover-three {
 
 p {
   margin: 0 0 8vw 0;
+}
+h2 {
+  padding-bottom: 4vw;
 }
 
 
