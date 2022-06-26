@@ -332,7 +332,11 @@ p.medium a {
         .medium, h2 {
           font-size: var(--font-medium);
           line-height: 1.3;
-          padding-bottom: 1vw;
+          /* padding-bottom: 1vw; */
+        }
+
+        h2 {
+           padding-bottom: 1vw;
         }
 
         .large, h1 {
@@ -850,13 +854,13 @@ img.mover-three {
 
   .question .excerpt {
     /* width: 83%; */
-    padding-top: 8vw;
+    padding-top: 16vw;
     width: 96%;
   }
 
   .question .full-question {
     width: 100%;
-    padding-top: 8vw;
+    padding-top: 16vw;
   }
 
   .submission-info {
