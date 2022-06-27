@@ -96,9 +96,31 @@ app.get("/sex-ed", async (req,res) => {
 //   }
 // })
 
-app.get("/sex-ed/:slug", (req,res) => {
-  res.render("sex-ed/"+req.params.slug)
+// app.get("/sex-ed/:slug", (req,res) => {
+//   res.render("sex-ed/"+req.params.slug)
+// })
+
+app.get("/sex-ed/about", async (req,res) => {
+  res.render("sex-ed/about")
 })
+
+app.get("/sex-ed/people", async (req,res) => {
+  res.render("sex-ed/people")
+})
+
+
+app.get("/sex-ed/:slug", async (req,res) => {
+  //filter by slug here
+  console.log(req.params.slug)
+  const response = await getDatabaseEntry("eedc3ea6ba904a9fa8631e12b03a955d", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  console.log(response)
+  if(response){
+    const projectData = parseNotionPage(response)
+    console.log(projectData)
+    res.render("sex-ed/question", projectData)
+  }
+})
+
 
 
 

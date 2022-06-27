@@ -188,6 +188,10 @@ p {
           padding-top: 1vh;
         }
 
+        .star {
+          text-shadow:  0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff;
+        }
+
         .question-break {
           width: 83%;
           background: none;
@@ -215,6 +219,15 @@ p {
 
         .full-question {
           text-shadow:  0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff,0 0 10px #fff, 0 0 15px #fff, 0 0 15px #fff, 0 0 15px #fff;
+        }
+
+        .answer{
+          width: 100%;
+          padding-top: 9vw;
+        }
+
+        .star p {
+          margin: 0px !important;
         }
 
         .metadata {
@@ -863,6 +876,8 @@ img.mover-three {
     padding-top: 16vw;
   }
 
+
+
   .submission-info {
     width: 75%;
     line-height: 1.75;
@@ -942,6 +957,9 @@ h2 {
   padding-bottom: 4vw;
 }
 
+.star p {
+  margin: 0 0 8vw 0 !important;
+}
 
 
 
