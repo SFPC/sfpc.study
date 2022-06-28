@@ -574,6 +574,22 @@ h1, .margin-top {
         height: 100%;
       }
 
+
+      .response-field p:not(:last-child) {
+          display: block; /* Fallback for non-webkit */
+          display: -webkit-box;
+          /* max-width: 400px; */
+          /* height: calc(var(--font-small) * 1.5 * 8); */
+          margin: 0 auto;
+          /* font-size: $font-size; */
+          /* line-height: $line-height; */
+          -webkit-line-clamp: 8;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+ 
+
       .columnist .response-border{
         background: var(--green);
         box-shadow:  0 0 7px var(--green), 0 0 7px var(--green), 0 0 7px var(--green);
@@ -959,6 +975,12 @@ h2 {
 
 .star p {
   margin: 0 0 8vw 0 !important;
+}
+
+.mover {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 
