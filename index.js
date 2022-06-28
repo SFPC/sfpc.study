@@ -81,6 +81,7 @@ app.get("/sex-ed", async (req,res) => {
     return parseNotionPage(project)
   })
   console.log(projectData)
+  // let pageContent = getPageContent()
   res.render("sex-ed/ask-sfpc-sex-ed", {projects: projectData})
 })
 
@@ -119,6 +120,9 @@ app.get("/sex-ed/:slug", async (req,res) => {
   console.log(response)
   if(response){
     const projectData = parseNotionPage(response)
+    console.log(response.id)
+    const responses = await getPageContent(response.id, "published responses")
+    projectData.responses = responses
     console.log(projectData)
     res.render("sex-ed/question", projectData)
   }
@@ -352,6 +356,16 @@ async function prepareSessionData(sessionData, session){
   response.organizers = cleanPersonData(organizers);
   response.teachers = cleanPersonData(teachers);
   return response
+}
+async function getPageContent(notionId, contentToggleName="web content"){
+  const fullPageContent = await getBlocks(notionId);
+  console.log(contentToggleName)
+  console.log(contentToggleName.toLowerCase())
+  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase().trim() == contentToggleName.toLowerCase().trim())?.id
+  console.log(contentBlockId)
+  const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
+  console.log(webContent)
+  return parsePageContent(webContent);
 }
   //
 // Notion Parsing Functions Below
