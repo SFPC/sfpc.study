@@ -588,7 +588,11 @@ h1, .margin-top {
           overflow: hidden;
           text-overflow: ellipsis;
       }
- 
+
+      .response-field p:nth-child(2) {
+          display: none;
+      }
+
 
       .columnist .response-border{
         background: var(--green);
