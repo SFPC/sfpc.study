@@ -87,8 +87,16 @@
           <div class="metadata">
             <div class="submission-info">
               <span class="submitter">
-                Posted to queue on June 19, 2022 · Asked by {{#if Submitter-Name}}{{Submitter-Name}} {{else}}Anonymous
+
+                {{#if Publish-Date}}
+                Posted to queue on {{#each this.[Publish-Date]}}{{this}}{{/each}}
+                {{else}} ✼ Pinned to queue
                 {{/if}}
+
+                  · Asked by
+                {{#if Submitter-Name}}{{Submitter-Name}} {{else}}Anonymous {{/if}}
+
+
               </span>
 
 
@@ -125,13 +133,21 @@
           <div class="about">
 
             {{#each responses}}
+            <div class="response participant small">
+              <div class="response-border">
+              </div>
+
+              <div class="response-field">
+
+                {{{this}}}
+                <i>- {{@key}}</i>
 
 
-            {{{this}}}
-            <p><em>- {{@key}}</em></p>
 
-
+              </div>
+            </div>
             {{/each}}
+
 
 
 
