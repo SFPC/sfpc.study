@@ -119,13 +119,13 @@
         <section id="queue" class="">
 
 
-          <div id="{{this.[Website-Slug]}}" class="question-block" data-location="">
+          <!-- <div id="{{this.[Website-Slug]}}" class="question-block" data-location="">
 
 
                 <div class="metadata">
                   <div class="submission-info">
                     <span class="submitter">
-                      ✼ Pinned to queue {{#each this.[Publish Date]}}{{this}}{{/each}} · Asked by the Editors
+                      ✼ Pinned to queue · Asked by the Editors
                     </span>
 
 
@@ -148,15 +148,12 @@
 
 
                         {{#if "Has Response"}}
-                        <!-- {{this.[Website-Slug]}} -->
                         <span class="responses">
-                          <a href="/sex-ed/question"
+                          <a href="/sex-ed/learning-sex"
                           onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=500,height=768 ');return false;">
                           Read responses...</a>
                         </span>
                         {{else}}
-                        <!-- <a href="terms.html" onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=600');return false;" />Terms & Conditions</a> -->
-
 
                         <span class="responses-none">
                           No responses yet.
@@ -165,15 +162,93 @@
                     </p>
 
 
-                      <!-- <a href="/questions/{{this.[Website-Slug]}}"> -->
                 </div>
 
 
-          </div>
+          </div> -->
 
 
               {{#each projects}}
 
+              {{#if Website-Slug}}
+
+              {{#if Publish-Date}}
+
+
+
+              {{else}}
+
+              <div id="{{this.[Website-Slug]}}" class="question-block" data-location="">
+
+
+                    <div class="metadata">
+                      <div class="submission-info">
+                        <span class="submitter">
+                          ✼ Pinned to queue
+                          <!-- on {{#each this.[Publish-Date]}}{{this}}{{/each}}  -->
+                          · Asked by
+                          {{#if Submitter-Name}}{{Submitter-Name}} {{else}}Anonymous {{/if}}
+                        </span>
+
+
+                          · <span class="response-count">Responses: {{#if Response-Count}} {{Response-Count}} {{else}} 0 {{/if}}</a>
+
+                      </div>
+                      <div class="topic">
+                        {{#each this.[Topic]}} {{this}} {{/each}}
+                      </div>
+                    </div>
+
+                    <div class="question medium">
+                        <p class="excerpt">
+                          <span class="three-dot">...</span>{{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot">...</span>
+                        </p>
+
+                        <p class="full-question hide">
+                          <i>Dear SFPC: Sex Ed,</i> <BR><BR>
+                          {{"Question"}} <BR><BR>
+                            {{#each responses}}
+
+
+                                  hi
+
+
+                            {{/each}}
+                          <i>— {{"Sign name"}}</i>
+
+
+
+                            {{#if Response-Count}}
+                            <span class="responses">
+                              <a href="/sex-ed/{{"Website-Slug"}}"
+                              onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=500,height=768 ');return false;">
+                              Read responses...</a>
+                            </span>
+                            {{else}}
+
+
+                            <span class="responses-none">
+                            </span>
+                            {{/if}}
+                        </p>
+
+                    </div>
+
+
+              </div>
+
+              {{/if}}
+              {{/if}}
+
+
+
+              {{/each}}
+
+
+              {{#each projects}}
+
+
+              {{#if Publish-Date}}
               {{#if Website-Slug}}
 
 
@@ -183,7 +258,7 @@
                     <div class="metadata">
                       <div class="submission-info">
                         <span class="submitter">
-                          Posted to queue on {{#each this.[Publish Date]}}{{this}}{{/each}} · Asked by
+                          Posted to queue on {{#each this.[Publish-Date]}}{{this}}{{/each}} · Asked by
                           {{#if Submitter-Name}}{{Submitter-Name}} {{else}}Anonymous {{/if}}
                         </span>
 
@@ -218,19 +293,20 @@
 
 
                             <span class="responses-none">
-                              <!-- No responses yet. -->
                             </span>
                             {{/if}}
                         </p>
 
-
-                          <!-- <a href="/questions/{{this.[Website-Slug]}}"> -->
                     </div>
 
 
               </div>
 
               {{/if}}
+              {{/if}}
+
+
+
 
 
               {{/each}}

@@ -85,7 +85,7 @@
                 <div class="metadata">
                   <div class="submission-info">
                     <span class="submitter">
-                      Posted to queue on June 19, 2022 · Asked by  {{#if Submitter-Name}}{{Submitter-Name}} {{else}}Anonymous {{/if}}
+                      Posted to queue on June 15, 2022 · Asked by  {{#if Submitter-Name}}{{Submitter-Name}} {{else}}Anonymous {{/if}}
                     </span>
 
 
@@ -121,10 +121,21 @@
 
                 <div class="about">
 
-                  {{#each responses}}
+                  {{#each pageContent}}
 
 
-                        hi
+                        <div class="break"></div>
+
+
+                        <section id="section-{{dashcase @key}}" class="program-content">
+                          <div class="grid-2">
+                            <h1>{{@key}}</h1>
+                          </div>
+
+                          <div class="grid-2">
+                            {{{this}}}
+                          </div>
+                        </section>
 
 
                   {{/each}}
