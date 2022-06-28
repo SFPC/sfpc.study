@@ -101,13 +101,13 @@ app.get("/sex-ed", async (req,res) => {
 //   res.render("sex-ed/"+req.params.slug)
 // })
 
-// app.get("/sex-ed/about", async (req,res) => {
-//   res.render("sex-ed/about")
-// })
-//
-// app.get("/sex-ed/people", async (req,res) => {
-//   res.render("sex-ed/people")
-// })
+app.get("/sex-ed-about", async (req,res) => {
+  res.render("sex-ed/about")
+})
+
+app.get("/sex-ed-people", async (req,res) => {
+  res.render("sex-ed/people")
+})
 
 
 

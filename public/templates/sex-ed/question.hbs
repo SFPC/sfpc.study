@@ -112,7 +112,9 @@
             <p class="full-question ">
               <i>Dear SFPC: Sex Ed,</i> <BR><BR>
               {{"Question"}} <BR><BR>
-              <i>— {{"Sign name"}}</i>
+              <i>— {{"Sign name"}}
+
+              </i>
 
             </p>
 
@@ -140,7 +142,15 @@
               <div class="response-field">
 
                 {{{this}}}
-                <i>- {{@key}}</i>
+                <i>
+
+                {{#contains @key "Anonymous"}}
+                  — Anonymous Participant of SFPC: Sex Ed
+                {{else}}
+                  — {{@key}}
+                {{/contains}}
+
+                </i>
 
 
 
@@ -149,7 +159,7 @@
             {{/each}}
 
 
-
+<!--
 
             <div class="response columnist small">
               <div class="response-border">
@@ -164,11 +174,11 @@
                 to pick what I want, but when it comes to sex it makes no sense! How do others deal with this?
                 <BR><BR><i>— Shawné Michaelain Holloway</i>
               </div>
-            </div>
+            </div> -->
 
 
 
-            <div class="response sfpc small">
+            <!-- <div class="response sfpc small">
               <div class="response-border">
               </div>
 
@@ -178,20 +188,10 @@
 
                 I would love to understand better the irrati
               </div>
-            </div>
+            </div> -->
 
 
-            <div class="response participant small">
-              <div class="response-border">
-              </div>
-
-              <div class="response-field">
-                I would love to understand better the irrationality of sexual preferences. Are others puzzled by the
-                incoherence in their wants and desires? In almost any other part of my life I can use reason to help me
-                to pick what I want, but when it comes to sex it makes no sense! How do others deal with this?
-                <BR><BR><i>— Anonymous applicant of SFPC: Sex Ed </i>
-              </div>
-            </div>
+           
 
 
           </div>
