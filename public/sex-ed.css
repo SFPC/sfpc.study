@@ -223,6 +223,18 @@ p {
           text-shadow:  0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff,0 0 10px #fff, 0 0 15px #fff, 0 0 15px #fff, 0 0 15px #fff;
         }
 
+        .full-question i:nth-of-type(1n)
+         {
+          margin-bottom: calc(var(--font-medium) * .75);
+          display: block;
+        }
+        .full-question i:nth-of-type(2n)
+         {
+          margin-top: calc(var(--font-medium) * .75);
+          display: block;
+
+        }
+
         .answer{
           width: 100%;
           padding-top: 9vw;
@@ -671,7 +683,7 @@ h1, .margin-top {
     opacity: .9;
     display: block;
     margin-top: 4.5vh;
-    padding-bottom: 4.5vh;
+    /* padding-bottom: 4.5vh; */
     font-size: var(--font-medium);
     font-family: 'Avara Black';
     text-shadow:  0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff;
@@ -1145,7 +1157,7 @@ img.mover-three {
 
 
 .person  {
-  margin-bottom: 6vw;
+  margin-bottom: 20vw;
   margin-top: 6vw;
 }
 
