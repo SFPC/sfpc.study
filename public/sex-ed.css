@@ -422,8 +422,17 @@ p {
           ms-transition: all .2s ease-in-out;
           o-transition: all .2s ease-in-out;
         }
+        .three-dot:after {
+          content: ' (↘\FE0E )';
+          color: var(--light-purple);
 
-        .question:hover .three-dot {
+          transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          ms-transition: all .2s ease-in-out;
+          o-transition: all .2s ease-in-out;
+        }
+
+        .question:hover .three-dot:after {
           /* letter-spacing: 2px; */
           color: var(--bright-purple);
         }
@@ -663,7 +672,7 @@ h1, .margin-top {
     display: block;
     margin-top: 9vh;
     padding-bottom: 4.5vh;
-    font-size: var(--font-large);
+    font-size: var(--font-medium);
     font-family: 'Avara Black';
     text-shadow:  0 0 7px #fff, 0 0 7px #fff,  0 0 10px #fff, 0 0 10px #fff;
     text-decoration: none;
@@ -694,6 +703,11 @@ h1, .margin-top {
         .about .responses a, .about .responses{
             margin-top: 0vh;
             padding-bottom: 3vh;
+        }
+
+        .note-editors {
+          font-size: var(--font-meta);
+          display: block;
         }
 
 

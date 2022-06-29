@@ -185,7 +185,7 @@
               {{#if Website-Slug}}
 
               {{#if Editors}}
- 
+
 
 
               <div id="{{this.[Website-Slug]}}" class="question-block" data-location="">
@@ -242,7 +242,7 @@
 
                     <div class="question medium">
                         <p class="excerpt">
-                          <span class="three-dot"></span>{{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot small"> (↘)</span>
+                          {{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot small"></span>
                         </p>
 
                         <p class="full-question hide">
@@ -251,6 +251,7 @@
 
                           <i>— {{"Sign name"}}</i>
 
+                          <span class="note-editors">{{#if Edited}} <BR><BR> ✼ Note from the Editors: {{Edited}} {{/if}}</span>
 
 
                             {{#if Response-Count}}
@@ -314,7 +315,7 @@
 
                     <div class="question medium">
                         <p class="excerpt">
-                          <span class="three-dot"></span>{{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot small"> (↘)</span>
+                          {{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot small"></span>
                         </p>
 
                         <p class="full-question hide">
@@ -323,7 +324,7 @@
                           <i>— {{"Sign name"}}</i>
 
 
-
+                          <span class="note-editors">{{#if Edited}} <BR><BR> ✼ Note from the Editors: {{Edited}} {{/if}}</span>
                             {{#if Response-Count}}
                             <span class="responses">
                               <a href="/sex-ed/{{"Website-Slug"}}"

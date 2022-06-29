@@ -105,7 +105,8 @@
 
 
               · <span class="response-count">Responses: {{#if Response-Count}} {{Response-Count}} {{else}} 0 {{/if}}</a>
-                <span class="person-group">
+
+                <span class="person-group-small questioner">
                 {{#if People}} · <a href="/sex-ed-people">
                   {{#each this.[People]}}
                   <span class="{{this}} person-small"></span>
@@ -127,7 +128,10 @@
 
               </i>
 
+              <span class="note-editors">{{#if Edited}} <BR><BR> ✼ Note from the Editors: {{Edited}} {{/if}}</span>
             </p>
+
+
 
           </div>
 
