@@ -785,7 +785,14 @@ h1, .margin-top {
           -webkit-box-orient: vertical;
           overflow: hidden;
           text-overflow: ellipsis;
+          text-overflow: "... (↘\FE0E )" !important;
       }
+
+      /* .response-field p:nth-child(1):after {
+        content: '(↘\FE0E )'
+      } */
+
+
 
       .response-field p:nth-child(2),
       .response-field p:nth-child(3),
