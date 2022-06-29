@@ -240,6 +240,8 @@ p {
           padding-top: 9vw;
         }
 
+
+
         .star p {
           margin: 0px !important;
         }
@@ -293,7 +295,7 @@ p {
           position: fixed;
           left: 1vw;
           bottom: 3vh;
-          width: 20vw;
+          width: 18vw;
           display: flex;
             column-gap: 1vw;
             margin: 8vw 0 2vw 0;
@@ -359,7 +361,7 @@ p {
           /* width: calc(var(--font-meta) * 3.2);
           height: calc(var(--font-meta) * 3.75); */
           width: 100%;
-          height: 5vw;
+          height: 4vw;
           display: inline-block;
           border-radius: 100%;
           background-size: cover;
@@ -747,6 +749,18 @@ h1, .margin-top {
         margin-bottom: calc(var(--font-meta) * 3);
       }
 
+      .response-field p:not(:last-child) {
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        ms-transition: all .2s ease-in-out;
+        o-transition: all .2s ease-in-out;
+
+      }
+      .response-field p:not(:last-child):hover {
+        color: var(--light-purple);
+      }
+
       .response-border {
         width: calc(2px + 0.05vw);
         border-radius: calc(2px + 0.05vw);
@@ -779,6 +793,21 @@ h1, .margin-top {
       .response-field p:nth-child(5)
       {
           display: none;
+      }
+
+      .response-field.expanded p:not(:last-child) {
+        -webkit-line-clamp: none;
+        overflow: visible;
+        display: block;
+        height: auto;
+      }
+
+      .response-field.expanded p:nth-child(2),
+      .response-field.expanded p:nth-child(3),
+      .response-field.expanded p:nth-child(4),
+      .response-field.expanded p:nth-child(5)
+      {
+          display: block;
       }
 
 
@@ -824,7 +853,8 @@ h1, .margin-top {
   o-transition: all .2s ease-in-out;
   position: fixed;
    left: 5vw;
-  top: 30vh;
+  /* top: 30vh; */
+  top: calc(100vh - 4vw - 8vh - 12vw);
   width: 10vw;
   height: 10vw;
 
@@ -878,6 +908,7 @@ h1, .margin-top {
         height: 10vw;
         margin-left: 0vw;
         margin-top: 0vw;
+        top: calc(100vh - 4vw - 8vh - 12vw);
   }
   /* 70% {
       -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
@@ -902,6 +933,7 @@ h1, .margin-top {
         transform: scale(1);
         margin-left: -2.5vw;
         margin-top: -2.5vw;
+        top: calc(100vh - 4vw - 8vh - 16vw);
   }
 
   40% {
@@ -918,6 +950,7 @@ h1, .margin-top {
         height: 10vw;
         margin-left: 0vw;
         margin-top: 0vw;
+        top: calc(100vh - 4vw - 8vh - 12vw);
   }
 
   100% {
@@ -934,6 +967,7 @@ h1, .margin-top {
         height: 10vw;
         margin-left: 0vw;
         margin-top: 0vw;
+        top: calc(100vh - 4vw - 8vh - 12vw);
   }
 }
 

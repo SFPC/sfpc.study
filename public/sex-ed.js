@@ -93,6 +93,7 @@ $(document).ready(function() {
             });
         });
 
+
         // INTRO BIO EXPAND
         $(".question").click(function() {
           $(this).children("p").toggleClass('hide');
@@ -109,5 +110,14 @@ $(document).ready(function() {
 
         });
 
+        $(".response-field").click(function() {
+          $(this).toggleClass("expanded");
+        });
+
+
+
 
 });
+
+
+ 
