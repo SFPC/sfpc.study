@@ -254,6 +254,14 @@ p {
           line-height: 1.75;
         }
 
+        .answerer .person-small{
+          box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
+        }
+        .questioner .person-small{
+          /* box-shadow: 0 0 7px var(--green), 0 0 7px #fff, 0 0 7px var(--green); */
+          box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
+        }
+
         .person-small {
           width: calc(var(--font-meta) * 1.2);
           height: calc(var(--font-meta) * 1.75);
@@ -261,7 +269,7 @@ p {
           border-radius: 100%;
           background-size: cover;
           vertical-align: text-bottom;
-          box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
+          /* box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff; */
           text-decoration: none;
           transition: all .2s ease-in-out;
           -moz-transition: all .2s ease-in-out;
@@ -351,10 +359,6 @@ p {
           -moz-transition: all .2s ease-in-out;
           ms-transition: all .2s ease-in-out;
           o-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
-          -moz-transition: all .2s ease-in-out;
-          ms-transition: all .2s ease-in-out;
-          o-transition: all .2s ease-in-out;
         }
 
 
@@ -411,7 +415,17 @@ p {
         }
 
         .three-dot {
-          letter-spacing: 2px;
+          /* letter-spacing: 2px; */
+          color: var(--light-purple);
+          transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          ms-transition: all .2s ease-in-out;
+          o-transition: all .2s ease-in-out;
+        }
+
+        .question:hover .three-dot {
+          /* letter-spacing: 2px; */
+          color: var(--bright-purple);
         }
 
         .response-count {
@@ -1026,12 +1040,15 @@ img.mover-three {
 
   .person-group-medium {
 
-    left: 78vw;
+    /* left: 78vw;
     bottom: 2vh;
     width: 30vw;
     display: flex;
       column-gap: 1vw;
-      margin: 8vw 0 2vw 0;
+      margin: 8vw 0 2vw 0; */
+      display: none;
+      visibility: hidden;
+      opacity: 0;
   }
 
 

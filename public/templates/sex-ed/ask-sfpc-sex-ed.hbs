@@ -181,14 +181,12 @@
               {{#each projects}}
 
 
+
               {{#if Website-Slug}}
 
-              {{#if Publish-Date}}
+              {{#if Editors}}
+ 
 
-
-
-
-              {{else}}
 
               <div id="{{this.[Website-Slug]}}" class="question-block" data-location="">
 
@@ -199,19 +197,29 @@
                           ✼ Pinned to queue
                           <!-- on {{#each this.[Publish-Date]}}{{this}}{{/each}}  -->
                           · Asked by
-                          {{#if Submitter-Name}}{{Submitter-Name}} {{else}}Anonymous {{/if}}
+                          {{#if Submitter-Name}} {{Submitter-Name}} {{else if Editors}} {{Editors}} {{else}} Anonymous {{/if}}
                         </span>
-
 
                           · <span class="response-count">Responses: {{#if Response-Count}} {{Response-Count}} {{else}} 0 {{/if}}</a>
 
-                            <span class="person-group-small">
+
+
+                            <span class="person-group-small questioner">
                             {{#if People}} · <a href="/sex-ed-people">
                               {{#each this.[People]}}
                               <span class="{{this}} person-small"></span>
                               {{/each}} </a>
                               {{/if}}
                             </span>
+                            <!-- <span class="person-group-small answerer">
+                            {{#if People}} <a href="/sex-ed-people">
+                              {{#each this.[People]}}
+                              <span class="{{this}} person-small"></span>
+                              {{/each}} </a>
+                              {{/if}}
+                            </span> -->
+
+
 
                                 <!-- <span class="Melanie person-small"></span>
                                 <span class="Zai person-small"></span>
@@ -234,7 +242,7 @@
 
                     <div class="question medium">
                         <p class="excerpt">
-                          <span class="three-dot"></span>{{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot"></span>
+                          <span class="three-dot"></span>{{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot small"> (↘)</span>
                         </p>
 
                         <p class="full-question hide">
@@ -276,8 +284,9 @@
 
 
               {{#if Publish-Date}}
-              {{#if Website-Slug}}
+              {{#if Editors}}
 
+              {{else}}
 
               <div id="{{this.[Website-Slug]}}" class="question-block" data-location="">
 
@@ -286,7 +295,7 @@
                       <div class="submission-info">
                         <span class="submitter">
                           Posted to queue on {{#each this.[Publish-Date]}}{{this}}{{/each}} · Asked by
-                          {{#if Submitter-Name}}{{Submitter-Name}} {{else}}Anonymous {{/if}}
+                          {{#if Submitter-Name}} {{Submitter-Name}} {{else if Editors}} {{Editors}} {{else}} Anonymous {{/if}}
                         </span>
 
 
@@ -305,7 +314,7 @@
 
                     <div class="question medium">
                         <p class="excerpt">
-                          <span class="three-dot"></span>{{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot"></span>
+                          <span class="three-dot"></span>{{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot small"> (↘)</span>
                         </p>
 
                         <p class="full-question hide">
