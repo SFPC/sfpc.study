@@ -178,9 +178,112 @@
           </div> -->
 
 
+          {{#each projects}}
+
+
+
+          {{#if Website-Slug}}
+
+          {{#if Editors}}
+
+          {{#if Publish-Date}}
+
+
+          {{else}}
+
+
+
+          <div id="{{this.[Website-Slug]}}" class="question-block" data-location="">
+
+
+                <div class="metadata">
+                  <div class="submission-info">
+                    <span class="submitter">
+                      ✼ Pinned to queue
+                      <!-- on {{#each this.[Publish-Date]}}{{this}}{{/each}}  -->
+                      · Asked by
+                      {{#if Submitter-Name}} {{Submitter-Name}} {{else if Editors}} {{Editors}} {{else}} Anonymous {{/if}}
+                    </span>
+
+                      · <span class="response-count">Responses: {{#if Response-Count}} {{Response-Count}} {{else}} 0 {{/if}}</a>
+
+
+
+                        <span class="person-group-small questioner">
+                        {{#if People}} · <a href="/sex-ed-people">
+                          {{#each this.[People]}}
+                          <span class="{{this}} person-small"></span>
+                          {{/each}} </a>
+                          {{/if}}
+                        </span>
+                  </div>
+                  <div class="topic">
+                    {{#each this.[Topic]}}
+                    {{this}}
+
+                    {{#if @last}}
+                    {{/if}}
+
+                    {{/each}}
+
+
+
+                  </div>
+                </div>
+
+                <div class="question medium">
+                    <p class="excerpt hide">
+                      {{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot small"></span>
+                    </p>
+
+                    <p class="full-question">
+                      <i>Dear SFPC: Sex Ed,</i> <BR><BR>
+                      {{"Question"}} <BR><BR>
+
+                      <i>— {{"Sign name"}}</i>
+
+                      <span class="note-editors">{{#if Edited}} <BR><BR> ✼ Note from the Editors: {{Edited}} {{/if}}</span>
+
+
+                        {{#if Response-Count}}
+                        <span class="responses">
+                          <a href="/sex-ed/{{"Website-Slug"}}"
+                          onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=500,height=768 ');return false;">
+                          Read responses...</a>
+                        </span>
+                        {{else}}
+
+
+                        <span class="responses-none">
+                        </span>
+                        {{/if}}
+                    </p>
+
+                </div>
+
+
+          </div>
+
+          {{/if}}
+          {{/if}}
+          {{/if}}
+
+
+
+          {{/each}}
+
+
+
+
+
+
+
+
+
               {{#each projects}}
 
 
+              {{#if Publish-Date}}
 
               {{#if Website-Slug}}
 
@@ -211,19 +314,6 @@
                               {{/each}} </a>
                               {{/if}}
                             </span>
-                            <!-- <span class="person-group-small answerer">
-                            {{#if People}} <a href="/sex-ed-people">
-                              {{#each this.[People]}}
-                              <span class="{{this}} person-small"></span>
-                              {{/each}} </a>
-                              {{/if}}
-                            </span> -->
-
-
-
-                                <!-- <span class="Melanie person-small"></span>
-                                <span class="Zai person-small"></span>
-                                <span class="Neta person-small"></span> -->
 
                       </div>
                       <div class="topic">
@@ -275,10 +365,17 @@
 
               {{/if}}
               {{/if}}
+              {{/if}}
 
 
 
               {{/each}}
+
+
+
+
+
+
 
 
               {{#each projects}}
