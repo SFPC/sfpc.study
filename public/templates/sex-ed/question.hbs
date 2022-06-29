@@ -105,6 +105,13 @@
 
 
               · <span class="response-count">Responses: {{#if Response-Count}} {{Response-Count}} {{else}} 0 {{/if}}</a>
+                <span class="person-group">
+                {{#if People}} · <a href="/sex-ed-people">
+                  {{#each this.[People]}}
+                  <span class="{{this}} person-small"></span>
+                  {{/each}} </a>
+                  {{/if}}
+                </span>
 
             </div>
             <div class="topic"> {{#each this.[Topic]}} {{this}} {{/each}}

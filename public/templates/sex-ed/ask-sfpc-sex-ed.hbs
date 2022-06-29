@@ -71,6 +71,16 @@
         </div>
         </a>
 
+        <a href="/sex-ed-people">
+          <div class="person-group-medium">
+          <span class="DaemonumX person-medium"> </span>
+          <span class="Gabriella person-medium"> </span>
+          <span class="Elizabeth person-medium"> </span>
+          <span class="Zai person-medium"></span>
+          <span class="Neta person-medium"></span>
+          <span class="Melanie person-medium"></span>
+          </div>
+        </a>
 
         <a href="/sex-ed">
           <div class="header">
@@ -170,9 +180,11 @@
 
               {{#each projects}}
 
+
               {{#if Website-Slug}}
 
               {{#if Publish-Date}}
+
 
 
 
@@ -193,6 +205,18 @@
 
                           · <span class="response-count">Responses: {{#if Response-Count}} {{Response-Count}} {{else}} 0 {{/if}}</a>
 
+                            <span class="person-group-small">
+                            {{#if People}} · <a href="/sex-ed-people">
+                              {{#each this.[People]}}
+                              <span class="{{this}} person-small"></span>
+                              {{/each}} </a>
+                              {{/if}}
+                            </span>
+
+                                <!-- <span class="Melanie person-small"></span>
+                                <span class="Zai person-small"></span>
+                                <span class="Neta person-small"></span> -->
+
                       </div>
                       <div class="topic">
                         {{#each this.[Topic]}}
@@ -210,13 +234,13 @@
 
                     <div class="question medium">
                         <p class="excerpt">
-                          <span class="three-dot">...</span>{{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot">...</span>
+                          <span class="three-dot"></span>{{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot"></span>
                         </p>
 
                         <p class="full-question hide">
                           <i>Dear SFPC: Sex Ed,</i> <BR><BR>
                           {{"Question"}} <BR><BR>
-                           
+
                           <i>— {{"Sign name"}}</i>
 
 
@@ -268,6 +292,11 @@
 
                           · <span class="response-count">Responses: {{#if Response-Count}} {{Response-Count}} {{else}} 0 {{/if}}</a>
 
+                            {{#if People}} · <a href="/sex-ed-people">
+                              {{#each this.[People]}}
+                              <span class="{{this}} person-small"></span>
+                              {{/each}} </a>
+                              {{/if}}
                       </div>
                       <div class="topic">
                         {{#each this.[Topic]}} {{this}} {{/each}}
@@ -276,7 +305,7 @@
 
                     <div class="question medium">
                         <p class="excerpt">
-                          <span class="three-dot">...</span>{{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot">...</span>
+                          <span class="three-dot"></span>{{#if Core-Question}}{{Core-Question}}{{else}}{{"Question"}}{{/if}}<span class="three-dot"></span>
                         </p>
 
                         <p class="full-question hide">
