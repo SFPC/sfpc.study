@@ -1359,13 +1359,13 @@ span.reference {
               hyphens: auto;
         }
 
-        .type-list-comma i:last-of-type {
+        /* .type-list-comma i:last-of-type {
           display: none;
         }
 
         .organizers-comma i:last-of-type{
           display: none;
-        }
+        } */
 
         /* .organizers-comma i:nth-last-child(2)::after {
           content: ' and';

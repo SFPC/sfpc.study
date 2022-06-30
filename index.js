@@ -440,7 +440,7 @@ function parseRollup(rollupData){
   if(rollupArray.length > 1){
     return parseArray(rollupArray)
   }
-  else if(rollupArray[0])
+  else if(rollupArray[0] )
     return parseNotionData(rollupArray[0])
   else
     return null
