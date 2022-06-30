@@ -806,6 +806,32 @@ h1, .margin-top {
         content: '(↘\FE0E )'
       } */
 
+      .response.participant audio {
+        filter: drop-shadow(0 0 7px var(--blue));
+      }
+      
+      .response audio {
+        width: 100%;
+        margin: 2vw 0;
+      }
+      .response audio::-webkit-media-controls-panel {
+        background-color: #fff;
+
+      }
+
+      .response audio::-webkit-media-controls-play-button {
+        /* background-color: var(--blue);
+        color: #fff; */
+        border-radius: 50%;
+      }
+
+      .response audio::-webkit-media-controls-play-button:hover {
+        /* background-color: rgba(177,212,224, .7); */
+      }
+
+
+
+
 
 
 

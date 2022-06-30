@@ -552,6 +552,14 @@ function parseBlock(block, contentObj) {
       let pText = formatRichText(block['paragraph'].text)
       contentObj[lastEntry] += `<p>${pText}</p>`
       break;
+    case 'audio':
+      // For an image
+      if(block['audio']?.external?.url)
+        contentObj[lastEntry] += `
+        <audio controls><source src=${block['audio'].external.url}></audio>`
+      else if(block['audio']?.file?.url)
+        contentObj[lastEntry] += `<audio controls><source src=${block['audio'].file.url}></audio>`
+      break;
     default:
       // For an extra type
       return
