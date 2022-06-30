@@ -437,10 +437,10 @@ function prettyDateString(uglyDateString){
 }
 function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
-  if(rollupArray.length > 1){
+  if(rollupArray.length > 0){
     return parseArray(rollupArray)
   }
-  else if(rollupArray[0] )
+  else if(rollupArray[0])
     return parseNotionData(rollupArray[0])
   else
     return null
