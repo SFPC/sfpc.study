@@ -149,6 +149,115 @@
 
           <div class="about">
 
+            {{#if SFPC-Class-Notes}}
+            <div class="response sfpc small">
+              <div class="response-border">
+              </div>
+
+              <div class="response-count">Notes from SFPC: Sex Ed
+              </div>
+                <span class="notes-link">
+                <!-- Notes taken on {{#each this.[Date-of-Notes]}}{{this}}{{/each}}... <span class="three-dot"></span></span> -->
+
+              <div class="response-field class-notes">
+
+
+
+
+                <p>{{{SFPC-Class-Notes}}}</p>
+                <span></span>
+                <!-- <i>— {{Notetaker-Name}}</i> -->
+
+
+
+              </div>
+            </div>
+
+            {{/if}}
+
+
+            {{#if Gabriella}}
+            <div class="response columnist small">
+              <div class="response-border">
+              </div>
+
+
+              <div class="response-count">
+                Guest Columnist
+              </div>  <span class="person-group-small questioner">
+              <a href="/sex-ed-people">
+                <span class="Gabriella person-small"></span>
+               </a>
+              </span>
+
+
+
+              <div class="response-field">
+
+
+                <p>{{{Gabriella}}}</p>
+
+                <BR>
+                <i>— Gabriella Garcia</i>
+              </div>
+            </div>
+
+            {{/if}}
+
+
+            {{#if Elizabeth}}
+            <div class="response columnist small">
+              <div class="response-border">
+              </div>
+
+              <div class="response-count">
+                  Guest Columnist
+                </div>
+               <span class="person-group-small questioner">
+                <a href="/sex-ed-people">
+                  <span class="Elizabeth person-small"></span>
+                 </a>
+                </span>
+
+              <div class="response-field">
+                <p>{{{Elizabeth}}}</p>
+
+                <BR>
+                <i>— Elizabeth Perez</i>
+              </div>
+            </div>
+
+            {{/if}}
+
+
+            {{#if DaemonumX}}
+            <div class="response columnist small">
+              <div class="response-border">
+              </div>
+
+              <div class="response-count">
+                     Guest Columnist
+                   </div>  <span class="person-group-small questioner">
+                   <a href="/sex-ed-people">
+                     <span class="DaemonumX person-small"></span>
+                    </a>
+                   </span>
+
+              <div class="response-field">
+
+
+              <p>{{{DaemonumX}}}</p>
+
+                <BR>
+                <i>— Daemonum X</i>
+              </div>
+            </div>
+
+            {{/if}}
+
+
+
+
             {{#each responses}}
             <div class="response participant small">
               <div class="response-border">

@@ -16,7 +16,7 @@
     --font-meta: calc(12px + 0.1vw);
     --font-medium: 2vw;
     --font-large: 3.5vw;
-    --font-small: calc(16px + 0.3vw);
+    --font-small: calc(15px + 0.3vw);
     --font-small-italic: calc(12px + 0.3vw);
   }
 
@@ -712,6 +712,18 @@ h1, .margin-top {
           opacity: 1;
         }
 
+        .notes-link {
+          cursor: pointer;
+          transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          ms-transition: all .2s ease-in-out;
+          o-transition: all .2s ease-in-out;
+          border-bottom: 2px dotted var(--light-purple);
+        }
+        .notes-link:hover {
+          color: var(--light-purple);
+        }
+
 
 
         .about .responses a, .about .responses{
@@ -773,6 +785,7 @@ h1, .margin-top {
       }
 
 
+
       .response-field p:not(:last-child) {
           display: block; /* Fallback for non-webkit */
           display: -webkit-box;
@@ -783,7 +796,8 @@ h1, .margin-top {
           /* line-height: $line-height; */
           -webkit-line-clamp: 8;
           -webkit-box-orient: vertical;
-          overflow: hidden;
+          overflow-y: hidden;
+          overflow-x: visible;
           text-overflow: ellipsis;
           /* text-overflow: "... (↘\FE0E )" !important; */
       }
@@ -791,6 +805,7 @@ h1, .margin-top {
       /* .response-field p:nth-child(1):after {
         content: '(↘\FE0E )'
       } */
+
 
 
 
@@ -833,7 +848,13 @@ h1, .margin-top {
        .sfpc .response-border {
         background: var(--bright-purple);
         box-shadow:  0 0 7px var(--bright-purple), 0 0 7px var(--bright-purple), 0 0 7px var(--bright-purple);
+      }
 
+
+     .response .response-count {
+        font-size: var(--font-meta);
+        font-family: 'Avara Black';
+        padding: 0 6px !important;
       }
 
       .response.sfpc .response-count {

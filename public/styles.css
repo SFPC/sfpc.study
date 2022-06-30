@@ -1015,6 +1015,8 @@ select#allSections:focus {
       .grid-8 {
         display: flex;
         width: 12.5%;
+        max-width: 100%;
+        overflow: hidden;
       }
 
       .stacked-8 .grid-8 {
@@ -2449,6 +2451,26 @@ section.stacked-4 {
 
         h4.breadcrumb {
           margin: calc(var(--body-margin) * 4) 0 calc(var(--body-margin) * 4) 0;
+        }
+
+
+        .stacked.stacked-8 .grid-1, .stacked-8{
+          grid-template-columns: repeat(4,1.2fr) !important;
+        }
+
+        .grid-8 {
+          display: flex;
+          width: 25%;
+        }
+
+        .stacked-8 .grid-8 {
+          display: flex;
+          width: 100%;
+        }
+
+        .entity .bio.bio-people {
+        width:  calc(23vw - var(--body-margin)*2 - var(--program-margin)/2);
+        height: calc(23vw - var(--body-margin)*2 - var(--program-margin)/2);
         }
 
 
