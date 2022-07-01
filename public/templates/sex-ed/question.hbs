@@ -269,12 +269,23 @@
                 <BR>
                 <i>
 
-                {{#contains @key "Anonymous"}}
+                {{#contains @key "applicant"}}
                   — Anonymous applicant of SFPC: Sex Ed
 
 
                 {{else}}
-                  — {{@key}}
+
+
+
+
+                  {{#contains @key "participant"}}
+                    — Anonymous participant of SFPC: Sex Ed
+                    {{else}}
+                      — {{@key}}
+
+                  {{/contains}}
+
+
                 {{/contains}}
 
                 </i>
