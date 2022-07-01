@@ -135,8 +135,6 @@
 
           {{#if Website-Slug}}
 
-          {{#if Editors}}
-
           {{#if Publish-Date}}
 
 
@@ -152,7 +150,7 @@
                     <span class="submitter">
                       ✼ Pinned to queue
                       · Asked by
-                      {{#if Submitter-Name}} {{Submitter-Name}} {{else if Editors}} {{Editors}} {{else}} Anonymous {{/if}}
+                      {{#if Submitter-Name}} {{Submitter-Name}}  {{else}} Anonymous {{/if}}
                     </span>
 
                       · <span class="response-count">Responses: {{#if Response-Count}} {{Response-Count}} {{else}} 0 {{/if}}</a>
@@ -214,7 +212,6 @@
 
           </div>
 
-          {{/if}}
           {{/if}}
           {{/if}}
 
@@ -339,7 +336,7 @@
                       <div class="submission-info">
                         <span class="submitter">
                           Posted to queue on {{#each this.[Publish-Date]}}{{this}}{{/each}} · Asked by
-                          {{#if Submitter-Name}} {{Submitter-Name}} {{else if Editors}} {{Editors}} {{else}} Anonymous {{/if}}
+                          {{#if Submitter-Name}} {{Submitter-Name}} {{else}} Anonymous {{/if}}
                         </span>
 
 
