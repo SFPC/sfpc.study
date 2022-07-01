@@ -197,6 +197,9 @@
 
                 <p>{{{Gabriella}}}</p>
 
+                {{#if Gabriella-Voice}}
+                <audio controls><source src="{{Gabriella-Voice}}"></audio>
+                {{/if}}
                 <BR>
                 <i>— Gabriella Garcia</i>
               </div>
@@ -222,7 +225,11 @@
               <div class="response-field">
                 <p>{{{Elizabeth}}}</p>
 
-                <BR>
+
+                  {{#if Elizabeth-Voice}}
+                  <audio controls><source src="{{Elizabeth-Voice}}"></audio>
+                  {{/if}}
+                  <BR>
                 <i>— Elizabeth Perez</i>
               </div>
             </div>
@@ -247,6 +254,10 @@
 
 
               <p>{{{DaemonumX}}}</p>
+
+              {{#if DaemonumX-Voice}}
+              <audio controls><source src="{{DaemonumX-Voice}}"></audio>
+              {{/if}}
 
                 <BR>
                 <i>— Daemonum X</i>
