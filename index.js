@@ -101,13 +101,13 @@ app.get("/sex-ed", async (req,res) => {
 //   res.render("sex-ed/"+req.params.slug)
 // })
 
-// app.get("/sex-ed/about", async (req,res) => {
-//   res.render("sex-ed/about")
-// })
-//
-// app.get("/sex-ed/people", async (req,res) => {
-//   res.render("sex-ed/people")
-// })
+app.get("/sex-ed-about", async (req,res) => {
+  res.render("sex-ed/about")
+})
+
+app.get("/sex-ed-people", async (req,res) => {
+  res.render("sex-ed/people")
+})
 
 
 
@@ -236,8 +236,11 @@ app.get("/projects/:slug", async (req,res) => {
     res.render("projectPage", projectData)
   }
 })
+
+
 app.get("/people", async (req,res) => {
-  const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [{timestamp:"created_time", direction:"descending"}], {
+  // const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [{timestamp:"created_time", direction:"descending"}], {
+  const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [{property:"Name", direction:"ascending"}], {
     "or":[
       {property:"Roles", "multi_select": {"contains":"Participant"}},
       {property:"Roles", "multi_select": {"contains":"Organizer"}},
@@ -295,21 +298,24 @@ async function prepareClassData(classData, classSlug){
   people.map((person) => {
     const personData = parseNotionPage(person)
     if(typeof personData["Classes-Teacher"]  == 'string') personData["Classes-Teacher"] = [personData["Classes-Teacher"]]
-    if(personData["Classes-Teacher"] && personData["Classes-Teacher"].includes(classSlug)){
-      if(personData["Classes-Organizer"] && personData["Classes-Organizer"].includes(classSlug))
-        personData.role = "organizer and teacher"
-      else
-        personData.role = "teacher"
-      teachers.unshift(personData)
-    }
-    else if(personData["Classes-Guest"] && personData["Classes-Guest"].includes(classSlug)){
-      personData.role = "guest teacher"
-      guests.unshift(personData)
-    }
-    else if(personData["Classes-Organizer"] && personData["Classes-Organizer"].includes(classSlug)){
-      personData.role = "organizer"
-      organizers.unshift(personData)
-    }
+      if(personData["Classes-Teacher"] && personData["Classes-Teacher"].includes(classSlug)){
+        if(personData["Classes-Organizer"] && personData["Classes-Organizer"].includes(classSlug))
+          personData.role = "organizer and teacher"
+        else
+          personData.role = "teacher"
+        teachers.unshift(personData)
+      }
+      else if(personData["Classes-Guest"] && personData["Classes-Guest"].includes(classSlug)){
+        personData.role = "guest teacher"
+        guests.unshift(personData)
+      }
+      else if(personData["Classes-Organizer"] && personData["Classes-Organizer"].includes(classSlug)){
+        if(personData["Classes-Teacher"] && personData["Classes-Teacher"].includes(classSlug))
+          personData.role = "organizer and teacher"
+        else
+          personData.role = "organizer"
+        organizers.unshift(personData)
+      }
   })
   //list main teacher first
   const foundIdx = teachers.findIndex(el => el.Name == response['Teacher Names'][0])
@@ -440,7 +446,7 @@ function prettyDateString(uglyDateString){
 }
 function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
-  if(rollupArray.length > 1){
+  if(rollupArray.length > 0){
     return parseArray(rollupArray)
   }
   else if(rollupArray[0])
@@ -548,6 +554,14 @@ function parseBlock(block, contentObj) {
       // For a paragraph
       let pText = formatRichText(block['paragraph'].text)
       contentObj[lastEntry] += `<p>${pText}</p>`
+      break;
+    case 'audio':
+      // For an image
+      if(block['audio']?.external?.url)
+        contentObj[lastEntry] += `
+        <audio controls><source src=${block['audio'].external.url}></audio>`
+      else if(block['audio']?.file?.url)
+        contentObj[lastEntry] += `<audio controls><source src=${block['audio'].file.url}></audio>`
       break;
     default:
       // For an extra type

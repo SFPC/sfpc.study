@@ -361,6 +361,18 @@ $(document).ready(function() {
 
 
 
+        $(".grid-8.entity").click(function() {
+          $(this).toggleClass('hide-expanded');
+          $(this).toggleClass('active');
+
+          $(".grid-8.entity").not(this).removeClass('active');
+          $(".grid-8.entity").not(this).addClass('hide-expanded');
+
+        });
+
+
+
+
         // DO IF MOBILE
           // let mobileBrowser = checkMobile()
           // if(mobileBrowser){
@@ -382,7 +394,7 @@ $(document).ready(function() {
                , "Poetic computation can’t be separated from its historical, political and social impact."
                , "Poetic computation is when technology is used for critical thinking and aesthetic inquiry."
                , "Poetic computation is a colorful theory of culpability."
-               , "Poetic computation is transforming binary through feeling." 
+               , "Poetic computation is transforming binary through feeling."
           ];
 
           randDef = poeticcomputation[Math.floor( Math.random() * poeticcomputation.length )];

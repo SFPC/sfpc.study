@@ -51,6 +51,8 @@ function startMoving(img, rate) {
 
 $(document).ready(function() {
 
+    $(".mover").removeClass('hide');
+
         // $("#shell").append(
         //   '<img class="mover mover-one" onload="startMoving(this)" src="/images/sessions/sex-ed/bg1.jpg" border="0">
         //   ');
@@ -91,6 +93,7 @@ $(document).ready(function() {
             });
         });
 
+
         // INTRO BIO EXPAND
         $(".question").click(function() {
           $(this).children("p").toggleClass('hide');
@@ -107,5 +110,14 @@ $(document).ready(function() {
 
         });
 
+        $(".response-field").click(function() {
+          $(this).toggleClass("expanded");
+        });
+
+
+
 
 });
+
+
+ 

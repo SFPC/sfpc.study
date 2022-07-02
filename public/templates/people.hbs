@@ -128,14 +128,13 @@
               <!-- <dl class="accordion a-stewards"> -->
 
               {{#each people}}
-              <div id="" class="grid-8 entity featured" data-location="">
+              <div id="" class="grid-8 entity featured hide-expanded">
                 <div class="featured-text">
 
                   <span class="bio bio-people" style="background-image: url('{{this.[Image].[0]}}')" role="img"></span>
 
 
                   <div class="top">
-                    <h4 class="type type-list-comma"><a href="/projects/{{this.[Website-Slug]}}">{{#each this.[Project-Type]}} {{this}}<i class="comma">,</i> {{/each}}</a></h4>
 
                     <h7>{{this.Name}}</h7>
                   </div>
