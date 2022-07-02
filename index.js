@@ -376,23 +376,26 @@ function parseClassData(apiResponse){
   let returnObj = parseNotionPage(apiResponse);
   //this is the data that will be passes to the class template
 
-  returnObj.name=classInfo.Name.title[0].plain_text,
-  returnObj.teachers=parseTeachers(classInfo),
-  returnObj.promoImage=parseNotionData(classInfo["Promo Image"])?.[0],
-  returnObj.bannerImage=parseNotionData(classInfo["Banner Image"])?.[0],
-  returnObj.promoImages=parseNotionData(classInfo["Promo Image"]),
-  returnObj.startDate=prettyDateString(classInfo["Date"]?.date?.start),
-  returnObj.endDate=prettyDateString(classInfo["Date"]?.date?.end),
-  returnObj.numberOfClasses=classInfo["Number of Classes"].number,
-  returnObj.time=classInfo["Time"].rich_text[0]?.plain_text,
-  returnObj.location=classInfo["Location"]?.select?.name,
-  returnObj.cost=classInfo["Cost"]?.number,
-  returnObj.applicationEndDate=prettyDateString(classInfo["Application End Date"]?.date?.start),
-  returnObj.applicationsOpen = new Date() <= new Date(returnObj?.applicationEndDate)
-  returnObj.applicationLink=classInfo["Application URL"]?.url,
-  returnObj.description=classInfo["Short Description"]?.rich_text[0]?.plain_text,
-  returnObj.active=classInfo["Active"]?.formula.boolean,
-  returnObj.url=classInfo["Webpage URL"]?.url,
+  returnObj.name=classInfo.Name.title[0].plain_text
+  returnObj.teachers=parseTeachers(classInfo)
+  returnObj.promoImage=parseNotionData(classInfo["Promo Image"])?.[0]
+  returnObj.bannerImage=parseNotionData(classInfo["Banner Image"])?.[0]
+  returnObj.promoImages=parseNotionData(classInfo["Promo Image"])
+  returnObj.startDate=prettyDateString(classInfo["Date"]?.date?.start)
+  returnObj.endDate=prettyDateString(classInfo["Date"]?.date?.end)
+  returnObj.numberOfClasses=classInfo["Number of Classes"].number
+  returnObj.time=classInfo["Time"].rich_text[0]?.plain_text
+  returnObj.location=classInfo["Location"]?.select?.name
+  returnObj.cost=classInfo["Cost"]?.number
+  returnObj.applicationEndDate=prettyDateString(classInfo["Application End Date"]?.date?.start)
+  let today = new Date()
+  today.setTime(today.getTime() - 600 * 60 * 1000)
+  today = new Date(prettyDateString(today.toISOString().slice(0, 10)))
+  returnObj.applicationsOpen = today <= new Date(returnObj.applicationEndDate)
+  returnObj.applicationLink=classInfo["Application URL"]?.url
+  returnObj.description=classInfo["Short Description"]?.rich_text[0]?.plain_text
+  returnObj.active=classInfo["Active"]?.formula.boolean
+  returnObj.url=classInfo["Webpage URL"]?.url
   returnObj.session=parseRollup(classInfo["Session Name"])[0]?.plain_text,
   returnObj.notifyDate=prettyDateString(classInfo["Notification Date"]?.date?.start)
   return returnObj
