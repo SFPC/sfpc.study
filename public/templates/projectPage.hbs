@@ -104,20 +104,6 @@
                       </div>
 
 
-                        {{#if Website-Session}}
-                        <div class="details">
-                          <div class="labels">Program</div>
-                          <div class="labels-info" id="teachers-list">
-
-                            {{#if Website-Class}}
-                            {{#each Website-Class}}{{this}}{{#unless @last}}, {{/unless}} {{/each}} {{/if}}
-
-                            {{#if Website-Class}}— {{/if}}{{#each Website-Session}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
-
-                          </div>
-                        </div>
-                        {{/if}}
-
 
                       {{#if Website-Organizers}}
                       <div class="details">
@@ -145,6 +131,20 @@
                       </div>
                       {{/if}}
 
+
+                                              {{#if Website-Session}}
+                                              <div class="details">
+                                                <div class="labels">Program</div>
+                                                <div class="labels-info" id="teachers-list">
+
+                                                  {{#if Website-Class}}
+                                                  {{#each Website-Class}}{{this}}{{#unless @last}}, {{/unless}} {{/each}} {{/if}}
+
+                                                  {{#if Website-Class}}— {{/if}}{{#each Website-Session}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+
+                                                </div>
+                                              </div>
+                                              {{/if}}
 
 
                       <p class="large apply">
