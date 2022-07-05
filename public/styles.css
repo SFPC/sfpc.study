@@ -240,7 +240,7 @@ h1 {
     transform: rotate(0deg) !important; */
 }
 
-        h1, p.large, .mobile-menu{
+        h1, p.large, .mobile-menu, a.large{
           font-size: var(--large-text) !important;
           font-weight: lighter;
           font-family: var(--main-title-font);
@@ -362,7 +362,7 @@ margin-bottom: calc(var(--text-margin)/3);
             text-decoration: none;
         }
 
-        section .grid-2 p.large a{
+        section .grid-2 p.large a, a.large{
           font-weight: lighter;
         }
 
@@ -1291,7 +1291,7 @@ span.reference {
   scroll-margin: var(--body-margin);
 }
 
-        .intro a, p.large a {
+        .intro a, p.large a, a.large {
           text-underline-offset: 4px;
           text-decoration-thickness: 3px;
         }
@@ -2414,7 +2414,7 @@ section.stacked-4 {
             width: calc(50% - var(--body-margin));
         }
 
-        .intro a, p.large a {
+        .intro a, p.large a, a.large {
             text-underline-offset: 3px;
             text-decoration-thickness: 2px;
         }
