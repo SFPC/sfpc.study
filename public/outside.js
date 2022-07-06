@@ -151,6 +151,8 @@ $( document ).ready(function() {
         var a = Math.random() * 10 - 5;
         $(this).css('transform', 'rotate(' + a + 'deg)');})
     });
+ 
+
 })(jQuery);
 
 (function($) {

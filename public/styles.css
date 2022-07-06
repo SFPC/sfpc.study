@@ -240,7 +240,8 @@ h1 {
     transform: rotate(0deg) !important; */
 }
 
-        h1, p.large, .mobile-menu, a.large{
+        h1, p.large, .mobile-menu, a.large,
+        h8 {
           font-size: var(--large-text) !important;
           font-weight: lighter;
           font-family: var(--main-title-font);
@@ -1962,7 +1963,7 @@ section.stacked-4 {
           margin-top: calc(var(--body-margin)*2);
         }
 
-        span#cost{
+        span#cost, h3 span{
             background: var(--text-link);
             border-radius: var(--border-rad);
             padding: 1px 5px;
