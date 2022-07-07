@@ -294,6 +294,12 @@ margin-bottom: calc(var(--text-margin)/3);
 
 }
 
+.labels-info h3  {
+margin-bottom: 0px !important;
+margin-top: calc(var(--body-margin)/3);
+
+}
+
       section .grid-2 ul ul  {
           padding-inline-start: calc(var(--body-margin)*6 * -1);
       }

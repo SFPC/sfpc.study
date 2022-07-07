@@ -146,6 +146,18 @@
                                               </div>
                                               {{/if}}
 
+                                              {{#if Cost}}
+
+                                              <div class="details">
+                                                <div class="labels">Cost</div>
+                                                <div class="labels-info" id="">
+                                                  <h3>
+                                                <span id=”cost”>${{Cost}}</span>
+                                                 {{{Cost-Details}}}</h3>
+                                                </div>
+                                              </div>
+                                                  {{/if}}
+
 
                       <p class="large apply">
                         {{#if Website-URL}}
@@ -160,14 +172,14 @@
                       </p>
 
 
-                      {{#if Cost}}
+                      <!-- {{#if Cost}}
                         <h3>
                       <span id=”cost”>${{Cost}}</span>
                        {{{Cost-Details}}}</h3>
-                      {{/if}}
+                      {{/if}} -->
 
                       {{#if More-Info}}
-                      <p> 
+                      <p>
                      {{{More-Info}}}</p>
                       {{/if}}
 
