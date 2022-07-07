@@ -231,30 +231,11 @@ app.get("/projects/:slug", async (req,res) => {
   const response = await getDatabaseEntry("713f24806a524c5e892971e4fbf5c9dd", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
   console.log(response)
   if(response){
-    // const projectData = parseNotionPage(response)
-    // console.log(projectData)
-    // res.render("projectPage", projectData)
-    const projectPageContent = await getPageContent(response.id, "web content")
-    projectData.pageContent = projectPageContent
+    const projectData = parseNotionPage(response)
+    console.log(projectData)
     res.render("projectPage", projectData)
   }
 })
-
-
-// if(response){
-//   const projectData = parseNotionPage(response)
-//   // console.log(response.id)
-//   console.log(projectData)
-//   const responses = await getPageContent(response.id, "web content")
-//   projectData.responses = responses
-//   console.log(projectData)
-//   res.render("sex-ed/question", projectData)
-// }
-//
-// const projectPageContent = await getPageContent(response.id, "name of toggle")
-// projectData.pageContent = projectPageContent
-// res.render("templateName", projectData)
-//
 
 
 app.get("/people", async (req,res) => {
