@@ -160,6 +160,16 @@
                       </p>
 
 
+                      {{#if Cost}}
+                        <h3>
+                      <span id=”cost”>${{Cost}}</span>
+                       {{{Cost-Details}}}</h3>
+                      {{/if}}
+
+                      {{#if More-Info}}
+                      <p> 
+                     {{{More-Info}}}</p>
+                      {{/if}}
 
                     </div>
                 </section>
@@ -186,6 +196,9 @@
                     </div>
                 </section>
                 {{/if}}
+
+
+
 
                 {{#if Images}}
 
