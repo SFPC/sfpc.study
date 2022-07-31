@@ -26,7 +26,7 @@
     --sex-ed-title-font: 'Avara', sans-serif;
     --sex-ed-header-font: 'Avara', sans-serif;
     --sex-ed-body-font: 'Avara', sans-serif;
-    --sex-ed-special-font: Courier, sans-serif;
+    --sex-ed-special-font: courier, 'Courier', sans-serif;
 
     --networked-performance-title-font: soda-script, sans-serif;
     --networked-performance-header-font: soda-script, sans-serif;
@@ -41,7 +41,7 @@
     --main-title-font: 'Hershey', sans-serif;
     --main-header-font: 'Hershey', sans-serif;
     --main-body-font: 'Hershey', sans-serif;
-    --main-special-font: Courier, sans-serif;
+    --main-special-font: courier, 'Courier', sans-serif;
 
     --fallwinter-2122-title-font: 'Alte', 'Hershey', sans-serif;
     --fallwinter-2122-header-font: 'Alte', 'Hershey', sans-serif;
@@ -1827,7 +1827,7 @@ section.stacked-4 {
             padding:  var(--program-margin);
             border-width: 4px 1px 1px 1px;
             border-style: solid;
-            font-family: courier;
+            font-family: courier, 'Courier';
             box-sizing: border-box;
             color: var(--text-link);
           }

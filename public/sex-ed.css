@@ -412,6 +412,9 @@ p {
         .Gabriella {
           background-image: url('/images/people/gabriella-garcia.jpg')
         }
+        .Shawne {
+          background-image: url('/images/people/shawne-michaelain-holloway.jpg')
+        }
 
 
         .topic {
@@ -868,7 +871,7 @@ h1, .margin-top {
 
       .response-field a {
         color: var(--dark-purple);
-        border-bottom: 2px dotted var(--light-purple); 
+        border-bottom: 2px dotted var(--light-purple);
       }
 
 
