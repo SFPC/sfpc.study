@@ -36,21 +36,18 @@ app.get("/sessions/spring-22", (req,res) => {
   res.render("spring-22/session")
 })
 
-
-app.get("/participate/fall-22", async (req, res) => {
-  res.render("fall-22/session")
-})
-
-app.get("/sessions/fall-22", (req,res) => {
-  res.render("fall-22/session")
-})
-
 app.get("/participate/summer-22", async (req, res) => {
   // TODO: load session page
   res.render("summer-22/session")
 
 })
 
+
+app.get("/participate/fall-22", async (req, res) => {
+  // TODO: load session page
+  res.render("fall-22/session")
+
+})
 
 //
 // app.get("/sex-ed", (req,res) => {
