@@ -20,9 +20,9 @@
 
 
 
-  {{#if applicationEndDate}}
+{{#if applicationEndDate}}
 
-  <div class="break"></div>
+<div class="break"></div>
 
 
 <section id="section-apply">
@@ -64,7 +64,8 @@
 
   <div class="grid-2">
     <p>
-      <span id="cost">${{cost}}</span> + Withfriends payment processing fees for <span id="number-classes">{{numberOfClasses}}</span>
+      <span id="cost">${{cost}}</span> + Withfriends payment processing fees for <span
+        id="number-classes">{{numberOfClasses}}</span>
       classes.
     </p>
     <p>Upon payment, your space in the class will be reserved.
@@ -148,9 +149,14 @@
 <div class="break"></div>
 {{#eq [Session Slug] "spring-22"}}
 {{> spring22classBlock}}
-{{else}}
+{{/eq}}
+{{#eq [Session Slug].[0] "summer-22"}}
 {{> summer22classBlock}}
 {{/eq}}
+{{#eq [Session Slug].[0] "fall-22"}}
+{{> fall22classBlock}}
+{{/eq}}
+
 
 <div class="break-noline"></div>
 
