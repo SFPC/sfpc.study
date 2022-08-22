@@ -276,6 +276,15 @@ app.get("/people/:session", async (req,res) => {
   res.render("peopleSession", {people: peopleData, classes:classesInfo})
 })
 
+app.get("/blog/:slug", async (req,res) => {
+  const response = await getDatabaseEntry("13a0b281ee854238a130030e41cfb20f", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  const parsedData = parseNotionPage(response)
+  console.log(parsedData)
+  const pageContent = await getBlocks(response.id)
+  const postHTML = parsePageContentHTML(pageContent)
+  res.render("blog/post", {title: parsedData.Name, postHTML:postHTML})
+})
+
 app.listen(PORT, console.log(`server started on ${PORT}`))
 
 //
@@ -286,7 +295,7 @@ async function prepareClassData(classData, classSlug){
   const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
   const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
   let response = parseClassData(classData)
-  response.pageContent =  parsePageContent(webContent);
+  response.pageContent =  parsePageContentIntoKeyedObject(webContent);
   const people = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
     "or":[
       {property:"Classes-Teacher", "rollup": { "any": { "rich_text": { "equals": classSlug } }}},
@@ -373,7 +382,7 @@ async function getPageContent(notionId, contentToggleName="web content"){
   console.log(contentBlockId)
   const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
   console.log(webContent)
-  return parsePageContent(webContent);
+  return parsePageContentIntoKeyedObject(webContent);
 }
   //
 // Notion Parsing Functions Below
@@ -523,15 +532,15 @@ function parseNotionData(dataObj){
   else
     return null
 }
-function parsePageContent(data) {
+function parsePageContentIntoKeyedObject(data) {
   let pageContent = {}
   for (let i = 0; i < data.length; i++) {
-    parseBlock(data[i], pageContent)
+    parseBlockIntoKeyedObject(data[i], pageContent)
   }
   return pageContent
 }
 
-function parseBlock(block, contentObj) {
+function parseBlockIntoKeyedObject(block, contentObj) {
   const lastEntry = Object.keys(contentObj).pop();
   if (!lastEntry && block.type !== 'heading_2') return
   switch (block.type) {
@@ -570,6 +579,59 @@ function parseBlock(block, contentObj) {
       return
   }
 }
+function parsePageContentHTML(data) {
+  let pageHTML = ""
+  console.log("parsing")
+  for (let i = 0; i < data.length; i++) {
+    pageHTML = parseBlockHTML(data[i], pageHTML)
+  }
+  return pageHTML
+}
+
+function parseBlockHTML(block, pageHTML) {
+  console.log("page html: " + pageHTML)
+  switch (block.type) {
+    case 'heading_1':
+      // For a heading
+      let h1Text = formatRichText(block['heading_1'].text)
+      console.log(h1Text)
+      return pageHTML += `<h2>${h1Text}</h2>`
+    case 'heading_2':
+      // For a heading
+      let h2Text = formatRichText(block['heading_2'].text)
+      return pageHTML += `<h3>${h2Text}</h3>`
+    case 'heading_3':
+      // For a heading
+      let h3Text = formatRichText(block['heading_3'].text)
+      return pageHTML += `<h4>${h3Text}</h4>`
+    case 'image':
+      // For an image
+      if(block['image']?.external?.url)
+        return pageHTML += `<img src=${block['image'].external.url} />`
+      else if(block['image']?.file?.url)
+        return pageHTML += `<img src=${block['image'].file.url} />`
+      break;
+    case 'bulleted_list_item':
+      // For an unordered list
+      let bulletText = formatRichText(block['bulleted_list_item'].text)
+      return pageHTML += `<ul><li>${bulletText}</li></ul >`
+    case 'paragraph':
+      // For a paragraph
+      let pText = formatRichText(block['paragraph'].text)
+      return pageHTML += `<p>${pText}</p>`
+    case 'audio':
+      // For an image
+      if(block['audio']?.external?.url)
+        return pageHTML += `
+        <audio controls><source src=${block['audio'].external.url}></audio>`
+      else if(block['audio']?.file?.url)
+        return pageHTML += `<audio controls><source src=${block['audio'].file.url}></audio>`
+      break;
+    default:
+      // For an extra type
+      return 
+  }
+}
 function formatRichText(textArray) {
   if(textArray.length == 0) return ""
   let formattedText = ""
@@ -579,6 +641,8 @@ function formatRichText(textArray) {
       tempText = `<b>${tempText}</b>`
     if (textArray[i].annotations.italic)
       tempText = `<em>${tempText}</em>`
+    if (textArray[i].href)
+      tempText = `<a href="${textArray[i].href}">${tempText}</a>`
     formattedText += tempText
   }
   return formattedText
