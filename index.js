@@ -589,7 +589,6 @@ function parsePageContentHTML(data) {
 }
 
 function parseBlockHTML(block, pageHTML) {
-  console.log("page html: " + pageHTML)
   switch (block.type) {
     case 'heading_1':
       // For a heading
@@ -627,8 +626,11 @@ function parseBlockHTML(block, pageHTML) {
       else if(block['audio']?.file?.url)
         return pageHTML += `<audio controls><source src=${block['audio'].file.url}></audio>`
       break;
+    case 'divider':
+      return pageHTML += "<hr />"
     default:
       // For an extra type
+      console.log(block.type)
       return 
   }
 }
