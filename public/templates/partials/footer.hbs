@@ -4,10 +4,10 @@
 
 
 
-      <div class="website-grid grid-hide {{#if "Session Slug"}} {{"Session Slug"}} {{else}} sfpc {{/if}} sfpc
+      <div class="website-grid grid-hide {{#if "Session Slug"}} {{"Session Slug"}} {{else}} {{#if "Website-Slug"}} {{"Website-Slug"}} {{else}} sfpc {{/if}} {{/if}} sfpc
 
         ">
-        <div class="grid-inner {{#if "Session Slug"}} {{"Session Slug"}} {{else}} sfpc {{/if}} sfpc">
+        <div class="grid-inner {{#if "Session Slug"}} {{"Session Slug"}} {{else}} {{#if "Website-Slug"}} {{"Website-Slug"}} {{else}} sfpc {{/if}} {{/if}} sfpc">
         <section>
           <div class="grid-2">
             <div class="chars chars1"></div>

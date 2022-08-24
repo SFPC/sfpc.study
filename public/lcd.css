@@ -2,15 +2,15 @@
 
     --background: #e5e3e4 ;
      --text-color: #555658  ;
-    --text-link: var(--summer-22-link) ;
+    --text-link: var(--fall-22-special-text) ;
     --box-shadow: rgba(0,0,0,.3);
 
 
-    --fall-22-background: #fff;
-    --fall-22-text: #FF4C00;
-    --fall-22-text-on-bg: #fff;
-    --fall-22-link:  #458DF9;
-     --fall-22-special-text:  #FF4C00;
+    --fall-22-background: #37903d;
+    --fall-22-text: #d3dbe0;
+    --fall-22-text-on-bg: #d3dbe0;
+    --fall-22-link:  #4c0191;
+     --fall-22-special-text:  #5b922c;
 
     --sex-ed-background: #33f24c ;
     --sex-ed-text: #5d4486  ;
@@ -232,9 +232,40 @@ select#allSections {
 
 .fall-22,
 .fall-22.featured.session,
+.fall-22.featured  {
+ /* background-color: var(--sex-ed-background)  !important; */
+ color: var(--fall-22-text);
+ box-sizing: border-box;
+ border-color: var(--fall-22-text);
+ background-image: url('images/sessions/fall-22/bg.jpg');
+ background-position: bottom;
+ background-repeat: repeat;
+ background-size: 100%;
+}
+
+.fall-22.featured:hover {
+  background-size: 150%;
+}
+
+
+
+     .shell.fall-22 {
+       background-image:url('images/sessions/fall-22/bg.jpg');
+       /* background-position: bottom; */
+       /* background-repeat: no-repeat;
+       background-size: cover; */
+       background-position: top left;
+       background-repeat: repeat;
+       background-size: 100% auto;
+     }
+
+
+
+.fall-22,
+.fall-22.featured.session,
 .shell .fall-22,
 .fall-22.featured  {
-  background-color: var(--fall-22-background)  !important;
+  /* background-color: var(--fall-22-background)  !important; */
   color: var(--fall-22-text);
   box-sizing: border-box;
   border-color: var(--fall-22-text);
@@ -359,7 +390,8 @@ select#allSections {
       .fall-22 section ul,
       .fall-22 .website-grid
        {
-        background-color: var(--fall-22-background);
+        /* background-color: var(--fall-22-background); */
+        background: none;
         color:  var(--fall-22-text) !important;
         border-radius: var(--border-rad);
       }
@@ -378,13 +410,13 @@ select#allSections {
       }
 
       .fall-22 .break {
-        border: 0px !important;
-        margin-bottom: 0px !important;
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
         border-color: var(--fall-22-text);
       }
 
       .shell.fall-22 {
-        background-image: url('images/sessions/fall-22/bg-b.jpg');
+        background-image: url('images/sessions/fall-22/bg.jpg');
         background-size: cover;
       }
 
@@ -399,20 +431,6 @@ select#allSections {
 
 /* /////////// start SEX ED ///////////////////////////////*/
 
-
-select#allSections {
-  background: rgba(255,255,255,.8);
-  backdrop-filter: blur(3px);
-}
-
-.shell {
-  border-color: #fff !important;
-}
-
-
-.test, .block-text {
-  border-color: var(--text-color);
-}
 
 
 
