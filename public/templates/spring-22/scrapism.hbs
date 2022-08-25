@@ -2,186 +2,205 @@
 <html lang="en">
 
 <head>
-    <title>School for Poetic Computation</title>
+  <title>School for Poetic Computation</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="title" content="School for Poetic Computation">
-    <meta name="description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sfpc.study/">
-    <meta property="og:title" content="School for Poetic Computationn">
-    <meta property="og:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
-    <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sfpc.study/">
-    <meta property="twitter:title" content="School for Poetic Computation">
-    <meta property="twitter:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
-    <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
-    <link href="/styles.css" rel="stylesheet">
-    <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
-    <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="title" content="School for Poetic Computation">
+  <meta name="description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sfpc.study/">
+  <meta property="og:title" content="School for Poetic Computation">
+  <meta property="og:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sfpc.study/">
+  <meta property="twitter:title" content="School for Poetic Computation">
+  <meta property="twitter:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <link href="/styles.css" rel="stylesheet">
+  <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
+  <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico" />
 
-    <script src="/jquery-3.6.0.min.js"></script>
+  <script src="/jquery-3.6.0.min.js"></script>
 
-    <!-- stats -->
-    <script type="text/javascript">
-    var sc_project=12714909;
-    var sc_invisible=1;
-    var sc_security="6086a46c";
-    </script>
-    <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript><div class="statcounter"><a title="website statistics"
-    href="https://statcounter.com/" target="_blank"><img class="statcounter"
-    src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- stats -->
+  <script type="text/javascript">
+    var sc_project = 12714909;
+    var sc_invisible = 1;
+    var sc_security = "6086a46c";
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="website statistics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
 
 
-    <script data-goatcounter="https://sfpc.goatcounter.com/count"
-    async src="//gc.zgo.at/count.js"></script>
-    <!-- end stats -->
+  <script data-goatcounter="https://sfpc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <!-- end stats -->
 </head>
 
 
 <body>
-      {{> header}}
+  {{> header}}
   {{> footer}}
 
-      <div class="crt-overlay crt-overlay-fullsize"></div>
+  <div class="crt-overlay crt-overlay-fullsize"></div>
 
-      <div id="shell" class="shell shell-fullsize about spring-22">
+  <div id="shell" class="shell shell-fullsize about spring-22">
 
-        <div class="selectors">
-        <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
-              <option value="class">Jump to section...</option>
-              <option value="section-class-details">ABOUT </option>
-              <option value="section-class-details">--Details & Description</option>
-              <option value="section-course-of-study">--Course of Study</option>
-              <option value="section-expectations">--Expectations</option>
-              <option value="section-teachers">--Teachers</option>
-              <option value="section-for-me">--Is this for me?</option>
-              <option value="section-accessibility">--Accessibility</option>
-              <option value="section-apply">APPLY NOW</option>
-              <option value="section-cost">FINANCES</option>
-              <option value="section-cost">--Cost of Attendence</option>
-              <option value="section-scholarships">--Scholarships</option>
-              <option value="section-donate">--Donate to SFPC</option>
-              <option value="section-refund">--Refund Policy</option>
-              <option value="section-classes">OPPORTUNITIES</option>
-            </select>
+    <div class="selectors">
+      <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
+        <option value="class">Jump to section...</option>
+        <option value="section-class-details">ABOUT </option>
+        <option value="section-class-details">--Details & Description</option>
+        <option value="section-course-of-study">--Course of Study</option>
+        <option value="section-expectations">--Expectations</option>
+        <option value="section-teachers">--Teachers</option>
+        <option value="section-for-me">--Is this for me?</option>
+        <option value="section-accessibility">--Accessibility</option>
+        <option value="section-apply">APPLY NOW</option>
+        <option value="section-cost">FINANCES</option>
+        <option value="section-cost">--Cost of Attendence</option>
+        <option value="section-scholarships">--Scholarships</option>
+        <option value="section-donate">--Donate to SFPC</option>
+        <option value="section-refund">--Refund Policy</option>
+        <option value="section-classes">OPPORTUNITIES</option>
+      </select>
+    </div>
+
+
+
+
+
+    <h4 class="breadcrumb hide-content">
+      <a href="/participate.html">participate</a>
+      <span class="caret"></span>
+      <a href="">sessions</a>
+      <span class="caret"></span>
+      <a href="/sessions/spring-22" id="session-link"><span id="session-name">spring 2022</span></a>
+    </h4>
+
+
+
+    <div id="class" class="hide-content appsClosed beforeClass shell-content">
+
+
+      <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
+
+      <section id="section-class-details">
+        <div class="grid-2">
+          <h1><span id="class-name">{{name}}</span></h1>
+        </div>
+
+        <div class="grid-2 class-details">
+
+
+
+          <img id="class-image" src="{{promoImage}}">
+
+          <div class="details">
+            <div class="labels">Teachers</div>
+            <div class="labels-info" id="teachers-list">{{teachers.[0].name}} with {{teachers.[1].name}} and
+              {{teachers.[2].name}}</div>
+          </div>
+          <div class="details show-duringClass">
+            <div class="labels">Participants</div>
+            <div class="labels-info"><span tabindex="0" class="expand"><a class="link">18 participants...</a>
+                <span class="expanded hide-expanded">
+                  Anna Rulloda, Heidi He, Hermann Zschiegner, Hiroyuki Sakamoto, Jenna Murphy, Joanne Magbitang, Kate
+                  Yourke, Ladan Bahmani, Lillian-Yvonne Bertram, Matthis Grunsky, Mauricio Román, Maya Charles, Michelle
+                  Chang, Salem Abdulla, Sara K.R., Sara Martinez, Shen-Shen Wu, Thomas (Luca) Bailey and Yadira Sanchez
+                  <a class="more-about-cost">learn more...</a>
+                </span></span>
+            </div>
+          </div>
+          <div class="details">
+            <div class="labels">Date </div>
+            <div class="labels-info">
+              <span id="date">{{startDate}} to {{endDate}}</span> (<span id="number-classes">{{numberOfClasses}}</span>
+              classes)
+            </div>
+          </div>
+          <div class="details">
+            <div class="labels">Time </div>
+            <div class="labels-info" id="time">{{time}}
+            </div>
+          </div>
+          <div class="details">
+            <div class="labels">Location </div>
+            <div class="labels-info" id="location">{{location}}</div>
+          </div>
+          <div class="details">
+            <div class="labels">Cost </div>
+            <div class="labels-info"><span id="cost">${{cost}}</span> Scholarships available <a
+                class="more-about-cost">learn more...</a></div>
+          </div>
+          <div class="details">
+            <div class="labels">Deadline </div>
+            <div class="labels-info">
+              <span class="hide-appsClosed">Applications open until</span>
+              <span class="hide-appsOpen">Applications closed on</span>
+              <span id="deadline">{{applicationEndDate}}</span>
+            </div>
           </div>
 
+          <p class="large apply hide-appsClosed">
+            <a href="{{applicationLink}}" target="_blank" id="application-link">Apply Now</a>
+          </p>
 
 
+        </div>
+      </section>
+
+      <div class="break"></div>
 
 
-            <h4 class="breadcrumb hide-content">
-              <a href="/participate.html">participate</a>
-              <span class="caret"></span>
-              <a href="">sessions</a>
-              <span class="caret"></span>
-              <a href="/sessions/spring-22" id="session-link"><span id="session-name">spring 2022</span></a>
-            </h4>
+      <section id="section-description">
+        <div class="grid-2">
+          <h1>Description </h1>
+        </div>
+
+        <div class="grid-2">
+          <p>
+            <!-- {{description}} -->
+            Web scraping is the process of automatically downloading and manipulating web content. It's a common
+            practice in silicon valley, where companies large and small transform open html pages into commodified
+            datasets.
+            <BR><BR>
+            As an alternative, "Scrapism" is the practice of web scraping for artistic, emotional, and critical ends. By
+            combining aspects of data journalism, conceptual art, and hoarding, it offers a methodology to make sense of
+            a world in which everything we do is mediated by internet companies. These companies surveil us, exploit and
+            financialize our experiences, and attempt to vacuum up every trace we leave behind. But in turn they also
+            leave their own traces online, traces which when collected, filtered, and sorted can reveal or even
+            intervene in power relations.
+            <BR><BR>
+            In this class participants will learn how to scrape massive quantities of material from the web with Python,
+            and then use this source material in projects that probe the politics and poetics of the internet. We will
+            cover multiple web scraping techniques, as well as different techniques for manipulating and presenting
+            textual content.
 
 
+          </p>
+        </div>
+      </section>
 
-        <div id="class" class="hide-content appsClosed beforeClass shell-content">
-
-
-          <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
-
-                <section id="section-class-details">
-                    <div class="grid-2">
-                      <h1><span id="class-name">{{name}}</span></h1>
-                    </div>
-
-                    <div class="grid-2 class-details">
+      <div class="break-noline"></div>
 
 
+      <div class="grid-container" id="participate-archive">
 
-                      <img id="class-image" src="{{promoImage}}">
-
-                      <div class="details">
-                        <div class="labels">Teachers</div>
-                        <div class="labels-info" id="teachers-list">{{teachers.[0].name}} with {{teachers.[1].name}} and {{teachers.[2].name}}</div>
-                      </div>
-                      <div class="details show-duringClass">
-                        <div class="labels">Participants</div>
-                        <div class="labels-info"><span tabindex="0" class="expand"><a class="link">18 participants...</a>
-                          <span class="expanded hide-expanded">
-                          Anna Rulloda, Heidi He, Hermann Zschiegner, Hiroyuki Sakamoto, Jenna Murphy, Joanne Magbitang, Kate Yourke, Ladan Bahmani, Lillian-Yvonne Bertram, Matthis Grunsky, Mauricio Román, Maya Charles, Michelle Chang, Salem Abdulla, Sara K.R., Sara Martinez, Shen-Shen Wu, Thomas (Luca) Bailey and Yadira Sanchez
-                          <a class="more-about-cost">learn more...</a>
-                        </span></span>
-                        </div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Date </div>
-                        <div class="labels-info">
-                          <span id="date">{{startDate}} to {{endDate}}</span> (<span id="number-classes">{{numberOfClasses}}</span> classes)</div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Time </div>
-                        <div class="labels-info" id="time">{{time}}
-                         </div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Location </div>
-                        <div class="labels-info" id="location">{{location}}</div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Cost </div>
-                        <div class="labels-info"><span id="cost">${{cost}}</span> Scholarships available <a class="more-about-cost">learn more...</a></div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Deadline </div>
-                        <div class="labels-info">
-                          <span class="hide-appsClosed">Applications open until</span>
-                          <span class="hide-appsOpen">Applications closed on</span>
-                          <span id="deadline">{{applicationEndDate}}</span></div>
-                      </div>
-
-                      <p class="large apply hide-appsClosed">
-                        <a href="{{applicationLink}}" target="_blank" id="application-link">Apply Now</a>
-                      </p>
+        <main class="grid-item main">
+          <main class="grid-item main">
+            <div class="carousel-items items carousel-content participate-content">
 
 
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-
-                <section id="section-description">
-                    <div class="grid-2">
-                      <h1>Description </h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <p>
-                        <!-- {{description}} -->
-                        Web scraping is the process of automatically downloading and manipulating web content. It's a common practice in silicon valley, where companies large and small transform open html pages into commodified datasets.
- <BR><BR>
-As an alternative, "Scrapism" is the practice of web scraping for artistic, emotional, and critical ends. By combining aspects of data journalism, conceptual art, and hoarding, it offers a methodology to make sense of a world in which everything we do is mediated by internet companies. These companies surveil us, exploit and financialize our experiences, and attempt to vacuum up every trace we leave behind. But in turn they also leave their own traces online, traces which when collected, filtered, and sorted can reveal or even intervene in power relations.
-  <BR><BR>
-In this class participants will learn how to scrape massive quantities of material from the web with Python, and then use this source material in projects that probe the politics and poetics of the internet. We will cover multiple web scraping techniques, as well as different techniques for manipulating and presenting textual content.
-
-
-                        </p>
-                    </div>
-                </section>
-
-                <div class="break-noline"></div>
-
-
-               <div class="grid-container" id="participate-archive">
-
-                 <main class="grid-item main">
-                   <main class="grid-item main">
-                     <div class="carousel-items items carousel-content participate-content">
-
-
-                     <!-- <figure class="block-text test hide-test">Coming into SFPC as a programmer, I was surprised to find American Artist’s critical theory class the most intellectually challenging and rewarding of my SFPC experience. The readings and discussions helped me reexamine my long-held assumptions about technology and inspired my artistic practice. Anyone who works in technology should take this class.
+              <!-- <figure class="block-text test hide-test">Coming into SFPC as a programmer, I was surprised to find American Artist’s critical theory class the most intellectually challenging and rewarding of my SFPC experience. The readings and discussions helped me reexamine my long-held assumptions about technology and inspired my artistic practice. Anyone who works in technology should take this class.
                        <h4>Alex Miller, Spring 2019</h4></figure>
                        <figure class="block-text test hide-test">As someone coming from an engineering educational background, the course was one of my first experiences having critical discussions about technology, race, theory, and more in a group setting. Dark Matters was rigorous in all of the right ways and it has left a lasting impact on the way I think, research, and write.
                        <h4>Bomani Oseni McClendon, Spring 2019</h4></figure>
@@ -192,29 +211,36 @@ In this class participants will learn how to scrape massive quantities of materi
                        <figure class="block-text test hide-test">Critical Theory was eye-opening to me after having majored in computer engineering and worked in tech for a couple years. It made me rethink my relationship with technology and should be a required curriculum for anybody working with computers.
                          <h4>Francisco Rojo, Fall 2019</h4></figure> -->
 
-                       <div id="carousel-images" class="class-images after-launch">
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/0.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/1.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/2.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/3.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/4.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/5.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/6.jpg"></figure>
-                         <!-- <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/7.jpg"></figure>
+              <div id="carousel-images" class="class-images after-launch">
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/0.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/1.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/2.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/3.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/4.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/5.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/6.jpg">
+                </figure>
+                <!-- <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/7.jpg"></figure>
                          <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/8.jpg"></figure>
                          <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/scrapism/9.jpg"></figure> -->
-                       </div>
+              </div>
 
 
-                     </div>
+            </div>
 
 
-                   </main>
-                 </main>
+          </main>
+        </main>
 
-               </div>
+      </div>
 
-               <!-- <section>
+      <!-- <section>
                    <div class="grid-2">
                      <p>
                       <span id="test-text">You are viewing photos related to this program. Read participant <a href="#testimonials" class="testimonials">testimonials</a>.</span>
@@ -228,139 +254,152 @@ In this class participants will learn how to scrape massive quantities of materi
 
 
 
-                <div class="break"></div>
+      <div class="break"></div>
 
 
 
 
 
-                <section id="section-course-of-study">
-                    <div class="grid-2">
-                      <h1>Course of Study</h1>
-                    </div>
+      <section id="section-course-of-study">
+        <div class="grid-2">
+          <h1>Course of Study</h1>
+        </div>
 
-                    <div class="grid-2">
-                      <p> Technical topics will include: intro to Python, intro to HTML/CSS, web scraping, intro to natural language processing</p>
-                    </div>
-                </section>
+        <div class="grid-2">
+          <p> Technical topics will include: intro to Python, intro to HTML/CSS, web scraping, intro to natural language
+            processing</p>
+        </div>
+      </section>
 
-                <div class="break"></div>
-
-
-                <section id="section-expectations">
-                    <div class="grid-2">
-                      <h1>Expectations</h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <p>There will be 3 to 4 projects throughout, with time for crits in class. Participants will benefit from some basic knowledge of python, command line, and html/css. Web scraping experience would also be a plus, but is not a strict requirement.
-                      </p>
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-                <section id="section-teachers">
-                    <div class="grid-2">
-                      <h1>Meet the Teachers & Organizers</h1>
-                    </div>
-
-                    <div class="grid-2 class-details">
+      <div class="break"></div>
 
 
-                      <dl class="accordion">
+      <section id="section-expectations">
+        <div class="grid-2">
+          <h1>Expectations</h1>
+        </div>
 
-                        <div class="entity">
-                            <dt>
-                              <span class="bio bio-float" style="background-image: url('/images/people/sam-lavigne.jpg')" role="img"></span>
+        <div class="grid-2">
+          <p>There will be 3 to 4 projects throughout, with time for crits in class. Participants will benefit from some
+            basic knowledge of python, command line, and html/css. Web scraping experience would also be a plus, but is
+            not a strict requirement.
+          </p>
+        </div>
+      </section>
 
-                              <h4 id="role">teacher</h4>
-                              <h3>{{teachers.[0].name}} </h3>
-                                <div class="clear"></div>
-                                <dd><span class="bio" style="background-image: url('/images/people/sam-lavigne.jpg')" role="img"></span>
-                                <p>{{teachers.[0].bio}}
-                                <BR><BR>
-                                  <i>{{teachers.[0].pronouns}}</i> · <a href="{{teachers.[0].website}}">website</a> · <a href="https://instagram.com/{{teachers.[0].instagram}}">instagram</a> · <a href="https://twitter.com/{{teachers.[0].twitter}}">twitter</a>
-                                </p>
-                                </dd>
-                            </dt>
-                        </div>
-                        <div class="entity">
-                            <dt>
-                              <span class="bio bio-float" style="background-image: url('/images/people/omayeli-arenyeka.jpg')" role="img"></span>
+      <div class="break"></div>
 
-                              <h4 id="role">assistant teacher</h4>
-                              <h3>{{teachers.[1].name}} </h3>
-                                <div class="clear"></div>
-                                <dd><span class="bio" style="background-image: url('/images/people/omayeli-arenyeka.jpg')" role="img"></span>
-                                <p>{{teachers.[1].bio}}
-                                <BR><BR>
-                                  <i>{{teachers.[1].pronouns}}</i> · <a href="{{teachers.[1].website}}">website</a> · <a href="https://instagram.com/{{teachers.[1].instagram}}">instagram</a> · <a href="https://twitter.com/{{teachers.[1].twitter}}">twitter</a>
-                                </p>
-                                </dd>
-                            </dt>
-                        </div>
-                        <div class="entity">
-                            <dt>
-                              <span class="bio bio-float" style="background-image: url('/images/people/ilona-brand.jpg')" role="img"></span>
+      <section id="section-teachers">
+        <div class="grid-2">
+          <h1>Meet the Teachers & Organizers</h1>
+        </div>
 
-                              <h4 id="role">assistant teacher</h4>
-                              <h3>{{teachers.[2].name}} </h3>
-                                <div class="clear"></div>
-                                <dd><span class="bio" style="background-image: url('/images/people/ilona-brand.jpg')" role="img"></span>
-                                <p>{{teachers.[2].bio}}
-                                <BR><BR>
-                                  <i>{{teachers.[2].pronouns}}</i> · <a href="{{teachers.[2].website}}">website</a> · <a href="https://instagram.com/{{teachers.[2].instagram}}">instagram</a> · <a href="https://twitter.com/{{teachers.[2].instagram}}">twitter</a>
-                                </p>
-                                </dd>
-                            </dt>
-                        </div>
+        <div class="grid-2 class-details">
 
 
+          <dl class="accordion">
 
-                      </dl>
+            <div class="entity">
+              <dt>
+                <span class="bio bio-float" style="background-image: url('/images/people/sam-lavigne.jpg')"
+                  role="img"></span>
+
+                <h4 id="role">teacher</h4>
+                <h3>{{teachers.[0].name}} </h3>
+                <div class="clear"></div>
+              <dd><span class="bio" style="background-image: url('/images/people/sam-lavigne.jpg')" role="img"></span>
+                <p>{{teachers.[0].bio}}
+                  <BR><BR>
+                  <i>{{teachers.[0].pronouns}}</i> · <a href="{{teachers.[0].website}}">website</a> · <a
+                    href="https://instagram.com/{{teachers.[0].instagram}}">instagram</a> · <a
+                    href="https://twitter.com/{{teachers.[0].twitter}}">twitter</a>
+                </p>
+              </dd>
+              </dt>
+            </div>
+            <div class="entity">
+              <dt>
+                <span class="bio bio-float" style="background-image: url('/images/people/omayeli-arenyeka.jpg')"
+                  role="img"></span>
+
+                <h4 id="role">assistant teacher</h4>
+                <h3>{{teachers.[1].name}} </h3>
+                <div class="clear"></div>
+              <dd><span class="bio" style="background-image: url('/images/people/omayeli-arenyeka.jpg')"
+                  role="img"></span>
+                <p>{{teachers.[1].bio}}
+                  <BR><BR>
+                  <i>{{teachers.[1].pronouns}}</i> · <a href="{{teachers.[1].website}}">website</a> · <a
+                    href="https://instagram.com/{{teachers.[1].instagram}}">instagram</a> · <a
+                    href="https://twitter.com/{{teachers.[1].twitter}}">twitter</a>
+                </p>
+              </dd>
+              </dt>
+            </div>
+            <div class="entity">
+              <dt>
+                <span class="bio bio-float" style="background-image: url('/images/people/ilona-brand.jpg')"
+                  role="img"></span>
+
+                <h4 id="role">assistant teacher</h4>
+                <h3>{{teachers.[2].name}} </h3>
+                <div class="clear"></div>
+              <dd><span class="bio" style="background-image: url('/images/people/ilona-brand.jpg')" role="img"></span>
+                <p>{{teachers.[2].bio}}
+                  <BR><BR>
+                  <i>{{teachers.[2].pronouns}}</i> · <a href="{{teachers.[2].website}}">website</a> · <a
+                    href="https://instagram.com/{{teachers.[2].instagram}}">instagram</a> · <a
+                    href="https://twitter.com/{{teachers.[2].instagram}}">twitter</a>
+                </p>
+              </dd>
+              </dt>
+            </div>
 
 
 
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-
-                <section id="section-for-me">
-                    <div class="grid-2">
-                      <h1>Is this <span id="program-type">class</span> for me?</h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <ul id="for-me-list">
-                        <li><B>If this sounds like you, then YES!: </b>
-                          <ul id="for-you">
-                          <li>I am interested in the ways power structures reveal themselves on the internet</li>
-                          <li>I want to learn how to navigate and manipulate data on the web using python</li>
-                          <li>I’m here to be critical and I’m here to have fun</li>
-                          </ul>
-
-                        <li><B>If this sounds like you, then this <span id="program-type">class</span> may not be for you: </b>
-                          <ul id="not-for-you">
-                          <li>I’m looking for a class to teach me how to develop apps</li>
-                          <li>I think highly of the CEOs of most major tech companies</li>
-                          </ul>
-                        </ul>
-                    </div>
-                </section>
-
-
-                <div class="break"></div>
-
-
-                {{> classBoilerplate}}
-
+          </dl>
 
 
 
         </div>
+      </section>
+
+      <div class="break"></div>
+
+
+      <section id="section-for-me">
+        <div class="grid-2">
+          <h1>Is this <span id="program-type">class</span> for me?</h1>
+        </div>
+
+        <div class="grid-2">
+          <ul id="for-me-list">
+            <li><B>If this sounds like you, then YES!: </b>
+              <ul id="for-you">
+                <li>I am interested in the ways power structures reveal themselves on the internet</li>
+                <li>I want to learn how to navigate and manipulate data on the web using python</li>
+                <li>I’m here to be critical and I’m here to have fun</li>
+              </ul>
+
+            <li><B>If this sounds like you, then this <span id="program-type">class</span> may not be for you: </b>
+              <ul id="not-for-you">
+                <li>I’m looking for a class to teach me how to develop apps</li>
+                <li>I think highly of the CEOs of most major tech companies</li>
+              </ul>
+          </ul>
+        </div>
+      </section>
+
+
+      <div class="break"></div>
+
+
+      {{> classBoilerplate}}
+
+
+
+
+    </div>
 
 
 
@@ -371,10 +410,11 @@ In this class participants will learn how to scrape massive quantities of materi
 
 
 
-<script src="/outside.js"></script>
-<script src="/closed.js"></script>
-<script src="/carousel.js"></script>
-</p>
+    <script src="/outside.js"></script>
+    <script src="/closed.js"></script>
+    <script src="/carousel.js"></script>
+    </p>
 
 </body>
+
 </html>

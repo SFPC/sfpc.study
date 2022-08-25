@@ -1,413 +1,486 @@
-
-
 <head>
-    <title>School for Poetic Computation</title>
+  <title>School for Poetic Computation</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="title" content="School for Poetic Computation">
-    <meta name="description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sfpc.study/">
-    <meta property="og:title" content="School for Poetic Computationn">
-    <meta property="og:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
-    <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sfpc.study/">
-    <meta property="twitter:title" content="School for Poetic Computation">
-    <meta property="twitter:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
-    <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
-    <link href="/styles.css" rel="stylesheet">
-    <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
-    <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="title" content="School for Poetic Computation">
+  <meta name="description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sfpc.study/">
+  <meta property="og:title" content="School for Poetic Computation">
+  <meta property="og:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sfpc.study/">
+  <meta property="twitter:title" content="School for Poetic Computation">
+  <meta property="twitter:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <link href="/styles.css" rel="stylesheet">
+  <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
+  <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico" />
 
-    <script src="/jquery-3.6.0.min.js"></script>
+  <script src="/jquery-3.6.0.min.js"></script>
 
-    <!-- stats -->
-    <script type="text/javascript">
-    var sc_project=12714909;
-    var sc_invisible=1;
-    var sc_security="6086a46c";
-    </script>
-    <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript><div class="statcounter"><a title="website statistics"
-    href="https://statcounter.com/" target="_blank"><img class="statcounter"
-    src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- stats -->
+  <script type="text/javascript">
+    var sc_project = 12714909;
+    var sc_invisible = 1;
+    var sc_security = "6086a46c";
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="website statistics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
 
 
-    <script data-goatcounter="https://sfpc.goatcounter.com/count"
-    async src="//gc.zgo.at/count.js"></script>
-    <!-- end stats -->
+  <script data-goatcounter="https://sfpc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <!-- end stats -->
 </head>
 
 
 <body>
-{{> header}}
-{{> footer}}
+  {{> header}}
+  {{> footer}}
 
-      <div class="crt-overlay crt-overlay-fullsize"></div>
+  <div class="crt-overlay crt-overlay-fullsize"></div>
 
-      <div id="shell" class="shell shell-fullsize spring-22 about">
+  <div id="shell" class="shell shell-fullsize spring-22 about">
 
-        <div class="selectors">
-        <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
-              <option value="class">Jump to section...</option>
-              <option value="section-class-details">ABOUT </option>
-              <option value="section-class-details">--Details & Description</option>
-              <option value="section-course-of-study">--Course of Study</option>
-              <option value="section-expectations">--Expectations</option>
-              <option value="section-teachers">--Teachers</option>
-              <option value="section-for-me">--Is this for me?</option>
-              <option value="section-accessibility">--Accessibility</option>
-              <option value="section-apply">APPLY NOW</option>
-              <option value="section-cost">FINANCES</option>
-              <option value="section-cost">--Cost of Attendence</option>
-              <option value="section-scholarships">--Scholarships</option>
-              <option value="section-donate">--Donate to SFPC</option>
-              <option value="section-refund">--Refund Policy</option>
-              <option value="section-classes">OPPORTUNITIES</option>
-            </select>
+    <div class="selectors">
+      <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
+        <option value="class">Jump to section...</option>
+        <option value="section-class-details">ABOUT </option>
+        <option value="section-class-details">--Details & Description</option>
+        <option value="section-course-of-study">--Course of Study</option>
+        <option value="section-expectations">--Expectations</option>
+        <option value="section-teachers">--Teachers</option>
+        <option value="section-for-me">--Is this for me?</option>
+        <option value="section-accessibility">--Accessibility</option>
+        <option value="section-apply">APPLY NOW</option>
+        <option value="section-cost">FINANCES</option>
+        <option value="section-cost">--Cost of Attendence</option>
+        <option value="section-scholarships">--Scholarships</option>
+        <option value="section-donate">--Donate to SFPC</option>
+        <option value="section-refund">--Refund Policy</option>
+        <option value="section-classes">OPPORTUNITIES</option>
+      </select>
+    </div>
+
+
+
+
+
+    <h4 class="breadcrumb hide-content">
+      <a href="/participate.html">participate</a>
+      <span class="caret"></span>
+      <a href="">sessions</a>
+      <span class="caret"></span>
+      <a href="/sessions/spring-22" id="session-link"><span id="session-name">spring 2022</span></a>
+    </h4>
+
+
+
+
+    <div id="class" class=" hide-content appsClosed beforeClass shell-content">
+
+
+      <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
+
+      <section id="section-class-details">
+        <div class="grid-2">
+          <h1><span id="class-name">
+              Dark Matters: On Race, Capitalism, and the Whiteness of the Screen
+              <!-- {{name}} -->
+            </span></h1>
+        </div>
+
+        <div class="grid-2 class-details">
+
+
+
+          <img id="class-image" src="{{promoImage}}">
+
+          <div class="details">
+            <div class="labels">Teachers</div>
+            <div class="labels-info" id="teachers-list">{{teachers.[0].name}} with {{teachers.[1].name}}</div>
+          </div>
+          <div class="details show-duringClass">
+            <div class="labels">Participants</div>
+            <div class="labels-info"><span tabindex="0" class="expand"><a class="link">18 participants...</a>
+                <span class="expanded hide-expanded">
+                  Anna Rulloda, Heidi He, Hermann Zschiegner, Hiroyuki Sakamoto, Jenna Murphy, Joanne Magbitang, Kate
+                  Yourke, Ladan Bahmani, Lillian-Yvonne Bertram, Matthis Grunsky, Mauricio Román, Maya Charles, Michelle
+                  Chang, Salem Abdulla, Sara K.R., Sara Martinez, Shen-Shen Wu, Thomas (Luca) Bailey and Yadira Sanchez
+                  <a class="more-about-cost">learn more...</a>
+                </span></span>
+            </div>
+          </div>
+          <div class="details">
+            <div class="labels">Date </div>
+            <div class="labels-info">
+              <span id="date">{{startDate}} to {{endDate}}</span> (<span id="number-classes">{{numberOfClasses}}</span>
+              classes)
+            </div>
+          </div>
+          <div class="details">
+            <div class="labels">Time </div>
+            <div class="labels-info" id="time">{{time}}
+            </div>
+          </div>
+          <div class="details">
+            <div class="labels">Location </div>
+            <div class="labels-info" id="location">{{location}}</div>
+          </div>
+          <div class="details">
+            <div class="labels">Cost </div>
+            <div class="labels-info"><span id="cost">${{cost}}</span> Scholarships available <a
+                class="more-about-cost">learn more...</a></div>
+          </div>
+          <div class="details">
+            <div class="labels">Deadline </div>
+            <div class="labels-info">
+              <span class="hide-appsClosed">Applications open until</span>
+              <span class="hide-appsOpen">Applications closed on</span>
+              <span id="deadline">{{applicationEndDate}}</span>
+            </div>
           </div>
 
+          <p class="large apply hide-appsClosed">
+            <a href="{{applicationLink}}" target="_blank" id="application-link">Apply Now</a>
+          </p>
+
+
+        </div>
+      </section>
+
+      <div class="break"></div>
+
+
+      <section id="section-description">
+        <div class="grid-2">
+          <h1>Description </h1>
+        </div>
+
+        <div class="grid-2">
+          <p>
+            {{description}}
+          </p>
+        </div>
+      </section>
+
+      <div class="break-noline"></div>
+
+
+      <div class="grid-container" id="participate-archive">
+
+        <main class="grid-item main">
+          <main class="grid-item main">
+            <div class="carousel-items items carousel-content participate-content">
+
+              <figure class="block-text test hide-test">The Dark Matters course, my classmates, and our teachers gave me
+                a perspective on computing that I'm not sure I could have found anywhere else. We connected computing to
+                the environment, colonialism, ecology and policing, and explored what actual liberatory technology might
+                look like. It's been almost two years and the readings and conversations still come back to me often.
+                <h4>Angus Fletcher, Summer 2020</h4>
+              </figure>
+              <figure class="block-text test hide-test">The readings were incredible. The curriciulum was really
+                expansive and offered a perspective I hadn't heard with this much depth, and I recommend a lot of the
+                articles and books from the class to many of my friends.
+                <h4>Paras Sanghavi, Summer 2020</h4>
+              </figure>
+              <figure class="block-text test hide-test">Coming into SFPC as a programmer, I was surprised to find
+                American Artist’s critical theory class the most intellectually challenging and rewarding of my SFPC
+                experience. The readings and discussions helped me reexamine my long-held assumptions about technology
+                and inspired my artistic practice. Anyone who works in technology should take this class.
+                <h4>Alex Miller, Spring 2019</h4>
+              </figure>
+              <figure class="block-text test hide-test">As someone coming from an engineering educational background,
+                the course was one of my first experiences having critical discussions about technology, race, theory,
+                and more in a group setting. Dark Matters was rigorous in all of the right ways and it has left a
+                lasting impact on the way I think, research, and write.
+                <h4>Bomani Oseni McClendon, Spring 2019</h4>
+              </figure>
+              <figure class="block-text test hide-test">Taking this class gave me such a vital vocabulary and lens for
+                looking at computing and power. American’s carefully chosen readings and the discussions we had were my
+                introduction to talking to others about technology critically. I can’t imagine how anyone can consider a
+                computer science education complete without understanding the topics covered in this course. A total
+                once-in-a-lifetime experience!
+                <h4>Olivia Ross, Fall 2019</h4>
+              </figure>
+              <figure class="block-text test hide-test">It’s easy to forget that the computers, interfaces, algorithms,
+                and hardware that are so integrated in our entityal and professional lives were made by people with
+                inherent biases. I found Dark Matters to be invaluable in encouraging a critical mindset and discussion,
+                and peeling back the complicated histories of some of the ubiquitous technologies that we take for
+                granted.
+                <h4>Shelby Wilson, Fall 2019</h4>
+              </figure>
+              <figure class="block-text test hide-test">Critical Theory was eye-opening to me after having majored in
+                computer engineering and worked in tech for a couple years. It made me rethink my relationship with
+                technology and should be a required curriculum for anybody working with computers.
+                <h4>Francisco Rojo, Fall 2019</h4>
+              </figure>
+
+              <div id="carousel-images" class="class-images after-launch">
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/0.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/1.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/2.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/3.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/4.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/5.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/6.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/7.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/8.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/9.jpg">
+                </figure>
+              </div>
+
+
+            </div>
+
+
+          </main>
+        </main>
+
+      </div>
+
+      <section>
+        <div class="grid-2">
+          <p>
+            <span id="test-text">You are viewing photos related to this program. Read participant <a
+                href="#testimonials" class="testimonials">testimonials</a>.</span>
+            <span id="photos-text" class="hide-text">You are viewing participant testimonials. View <a href="#photos"
+                class="participate-photos">photos</a> related to this program.</span>
+          </p>
+        </div>
+
+        <div class="grid-2">
+        </div>
+      </section>
 
 
 
-
-            <h4 class="breadcrumb hide-content">
-              <a href="/participate.html">participate</a>
-              <span class="caret"></span>
-              <a href="">sessions</a>
-              <span class="caret"></span>
-              <a href="/sessions/spring-22" id="session-link"><span id="session-name">spring 2022</span></a>
-            </h4>
-
-
-
-
-        <div id="class" class=" hide-content appsClosed beforeClass shell-content">
-
-
-          <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
-
-                <section id="section-class-details">
-                    <div class="grid-2">
-                      <h1><span id="class-name">
-                        Dark Matters: On Race, Capitalism, and the Whiteness of the Screen
-                        <!-- {{name}} -->
-                      </span></h1>
-                    </div>
-
-                    <div class="grid-2 class-details">
-
-
-
-                      <img id="class-image" src="{{promoImage}}">
-
-                      <div class="details">
-                        <div class="labels">Teachers</div>
-                        <div class="labels-info" id="teachers-list">{{teachers.[0].name}} with {{teachers.[1].name}}</div>
-                      </div>
-                      <div class="details show-duringClass">
-                        <div class="labels">Participants</div>
-                        <div class="labels-info"><span tabindex="0" class="expand"><a class="link">18 participants...</a>
-                          <span class="expanded hide-expanded">
-                          Anna Rulloda, Heidi He, Hermann Zschiegner, Hiroyuki Sakamoto, Jenna Murphy, Joanne Magbitang, Kate Yourke, Ladan Bahmani, Lillian-Yvonne Bertram, Matthis Grunsky, Mauricio Román, Maya Charles, Michelle Chang, Salem Abdulla, Sara K.R., Sara Martinez, Shen-Shen Wu, Thomas (Luca) Bailey and Yadira Sanchez
-                          <a class="more-about-cost">learn more...</a>
-                        </span></span>
-                        </div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Date </div>
-                        <div class="labels-info">
-                          <span id="date">{{startDate}} to {{endDate}}</span> (<span id="number-classes">{{numberOfClasses}}</span> classes)</div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Time </div>
-                        <div class="labels-info" id="time">{{time}}
-                         </div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Location </div>
-                        <div class="labels-info" id="location">{{location}}</div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Cost </div>
-                        <div class="labels-info"><span id="cost">${{cost}}</span> Scholarships available <a class="more-about-cost">learn more...</a></div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Deadline </div>
-                        <div class="labels-info">
-                          <span class="hide-appsClosed">Applications open until</span>
-                          <span class="hide-appsOpen">Applications closed on</span>
-                          <span id="deadline">{{applicationEndDate}}</span></div>
-                      </div>
-
-                      <p class="large apply hide-appsClosed">
-                        <a href="{{applicationLink}}" target="_blank" id="application-link">Apply Now</a>
-                      </p>
-
-
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-
-                <section id="section-description">
-                    <div class="grid-2">
-                      <h1>Description </h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <p>
-                        {{description}}
-                        </p>
-                    </div>
-                </section>
-
-                <div class="break-noline"></div>
-
-
-               <div class="grid-container" id="participate-archive">
-
-                 <main class="grid-item main">
-                   <main class="grid-item main">
-                     <div class="carousel-items items carousel-content participate-content">
-
-                       <figure class="block-text test hide-test">The Dark Matters course, my classmates, and our teachers gave me a perspective on computing that I'm not sure I could have found anywhere else. We connected computing to the environment, colonialism, ecology and policing, and explored what actual liberatory technology might look like. It's been almost two years and the readings and conversations still come back to me often.
-                         <h4>Angus Fletcher, Summer 2020</h4></figure>
-                         <figure class="block-text test hide-test">The readings were incredible. The curriciulum was really expansive and offered a perspective I hadn't heard with this much depth, and I recommend a lot of the articles and books from the class to many of my friends.
-                            <h4>Paras Sanghavi, Summer 2020</h4></figure>
-                     <figure class="block-text test hide-test">Coming into SFPC as a programmer, I was surprised to find American Artist’s critical theory class the most intellectually challenging and rewarding of my SFPC experience. The readings and discussions helped me reexamine my long-held assumptions about technology and inspired my artistic practice. Anyone who works in technology should take this class.
-                       <h4>Alex Miller, Spring 2019</h4></figure>
-                       <figure class="block-text test hide-test">As someone coming from an engineering educational background, the course was one of my first experiences having critical discussions about technology, race, theory, and more in a group setting. Dark Matters was rigorous in all of the right ways and it has left a lasting impact on the way I think, research, and write.
-                       <h4>Bomani Oseni McClendon, Spring 2019</h4></figure>
-                       <figure class="block-text test hide-test">Taking this class gave me such a vital vocabulary and lens for looking at computing and power. American’s carefully chosen readings and the discussions we had were my introduction to talking to others about technology critically. I can’t imagine how anyone can consider a computer science education complete without understanding the topics covered in this course. A total once-in-a-lifetime experience!
-                         <h4>Olivia Ross, Fall 2019</h4></figure>
-                       <figure class="block-text test hide-test">It’s easy to forget that the computers, interfaces, algorithms, and hardware that are so integrated in our entityal and professional lives were made by people with inherent biases. I found Dark Matters to be invaluable in encouraging a critical mindset and discussion, and peeling back the complicated histories of some of the ubiquitous technologies that we take for granted.
-                         <h4>Shelby Wilson, Fall 2019</h4></figure>
-                       <figure class="block-text test hide-test">Critical Theory was eye-opening to me after having majored in computer engineering and worked in tech for a couple years. It made me rethink my relationship with technology and should be a required curriculum for anybody working with computers.
-                         <h4>Francisco Rojo, Fall 2019</h4></figure>
-
-                       <div id="carousel-images" class="class-images after-launch">
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/0.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/1.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/2.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/3.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/4.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/5.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/6.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/7.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/8.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/9.jpg"></figure>
-                       </div>
-
-
-                     </div>
-
-
-                   </main>
-                 </main>
-
-               </div>
-
-               <section>
-                   <div class="grid-2">
-                     <p>
-                      <span id="test-text">You are viewing photos related to this program. Read participant <a href="#testimonials" class="testimonials">testimonials</a>.</span>
-                      <span id="photos-text" class="hide-text">You are viewing participant testimonials. View <a href="#photos" class="participate-photos">photos</a> related to this program.</span>
-                     </p>
-                   </div>
-
-                   <div class="grid-2">
-                   </div>
-               </section>
-
-
-
-                <div class="break"></div>
+      <div class="break"></div>
 
 
 
 
 
-                <section id="section-course-of-study">
-                    <div class="grid-2">
-                      <h1>Course of Study</h1>
-                    </div>
+      <section id="section-course-of-study">
+        <div class="grid-2">
+          <h1>Course of Study</h1>
+        </div>
 
-                    <div class="grid-2">
-                      <ul id="study-list">
-                         <li><b>Week 1: Orientation</b> —
-                          History of SFPC, community agreement, learning objectives, about the final project, meet the participants
-                          <li><b>Week 2: Transparency</b> —
-                          We will be looking at the origin of computer interfaces and how they obscure reality, compared to a traditional model of ideology.
-                          <li><b>Week 3: Ground</b> —
-                          This discussion will focus on the origins of settler colonialism in the Western United States and the preface to modern-day Silicon Valley.
-                          <li><b>Week 4: Interface</b> —
-                          This week begins with a critical reconsideration of computer design, and what a decolonial technology might look like.
-                          <li><b>Week 5: Watching</b> —
-                          We will begin considering the origins of surveillance technology in the United States, and its roots in racial capitalism.
-                          <li><b>Week 6: Being</b> —
-                          Building on the previous week, we will unpack how the body as data is related to the legacy of racial slavery.
-                          <li><b>Week 7: Calculation</b> —
-                          We will learn about the origins of scientific racism as well as the evolution of Ancestral DNA tracing as a commercial phenomenon.
-                          <li><b>Week 8: Accumulation</b> —
-                          This week’s discussion is an overview of neoliberal economic practices in America, the normalization of debt, and the expansion of policing and incarceration.
-                          <li><b>Week 9: Prediction</b> —
-                          Building on the previous discussion we will look at how the Military, University, High Tech sector, and Police came together to create a perfect data storm.
-                          <li><b>Week 10: Graduation</b> —
-                          We will be sharing our work with the community through a Zoom event.
+        <div class="grid-2">
+          <ul id="study-list">
+            <li><b>Week 1: Orientation</b> —
+              History of SFPC, community agreement, learning objectives, about the final project, meet the participants
+            <li><b>Week 2: Transparency</b> —
+              We will be looking at the origin of computer interfaces and how they obscure reality, compared to a
+              traditional model of ideology.
+            <li><b>Week 3: Ground</b> —
+              This discussion will focus on the origins of settler colonialism in the Western United States and the
+              preface to modern-day Silicon Valley.
+            <li><b>Week 4: Interface</b> —
+              This week begins with a critical reconsideration of computer design, and what a decolonial technology
+              might look like.
+            <li><b>Week 5: Watching</b> —
+              We will begin considering the origins of surveillance technology in the United States, and its roots in
+              racial capitalism.
+            <li><b>Week 6: Being</b> —
+              Building on the previous week, we will unpack how the body as data is related to the legacy of racial
+              slavery.
+            <li><b>Week 7: Calculation</b> —
+              We will learn about the origins of scientific racism as well as the evolution of Ancestral DNA tracing as
+              a commercial phenomenon.
+            <li><b>Week 8: Accumulation</b> —
+              This week’s discussion is an overview of neoliberal economic practices in America, the normalization of
+              debt, and the expansion of policing and incarceration.
+            <li><b>Week 9: Prediction</b> —
+              Building on the previous discussion we will look at how the Military, University, High Tech sector, and
+              Police came together to create a perfect data storm.
+            <li><b>Week 10: Graduation</b> —
+              We will be sharing our work with the community through a Zoom event.
 
-                      </ul>
-                    </div>
-                </section>
+          </ul>
+        </div>
+      </section>
 
-                <div class="break"></div>
+      <div class="break"></div>
 
 
-                <section id="section-expectations">
-                    <div class="grid-2">
-                      <h1>Expectations</h1>
-                    </div>
+      <section id="section-expectations">
+        <div class="grid-2">
+          <h1>Expectations</h1>
+        </div>
 
-                    <div class="grid-2">
-                      <ul id="expectations-list">
-                        <li><b>What is expected of me?</b>
-                          <ul>
-                            <li>Participants are expected to spend time outside of class on readings and doing assignments.</li>
-                            <!-- <li>
+        <div class="grid-2">
+          <ul id="expectations-list">
+            <li><b>What is expected of me?</b>
+              <ul>
+                <li>Participants are expected to spend time outside of class on readings and doing assignments.</li>
+                <!-- <li>
                               Dark Matters is the equivalent of a 3 credit hour university course. For every credit hour, participants are expected to spend 2 – 3 hours per week working outside of class. That means 6 – 9 hours per week outside of class, reading or doing assignments.
                             </li> -->
-                            <li>Over the course of the 10 weeks, we will be working on a collaborative publication relating to themes discussed in class, and by the end of the class we will publish this as a digital publication containing original contributions from every member of the class. See past years’ publications
-                              (<a href="https://darkmatters.xyz">Summer 2020</a>),
+                <li>Over the course of the 10 weeks, we will be working on a collaborative publication relating to
+                  themes discussed in class, and by the end of the class we will publish this as a digital publication
+                  containing original contributions from every member of the class. See past years’ publications
+                  (<a href="https://darkmatters.xyz">Summer 2020</a>),
 
-                              (<a href="https://github.com/0ld-h3ad/DarkMatters-Fall2019/blob/master/DarkMattersZineSpring2019Scan(Searchable).pdf">Spring 2019</a>),
-                              (<a href="https://github.com/0ld-h3ad/DarkMatters-Spring2019/blob/master/Critical_Theory_Zine_spreads.pdf">Fall 2018</a>) and
-                              (<a href="https://github.com/0ld-h3ad/DarkMatters-Fall2019/blob/master/FA19_zine-digital.pdf">Fall 2019</a>).
-                            </li>
-                          </ul>
-                        <li><b>By taking this class, you can expect to gain the following:</b>
-                           <ul><li>The ability to communicate complex ideas through writing and discussion with peers.
-                              <li>A more conscientious approach to developing new technology and design that reflects our current moment, centering care and longevity rather than efficiency.
-                              <li>A nuanced critical perspective towards technological objects and their generation of power and control in society.
-                              <li>A thorough knowledge of the history of surveillance practices in the United States.
-                              <li>An interdisciplinary understanding of the relationship between art, design, technology, and economics.
-                            </ul>
+                  (<a
+                    href="https://github.com/0ld-h3ad/DarkMatters-Fall2019/blob/master/DarkMattersZineSpring2019Scan(Searchable).pdf">Spring
+                    2019</a>),
+                  (<a
+                    href="https://github.com/0ld-h3ad/DarkMatters-Spring2019/blob/master/Critical_Theory_Zine_spreads.pdf">Fall
+                    2018</a>) and
+                  (<a href="https://github.com/0ld-h3ad/DarkMatters-Fall2019/blob/master/FA19_zine-digital.pdf">Fall
+                    2019</a>).
+                </li>
+              </ul>
+            <li><b>By taking this class, you can expect to gain the following:</b>
+              <ul>
+                <li>The ability to communicate complex ideas through writing and discussion with peers.
+                <li>A more conscientious approach to developing new technology and design that reflects our current
+                  moment, centering care and longevity rather than efficiency.
+                <li>A nuanced critical perspective towards technological objects and their generation of power and
+                  control in society.
+                <li>A thorough knowledge of the history of surveillance practices in the United States.
+                <li>An interdisciplinary understanding of the relationship between art, design, technology, and
+                  economics.
+              </ul>
 
-                        </ul>
-                    </div>
-                </section>
+          </ul>
+        </div>
+      </section>
 
-                <div class="break"></div>
+      <div class="break"></div>
 
-                <section id="section-teachers">
-                    <div class="grid-2">
-                      <h1>Meet the Teachers & Organizers</h1>
-                    </div>
+      <section id="section-teachers">
+        <div class="grid-2">
+          <h1>Meet the Teachers & Organizers</h1>
+        </div>
 
-                    <div class="grid-2 class-details">
-
-
-                      <dl class="accordion">
-
-                          <div class="entity">
-                              <dt>
-                                <span class="bio bio-float" style="background-image: url('/images/people/american-artist.jpg')" role="img"></span>
-
-                                <h4 id="role">teacher</h4>
-                                <h3>{{teachers.[0].name}} </h3>
-                                  <div class="clear"></div>
-                                  <dd><span class="bio" style="background-image: url('/images/people/american-artist.jpg')" role="img"></span>
-                                  <p>{{teachers.[0].bio}}
-                                  <BR><BR>
-                                    <i>{{teachers.[0].pronouns}}</i> · <a href="{{teachers.[0].website}}">website</a> · <a href="https://instagram.com/{{teachers.[0].instagram}}">instagram</a>
-                                  </p>
-                                  </dd>
-                              </dt>
-                          </div>
+        <div class="grid-2 class-details">
 
 
-                          <div class="entity">
-                              <dt>
-                                <span class="bio bio-float" style="background-image: url('/images/people/zainab-aliyu.jpg')" role="img"></span>
-                                <h4 id="role">assistant teacher and session organizer</h4>
-                                <h3>{{teachers.[1].name}}</h3>
+          <dl class="accordion">
 
-                                  <dd><span class="bio" style="background-image: url('/images/people/zainab-aliyu.jpg')" role="img"></span>
-                                  <p>{{teachers.[1].bio}}<BR><BR>
-                                    <i>{{teachers.[1].pronouns}}</i> · <a href="{{teachers.[1].website}}">website</a> · <a href="https://instagram.com/{{teachers.[1].instagram}}">instagram</a>
-                                  </p>
-                                  </dd>
-                              </dt>
-                          </div>
+            <div class="entity">
+              <dt>
+                <span class="bio bio-float" style="background-image: url('/images/people/american-artist.jpg')"
+                  role="img"></span>
 
-
-                      </dl>
-
-
-
-                    </div>
-                </section>
-
-                <div class="break"></div>
+                <h4 id="role">teacher</h4>
+                <h3>{{teachers.[0].name}} </h3>
+                <div class="clear"></div>
+              <dd><span class="bio" style="background-image: url('/images/people/american-artist.jpg')"
+                  role="img"></span>
+                <p>{{teachers.[0].bio}}
+                  <BR><BR>
+                  <i>{{teachers.[0].pronouns}}</i> · <a href="{{teachers.[0].website}}">website</a> · <a
+                    href="https://instagram.com/{{teachers.[0].instagram}}">instagram</a>
+                </p>
+              </dd>
+              </dt>
+            </div>
 
 
-                <section id="section-for-me">
-                    <div class="grid-2">
-                      <h1>Is this <span id="program-type">class</span> for me?</h1>
-                    </div>
+            <div class="entity">
+              <dt>
+                <span class="bio bio-float" style="background-image: url('/images/people/zainab-aliyu.jpg')"
+                  role="img"></span>
+                <h4 id="role">assistant teacher and session organizer</h4>
+                <h3>{{teachers.[1].name}}</h3>
 
-                    <div class="grid-2">
-                      <ul id="for-me-list">
-                        <li><B>If this sounds like you, then YES!: </b>
-                          <ul id="for-you">
-                          <li>If you are an artist or designer who wants to know more about computer technology.
-                            <li>If you want to engage with critical theory for the first time, or have experience with it.
-                            <li>If you recently finished a degree program, or are on the fence about whether to enter one.
-                            <li>If you are a coder or tech worker and you want to think more critically about the social and economic impact of computers.
-                              <li>If you are NOT a coder or tech worker but you want a deeper understanding of how code affects everything around us.
-                            <li>If you are a fan of The Matrix (1999).
-
-                          </ul>
-
-                        <li><B>If this sounds like you, then this <span id="program-type">class</span> may not be for you: </b>
-                          <ul id="not-for-you">
-                          <li>If you are only interested in coding or getting better at coding.
-                          <li>If you think the economic theorist Adam Smith made a lot of good points.
-                            <li>If you want people to believe that the cloud is in the sky.
-
-                            </ul>
-
-                          </ul>
-                          </div>
-                          </section>
+              <dd><span class="bio" style="background-image: url('/images/people/zainab-aliyu.jpg')" role="img"></span>
+                <p>{{teachers.[1].bio}}<BR><BR>
+                  <i>{{teachers.[1].pronouns}}</i> · <a href="{{teachers.[1].website}}">website</a> · <a
+                    href="https://instagram.com/{{teachers.[1].instagram}}">instagram</a>
+                </p>
+              </dd>
+              </dt>
+            </div>
 
 
-                          <div class="break"></div>
-
-                          {{> classBoilerplate}}
+          </dl>
 
 
 
+        </div>
+      </section>
 
-                          </div>
-
-
-
-
+      <div class="break"></div>
 
 
+      <section id="section-for-me">
+        <div class="grid-2">
+          <h1>Is this <span id="program-type">class</span> for me?</h1>
+        </div>
+
+        <div class="grid-2">
+          <ul id="for-me-list">
+            <li><B>If this sounds like you, then YES!: </b>
+              <ul id="for-you">
+                <li>If you are an artist or designer who wants to know more about computer technology.
+                <li>If you want to engage with critical theory for the first time, or have experience with it.
+                <li>If you recently finished a degree program, or are on the fence about whether to enter one.
+                <li>If you are a coder or tech worker and you want to think more critically about the social and
+                  economic impact of computers.
+                <li>If you are NOT a coder or tech worker but you want a deeper understanding of how code affects
+                  everything around us.
+                <li>If you are a fan of The Matrix (1999).
+
+              </ul>
+
+            <li><B>If this sounds like you, then this <span id="program-type">class</span> may not be for you: </b>
+              <ul id="not-for-you">
+                <li>If you are only interested in coding or getting better at coding.
+                <li>If you think the economic theorist Adam Smith made a lot of good points.
+                <li>If you want people to believe that the cloud is in the sky.
+
+              </ul>
+
+          </ul>
+        </div>
+      </section>
+
+
+      <div class="break"></div>
+
+      {{> classBoilerplate}}
 
 
 
 
-                          <script src="/outside.js"></script>
-                          <script src="/closed.js"></script>
-                          <script src="/carousel.js"></script>
-                          </p>
+    </div>
 
-                          </body>
-                          </html>
+
+
+
+
+
+
+
+
+
+    <script src="/outside.js"></script>
+    <script src="/closed.js"></script>
+    <script src="/carousel.js"></script>
+    </p>
+
+</body>
+
+</html>
