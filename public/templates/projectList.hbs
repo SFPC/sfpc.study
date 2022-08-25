@@ -143,8 +143,9 @@
                 <h6>{{this.[Short Description]}}</h6>
               </div>
               <div class="bottom">
-                <h4 class="details">{{#each this.[Status]}} {{this}} {{/each}} {{#each this.[Release
-                  Date]}}{{this}}{{/each}}</h4>
+                <h4 class="details">
+                  {{Status.[0]}} {{[Release Date].start}}
+                </h4>
                 <h4 class="details organizers-comma">Organized by {{#each this.[Website-Organizers]}}{{this}}{{#if
                   @last}}{{else}}<i class="comma">,</i> {{/if}} {{/each}}
                   {{#each this.[Additional organizers]}} {{this}} {{/each}}</h4>
