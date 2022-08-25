@@ -2,190 +2,212 @@
 <html lang="en">
 
 <head>
-    <title>School for Poetic Computation</title>
+  <title>School for Poetic Computation</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="title" content="School for Poetic Computation">
-    <meta name="description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sfpc.study/">
-    <meta property="og:title" content="School for Poetic Computationn">
-    <meta property="og:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
-    <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sfpc.study/">
-    <meta property="twitter:title" content="School for Poetic Computation">
-    <meta property="twitter:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
-    <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
-    <link href="/styles.css" rel="stylesheet">
-    <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
-    <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="title" content="School for Poetic Computation">
+  <meta name="description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sfpc.study/">
+  <meta property="og:title" content="School for Poetic Computation">
+  <meta property="og:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sfpc.study/">
+  <meta property="twitter:title" content="School for Poetic Computation">
+  <meta property="twitter:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <link href="/styles.css" rel="stylesheet">
+  <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
+  <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico" />
 
-    <script src="/jquery-3.6.0.min.js"></script>
+  <script src="/jquery-3.6.0.min.js"></script>
 
-    <!-- stats -->
-    <script type="text/javascript">
-    var sc_project=12714909;
-    var sc_invisible=1;
-    var sc_security="6086a46c";
-    </script>
-    <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript><div class="statcounter"><a title="website statistics"
-    href="https://statcounter.com/" target="_blank"><img class="statcounter"
-    src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- stats -->
+  <script type="text/javascript">
+    var sc_project = 12714909;
+    var sc_invisible = 1;
+    var sc_security = "6086a46c";
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="website statistics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
 
 
-    <script data-goatcounter="https://sfpc.goatcounter.com/count"
-    async src="//gc.zgo.at/count.js"></script>
-    <!-- end stats -->
+  <script data-goatcounter="https://sfpc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <!-- end stats -->
 </head>
 
 
 
 <body>
-      {{> header}}
-      {{> footer}}
+  {{> header}}
+  {{> footer}}
 
 
-      <div class="crt-overlay crt-overlay-fullsize"></div>
+  <div class="crt-overlay crt-overlay-fullsize"></div>
 
-      <div id="shell" class="shell shell-fullsize spring-22 about">
+  <div id="shell" class="shell shell-fullsize spring-22 about">
 
-        <div class="selectors">
-        <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
-              <option value="class">Jump to section...</option>
-              <option value="section-class-details">ABOUT </option>
-              <option value="section-class-details">--Details & Description</option>
-              <option value="section-course-of-study">--Course of Study</option>
-              <option value="section-expectations">--Expectations</option>
-              <option value="section-teachers">--Teachers</option>
-              <option value="section-for-me">--Is this for me?</option>
-              <option value="section-accessibility">--Accessibility</option>
-              <option value="section-apply">APPLY NOW</option>
-              <option value="section-cost">FINANCES</option>
-              <option value="section-cost">--Cost of Attendence</option>
-              <option value="section-scholarships">--Scholarships</option>
-              <option value="section-donate">--Donate to SFPC</option>
-              <option value="section-refund">--Refund Policy</option>
-              <option value="section-classes">OPPORTUNITIES</option>
-            </select>
+    <div class="selectors">
+      <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
+        <option value="class">Jump to section...</option>
+        <option value="section-class-details">ABOUT </option>
+        <option value="section-class-details">--Details & Description</option>
+        <option value="section-course-of-study">--Course of Study</option>
+        <option value="section-expectations">--Expectations</option>
+        <option value="section-teachers">--Teachers</option>
+        <option value="section-for-me">--Is this for me?</option>
+        <option value="section-accessibility">--Accessibility</option>
+        <option value="section-apply">APPLY NOW</option>
+        <option value="section-cost">FINANCES</option>
+        <option value="section-cost">--Cost of Attendence</option>
+        <option value="section-scholarships">--Scholarships</option>
+        <option value="section-donate">--Donate to SFPC</option>
+        <option value="section-refund">--Refund Policy</option>
+        <option value="section-classes">OPPORTUNITIES</option>
+      </select>
+    </div>
+
+
+
+
+
+    <h4 class="breadcrumb hide-content">
+      <a href="/participate.html">participate</a>
+      <span class="caret"></span>
+      <a href="">sessions</a>
+      <span class="caret"></span>
+      <a href="/sessions/spring-22" id="session-link"><span id="session-name">spring 2022</span></a>
+    </h4>
+
+
+
+
+    <div id="class" class="hide-content appsClosed beforeClass shell-content">
+
+
+      <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
+
+      <section id="section-class-details">
+        <div class="grid-2">
+          <h1><span id="class-name">{{name}}</span></h1>
+        </div>
+
+        <div class="grid-2 class-details">
+
+
+
+          <img id="class-image" src="{{promoImage}}">
+
+          <div class="details">
+            <div class="labels">Teachers</div>
+            <div class="labels-info" id="teachers-list">{{teachers.[0].name}} with {{teachers.[1].name}} and
+              {{teachers.[2].name}}</div>
+          </div>
+          <div class="details show-duringClass">
+            <div class="labels">Participants</div>
+            <div class="labels-info"><span tabindex="0" class="expand"><a class="link">18 participants...</a>
+                <span class="expanded hide-expanded">
+                  Anna Rulloda, Heidi He, Hermann Zschiegner, Hiroyuki Sakamoto, Jenna Murphy, Joanne Magbitang, Kate
+                  Yourke, Ladan Bahmani, Lillian-Yvonne Bertram, Matthis Grunsky, Mauricio Román, Maya Charles, Michelle
+                  Chang, Salem Abdulla, Sara K.R., Sara Martinez, Shen-Shen Wu, Thomas (Luca) Bailey and Yadira Sanchez
+                  <a class="more-about-cost">learn more...</a>
+                </span></span>
+            </div>
+          </div>
+          <div class="details">
+            <div class="labels">Date </div>
+            <div class="labels-info">
+              <span id="date">{{startDate}} to {{endDate}}</span> (<span id="number-classes">{{numberOfClasses}}</span>
+              classes)
+            </div>
+          </div>
+          <div class="details">
+            <div class="labels">Time </div>
+            <div class="labels-info" id="time">{{time}}
+            </div>
+          </div>
+          <div class="details">
+            <div class="labels">Location </div>
+            <div class="labels-info" id="location">{{location}}</div>
+          </div>
+          <div class="details">
+            <div class="labels">Cost </div>
+            <div class="labels-info"><span id="cost">${{cost}}</span> Scholarships available <a
+                class="more-about-cost">learn more...</a></div>
+          </div>
+          <div class="details">
+            <div class="labels">Deadline </div>
+            <div class="labels-info">
+              <span class="hide-appsClosed">Applications open until</span>
+              <span class="hide-appsOpen">Applications closed on</span>
+              <span id="deadline">{{applicationEndDate}}</span>
+            </div>
           </div>
 
+          <p class="large apply hide-appsClosed">
+            <a href="{{applicationLink}}" target="_blank" id="application-link">Apply Now</a>
+          </p>
 
 
+        </div>
+      </section>
+
+      <div class="break"></div>
 
 
-        <h4 class="breadcrumb hide-content">
-          <a href="/participate.html">participate</a>
-          <span class="caret"></span>
-          <a href="">sessions</a>
-          <span class="caret"></span>
-          <a href="/sessions/spring-22" id="session-link"><span id="session-name">spring 2022</span></a>
-        </h4>
+      <section id="section-description">
+        <div class="grid-2">
+          <h1>Description </h1>
+        </div>
+
+        <div class="grid-2">
+          <p>
+            <!-- {{description}} -->
+            Digital Love Languages: Communion, Consent, Refusal, Renewal is an introductory computing class for
+            reimagining the core of technology’s purpose. This class is based on the premise that there is a world where
+            all our software is made by people who love us and that we can contribute to building it. Digital Love
+            Languages is an experiment in computational communion disguised as a class. <BR><BR>
+
+            In this class, we will learn about things as a proxy to learn about other things. Learn about digital coding
+            to learn how we’re socially coded. Learn about digital consent to learn about sexual consent. Learn about
+            network protocols to learn about sharing. Learn about naming to learn about knowing. Learn about learning to
+            learn about living.
+            <BR><BR>
+            Together, we will build small, personal software with Python HTML Bash and Javascript for affirming one
+            another across physical distance while making and sharing digital space with each other. We will engage with
+            code as a craft capable of expressing a full range of feeling and desire. We will look to the love letter as
+            form, from the quill to the sext. We will explore social and digital consent and ask: How are they
+            interwoven?
+            <BR><BR>
+            Through a series of educational encounters, we will code poetic structures for digital touching and practice
+            a re-examination of personal and networked computing. This is a call to action for expanding computation’s
+            capacity for fostering interdependence and feeling among the immense personal and collective transformations
+            brought on by COVID-19, collapse, and renewal.
 
 
+          </p>
+        </div>
+      </section>
+
+      <div class="break-noline"></div>
 
 
-        <div id="class" class="hide-content appsClosed beforeClass shell-content">
+      <div class="grid-container" id="participate-archive">
 
+        <main class="grid-item main">
+          <main class="grid-item main">
+            <div class="carousel-items items carousel-content participate-content">
 
-          <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
-
-                <section id="section-class-details">
-                    <div class="grid-2">
-                      <h1><span id="class-name">{{name}}</span></h1>
-                    </div>
-
-                    <div class="grid-2 class-details">
-
-
-
-                      <img id="class-image" src="{{promoImage}}">
-
-                      <div class="details">
-                        <div class="labels">Teachers</div>
-                        <div class="labels-info" id="teachers-list">{{teachers.[0].name}} with {{teachers.[1].name}} and {{teachers.[2].name}}</div>
-                      </div>
-                      <div class="details show-duringClass">
-                        <div class="labels">Participants</div>
-                        <div class="labels-info"><span tabindex="0" class="expand"><a class="link">18 participants...</a>
-                          <span class="expanded hide-expanded">
-                          Anna Rulloda, Heidi He, Hermann Zschiegner, Hiroyuki Sakamoto, Jenna Murphy, Joanne Magbitang, Kate Yourke, Ladan Bahmani, Lillian-Yvonne Bertram, Matthis Grunsky, Mauricio Román, Maya Charles, Michelle Chang, Salem Abdulla, Sara K.R., Sara Martinez, Shen-Shen Wu, Thomas (Luca) Bailey and Yadira Sanchez
-                          <a class="more-about-cost">learn more...</a>
-                        </span></span>
-                        </div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Date </div>
-                        <div class="labels-info">
-                          <span id="date">{{startDate}} to {{endDate}}</span> (<span id="number-classes">{{numberOfClasses}}</span> classes)</div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Time </div>
-                        <div class="labels-info" id="time">{{time}}
-                         </div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Location </div>
-                        <div class="labels-info" id="location">{{location}}</div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Cost </div>
-                        <div class="labels-info"><span id="cost">${{cost}}</span> Scholarships available <a class="more-about-cost">learn more...</a></div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Deadline </div>
-                        <div class="labels-info">
-                          <span class="hide-appsClosed">Applications open until</span>
-                          <span class="hide-appsOpen">Applications closed on</span>
-                          <span id="deadline">{{applicationEndDate}}</span></div>
-                      </div>
-
-                      <p class="large apply hide-appsClosed">
-                        <a href="{{applicationLink}}" target="_blank" id="application-link">Apply Now</a>
-                      </p>
-
-
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-
-                <section id="section-description">
-                    <div class="grid-2">
-                      <h1>Description </h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <p>
-                        <!-- {{description}} -->
-                        Digital Love Languages: Communion, Consent, Refusal, Renewal is an introductory computing class for reimagining the core of technology’s purpose. This class is based on the premise that there is a world where all our software is made by people who love us and that we can contribute to building it. Digital Love Languages is an experiment in computational communion disguised as a class. <BR><BR>
-
-In this class, we will learn about things as a proxy to learn about other things. Learn about digital coding to learn how we’re socially coded. Learn about digital consent to learn about sexual consent. Learn about network protocols to learn about sharing. Learn about naming to learn about knowing. Learn about learning to learn about living.
-<BR><BR>
-Together, we will build small, personal software with Python HTML Bash and Javascript for affirming one another across physical distance while making and sharing digital space with each other. We will engage with code as a craft capable of expressing a full range of feeling and desire. We will look to the love letter as form, from the quill to the sext. We will explore social and digital consent and ask: How are they interwoven?
-<BR><BR>
-Through a series of educational encounters, we will code poetic structures for digital touching and practice a re-examination of personal and networked computing. This is a call to action for expanding computation’s capacity for fostering interdependence and feeling among the immense personal and collective transformations brought on by COVID-19, collapse, and renewal.
-
-
-                        </p>
-                    </div>
-                </section>
-
-                <div class="break-noline"></div>
-
-
-               <div class="grid-container" id="participate-archive">
-
-                 <main class="grid-item main">
-                   <main class="grid-item main">
-                     <div class="carousel-items items carousel-content participate-content">
-
-<!--
+              <!--
                      <figure class="block-text test hide-test">Coming into SFPC as a programmer, I was surprised to find American Artist’s critical theory class the most intellectually challenging and rewarding of my SFPC experience. The readings and discussions helped me reexamine my long-held assumptions about technology and inspired my artistic practice. Anyone who works in technology should take this class.
                        <h4>Alex Miller, Spring 2019</h4></figure>
                        <figure class="block-text test hide-test">As someone coming from an engineering educational background, the course was one of my first experiences having critical discussions about technology, race, theory, and more in a group setting. Dark Matters was rigorous in all of the right ways and it has left a lasting impact on the way I think, research, and write.
@@ -197,29 +219,29 @@ Through a series of educational encounters, we will code poetic structures for d
                        <figure class="block-text test hide-test">Critical Theory was eye-opening to me after having majored in computer engineering and worked in tech for a couple years. It made me rethink my relationship with technology and should be a required curriculum for anybody working with computers.
                          <h4>Francisco Rojo, Fall 2019</h4></figure> -->
 
-                       <div id="carousel-images" class="class-images after-launch">
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/0.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/1.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/2.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/3.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/4.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/5.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/6.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/7.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/8.jpg"></figure>
-                         <!-- <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/9.jpg"></figure> -->
-                       </div>
+              <div id="carousel-images" class="class-images after-launch">
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/0.jpg"></figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/1.jpg"></figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/2.jpg"></figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/3.jpg"></figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/4.jpg"></figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/5.jpg"></figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/6.jpg"></figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/7.jpg"></figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/8.jpg"></figure>
+                <!-- <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/dll/9.jpg"></figure> -->
+              </div>
 
 
-                     </div>
+            </div>
 
 
-                   </main>
-                 </main>
+          </main>
+        </main>
 
-               </div>
+      </div>
 
-               <!-- <section>
+      <!-- <section>
                    <div class="grid-2">
                      <p>
                       <span id="test-text">You are viewing photos related to this program.
@@ -235,150 +257,165 @@ Through a series of educational encounters, we will code poetic structures for d
 
 
 
-                <div class="break"></div>
+      <div class="break"></div>
 
 
 
 
 
-                <section id="section-course-of-study">
-                    <div class="grid-2">
-                      <h1>Course of Study</h1>
-                    </div>
+      <section id="section-course-of-study">
+        <div class="grid-2">
+          <h1>Course of Study</h1>
+        </div>
 
-                    <div class="grid-2">
-                      <ul id="study-list">
-                         <li>Writing code as a love letter.
-<li>Writing a social contract as a love letter.
-<li>Building blocks of programming and natural language processing using Python & Javascript in the browser. Networks of people and computers become fertile sites for ambient and playful communication.
-<li>Navigating file paths fluently using the terminal, an application that allows you to control your computer with text commands.
-<li>Writing folder poetry in the terminal.
-<li>The internet is a folder poem.
-<li>Building blocks of the web and networking.
-<li>Fundamentals of frontend (HTML, CSS, JS).
-                      </ul>
-                    </div>
-                </section>
+        <div class="grid-2">
+          <ul id="study-list">
+            <li>Writing code as a love letter.
+            <li>Writing a social contract as a love letter.
+            <li>Building blocks of programming and natural language processing using Python & Javascript in the browser.
+              Networks of people and computers become fertile sites for ambient and playful communication.
+            <li>Navigating file paths fluently using the terminal, an application that allows you to control your
+              computer with text commands.
+            <li>Writing folder poetry in the terminal.
+            <li>The internet is a folder poem.
+            <li>Building blocks of the web and networking.
+            <li>Fundamentals of frontend (HTML, CSS, JS).
+          </ul>
+        </div>
+      </section>
 
-                <div class="break"></div>
-
-
-                <section id="section-expectations">
-                    <div class="grid-2">
-                      <h1>Expectations</h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <ul id="expectations-list">
-                        <li><b>Things you will need for this class include:</b>
-                          <ul><li>Computer made in the last 6 years + access to admin password.
-<li>The willingness to create a space within yourself where you are open to becoming intimate with computers and writing poetry with their logic.
-<li>The willingness to question what schooling, computing, and learning can be.
-<li>The willingness to explore logic, structure, and desire as a source of inspiration and poetry.
-<li>The willingness to question what it means to responsibly give and take access and control to our most intimate digital spaces.
-                        </ul>
-                      </ul>
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-                <section id="section-teachers">
-                    <div class="grid-2">
-                      <h1>Meet the Teachers & Organizers</h1>
-                    </div>
-
-                    <div class="grid-2 class-details">
+      <div class="break"></div>
 
 
-                      <dl class="accordion">
+      <section id="section-expectations">
+        <div class="grid-2">
+          <h1>Expectations</h1>
+        </div>
 
-                        <div class="entity">
-                            <dt>
-                              <span class="bio bio-float" style="background-image: url('/images/people/melanie-hoff.jpg')" role="img"></span>
+        <div class="grid-2">
+          <ul id="expectations-list">
+            <li><b>Things you will need for this class include:</b>
+              <ul>
+                <li>Computer made in the last 6 years + access to admin password.
+                <li>The willingness to create a space within yourself where you are open to becoming intimate with
+                  computers and writing poetry with their logic.
+                <li>The willingness to question what schooling, computing, and learning can be.
+                <li>The willingness to explore logic, structure, and desire as a source of inspiration and poetry.
+                <li>The willingness to question what it means to responsibly give and take access and control to our
+                  most intimate digital spaces.
+              </ul>
+          </ul>
+        </div>
+      </section>
 
-                              <h4 id="role">teacher</h4>
-                              <h3>{{teachers.[0].name}} </h3>
-                                <div class="clear"></div>
-                                <dd><span class="bio" style="background-image: url('/images/people/melanie-hoff.jpg')" role="img"></span>
-                                <p>{{teachers.[0].bio}}
-                                <BR><BR>
-                                  <i>{{teachers.[0].pronouns}}</i> · <a href="{{teachers.[0].website}}">website</a> · <a href="https://instagram.com/{{teachers.[0].instagram}}">instagram</a>
-                                </p>
-                                </dd>
-                            </dt>
-                        </div>
-                        <div class="entity">
-                            <dt>
-                              <span class="bio bio-float" style="background-image: url('/images/people/max-fowler.jpg')" role="img"></span>
+      <div class="break"></div>
 
-                              <h4 id="role">assistant teacher</h4>
-                              <h3>{{teachers.[1].name}} </h3>
-                                <div class="clear"></div>
-                                <dd><span class="bio" style="background-image: url('/images/people/max-fowler.jpg')" role="img"></span>
-                                <p>{{teachers.[1].bio}}
-                                <BR><BR>
-                                  <i>{{teachers.[1].pronouns}}</i> · <a href="{{teachers.[1].website}}">website</a> · {{#if teachers.[1].instagram}}<a href="https://instagram.com/{{teachers.[1].instagram}}">instagram</a>{{/if}}
-                                </p>
-                                </dd>
-                            </dt>
-                        </div>
-                        <div class="entity">
-                            <dt>
-                              <span class="bio bio-float" style="background-image: url('/images/people/meghna-dholakia.jpg')" role="img"></span>
+      <section id="section-teachers">
+        <div class="grid-2">
+          <h1>Meet the Teachers & Organizers</h1>
+        </div>
 
-                              <h4 id="role">assistant teacher</h4>
-                              <h3>{{teachers.[2].name}} </h3>
-                                <div class="clear"></div>
-                                <dd><span class="bio" style="background-image: url('/images/people/meghna-dholakia.jpg')" role="img"></span>
-                                <p>{{teachers.[2].bio}}
-                                <BR><BR>
-                                  <i>{{teachers.[2].pronouns}}</i> · <a href="{{teachers.[2].website}}">website</a> · {{#if teachers.[2].instagram}}<a href="https://instagram.com/{{teachers.[2].instagram}}">instagram</a>{{/if}} · {{#if teachers.[2].twitter}}<a href="https://twitter.com/{{teachers.[2].twitter}}">twitter</a>{{/if}}
-                                </p>
-                                </dd>
-                            </dt>
-                        </div>
+        <div class="grid-2 class-details">
 
 
+          <dl class="accordion">
+
+            <div class="entity">
+              <dt>
+                <span class="bio bio-float" style="background-image: url('/images/people/melanie-hoff.jpg')"
+                  role="img"></span>
+
+                <h4 id="role">teacher</h4>
+                <h3>{{teachers.[0].name}} </h3>
+                <div class="clear"></div>
+              <dd><span class="bio" style="background-image: url('/images/people/melanie-hoff.jpg')" role="img"></span>
+                <p>{{teachers.[0].bio}}
+                  <BR><BR>
+                  <i>{{teachers.[0].pronouns}}</i> · <a href="{{teachers.[0].website}}">website</a> · <a
+                    href="https://instagram.com/{{teachers.[0].instagram}}">instagram</a>
+                </p>
+              </dd>
+              </dt>
+            </div>
+            <div class="entity">
+              <dt>
+                <span class="bio bio-float" style="background-image: url('/images/people/max-fowler.jpg')"
+                  role="img"></span>
+
+                <h4 id="role">assistant teacher</h4>
+                <h3>{{teachers.[1].name}} </h3>
+                <div class="clear"></div>
+              <dd><span class="bio" style="background-image: url('/images/people/max-fowler.jpg')" role="img"></span>
+                <p>{{teachers.[1].bio}}
+                  <BR><BR>
+                  <i>{{teachers.[1].pronouns}}</i> · <a href="{{teachers.[1].website}}">website</a> · {{#if
+                  teachers.[1].instagram}}<a
+                    href="https://instagram.com/{{teachers.[1].instagram}}">instagram</a>{{/if}}
+                </p>
+              </dd>
+              </dt>
+            </div>
+            <div class="entity">
+              <dt>
+                <span class="bio bio-float" style="background-image: url('/images/people/meghna-dholakia.jpg')"
+                  role="img"></span>
+
+                <h4 id="role">assistant teacher</h4>
+                <h3>{{teachers.[2].name}} </h3>
+                <div class="clear"></div>
+              <dd><span class="bio" style="background-image: url('/images/people/meghna-dholakia.jpg')"
+                  role="img"></span>
+                <p>{{teachers.[2].bio}}
+                  <BR><BR>
+                  <i>{{teachers.[2].pronouns}}</i> · <a href="{{teachers.[2].website}}">website</a> · {{#if
+                  teachers.[2].instagram}}<a
+                    href="https://instagram.com/{{teachers.[2].instagram}}">instagram</a>{{/if}} · {{#if
+                  teachers.[2].twitter}}<a href="https://twitter.com/{{teachers.[2].twitter}}">twitter</a>{{/if}}
+                </p>
+              </dd>
+              </dt>
+            </div>
 
 
-                      </dl>
 
 
-
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-
-                <section id="section-for-me">
-                    <div class="grid-2">
-                      <h1>Is this <span id="program-type">class</span> for me?</h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <ul id="for-me-list">
-                        <li><B>If this sounds like you, then YES!: </b>
-                          <ul id="for-you">
-                          <li>You think of yourself as "not a computer person."
-<li>You are ready to reframe your relationship with computing, networking, and digital intimacy
-<li>You desire to define the boundaries that contain and free you.
-                          </ul>
-
-                        </ul>
-                    </div>
-                </section>
-
-
-                <div class="break"></div>
-
-                {{> classBoilerplate}}
-
+          </dl>
 
 
 
         </div>
+      </section>
+
+      <div class="break"></div>
+
+
+      <section id="section-for-me">
+        <div class="grid-2">
+          <h1>Is this <span id="program-type">class</span> for me?</h1>
+        </div>
+
+        <div class="grid-2">
+          <ul id="for-me-list">
+            <li><B>If this sounds like you, then YES!: </b>
+              <ul id="for-you">
+                <li>You think of yourself as "not a computer person."
+                <li>You are ready to reframe your relationship with computing, networking, and digital intimacy
+                <li>You desire to define the boundaries that contain and free you.
+              </ul>
+
+          </ul>
+        </div>
+      </section>
+
+
+      <div class="break"></div>
+
+      {{> classBoilerplate}}
+
+
+
+
+    </div>
 
 
 
@@ -389,10 +426,11 @@ Through a series of educational encounters, we will code poetic structures for d
 
 
 
-<script src="/outside.js"></script>
-<script src="/closed.js"></script>
-<script src="/carousel.js"></script>
-</p>
+    <script src="/outside.js"></script>
+    <script src="/closed.js"></script>
+    <script src="/carousel.js"></script>
+    </p>
 
 </body>
+
 </html>

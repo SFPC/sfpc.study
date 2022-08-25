@@ -1,270 +1,290 @@
-
-
-
-
-
 <head>
-    <title>School for Poetic Computation</title>
+  <title>School for Poetic Computation</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="title" content="School for Poetic Computation">
-    <meta name="description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sfpc.study/">
-    <meta property="og:title" content="School for Poetic Computationn">
-    <meta property="og:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
-    <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sfpc.study/">
-    <meta property="twitter:title" content="School for Poetic Computation">
-    <meta property="twitter:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
-    <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
-    <link href="/styles.css" rel="stylesheet">
-    <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
-    <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico"/>
-    <link rel="stylesheet" href="https://use.typekit.net/thn3crj.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="title" content="School for Poetic Computation">
+  <meta name="description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sfpc.study/">
+  <meta property="og:title" content="School for Poetic Computation">
+  <meta property="og:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sfpc.study/">
+  <meta property="twitter:title" content="School for Poetic Computation">
+  <meta property="twitter:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <link href="/styles.css" rel="stylesheet">
+  <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
+  <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico" />
+  <link rel="stylesheet" href="https://use.typekit.net/thn3crj.css">
 
-    <script src="/jquery-3.6.0.min.js"></script>
+  <script src="/jquery-3.6.0.min.js"></script>
 
-    <!-- stats -->
-    <script type="text/javascript">
-    var sc_project=12714909;
-    var sc_invisible=1;
-    var sc_security="6086a46c";
-    </script>
-    <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript><div class="statcounter"><a title="website statistics"
-    href="https://statcounter.com/" target="_blank"><img class="statcounter"
-    src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- stats -->
+  <script type="text/javascript">
+    var sc_project = 12714909;
+    var sc_invisible = 1;
+    var sc_security = "6086a46c";
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="website statistics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
 
 
-    <script data-goatcounter="https://sfpc.goatcounter.com/count"
-    async src="//gc.zgo.at/count.js"></script>
-    <!-- end stats -->
+  <script data-goatcounter="https://sfpc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <!-- end stats -->
 </head>
 
 <body>
-      <div id="header">
+  <div id="header">
 
-        <div class="definition-marquee">
-          <marquee id="marquee-definition"></marquee>
+    <div class="definition-marquee">
+      <marquee id="marquee-definition"></marquee>
+    </div>
+
+    <div class="grid-2">
+      <div class="grid-2 def-div">
+        <span id="definition" class="defintion"></span>
+        <nav class="mobile-menu">Menu</nav>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="grid-4">
+        <ul class="nav">
+          <li><a id="link-participate" href="participate.html">participate</a></li>
+          <li><a id="link-projects" href="/projects">projects</a></li>
+        </ul>
+      </div>
+      <div class="grid-4">
+        <ul class="nav">
+          <li><a id="link-about" href="about.html">about</a></li>
+          <li><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">blog</a></li>
+          <li><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">support
+              us</a></li>
+        </ul>
+      </div>
+      <div class="grid-4">
+        <ul class="nav">
+          <li><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">newsletter</a>
+          </li>
+          <li><a id="" href="mailto:info@sfpc.io">email</a></li>
+          <li><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a> / <a href="https://twitter.com/sfpc"
+              target="_blank">TW</a> / <a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a>
+          </li>
+        </ul>
+      </div>
+      <div class="grid-4">
+        <div class="nav logo">
+          <a href="index.html"><img src="/images/sfpc-logo.svg"></a>
         </div>
+      </div>
+    </div>
 
+  </div>
+  <!-- </div> -->
+
+
+
+  <div class="mobile-menu-content">
+    <h2><a id="link-participate" href="participate.html">Participate</a></h2>
+
+    <h2><a id="link-projects" href="/projects">Projects</a></h2>
+
+    <h2><a id="link-about" href="about.html">About</a></h2>
+
+    <h2><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">Blog</a></h2>
+
+    <h2><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">Support Us</a>
+    </h2>
+
+    <h2><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">Newsletter</a></h2>
+
+    <h2><a id="" href="mailto:info@sfpc.io">Email</a></h2>
+
+    <h2><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a></h2>
+
+    <h2><a href="https://twitter.com/sfpc" target="_blank">TW</a></h2>
+
+    <h2><a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></h2>
+
+  </div>
+
+  <div id="footer">
+    <div class="mode"><button id="mode-toggle"></button></div>
+  </div>
+
+  <div class="website-grid grid-hide">
+    <div class="grid-inner">
+      <section>
         <div class="grid-2">
-          <div class="grid-2 def-div">
-            <span id="definition" class="defintion"></span>
-            <nav class="mobile-menu">Menu</nav>
-          </div>
+          <div class="chars chars1"></div>
+          <p class="large">School</p>
         </div>
         <div class="grid-2">
-              <div class="grid-4">
-                <ul class="nav">
-                  <li><a id="link-participate" href="participate.html">participate</a></li>
-                  <li><a id="link-projects" href="/projects">projects</a></li>
-                </ul>
-              </div>
-              <div class="grid-4">
-                <ul class="nav">
-                  <li><a id="link-about" href="about.html">about</a></li>
-                  <li><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">blog</a></li>
-                  <li><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">support us</a></li>
-                </ul>
-              </div>
-              <div class="grid-4">
-                <ul class="nav">
-                  <li><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">newsletter</a></li>
-                  <li><a id="" href="mailto:info@sfpc.io">email</a></li>
-                  <li><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a> / <a href="https://twitter.com/sfpc" target="_blank">TW</a> / <a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></li>
-                </ul>
-              </div>
-              <div class="grid-4">
-                <div class="nav logo">
-                  <a href="index.html"><img src="/images/sfpc-logo.svg"></a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-      <!-- </div> -->
-
-
-
-      <div class="mobile-menu-content">
-        <h2><a id="link-participate" href="participate.html">Participate</a></h2>
-
-        <h2><a id="link-projects" href="/projects">Projects</a></h2>
-
-        <h2><a id="link-about" href="about.html">About</a></h2>
-
-        <h2><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">Blog</a></h2>
-
-        <h2><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">Support Us</a></h2>
-
-        <h2><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">Newsletter</a></h2>
-
-        <h2><a id="" href="mailto:info@sfpc.io">Email</a></h2>
-
-        <h2><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a></h2>
-
-        <h2><a href="https://twitter.com/sfpc" target="_blank">TW</a></h2>
-
-        <h2><a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></h2>
-
-      </div>
-
-      <div id="footer">
-        <div class="mode"><button id="mode-toggle"></button></div>
-      </div>
-
-      <div class="website-grid grid-hide">
-        <div class="grid-inner">
-        <section>
-          <div class="grid-2">
-            <div class="chars chars1"></div>
-            <p class="large">School</p>
-          </div>
-          <div class="grid-2">
-            <div class="chars chars2"></div>
-            <p class="large">for</p>
-          </div>
-          <div class="grid-2">
-            <div class="chars chars3"></div>
-            <p class="large">Poetic</p>
-          </div>
-          <div class="grid-2">
-            <div class="chars chars4"></div>
-            <p class="large">Computation</p>
-          </div>
-        </section>
-      </div>
-      </div>
-
-
-      <div class="crt-overlay crt-overlay-fullsize"></div>
-
-      <div id="shell" class="shell shell-fullsize about sfpc">
-        <div class="loader-content">
-            <p tabindex="0" class="large">
-              loading<span>...</span>
-            </p>
+          <div class="chars chars2"></div>
+          <p class="large">for</p>
         </div>
+        <div class="grid-2">
+          <div class="chars chars3"></div>
+          <p class="large">Poetic</p>
+        </div>
+        <div class="grid-2">
+          <div class="chars chars4"></div>
+          <p class="large">Computation</p>
+        </div>
+      </section>
+    </div>
+  </div>
 
 
-        <div class="selectors">
-        <select id="allSections" onchange="sectionJump(this.value)">
-              <option value="class">Jump to section...</option>
-              <option value="section-class-details">ABOUT </option>
-              <option value="section-class-details">--Details & Description</option>
-              <option value="section-course-of-study">--Course of Study</option>
-              <option value="section-expectations">--Expectations</option>
-              <option value="section-teachers">--Teachers</option>
-              <option value="section-for-me">--Is this for me?</option>
-              <option value="section-accessibility">--Accessibility</option>
-              <option value="section-apply">APPLY NOW</option>
-              <option value="section-cost">FINANCES</option>
-              <option value="section-cost">--Cost of Attendence</option>
-              <option value="section-scholarships">--Scholarships</option>
-              <option value="section-donate">--Donate to SFPC</option>
-              <option value="section-refund">--Refund Policy</option>
-              <option value="section-classes">OPPORTUNITIES</option>
-            </select>
-          </div>
+  <div class="crt-overlay crt-overlay-fullsize"></div>
+
+  <div id="shell" class="shell shell-fullsize about sfpc">
+    <div class="loader-content">
+      <p tabindex="0" class="large">
+        loading<span>...</span>
+      </p>
+    </div>
+
+
+    <div class="selectors">
+      <select id="allSections" onchange="sectionJump(this.value)">
+        <option value="class">Jump to section...</option>
+        <option value="section-class-details">ABOUT </option>
+        <option value="section-class-details">--Details & Description</option>
+        <option value="section-course-of-study">--Course of Study</option>
+        <option value="section-expectations">--Expectations</option>
+        <option value="section-teachers">--Teachers</option>
+        <option value="section-for-me">--Is this for me?</option>
+        <option value="section-accessibility">--Accessibility</option>
+        <option value="section-apply">APPLY NOW</option>
+        <option value="section-cost">FINANCES</option>
+        <option value="section-cost">--Cost of Attendence</option>
+        <option value="section-scholarships">--Scholarships</option>
+        <option value="section-donate">--Donate to SFPC</option>
+        <option value="section-refund">--Refund Policy</option>
+        <option value="section-classes">OPPORTUNITIES</option>
+      </select>
+    </div>
 
 
 
 
-        <h4 class="breadcrumb">
-          <a href="participate.html">participate</a>
-          <span class="caret"></span>
-          <a href="sessions.html">sessions</a>
-          <span class="caret"></span>
-          <a href="spring-2022.html" id="session-link"><span id="session-name">sfpc sex ed</span></a>
-        </h4>
+    <h4 class="breadcrumb">
+      <a href="participate.html">participate</a>
+      <span class="caret"></span>
+      <a href="sessions.html">sessions</a>
+      <span class="caret"></span>
+      <a href="spring-2022.html" id="session-link"><span id="session-name">sfpc sex ed</span></a>
+    </h4>
 
 
 
 
-        <div id="class" class="appsOpen beforeClass getNotified shell-content">
+    <div id="class" class="appsOpen beforeClass getNotified shell-content">
 
 
-          <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
+      <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
 
 
-          <section class="intro" id="introduction">
-            <p tabindex="0" class="large">
-              <span id="introduction-text">
-              The School for Poetic Computation (SFPC) is a school about unlearning the harmful social programming of traditional educational spaces as much as it is about art and code.
-              <BR><BR>
-              Many people would benefit from actively determining our own sex education outside of systemic governing bodies like the state, public and private schools, or legal guardians as well as interpersonal relationships like the person(s) who you’re having sex with.
-              Everyone deserves non-sexual, platonic and friendly spaces to learn and explore sexuality and pleasure informed by cultural understandings of sex, gender, class and race and how our identitites relate to sexual desires, preferences and kinks.
-              <BR><BR>
-              SFPC Sex Ed is about finding expansive and playful ways to learn about sex in a safe learning environment.
-            </span>
-            <span id="session-name">This session</span> is organized by
-            <span class="bio" style="background-image: url('/images/people/melanie-hoff.jpg')" role="img"></span>
+      <section class="intro" id="introduction">
+        <p tabindex="0" class="large">
+          <span id="introduction-text">
+            The School for Poetic Computation (SFPC) is a school about unlearning the harmful social programming of
+            traditional educational spaces as much as it is about art and code.
+            <BR><BR>
+            Many people would benefit from actively determining our own sex education outside of systemic governing
+            bodies like the state, public and private schools, or legal guardians as well as interpersonal relationships
+            like the person(s) who you’re having sex with.
+            Everyone deserves non-sexual, platonic and friendly spaces to learn and explore sexuality and pleasure
+            informed by cultural understandings of sex, gender, class and race and how our identitites relate to sexual
+            desires, preferences and kinks.
+            <BR><BR>
+            SFPC Sex Ed is about finding expansive and playful ways to learn about sex in a safe learning environment.
+          </span>
+          <span id="session-name">This session</span> is organized by
+          <span class="bio" style="background-image: url('/images/people/melanie-hoff.jpg')" role="img"></span>
 
-            <span tabindex="0" class="expand"><a class="link">Melanie Hoff</a><span class="expanded hide-expanded">
-              As an artist, educator, and organizer, Melanie studies the role that technology plays in social organization and in reinforcing hegemonic structures. As co-director of the School for Poetic Computation, Soft Surplus, and the Cybernetics Library, Melanie strives to cultivate spaces of learning and feeling that encourage honesty and permit people to overcome divisions created by systems of gender, racialization, and class and by the trauma that these systems inscribe upon our bodies.
+          <span tabindex="0" class="expand"><a class="link">Melanie Hoff</a><span class="expanded hide-expanded">
+              As an artist, educator, and organizer, Melanie studies the role that technology plays in social
+              organization and in reinforcing hegemonic structures. As co-director of the School for Poetic Computation,
+              Soft Surplus, and the Cybernetics Library, Melanie strives to cultivate spaces of learning and feeling
+              that encourage honesty and permit people to overcome divisions created by systems of gender,
+              racialization, and class and by the trauma that these systems inscribe upon our bodies.
             </span></span>
 
 
-            <span class="bio" style="background-image: url('/images/people/neta-bomani.jpg')" role="img"></span>
+          <span class="bio" style="background-image: url('/images/people/neta-bomani.jpg')" role="img"></span>
 
-            <span tabindex="0" class="expand"><a class="link">Neta Bomani</a><span class="expanded hide-expanded">
-              Neta Bomani is an abolitionist, learner and educator who is interested in parsing information and histories while making things by hand with human and non-human computers. Neta’s work combines archives, oral histories, computation, social practices, printmaking, paper engineering, zine making and workshops to create do it yourself artifacts.
+          <span tabindex="0" class="expand"><a class="link">Neta Bomani</a><span class="expanded hide-expanded">
+              Neta Bomani is an abolitionist, learner and educator who is interested in parsing information and
+              histories while making things by hand with human and non-human computers. Neta’s work combines archives,
+              oral histories, computation, social practices, printmaking, paper engineering, zine making and workshops
+              to create do it yourself artifacts.
             </span></span>
 
 
-            and
+          and
 
 
 
-            <span class="bio" style="background-image: url('/images/people/zainab-aliyu.jpg')" role="img"></span>
+          <span class="bio" style="background-image: url('/images/people/zainab-aliyu.jpg')" role="img"></span>
 
-            <span tabindex="0" class="expand"><a class="link">Zainab Aliyu</a><span class="expanded hide-expanded">
-              Zainab "Zai" Aliyu is an artist and cultural worker whose work is about the material affect of the "immaterial." She contextualizes the cybernetic and temporal entanglement embedded within societal dynamics to understand how all sociotechnological systems of control are interconnected, and how we are all implicated through time. She often dreams, experiments and inquires through built virtual environments, printed matter, video, archives, writing, installation and community-participatory (un)learning.  </span></span>.
+          <span tabindex="0" class="expand"><a class="link">Zainab Aliyu</a><span class="expanded hide-expanded">
+              Zainab "Zai" Aliyu is an artist and cultural worker whose work is about the material affect of the
+              "immaterial." She contextualizes the cybernetic and temporal entanglement embedded within societal
+              dynamics to understand how all sociotechnological systems of control are interconnected, and how we are
+              all implicated through time. She often dreams, experiments and inquires through built virtual
+              environments, printed matter, video, archives, writing, installation and community-participatory
+              (un)learning. </span></span>.
 
-            It includes workshops with
-            <span class="bio" style="background-image: url('/images/people/american-artist.jpg')" role="img"></span>
-            <span tabindex="0" class="expand"><a class="link">Erika Hart</a><span class="expanded hide-expanded">
+          It includes workshops with
+          <span class="bio" style="background-image: url('/images/people/american-artist.jpg')" role="img"></span>
+          <span tabindex="0" class="expand"><a class="link">Erika Hart</a><span class="expanded hide-expanded">
               bio.
             </span></span>
 
-            <span class="bio" style="background-image: url('/images/people/essie-leso.jpeg')" role="img"></span>
-            <span tabindex="0" class="expand"><a class="link">Rebelle Cunt</a><span class="expanded hide-expanded">
+          <span class="bio" style="background-image: url('/images/people/essie-leso.jpeg')" role="img"></span>
+          <span tabindex="0" class="expand"><a class="link">Rebelle Cunt</a><span class="expanded hide-expanded">
               bio.
             </span></span>
 
-            <span class="bio" style="background-image: url('/images/people/essie-leso.jpeg')" role="img"></span>
-            <span tabindex="0" class="expand"><a class="link">Essie Leso</a><span class="expanded hide-expanded">
+          <span class="bio" style="background-image: url('/images/people/essie-leso.jpeg')" role="img"></span>
+          <span tabindex="0" class="expand"><a class="link">Essie Leso</a><span class="expanded hide-expanded">
               bio.
             </span></span>
 
-            <span class="bio" style="background-image: url('/images/people/essie-leso.jpeg')" role="img"></span>
-            <span tabindex="0" class="expand"><a class="link">Elizabeth Perez</a><span class="expanded hide-expanded">
+          <span class="bio" style="background-image: url('/images/people/essie-leso.jpeg')" role="img"></span>
+          <span tabindex="0" class="expand"><a class="link">Elizabeth Perez</a><span class="expanded hide-expanded">
               bio.
             </span></span>
 
-            <span class="bio" style="background-image: url('/images/people/essie-leso.jpeg')" role="img"></span>
-            <span tabindex="0" class="expand"><a class="link">Sophie Lewis</a><span class="expanded hide-expanded">
+          <span class="bio" style="background-image: url('/images/people/essie-leso.jpeg')" role="img"></span>
+          <span tabindex="0" class="expand"><a class="link">Sophie Lewis</a><span class="expanded hide-expanded">
               bio.
             </span></span>
 
-            <span class="bio" style="background-image: url('/images/people/essie-leso.jpeg')" role="img"></span>
-            <span tabindex="0" class="expand"><a class="link">Gabriella Garcia</a><span class="expanded hide-expanded">
+          <span class="bio" style="background-image: url('/images/people/essie-leso.jpeg')" role="img"></span>
+          <span tabindex="0" class="expand"><a class="link">Gabriella Garcia</a><span class="expanded hide-expanded">
               bio.
             </span></span>
 
-            <span class="bio" style="background-image: url('/images/people/essie-leso.jpeg')" role="img"></span>
-            <span tabindex="0" class="expand"><a class="link">Shawné Michaelain Holloway</a><span class="expanded hide-expanded">
+          <span class="bio" style="background-image: url('/images/people/essie-leso.jpeg')" role="img"></span>
+          <span tabindex="0" class="expand"><a class="link">Shawné Michaelain Holloway</a><span
+              class="expanded hide-expanded">
               bio.
             </span></span> and
 
-            <span class="bio" style="background-image: url('/images/people/essie-leso.jpeg')" role="img"></span>
-            <span tabindex="0" class="expand"><a class="link">Nahee Kim</a><span class="expanded hide-expanded">
+          <span class="bio" style="background-image: url('/images/people/essie-leso.jpeg')" role="img"></span>
+          <span tabindex="0" class="expand"><a class="link">Nahee Kim</a><span class="expanded hide-expanded">
               bio.
             </span></span>.
 
@@ -273,26 +293,26 @@
 
 
 
-            <BR><BR>
-                        </section>
+          <BR><BR>
+      </section>
 
 
-              <div class="break-noline"></div>
+      <div class="break-noline"></div>
 
-                <section id="section-class-details">
-                    <div class="grid-2">
-                      <h1><span id="class-name">Details</span></h1>
-                    </div>
+      <section id="section-class-details">
+        <div class="grid-2">
+          <h1><span id="class-name">Details</span></h1>
+        </div>
 
-                    <div class="grid-2 class-details">
-
-
-
-                      <!-- <img id="class-image" src="{{promoImage}}"> -->
+        <div class="grid-2 class-details">
 
 
 
-                      <!-- <div class="details">
+          <!-- <img id="class-image" src="{{promoImage}}"> -->
+
+
+
+          <!-- <div class="details">
                         <div class="labels">Organizers</div>
                         <div class="labels-info" id="teachers-list">{{organizers.[0].name}}</div>
                       </div>
@@ -302,50 +322,56 @@
                         <div class="labels-info" id="teachers-list">{{teachers.[0].name}} with {{teachers.[1].name}}</div>
                       </div> -->
 
-                      <div class="details show-duringClass">
-                        <div class="labels">Participants</div>
-                        <div class="labels-info"><span tabindex="0" class="expand"><a class="link">18 participants...</a>
-                          <span class="expanded hide-expanded">
-                          Anna Rulloda, Heidi He, Hermann Zschiegner, Hiroyuki Sakamoto, Jenna Murphy, Joanne Magbitang, Kate Yourke, Ladan Bahmani, Lillian-Yvonne Bertram, Matthis Grunsky, Mauricio Román, Maya Charles, Michelle Chang, Salem Abdulla, Sara K.R., Sara Martinez, Shen-Shen Wu, Thomas (Luca) Bailey and Yadira Sanchez
-                          <a class="more-about-cost">learn more...</a>
-                        </span></span>
-                        </div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Date </div>
-                        <div class="labels-info">
-                          <span id="date">{{startDate}} to {{endDate}}</span> (<span id="number-classes">{{numberOfClasses}}</span> classes)</div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Time </div>
-                        <div class="labels-info" id="time">{{time}}
-                         </div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Location </div>
-                        <div class="labels-info" id="location">{{location}}</div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Cost </div>
-                        <div class="labels-info"><span id="cost">${{cost}}</span> Scholarships available <a class="more-about-cost">learn more...</a></div>
-                      </div>
-                      <div class="details">
-                        <div class="labels">Deadline </div>
-                        <div class="labels-info">
-                          <span class="hide-appsClosed">Applications open until</span>
-                          <span class="hide-appsOpen">Applications closed on</span>
-                          <span id="deadline">{{applicationEndDate}}</span></div>
-                      </div>
+          <div class="details show-duringClass">
+            <div class="labels">Participants</div>
+            <div class="labels-info"><span tabindex="0" class="expand"><a class="link">18 participants...</a>
+                <span class="expanded hide-expanded">
+                  Anna Rulloda, Heidi He, Hermann Zschiegner, Hiroyuki Sakamoto, Jenna Murphy, Joanne Magbitang, Kate
+                  Yourke, Ladan Bahmani, Lillian-Yvonne Bertram, Matthis Grunsky, Mauricio Román, Maya Charles, Michelle
+                  Chang, Salem Abdulla, Sara K.R., Sara Martinez, Shen-Shen Wu, Thomas (Luca) Bailey and Yadira Sanchez
+                  <a class="more-about-cost">learn more...</a>
+                </span></span>
+            </div>
+          </div>
+          <div class="details">
+            <div class="labels">Date </div>
+            <div class="labels-info">
+              <span id="date">{{startDate}} to {{endDate}}</span> (<span id="number-classes">{{numberOfClasses}}</span>
+              classes)
+            </div>
+          </div>
+          <div class="details">
+            <div class="labels">Time </div>
+            <div class="labels-info" id="time">{{time}}
+            </div>
+          </div>
+          <div class="details">
+            <div class="labels">Location </div>
+            <div class="labels-info" id="location">{{location}}</div>
+          </div>
+          <div class="details">
+            <div class="labels">Cost </div>
+            <div class="labels-info"><span id="cost">${{cost}}</span> Scholarships available <a
+                class="more-about-cost">learn more...</a></div>
+          </div>
+          <div class="details">
+            <div class="labels">Deadline </div>
+            <div class="labels-info">
+              <span class="hide-appsClosed">Applications open until</span>
+              <span class="hide-appsOpen">Applications closed on</span>
+              <span id="deadline">{{applicationEndDate}}</span>
+            </div>
+          </div>
 
-                      <p class="large apply hide-appsClosed">
-                        <a href="{{applicationLink}}" target="_blank" id="application-link">Apply Now</a>
-                      </p>
+          <p class="large apply hide-appsClosed">
+            <a href="{{applicationLink}}" target="_blank" id="application-link">Apply Now</a>
+          </p>
 
 
-                    </div>
-                </section>
+        </div>
+      </section>
 
-                <!-- <div class="break"></div>
+      <!-- <div class="break"></div>
 
 
                 <section id="section-description">
@@ -360,429 +386,509 @@
                     </div>
                 </section> -->
 
-                <div class="break-noline"></div>
+      <div class="break-noline"></div>
 
 
-               <div class="grid-container" id="participate-archive">
+      <div class="grid-container" id="participate-archive">
 
-                 <main class="grid-item main">
-                   <main class="grid-item main">
-                     <div class="carousel-items items carousel-content participate-content">
+        <main class="grid-item main">
+          <main class="grid-item main">
+            <div class="carousel-items items carousel-content participate-content">
 
 
-                       <div id="carousel-images" class="class-images after-launch">
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/1.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/2.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/3.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/4.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/5.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/6.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/7.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/8.jpg"></figure>
-                         <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/9.jpg"></figure>
-                       </div>
+              <div id="carousel-images" class="class-images after-launch">
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/1.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/2.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/3.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/4.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/5.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/6.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/7.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/8.jpg">
+                </figure>
+                <figure class="item participate-img"><img src="/images/sessions/spring-22/classes/darkmatters/9.jpg">
+                </figure>
+              </div>
 
 
-                     </div>
+            </div>
 
 
-                   </main>
-                 </main>
+          </main>
+        </main>
 
-               </div>
+      </div>
 
 
-               <section>
-                   <div class="grid-2">
-                     <p>
-                      A selection of guiding resources. <a href="">View are.na channel</a></p>
-                   </div>
-
-                   <div class="grid-2">
-                   </div>
-               </section>
-
-
-
-
-                <div class="break"></div>
-
-
-
-<div class="afterLaunch">
-
-
-
-                <section id="section-course-of-study">
-                    <div class="grid-2">
-                      <h1>Course of Study</h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <dl class="accordion">
-
-                          <div class="entity">
-                              <dt>
-                                <span class="bio notPerson bio-float" style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/901120/original_5b5c9b2c699048841fd134fc0af4233d.png')" role="img"></span>
-
-                                <h4 id="role">workshop · Monday, July 20</h4>
-                                <h3>101, ABCs with Erika Hart</h3>
-                                  <div class="clear"></div>
-                                  <dd>
-                                    <span class="bio notPerson" style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/901120/original_5b5c9b2c699048841fd134fc0af4233d.png')" role="img"></span>
-                                  <p>Workshop description </p>
-                                  </dd>
-                              </dt>
-                          </div>
-
-
-                          <div class="entity">
-                              <dt>
-                                <span class="bio notPerson bio-float" style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')" role="img"></span>
-                                <h4 id="role">workshop · Tuesday, July 22</h4>
-                                <h3>History with Rebelle Cunt / Heaux History</h3>
-                                <div class="clear"></div>
-                                  <dd>
-                                    <span class="bio notPerson" style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')" role="img"></span>
-                                  <p>Workshop description
-                                     </p>
-                                  </dd>
-                              </dt>
-                          </div>
-
-                          <div class="entity">
-                              <dt>
-                                <span class="bio notPerson bio-float" style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')" role="img"></span>
-                                <h4 id="role">workshop · Tuesday, July 22</h4>
-                                <h3>Sexual health and protection with Essie Leso</h3>
-                                <div class="clear"></div>
-                                  <dd>
-                                    <span class="bio notPerson" style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')" role="img"></span>
-                                  <p>Workshop description
-                                     </p>
-                                  </dd>
-                              </dt>
-                          </div>
-
-                          <div class="entity">
-                              <dt>
-                                <span class="bio notPerson bio-float" style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/901120/original_5b5c9b2c699048841fd134fc0af4233d.png')" role="img"></span>
-                                <h4 id="role">workshop · Tuesday, July 22</h4>
-                                <h3>Pregnancy and reproduction with Elizabeth Perez and Sophie Lewis</h3>
-                                <div class="clear"></div>
-                                  <dd>
-                                    <span class="bio notPerson" style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/901120/original_5b5c9b2c699048841fd134fc0af4233d.png')" role="img"></span>
-                                  <p>Workshop description
-                                     </p>
-                                  </dd>
-                              </dt>
-                          </div>
-
-                          <div class="entity">
-                              <dt>
-                                <span class="bio notPerson bio-float" style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')" role="img"></span>
-                                <h4 id="role">workshop · Tuesday, July 22</h4>
-                                <h3>Kinks and Porn with Shawné Michaelain Holloway</h3>
-                                <div class="clear"></div>
-                                  <dd>
-                                    <span class="bio notPerson" style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')" role="img"></span>
-                                  <p>Workshop description
-                                     </p>
-                                  </dd>
-                              </dt>
-                          </div>
-
-                          <div class="entity">
-                              <dt>
-                                <span class="bio notPerson bio-float" style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')" role="img"></span>
-                                <h4 id="role">workshop · Tuesday, July 22</h4>
-                                <h3>Sex in society with Gabriella Garcia / Decoding Stigma</h3>
-                                <div class="clear"></div>
-                                  <dd>
-                                    <span class="bio notPerson" style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')" role="img"></span>
-                                  <p>Workshop description
-                                     </p>
-                                  </dd>
-                              </dt>
-                          </div>
-
-                          <div class="entity">
-                              <dt>
-                                <span class="bio notPerson bio-float" style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')" role="img"></span>
-                                <h4 id="role">workshop · Tuesday, July 22</h4>
-                                <h3>Fantasy Genitals with Nahee Kim</h3>
-                                <div class="clear"></div>
-                                  <dd>
-                                    <span class="bio notPerson" style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')" role="img"></span>
-                                  <p>Workshop description
-                                     </p>
-                                  </dd>
-                              </dt>
-                          </div>
-
-
-
-                      </dl>
-
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-
-                <section id="section-expectations">
-                    <div class="grid-2">
-                      <h1>Expectations</h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <ul id="expectations-list">
-                        <li>Over the course of the 10 weeks, we will be working on a collaborative publication relating to themes discussed in class, and by the end of the class we will publish this as a digital publication containing original contributions from every member of the class
-                        <li>Participants should come with an open mind and an interest in helping one another to learn by providing a welcome learning environment.
-                        <li>Be open to questioning things we take for granted as normal. How can we destabilize and decenter power structures considered normal to everyday life?
-                        </ul>
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-                <section id="section-teachers">
-                    <div class="grid-2">
-                      <h1>Meet the Teachers & Organizers</h1>
-                    </div>
-
-                    <div class="grid-2 class-details">
-
-
-                      <dl class="accordion">
-
-                          <div class="entity">
-                              <dt>
-                                <span class="bio bio-float" style="background-image: url('/images/people/melanie-hoff.jpg')" role="img"></span>
-
-                                <h4 id="role">teacher</h4>
-                                <h3>Name </h3>
-                                  <div class="clear"></div>
-                                  <dd><span class="bio" style="background-image: url('/images/people/melanie-hoff.jpg')" role="img"></span>
-                                  <p>{{teachers.[0].bio}}
-                                  <BR><BR>
-                                    <a href="{{teachers.[0].website}}">website</a> · <a href="https://instagram.com/{{teachers.[0].instagram}}">instagram</a>
-                                  </p>
-                                  </dd>
-                              </dt>
-                          </div>
-
-                          <div class="entity">
-                              <dt>
-                                <span class="bio bio-float" style="background-image: url('/images/people/melanie-hoff.jpg')" role="img"></span>
-
-                                <h4 id="role">organizer & teacher</h4>
-                                <h3>Name </h3>
-                                  <div class="clear"></div>
-                                  <dd><span class="bio" style="background-image: url('/images/people/melanie-hoff.jpg')" role="img"></span>
-                                  <p>{{teachers.[0].bio}}
-                                  <BR><BR>
-                                    <a href="{{teachers.[0].website}}">website</a> · <a href="https://instagram.com/{{teachers.[0].instagram}}">instagram</a>
-                                  </p>
-                                  </dd>
-                              </dt>
-                          </div>
-
-                          <div class="entity">
-                              <dt>
-                                <span class="bio bio-float" style="background-image: url('/images/people/melanie-hoff.jpg')" role="img"></span>
-
-                                <h4 id="role">teacher</h4>
-                                <h3>Name </h3>
-                                  <div class="clear"></div>
-                                  <dd><span class="bio" style="background-image: url('/images/people/melanie-hoff.jpg')" role="img"></span>
-                                  <p>{{teachers.[0].bio}}
-                                  <BR><BR>
-                                    <a href="{{teachers.[0].website}}">website</a> · <a href="https://instagram.com/{{teachers.[0].instagram}}">instagram</a>
-                                  </p>
-                                  </dd>
-                              </dt>
-                          </div>
-
-
-                      </dl>
-
-
-
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-
-                <section id="section-for-me">
-                    <div class="grid-2">
-                      <h1>Is this <span id="program-type">class</span> for me?</h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <ul id="for-me-list">
-                        <li><B>If this sounds like you, then YES!: </b>
-                          <ul id="for-you">
-                          <li>You are a coder or tech worker and you want to think more critically about the social and economic impact of computers.
-                          <li>You are NOT a coder or tech worker but you want a deeper understanding of how code affects everything around us.
-                          <li>You are a fan of The Matrix (1999).
-                          </ul>
-
-                        <li><B>If this sounds like you, then this <span id="program-type">class</span> may not be for you: </b>
-                          <ul id="not-for-you">
-                          <li>You want to learn to code or hone your computer skills.
-                          <li>You think Adam Smith was onto something.
-                          <li>You think the cloud is in the sky.
-                          <li>You do not have the bandwidth for a life changing experience at this time.
-                          </ul>
-                        </ul>
-                    </div>
-                </section>
-
-
-                <div class="break"></div>
-
-
-                <section id="section-accessibility">
-                    <div class="grid-2">
-                      <h1>Accessibility</h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <p>Our programs are conducted in spoken English with audiovisual materials such as slides, code examples and video. Online programs are held over Zoom.
-                      </p>
-                      <p>Please take care and be well. We hope you are comfortable in your housing, living, and working situation in general. Never hesitate to ask us for advice and reach out if you have accessibility requests or need any assistance during your time at SFPC. We will work closely with you towards co-creating the most accommodating learning environment for your needs.
-                      </p>
-                      <p><a href="mailto:participate@sfpc.study">reach out with questions about access...</a>
-                      </p>
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-
-                <section id="section-apply">
-                    <div class="grid-2">
-                      <h1>How do I apply?</h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <p class="large apply hide-appsClosed">
-                        <a href="{{applicationLink}}" id="application-link">Apply Now</a>
-                      </p>
-
-                      <p>
-                        <span class="hide-appsClosed">Applications open until</span>
-                        <span class="hide-appsOpen">Applications closed on</span>
-                        <span id="deadline">{{applicationEndDate}}</span>.</p>
-                      <p>You can expect to hear back from us about the status of your application on {{notifyDate}}. Please email us at <a href="mailto:admissions@sfpc.study">admissions@sfpc.study</a> with any questions you have.
-                       </p><p>
-                        <a href="/about-participating.html">more about what we look for in participants...</a>
-                         </p>
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-
-
-                <section id="section-cost">
-                    <div class="grid-2">
-                      <h1>How much does it cost to attend?</h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <p>
-                            <span id="cost">${{cost}}</span> + Withfriends payment processing fees for <span id="number-classes">10</span> classes.
-                            </p><p>Upon payment, your space in the class will be reserved.
-                         We offer scholarships for those who cannot pay full tuition. Read more about scholarships below.
-
-                        </p>
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-
-
-
-                <section id="section-scholarships">
-                    <div class="grid-2">
-                      <h1>I can’t pay for SFPC. Can I come at a reduced rate, or for free?</h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <p>
-                        If you can’t pay full tuition, we really still want you to apply. Our application will ask you how much you can pay. We will offer subsidized positions in all of our classes, once each one has enough participants enrolled that we’re able to do so.
-                      </p>
-                      <p>We have also started a <a href="https://withfriends.co/school_for_poetic_computation">scholarship fund</a>, and we will be offering additional scholarships as community members <a href="https://withfriends.co/school_for_poetic_computation">redistribute their wealth</a> through SFPC.
-                      We direct scholarship funds towards participants who are low-income, Black, Indigenous, racialized, gendered, disabled, Queer, trans, oppressed, historicially excluded and underrepresented.
-                    </p><p>
-                            Right now, tuition is SFPC’s main source of income, and that is a problem. It means that we can only pay teachers, pay for space, and organize programs when participants pay full tuition to attend. Tuition is a huge barrier to entry into the SFPC community, and it disproportionately limits Black participants, indigenous participants, queer and trans participants, and other people who are marginalized, from participating. Scholarships are not a long term solution for us, but in the short and medium term we hope to offer them more while we work towards transforming SFPC’s financial model.
-                        </p>
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-                <section id="section-donate">
-                    <div class="grid-2">
-                      <h1>How can I help others to attend SFPC?</h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <p>
-                            For SFPC to be the kind of place the community has always meant it to be, it needs to become a platform for wealth redistribution. If you are a former student, prospective student, or friend of the school, and you have the financial privilege to do so, <a href="https://withfriends.co/school_for_poetic_computation/join">please donate generously</a>. There is enough wealth in this community to make sure no one is ever rejected because of their inability to pay, and becoming that school will make SFPC the impactful, imaginative, transformative center of poetry and justice that we know it can be.
-
-                          </p>
-                    </div>
-                </section>
-
-                <div class="break"></div>
-
-                <section id="section-refund">
-                    <div class="grid-2">
-                      <h1>What if I can’t go, can I get a refund?</h1>
-                    </div>
-
-                    <div class="grid-2">
-                      <ul id="expectations-list">
-                        <li>Yes, we can give you 100% refund up to 10 days before class starts
-                        <li>50% refund after 10 days, until the first day of the class
-                        <li>No refunds can be given after the first day of the class
-                        </ul>
-                    </div>
-                </section>
-
-
-
-
-
-                <div class="break"></div>
-</div>
-
-
-                <div class="break-noline"></div>
-
-                <section id="section-outro">
-                  <p tabindex="0" class="large">
-                    Interested in more learning opportunities at the School for Poetic Computation?
-                    Join our <a href="https://stats.sender.net/forms/e09QVa/view">newsletter</a> to stay up to date on future sessions and events, and
-                    follow us on <a href="https://instagram.com/sfpc_nyc">Instagram</a> and <a href="https://twitter.com/sfpc">Twitter</a>.
-                    Support our programming through <a href="https://withfriends.co/school_for_poetic_computation">scholarships</a>.
-                    Get in touch over <a href="mailto:info@sfpc.study">email</a>.
-                  </p>
-                </section>
-
-
-                <div class="break-endpage"></div>
-
-
-
-
+      <section>
+        <div class="grid-2">
+          <p>
+            A selection of guiding resources. <a href="">View are.na channel</a></p>
         </div>
 
+        <div class="grid-2">
+        </div>
+      </section>
+
+
+
+
+      <div class="break"></div>
+
+
+
+      <div class="afterLaunch">
+
+
+
+        <section id="section-course-of-study">
+          <div class="grid-2">
+            <h1>Course of Study</h1>
+          </div>
+
+          <div class="grid-2">
+            <dl class="accordion">
+
+              <div class="entity">
+                <dt>
+                  <span class="bio notPerson bio-float"
+                    style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/901120/original_5b5c9b2c699048841fd134fc0af4233d.png')"
+                    role="img"></span>
+
+                  <h4 id="role">workshop · Monday, July 20</h4>
+                  <h3>101, ABCs with Erika Hart</h3>
+                  <div class="clear"></div>
+                <dd>
+                  <span class="bio notPerson"
+                    style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/901120/original_5b5c9b2c699048841fd134fc0af4233d.png')"
+                    role="img"></span>
+                  <p>Workshop description </p>
+                </dd>
+                </dt>
+              </div>
+
+
+              <div class="entity">
+                <dt>
+                  <span class="bio notPerson bio-float"
+                    style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')"
+                    role="img"></span>
+                  <h4 id="role">workshop · Tuesday, July 22</h4>
+                  <h3>History with Rebelle Cunt / Heaux History</h3>
+                  <div class="clear"></div>
+                <dd>
+                  <span class="bio notPerson"
+                    style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')"
+                    role="img"></span>
+                  <p>Workshop description
+                  </p>
+                </dd>
+                </dt>
+              </div>
+
+              <div class="entity">
+                <dt>
+                  <span class="bio notPerson bio-float"
+                    style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')"
+                    role="img"></span>
+                  <h4 id="role">workshop · Tuesday, July 22</h4>
+                  <h3>Sexual health and protection with Essie Leso</h3>
+                  <div class="clear"></div>
+                <dd>
+                  <span class="bio notPerson"
+                    style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')"
+                    role="img"></span>
+                  <p>Workshop description
+                  </p>
+                </dd>
+                </dt>
+              </div>
+
+              <div class="entity">
+                <dt>
+                  <span class="bio notPerson bio-float"
+                    style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/901120/original_5b5c9b2c699048841fd134fc0af4233d.png')"
+                    role="img"></span>
+                  <h4 id="role">workshop · Tuesday, July 22</h4>
+                  <h3>Pregnancy and reproduction with Elizabeth Perez and Sophie Lewis</h3>
+                  <div class="clear"></div>
+                <dd>
+                  <span class="bio notPerson"
+                    style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/901120/original_5b5c9b2c699048841fd134fc0af4233d.png')"
+                    role="img"></span>
+                  <p>Workshop description
+                  </p>
+                </dd>
+                </dt>
+              </div>
+
+              <div class="entity">
+                <dt>
+                  <span class="bio notPerson bio-float"
+                    style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')"
+                    role="img"></span>
+                  <h4 id="role">workshop · Tuesday, July 22</h4>
+                  <h3>Kinks and Porn with Shawné Michaelain Holloway</h3>
+                  <div class="clear"></div>
+                <dd>
+                  <span class="bio notPerson"
+                    style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')"
+                    role="img"></span>
+                  <p>Workshop description
+                  </p>
+                </dd>
+                </dt>
+              </div>
+
+              <div class="entity">
+                <dt>
+                  <span class="bio notPerson bio-float"
+                    style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')"
+                    role="img"></span>
+                  <h4 id="role">workshop · Tuesday, July 22</h4>
+                  <h3>Sex in society with Gabriella Garcia / Decoding Stigma</h3>
+                  <div class="clear"></div>
+                <dd>
+                  <span class="bio notPerson"
+                    style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')"
+                    role="img"></span>
+                  <p>Workshop description
+                  </p>
+                </dd>
+                </dt>
+              </div>
+
+              <div class="entity">
+                <dt>
+                  <span class="bio notPerson bio-float"
+                    style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')"
+                    role="img"></span>
+                  <h4 id="role">workshop · Tuesday, July 22</h4>
+                  <h3>Fantasy Genitals with Nahee Kim</h3>
+                  <div class="clear"></div>
+                <dd>
+                  <span class="bio notPerson"
+                    style="background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/171337/original_654027f72b9a67642ca13b99f35dc51d.jpg')"
+                    role="img"></span>
+                  <p>Workshop description
+                  </p>
+                </dd>
+                </dt>
+              </div>
+
+
+
+            </dl>
+
+          </div>
+        </section>
+
+        <div class="break"></div>
+
+
+        <section id="section-expectations">
+          <div class="grid-2">
+            <h1>Expectations</h1>
+          </div>
+
+          <div class="grid-2">
+            <ul id="expectations-list">
+              <li>Over the course of the 10 weeks, we will be working on a collaborative publication relating to themes
+                discussed in class, and by the end of the class we will publish this as a digital publication containing
+                original contributions from every member of the class
+              <li>Participants should come with an open mind and an interest in helping one another to learn by
+                providing a welcome learning environment.
+              <li>Be open to questioning things we take for granted as normal. How can we destabilize and decenter power
+                structures considered normal to everyday life?
+            </ul>
+          </div>
+        </section>
+
+        <div class="break"></div>
+
+        <section id="section-teachers">
+          <div class="grid-2">
+            <h1>Meet the Teachers & Organizers</h1>
+          </div>
+
+          <div class="grid-2 class-details">
+
+
+            <dl class="accordion">
+
+              <div class="entity">
+                <dt>
+                  <span class="bio bio-float" style="background-image: url('/images/people/melanie-hoff.jpg')"
+                    role="img"></span>
+
+                  <h4 id="role">teacher</h4>
+                  <h3>Name </h3>
+                  <div class="clear"></div>
+                <dd><span class="bio" style="background-image: url('/images/people/melanie-hoff.jpg')"
+                    role="img"></span>
+                  <p>{{teachers.[0].bio}}
+                    <BR><BR>
+                    <a href="{{teachers.[0].website}}">website</a> · <a
+                      href="https://instagram.com/{{teachers.[0].instagram}}">instagram</a>
+                  </p>
+                </dd>
+                </dt>
+              </div>
+
+              <div class="entity">
+                <dt>
+                  <span class="bio bio-float" style="background-image: url('/images/people/melanie-hoff.jpg')"
+                    role="img"></span>
+
+                  <h4 id="role">organizer & teacher</h4>
+                  <h3>Name </h3>
+                  <div class="clear"></div>
+                <dd><span class="bio" style="background-image: url('/images/people/melanie-hoff.jpg')"
+                    role="img"></span>
+                  <p>{{teachers.[0].bio}}
+                    <BR><BR>
+                    <a href="{{teachers.[0].website}}">website</a> · <a
+                      href="https://instagram.com/{{teachers.[0].instagram}}">instagram</a>
+                  </p>
+                </dd>
+                </dt>
+              </div>
+
+              <div class="entity">
+                <dt>
+                  <span class="bio bio-float" style="background-image: url('/images/people/melanie-hoff.jpg')"
+                    role="img"></span>
+
+                  <h4 id="role">teacher</h4>
+                  <h3>Name </h3>
+                  <div class="clear"></div>
+                <dd><span class="bio" style="background-image: url('/images/people/melanie-hoff.jpg')"
+                    role="img"></span>
+                  <p>{{teachers.[0].bio}}
+                    <BR><BR>
+                    <a href="{{teachers.[0].website}}">website</a> · <a
+                      href="https://instagram.com/{{teachers.[0].instagram}}">instagram</a>
+                  </p>
+                </dd>
+                </dt>
+              </div>
+
+
+            </dl>
+
+
+
+          </div>
+        </section>
+
+        <div class="break"></div>
+
+
+        <section id="section-for-me">
+          <div class="grid-2">
+            <h1>Is this <span id="program-type">class</span> for me?</h1>
+          </div>
+
+          <div class="grid-2">
+            <ul id="for-me-list">
+              <li><B>If this sounds like you, then YES!: </b>
+                <ul id="for-you">
+                  <li>You are a coder or tech worker and you want to think more critically about the social and economic
+                    impact of computers.
+                  <li>You are NOT a coder or tech worker but you want a deeper understanding of how code affects
+                    everything around us.
+                  <li>You are a fan of The Matrix (1999).
+                </ul>
+
+              <li><B>If this sounds like you, then this <span id="program-type">class</span> may not be for you: </b>
+                <ul id="not-for-you">
+                  <li>You want to learn to code or hone your computer skills.
+                  <li>You think Adam Smith was onto something.
+                  <li>You think the cloud is in the sky.
+                  <li>You do not have the bandwidth for a life changing experience at this time.
+                </ul>
+            </ul>
+          </div>
+        </section>
+
+
+        <div class="break"></div>
+
+
+        <section id="section-accessibility">
+          <div class="grid-2">
+            <h1>Accessibility</h1>
+          </div>
+
+          <div class="grid-2">
+            <p>Our programs are conducted in spoken English with audiovisual materials such as slides, code examples and
+              video. Online programs are held over Zoom.
+            </p>
+            <p>Please take care and be well. We hope you are comfortable in your housing, living, and working situation
+              in general. Never hesitate to ask us for advice and reach out if you have accessibility requests or need
+              any assistance during your time at SFPC. We will work closely with you towards co-creating the most
+              accommodating learning environment for your needs.
+            </p>
+            <p><a href="mailto:participate@sfpc.study">reach out with questions about access...</a>
+            </p>
+          </div>
+        </section>
+
+        <div class="break"></div>
+
+
+        <section id="section-apply">
+          <div class="grid-2">
+            <h1>How do I apply?</h1>
+          </div>
+
+          <div class="grid-2">
+            <p class="large apply hide-appsClosed">
+              <a href="{{applicationLink}}" id="application-link">Apply Now</a>
+            </p>
+
+            <p>
+              <span class="hide-appsClosed">Applications open until</span>
+              <span class="hide-appsOpen">Applications closed on</span>
+              <span id="deadline">{{applicationEndDate}}</span>.
+            </p>
+            <p>You can expect to hear back from us about the status of your application on {{notifyDate}}. Please email
+              us at <a href="mailto:admissions@sfpc.study">admissions@sfpc.study</a> with any questions you have.
+            </p>
+            <p>
+              <a href="/about-participating.html">more about what we look for in participants...</a>
+            </p>
+          </div>
+        </section>
+
+        <div class="break"></div>
+
+
+
+        <section id="section-cost">
+          <div class="grid-2">
+            <h1>How much does it cost to attend?</h1>
+          </div>
+
+          <div class="grid-2">
+            <p>
+              <span id="cost">${{cost}}</span> + Withfriends payment processing fees for <span
+                id="number-classes">10</span> classes.
+            </p>
+            <p>Upon payment, your space in the class will be reserved.
+              We offer scholarships for those who cannot pay full tuition. Read more about scholarships below.
+
+            </p>
+          </div>
+        </section>
+
+        <div class="break"></div>
+
+
+
+
+        <section id="section-scholarships">
+          <div class="grid-2">
+            <h1>I can’t pay for SFPC. Can I come at a reduced rate, or for free?</h1>
+          </div>
+
+          <div class="grid-2">
+            <p>
+              If you can’t pay full tuition, we really still want you to apply. Our application will ask you how much
+              you can pay. We will offer subsidized positions in all of our classes, once each one has enough
+              participants enrolled that we’re able to do so.
+            </p>
+            <p>We have also started a <a href="https://withfriends.co/school_for_poetic_computation">scholarship
+                fund</a>, and we will be offering additional scholarships as community members <a
+                href="https://withfriends.co/school_for_poetic_computation">redistribute their wealth</a> through SFPC.
+              We direct scholarship funds towards participants who are low-income, Black, Indigenous, racialized,
+              gendered, disabled, Queer, trans, oppressed, historicially excluded and underrepresented.
+            </p>
+            <p>
+              Right now, tuition is SFPC’s main source of income, and that is a problem. It means that we can only pay
+              teachers, pay for space, and organize programs when participants pay full tuition to attend. Tuition is a
+              huge barrier to entry into the SFPC community, and it disproportionately limits Black participants,
+              indigenous participants, queer and trans participants, and other people who are marginalized, from
+              participating. Scholarships are not a long term solution for us, but in the short and medium term we hope
+              to offer them more while we work towards transforming SFPC’s financial model.
+            </p>
+          </div>
+        </section>
+
+        <div class="break"></div>
+
+        <section id="section-donate">
+          <div class="grid-2">
+            <h1>How can I help others to attend SFPC?</h1>
+          </div>
+
+          <div class="grid-2">
+            <p>
+              For SFPC to be the kind of place the community has always meant it to be, it needs to become a platform
+              for wealth redistribution. If you are a former student, prospective student, or friend of the school, and
+              you have the financial privilege to do so, <a
+                href="https://withfriends.co/school_for_poetic_computation/join">please donate generously</a>. There is
+              enough wealth in this community to make sure no one is ever rejected because of their inability to pay,
+              and becoming that school will make SFPC the impactful, imaginative, transformative center of poetry and
+              justice that we know it can be.
+
+            </p>
+          </div>
+        </section>
+
+        <div class="break"></div>
+
+        <section id="section-refund">
+          <div class="grid-2">
+            <h1>What if I can’t go, can I get a refund?</h1>
+          </div>
+
+          <div class="grid-2">
+            <ul id="expectations-list">
+              <li>Yes, we can give you 100% refund up to 10 days before class starts
+              <li>50% refund after 10 days, until the first day of the class
+              <li>No refunds can be given after the first day of the class
+            </ul>
+          </div>
+        </section>
+
+
+
+
+
+        <div class="break"></div>
+      </div>
+
+
+      <div class="break-noline"></div>
+
+      <section id="section-outro">
+        <p tabindex="0" class="large">
+          Interested in more learning opportunities at the School for Poetic Computation?
+          Join our <a href="https://stats.sender.net/forms/e09QVa/view">newsletter</a> to stay up to date on future
+          sessions and events, and
+          follow us on <a href="https://instagram.com/sfpc_nyc">Instagram</a> and <a
+            href="https://twitter.com/sfpc">Twitter</a>.
+          Support our programming through <a
+            href="https://withfriends.co/school_for_poetic_computation">scholarships</a>.
+          Get in touch over <a href="mailto:info@sfpc.study">email</a>.
+        </p>
+      </section>
+
+
+      <div class="break-endpage"></div>
+
+
+
+
+    </div>
 
 
 
@@ -791,10 +897,12 @@
 
 
 
-<script src="/outside.js"></script>
-<script src="/carousel.js"></script>
-<script src="/closed.js"></script>
-</p>
+
+    <script src="/outside.js"></script>
+    <script src="/carousel.js"></script>
+    <script src="/closed.js"></script>
+    </p>
 
 </body>
+
 </html>
