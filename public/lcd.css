@@ -2,11 +2,15 @@
 
     --background: #e5e3e4 ;
      --text-color: #555658  ;
-    --text-link: var(--summer-22-link) ;
+    --text-link: var(--fall-22-special-text) ;
     --box-shadow: rgba(0,0,0,.3);
 
 
-
+    --fall-22-background: #37903d;
+    --fall-22-text: #d3dbe0;
+    --fall-22-text-on-bg: #d3dbe0;
+    --fall-22-link:  #4c0191;
+     --fall-22-special-text:  #5b922c;
 
     --sex-ed-background: #33f24c ;
     --sex-ed-text: #5d4486  ;
@@ -14,20 +18,17 @@
     --sex-ed-text-on-bg:#555658  ;
     --sex-ed-special-text:  #555658  ;
 
-
     --networked-performance-background: #2E2E2E;
     --networked-performance-text: #fff;
     --networked-performance-text-on-bg: #fff;
     --networked-performance-link:  #EDBBE8;
      --networked-performance-special-text:  #14a057;
 
-
     --summer-22-background: #fff;
     --summer-22-text: #FF4C00;
     --summer-22-text-on-bg: #fff;
     --summer-22-link:  #458DF9;
      --summer-22-special-text:  #FF4C00;
-
 
     --spring-22-background: #e5e3e4;
     --spring-22-text: #555658;
@@ -227,23 +228,209 @@ select#allSections {
 
 
 
+/* /////////// start fall 22  ///////////////////////////////*/
+
+.fall-22,
+.fall-22.featured.session,
+.fall-22.featured  {
+ /* background-color: var(--sex-ed-background)  !important; */
+ color: var(--fall-22-text);
+ box-sizing: border-box;
+ border-color: var(--fall-22-text);
+ background-image: url('images/sessions/fall-22/bg.jpg');
+ background-position: bottom;
+ background-repeat: repeat;
+ background-size: 100%;
+}
+
+.fall-22.featured:hover {
+  background-size: 150%;
+}
+
+
+
+     .shell.fall-22 {
+       background-image:url('images/sessions/fall-22/bg.jpg');
+       /* background-position: bottom; */
+       /* background-repeat: no-repeat;
+       background-size: cover; */
+       background-position: top left;
+       background-repeat: repeat;
+       background-size: 100% auto;
+     }
+
+
+
+.fall-22,
+.fall-22.featured.session,
+.shell .fall-22,
+.fall-22.featured  {
+  /* background-color: var(--fall-22-background)  !important; */
+  color: var(--fall-22-text);
+  box-sizing: border-box;
+  border-color: var(--fall-22-text);
+}
+
+
+      .fall-22 p,
+      .fall-22 p a,
+      .fall-22 a,
+      .fall-22.featured h4,
+      .fall-22 h4 a,
+      .fall-22 .intro a,
+      .fall-22 p.large a,
+      .fall-22 p a:hover,
+      .fall-22.session.featured,
+      .fall-22.session.featured a,
+      .fall-22.featured h4.type a,
+      .sfpc .fall-22 a
+      {
+        color: var(--fall-22-text) !important;
+      }
+
+      .fall-22 h4 a:hover,
+      .fall-22 .intro a,
+      .fall-22 p.large a:hover,
+      .fall-22.featured:hover h6,
+      .fall-22.featured:hover .title,
+      .fall-22 .details a:hover,
+      .fall-22.featured .title:hover,
+      .fall-22 p a:hover,
+      .fall-22 h4 a:hover,
+      .fall-22 section .grid-2 ul li::before,
+      .fall-22 .chars,
+      .fall-22 p a:hover,
+      .fall-22 a:hover,
+      .fall-22 h4 a:hover,
+      .fall-22 .intro a:hover,
+      .fall-22 .details a:hover,
+      .fall-22 .entity:hover .accordion dt h3:after,
+      .fall-22 .accordion dt h3:after,
+      .fall-22 .expanded{
+          color: var(--fall-22-link) !important;
+      }
+
+      .fall-22 #cost,
+      .fall-22 .fixed-apply,
+      .fall-22 .fixed-support {
+          color: var(--fall-22-background) !important;
+          background: var(--fall-22-link) !important;
+      }
+
+      .fall-22 span#cost {
+        background: var(--fall-22-link) !important;
+      }
+
+
+      .fall-22 .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .fall-22 .block-text {
+        background-color: var(--fall-22-background);
+      }
+
+
+
+      .fall-22.grid-inner, .fall-22 .grid-inner {
+        border: 2px dotted var(--fall-22-text);
+        color: var(--fall-22-link) !important;
+      }
+
+      .fall-22 #class .entity,
+      .fall-22.website-grid .grid-2 {
+        border-color: var(--fall-22-text);
+      }
+
+      .fall-22 #class .entity:hover {
+        border-color: var(--fall-22-link);
+      }
+
+      .fall-22 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--fall-22-background) !important;
+      }
+
+
+      .fall-22 select#allSections:hover,
+      .fall-22 .loader-content p::after,
+      .fall-22 span#cost
+      {
+        background: var(--fall-22-link) !important;
+        color: var(--fall-22-background) !important;
+      }
+
+      .fall-22 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .fall-22 .breadcrumb.fixed,
+      .fall-22 .breadcrumb.fixed::before,
+      .fall-22 .breadcrumb.fixed a,
+      .fall-22 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .fall-22 .breadcrumb,
+      .fall-22 .breadcrumb a,
+      .fall-22 .text-on-bg,
+      .fall-22 .breadcrumb a:hover {
+          color: var(--fall-22-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--fall-22-link);
+      }
+
+
+      .fall-22 section#section-outro,
+      #class .intro.fall-22,
+      .shell.fall-22 .class-details,
+      .fall-22 #class section,
+      .fall-22 #class .entity,
+      .fall-22 .accordion dd.active,
+      .fall-22 section ul,
+      .fall-22 .website-grid
+       {
+        /* background-color: var(--fall-22-background); */
+        background: none;
+        color:  var(--fall-22-text) !important;
+        border-radius: var(--border-rad);
+      }
+
+      .fall-22 #class section,
+      #class .intro.fall-22 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .fall-22 #class section.stacked,
+      .fall-22 .section-testimonials,
+      .fall-22 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important
+      }
+
+      .fall-22 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--fall-22-text);
+      }
+
+      .shell.fall-22 {
+        background-image: url('images/sessions/fall-22/bg.jpg');
+        background-size: cover;
+      }
+
+
+/* /////////// end fall 22  ///////////////////////////////*/
+
+
+
+
+
+
 
 /* /////////// start SEX ED ///////////////////////////////*/
 
-
-select#allSections {
-  background: rgba(255,255,255,.8);
-  backdrop-filter: blur(3px);
-}
-
-.shell {
-  border-color: #fff !important;
-}
-
-
-.test, .block-text {
-  border-color: var(--text-color);
-}
 
 
 

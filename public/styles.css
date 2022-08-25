@@ -33,6 +33,13 @@
     --networked-performance-body-font: soda-script, sans-serif;
     --networked-performance-special-font: soda-script, sans-serif;
 
+
+    --fall-22-title-font: 'Raster Roman', 'Hershey', sans-serif;
+    --fall-22-header-font: 'Raster Roman', 'Hershey', sans-serif;
+    --fall-22-body-font: 'Raster Roman', 'Hershey', sans-serif;
+    --fall-22-special-font: 'Raster Roman', 'Hershey', sans-serif;
+
+
     --summer-22-title-font: 'Boris', 'Hershey', sans-serif;
     --summer-22-header-font: 'Boris', 'Hershey', sans-serif;
     --summer-22-body-font: 'Boris', 'Hershey', sans-serif;
@@ -62,6 +69,15 @@
 
 }
 
+
+
+@font-face {
+    font-family: 'Raster Roman';
+    src: url('fonts/FKRasterRomanCompactTrial-Smooth.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
 
 
 
@@ -165,6 +181,15 @@
           font-weight: 400;
           font-style: normal;
           text-transform: uppercase;
+        }
+
+
+        .fall-22.featured .title,
+        .fall-22 #session-name {
+          font-family: var(--fall-22-title-font) !important;
+          font-weight: lighter;
+          text-transform: uppercase;
+          letter-spacing: 1px;
         }
 
 
