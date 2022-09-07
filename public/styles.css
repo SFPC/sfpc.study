@@ -190,6 +190,9 @@
           font-weight: lighter;
           text-transform: uppercase;
           letter-spacing: 1px;
+
+        }
+        .fall-22.session .title{
           font-size: calc(var(--large-text) * .8) !important;
         }
 
