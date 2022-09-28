@@ -269,7 +269,7 @@ h1 {
     transform: rotate(0deg) !important; */
 }
 
-        h1, p.large, .mobile-menu, a.large,
+        h1, p.large, .mobile-menu, a.large,  #blog h4,
         h8 {
           font-size: var(--large-text) !important;
           font-weight: lighter;
@@ -1907,7 +1907,7 @@ section.stacked-4 {
             o-transition: all .2s ease-in-out;
           }
 
-          .block-text, figure.item img:hover, .item-first:hover, #class-image {
+          .block-text, figure.item img:hover, .item-first:hover, #class-image, #blog img {
             transition: all .2s ease-in-out;
             -moz-transition: all .2s ease-in-out;
             ms-transition: all .2s ease-in-out;
@@ -1941,7 +1941,7 @@ section.stacked-4 {
           }
 
 
-          figure.item img:hover, #carousel-images figure:first-child:hover, #class-image:hover {
+          figure.item img:hover, #carousel-images figure:first-child:hover, #class-image:hover, #blog img:hover {
             box-shadow: 0px 0px 15px var(--box-shadow);
             /* transform: scale(0.98); */
           }
@@ -1988,10 +1988,40 @@ section.stacked-4 {
             width: calc(75% - var(--body-margin)/2);
         }
 
-        .class-details img {
+        .class-details img  {
           border-radius: var(--border-rad);
           margin-bottom: calc(var(--text-margin)/2);
         }
+
+        #blog img {
+         border-radius: var(--border-rad);
+         width: 100%;
+         margin-top: calc(var(--text-margin)/4);
+       }
+
+       #blog em {
+         /* font-family: var(--main-special-font);
+         font-size: var(--medium-text);
+         line-height: var(--medium-line-height); */
+         font-size: var(--small-text);
+         font-style: normal;
+         font-weight: bold;
+         padding-top: calc(var(--text-margin)/4);
+         display: block;
+       }
+
+       #blog hr {
+          display: block;
+          unicode-bidi: isolate;
+          margin-block-start: calc(var(--text-margin)/2);
+          margin-block-end: calc(var(--text-margin)/2);
+          /* border-top:1px dotted #fff; */
+          margin-inline-start: auto;
+          margin-inline-end: auto;
+          overflow: hidden;
+          border-style: dashed;
+          border-width: 1px;
+      }
 
         .class-details .apply {
           border-radius: var(--border-rad);

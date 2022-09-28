@@ -49,9 +49,32 @@
   {{> footer}}
   <div class="crt-overlay crt-overlay-fullsize"></div>
 
-  <div id="shell" class="shell shell-fullsize about  sfpc">
-    <h1>{{title}}</h1>
-    {{{postHTML}}}
+
+
+  <div id="shell" class="shell shell-fullsize about blog sfpc">
+
+    <div class="loader-content">
+      <p tabindex="0" class="large">
+        loading<span>...</span>
+      </p>
+    </div>
+
+    <h4 class="breadcrumb  hide-content"><a href="/blog">blog</a></h4>
+
+
+    <div id="blog" class="shell-content hide-content">
+        <section id="section-description">
+            <div class="grid-2">
+              <h1>{{title}} </h1>
+              {{this.[Publish-Date]}}
+            </div>
+
+            <div class="grid-2">
+                  {{{postHTML}}}
+            </div>
+          </section>
+        </div>
+
 
 
 
