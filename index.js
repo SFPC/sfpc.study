@@ -277,7 +277,7 @@ app.get("/people/:session", async (req,res) => {
 })
 
 app.get("/blog/:slug", async (req,res) => {
-  const response = await getDatabaseEntry("13a0b281ee854238a130030e41cfb20f", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  const response = await getDatabaseEntry("8ad1faa8af094ea7a4c6f88d3eab7911", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
   const parsedData = parseNotionPage(response)
   console.log(parsedData)
   const pageContent = await getBlocks(response.id)
@@ -631,7 +631,7 @@ function parseBlockHTML(block, pageHTML) {
     default:
       // For an extra type
       console.log(block.type)
-      return 
+      return
   }
 }
 function formatRichText(textArray) {
