@@ -397,7 +397,7 @@ function parseClassData(apiResponse){
   returnObj.teachers=parseTeachers(classInfo)
   returnObj.promoImage=parseNotionData(classInfo["Promo Images"])?.[0]
   returnObj.bannerImage=parseNotionData(classInfo["Banner Image"])?.[0]
-  returnObj.promoImages=parseNotionData(classInfo["Promo Images"])
+  returnObj.promoImages=parseNotionData(classInfo["Promo Image"])
   returnObj.startDate=prettyDateString(classInfo["Date"]?.date?.start)
   returnObj.endDate=prettyDateString(classInfo["Date"]?.date?.end)
   returnObj.numberOfClasses=classInfo["Number of Classes"].number
@@ -457,7 +457,7 @@ function prettyDateString(uglyDateString){
 }
 function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
-  if(rollupArray.length >= 0){
+  if(rollupArray.length > 0){
     return parseArray(rollupArray)
   }
   else if(rollupArray[0])
