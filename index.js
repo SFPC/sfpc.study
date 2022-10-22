@@ -277,7 +277,7 @@ app.get("/people/:session", async (req,res) => {
 })
 
 app.get("/blog/:slug", async (req,res) => {
-  const response = await getDatabaseEntry("8ad1faa8af094ea7a4c6f88d3eab7911", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  const response = await getDatabaseEntry("5fb49fe53804424a89230294206fcaee", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
   const parsedData = parseNotionPage(response)
   console.log(parsedData)
   const pageContent = await getBlocks(response.id)
