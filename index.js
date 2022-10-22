@@ -457,7 +457,7 @@ function prettyDateString(uglyDateString){
 }
 function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
-  if(rollupArray.length > 0){
+  if(rollupArray.length >= 0){
     return parseArray(rollupArray)
   }
   else if(rollupArray[0])
