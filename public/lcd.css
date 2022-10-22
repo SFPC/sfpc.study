@@ -694,6 +694,10 @@ select#allSections {
         color: var(--networked-performance-text) !important;
       }
 
+      .networked-performance .class-details img {
+        margin-bottom: 0px;
+      }
+
       .networked-performance h4 a:hover,
       .networked-performance .intro a,
       .networked-performance p.large a:hover,

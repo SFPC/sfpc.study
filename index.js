@@ -395,9 +395,9 @@ function parseClassData(apiResponse){
 
   returnObj.name=classInfo.Name.title[0].plain_text
   returnObj.teachers=parseTeachers(classInfo)
-  returnObj.promoImage=parseNotionData(classInfo["Promo Image"])?.[0]
+  returnObj.promoImage=parseNotionData(classInfo["Promo Images"])?.[0]
   returnObj.bannerImage=parseNotionData(classInfo["Banner Image"])?.[0]
-  returnObj.promoImages=parseNotionData(classInfo["Promo Image"])
+  returnObj.promoImages=parseNotionData(classInfo["Promo Images"])
   returnObj.startDate=prettyDateString(classInfo["Date"]?.date?.start)
   returnObj.endDate=prettyDateString(classInfo["Date"]?.date?.end)
   returnObj.numberOfClasses=classInfo["Number of Classes"].number
