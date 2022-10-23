@@ -55,20 +55,35 @@
     --fallwinter-2122-body-font: 'Alte', 'Hershey', sans-serif;
     --fallwinter-2122-special-font: 'Alte', 'Hershey', sans-serif;
 
-    --cocoon-2021-title-font: 'Self Modern', 'Hershey', serif;
-    --cocoon-2021-header-font: 'Self Modern', 'Hershey', serif;
-    --cocoon-2021-body-font: 'Self Modern', 'Hershey', serif;
-    --cocoon-2021-special-font: 'Self Modern', 'Hershey', serif;
+    --cocoon-21-title-font: 'Self Modern', 'Hershey', serif;
+    --cocoon-21-header-font: 'Self Modern', 'Hershey', serif;
+    --cocoon-21-body-font: 'Self Modern', 'Hershey', serif;
+    --cocoon-21-special-font: 'Self Modern', 'Hershey', serif;
 
-    --codesocieties-2020-title-font: 'Violet', 'Hershey', sans-serif;
-    --codesocieties-2020-header-font: 'Violet', 'Hershey', sans-serif;
-    --codesocieties-2020-body-font: 'Violet', 'Hershey', sans-serif;
-    --codesocieties-2020-special-font: 'Violet', 'Hershey', sans-serif;
+    --codesocieties-20-title-font: 'Violet', 'Hershey', sans-serif;
+    --codesocieties-20-header-font: 'Violet', 'Hershey', sans-serif;
+    --codesocieties-20-body-font: 'Violet', 'Hershey', sans-serif;
+    --codesocieties-20-special-font: 'Violet', 'Hershey', sans-serif;
 
 
 
 }
 
+@import url("https://p.typekit.net/p.css?s=1&k=thn3crj&ht=tk&f=28524.28525&a=79545553&app=typekit&e=css");
+
+@font-face {
+font-family:"soda-script";
+src:url("https://use.typekit.net/af/63dc51/00000000000000007735b2da/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/63dc51/00000000000000007735b2da/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/63dc51/00000000000000007735b2da/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"soda-script";
+src:url("https://use.typekit.net/af/8cc21e/00000000000000007735b2e0/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/8cc21e/00000000000000007735b2e0/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/8cc21e/00000000000000007735b2e0/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+.tk-soda-script { font-family: "soda-script",sans-serif; }
 
 
 @font-face {
@@ -213,18 +228,18 @@
           font-weight: lighter;
         }
 
-        .cocoon-2021.featured .title {
-          font-family: var(--cocoon-2021-title-font) !important;
+        .cocoon-21.featured .title {
+          font-family: var(--cocoon-21-title-font) !important;
           font-style: italic;
           font-weight: bold !important;
           line-height: 1;
           color: transparent;
           color: transparent;
-          text-shadow: 0 0 2px var(--cocoon-2021-link) !important;
+          text-shadow: 0 0 2px var(--cocoon-21-link) !important;
         }
 
-        .codesocieties-2020.featured .title {
-          font-family: var(--codesocieties-2020-title-font) !important;
+        .codesocieties-20.featured .title {
+          font-family: var(--codesocieties-20-title-font) !important;
           font-weight: lighter;
         }
 
@@ -284,6 +299,7 @@ h1 {
   -moz-transition: all .2s ease-in-out;
   ms-transition: all .2s ease-in-out;
   o-transition: all .2s ease-in-out;
+  word-break: break-word;
 }
 
         .featured:hover .title, .title:hover,
@@ -1743,11 +1759,44 @@ section.stacked-4 {
         margin-bottom: calc(var(--text-margin));
       }
 
+      .table {
+          width: 100%;
+          box-sizing: border-box;
+          border-radius: var(--border-rad);
+          font-family: var(--main-title-font);
+          min-height: 20vh;
+          padding: var(--program-margin);
+          cursor: pointer;
+          border-bottom-width: 1px dashed;
+          border-bottom: 1px dashed var(--text-color);
+          transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          ms-transition: all .2s ease-in-out;
+          o-transition: all .2s ease-in-out;
+      }
+
+      .stacked .grid-1.table {
+        display: flex !important;
+        grid-row-gap: calc(var(--body-margin)*2);
+        margin-bottom: calc(var(--body-margin));
+        /* margin-top: calc(var(--text-margin)); */
+        min-height: auto !important;
+    }
+
+
       .stacked .grid-1.featured{
         display: flex !important;
         grid-row-gap: calc(var(--body-margin)*2);
         margin-bottom: calc(var(--body-margin));
         margin-top: calc(var(--text-margin));
+        min-height: auto !important;
+      }
+
+      #section-classes .grid-1.featured{
+        display: flex !important;
+        grid-row-gap: calc(var(--body-margin)*2);
+        margin-bottom: 0px;
+        margin-top: 0px;
         min-height: auto !important;
       }
 

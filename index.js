@@ -185,6 +185,18 @@ app.get("/sex-ed/:slug", async (req,res) => {
 //   res.render("networked-performance/session")
 // })
 
+app.get("/classes", async (req,res) => {
+  const response = await getDatabaseEntries("6d5585af2f544dd1bad9d24c5e177026", [{property:"Date", direction:"descending"}])
+  const projectData = response.map((project) => {
+    console.log(project)
+    return parseNotionPage(project)
+  })
+  console.log(projectData)
+  // let pageContent = getPageContent()
+  res.render("programs/classes", {projects: projectData})
+})
+
+
 
 
 app.get("/sessions/:slug", async (req, res) => {
@@ -210,6 +222,8 @@ app.get("/sessions/:slug", async (req, res) => {
   }
 
 })
+
+
 
 
 app.get("/sessions/spring-22/:slug", async (req, res) => {

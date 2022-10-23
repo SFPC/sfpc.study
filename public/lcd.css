@@ -38,13 +38,13 @@
     --fallwinter-2122-text: #000;
     --fallwinter-2122-link: #8866aa;
 
-    --cocoon-2021-background: #bb905e;
-    --cocoon-2021-text: #211060;
-    --cocoon-2021-link: hsl(165, 53%, 25%);
+    --cocoon-21-background: #bb905e;
+    --cocoon-21-text: #211060;
+    --cocoon-21-link: hsl(165, 53%, 25%);
 
-    --codesocieties-2020-background: blueviolet;
-    --codesocieties-2020-text: #fff;
-    --codesocieties-2020-link: #c78fff;
+    --codesocieties-20-background: blueviolet;
+    --codesocieties-20-text: #fff;
+    --codesocieties-20-link: #c78fff;
 
 }
 
@@ -1201,7 +1201,7 @@ select#allSections {
         } */
 
 
-.fallwinter-2122 {
+.fallwinter-2122, .fall-21 {
   background-color: var(--fallwinter-2122-background);
   background-image: url('images/sessions/fallwinter-2122/bg.png');
   background-position: bottom;
@@ -1217,16 +1217,16 @@ select#allSections {
         }
 
 
-#class.cocoon-2021  {
+#class.cocoon-21  {
   background: none;
 }
 
-.cocoon-2021 {
-  background-color: var(--cocoon-2021-background);
-  color: var(--cocoon-2021-text);
+.cocoon-21 {
+  background-color: var(--cocoon-21-background);
+  color: var(--cocoon-21-text);
   box-sizing: border-box;
-  border-color: var(--cocoon-2021-text);
-  background-image: url('images/sessions/cocoon-2021/bg.png');
+  border-color: var(--cocoon-21-text);
+  background-image: url('images/sessions/cocoon-21/bg.png');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -1234,59 +1234,59 @@ select#allSections {
 }
 
 
-        .cocoon-2021 a:hover, .cocoon-2021.featured:hover h2  {
-          color: var(--cocoon-2021-link) !important;
+        .cocoon-21 a:hover, .cocoon-21.featured:hover h2  {
+          color: var(--cocoon-21-link) !important;
         }
 
-        .cocoon-2021.featured h4 a,
-        .cocoon-2021 p,
-        .cocoon-2021 p a,
-        .cocoon-2021 a,
-        .cocoon-2021.featured h4,
-        .cocoon-2021 h4 a,
-        .cocoon-2021 .intro a,
-        .cocoon-2021 p.large a,
-        .cocoon-2021 p a:hover,
-        .cocoon-2021.session.featured,
-        .cocoon-2021.session.featured a,
-        .cocoon-2021.featured h4.type a,
-        .sfpc .cocoon-2021 a,
-        .sfpc .cocoon-2021 h4 a
+        .cocoon-21.featured h4 a,
+        .cocoon-21 p,
+        .cocoon-21 p a,
+        .cocoon-21 a,
+        .cocoon-21.featured h4,
+        .cocoon-21 h4 a,
+        .cocoon-21 .intro a,
+        .cocoon-21 p.large a,
+        .cocoon-21 p a:hover,
+        .cocoon-21.session.featured,
+        .cocoon-21.session.featured a,
+        .cocoon-21.featured h4.type a,
+        .sfpc .cocoon-21 a,
+        .sfpc .cocoon-21 h4 a
          {
-          color: var(--cocoon-2021-text) !important;
+          color: var(--cocoon-21-text) !important;
         }
 
 
-.codesocieties-2020 {
-  background-color: var(--codesocieties-2020-background);
-  color: var(--codesocieties-2020-text);
+.codesocieties-20 {
+  background-color: var(--codesocieties-20-background);
+  color: var(--codesocieties-20-text);
   box-sizing: border-box;
-  border-color: var(--codesocieties-2020-text);
-  background-image: url('images/sessions/codesocieties-2020/bg.png');
+  border-color: var(--codesocieties-20-text);
+  background-image: url('images/sessions/codesocieties-20/bg.png');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-        .codesocieties-2020 a:hover, .codesocieties-2020.featured:hover h2 {
-          color: var(--codesocieties-2020-link) !important;
+        .codesocieties-20 a:hover, .codesocieties-20.featured:hover h2 {
+          color: var(--codesocieties-20-link) !important;
         }
 
 
-        .codesocieties-2020.featured h4 a,
-        .codesocieties-2020 p,
-        .codesocieties-2020 p a,
-        .codesocieties-2020 a,
-        .codesocieties-2020.featured h4,
-        .codesocieties-2020 h4 a,
-        .codesocieties-2020 .intro a,
-        .codesocieties-2020 p.large a,
-        .codesocieties-2020 p a:hover,
-        .codesocieties-2020.session.featured,
-        .codesocieties-2020.session.featured a,
-        .codesocieties-2020.featured h4.type a,
-        .sfpc .codesocieties-2020 a,
-        .sfpc .codesocieties-2020 h4 a
+        .codesocieties-20.featured h4 a,
+        .codesocieties-20 p,
+        .codesocieties-20 p a,
+        .codesocieties-20 a,
+        .codesocieties-20.featured h4,
+        .codesocieties-20 h4 a,
+        .codesocieties-20 .intro a,
+        .codesocieties-20 p.large a,
+        .codesocieties-20 p a:hover,
+        .codesocieties-20.session.featured,
+        .codesocieties-20.session.featured a,
+        .codesocieties-20.featured h4.type a,
+        .sfpc .codesocieties-20 a,
+        .sfpc .codesocieties-20 h4 a
          {
-          color: var(--codesocieties-2020-text) !important;
+          color: var(--codesocieties-20-text) !important;
         }
