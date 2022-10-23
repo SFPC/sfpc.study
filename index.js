@@ -27,6 +27,18 @@ app.get("/pageContent/:id", async (req, res) => {
   res.json(response);
 })
 
+
+app.get("/participate/winter-23", async (req, res) => {
+  // TODO: load session page
+  res.render("winter-23/session")
+})
+
+// app.get("/sessions/winter-23", (req,res) => {
+//   res.render("winter-23/session")
+// })
+
+
+
 app.get("/participate/spring-22", async (req, res) => {
   // TODO: load session page
   res.render("spring-22/session")
@@ -35,6 +47,7 @@ app.get("/participate/spring-22", async (req, res) => {
 app.get("/sessions/spring-22", (req,res) => {
   res.render("spring-22/session")
 })
+
 
 app.get("/participate/summer-22", async (req, res) => {
   // TODO: load session page
@@ -178,6 +191,7 @@ app.get("/sessions/:slug", async (req, res) => {
   const sessionData = await getDatabaseEntry("51d48d4644b2439cb64c2018ad05d2b1", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
   const sessionType = sessionData.properties['Session Type']?.multi_select[0]?.name
   console.log(sessionType)
+
   if(sessionType == "Special"){
     const classData = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.slug}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.slug } }}}]})
     if(!classData) return
@@ -398,6 +412,8 @@ function parseClassData(apiResponse){
   returnObj.promoImage=parseNotionData(classInfo["Promo Images"])?.[0]
   returnObj.bannerImage=parseNotionData(classInfo["Banner Image"])?.[0]
   returnObj.promoImages=parseNotionData(classInfo["Promo Images"])
+  returnObj.sessionImage=parseNotionData(classInfo["Session Images"])?.[0]
+  returnObj.sessionImages=parseNotionData(classInfo["Session Images"])
   returnObj.startDate=prettyDateString(classInfo["Date"]?.date?.start)
   returnObj.endDate=prettyDateString(classInfo["Date"]?.date?.end)
   returnObj.numberOfClasses=classInfo["Number of Classes"].number
