@@ -299,6 +299,8 @@ app.get("/blog/:slug", async (req,res) => {
   res.render("blog/post", {title: parsedData.Name, postHTML:postHTML})
 })
 
+
+
 app.listen(PORT, console.log(`server started on ${PORT}`))
 
 //
@@ -610,15 +612,15 @@ function parseBlockHTML(block, pageHTML) {
       // For a heading
       let h1Text = formatRichText(block['heading_1'].text)
       console.log(h1Text)
-      return pageHTML += `<h2>${h1Text}</h2>`
+      return pageHTML += `<h1>${h1Text}</h1>`
     case 'heading_2':
       // For a heading
       let h2Text = formatRichText(block['heading_2'].text)
-      return pageHTML += `<h3>${h2Text}</h3>`
+      return pageHTML += `<h2>${h2Text}</h2>`
     case 'heading_3':
       // For a heading
       let h3Text = formatRichText(block['heading_3'].text)
-      return pageHTML += `<h4>${h3Text}</h4>`
+      return pageHTML += `<h3>${h3Text}</h3>`
     case 'image':
       // For an image
       if(block['image']?.external?.url)
