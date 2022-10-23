@@ -254,6 +254,18 @@ app.get("/projects/:slug", async (req,res) => {
 })
 
 
+app.get("/events/:slug", async (req,res) => {
+  //filter by slug here
+  console.log(req.params.slug)
+  const response = await getDatabaseEntry("713f24806a524c5e892971e4fbf5c9dd", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  console.log(response)
+  if(response){
+    const projectData = parseNotionPage(response)
+    console.log(projectData)
+    res.render("projectPage", projectData)
+  }
+})
+
 
 
 
@@ -305,31 +317,37 @@ app.get("/blog", async (req,res) => {
 })
 
 
-// app.get("/blog/:slug", async (req,res) => {
-//   const response = await getDatabaseEntry("5fb49fe53804424a89230294206fcaee", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
-//   const parsedData = parseNotionPage(response)
-//   console.log(parsedData)
-//   const pageContent = await getBlocks(response.id)
-//   const postHTML = parsePageContentHTML(pageContent)
-//   res.render("blog/post", {title: parsedData.Name, postHTML:postHTML})
-// })
-
-
 app.get("/blog/:slug", async (req,res) => {
-  //filter by slug here
-  console.log(req.params.slug)
   const response = await getDatabaseEntry("5fb49fe53804424a89230294206fcaee", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
   const parsedData = parseNotionPage(response)
-  console.log(response)
+
+  // const blogData = response.map((blog) => {
+  //   console.log(blog)
+  //   return parseNotionPage(blog)
+  // })
+
+  console.log(parsedData)
   const pageContent = await getBlocks(response.id)
   const postHTML = parsePageContentHTML(pageContent)
-  if(response){
-    const projectData = parseNotionPage(response)
-    console.log(projectData)
-    res.render("blog/post", {title: parsedData.Name, postHTML:postHTML})
-  }
+  res.render("blog/post", {title: parsedData.Name, postHTML:postHTML})
 })
- 
+
+
+// app.get("/blog/:slug", async (req,res) => {
+//   //filter by slug here
+//   console.log(req.params.slug)
+//   const response = await getDatabaseEntry("5fb49fe53804424a89230294206fcaee", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+//   const parsedData = parseNotionPage(response)
+//   console.log(response)
+//   const pageContent = await getBlocks(response.id)
+//   const postHTML = parsePageContentHTML(pageContent)
+//   if(response){
+//     const projectData = parseNotionPage(response)
+//     console.log(projectData)
+//     res.render("blog/post", {title: parsedData.Name, postHTML:postHTML})
+//   }
+// })
+
 
 app.listen(PORT, console.log(`server started on ${PORT}`))
 
@@ -450,7 +468,7 @@ function parseClassData(apiResponse){
   returnObj.endDate=prettyDateString(classInfo["Date"]?.date?.end)
   returnObj.numberOfClasses=classInfo["Number of Classes"].number
   returnObj.time=classInfo["Time"].rich_text[0]?.plain_text
-  returnObj.location=classInfo["Location"]?.select?.name
+  returnObj.location=classInfo["Location"].rich_text[0]?.plain_text
   returnObj.cost=classInfo["Cost"]?.number
   returnObj.applicationEndDate=prettyDateString(classInfo["Application End Date"]?.date?.start)
   let today = new Date()
