@@ -2037,6 +2037,10 @@ section.stacked-4 {
          margin-top: calc(var(--text-margin));
        }
 
+       .blog-list .blog-list-post:last-child {
+         border-bottom-width:0px !important;
+       }
+
        .blog-list a {
          text-decoration: none !important
        }

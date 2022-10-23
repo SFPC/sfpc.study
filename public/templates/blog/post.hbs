@@ -75,14 +75,18 @@
 
                 <div class="details">
                   <div class="labels">Publish Date</div>
-                  <div class="labels-info">{{[Publish-Date].start}}</div>
+                  <div class="labels-info">{{['Publish-Date'].start}} x</div>
                 </div>
 
                 <div class="details">
                   <div class="labels">Written By</div>
-                  <div class="labels-info">{{this.[Website-Authors]}}</div>
+                  <div class="labels-info">
+                    {{#each [Website-Authors]}}{{this}}{{#unless @last}},{{/unless}} {{/each}}x
+
+                  </div>
                 </div>
 
+                {{#if Website-Session}}
                 <div class="details">
                   <div class="labels">Program</div>
                   <div class="labels-info" id="teachers-list">
@@ -94,6 +98,7 @@
 
                   </div>
                 </div>
+                {{/if}}
 
               </div>
 

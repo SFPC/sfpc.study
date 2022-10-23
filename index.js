@@ -305,16 +305,31 @@ app.get("/blog", async (req,res) => {
 })
 
 
+// app.get("/blog/:slug", async (req,res) => {
+//   const response = await getDatabaseEntry("5fb49fe53804424a89230294206fcaee", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+//   const parsedData = parseNotionPage(response)
+//   console.log(parsedData)
+//   const pageContent = await getBlocks(response.id)
+//   const postHTML = parsePageContentHTML(pageContent)
+//   res.render("blog/post", {title: parsedData.Name, postHTML:postHTML})
+// })
+
+
 app.get("/blog/:slug", async (req,res) => {
+  //filter by slug here
+  console.log(req.params.slug)
   const response = await getDatabaseEntry("5fb49fe53804424a89230294206fcaee", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
   const parsedData = parseNotionPage(response)
-  console.log(parsedData)
+  console.log(response)
   const pageContent = await getBlocks(response.id)
   const postHTML = parsePageContentHTML(pageContent)
-  res.render("blog/post", {title: parsedData.Name, postHTML:postHTML})
+  if(response){
+    const projectData = parseNotionPage(response)
+    console.log(projectData)
+    res.render("blog/post", {title: parsedData.Name, postHTML:postHTML})
+  }
 })
-
-
+ 
 
 app.listen(PORT, console.log(`server started on ${PORT}`))
 
