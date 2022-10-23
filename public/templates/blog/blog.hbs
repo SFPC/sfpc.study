@@ -65,41 +65,46 @@
     <div id="blog" class="shell-content hide-content">
         <section id="section-description">
             <div class="grid-2">
-              <h1>{{title}} </h1>
+              <h1>All Posts </h1>
 
             </div>
 
-            <div class="grid-2 blog-post">
+            <div class="grid-2 blog-list">
 
-                <div class="class-details">
+              {{#each blog}}
 
-                <div class="details">
-                  <div class="labels">Publish Date</div>
-                  <div class="labels-info">{{[Publish-Date].start}}</div>
-                </div>
+                <div id="{{this.[Website-Slug]}}"
+                class="blog-list-post {{#each this.[Project-Type]}}{{this}} {{/each}}" data-location="">
+                <div class="featured-text">
 
-                <div class="details">
-                  <div class="labels">Written By</div>
-                  <div class="labels-info">{{this.[Website-Authors]}}</div>
-                </div>
+                  <div class="left">
+                    <h4 class="">
+                      {{[Publish-Date].start}}
+                    </h4> <BR>
+                    <h2 class="title">
+                    <a href="/blog/{{this.[Website-Slug]}}">  {{this.Name}}</h2>  </a>
 
-                <div class="details">
-                  <div class="labels">Program</div>
-                  <div class="labels-info" id="teachers-list">
 
-                    {{#if Website-Class}}
-                    {{#each Website-Class}}{{this}}{{#unless @last}}, {{/unless}} {{/each}} {{/if}}
 
-                    {{#if Website-Class}}— {{/if}}{{#each Website-Session}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+                    <h6>
+                      <!-- {{this.[Short Description]}}... -->
+                      written by {{#each this.[Website-Authors]}}{{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}} {{/each}}
 
+                    </h6>
                   </div>
-                </div>
 
+                  {{#if Cover-Image}}
+                  <div class="right">
+                    <img src="{{this.[Cover-Image].[0]}}">
+                  </div>
+                  {{/if}}
+
+                </div>
               </div>
 
-              <hr>
 
-                  {{{postHTML}}}
+              {{/each}}
+
             </div>
           </section>
         </div>

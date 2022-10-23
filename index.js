@@ -254,6 +254,9 @@ app.get("/projects/:slug", async (req,res) => {
 })
 
 
+
+
+
 app.get("/people", async (req,res) => {
   // const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [{timestamp:"created_time", direction:"descending"}], {
   const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [{property:"Name", direction:"ascending"}], {
@@ -289,6 +292,18 @@ app.get("/people/:session", async (req,res) => {
   const classesInfo = parseNotionData(sessionInfo.properties["Website-Classes"])
   res.render("peopleSession", {people: peopleData, classes:classesInfo})
 })
+
+
+app.get("/blog", async (req,res) => {
+  const response = await getDatabaseEntries("5fb49fe53804424a89230294206fcaee", [{property:"Publish-Date", direction:"descending"}])
+  const blogData = response.map((blog) => {
+    console.log(blog)
+    return parseNotionPage(blog)
+  })
+  console.log(blogData)
+  res.render("blog/blog", {blog: blogData})
+})
+
 
 app.get("/blog/:slug", async (req,res) => {
   const response = await getDatabaseEntry("5fb49fe53804424a89230294206fcaee", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
@@ -576,8 +591,12 @@ function parseBlockIntoKeyedObject(block, contentObj) {
     case 'bulleted_list_item':
       // For an unordered list
       let bulletText = formatRichText(block['bulleted_list_item'].text)
-
       contentObj[lastEntry] += `<ul><li>${bulletText}</li></ul >`
+      break;
+    case 'numbered_list_item':
+      // For an unordered list
+      let numberedText = formatRichText(block['numbered_list_item'].text)
+      contentObj[lastEntry] += `<ol><li>${numberedText}</li></ol >`
       break;
     case 'paragraph':
       // For a paragraph
@@ -612,7 +631,7 @@ function parseBlockHTML(block, pageHTML) {
       // For a heading
       let h1Text = formatRichText(block['heading_1'].text)
       console.log(h1Text)
-      return pageHTML += `<h1>${h1Text}</h1>`
+      return pageHTML += `<h2>${h1Text}</h2>`
     case 'heading_2':
       // For a heading
       let h2Text = formatRichText(block['heading_2'].text)
@@ -632,10 +651,18 @@ function parseBlockHTML(block, pageHTML) {
       // For an unordered list
       let bulletText = formatRichText(block['bulleted_list_item'].text)
       return pageHTML += `<ul><li>${bulletText}</li></ul >`
+    case 'numbered_list_item':
+      // For an unordered list
+      let numberedText = formatRichText(block['numbered_list_item'].text)
+      return pageHTML += `<ol><li>${numberedText}</li></ol >`
     case 'paragraph':
       // For a paragraph
       let pText = formatRichText(block['paragraph'].text)
       return pageHTML += `<p>${pText}</p>`
+    case 'quote':
+      // For a caption
+      let quoteText = formatRichText(block['quote'].text)
+      return pageHTML += `<em>${quoteText}</em>`
     case 'audio':
       // For an image
       if(block['audio']?.external?.url)
@@ -660,7 +687,7 @@ function formatRichText(textArray) {
     if (textArray[i].annotations.bold)
       tempText = `<b>${tempText}</b>`
     if (textArray[i].annotations.italic)
-      tempText = `<em>${tempText}</em>`
+      tempText = `<i>${tempText}</i>`
     if (textArray[i].href)
       tempText = `<a href="${textArray[i].href}">${tempText}</a>`
     formattedText += tempText
