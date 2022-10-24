@@ -1766,7 +1766,7 @@ section.stacked-4 {
           font-family: var(--main-title-font);
           min-height: 20vh;
           padding: var(--program-margin);
-          cursor: pointer;
+          /* cursor: pointer; */
           border-bottom-width: 1px dashed;
           border-bottom: 1px dashed var(--text-color);
           transition: all .2s ease-in-out;
@@ -1777,10 +1777,18 @@ section.stacked-4 {
 
       .stacked .grid-1.table {
         display: flex !important;
-        grid-row-gap: calc(var(--body-margin)*2);
+        /* grid-row-gap: calc(var(--body-margin)*2);
         margin-bottom: calc(var(--body-margin));
-        /* margin-top: calc(var(--text-margin)); */
+        margin-top: calc(var(--text-margin));
+        min-height: auto !important; */
+        grid-row-gap: 0px !important;
+        /* margin-bottom: 0px !important;
+        margin-top: 0px !important; */
         min-height: auto !important;
+    }
+
+    .stacked .grid-1.table:first-child {
+    /* margin-bottom: 0px !important; */
     }
 
 
@@ -2081,6 +2089,10 @@ section.stacked-4 {
        #blog h2 {
          margin-bottom: calc(var(--text-margin)/4);
        }
+       #blog .blog-list-post h2 {
+         /* margin-bottom: 0px !important */
+         margin-bottom: calc(var(--text-margin)/8) !important;
+       }
 
        .blog-post h2 {
          margin-top: calc(var(--text-margin));
@@ -2099,10 +2111,11 @@ section.stacked-4 {
        }
 
        .blog-list-post {
-          margin-bottom: calc(var(--text-margin)/2);
-          border-bottom-width: 1px dashed;
+
+          margin-bottom: calc(var(--text-margin)/2) !important;
           border-bottom: 1px dashed var(--text-color);
-          padding-bottom: calc(var(--text-margin)/2);
+          padding-bottom: calc(var(--text-margin)/2) !important;
+          padding-top: 0px;
        }
 
        .blog-list-post .left {
@@ -2112,7 +2125,7 @@ section.stacked-4 {
 
        .blog-list-post .right {
          /* float: right; */
-         width: 25%;
+         width: 11.5%;
        }
 
        .blog-list-post .featured-text {
@@ -2155,8 +2168,13 @@ section.stacked-4 {
           margin-inline-start: auto;
           margin-inline-end: auto;
           overflow: hidden;
-          border-style: dashed;
-          border-width: 1px;
+          /* border-style: dashed;
+          border-width: 1px; */
+          border: 1px dashed var(--text-color);
+          border-style: none none dashed;
+
+          width: calc(200% + var(--body-margin));
+          margin-left: calc(-100% - var(--body-margin));
       }
 
         .class-details .apply {
@@ -2170,6 +2188,7 @@ section.stacked-4 {
             padding: 1px 5px;
             color: var(--background);
             font-family: var(--main-special-font);
+            font-weight: normal;
         }
 
         .more-about-cost {
