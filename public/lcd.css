@@ -70,6 +70,8 @@ select#allSections {
 }
 
 
+ 
+
 
 .sfpc,
 .sfpc.featured.session,
@@ -1212,6 +1214,7 @@ select#allSections {
   border-color: var(--fallwinter-2122-text);
 }
 
+
         .fallwinter-2122 a:hover, .fallwinter-2122.featured:hover h2 {
           color: var(--fallwinter-2122-link) !important;
         }
@@ -1221,7 +1224,7 @@ select#allSections {
   background: none;
 }
 
-.cocoon-21 {
+.cocoon-21, #tag.cocoon-21 {
   background-color: var(--cocoon-21-background);
   color: var(--cocoon-21-text);
   box-sizing: border-box;
@@ -1232,6 +1235,13 @@ select#allSections {
   background-size: 100%;
   background-blend-mode: screen;
 }
+
+#tag.cocoon-21 {
+  color: transparent;
+  color: transparent;
+  text-shadow: 0 0 0px var(--cocoon-21-link) !important;
+}
+
 
 
         .cocoon-21 a:hover, .cocoon-21.featured:hover h2  {

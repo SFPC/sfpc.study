@@ -72,16 +72,35 @@ select#allSections, .fixed-apply  {
   background-size: 100%;
 }
 
-.cocoon-2021 {
-  background-image: url('images/sessions/cocoon-2021/bg.png');
+.cocoon-21 {
+  background-image: url('images/sessions/cocoon-21/bg.png');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
   background-blend-mode: screen;
 }
 
-.codesocieties-2020 {
-  background-image: url('images/sessions/codesocieties-2020/bg.png');
+.cocoon-21.featured .title  {
+  color: var(--text-color);
+  text-shadow: 0 0 2px var(--text-color) !important;
+}
+
+/* .cocoon-21.featured .title, #tag.cocoon-21  {
+  color: var(--text-color) !important;
+} */
+
+#tag {
+  /* background-color: var(--text-color) !important; */
+  color: var(--text-color) !important;
+  border-color: var(--text-color) !important;
+    -webkit-filter: grayscale(100%) !important;
+}
+
+.codesocieties-20,
+.codesocieties-20.featured.session,
+.codesocieties-20.featured
+ {
+  background-image: url('images/sessions/codesocieties-20/bg.png');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
