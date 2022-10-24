@@ -2150,6 +2150,10 @@ section.stacked-4 {
          margin-top: 0px;
        }
 
+       .blog-tag::before {
+         content: ' · '
+       }
+
        #blog h2 b, #blog h2 {
          font-weight: normal !important
        }
@@ -2699,6 +2703,14 @@ section.stacked-4 {
         .blog-list-post .right {
           /* float: right; */
           width: 25%;
+        }
+
+        .blog-tag::before {
+          content: ''
+        }
+        .blog-tag {
+          display: block;
+          margin-top: calc(var(--body-margin));
         }
 
 

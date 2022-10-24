@@ -123,8 +123,11 @@
                       <h4 class="">
                         {{[Publish-Date].start}}
 
-                        {{#if Website-Session}} ·
-                        {{#each Website-Session}}<span id="cost">{{this}}</span>{{#unless @last}}, {{/unless}} {{/each}}{{/if}}
+                            {{#if Website-Session}}
+                            <span class="blog-tag">
+                              {{#each Website-Session}}<span id="cost">{{this}}</span>{{#unless @last}}, {{/unless}} {{/each}}
+                              </span>
+                              {{/if}}
 
 
                       </h4> <BR>
