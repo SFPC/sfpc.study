@@ -39,6 +39,10 @@ a {
   opacity: .35;
 }
 
+.blog-list a:hover {
+  opacity: .6;
+}
+
 select#allSections, .fixed-apply  {
   background: rgba(255,255,255,1);
   backdrop-filter: blur(0px);

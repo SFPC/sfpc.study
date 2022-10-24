@@ -124,9 +124,12 @@
                         {{[Publish-Date].start}}
 
                             {{#if Website-Session}}
+                            {{#if Website-Session}} <a href="{{this.[Session-External-Website]}}">
+                              {{else}}<a href="{{this.[Session-Slug]}}">
+                              {{/if}}
                             <span class="blog-tag">
                               {{#each Website-Session}}<span id="cost">{{this}}</span>{{#unless @last}}, {{/unless}} {{/each}}
-                              </span>
+                            </span> </a>
                               {{/if}}
 
 
