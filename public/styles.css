@@ -2171,7 +2171,7 @@ section.stacked-4 {
           /* border-style: dashed;
           border-width: 1px; */
           border: 1px dashed var(--text-color);
-          border-style: none none dashed;
+          border-style: none none dfashed;
 
           width: calc(200% + var(--body-margin));
           margin-left: calc(-100% - var(--body-margin));
@@ -2696,7 +2696,10 @@ section.stacked-4 {
         height: calc(23vw - var(--body-margin)*2 - var(--program-margin)/2);
         }
 
-
+        .blog-list-post .right {
+          /* float: right; */
+          width: 25%;
+        }
 
 
 
