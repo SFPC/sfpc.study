@@ -20,7 +20,7 @@
 
 
 
-{{#if applicationEndDate}}
+<!-- {{#if applicationEndDate}} -->
 
 <div class="break"></div>
 
@@ -34,15 +34,24 @@
 
 
 
+
     <p class="large apply hide-appsClosed">
       <a href="{{applicationLink}}" id="application-link">Apply Now</a>
     </p>
+
+    {{#if appQuestion}}  <p>
+        <i><span class="hide-appsClosed">{{appQuestion}}</span></i>
+
+      </p>{{/if}}
 
     <p>
       <span class="hide-appsClosed">Applications open until</span>
       <span class="hide-appsOpen">Applications closed on</span>
       <span id="deadline">{{applicationEndDate}}</span>.
     </p>
+
+
+
     <p>You can expect to hear back from us about the status of your application on {{notifyDate}}. Please email us at <a
         href="mailto:admissions@sfpc.study">admissions@sfpc.study</a> with any questions you have.
     </p>
@@ -51,7 +60,7 @@
     </p>
   </div>
 </section>
-{{/if}}
+<!-- {{/if}} -->
 
 <div class="break"></div>
 
@@ -156,7 +165,9 @@
 {{#eq [Session Slug].[0] "fall-22"}}
 {{> fall22classBlock}}
 {{/eq}}
-
+{{#eq [Session Slug].[0] "winter-23"}}
+{{> winter23classBlock}}
+{{/eq}}
 
 <div class="break-noline"></div>
 

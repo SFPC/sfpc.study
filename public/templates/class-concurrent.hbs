@@ -94,16 +94,21 @@
 
       <section id="section-class-details">
         <div class="grid-2">
-          <h1><span id="class-name">
+          <h1>
+            <!-- <span id="class-name">
               {{name}}
-            </span></h1>
+            </span> -->
+
+            <span id="session-name">{{Name}}</span>
+
+          </h1>
         </div>
 
         <div class="grid-2 class-details">
 
 
 
-          <img id="class-image" src="{{promoImage}}">
+          <img id="class-image" src="{{bannerImage}}">
 
           <div class="details">
             <div class="labels">Teachers</div>
@@ -120,7 +125,8 @@
           </div>
           <div class="details">
             <div class="labels">Time </div>
-            <div class="labels-info" id="time">{{time}}
+            <div class="labels-info" id="time">
+              {{time}}
             </div>
           </div>
           <div class="details">

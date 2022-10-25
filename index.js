@@ -473,8 +473,9 @@ function parseClassData(apiResponse){
 
   returnObj.name=classInfo.Name.title[0].plain_text
   returnObj.teachers=parseTeachers(classInfo)
-  returnObj.promoImage=parseNotionData(classInfo["Promo Images"])?.[0]
+  returnObj.thumbnailImage=parseNotionData(classInfo["Thumbnail Image"])?.[0]
   returnObj.bannerImage=parseNotionData(classInfo["Banner Image"])?.[0]
+  returnObj.promoImage=parseNotionData(classInfo["Promo Images"])?.[0]
   returnObj.promoImages=parseNotionData(classInfo["Promo Images"])
   returnObj.sessionImage=parseNotionData(classInfo["Session Images"])?.[0]
   returnObj.sessionImages=parseNotionData(classInfo["Session Images"])
@@ -482,6 +483,7 @@ function parseClassData(apiResponse){
   returnObj.endDate=prettyDateString(classInfo["Date"]?.date?.end)
   returnObj.numberOfClasses=classInfo["Number of Classes"].number
   returnObj.time=classInfo["Time"].rich_text[0]?.plain_text
+  returnObj.appQuestion=classInfo["Application Question"].rich_text[0]?.plain_text
   returnObj.location=classInfo["Location"].rich_text[0]?.plain_text
   returnObj.cost=classInfo["Cost"]?.number
   returnObj.applicationEndDate=prettyDateString(classInfo["Application End Date"]?.date?.start)
