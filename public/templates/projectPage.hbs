@@ -140,7 +140,10 @@
                                                   {{#if Website-Class}}
                                                   {{#each Website-Class}}{{this}}{{#unless @last}}, {{/unless}} {{/each}} {{/if}}
 
-                                                  {{#if Website-Class}}— {{/if}}{{#each Website-Session}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+                                                  {{#if Website-Class}}— {{/if}}
+                                                  <!-- <span class="blog-tag"> <span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}} </span> -->
+
+                                                  {{#each Website-Session}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
 
                                                 </div>
                                               </div>
