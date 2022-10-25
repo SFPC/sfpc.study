@@ -2078,6 +2078,10 @@ section.stacked-4 {
           margin-bottom: calc(var(--text-margin)/2);
         }
 
+       .class-details img.intro-image  {
+          margin-bottom: 0 !important;
+        }
+
         #blog img {
          border-radius: var(--border-rad);
          width: 100%;
