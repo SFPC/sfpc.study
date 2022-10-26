@@ -2175,33 +2175,34 @@ section.stacked-4 {
        }
 
        .class-list-session {
-         width: calc(25% - var(--body-margin)/2);
+         width: 25.5%;
          text-align: left;
          float: left;
          /* background: orange; */
        }
 
        .class-list-date {
-         width: calc(25% - var(--body-margin)/2);
+         width: 26%;
          text-align: left;
          float: left;
          /* background: orange; */
        }
 
        .class-list-teachers {
-         width: 34%;
+         width: 26%;
          text-align: left;
          float: left;
-         padding-right: 9%;
+         /* background: orange; */
        }
 
         .class-list-image{
           float: right;
-          width: 16%;
+        width: 22.5%;
           text-align: right;
 
         }
         .class-list-image img {
+          max-width: 80%;
            max-height: 100px;
            float: right;
         }

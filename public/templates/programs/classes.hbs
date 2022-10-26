@@ -145,7 +145,11 @@
 
                 <div class="class-list-title">
                   <h2 class="title">
-                    <a href="/sessions/{{this.[Session Slug]}}/{{this.[Website-Slug]}}">{{this.Name}}</a>
+                    <a href="/sessions/{{this.[Session Slug]}}/{{this.[Website-Slug]}}">
+
+                      {{this.Name}}{{#if Subtitle}}: {{Subtitle}} {{/if}} </span>
+
+                    </a>
                   </h2>
                 </div>
 
@@ -163,6 +167,8 @@
                     <div class="class-list-session">
                       <h4>
                         {{[Date].start}}
+
+                        <!-- {{#if [Date].end}}— {{[Date].end}}{{/if}} -->
                       </h4>
                     </div>
 
@@ -175,7 +181,7 @@
                       </h4>
                     </div>
                     <div class="class-list-image">
-                        <img src="{{this.[Promo Images].[0]}}">
+                        <img src="{{this.[Banner Image].[0]}}">
                       </div>
 
                       </div>
