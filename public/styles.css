@@ -175,14 +175,14 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 }
 
 
-        .sfpc .title, .spfc.featured .title {
+        .sfpc .title, .spfc.featured .title, #tag.sfpc {
           font-family: var(--main-title-font) !important;
           font-weight: lighter;
         }
 
 
         .sex-ed.featured .title,
-        .sex-ed #session-name {
+        .sex-ed #session-name, #tag.sex-ed {
           font-family: var(--sex-ed-title-font) !important;
           /* text-transform: lowercase; */
           font-weight: lighter;
@@ -191,7 +191,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 
 
         .networked-performance.featured .title,
-        .networked-performance #session-name {
+        .networked-performance #session-name, #tag.networked-performance {
           font-family: var(--networked-performance-title-font) !important;
           font-weight: 400;
           font-style: normal;
@@ -200,7 +200,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 
 
         .fall-22.featured .title,
-        .fall-22 #session-name {
+        .fall-22 #session-name, #tag.fall-22 {
           font-family: var(--fall-22-title-font) !important;
           font-weight: lighter;
           text-transform: uppercase;
@@ -213,12 +213,12 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 
 
         .summer-22.featured .title,
-        .summer-22 #session-name {
+        .summer-22 #session-name, #tag.summer-22 {
           font-family: var(--summer-22-title-font) !important;
           font-weight: lighter;
         }
 
-        .spring-22.featured .title {
+        .spring-22.featured .title, #tag.spring-22 {
           font-family: var(--main-title-font) !important;
           font-weight: lighter;
         }
@@ -1771,6 +1771,10 @@ section.stacked-4 {
         margin-bottom: calc(var(--text-margin));
       }
 
+      .class-list.stacked .grid-1:first-child {
+        margin-bottom: 0px !important;
+      }
+
       .table {
           width: 100%;
           box-sizing: border-box;
@@ -1789,6 +1793,13 @@ section.stacked-4 {
 
       .stacked .grid-1.table {
         display: flex !important;
+        grid-row-gap: 0px !important;
+        min-height: auto !important;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
         /* grid-row-gap: calc(var(--body-margin)*2);
         margin-bottom: calc(var(--body-margin));
         margin-top: calc(var(--text-margin));
@@ -1798,6 +1809,8 @@ section.stacked-4 {
         margin-top: 0px !important; */
         min-height: auto !important;
     }
+
+
 
     .stacked .grid-1.table:first-child {
     /* margin-bottom: 0px !important; */
@@ -2146,6 +2159,54 @@ section.stacked-4 {
          width: 11.5%;
        }
 
+
+       .class-list-title {
+         width: 50%;
+         /* background: red; */
+       }
+
+       .class-list-info {
+         width: 50%;
+         display: flex;
+        gap: var(--body-margin);
+        /* padding-left: calc(var(--body-margin)/2); */
+        box-sizing: border-box;
+         /* background: orange; */
+       }
+
+       .class-list-session {
+         width: calc(25% - var(--body-margin)/2);
+         text-align: left;
+         float: left;
+         /* background: orange; */
+       }
+
+       .class-list-date {
+         width: calc(25% - var(--body-margin)/2);
+         text-align: left;
+         float: left;
+         /* background: orange; */
+       }
+
+       .class-list-teachers {
+         width: 34%;
+         text-align: left;
+         float: left;
+         padding-right: 9%;
+       }
+
+        .class-list-image{
+          float: right;
+          width: 16%;
+          text-align: right;
+
+        }
+        .class-list-image img {
+           max-height: 100px;
+           float: right;
+        }
+
+
        .blog-list-post .featured-text {
          width: 100%;
          display: flex;
@@ -2225,6 +2286,12 @@ section.stacked-4 {
             -moz-transition: all .2s ease-in-out;
             ms-transition: all .2s ease-in-out;
             o-transition: all .2s ease-in-out;
+            /* line-height: 1 !important; */
+        }
+
+        #tag a, a#tag, a span#tag {
+          text-decoration: none !important;
+
         }
 
         #tag:hover {

@@ -438,7 +438,8 @@ select#allSections {
 
 /* .sex-ed, */
 .sex-ed.featured.session,
-.sex-ed.featured  {
+.sex-ed.featured,
+#tag.sex-ed {
  /* background-color: var(--sex-ed-background)  !important; */
  color: var(--sex-ed-text);
  box-sizing: border-box;
@@ -670,6 +671,7 @@ select#allSections {
 /* /////////// start NETWORKED PERFORMANCE ///////////////////////////////*/
 
 .networked-performance,
+#tag.networked-peformace,
 .networked-performance.featured.session,
 .shell .networked-performance,
 .networked-performance.featured  {
@@ -858,7 +860,8 @@ select#allSections {
 .summer-22,
 .summer-22.featured.session,
 .shell .summer-22,
-.summer-22.featured  {
+.summer-22.featured,
+#tag.summer-22  {
   background-color: var(--summer-22-background)  !important;
   color: var(--summer-22-text);
   box-sizing: border-box;
@@ -1028,7 +1031,8 @@ select#allSections {
 .spring-22,
 .spring-22.featured.session,
 .shell .spring-22,
-.spring-22.featured  {
+.spring-22.featured,
+#tag.spring-22  {
   background-color: var(--spring-22-background)  !important;
   color: var(--spring-22-text);
   box-sizing: border-box;
@@ -1203,7 +1207,7 @@ select#allSections {
         } */
 
 
-.fallwinter-2122, .fall-21 {
+.fallwinter-2122, .fall-21, #tag.fallwinter-2122 {
   background-color: var(--fallwinter-2122-background);
   background-image: url('images/sessions/fallwinter-2122/bg.png');
   background-position: bottom;

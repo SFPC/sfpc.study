@@ -297,6 +297,7 @@ app.get("/blog", async (req,res) => {
   })
   console.log(blogData)
   res.render("blog/blog", {blog: blogData})
+
 })
 
 
