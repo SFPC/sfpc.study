@@ -30,63 +30,33 @@ app.get("/pageContent/:id", async (req, res) => {
 
 app.get("/participate/winter-23", async (req, res) => {
   // TODO: load session page
-  res.render("winter-23/session")
+  res.render("programs/sessions/winter-23/session")
 })
-
-// app.get("/sessions/winter-23", (req,res) => {
-//   res.render("winter-23/session")
-// })
-
 
 
 app.get("/participate/spring-22", async (req, res) => {
   // TODO: load session page
-  res.render("spring-22/session")
+  res.render("programs/sessions/spring-22/session")
 })
 
 app.get("/sessions/spring-22", (req,res) => {
-  res.render("spring-22/session")
+  res.render("programs/sessions/spring-22/session")
 })
 
 
 app.get("/participate/summer-22", async (req, res) => {
   // TODO: load session page
-  res.render("summer-22/session")
+  res.render("programs/sessions/summer-22/session")
 
 })
 
 
 app.get("/participate/fall-22", async (req, res) => {
   // TODO: load session page
-  res.render("fall-22/session")
+  res.render("programs/sessions/fall-22/session")
 
 })
 
-//
-// app.get("/sex-ed", (req,res) => {
-//   res.render("sex-ed/ask-sfpc-sex-ed")
-// })
-
-
-
-
-// app.get("/sessions/summer-22", (req,res) => {
-//   res.render("summer-22/session")
-// })
-
-// app.get("/sessions/sex-ed", (req,res) => {
-//   res.render("get-notified-sexed")
-// })
-// app.get("/sex-ed", (req,res) => {
-//   res.render("sex-ed/advice-column")
-// })
-// app.get("/sex-ed/:slug", (req,res) => {
-//   res.render("sex-ed/"+req.params.slug)
-// })
-
-// app.get("/sex-ed-about", (req,res) => {
-//   res.render("sex-ed/about")
-// })
 
 
 app.get("/sex-ed", async (req,res) => {
@@ -97,7 +67,7 @@ app.get("/sex-ed", async (req,res) => {
   })
   console.log(projectData)
   // let pageContent = getPageContent()
-  res.render("sex-ed/ask-sfpc-sex-ed", {projects: projectData})
+  res.render("programs/sessions/sex-ed/ask-sfpc-sex-ed", {projects: projectData})
 })
 
 // app.get("/sex-ed/:slug", async (req,res) => {
@@ -117,11 +87,11 @@ app.get("/sex-ed", async (req,res) => {
 // })
 
 app.get("/sex-ed-about", async (req,res) => {
-  res.render("sex-ed/about")
+  res.render("programs/sessions/sex-ed/about")
 })
 
 app.get("/sex-ed-people", async (req,res) => {
-  res.render("sex-ed/people")
+  res.render("programs/sessions/sex-ed/people")
 })
 
 
@@ -139,7 +109,7 @@ app.get("/sex-ed/:slug", async (req,res) => {
     const responses = await getPageContent(response.id, "published responses")
     projectData.responses = responses
     console.log(projectData)
-    res.render("sex-ed/question", projectData)
+    res.render("programs/sessions/sex-ed/question", projectData)
   }
 })
 
@@ -196,6 +166,17 @@ app.get("/classes", async (req,res) => {
   res.render("programs/classes", {projects: projectData})
 })
 
+app.get("/participate", async (req,res) => {
+  const response = await getDatabaseEntries("ba1f9876ad3e4810880d4802d3d70d6f", [{property:"Date", direction:"descending"}])
+  const projectData = response.map((project) => {
+    console.log(project)
+    return parseNotionPage(project)
+  })
+  console.log(projectData)
+  // let pageContent = getPageContent()
+  res.render("programs/participate", {projects: projectData})
+})
+
 
 
 
@@ -209,7 +190,7 @@ app.get("/sessions/:slug", async (req, res) => {
     if(!classData) return
     const response = await prepareClassData(classData, req.params.slug)
     console.log(response)
-    res.render(req.params.slug+"/session", response)
+    res.render("programs/sessions/"+req.params.slug+"/session", response)
     // res.render("class-concurrent", response);
   }
   else if(sessionType == "Intensive"){
@@ -218,7 +199,7 @@ app.get("/sessions/:slug", async (req, res) => {
   else if(sessionType == "Concurrent"){
     const response = await prepareSessionData(sessionData, req.params.slug)
     console.log("Concurrent Session data", response)
-    res.render(req.params.slug+"/session", response)
+    res.render("programs/sessions/"+req.params.slug+"/session", response)
   }
 
 })
@@ -226,23 +207,11 @@ app.get("/sessions/:slug", async (req, res) => {
 
 
 
-app.get("/sessions/spring-22/:slug", async (req, res) => {
-  console.log(req.params)
-  try {
-    const pageId = classList["spring-22"][req.params.slug]
-    const classData = await getPage(pageId)
-    const response = parseClassData(classData)
-    res.render(`spring-22/${req.params.slug}`, response)
-  } catch (err) {
-    console.error(err)
-  }
-
-})
 app.get("/sessions/:session/:class", async(req,res) => {
   const data = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.class}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}]})
   if(!data) return
   const response = await prepareClassData(data, req.params.class)
-  res.render("class-concurrent", response);
+  res.render("programs/class-concurrent", response);
 
 })
 app.get("/projects", async (req,res) => {
@@ -252,7 +221,7 @@ app.get("/projects", async (req,res) => {
     return parseNotionPage(project)
   })
   console.log(projectData)
-  res.render("projectList", {projects: projectData})
+  res.render("projects/projectList", {projects: projectData})
 })
 
 app.get("/projects/:slug", async (req,res) => {
@@ -263,7 +232,7 @@ app.get("/projects/:slug", async (req,res) => {
   if(response){
     const projectData = parseNotionPage(response)
     console.log(projectData)
-    res.render("projectPage", projectData)
+    res.render("projects/projectPage", projectData)
   }
 })
 
@@ -276,7 +245,7 @@ app.get("/events/:slug", async (req,res) => {
   if(response){
     const projectData = parseNotionPage(response)
     console.log(projectData)
-    res.render("projectPage", projectData)
+    res.render("projects/projectPage", projectData)
   }
 })
 
@@ -299,7 +268,7 @@ app.get("/people", async (req,res) => {
     return parseNotionPage(person)
   })
   console.log(peopleData)
-  res.render("people", {people: peopleData})
+  res.render("people/people", {people: peopleData})
 })
 
 app.get("/people/:session", async (req,res) => {
@@ -316,7 +285,7 @@ app.get("/people/:session", async (req,res) => {
   })
   const sessionInfo =  await getDatabaseEntry("ce519f031eb340f58e3693cf4e041a67", {property:"Website-Slug", "rich_text": {"equals":req.params.session}})
   const classesInfo = parseNotionData(sessionInfo.properties["Website-Classes"])
-  res.render("peopleSession", {people: peopleData, classes:classesInfo})
+  res.render("people/peopleSession", {people: peopleData, classes:classesInfo})
 })
 
 
@@ -472,6 +441,7 @@ function parseClassData(apiResponse){
   //this is the data that will be passes to the class template
 
   returnObj.name=classInfo.Name.title[0].plain_text
+  returnObj.subtitle=classInfo["Subtitle"].rich_text[0]?.plain_text
   returnObj.teachers=parseTeachers(classInfo)
   returnObj.thumbnailImage=parseNotionData(classInfo["Thumbnail Image"])?.[0]
   returnObj.bannerImage=parseNotionData(classInfo["Banner Image"])?.[0]
@@ -487,9 +457,11 @@ function parseClassData(apiResponse){
   returnObj.location=classInfo["Location"].rich_text[0]?.plain_text
   returnObj.cost=classInfo["Cost"]?.number
   returnObj.applicationEndDate=prettyDateString(classInfo["Application End Date"]?.date?.start)
+  returnObj.launchDate=prettyDateString(classInfo["Launch Date"]?.date?.start)
   let today = new Date()
   today.setTime(today.getTime() - 600 * 60 * 1000)
   today = new Date(prettyDateString(today.toISOString().slice(0, 10)))
+  returnObj.comingSoon = today <= new Date(returnObj.launchDate)
   returnObj.applicationsOpen = today <= new Date(returnObj.applicationEndDate)
   returnObj.applicationLink=classInfo["Application URL"]?.url
   returnObj.description=classInfo["Short Description"]?.rich_text[0]?.plain_text

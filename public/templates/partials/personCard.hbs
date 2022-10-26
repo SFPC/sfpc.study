@@ -8,7 +8,8 @@
   <dd><span class="bio" style="background-image:url('{{person.Image.[0]}}')" role="img"></span>
     <p>{{person.Bio}}
       <BR><BR>
-      <i>{{person.Pronouns}}</i>{{#if person.Website}} · <a target="_blank" href="{{person.Website}}">website</a>
+      {{#if person.Pronouns}}<i>{{person.Pronouns}}</i>  {{/if}}
+      {{#if person.Website}} · <a target="_blank" href="{{person.Website}}">website</a>
       {{/if}}{{#if
       person.Twitter}} · <a target="_blank" href="https://twitter.com/{{person.Twitter}}">twitter</a>
       {{/if}}{{#if

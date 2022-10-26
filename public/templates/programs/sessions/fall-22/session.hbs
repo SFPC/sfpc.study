@@ -53,7 +53,7 @@
 
   <div class="crt-overlay crt-overlay-fullsize"></div>
 
-  <div id="shell" class="shell shell-fullsize about shell-content {{Website-Slug}} {{"Session Slug"}}">
+  <div id="shell" class="shell shell-fullsize about shell-content {{Website-Slug}} {{" Session Slug"}}">
 
     <div class="loader-content">
       <p tabindex="0" class="large">
@@ -74,17 +74,20 @@
       <a href="/participate.html">participate</a>
       <span class="caret"></span>
       <a href="">sessions</a>
+      <!-- <span class="caret"></span>
+      <a href="/sessions/fall-22" id="session-link">fall 2022</a> -->
     </h4>
 
-    <div id="class" class=" hide-content appsOpen beforeClass">
+    <div id="class" class=" hide-content {{#if applicationsOpen}}appsOpen{{else}}appsClosed{{/if}} beforeClass">
 
 
-      <a class="fixed-apply hide-apply hide-appsClosed" href="https://forms.gle/cp3Bzy7om4XZ8yd96">Apply Now</a>
+      <a class="fixed-apply hide-apply hide-appsClosed" href="{{[Application URL]}}">Apply Now</a>
+
 
       <section id="section-class-details">
         <div class="grid-2">
           <h1><span id="class-name">
-            <span id="session-name">{{Name}}</span>
+               <span id="session-name">{{Name}}</span>
             </span></h1>
         </div>
 
@@ -92,14 +95,11 @@
 
 
 
-          <img id="class-image" class="intro-image"  src="/images/sessions/winter-23/cover.jpg">
+          <img id="class-image" class="intro-image" src="/images/sessions/fall-22/cover.png">
         </div>
       </section>
 
-      <div class="break-noline"></div>
-
-
-
+<div class="break-noline"></div>
 
 
       <section class="intro {{Website-Slug}}" id="introduction">
@@ -127,9 +127,28 @@
           {{/each}}
 
           <BR><BR>
-          <!-- Applications launching soon. <a href="">Get Notified</a>. -->
+            {{#if applicationsOpen}}
 
-          <a href="https://forms.gle/3zy9eZsbxy9d2atj6" class="hide-appsClosed">Apply Now</a>
+                <a href="{{[Application URL]}}" class="hide-appsClosed">Apply Now</a> until {{applicationEndDate}}.
+
+
+                {{else}}
+
+
+
+                    {{#if [Application URL]}}
+                    <span class="hide-appsOpen">Applications closed.</span> <!-- on</span>
+                  <span id="deadline">{{[Application End Date].[0]}}</span>. -->
+                    {{else}}
+
+                     Applications launching soon.
+                     {{#if [Get Notified Link]}}<a href="{{[Get Notified Link]}}">Get Notified</a>.{{/if}}
+
+                    {{/if}}
+
+
+                {{/if}}
+
         </p>
       </section>
 
@@ -146,7 +165,7 @@
           <h1 class="text-on-bg">Classes</h1>
         </div> -->
 
-        {{> winter23classBlock}}
+        {{> fall22classBlock}}
 
       </section>
 

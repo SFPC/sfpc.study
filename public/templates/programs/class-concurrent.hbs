@@ -99,7 +99,7 @@
               {{name}}
             </span> -->
 
-            <span id="session-name">{{Name}}</span>
+            <span id="session-name">{{Name}}{{#if Subtitle}}: {{Subtitle}} {{/if}} </span>
 
           </h1>
         </div>
@@ -116,6 +116,14 @@
               @last}}, {{/unless}}{{/each}}
             </div>
           </div>
+
+          <!-- <div class="details">
+            <div class="labels">Organizers</div>
+            <div class="labels-info" id="organizers-list">{{#each organizers}}{{this.Name}}{{#unless
+              @last}}, {{/unless}}{{/each}}
+            </div>
+          </div> -->
+
           <div class="details">
             <div class="labels">Date </div>
             <div class="labels-info">
@@ -141,8 +149,8 @@
           <div class="details">
             <div class="labels">Deadline </div>
             <div class="labels-info">
-              <span class="hide-appsOpen">Applications {{#if applicationsOpen}}closed on {{else}}open
-                until{{/if}}</span>
+              <span class="">Applications {{#if applicationsOpen}}open
+                until {{else}}closed on {{/if}}</span>
               <span id="deadline">{{applicationEndDate}}</span>
             </div>
           </div>
@@ -165,7 +173,7 @@
 
         <div class="grid-2">
           <p style="white-space:pre-line">
-            {{trim description}}
+            {{{description}}}
           </p>
         </div>
       </section>
@@ -253,6 +261,7 @@
               {{/each}}
 
               {{/if}}
+
 
           </dl>
 

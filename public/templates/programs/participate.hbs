@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>School for Poetic Computation</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="title" content="School for Poetic Computation">
+  <meta name="description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sfpc.study/">
+  <meta property="og:title" content="School for Poetic Computation">
+  <meta property="og:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sfpc.study/">
+  <meta property="twitter:title" content="School for Poetic Computation">
+  <meta property="twitter:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <link href="/styles.css" rel="stylesheet">
+  <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
+  <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico" />
+
+  <script src="/jquery-3.6.0.min.js"></script>
+
+  <!-- stats -->
+  <script type="text/javascript">
+    var sc_project = 12714909;
+    var sc_invisible = 1;
+    var sc_security = "6086a46c";
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="website statistics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
+
+
+  <script data-goatcounter="https://sfpc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+  <!-- end stats -->
+</head>
+
+
+<body>
+  {{> header}}
+  {{> footer}}
+
+  <div class="crt-overlay crt-overlay-fullsize"></div>
+
+
+  <div id="shell" class="shell shell-fullsize projects sfpc">
+
+
+    <div class="loader-content">
+      <p tabindex="0" class="large">
+        loading<span>...</span>
+      </p>
+    </div>
+
+
+    <div class="selectors">
+      <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
+        <option value="">Jump to section...</option>
+        <option value="current">Current & Upcoming</option>
+
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+      </select>
+    </div>
+
+
+    <h4 class="breadcrumb  hide-content"><a href="">participate</a></h4>
+
+
+
+    <div id="projects" class="shell-content hide-content allProjects projectsDiv">
+
+      <section>
+        <div class="grid-2">
+          <h1>Current & Upcoming</h1>
+        </div>
+
+        <div class="grid-2">
+
+          <p>
+            Our school supports interdisciplinary study in art, code, hardware and critical theory through events,
+            classes, workshops, projects and residencies.
+            <!-- We are still working on archiving all our past programs. View our old website <a href="">here</a>. -->
+          </p>
+          <p>
+            <a href="about-participating.html">more about what we look for in participants...</a>
+          </p>
+
+        </div>
+      </section>
+
+      <div class="break-noline"></div>
+
+      <section id="section-projects" class="stacked stacked-4">
+
+        <div class="grid-1 participate">
+
+          {{#each projects}}
+          <div id="{{this.[Website-Slug]}}"
+            class="grid-4 featured {{this.[Program-Type]}} {{this.[Session Slug]}}" data-location="">
+            <div class="featured-text">
+              <img src="{{this.[Promo-Image]}}">
+              <div class="top">
+                <h4 class="type type-list-comma"><a href="/projects/{{this.[Website-Slug]}}">{{#each
+                    this.[Program-Type]}}{{this}}{{/each}}</a></h4>
+                <h2 class="title">{{this.Name}}</h2>
+                <!-- <h6>{{this.[Short Description]}}</h6> -->
+              </div>
+              <div class="bottom">
+                <h4 class="details">
+                  {{this.[Date].start}}
+                </h4>
+                {{#if Time}}
+                <h4 class="details">
+                  {{this.[Time]}}
+                </h4>
+                {{/if}}
+                {{#if Location}}
+                <h4 class="details">
+                  {{this.[Location]}}
+                </h4>
+                {{/if}}
+                {{#if Number-of-Classes}}
+                <h4 class="details">
+                  {{this.[Number-of-Classes]}} classes
+                </h4>
+                {{/if}}
+                {{#if Application-Status}}
+                <h4 class="details">
+                 {{this.[Application-Status]}}
+                </h4>
+                  {{/if}}
+
+                 </div>
+            </div>
+          </div>
+
+          {{/each}}
+
+        </div>
+
+
+
+      </section>
+
+
+      <div class="break"></div>
+
+
+
+
+
+
+
+
+
+
+
+      <div class="break-noline"></div>
+
+
+      <section id="section-outro">
+        <p tabindex="0" class="large">
+          Interested in working with us on a special project? Get in touch over <a
+            href="mailto:info@sfpc.study">email</a>.
+          Support our programming and future projects through <a
+            href="https://withfriends.co/school_for_poetic_computation/join">funding</a>.
+
+        </p>
+      </section>
+
+
+      <div class="break-endpage"></div>
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script src="/outside.js"></script>
+  <script src="/carousel.js"></script>
+  </p>
+
+</body>
+
+</html>

@@ -53,7 +53,7 @@
 
   <div class="crt-overlay crt-overlay-fullsize"></div>
 
-  <div id="shell" class="shell shell-fullsize about shell-content {{Website-Slug}} {{" Session Slug"}}">
+  <div id="shell" class="shell shell-fullsize about shell-content {{Website-Slug}}">
 
     <div class="loader-content">
       <p tabindex="0" class="large">
@@ -75,31 +75,37 @@
       <span class="caret"></span>
       <a href="">sessions</a>
       <!-- <span class="caret"></span>
-      <a href="/sessions/fall-22" id="session-link">fall 2022</a> -->
+      <a href="/sessions/summer-22" id="session-link">summer 2022</a> -->
     </h4>
 
-    <div id="class" class=" hide-content appsOpen beforeClass">
+    <div id="class" class=" hide-content {{#if applicationsOpen}}appsOpen{{else}}appsClosed{{/if}} beforeClass">
 
 
-      <a class="fixed-apply hide-apply hide-appsClosed" href="https://forms.gle/cp3Bzy7om4XZ8yd96">Apply Now</a>
-
-
-      <section id="section-class-details">
-        <div class="grid-2">
-          <h1><span id="class-name">
-               <span id="session-name">Fall 2022</span>
-            </span></h1>
-        </div>
-
-        <div class="grid-2 class-details">
+      <a class="fixed-apply hide-apply hide-appsClosed" href="{{[Application URL]}}">Apply Now</a>
 
 
 
-          <img id="class-image" class="intro-image" src="/images/sessions/fall-22/cover.png">
-        </div>
-      </section>
 
-<div class="break-noline"></div>
+
+
+
+
+            <section id="section-class-details">
+              <div class="grid-2">
+                <h1><span id="class-name">
+                  <span id="session-name">{{Name}}</span>
+                  </span></h1>
+              </div>
+
+              <div class="grid-2 class-details">
+
+
+
+                <img id="class-image" class="intro-image"  src="/images/sessions/summer-22/cover.jpg">
+              </div>
+            </section>
+
+            <div class="break-noline"></div>
 
 
       <section class="intro {{Website-Slug}}" id="introduction">
@@ -107,7 +113,7 @@
           <span id="introduction-text">
             {{Description}}</span>
           <BR><BR>
-          <span id="session-name">Fall 2022</span> is organized by
+          <span id="session-name">{{Name}}</span> is organized by
           {{#each organizers}}
           {{#if @last}}and{{/if}}
           <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
@@ -127,9 +133,36 @@
           {{/each}}
 
           <BR><BR>
-          <!-- Applications launching soon. <a href="">Get Notified</a>. -->
 
-          <a href="https://forms.gle/3zy9eZsbxy9d2atj6" class="hide-appsClosed">Apply Now</a>
+
+            {{#if applicationsOpen}}
+
+                <a href="{{[Application URL]}}" class="hide-appsClosed">Apply Now</a> until {{applicationEndDate}}.
+
+
+            {{else}}
+
+
+
+                {{#if comingSoon}}
+                Applications launching soon. <a href="{{[Get Notified Link]}}">Get Notified</a>.
+                {{else}}
+                <span class="hide-appsOpen">Applications closed.
+                   <!-- on</span>
+                <span id="deadline">{{[Application End Date].[0]}}</span>. -->
+                {{/if}}
+
+
+            {{/if}}
+
+
+
+
+
+
+
+
+
         </p>
       </section>
 
@@ -142,11 +175,21 @@
 
 
       <section id="classes" class="stacked stacked-4">
-        <!-- <div class="grid-1 no-margin-bottom">
-          <h1 class="text-on-bg">Classes</h1>
-        </div> -->
 
+        {{> summer22classBlock}}
+
+        <!-- {{#eq [Website-Slug].[0] "spring-22"}}
+        {{> spring22classBlock}}
+        {{/eq}}
+        {{#eq [Website-Slug].[0] "summer-22"}}
+        {{> summer22classBlock}}
+        {{/eq}}
+        {{#eq [Website-Slug].[0] "fall-22"}}
         {{> fall22classBlock}}
+        {{/eq}}
+        {{#eq [Website-Slug].[0] "winter-23"}}
+        {{> winter23classBlock}}
+        {{/eq}} -->
 
       </section>
 
