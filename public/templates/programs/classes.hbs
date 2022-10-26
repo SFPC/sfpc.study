@@ -133,6 +133,8 @@
       <section id="section-classes" class="stacked stacked-4 class-list">
 
 {{#each projects}}
+ 
+
 
         <div class="grid-1 participate table">
 
@@ -143,48 +145,63 @@
               <!-- <img src="{{this.[Promo Images].[0]}}"> -->
 
 
-                <div class="class-list-title">
-                  <h2 class="title">
-                    <a href="/sessions/{{this.[Session Slug]}}/{{this.[Website-Slug]}}">
-
-                      {{this.Name}}{{#if Subtitle}}: {{Subtitle}} {{/if}} </span>
-
-                    </a>
-                  </h2>
-                </div>
-
-
                 <div class="class-list-info">
 
-                    <div class="class-list-session">
-                      <h4 class="">
-                        <!-- {{#if Website-Session}}<a href="{{this.[Session-External-Website]}}">{{else}}<a href="/sessions/{{this.[Session Slug]}}">{{/if}} -->
-                         <span id="tag" class="{{[Session Slug]}}">{{this.[Session Name]}}</span>
-                       <!-- </a> -->
-                      </h4>
+                    <div class="class-list-title">
+                      <h2 class="title">
+                        <a href="/sessions/{{this.[Session Slug]}}/{{this.[Website-Slug]}}">
+
+                          {{this.Name}}{{#if Subtitle}}: {{Subtitle}} {{/if}} </span>
+
+                        </a>
+                      </h2>
                     </div>
 
-                    <div class="class-list-session">
-                      <h4>
-                        {{[Date].start}}
 
-                        <!-- {{#if [Date].end}}— {{[Date].end}}{{/if}} -->
-                      </h4>
-                    </div>
 
-                    <div class="class-list-teachers">
 
-                      <h4>
-                        {{#each [Teacher Names]}}{{this}}{{#unless
-                          @last}}, {{/unless}}{{/each}}
-                        <!-- {{this.[Short Description]}} -->
-                      </h4>
-                    </div>
+                          <div class="class-list-metadata">
+
+                              <div class="class-list-session">
+                                <h4 class="">
+                                  {{#if Website-Session}}<a href="{{this.[Session-External-Website]}}">{{else}}<a href="/sessions/{{this.[Session Slug]}}">{{/if}}
+                                   <span id="tag" class="{{[Session Slug]}}">{{this.[Session Name]}}</span>
+                                 </a>
+                                </h4>
+                              </div>
+
+                              <div class="class-list-date">
+                                <h4>
+                                  {{[Date].start}}
+
+                                  <!-- {{#if [Date].end}}— {{[Date].end}}{{/if}} -->
+                                </h4>
+                              </div>
+
+                              <div class="class-list-teachers">
+
+                                <h4>
+                                  {{#each [Teacher Names]}}{{this}}{{#unless
+                                    @last}}, {{/unless}}{{/each}}
+
+                                    {{#if [Guest Teacher Names]}} and guests{{/if}}
+
+                                    <!-- {{#each [Guest Teacher Names]}}{{this}}{{#unless
+                                      @last}}, {{/unless}}{{/each}} -->
+                                  <!-- {{this.[Short Description]}} -->
+                                </h4>
+                              </div>
+
+                            </div>
+
+                      </div>
+
+
                     <div class="class-list-image">
                         <img src="{{this.[Banner Image].[0]}}">
                       </div>
 
-                      </div>
+
 
 
 

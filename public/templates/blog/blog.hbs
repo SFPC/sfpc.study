@@ -115,6 +115,8 @@
 
                 {{#each blog}}
 
+                {{#if Publish-Date}}
+
                   <div id="{{this.[Website-Slug]}}"
                   class="grid-1 table blog-list-post {{#each this.[Project-Type]}}{{this}} {{/each}}" data-location="">
                   <div class="featured-text">
@@ -153,6 +155,7 @@
                   </div>
                 </div>
 
+                {{/if}}
 
                 {{/each}}
 
