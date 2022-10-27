@@ -84,23 +84,20 @@
     </div>
 
 
-    <!--<div class="selectors">
-         <select id= "allSections" name ="projectChange" class="projectChange" onchange="projectFilter(this.value)">
-          <option value ="allProjects">All project types...</option>
-          <option value ="publicationProjects">Publications</option>
-          <option value ="exhibitionProjects">Exhibitions</option>
-          <option value ="eventProjects">Event Series</option>
-          <option value ="sessionProjects">Special Sessions</option>
-          <option value ="websiteProjects">Websites</option>
-          <option value ="radioProjects">Radio</option>
-        </select>
-      </div> -->
+    <div class="selectors">
+      <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
+        <option value="/participate">All Programs</option>
+        <option value="/classes" selected>Classes</option>
+        <option value="/sessions">Sessions</option>
+        <option value="/events">Events</option>
+      </select>
+      </div>
 
 
       <h4 class="breadcrumb hide-content">
         <a href="/participate.html">participate</a>
-        <span class="caret"></span>
-        <a href="">classes</a>
+        <!-- <span class="caret"></span>
+        <a href="">classes</a> -->
         <!-- <span class="caret"></span>
         <a href="/sessions/{{'Session Slug'}} " id=" session-link">{{"Session Name"}}</a> -->
       </h4>
@@ -133,10 +130,10 @@
       <section id="section-classes" class="stacked stacked-4 class-list">
 
 {{#each projects}}
- 
 
 
-        <div class="grid-1 participate table">
+
+        <div class="grid-1 participate table class-list-each">
 
 <!--
           <div id="{{this.[Website-Slug]}}"
@@ -149,7 +146,11 @@
 
                     <div class="class-list-title">
                       <h2 class="title">
-                        <a href="/sessions/{{this.[Session Slug]}}/{{this.[Website-Slug]}}">
+                        <a href="
+                        {{#if this.[External URL]}}{{this.[External URL]}}
+                        {{else}}/sessions/{{this.[Session Slug]}}/{{this.[Website-Slug]}}
+                        {{/if}}
+                        ">
 
                           {{this.Name}}{{#if Subtitle}}: {{Subtitle}} {{/if}} </span>
 
@@ -164,7 +165,7 @@
 
                               <div class="class-list-session">
                                 <h4 class="">
-                                  {{#if Website-Session}}<a href="{{this.[Session-External-Website]}}">{{else}}<a href="/sessions/{{this.[Session Slug]}}">{{/if}}
+                                  {{#if Website-Session}}<a href="{{this.[Session-External-Website]}}">{{else}}<a href="/sessions/{{this.[Session Slug]}}"> {{/if}}
                                    <span id="tag" class="{{[Session Slug]}}">{{this.[Session Name]}}</span>
                                  </a>
                                 </h4>
@@ -226,31 +227,26 @@
 
       </section>
 
-
-      <div class="break"></div>
-
-
-
-
-
-
-
-
-
-
-
       <div class="break-noline"></div>
 
 
       <section id="section-outro">
         <p tabindex="0" class="large">
-          Interested in working with us on a special project? Get in touch over <a
-            href="mailto:info@sfpc.study">email</a>.
-          Support our programming and future projects through <a
-            href="https://withfriends.co/school_for_poetic_computation/join">funding</a>.
-
+          We are still working on archiving all our past programs. View our past programs <a
+            href="https://sfpc.io/participate/">here</a> and <a href="https://sfpc.io/classes/">here</a>.
+          <BR><BR>
+          Interested in more learning opportunities at the School for Poetic Computation?
+          Join our <a href="https://stats.sender.net/forms/e09QVa/view">newsletter</a> to stay up to date on future
+          sessions and events, and
+          follow us on <a href="https://instagram.com/sfpc_nyc">Instagram</a> and <a
+            href="https://twitter.com/sfpc">Twitter</a>.
+          Support our programming through <a
+            href="https://withfriends.co/school_for_poetic_computation/join">scholarships</a>.
+          Get in touch over <a href="mailto:info@sfpc.study">email</a>.
         </p>
       </section>
+
+
 
 
       <div class="break-endpage"></div>

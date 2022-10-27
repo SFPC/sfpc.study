@@ -2211,12 +2211,20 @@ section.stacked-4 {
         width: 12%;
           text-align: right;
           /* background: red; */
+          transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          ms-transition: all .2s ease-in-out;
+          o-transition: all .2s ease-in-out;
         }
         .class-list-image img {
           max-width: 60%;
            max-height: 100px;
            float: right;
            border-radius: var(--border-rad) !important;
+           transition: all .2s ease-in-out;
+           -moz-transition: all .2s ease-in-out;
+           ms-transition: all .2s ease-in-out;
+           o-transition: all .2s ease-in-out;
         }
 
         .class-list-image:hover img{
@@ -2232,7 +2240,7 @@ section.stacked-4 {
         align-content: stretch;
         justify-content: space-between;
         align-items: center;
-        gap: 7%;
+        gap: calc(var(--body-margin)*6);
        }
 
 
@@ -2293,7 +2301,7 @@ section.stacked-4 {
         span#tag{
             /* background: var(--text-link); */
             border-radius: var(--border-rad);
-            padding: 1px 5px;
+            padding: 3px 5px 1px 5px;
             /* color: var(--background); */
             /* font-family: var(--main-special-font); */
             font-weight: normal;
@@ -2639,7 +2647,7 @@ section.stacked-4 {
         .mobile-menu-content a{
           color: #fff;
           text-decoration: none;
-          margin: calc(var(--body-margin)*4);
+          margin: calc(var(--body-margin)*6);
           line-height: 1.5;
         }
 
@@ -2833,6 +2841,54 @@ section.stacked-4 {
           margin-top: calc(var(--body-margin));
           margin-left: 0px;
         }
+
+
+        .class-list-info {
+          width: 75%;
+          display: flex;
+          gap: var(--body-margin);
+          box-sizing: border-box;
+          flex-direction: column;
+        }
+
+        .class-list-image {
+          width: 25%;
+        }
+
+        .class-list-image img {
+            max-width: 100%;
+          }
+
+          .class-list-title {
+            width: 100%;
+          }
+
+          .class-list-each.grid-1.participate.table {
+            /* display: flex; */
+            gap:calc(var(--body-margin)*4);
+          }
+          .class-list-each {
+            padding: calc(var(--body-margin)*4) var(--program-margin);
+          }
+          .class-list-metadata {
+            width:100%;
+            flex-direction: column;
+            margin-top: calc(var(--body-margin)*4);
+            gap:calc(var(--body-margin)*1);
+          }
+
+          .class-list-session {
+            width: 100%;
+            margin-bottom: calc(var(--body-margin)*2);
+          }
+
+          .class-list-date {
+            width: 100%;
+          }
+
+          .class-list-teachers {
+            width: 100%;
+          }
 
 
 
