@@ -63,56 +63,56 @@
 
 
     <div id="blog" class="shell-content hide-content">
-        <section id="section-description">
-            <div class="grid-2">
-              <h1>{{title}} </h1>
+      <section id="section-description">
+        <div class="grid-2">
+          <h1>{{title}} </h1>
 
-            </div>
-
-            <div class="grid-2 blog-post">
-
-                <div class="class-details">
-
-                <div class="details">
-                  <div class="labels">Publish Date</div>
-                  <div class="labels-info">{{['Publish-Date'].start}}</div>
-                </div>
-
-                <div class="details">
-                  <div class="labels">Written By</div>
-                  <div class="labels-info">
-                    {{#each [Website-Authors]}}{{this}}{{#unless @last}},{{/unless}} {{/each}}
-
-                  </div>
-                </div>
-
-                {{#if Website-Session}}
-                <div class="details">
-                  <div class="labels">Program</div>
-                  <div class="labels-info" id="teachers-list">
-
-                    {{#if Website-Class}}
-                    {{#each Website-Class}}{{this}}{{#unless @last}}, {{/unless}} {{/each}} {{/if}}
-
-                    {{#if Website-Class}}— {{/if}}{{#each Website-Session}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
-
-                  </div>
-                </div>
-                {{/if}}
-
-              </div>
-
-              <!-- <hr> -->
-              <div class="break-noline"></div>
-
-                  {{{postHTML}}}
-            </div>
-          </section>
         </div>
 
+        <div class="grid-2 blog-post">
+
+          <div class="class-details">
+
+            <div class="de/tails">
+              <div class="labels">Publish Date</div>
+              <div class="labels-info">{{[Publish-Date].start}}</div>
+            </div>
+
+            <div class="details">
+              <div class="labels">Written By</div>
+              <div class="labels-info">
+                {{#each [Website-Authors]}}{{this}}{{#unless @last}},{{/unless}} {{/each}}
+
+              </div>
+            </div>
+
+            {{#if Website-Session}}
+            <div class="details">
+              <div class="labels">Program</div>
+              <div class="labels-info" id="teachers-list">
+
+                {{#if Website-Class}}
+                {{#each Website-Class}}{{this}}{{#unless @last}}, {{/unless}} {{/each}} {{/if}}
+
+                {{#if Website-Class}}— {{/if}}{{#each Website-Session}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+
+              </div>
+            </div>
+            {{/if}}
+
+          </div>
+
+          <!-- <hr> -->
+          <div class="break-noline"></div>
+
+          {{{postHTML}}}
+        </div>
+      </section>
+    </div>
 
 
-          <div class="break-endpage"></div>
+
+    <div class="break-endpage"></div>
 
 
 

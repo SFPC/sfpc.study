@@ -313,7 +313,7 @@ app.get("/blog/:slug", async (req,res) => {
   console.log(parsedData)
   const pageContent = await getBlocks(response.id)
   const postHTML = parsePageContentHTML(pageContent)
-  res.render("blog/post", {title: parsedData.Name, postHTML:postHTML})
+  res.render("blog/post", {title: parsedData.Name, postHTML:postHTML, ...parsedData})
 })
 
 
