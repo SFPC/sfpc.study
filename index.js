@@ -641,14 +641,17 @@ function parseBlockIntoKeyedObject(block, contentObj) {
 }
 function parsePageContentHTML(data) {
   let pageHTML = ""
+  let prevType = ""
   console.log("parsing")
   for (let i = 0; i < data.length; i++) {
-    pageHTML = parseBlockHTML(data[i], pageHTML)
+    pageHTML = parseBlockHTML(data[i], pageHTML, prevType)
+    prevType = data[i].type
   }
   return pageHTML
 }
 
-function parseBlockHTML(block, pageHTML) {
+function parseBlockHTML(block, pageHTML, prevType) {
+  
   switch (block.type) {
     case 'heading_1':
       // For a heading
@@ -671,15 +674,28 @@ function parseBlockHTML(block, pageHTML) {
         return pageHTML += `<img src=${block['image'].file.url} />`
       break;
     case 'bulleted_list_item':
+      console.log(block.bulleted_list_item.text)
       // For an unordered list
       let bulletText = formatRichText(block['bulleted_list_item'].text)
-      return pageHTML += `<ul><li>${bulletText}</li></ul >`
+      if(prevType == "bulleted_list_item"){
+        pageHTML = pageHTML.slice(0,-5) + `<li>${bulletText}</li></ul>`
+        return pageHTML
+      }
+      else 
+        return pageHTML += `<ul><li>${bulletText}</li></ul>`
     case 'numbered_list_item':
-      // For an unordered list
+      // For a numbered list
       let numberedText = formatRichText(block['numbered_list_item'].text)
-      return pageHTML += `<ol><li>${numberedText}</li></ol >`
+      if(prevType == "numbered_list_item"){
+        pageHTML = pageHTML.slice(0,-5) + `<li>${numberedText}</li></ol>`
+        return pageHTML 
+      }
+      else 
+        return pageHTML += `<ol><li>${numberedText}</li></ol>`
     case 'paragraph':
       // For a paragraph
+      if(block['paragraph'].text.length <=0)
+        return pageHTML += "<br />"
       let pText = formatRichText(block['paragraph'].text)
       return pageHTML += `<p>${pText}</p>`
     case 'quote':
@@ -699,7 +715,7 @@ function parseBlockHTML(block, pageHTML) {
     default:
       // For an extra type
       console.log(block.type)
-      return
+      return pageHTML
   }
 }
 function formatRichText(textArray) {
@@ -711,6 +727,8 @@ function formatRichText(textArray) {
       tempText = `<b>${tempText}</b>`
     if (textArray[i].annotations.italic)
       tempText = `<i>${tempText}</i>`
+    if (textArray[i].annotations.underline)
+      tempText = `<span style="text-decoration:underline">${tempText}</span>`
     if (textArray[i].href)
       tempText = `<a href="${textArray[i].href}">${tempText}</a>`
     formattedText += tempText
