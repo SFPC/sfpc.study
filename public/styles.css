@@ -2896,7 +2896,7 @@ section.stacked-4 {
         }
         .blog-tag {
           display: block;
-          margin-top: calc(var(--body-margin));
+          margin-top: calc(var(--body-margin)*2);
           margin-left: 0px;
         }
 
