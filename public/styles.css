@@ -1298,6 +1298,20 @@ h4.breadcrumb.hide-content{
           content: ''
         }
 
+        .breadcrumb .blog-tag::before {
+          content: '' !important;
+        }
+
+        .breadcrumb .blog-tag a:hover {
+          text-decoration: none !important;
+          text-decoration:
+        }
+
+        .breadcrumb .blog-tag  {
+          text-shadow: 0px !important:
+          font: inherit;
+        }
+
 
 
 
@@ -2265,6 +2279,8 @@ section.stacked-4 {
          content: ' · '
        }
 
+
+
        #blog h4 a, h4.noline a   {
          text-decoration: none
        }
@@ -2899,6 +2915,8 @@ section.stacked-4 {
           margin-top: calc(var(--body-margin)*2);
           margin-left: 0px;
         }
+
+
 
 
 
