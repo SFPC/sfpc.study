@@ -91,6 +91,14 @@
                     <div class="grid-2 class-details">
 
 
+                      <h4 class="noline">
+                      {{Status.[0]}} {{[Release Date].start}}{{#if Website-Session}}{{#if Website-Session}}<a href="{{this.[Session-External-Website]}}">{{else}}<a href="{{[Session-Slug]}}">{{/if}}
+                            <span class="blog-tag"> <span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}} </span> </span></a>
+                              {{/if}}
+                      </h4>
+
+                      <div class="break-noline-small"></div>
+
 
                       <img id="class-image" src="{{Image.[0]}}">
 
@@ -99,8 +107,8 @@
                         <div class="labels-info" id="teachers-list">{{#each [Project-Type]}}{{this}}{{#unless @last}},{{/unless}} {{/each}}</div>
                       </div>
                       <div class="details">
-                        <div class="labels">Status</div>
-                        <div class="labels-info" id="teachers-list">{{Status.[0]}} {{[Release Date].start}}</div>
+                        <!-- <div class="labels">Status</div>
+                        <div class="labels-info" id="teachers-list">{{Status.[0]}} {{[Release Date].start}}</div> -->
                       </div>
 
 
@@ -141,9 +149,20 @@
                                                   {{#each Website-Class}}{{this}}{{#unless @last}}, {{/unless}} {{/each}} {{/if}}
 
                                                   {{#if Website-Class}}— {{/if}}
-                                                  <!-- <span class="blog-tag"> <span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}} </span> -->
+                                                   <!-- <span class="blog-tag"> <span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}} </span> -->
 
-                                                  {{#each Website-Session}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+                                                  {{#each Website-Session}}
+                                                  {{this}}
+                                                  {{#unless @last}}, {{/unless}}{{/each}}
+
+
+                                                  <!-- {{#if Website-Session}}
+                                                  <h4 class="noline">
+                                                  {{#if Website-Session}}<a href="{{this.[Session-External-Website]}}">{{else}}<a href="{{[Session-Slug]}}">{{/if}}
+                                                      <span class="blog-tag"> <span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}} </span> </span></a>
+                                                    </h4>
+                                                        {{/if}} -->
+
 
                                                 </div>
                                               </div>

@@ -149,9 +149,29 @@ $("img.c1").attr("src", c1);
 $( document ).ready(function() {
     $('h1').each(function( index ) {
         var a = Math.random() * 10 - 5;
-        $(this).css('transform', 'rotate(' + a + 'deg)');})
+        $(this).css('transform', 'rotate(' + a + 'deg)');
+      });
+
+      var b = Math.random() * 10 - 5;
+
+      $('h1.title').each(function( index ) {
+          $(this).css('transform', 'rotate(' + b + 'deg)');
+        });
+
+        $('h6.byline').each(function( index ) {
+            $(this).css('transform', 'rotate(' + b + 'deg)');
+        });
+
+        $('h4.bymeta').each(function( index ) {
+            $(this).css('transform', 'rotate(' + b + 'deg)');
+        });
+
+
     });
- 
+
+
+
+
 
 })(jQuery);
 

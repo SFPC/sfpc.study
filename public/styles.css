@@ -2095,10 +2095,14 @@ section.stacked-4 {
           margin-bottom: 0 !important;
         }
 
+        #blog section .grid-2 h1 {
+          margin-bottom: calc(var(--text-margin)/8) !important;
+        }
+
         #blog img {
          border-radius: var(--border-rad);
          width: 100%;
-         margin-top: calc(var(--text-margin)/4);
+         /* margin-top: calc(var(--text-margin)/4); */
        }
 
        #blog em {
@@ -2133,6 +2137,10 @@ section.stacked-4 {
 
        .blog-list a {
          text-decoration: none !important
+       }
+
+       h6.byline {
+         width: 80%;
        }
 
 
@@ -2257,6 +2265,11 @@ section.stacked-4 {
          content: ' · '
        }
 
+       #blog h4 a, h4.noline a   {
+         text-decoration: none
+       }
+
+
        #blog h2 b, #blog h2 {
          font-weight: normal !important
        }
@@ -2264,6 +2277,10 @@ section.stacked-4 {
         #blog img {
           margin-bottom: calc(var(--text-margin)/4);
           margin-top: calc(var(--text-margin)/2);
+        }
+
+        #blog img:first-child {
+          margin-top: 0px;
         }
 
        #blog hr {
@@ -2283,6 +2300,43 @@ section.stacked-4 {
           width: calc(200% + var(--body-margin));
           margin-left: calc(-100% - var(--body-margin));
       }
+
+      .blog-content > img:nth-child(even)  {
+        /* opacity: .3; */
+        margin-left: calc(-50vw + var(--body-margin));
+        /* margin-bottom: -25vh; */
+      }
+
+      /* .blog-content > img:first-of-type {
+        margin-left: 0px;
+      }
+
+      .blog-content em:first-of-type  {
+        margin-left: 0px;
+        max-width:  100%;
+      } */
+
+
+
+/* #section-description > div.grid-2.blog-post.blog-content > img:nth-child(4)
+
+#section-description > div.grid-2.blog-post.blog-content > img:nth-child(13) */
+
+
+
+      /* .blog-content img:nth-child(even) {
+        margin-left: 0px !important;
+      } */
+
+      .blog-content em:nth-child(odd)  {
+        margin-left: calc(-50vw + var(--body-margin));
+        max-width:  calc(50vw + var(--body-margin));
+
+      }
+
+
+
+
 
         .class-details .apply {
           border-radius: var(--border-rad);
@@ -2551,6 +2605,10 @@ section.stacked-4 {
 
         section .grid-2 h1 {
           margin-bottom: calc(var(--text-margin)/2);
+        }
+
+        #blog section .grid-2 h1 {
+          margin-bottom: calc(var(--text-margin)/8) !important;
         }
 
         section .grid-2{
@@ -2843,6 +2901,8 @@ section.stacked-4 {
         }
 
 
+
+
         .class-list-info {
           width: 75%;
           display: flex;
@@ -2889,6 +2949,17 @@ section.stacked-4 {
           .class-list-teachers {
             width: 100%;
           }
+
+
+                .blog-content > img:nth-child(even)  {
+                  margin-left: 0px
+                }
+
+                .blog-content em:nth-child(odd)  {
+                  margin-left: 0px;
+                  max-width:  100%;
+
+                }
 
 
 
