@@ -651,7 +651,7 @@ function parsePageContentHTML(data) {
 }
 
 function parseBlockHTML(block, pageHTML, prevType) {
-  
+
   switch (block.type) {
     case 'heading_1':
       // For a heading
@@ -681,16 +681,16 @@ function parseBlockHTML(block, pageHTML, prevType) {
         pageHTML = pageHTML.slice(0,-5) + `<li>${bulletText}</li></ul>`
         return pageHTML
       }
-      else 
+      else
         return pageHTML += `<ul><li>${bulletText}</li></ul>`
     case 'numbered_list_item':
       // For a numbered list
       let numberedText = formatRichText(block['numbered_list_item'].text)
       if(prevType == "numbered_list_item"){
         pageHTML = pageHTML.slice(0,-5) + `<li>${numberedText}</li></ol>`
-        return pageHTML 
+        return pageHTML
       }
-      else 
+      else
         return pageHTML += `<ol><li>${numberedText}</li></ol>`
     case 'paragraph':
       // For a paragraph
@@ -709,6 +709,15 @@ function parseBlockHTML(block, pageHTML, prevType) {
         <audio controls><source src=${block['audio'].external.url}></audio>`
       else if(block['audio']?.file?.url)
         return pageHTML += `<audio controls><source src=${block['audio'].file.url}></audio>`
+      break;
+    case 'video':
+      // For a video
+      if(block['video']?.external?.url)
+        return pageHTML += `
+        <video controls><source src=${block['video'].external.url}></video>
+         `
+      else if(block['video']?.file?.url)
+        return pageHTML += `<video controls><source src=${block['video'].file.url} /></video>`
       break;
     case 'divider':
       return pageHTML += "<hr />"

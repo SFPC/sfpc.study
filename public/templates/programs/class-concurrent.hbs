@@ -82,8 +82,8 @@
       <span class="caret"></span>
       <!-- <a href="/sessions/{{'Session Slug'}} " id=" session-link">{{"Session Name"}}</a> -->
 
-      {{#if [Session Name]}}{{#if [Session Name]}}<a href="{{this.[Session-External-Website]}}">{{else}}<a href="{{[Session-Slug]}}">{{/if}}
-            <span class="blog-tag"> <span id="tag" class="{{[Session-Slug]}}">{{[Session Name]}} </span> </span></a>
+      {{#if [Session Name]}}{{#if [Session-External-Website]}}<a href="{{[Session-External-Website]}}">{{else}}<a href="/sessions/{{[Session Slug]}}">{{/if}}
+            <span class="blog-tag"> <span id="tag" class="{{[Session Slug]}}">{{[Session Name]}} </span> </span></a>
               {{/if}}
 
     </h4>

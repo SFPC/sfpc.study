@@ -213,7 +213,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 
 
         .summer-22.featured .title,
-        .summer-22 #session-name, #tag.summer-22 {
+        .summer-22 #session-name, #tag.summer-22, .blog-tag .summer-22 {
           font-family: var(--summer-22-title-font) !important;
           font-weight: lighter;
         }
@@ -2323,6 +2323,10 @@ section.stacked-4 {
         /* margin-bottom: -25vh; */
       }
 
+      .blog-content > video:nth-child(even)  {
+        margin-left: calc(-50vw + var(--body-margin));
+      }
+
       /* .blog-content > img:first-of-type {
         margin-left: 0px;
       }
@@ -2555,7 +2559,17 @@ section.stacked-4 {
 }
 
 
-
+audio {
+  width: 100%;
+  max-width: 100%;
+  margin: 2vw 0;
+}
+video {
+  width: 100%;
+  max-width: 100%;
+  margin: 2vw 0;
+  border-radius: var(--border-rad);
+}
 
 
 
@@ -2913,6 +2927,12 @@ section.stacked-4 {
         .blog-tag {
           display: block;
           margin-top: calc(var(--body-margin)*2);
+          margin-left: 0px;
+        }
+
+        .breadcrumb .blog-tag {
+          display: inline-block;
+          margin-top: 0px;
           margin-left: 0px;
         }
 

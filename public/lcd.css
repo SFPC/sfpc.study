@@ -863,9 +863,9 @@ select#allSections {
 .summer-22.featured,
 #tag.summer-22  {
   background-color: var(--summer-22-background)  !important;
-  color: var(--summer-22-text);
-  box-sizing: border-box;
-  border-color: var(--summer-22-text);
+  color: var(--summer-22-text) !important;
+  box-sizing: border-box !important;
+  border-color: var(--summer-22-text) !important;
 }
 
 
