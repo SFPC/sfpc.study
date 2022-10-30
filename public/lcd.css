@@ -271,6 +271,7 @@ select#allSections {
   color: var(--fall-22-text);
   box-sizing: border-box;
   border-color: var(--fall-22-text);
+  text-shadow: none !important;
 }
 
 
@@ -866,6 +867,7 @@ select#allSections {
   color: var(--summer-22-text) !important;
   box-sizing: border-box !important;
   border-color: var(--summer-22-text) !important;
+  text-shadow: none !important;
 }
 
 
