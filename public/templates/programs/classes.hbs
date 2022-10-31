@@ -131,6 +131,8 @@
 
 {{#each projects}}
 
+  {{#if [Session Published]}}
+
 
 
         <div class="grid-1 participate table class-list-each">
@@ -165,7 +167,7 @@
 
                               <div class="class-list-session">
                                 <h4 class="">
-                                  {{#if Website-Session}}<a href="{{this.[External-Website]}}">{{else}}<a href="/sessions/{{this.[Session Slug]}}"> {{/if}}
+                                  {{#if Session-External-Website}}<a href="{{this.[Session-External-Website]}}">{{else}}<a href="/sessions/{{this.[Session Slug]}}"> {{/if}}
                                    <span id="tag" class="{{[Session Slug]}}">{{this.[Session Name]}}</span>
                                  </a>
                                 </h4>
@@ -222,6 +224,7 @@
 
 
         <!-- </div> -->
+          {{/if}}
           {{/each}}
 
 

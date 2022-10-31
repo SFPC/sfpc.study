@@ -67,20 +67,20 @@
 
     <div class="selectors">
       <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
-        <option value="/participate" selected>All Programs</option>
+        <option value="/participate">All Programs</option>
         <option value="/classes">Classes</option>
-        <option value="/sessions">Sessions</option>
+        <option value="/sessions" selected>Sessions</option>
         <option value="/events">Events</option>
       </select>
 
-      <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
+      <!-- <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
         <option value="">Jump to section...</option>
         <option value="current">Current & Upcoming</option>
 
         <option value="2022">2022</option>
         <option value="2021">2021</option>
         <option value="2020">2020</option>
-      </select>
+      </select> -->
     </div>
 
 
@@ -92,19 +92,11 @@
 
       <section>
         <div class="grid-2">
-          <h1>Current & Upcoming</h1>
+          <h1>All Sessions</h1>
         </div>
 
         <div class="grid-2">
 
-          <p>
-            Our school supports interdisciplinary study in art, code, hardware and critical theory through events,
-            classes, workshops, projects and residencies.
-            <!-- We are still working on archiving all our past programs. View our old website <a href="">here</a>. -->
-          </p>
-          <p>
-            <a href="about-participating.html">more about what we look for in participants...</a>
-          </p>
 
         </div>
       </section>
@@ -119,37 +111,32 @@
 
 
           <div id="{{this.[Website-Slug]}}"
-            class="grid-4 featured {{this.[Program-Type]}} {{this.[Session Slug]}}" data-location="">
+            class="grid-4 featured session {{this.[Website-Slug]}}" data-location="">
             <div class="featured-text">
-              <img src="{{this.[Promo-Image]}}">
+              <img src="{{this.[Thumbnail Image]}}">
               <div class="top">
-                <h4 class="type type-list-comma"><a href="/projects/{{this.[Website-Slug]}}">{{#each
-                    this.[Program-Type]}}{{this}}{{/each}}</a></h4>
+                <h4 class="type type-list-comma">session</h4>
                 <h2 class="title">{{this.Name}}</h2>
                 <!-- <h6>{{this.[Short Description]}}</h6> -->
               </div>
               <div class="bottom">
                 <h4 class="details">
-                  {{this.[Session Date].start}}
+                  {{this.[Dates].start}}
+                  {{#if [Dates].end}}— {{[Dates].end}}{{/if}}
                 </h4>
-                {{#if Time}}
+                {{#if Location}}
                 <h4 class="details">
-                  {{this.[Time]}}
-                </h4>
-                {{/if}}
-                {{#if Session-Location}}
-                <h4 class="details">
-                  {{this.[Session-Location]}}
+                  {{this.[Location]}}
                 </h4>
                 {{/if}}
-                {{#if Number-of-Classes}}
+                {{#if this.[Number-Classes]}}
                 <h4 class="details">
-                  {{this.[Number-of-Classes]}} classes
+                  {{this.[Number-Classes]}} classes
                 </h4>
                 {{/if}}
-                {{#if Application-Status}}
+                {{#if this.[Application Status]}}
                 <h4 class="details">
-                 {{this.[Application-Status]}}
+                 {{this.[Application Status]}}
                 </h4>
                   {{/if}}
 

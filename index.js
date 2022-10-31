@@ -166,6 +166,20 @@ app.get("/classes", async (req,res) => {
   res.render("programs/classes", {projects: projectData})
 })
 
+
+app.get("/sessions", async (req,res) => {
+  const response = await getDatabaseEntries("ce519f031eb340f58e3693cf4e041a67", [{property:"Dates", direction:"descending"}])
+  const projectData = response.map((project) => {
+    console.log(project)
+    return parseNotionPage(project)
+  })
+  console.log(projectData)
+  // let pageContent = getPageContent()
+  res.render("programs/sessions", {projects: projectData})
+})
+
+
+
 app.get("/participate", async (req,res) => {
   const response = await getDatabaseEntries("ba1f9876ad3e4810880d4802d3d70d6f", [{property:"Date", direction:"descending"}])
   const projectData = response.map((project) => {
@@ -214,6 +228,8 @@ app.get("/sessions/:session/:class", async(req,res) => {
   res.render("programs/class-concurrent", response);
 
 })
+
+
 app.get("/projects", async (req,res) => {
   const response = await getDatabaseEntries("713f24806a524c5e892971e4fbf5c9dd", [{property:"Release Date", direction:"descending"}])
   const projectData = response.map((project) => {
@@ -457,13 +473,14 @@ function parseClassData(apiResponse){
   returnObj.appQuestion=classInfo["Application Question"].rich_text[0]?.plain_text
   returnObj.location=classInfo["Location"].rich_text[0]?.plain_text
   returnObj.cost=classInfo["Cost"]?.number
-  returnObj.applicationEndDate=prettyDateString(classInfo["Application End Date"]?.date?.start)
-  returnObj.launchDate=prettyDateString(classInfo["Launch Date"]?.date?.start)
   let today = new Date()
   today.setTime(today.getTime() - 600 * 60 * 1000)
   today = new Date(prettyDateString(today.toISOString().slice(0, 10)))
   returnObj.comingSoon = today <= new Date(returnObj.launchDate)
+  returnObj.applicationEndDate=prettyDateString(classInfo["Application End Date"]?.date?.start)
+  returnObj.launchDate=prettyDateString(classInfo["Launch Date"]?.date?.start)
   returnObj.applicationsOpen = today <= new Date(returnObj.applicationEndDate)
+  returnObj.live = today <= new Date(returnObj.launchDate)
   returnObj.applicationLink=classInfo["Application URL"]?.url
   returnObj.description=classInfo["Short Description"]?.rich_text[0]?.plain_text
   returnObj.active=classInfo["Active"]?.formula.boolean
@@ -665,7 +682,7 @@ function parseBlockHTML(block, pageHTML, prevType) {
     case 'heading_3':
       // For a heading
       let h3Text = formatRichText(block['heading_3'].text)
-      return pageHTML += `<h3>${h3Text}</h3>`
+      return pageHTML += `<h6>${h3Text}</h6>`
     case 'image':
       // For an image
       if(block['image']?.external?.url)
@@ -724,7 +741,7 @@ function parseBlockHTML(block, pageHTML, prevType) {
     default:
       // For an extra type
       console.log(block.type)
-      return pageHTML
+      return pageHTML  += `<div class="break-endpage"></div>`
   }
 }
 function formatRichText(textArray) {

@@ -467,9 +467,8 @@ h5 {
 }
 
 
-
-h6 {
-  font-family: var(--main-special-font);
+h6  {
+  font-family: var(--main-special-font) !important;
   font-size: var(--medium-text);
   line-height: var(--medium-line-height);
   margin-bottom: 0;
@@ -479,6 +478,10 @@ h6 {
   -moz-transition: all .2s ease-in-out;
   ms-transition: all .2s ease-in-out;
   o-transition: all .2s ease-in-out;
+}
+
+.blog-post.blog-content > h6 {
+  margin-bottom:  calc(var(--text-margin)/3);
 }
 
 h7 {
