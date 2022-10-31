@@ -123,7 +123,7 @@
 
                     <div class="left">
                       <h4 class="">
-                        {{[Publish-Date].start}}{{#if Website-Session}}{{#if Website-Session}}<a href="{{this.[Session-External-Website]}}">{{else}}<a href="{{[Session-Slug]}}">{{/if}}<span class="blog-tag"><span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}}</span></span></a>
+                        {{[Publish-Date].start}}{{#if [Session-External-Website]}}{{#if [Session-External-Website]}}<a href="{{this.[Session-External-Website]}}">{{else}}<a href="{{[Session-Slug]}}">{{/if}}<span class="blog-tag"><span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}}</span></span></a>
                               {{/if}}
                       </h4> <BR>
                       <h2 class="title">
