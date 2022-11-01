@@ -126,6 +126,15 @@
             </div>
           </div>
 
+          {{#if guests}}
+          <div class="details">
+            <div class="labels">Guests</div>
+            <div class="labels-info" id="teachers-list">{{#each guests}}{{this.Name}}{{#unless
+              @last}}, {{/unless}}{{/each}}
+            </div>
+          </div>
+          {{/if}}
+
           <!-- <div class="details">
             <div class="labels">Organizers</div>
             <div class="labels-info" id="organizers-list">{{#each organizers}}{{this.Name}}{{#unless
