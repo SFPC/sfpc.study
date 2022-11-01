@@ -138,9 +138,9 @@
 
 
           <BR><BR>
-            {{#if applicationsOpen}}
+            {{#if [Application URL]}}
 
-                <a href="{{[Application URL]}}" class="hide-appsClosed">Apply Now</a> until {{applicationEndDate}}.
+                <a href="{{[Application URL]}}">Apply Now</a> until {{[Application End Date].start}}.
 
 
             {{else}}
@@ -148,7 +148,9 @@
 
 
                 {{#if [Application URL]}}
-                <span class="hide-appsOpen">Applications closed.</span> <!-- on</span>
+                <span class="hide-appsOpen">Applications closed.</span>
+
+                <!-- on</span>
               <span id="deadline">{{[Application End Date].[0]}}</span>. -->
                 {{else}}
 
@@ -178,6 +180,18 @@
         {{> winter23classBlock}}
 
       </section>
+
+
+    {{#if [Promotion Designer]}}  <section class="section-testimonials">
+        <div class="grid-2">
+          <p>
+           Session promotion design by {{[Promotion Designer]}}.
+          </p>
+        </div>
+
+        <div class="grid-2">
+        </div>
+      </section>{{/if}}
 
 
 

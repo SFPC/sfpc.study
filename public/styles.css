@@ -214,7 +214,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         }
 
         .winter-23.session .title.class{
-          font-size: calc(var(--large-text) * .8) !important;
+          font-size: calc(var(--large-text) * .75) !important;
         }
 
 
@@ -245,7 +245,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 
         }
         .fall-22.session .title.class{
-          font-size: calc(var(--large-text) * .82) !important;
+          font-size: calc(var(--large-text) * .75) !important;
         }
 
 
