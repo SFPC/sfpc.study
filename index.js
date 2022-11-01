@@ -381,7 +381,7 @@ async function prepareClassData(classData, classSlug){
         teachers.unshift(personData)
       }
       else if(personData["Classes-Guest"] && personData["Classes-Guest"].includes(classSlug)){
-        personData.role = "guest teacher"
+        personData.role = "guest"
         guests.unshift(personData)
       }
       else if(personData["Classes-Organizer"] && personData["Classes-Organizer"].includes(classSlug)){
