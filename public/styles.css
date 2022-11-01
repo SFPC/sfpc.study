@@ -28,6 +28,13 @@
     --sex-ed-body-font: 'Avara', sans-serif;
     --sex-ed-special-font: courier, 'Courier', sans-serif;
 
+
+    --winter-23-title-font: 'Lato', 'Hershey', sans-serif;
+    --winter-23-header-font: 'Lato', 'Hershey', sans-serif;
+    --winter-23-body-font: 'Lato', 'Hershey', sans-serif;
+    --winter-23-special-font: 'Lato', 'Hershey', sans-serif;
+
+
     --networked-performance-title-font: soda-script, sans-serif;
     --networked-performance-header-font: soda-script, sans-serif;
     --networked-performance-body-font: soda-script, sans-serif;
@@ -84,6 +91,24 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 }
 
 .tk-soda-script { font-family: "soda-script",sans-serif; }
+
+
+
+@font-face {
+    font-family: 'Arial Rounded';
+    src: url('fonts/Arial-Rounded-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
 
 
 @font-face {
@@ -180,6 +205,18 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
           font-weight: lighter;
         }
 
+        .winter-23.featured .title,
+        .winter-23 #session-name, #tag.winter-23 {
+          font-family: var(--winter-23-title-font) !important;
+          /* font-weight: lighter; */
+          text-transform: uppercase;
+          /* letter-spacing: 2px; */
+        }
+
+        .winter-23.session .title.class{
+          font-size: calc(var(--large-text) * .8) !important;
+        }
+
 
         .sex-ed.featured .title,
         .sex-ed #session-name, #tag.sex-ed {
@@ -207,8 +244,8 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
           letter-spacing: 1px;
 
         }
-        .fall-22.session .title{
-          font-size: calc(var(--large-text) * .8) !important;
+        .fall-22.session .title.class{
+          font-size: calc(var(--large-text) * .82) !important;
         }
 
 
