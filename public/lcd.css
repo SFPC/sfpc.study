@@ -5,8 +5,9 @@
     --text-link: var(--fall-22-special-text) ;
     --box-shadow: rgba(0,0,0,.3);
 
-   --winter-23-background: #ffffff;
-   --winter-23-text: #285f9e;
+   --winter-23-background: #285f9e;
+  --winter-23-text: #fff;
+   /* --winter-23-text: #285f9e; */
    --winter-23-text-on-bg: #fff;
    --winter-23-link:  #74c131;
    --winter-23-special-text:  #285f9e;
@@ -238,17 +239,49 @@ select#allSections {
 
 
 
+
+
 /* /////////// start winter 23  ///////////////////////////////*/
 
 .winter-23,
 .winter-23.featured.session,
+.winter-23.featured  {
+ /* background-color: var(--sex-ed-background)  !important; */
+ color: var(--winter-23-text);
+ box-sizing: border-box;
+ border-color: var(--winter-23-text);
+ background-image: url('images/sessions/winter-23/bg.jpg');
+ background-position: bottom;
+ background-repeat: repeat;
+ background-size: 100%;
+}
+
+.winter-23.featured:hover {
+  background-size: 150%;
+}
+
+
+
+     .shell.winter-23 {
+       background-image:url('images/sessions/winter-23/bg.jpg');
+       /* background-position: bottom; */
+       /* background-repeat: no-repeat;
+       background-size: cover; */
+       background-position: top left;
+       background-repeat: repeat;
+       background-size: cover;
+     }
+
+
+
+.winter-23,
+.winter-23.featured.session,
 .shell .winter-23,
-.winter-23.featured,
-#tag.winter-23  {
-  background-color: var(--winter-23-background)  !important;
-  color: var(--winter-23-text) !important;
-  box-sizing: border-box !important;
-  border-color: var(--winter-23-text) !important;
+.winter-23.featured  {
+  /* background-color: var(--winter-23-background)  !important; */
+  color: var(--winter-23-text);
+  box-sizing: border-box;
+  border-color: var(--winter-23-text);
   text-shadow: none !important;
 }
 
@@ -309,7 +342,7 @@ select#allSections {
       }
 
       .winter-23 .block-text {
-        background-color: var(--winter-23-background);
+        background-color: var(--winter-23-link);
       }
 
 
@@ -358,7 +391,7 @@ select#allSections {
       .winter-23 .text-on-bg,
       .winter-23 .breadcrumb a:hover {
           color: var(--winter-23-text-on-bg) !important;
-          text-shadow: 2px 2px 0px var(--winter-23-text);
+          text-shadow: 2px 2px 0px var(--winter-23-link);
       }
 
 
@@ -371,7 +404,8 @@ select#allSections {
       .winter-23 section ul,
       .winter-23 .website-grid
        {
-        background-color: var(--winter-23-background);
+        /* background-color: var(--winter-23-background); */
+        background: none;
         color:  var(--winter-23-text) !important;
         border-radius: var(--border-rad);
       }
@@ -390,8 +424,8 @@ select#allSections {
       }
 
       .winter-23 .break {
-        border: 0px !important;
-        margin-bottom: 0px !important;
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
         border-color: var(--winter-23-text);
       }
 
@@ -400,13 +434,10 @@ select#allSections {
         background-size: cover;
       }
 
-      .winter-23.test, .winter-23.block-text {
-        border-color: var(--winter-23-text);
-      }
-
-
 
 /* /////////// end winter 23  ///////////////////////////////*/
+
+
 
 
 
