@@ -93,13 +93,11 @@
 
                       <h4 class="noline">
                       {{Status.[0]}} {{[Release Date].start}}
-                   
-                       {{#if [Session-External-Website]}}{{#if [Session-External-Website]}}<a href="{{this.[Session-External-Website]}}">{{else}}<a href="{{[Session-Slug]}}">{{/if}}<span class="blog-tag"><span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}}</span></span></a>
+
+                      <a href="/sessions/{{[Session-Slug]}}"> <span class="blog-tag"><span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}}</span></span></a>
 
 
-
-
-                              {{/if}}
+ 
                       </h4>
 
                       <div class="break-noline-small"></div>

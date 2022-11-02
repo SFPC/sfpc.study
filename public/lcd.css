@@ -45,9 +45,9 @@
     --fallwinter-2122-text: #000;
     --fallwinter-2122-link: #8866aa;
 
-    --cocoon-21-background: #bb905e;
-    --cocoon-21-text: #211060;
-    --cocoon-21-link: hsl(165, 53%, 25%);
+    --cocoon-background: #bb905e;
+    --cocoon-text: #211060;
+    --cocoon-link: hsl(165, 53%, 25%);
 
     --codesocieties-20-background: blueviolet;
     --codesocieties-20-text: #fff;
@@ -1444,50 +1444,50 @@ select#allSections {
         }
 
 
-#class.cocoon-21  {
+#class.cocoon  {
   background: none;
 }
 
-.cocoon-21, #tag.cocoon-21 {
-  background-color: var(--cocoon-21-background);
-  color: var(--cocoon-21-text);
+.cocoon, #tag.cocoon {
+  background-color: var(--cocoon-background);
+  color: var(--cocoon-text);
   box-sizing: border-box;
-  border-color: var(--cocoon-21-text);
-  background-image: url('images/sessions/cocoon-21/bg.png');
+  border-color: var(--cocoon-text);
+  background-image: url('images/sessions/cocoon/bg.png');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
   background-blend-mode: screen;
 }
 
-#tag.cocoon-21 {
+#tag.cocoon {
   color: transparent;
   color: transparent;
-  text-shadow: 0 0 0px var(--cocoon-21-link) !important;
+  text-shadow: 0 0 0px var(--cocoon-link) !important;
 }
 
 
 
-        .cocoon-21 a:hover, .cocoon-21.featured:hover h2  {
-          color: var(--cocoon-21-link) !important;
+        .cocoon a:hover, .cocoon.featured:hover h2  {
+          color: var(--cocoon-link) !important;
         }
 
-        .cocoon-21.featured h4 a,
-        .cocoon-21 p,
-        .cocoon-21 p a,
-        .cocoon-21 a,
-        .cocoon-21.featured h4,
-        .cocoon-21 h4 a,
-        .cocoon-21 .intro a,
-        .cocoon-21 p.large a,
-        .cocoon-21 p a:hover,
-        .cocoon-21.session.featured,
-        .cocoon-21.session.featured a,
-        .cocoon-21.featured h4.type a,
-        .sfpc .cocoon-21 a,
-        .sfpc .cocoon-21 h4 a
+        .cocoon.featured h4 a,
+        .cocoon p,
+        .cocoon p a,
+        .cocoon a,
+        .cocoon.featured h4,
+        .cocoon h4 a,
+        .cocoon .intro a,
+        .cocoon p.large a,
+        .cocoon p a:hover,
+        .cocoon.session.featured,
+        .cocoon.session.featured a,
+        .cocoon.featured h4.type a,
+        .sfpc .cocoon a,
+        .sfpc .cocoon h4 a
          {
-          color: var(--cocoon-21-text) !important;
+          color: var(--cocoon-text) !important;
         }
 
 

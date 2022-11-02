@@ -31,6 +31,11 @@ a {
   box-sizing: border-box;
 }
 
+iframe {
+  -webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+}
+
 .breadcrumb.fixed a, .breadcrumb.fixed {
   color: #000;
 }
@@ -72,20 +77,20 @@ select#allSections, .fixed-apply  {
   background-size: 100%;
 }
 
-.cocoon-21 {
-  background-image: url('images/sessions/cocoon-21/bg.png');
+.cocoon {
+  background-image: url('images/sessions/cocoon/bg.png');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
   background-blend-mode: screen;
 }
 
-.cocoon-21.featured .title  {
+.cocoon.featured .title  {
   color: var(--text-color);
   text-shadow: 0 0 2px var(--text-color) !important;
 }
 
-/* .cocoon-21.featured .title, #tag.cocoon-21  {
+/* .cocoon.featured .title, #tag.cocoon  {
   color: var(--text-color) !important;
 } */
 

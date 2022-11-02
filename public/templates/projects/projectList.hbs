@@ -73,7 +73,7 @@
   <div class="crt-overlay crt-overlay-fullsize"></div>
 
 
-  <div id="shell" class="shell shell-fullsize projects sfpc">
+  <div id="shell" class="shell shell-fullsize projects projects-list sfpc">
 
 
     <div class="loader-content">
@@ -150,6 +150,21 @@
                   @last}}{{else}}<i class="comma">,</i> {{/if}} {{/each}}
                   {{#each this.[Additional organizers]}} {{this}} {{/each}}</h4>
                 <h4 class="details ">{{#each this.[Partnership?]}} {{this}} {{/each}} {{this.[Partners]}}</h4>
+
+
+
+
+                {{#if [Session-Slug]}}
+                <BR>
+                <h4 class="noline">
+
+                <a href="/sessions/{{[Session-Slug]}}"> <span class="blog-tag"><span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}}</span></span></a>
+                </h4>
+                {{/if}}
+
+
+
+
               </div>
             </div>
           </div>

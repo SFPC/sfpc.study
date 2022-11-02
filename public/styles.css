@@ -62,10 +62,10 @@
     --fallwinter-2122-body-font: 'Alte', 'Hershey', sans-serif;
     --fallwinter-2122-special-font: 'Alte', 'Hershey', sans-serif;
 
-    --cocoon-21-title-font: 'Self Modern', 'Hershey', serif;
-    --cocoon-21-header-font: 'Self Modern', 'Hershey', serif;
-    --cocoon-21-body-font: 'Self Modern', 'Hershey', serif;
-    --cocoon-21-special-font: 'Self Modern', 'Hershey', serif;
+    --cocoon-title-font: 'Self Modern', 'Hershey', serif;
+    --cocoon-header-font: 'Self Modern', 'Hershey', serif;
+    --cocoon-body-font: 'Self Modern', 'Hershey', serif;
+    --cocoon-special-font: 'Self Modern', 'Hershey', serif;
 
     --codesocieties-20-title-font: 'Violet', 'Hershey', sans-serif;
     --codesocieties-20-header-font: 'Violet', 'Hershey', sans-serif;
@@ -205,6 +205,11 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
           font-weight: lighter;
         }
 
+        /* #tag.sfpc {
+          font-family: var(--main-title-font) !important;
+          font-weight: bold !important;
+        } */
+
         .winter-23.featured .title,
         .winter-23 #session-name, #tag.winter-23 {
           font-family: var(--winter-23-title-font) !important;
@@ -270,24 +275,29 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
           background-size: 70%;
         }
 
-        .cocoon-21.featured .title  {
-          font-family: var(--cocoon-21-title-font) !important;
+        .cocoon.featured .title  {
+          font-family: var(--cocoon-title-font) !important;
           font-style: italic;
           font-weight: bold !important;
           line-height: 1;
           color: transparent;
           color: transparent;
-          text-shadow: 0 0 2px var(--cocoon-21-link) !important;
+          text-shadow: 0 0 2px var(--cocoon-link) !important;
         }
 
-        #tag.cocoon-21 {
-          font-family: var(--cocoon-21-title-font) !important;
+        #tag.cocoon {
+          font-family: var(--cocoon-title-font) !important;
           font-style: italic;
           font-weight: bold !important;
           line-height: 1;
         }
 
         .codesocieties-20.featured .title {
+          font-family: var(--codesocieties-20-title-font) !important;
+          font-weight: lighter;
+        }
+
+        #tag.codesocieties-20 {
           font-family: var(--codesocieties-20-title-font) !important;
           font-weight: lighter;
         }
@@ -1356,6 +1366,7 @@ h4.breadcrumb  a:not:last-child {
           content: '' !important;
         }
 
+
         .breadcrumb .blog-tag a:hover. .breadcrumb a.blog-tag-link00 {
           text-decoration: none !important;
         }
@@ -1364,6 +1375,17 @@ h4.breadcrumb  a:not:last-child {
           text-shadow: 0px !important:
           font: inherit;
         }
+
+        .projects-list .blog-tag::before {
+          content: '' !important;
+        }
+
+        .projects-list .blog-tag {
+          margin-top: calc(var(--body-margin)*2 ) !important;
+        }
+
+
+
 
 
 
