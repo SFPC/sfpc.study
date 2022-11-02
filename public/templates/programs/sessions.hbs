@@ -111,7 +111,8 @@
 
 
           <div id="{{this.[Website-Slug]}}"
-            class="grid-4 featured session {{this.[Website-Slug]}}" data-location="">
+            class="grid-4 featured session {{this.[Website-Slug]}}" data-location="{{#if this.[External-Website]}}{{this.[External-Website]}}{{else}}/sessions/{{this.[Website-Slug]}}{{/if}}
+            ">
             <div class="featured-text">
               <img src="{{this.[Thumbnail Image]}}">
               <div class="top">
