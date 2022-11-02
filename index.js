@@ -418,6 +418,11 @@ async function prepareSessionData(sessionData, session){
   let response = parseNotionPage(sessionData)
   const classData = await getDatabaseEntries("57406c3b209e4bfba3953de6328086ac", [], {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": session } }}})
   response.classes = parseNotionPageArray(classData);
+
+  const publicData = await getDatabaseEntries("ba1f9876ad3e4810880d4802d3d70d6f", [], {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": session } }}})
+  response.public = parseNotionPageArray(publicData);
+
+  
   const people = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
   "or":[
     {property:"Sessions-Organizer", "rollup": { "any": { "rich_text": { "equals": session } }}},

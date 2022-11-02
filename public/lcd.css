@@ -2,7 +2,7 @@
 
     --background: #e5e3e4 ;
     --text-color: #555658  ;
-    --text-link: var(--fall-22-special-text) ;
+    --text-link: var(--winter-23-special-text) ;
     --box-shadow: rgba(0,0,0,.3);
 
    --winter-23-background: #285f9e;
@@ -326,7 +326,8 @@ select#allSections {
 
       .winter-23 #cost,
       .winter-23 .fixed-apply,
-      .winter-23 .fixed-support {
+      .winter-23 .fixed-support,
+      .winter-23 .home-intro span#session-name::after {
           color: var(--winter-23-background) !important;
           background: var(--winter-23-link) !important;
       }

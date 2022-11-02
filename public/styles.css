@@ -733,6 +733,16 @@ img {
             margin-left: -10px;
           }
 
+          /* .home-intro span#session-name::after {
+              content: "";
+              width: 10px;
+              height: calc(var(--large-text)*.7);
+              background: var(--text-color);
+              display: inline-block;
+              animation: cursor-blink 1.5s steps(2) infinite;
+              margin-left: 10px;
+            } */
+
 
 
 
