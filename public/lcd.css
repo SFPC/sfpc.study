@@ -602,6 +602,11 @@ select#allSections {
       }
 
 
+      .fall-22 .breadcrumb .blog-tag a {
+        text-shadow: 0px !important;
+      }
+
+
       .fall-22 section#section-outro,
       #class .intro.fall-22,
       .shell.fall-22 .class-details,

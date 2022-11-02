@@ -2360,6 +2360,10 @@ section.stacked-4 {
          text-decoration: none
        }
 
+       a.noline:hover {
+         text-decoration: none
+       }
+
 
        #blog h2 b, #blog h2 {
          font-weight: normal !important
