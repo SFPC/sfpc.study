@@ -96,6 +96,11 @@ app.get("/sex-ed-people", async (req,res) => {
 
 
 
+app.get("/newsletter", async (req,res) => {
+  res.render("newsletter")
+})
+
+
 
 
 app.get("/sex-ed/:slug", async (req,res) => {
