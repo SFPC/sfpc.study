@@ -666,6 +666,15 @@ img {
   bottom: auto;
 }
 
+.shell-fullsize iframe {
+     border: 0;
+     width: 100vw;
+   height: calc(100%);
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   }
+
 
         .loader-content {
           padding-top: 4vh;
@@ -2794,6 +2803,8 @@ video {
             /* margin: var(--header-height) auto auto auto; */
         }
 
+
+
         .shell-fullsize {
           height: calc(100% - var(--footer-height) - var(--header-height));
           top: var(--header-height);
@@ -2803,6 +2814,24 @@ video {
           height: calc(80% - var(--footer-height) - var(--header-height));
           top: calc(var(--header-height) + 20%) ;
         }
+
+        .shell-fullsize iframe {
+             border: 0;
+             width: 100vw;
+           height: 100%;
+           position: absolute;
+           left: 0px;
+           top: 0px;
+           }
+
+        .shell-halfsize iframe {
+             border: 0;
+             width: 100vw;
+           height: 100%;
+           position: absolute;
+           left: 0px;
+           top: 0px;
+           }
 
 
 

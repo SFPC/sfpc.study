@@ -207,8 +207,15 @@ app.get("/sessions/:slug", async (req, res) => {
     res.render("programs/sessions/"+req.params.slug+"/session", response)
     // res.render("class-concurrent", response);
   }
-  else if(sessionType == "Intensive"){
-
+  else if(sessionType == "Intensive" && sessionType != "External"){
+    // const response = await prepareSessionData(sessionData, req.params.slug)
+    // console.log("Concurrent Session data", response)
+    // res.render("programs/embed", response)
+  }
+  else if(sessionType == "External"){
+    const response = await prepareSessionData(sessionData, req.params.slug)
+    console.log("Concurrent Session data", response)
+    res.render("programs/embed", response)
   }
   else if(sessionType == "Concurrent"){
     const response = await prepareSessionData(sessionData, req.params.slug)
