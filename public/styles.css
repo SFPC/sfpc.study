@@ -1525,9 +1525,13 @@ span.reference {
           /* overflow: hidden; */
           overflow-wrap: anywhere;
           /* word-break: break-word; */
-          -webkit-hyphens: auto;
+          /* -webkit-hyphens: auto;
          -moz-hyphens: auto;
-              hyphens: auto;
+              hyphens: auto; */
+
+              webkit-hyphens: none;
+             -moz-hyphens: none;
+                  hyphens: none;
         }
 
         /* .type-list-comma i:last-of-type {
