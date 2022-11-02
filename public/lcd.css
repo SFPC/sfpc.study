@@ -145,7 +145,7 @@ select#allSections {
       }
 
       .sfpc .grid-inner, .sfpc.grid-inner {
-        border: 2px dotted var(--text-color) !important;
+        border: 2px dotted var(--text-color) ;
         color: var(--text-link) !important;
       }
 
@@ -348,7 +348,7 @@ select#allSections {
 
 
       .winter-23.grid-inner, .winter-23 .grid-inner {
-        border: 2px dotted var(--winter-23-text);
+        border: 2px dotted var(--winter-23-text) !important;
         color: var(--winter-23-link) !important;
       }
 
@@ -555,7 +555,7 @@ select#allSections {
 
 
       .fall-22.grid-inner, .fall-22 .grid-inner {
-        border: 2px dotted var(--fall-22-text);
+        border: 2px dotted var(--fall-22-text) !important;
         color: var(--fall-22-link) !important;
       }
 
@@ -973,7 +973,7 @@ select#allSections {
 
 
       .networked-performance.grid-inner, .networked-performance .grid-inner {
-        border: 2px dotted var(--networked-performance-text);
+        border: 2px dotted var(--networked-performance-text) !important;
         color: var(--networked-performance-link) !important;
       }
 
@@ -1156,7 +1156,7 @@ select#allSections {
 
 
       .summer-22.grid-inner, .summer-22 .grid-inner {
-        border: 2px dotted var(--summer-22-text);
+        border: 2px dotted var(--summer-22-text) !important;
         color: var(--summer-22-link) !important;
       }
 
@@ -1323,7 +1323,7 @@ select#allSections {
       }
 
       .spring-22 .grid-inner, .spring-22.grid-inner {
-        border: 2px dotted var(--spring-22-text);
+        border: 2px dotted var(--spring-22-text) !important;
         color: var(--spring-22-link) !important;
       }
 
