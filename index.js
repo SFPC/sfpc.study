@@ -199,7 +199,7 @@ app.get("/sessions/:slug", async (req, res) => {
   const sessionType = sessionData.properties['Session Type']?.multi_select[0]?.name
   console.log(sessionType)
 
-  if(sessionType == "Special"){
+  if(sessionType == "Special" && sessionType != "External"){
     const classData = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.slug}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.slug } }}}]})
     if(!classData) return
     const response = await prepareClassData(classData, req.params.slug)
@@ -217,7 +217,7 @@ app.get("/sessions/:slug", async (req, res) => {
     console.log("Concurrent Session data", response)
     res.render("programs/embed", response)
   }
-  else if(sessionType == "Concurrent"){
+  else if(sessionType == "Concurrent" && sessionType != "External"){
     const response = await prepareSessionData(sessionData, req.params.slug)
     console.log("Concurrent Session data", response)
     res.render("programs/sessions/"+req.params.slug+"/session", response)
