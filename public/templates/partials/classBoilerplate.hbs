@@ -72,14 +72,11 @@
   </div>
 
   <div class="grid-2">
-    <p>
+    <p>For <span
+      id="number-classes">{{numberOfClasses}}</span>
+    classes, it costs a total of 
       <span id="cost">${{cost}}</span>
-      +
-     
-
-      processing fees for <span
-        id="number-classes">{{numberOfClasses}}</span>
-      classes.
+      +{{#if fee}} ${{fee}} in{{/if}} processing fees.
 
       SFPC processes payments via Withfriends and Stripe.
       Please email <a href="mailto:admissions@sfpc.study">admissions@sfpc.study</a>
