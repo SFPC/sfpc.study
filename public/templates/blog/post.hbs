@@ -122,7 +122,9 @@
 
 
           <h4 class="">
-            {{[Publish-Date].start}}
+              {{#if [Publish-Date].start}}{{[Publish-Date].start}}{{else}}Publish date here{{/if}}
+
+
             {{#if this.[Session-Slug]}}
 
             <a href="/sessions/{{[Session-Slug]}}">

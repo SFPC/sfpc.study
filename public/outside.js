@@ -509,6 +509,15 @@ $(document).ready(function() {
             $('a#link-projects').addClass('underline');
         }
 
+        if ($('.breadcrumb:contains("people")').length > 0) {
+            $('a#link-people').addClass('underline');
+        }
+
+        if ($('.breadcrumb:contains("blog")').length > 0) {
+            $('a#link-blog').addClass('underline');
+        }
+
+
         //
         // if (window.location.href.indexOf("about") > -1) {
         //     $('#link-about').addClass('underline');
