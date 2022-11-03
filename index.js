@@ -489,6 +489,7 @@ function parseClassData(apiResponse){
   returnObj.appQuestion=classInfo["Application Question"].rich_text[0]?.plain_text
   returnObj.location=classInfo["Location"].rich_text[0]?.plain_text
   returnObj.cost=classInfo["Cost"]?.number
+  returnObj.fee=classInfo["Processing Fee"].rich_text[0]?.plain_text
   let today = new Date()
   today.setTime(today.getTime() - 600 * 60 * 1000)
   today = new Date(prettyDateString(today.toISOString().slice(0, 10)))
