@@ -146,18 +146,19 @@
                                               {{#if Website-Session}}
                                               <div class="details">
                                                 <div class="labels">Program</div>
-                                                <div class="labels-info" id="teachers-list">
+                                                <div class="labels-info" id="program-info">
 
                                                   {{#if Website-Class}}
                                                   {{#each Website-Class}}{{this}}{{#unless @last}}, {{/unless}} {{/each}} {{/if}}
 
+                                                  <!-- <span class="Session {{Class-Type}}">
                                                   {{#if Website-Class}}— {{/if}}
-                                                   <!-- <span class="blog-tag"> <span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}} </span> -->
 
                                                   {{#each Website-Session}}
                                                   {{this}}
                                                   {{#unless @last}}, {{/unless}}{{/each}}
 
+                                                  </span> -->
 
                                                   <!-- {{#if Website-Session}}
                                                   <h4 class="noline">

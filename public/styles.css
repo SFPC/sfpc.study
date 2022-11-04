@@ -363,6 +363,8 @@ h1 {
   word-break: break-word;
 }
 
+
+
         .featured:hover .title, .title:hover,
         /* .featured:hover h6,  */
         .entity:hover h3 {
@@ -381,6 +383,11 @@ h1 {
         #blog h2 {
           font-size: var(--large-text);
         }
+
+
+                #program-info > span.Session{
+                  display: none
+                }
 
 
 h2, .mobile-menu-content h2 a {
@@ -1238,6 +1245,21 @@ select#allSections:focus {
       .grid-2.featured h2, .grid-1.featured h2 {
         font-size: var(--large-text);
         font-weight: lighter !important;
+      }
+
+      .grid-1.featured.showcase {
+        min-height: 0px !important
+      }
+
+      .grid-1.featured.showcase h2 {
+        font-size: var(--medium-text);
+        font-weight: lighter !important;
+      }
+
+      .showcase-list {
+        display: flex;
+        gap: calc(var(--body-margin)/2);
+        flex-direction: column;
       }
 
       .grid-2.featured h4, .grid-1.featured h4 {
@@ -2620,6 +2642,9 @@ section.stacked-4 {
   display: none;
 }
 
+#class.sessionEnded .hide-sessionEnded {
+  display: none;
+}
 
 .selectors.regDone .hide-regDone {
   display: none;
@@ -3015,6 +3040,7 @@ video {
         .project h6 {
           font-size: var(--small-text) !important;
         }
+
 
         h4.breadcrumb {
           margin: calc(var(--body-margin) * 4) 0 calc(var(--body-margin) * 4) 0;

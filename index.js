@@ -476,9 +476,12 @@ function parseClassData(apiResponse){
   returnObj.name=classInfo.Name.title[0].plain_text
   returnObj.subtitle=classInfo["Subtitle"].rich_text[0]?.plain_text
   returnObj.teachers=parseTeachers(classInfo)
+  returnObj.classBlog=parseClassBlog(classInfo)
+  returnObj.classProjects=parseClassProjects(classInfo)
   returnObj.thumbnailImage=parseNotionData(classInfo["Thumbnail Image"])?.[0]
   returnObj.bannerImage=parseNotionData(classInfo["Banner Image"])?.[0]
   returnObj.promoImage=parseNotionData(classInfo["Promo Images"])?.[0]
+  returnObj.promoGraphic=parseNotionData(classInfo["Promo Graphic"])?.[0]
   returnObj.promoImages=parseNotionData(classInfo["Promo Images"])
   returnObj.sessionImage=parseNotionData(classInfo["Session Images"])?.[0]
   returnObj.sessionImages=parseNotionData(classInfo["Session Images"])
@@ -499,12 +502,18 @@ function parseClassData(apiResponse){
   returnObj.launchDate=prettyDateString(classInfo["Launch Date"]?.date?.start)
   returnObj.applicationsOpen = today <= new Date(returnObj.applicationEndDate)
   returnObj.registrationDone = today >= new Date(returnObj.notifyDate)
+  returnObj.sessionEnded = today >= new Date(returnObj.endDate)
   returnObj.live = today >= new Date(returnObj.launchDate)
   returnObj.applicationLink=classInfo["Application URL"]?.url
   returnObj.description=classInfo["Short Description"]?.rich_text[0]?.plain_text
+  returnObj.endDescription=classInfo["Session End Description"]?.rich_text[0]?.plain_text
   returnObj.active=classInfo["Active"]?.formula.boolean
   returnObj.url=classInfo["Webpage URL"]?.url
-  returnObj.session=parseRollup(classInfo["Session Name"])[0]?.plain_text,
+  // returnObj.project=parseRollup(classInfo["Project-Names"])[0]?.plain_text
+  // returnObj.projectSlug=parseRollup(classInfo["Project-Slugs"])[0]?.plain_text
+  // returnObj.blogPost=parseRollup(classInfo["Blog-Names"])[0]?.plain_text
+  // returnObj.blogSlug=parseRollup(classInfo["Blog-Slugs"])[0]?.plain_text
+  returnObj.session=parseRollup(classInfo["Session Name"])[0]?.plain_text
   returnObj.notifyDate=prettyDateString(classInfo["Notification Date"]?.date?.start)
   return returnObj
 }
@@ -531,6 +540,48 @@ function parseTeachers(classInfo){
   // console.log(teachers)
   return teachers;
 }
+function parseClassProjects(classInfo){
+  const projectNames = parseRollup(classInfo["Project Names"])
+  const projectSlugs = parseRollup(classInfo["Project Slugs"])
+  const projectThumb = parseRollup(classInfo["Project Thumbnails"])
+  const classProjects = [];
+
+  if(projectNames) {
+      for(let i = 0; i < projectNames.length; i++){
+        classProjects.push({
+          name: projectNames[i],
+          slug: projectSlugs[i],
+          image: projectThumb[i],
+        })
+      }
+  }
+
+  return classProjects
+}
+
+
+function parseClassBlog(classInfo){
+  const blogNames = parseRollup(classInfo["Blog Names"])
+  const blogSlugs = parseRollup(classInfo["Blog Slugs"])
+  const blogThumb = parseRollup(classInfo["Blog Thumbnails"])
+  const blogStatus = parseRollup(classInfo["Blog Statuses"])
+  const classBlog = [];
+
+  if(blogNames) {
+      for(let i = 0; i < blogNames.length; i++){
+        classBlog.push({
+          name: blogNames[i],
+          slug: blogSlugs[i],
+          image: blogThumb[i],
+          status: blogStatus[i],
+        })
+      }
+  }
+
+  return classBlog
+}
+
+
 
 function cleanPersonData(personArray){
   for(let i = 0; i < personArray.length; i++){
