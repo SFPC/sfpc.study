@@ -199,7 +199,9 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
     font-display: block;
 }
 
-
+         #session-name a {
+          text-decoration: none !important
+        }
         .sfpc .title, .spfc.featured .title, #tag.sfpc {
           font-family: var(--main-title-font) !important;
           font-weight: lighter;
@@ -2612,6 +2614,15 @@ section.stacked-4 {
 
 #class.afterClass .show-afterClass, #class.afterClass .show-duringClass {
   display: inherit !important;
+}
+
+#class.regDone .hide-regDone {
+  display: none;
+}
+
+
+.selectors.regDone .hide-regDone {
+  display: none;
 }
 
 

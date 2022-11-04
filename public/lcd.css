@@ -137,6 +137,7 @@ select#allSections {
 
       .sfpc .block-text {
         background-color: var(--background);
+        color: var(--text-link);
       }
 
 
@@ -343,7 +344,8 @@ select#allSections {
       }
 
       .winter-23 .block-text {
-        background-color: var(--winter-23-link);
+        background-color: var(--winter-23-background);
+        color: var(--winter-23-link);
       }
 
 
@@ -550,7 +552,8 @@ select#allSections {
       }
 
       .fall-22 .block-text {
-        background-color: var(--fall-22-link);
+        background-color: var(--fall-22-background);
+      color: var(--fall-22-link) ;
       }
 
 
@@ -790,6 +793,8 @@ select#allSections {
      }
 
 
+
+
      .sex-ed .break {
        border-bottom: 1px dashed var(--sex-ed-text);
      }
@@ -973,6 +978,8 @@ select#allSections {
 
 
 
+
+
       .networked-performance.grid-inner, .networked-performance .grid-inner {
         border: 2px dotted var(--networked-performance-text) !important;
         color: var(--networked-performance-link) !important;
@@ -1090,7 +1097,7 @@ select#allSections {
   background-color: var(--summer-22-background)  !important;
   color: var(--summer-22-text) !important;
   box-sizing: border-box !important;
-  border-color: var(--summer-22-text) !important;
+  /* border-color: var(--summer-22-text) !important; */
   text-shadow: none !important;
 }
 
@@ -1152,6 +1159,7 @@ select#allSections {
 
       .summer-22 .block-text {
         background-color: var(--summer-22-background);
+        color: var(--summer-22-link);
       }
 
 
@@ -1316,6 +1324,7 @@ select#allSections {
 
       .spring-22 .block-text {
         background-color: var(--spring-22-background);
+        color: var(--spring-22-link);
       }
 
 

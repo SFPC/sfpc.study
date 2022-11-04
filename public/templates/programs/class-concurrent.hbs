@@ -51,22 +51,22 @@
 
   <div id="shell" class="shell shell-fullsize about {{"Session Slug"}} sfpc">
 
-    <div class="selectors">
+    <div class="selectors {{#if registrationDone}}regDone{{/if}}">
       <select id="allSections" onchange="sectionJump(this.value)" class="{{"Session Slug"}} hide-content">
         <option value="class">Jump to section...</option>
         <option value="section-class-details">ABOUT </option>
         <option value="section-class-details">--Details & Description</option>
         <option value="section-course-of-study">--Course of Study</option>
         <option value="section-expectations">--Expectations</option>
-        <option value="section-teachers">--Teachers</option>
         <option value="section-is-this-class-for-me">--Is this for me?</option>
-        <option value="section-accessibility">--Accessibility</option>
-        <option value="section-apply">APPLY NOW</option>
-        <option value="section-cost">FINANCES</option>
-        <option value="section-cost">--Cost of Attendence</option>
-        <option value="section-scholarships">--Scholarships</option>
-        <option value="section-donate">--Donate to SFPC</option>
-        <option value="section-refund">--Refund Policy</option>
+        <option value="section-teachers">--Teachers{{#if guests}} & Guests{{/if}}</option>
+        <option value="section-accessibility" class="hide-regDone">--Accessibility</option>
+        <option value="section-apply" class="hide-regDone">APPLY NOW</option>
+        <option value="section-cost" class="hide-regDone">FINANCES</option>
+        <option value="section-cost" class="hide-regDone">--Cost of Attendence</option>
+        <option value="section-scholarships" class="hide-regDone">--Scholarships</option>
+        <option value="section-donate" class="hide-regDone">--Donate to SFPC</option>
+        <option value="section-refund" class="hide-regDone">--Refund Policy</option>
         <option value="section-classes">OPPORTUNITIES</option>
       </select>
     </div>
@@ -111,7 +111,7 @@
 
 
     <div id="class"
-      class=" hide-content {{#if applicationsOpen}}appsOpen{{else}}appsClosed{{/if}} beforeClass shell-content">
+      class=" hide-content {{#if applicationsOpen}}appsOpen{{else}}appsClosed{{/if}}  {{#if registrationDone}}regDone{{/if}}  shell-content">
 
 
       <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
@@ -176,8 +176,10 @@
           </div>
           <div class="details">
             <div class="labels">Cost </div>
-            <div class="labels-info"><span id="cost">${{cost}}</span> Scholarships available <a
-                class="more-about-cost">learn more...</a></div>
+            <div class="labels-info"><span id="cost">${{cost}}</span> Scholarships available
+              {{#if registrationDone}}<a href="/about-scholarships.html">{{else}}<a class="more-about-cost">{{/if}}
+
+                learn more...</a></div>
           </div>
           <div class="details">
             <div class="labels">Deadline </div>
@@ -220,6 +222,14 @@
           <main class="grid-item main">
             <div class="carousel-items items carousel-content participate-content">
               <div id="carousel-images" class="class-images after-launch">
+
+                {{#if sessionImages.[1]}}
+                {{#each sessionImages}}
+                <figure class="item participate-img"><img src="{{this}}">
+                </figure>
+                {{/each}}
+                {{/if}}
+
                 {{#each promoImages}}
                 <figure class="item participate-img"><img src="{{this}}">
                 </figure>
@@ -236,17 +246,20 @@
       </div>
 
 
-            <section id="section-description">
-              <div class="grid-2">
-                <p>
-                  <i>Images courtesy of teachers{{#if guests}} and guests{{/if}}.</i>
-                </p>
-              </div>
+      <section class="section-testimonials">
+           <div class="grid-2">
+             <p>
+               <span  class="text-on-bg">
+               <i>Images courtesy of teachers{{#if guests}}{{#if registrationDone}}, class documentarians{{/if}} and guests{{else}}{{#if registrationDone}} and class documentarians{{/if}}{{/if}}.</i>
+             </span>
+             </p>
+           </div>
 
-              <div class="grid-2">
+           <div class="grid-2">
+           </div>
+         </section>
 
-              </div>
-            </section>
+
 
       {{/if}}
 

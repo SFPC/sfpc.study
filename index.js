@@ -495,9 +495,11 @@ function parseClassData(apiResponse){
   today = new Date(prettyDateString(today.toISOString().slice(0, 10)))
   returnObj.comingSoon = today <= new Date(returnObj.launchDate)
   returnObj.applicationEndDate=prettyDateString(classInfo["Application End Date"]?.date?.start)
+  returnObj.notifyDate=prettyDateString(classInfo["Notification Date"]?.date?.start)
   returnObj.launchDate=prettyDateString(classInfo["Launch Date"]?.date?.start)
   returnObj.applicationsOpen = today <= new Date(returnObj.applicationEndDate)
-  returnObj.live = today <= new Date(returnObj.launchDate)
+  returnObj.registrationDone = today >= new Date(returnObj.notifyDate)
+  returnObj.live = today >= new Date(returnObj.launchDate)
   returnObj.applicationLink=classInfo["Application URL"]?.url
   returnObj.description=classInfo["Short Description"]?.rich_text[0]?.plain_text
   returnObj.active=classInfo["Active"]?.formula.boolean
