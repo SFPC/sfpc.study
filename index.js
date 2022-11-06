@@ -185,6 +185,31 @@ app.get("/sessions", async (req,res) => {
 
 
 
+app.get("/events", async (req,res) => {
+  const response = await getDatabaseEntries("10c62665c6ca4383bbdc12788c45df14", [{property:"Date", direction:"descending"}])
+  const projectData = response.map((project) => {
+    console.log(project)
+    return parseNotionPage(project)
+  })
+  console.log(projectData)
+  // let pageContent = getPageContent()
+  res.render("programs/events", {projects: projectData})
+})
+
+app.get("/events/:slug", async (req,res) => {
+  //filter by slug here
+  console.log(req.params.slug)
+  const response = await getDatabaseEntry("10c62665c6ca4383bbdc12788c45df14", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  console.log(response)
+  if(response){
+    const projectData = parseNotionPage(response)
+    console.log(projectData)
+    res.render("programs/eventPage", projectData)
+  }
+})
+
+
+
 app.get("/participate", async (req,res) => {
   const response = await getDatabaseEntries("ba1f9876ad3e4810880d4802d3d70d6f", [{property:"Date", direction:"descending"}])
   const projectData = response.map((project) => {
@@ -264,17 +289,7 @@ app.get("/projects/:slug", async (req,res) => {
 })
 
 
-app.get("/events/:slug", async (req,res) => {
-  //filter by slug here
-  console.log(req.params.slug)
-  const response = await getDatabaseEntry("713f24806a524c5e892971e4fbf5c9dd", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
-  console.log(response)
-  if(response){
-    const projectData = parseNotionPage(response)
-    console.log(projectData)
-    res.render("projects/projectPage", projectData)
-  }
-})
+
 
 
 
@@ -509,6 +524,7 @@ function parseClassData(apiResponse){
   returnObj.endDescription=classInfo["Session End Description"]?.rich_text[0]?.plain_text
   returnObj.active=classInfo["Active"]?.formula.boolean
   returnObj.url=classInfo["Webpage URL"]?.url
+  returnObj.published=parseRollup(classInfo["Published"])[0]?.rich_text[0]?.plain_text
   // returnObj.project=parseRollup(classInfo["Project-Names"])[0]?.plain_text
   // returnObj.projectSlug=parseRollup(classInfo["Project-Slugs"])[0]?.plain_text
   // returnObj.blogPost=parseRollup(classInfo["Blog-Names"])[0]?.plain_text

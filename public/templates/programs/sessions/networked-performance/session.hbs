@@ -61,8 +61,9 @@
       <select id="allSections" onchange="sectionJump(this.value)" class="{{"Session Slug"}} hide-content">
         <option value="class">Jump to section...</option>
         <option value="section-class-details">ABOUT </option>
-        {{#if classBlog}}<option value="section-showcase">--Outcomes </option>{{/if}}
         <option value="section-class-details">--Details & Description</option>
+        {{#if classBlog}}<option value="section-showcase">--Outcomes </option>{{else}}{{#if classProjects}}{{/if}}{{/if}}
+        {{#if classProjects}}<option value="section-showcase">--Outcomes </option>{{else}}{{#if classBlog}}{{/if}}{{/if}}
         <option value="section-course-of-study">--Course of Study</option>
         <option value="section-expectations">--Expectations</option>
         <option value="section-is-this-class-for-me">--Is this for me?</option>

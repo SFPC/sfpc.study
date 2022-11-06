@@ -1401,7 +1401,7 @@ h4.breadcrumb  a:not:last-child {
         }
 
 
-        .breadcrumb .blog-tag a:hover. .breadcrumb a.blog-tag-link00 {
+        .breadcrumb .blog-tag a:hover. .breadcrumb a.blog-tag-link {
           text-decoration: none !important;
         }
 
@@ -1410,7 +1410,7 @@ h4.breadcrumb  a:not:last-child {
           font: inherit;
         }
 
-        .projects-list .blog-tag::before {
+        .projects-list .blog-tag::before, .event .blog-tag::before {
           content: '' !important;
         }
 

@@ -85,10 +85,10 @@
 
 
     <div class="selectors">
-      <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
+      <select id="allSections" onchange="if (this.value) window.location.href=this.value" class=" hide-content">
         <option value="/participate">All Programs</option>
-        <option value="/classes" selected>Classes</option>
         <option value="/sessions">Sessions</option>
+        <option value="/classes" selected>Classes</option>
         <option value="/events">Events</option>
       </select>
       </div>
@@ -131,7 +131,7 @@
 
 {{#each projects}}
 
-  {{#if [Session Published]}}
+  {{#if this.[Published]}}
 
 
 

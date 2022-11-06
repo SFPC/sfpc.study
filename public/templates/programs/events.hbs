@@ -67,20 +67,20 @@
 
     <div class="selectors">
       <select id="allSections" onchange="if (this.value) window.location.href=this.value" class=" hide-content">
-        <option value="/participate" selected>All Programs</option>
+        <option value="/participate">All Programs</option>
         <option value="/sessions">Sessions</option>
         <option value="/classes">Classes</option>
-        <option value="/events">Events</option>
+        <option value="/events" selected>Events</option>
       </select>
 
-      <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
+      <!-- <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
         <option value="">Jump to section...</option>
         <option value="current">Current & Upcoming</option>
 
         <option value="2022">2022</option>
         <option value="2021">2021</option>
         <option value="2020">2020</option>
-      </select>
+      </select> -->
     </div>
 
 
@@ -92,76 +92,50 @@
 
       <section>
         <div class="grid-2">
-          <h1>Current & Upcoming</h1>
+          <h1>All Events</h1>
         </div>
 
         <div class="grid-2">
 
-          <p>
-            Our school supports interdisciplinary study in art, code, hardware and critical theory through events,
-            classes, workshops, projects and residencies.
-            <!-- We are still working on archiving all our past programs. View our old website <a href="">here</a>. -->
-          </p>
-          <p>
-            <a href="about-participating.html">more about what we look for in participants...</a>
-          </p>
 
         </div>
       </section>
 
-      {{> winter23classBlock}}
-
-
-      <div class="break"></div>
+      <div class="break-noline"></div>
 
       <section id="section-projects" class="stacked stacked-4">
 
         <div class="grid-1 participate">
 
-
-
-
           {{#each projects}}
 
 
           <div id="{{this.[Website-Slug]}}"
-            class="grid-4 featured {{this.[Program-Type]}} {{this.[Session Slug]}}" data-location="">
+            class="grid-4 featured {{this.[Website-Slug]}}" data-location="
+            ">
             <div class="featured-text">
-              <img src="{{this.[Session-Promo-Image]}}">
+              <img src="{{this.[Promo Image]}}">
               <div class="top">
-                <h4 class="type type-list-comma"><a href="/projects/{{this.[Website-Slug]}}">{{#each
-                    this.[Program-Type]}}{{this}}{{/each}}</a></h4>
+                <h4 class="type type-list-comma"><a href="/events/{{this.[Website-Slug]}}">event</a></h4>
                 <h2 class="title">{{this.Name}}</h2>
                 <!-- <h6>{{this.[Short Description]}}</h6> -->
               </div>
               <div class="bottom">
                 <h4 class="details">
-                  {{this.[Session Date].start}}
-
-                  {{this.[Dates].start}}
-                  {{#if [Dates].end}}— {{[Dates].end}}{{/if}}
-
+                  {{this.[Date].start}}
+                  {{#if [Date].end}}— {{[Date].end}}{{/if}}
                 </h4>
                 {{#if Time}}
                 <h4 class="details">
                   {{this.[Time]}}
                 </h4>
                 {{/if}}
-                {{#if Session-Location}}
+                {{#if Location}}
                 <h4 class="details">
-                  {{this.[Session-Location]}}
+                  {{this.[Location]}}
                 </h4>
                 {{/if}}
-                {{#if Number-of-Classes}}
-                <h4 class="details">
-                  {{this.[Number-of-Classes]}} classes
-                </h4>
-                {{/if}}
-                {{#if Application-Status}}
-                <h4 class="details">
-                 {{this.[Application-Status]}}
-                </h4>
-                  {{/if}}
+
 
                  </div>
             </div>
