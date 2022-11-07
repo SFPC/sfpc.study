@@ -28,34 +28,34 @@ app.get("/pageContent/:id", async (req, res) => {
 })
 
 
-app.get("/participate/winter-23", async (req, res) => {
-  // TODO: load session page
-  res.render("programs/sessions/winter-23/session")
-})
+// app.get("/participate/winter-23", async (req, res) => {
+//   // TODO: load session page
+//   res.render("programs/sessions/winter-23/session")
+// })
 
 
-app.get("/participate/spring-22", async (req, res) => {
-  // TODO: load session page
-  res.render("programs/sessions/spring-22/session")
-})
+// app.get("/participate/spring-22", async (req, res) => {
+//   // TODO: load session page
+//   res.render("programs/sessions/spring-22/session")
+// })
 
-app.get("/sessions/spring-22", (req,res) => {
-  res.render("programs/sessions/spring-22/session")
-})
+// app.get("/sessions/spring-22", (req,res) => {
+//   res.render("programs/sessions/spring-22/session")
+// })
 
+//
+// app.get("/participate/summer-22", async (req, res) => {
+//   // TODO: load session page
+//   res.render("programs/sessions/summer-22/session")
+//
+// })
 
-app.get("/participate/summer-22", async (req, res) => {
-  // TODO: load session page
-  res.render("programs/sessions/summer-22/session")
-
-})
-
-
-app.get("/participate/fall-22", async (req, res) => {
-  // TODO: load session page
-  res.render("programs/sessions/fall-22/session")
-
-})
+//
+// app.get("/participate/fall-22", async (req, res) => {
+//   // TODO: load session page
+//   res.render("programs/sessions/fall-22/session")
+//
+// })
 
 
 
@@ -238,18 +238,19 @@ app.get("/sessions/:slug", async (req, res) => {
     if(!classData) return
     const response = await prepareClassData(classData, req.params.slug)
     console.log(response)
-    res.render("programs/sessions/"+req.params.slug+"/session", response)
+    res.render("programs/session-special", response)
     // res.render("class-concurrent", response);
   }
   else if(sessionType == "Intensive" && sessionType != "External"){
     const response = await prepareSessionData(sessionData, req.params.slug)
     console.log("Intensive Session data", response)
-    res.render("programs/embed", response)
+    res.render("programs/session-intensive", response)
   }
   else if(sessionType == "Concurrent" && sessionType != "External"){
     const response = await prepareSessionData(sessionData, req.params.slug)
     console.log("Concurrent Session data", response)
-    res.render("programs/sessions/"+req.params.slug+"/session", response)
+    // res.render("programs/sessions/"+req.params.slug+"/session", response)
+    res.render("programs/session-concurrent", response)
   }
 
 })
@@ -396,25 +397,36 @@ async function prepareClassData(classData, classSlug){
   let organizers = []
   let teachers = []
   let guests = []
+  let organizerTeachers = []
+  let justTeachers = []
+  let justOrganizers = []
+  let hasOrganizerTeachers
+
   people.map((person) => {
     const personData = parseNotionPage(person)
     if(typeof personData["Classes-Teacher"]  == 'string') personData["Classes-Teacher"] = [personData["Classes-Teacher"]]
       if(personData["Classes-Teacher"] && personData["Classes-Teacher"].includes(classSlug)){
-        if(personData["Classes-Organizer"] && personData["Classes-Organizer"].includes(classSlug))
+        if(personData["Classes-Organizer"] && personData["Classes-Organizer"].includes(classSlug)) {
           personData.role = "organizer and teacher"
-        else
+          hasOrganizerTeachers = true
+          organizerTeachers.unshift(personData)
+        } else {
           personData.role = "teacher"
+          justTeachers.unshift(personData)
+        }
         teachers.unshift(personData)
       }
-      else if(personData["Classes-Guest"] && personData["Classes-Guest"].includes(classSlug)){
+      if(personData["Classes-Guest"] && personData["Classes-Guest"].includes(classSlug)){
         personData.role = "guest"
         guests.unshift(personData)
       }
-      else if(personData["Classes-Organizer"] && personData["Classes-Organizer"].includes(classSlug)){
-        if(personData["Classes-Teacher"] && personData["Classes-Teacher"].includes(classSlug))
+      if(personData["Classes-Organizer"] && personData["Classes-Organizer"].includes(classSlug)){
+        if(personData["Classes-Teacher"] && personData["Classes-Teacher"].includes(classSlug)) {
           personData.role = "organizer and teacher"
-        else
+        } else {
           personData.role = "organizer"
+          justOrganizers.unshift(personData)
+        }
         organizers.unshift(personData)
       }
   })
@@ -426,11 +438,24 @@ async function prepareClassData(classData, classSlug){
   response.guests = cleanPersonData(guests);
   response.teachers = cleanPersonData(teachers);
   response.organizers = cleanPersonData(organizers);
+  response.organizerTeachers = cleanPersonData(organizerTeachers);
+  response.justTeachers = cleanPersonData(justTeachers);
+  response.justOrganizers = cleanPersonData(justOrganizers);
   return response
 }
 
 async function prepareSessionData(sessionData, session){
-  let response = parseNotionPage(sessionData)
+  const fullPageContent = await getBlocks(sessionData.id);
+  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
+  const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
+
+
+  // let response = parseNotionPage(sessionData)
+
+  let response = parseSessionData(sessionData)
+  response.pageContent =  parsePageContentIntoKeyedObject(webContent);
+
+
   const classData = await getDatabaseEntries("57406c3b209e4bfba3953de6328086ac", [], {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": session } }}})
   response.classes = parseNotionPageArray(classData);
 
@@ -455,11 +480,11 @@ async function prepareSessionData(sessionData, session){
       personData.role = "teacher"
       teachers.unshift(personData)
     }
-    else if(personData["Sessions-Organizer"] && personData["Sessions-Organizer"].includes(session)){
+    if(personData["Sessions-Organizer"] && personData["Sessions-Organizer"].includes(session)){
       personData.role = "organizer"
       organizers.unshift(personData)
     }
-    else if(personData["Sessions-Guest"] && personData["Sessions-Guest"].includes(session)){
+    if(personData["Sessions-Guest"] && personData["Sessions-Guest"].includes(session)){
       personData.role = "guest teacher"
       guests.unshift(personData)
     }
@@ -469,6 +494,9 @@ async function prepareSessionData(sessionData, session){
   response.teachers = cleanPersonData(teachers);
   return response
 }
+
+
+
 async function getPageContent(notionId, contentToggleName="web content"){
   const fullPageContent = await getBlocks(notionId);
   console.log(contentToggleName)
@@ -483,16 +511,56 @@ async function getPageContent(notionId, contentToggleName="web content"){
 // Notion Parsing Functions Below
 //
 
+
+function parseSessionData(apiResponse){
+  const sessionInfo = apiResponse.properties;
+  let returnObj = parseNotionPage(apiResponse);
+  //this is the data that will be passes to the class template
+
+
+  returnObj.classBlock=parseClassBlock(sessionInfo)
+  returnObj.cost=sessionInfo["Cost"]?.number
+  returnObj.startDate=prettyDateString(sessionInfo["Dates"]?.date?.start)
+  returnObj.endDate=prettyDateString(sessionInfo["Dates"]?.date?.end)
+  let today = new Date()
+  today.setTime(today.getTime() - 600 * 60 * 1000)
+  today = new Date(prettyDateString(today.toISOString().slice(0, 10)))
+  returnObj.comingSoon = today <= new Date(returnObj.launchDate)
+  returnObj.applicationEndDate=prettyDateString(sessionInfo["Application End Date"]?.date?.start)
+  returnObj.notifyDate=prettyDateString(sessionInfo["Notification Date"]?.date?.start)
+  returnObj.launchDate=prettyDateString(sessionInfo["Launch Date"]?.date?.start)
+  returnObj.applicationsOpen = today <= new Date(returnObj.applicationEndDate)
+  returnObj.registrationDone = today >= new Date(returnObj.notifyDate)
+  returnObj.sessionEnded = today >= new Date(returnObj.endDate)
+  returnObj.live = today >= new Date(returnObj.launchDate)
+  returnObj.classCount=sessionInfo["Number-Classes"].number
+  returnObj.appStatus=sessionInfo["Application Status"]?.multi_select[0]?.name
+
+  return returnObj
+}
+
+
 function parseClassData(apiResponse){
   const classInfo = apiResponse.properties;
   let returnObj = parseNotionPage(apiResponse);
   //this is the data that will be passes to the class template
 
+  let hasShowcase;
+  const projectNames = parseRollup(classInfo["Project Names"])
+  const blogNames = parseRollup(classInfo["Blog Names"])
+  const eventNames = parseRollup(classInfo["Event Names"])
+
+  if (projectNames || blogNames || eventNames ) {
+    hasShowcase = true;
+  }
+
+  returnObj.showcase = hasShowcase
   returnObj.name=classInfo.Name.title[0].plain_text
   returnObj.subtitle=classInfo["Subtitle"].rich_text[0]?.plain_text
   returnObj.teachers=parseTeachers(classInfo)
   returnObj.classBlog=parseClassBlog(classInfo)
   returnObj.classProjects=parseClassProjects(classInfo)
+  returnObj.classEvents=parseClassEvents(classInfo)
   returnObj.thumbnailImage=parseNotionData(classInfo["Thumbnail Image"])?.[0]
   returnObj.bannerImage=parseNotionData(classInfo["Banner Image"])?.[0]
   returnObj.promoImage=parseNotionData(classInfo["Promo Images"])?.[0]
@@ -525,14 +593,13 @@ function parseClassData(apiResponse){
   returnObj.active=classInfo["Active"]?.formula.boolean
   returnObj.url=classInfo["Webpage URL"]?.url
   returnObj.published=parseRollup(classInfo["Published"])[0]?.rich_text[0]?.plain_text
-  // returnObj.project=parseRollup(classInfo["Project-Names"])[0]?.plain_text
-  // returnObj.projectSlug=parseRollup(classInfo["Project-Slugs"])[0]?.plain_text
-  // returnObj.blogPost=parseRollup(classInfo["Blog-Names"])[0]?.plain_text
-  // returnObj.blogSlug=parseRollup(classInfo["Blog-Slugs"])[0]?.plain_text
   returnObj.session=parseRollup(classInfo["Session Name"])[0]?.plain_text
   returnObj.notifyDate=prettyDateString(classInfo["Notification Date"]?.date?.start)
+
   return returnObj
 }
+
+
 function parseTeachers(classInfo){
   const teacherNames = parseRollup(classInfo["Teacher Names"])
   const teacherBios = parseRollup(classInfo["Teacher Bios"])
@@ -563,6 +630,7 @@ function parseClassProjects(classInfo){
   const classProjects = [];
 
   if(projectNames) {
+    hasShowcase = true;
       for(let i = 0; i < projectNames.length; i++){
         classProjects.push({
           name: projectNames[i],
@@ -584,6 +652,7 @@ function parseClassBlog(classInfo){
   const classBlog = [];
 
   if(blogNames) {
+    hasShowcase = true;
       for(let i = 0; i < blogNames.length; i++){
         classBlog.push({
           name: blogNames[i],
@@ -595,6 +664,55 @@ function parseClassBlog(classInfo){
   }
 
   return classBlog
+}
+
+
+function parseClassEvents(classInfo){
+  const eventNames = parseRollup(classInfo["Event Names"])
+  const eventSlugs = parseRollup(classInfo["Event Slugs"])
+  const eventThumb = parseRollup(classInfo["Event Thumbnails"])
+  const classEvents = [];
+
+  if(eventNames) {
+    hasShowcase = true;
+      for(let i = 0; i < eventNames.length; i++){
+        classEvents.push({
+          name: eventNames[i],
+          slug: eventSlugs[i],
+          image: eventThumb[i],
+        })
+      }
+  }
+
+  return classEvents
+}
+
+
+
+function parseClassBlock(classInfo){
+  const classNames = parseRollup(classInfo["Website-Classes"])
+  const classSlugs = parseRollup(classInfo["Class-Slugs"])
+  const classThumb = parseRollup(classInfo["Class-Thumbnails"])
+  const classLocation = parseRollup(classInfo["Class-Locations"])
+  const classDates = parseRollup(classInfo["Class-Dates"])
+  const classTeachers = parseRollup(classInfo["Class-Teachers"])
+
+  const classBlock = [];
+
+  if(classNames) {
+      for(let i = 0; i < classNames.length; i++){
+        classBlock.push({
+          name: classNames[i],
+          slug: classSlugs[i],
+          image: classThumb[i],
+          location: classLocation[i],
+          date: classDates[i],
+          teachers: classTeachers[i],
+        })
+      }
+  }
+
+  return classBlock
 }
 
 

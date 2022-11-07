@@ -62,8 +62,7 @@
         <option value="class">Jump to section...</option>
         <option value="section-class-details">ABOUT </option>
         <option value="section-class-details">--Details & Description</option>
-        {{#if classBlog}}<option value="section-showcase">--Outcomes </option>{{else}}{{#if classProjects}}{{/if}}{{/if}}
-        {{#if classProjects}}<option value="section-showcase">--Outcomes </option>{{else}}{{#if classBlog}}{{/if}}{{/if}}
+        {{#if showcase}}<option value="section-showcase">--Outcomes </option>{{else}}{{/if}}
         <option value="section-course-of-study">--Course of Study</option>
         <option value="section-expectations">--Expectations</option>
         <option value="section-is-this-class-for-me">--Is this for me?</option>
@@ -139,34 +138,30 @@
           </span>
           <BR><BR>
           <span id="session-name">{{"Session Name"}}</span> {{#if sessionEnded}}was{{else}}is{{/if}}
-          organized and taught by
-          <!-- {{#each Organizers}}
-          {{#if @last}}and{{/if}}
-          <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
+          organized by
+          {{#if organizerTeachers}}
+              {{#each organizerTeachers}}
+              {{#if @last}}{{#if @first}}{{else}} and{{/if}}{{/if}}
+              <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"> </span>
 
-          <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">
-              {{this.Bio}} </span></span>{{#if @last}}.{{/if}}
-          {{/each}} -->
+              <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">{{this.Bio}}</span></span>{{/each}}{{/if}}{{#if justOrganizers}}{{#if organizerTeachers}} with {{/if}}
+              {{#each justOrganizers}}{{#if @last}}{{#if @first}}{{else}} and{{/if}}{{/if}}
+              <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"> </span> <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">{{this.Bio}}</span></span>{{/each}}{{/if}}.
 
 
-          <!-- It includes classes with -->
+          It include{{#if sessionEnded}}d{{else}}s{{/if}} classes and workshops taught by
           {{#each teachers}}
-          {{#if @last}}and{{/if}}
+          {{#if @last}}{{#if @first}}{{else}} and{{/if}}{{/if}}
           <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
 
-          <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">
-              {{this.Bio}} </span></span>{{#if @last}}.{{/if}}
-          {{/each}}
+          <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">{{this.Bio}}</span></span>{{/each}}
 
-          Guests include{{#if sessionEnded}}d{{else}}{{/if}}
+          {{#if guests}}and guests
           {{#each guests}}
-          {{#if @last}}and{{/if}}
+          {{#if @last}}{{#if @first}}{{else}}and{{/if}}{{/if}}
           <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
-
           <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">
-              {{this.Bio}} </span></span>{{#if @last}}.{{/if}}
-          {{/each}}
-
+          {{this.Bio}}</span></span>{{/each}}{{else}}{{/if}}.
 
 
           <!-- <BR><BR> -->
@@ -201,7 +196,7 @@
           <div class="details">
             <div class="labels">Date </div>
             <div class="labels-info">
-              <span id="date">{{startDate}} to {{endDate}}</span> (<span id="number-classes">{{numberOfClasses}}</span>
+              <span id="date">{{startDate}} to {{endDate}}</span>{{#if numberOfClasses}}(<span id="number-classes">{{numberOfClasses}}</span> classes){{/if}}
               classes)
             </div>
           </div>
@@ -410,7 +405,7 @@
 
 
 
-      {{#if classBlog}}
+      {{#if showcase}}
 
        <div class="break"></div>
 
@@ -501,14 +496,18 @@
 
       <section id="section-teachers">
         <div class="grid-2">
-          <h1>Meet the Teachers {{#if guests}}& Guests{{/if}}</h1>
+          <h1>Meet the {{#if organizers}}Organizers{{#if teachers}}{{#if guests}},{{else}} & {{/if}}{{/if}}{{/if}} Teachers {{#if guests}}& Guests{{/if}}</h1>
         </div>
 
         <div class="grid-2 class-details">
 
 
           <dl class="accordion">
-            {{#each teachers}}
+            {{#each organizerTeachers}}
+            {{>personCard person=this}}
+            {{/each}}
+
+            {{#each justOrganizers}}
             {{>personCard person=this}}
             {{/each}}
 

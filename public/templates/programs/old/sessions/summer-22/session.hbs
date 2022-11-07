@@ -111,9 +111,17 @@
       <section class="intro {{Website-Slug}}" id="introduction">
         <p tabindex="0" class="large">
           <span id="introduction-text">
-            {{Description}}</span>
+
+            {{#if sessionEnded}}{{#if "Session End Description"}}{{"Session End Description"}}
+                {{else}}{{Description}}
+                {{/if}}
+              {{else}}{{Description}}
+              {{/if}}
+
+
+          </span>
           <BR><BR>
-          <span id="session-name">{{Name}}</span> is organized by
+          <span id="session-name">{{Name}}</span> {{#if sessionEnded}}was{{else}}is{{/if}} organized by
           {{#each organizers}}
           {{#if @last}}and{{/if}}
           <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
@@ -123,7 +131,7 @@
           {{/each}}
 
 
-          It includes classes with
+          It include{{#if sessionEnded}}d{{else}}{{/if}} classes with
           {{#each teachers}}
           {{#if @last}}and{{/if}}
           <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
@@ -178,18 +186,18 @@
 
       <section id="classes" class="stacked stacked-4">
 
-        {{> summer22classBlock}}
 
-        {{#eq [Website-Slug].[0] "spring-22"}}
+
+        {{#eq [Website-Slug] "spring-22"}}
         {{> spring22classBlock}}
         {{/eq}}
-        {{#eq [Website-Slug].[0] "summer-22"}}
+        {{#eq [Website-Slug] "summer-22"}}
         {{> summer22classBlock}}
         {{/eq}}
-        {{#eq [Website-Slug].[0] "fall-22"}}
+        {{#eq [Website-Slug] "fall-22"}}
         {{> fall22classBlock}}
         {{/eq}}
-        {{#eq [Website-Slug].[0] "winter-23"}}
+        {{#eq [Website-Slug] "winter-23"}}
         {{> winter23classBlock}}
         {{/eq}}
 

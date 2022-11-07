@@ -126,6 +126,17 @@
               {{this.Bio}} </span></span>{{#if @last}}.{{/if}}
           {{/each}}
 
+          {{#if guests}}
+          Guests include{{#if sessionEnded}}d{{else}}{{/if}}
+          {{#each guests}}
+          <!-- {{#if @last}}and{{/if}} -->
+          <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
+
+          <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">
+              {{this.Bio}} </span></span>{{#if @last}}.{{/if}}
+          {{/each}}
+          {{/if}}
+
           <BR><BR>
             {{#if applicationsOpen}}
 

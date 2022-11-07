@@ -2289,6 +2289,11 @@ section.stacked-4 {
          /* float: left; */
        }
 
+       .showcase .left {
+         width: 87%;
+         /* float: left; */
+       }
+
        .blog-list-post .right {
          /* float: right; */
          width: 11.5%;
