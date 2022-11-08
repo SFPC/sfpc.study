@@ -550,8 +550,31 @@ function parseClassData(apiResponse){
   const blogNames = parseRollup(classInfo["Blog Names"])
   const eventNames = parseRollup(classInfo["Event Names"])
 
+  let numberProjects
+  let numberEvents
+  let numberBlogs
+
   if (projectNames || blogNames || eventNames ) {
     hasShowcase = true;
+
+    if (projectNames) {
+      numberProjects = projectNames.length
+    } else {
+      numberProjects = " "
+    }
+
+    if (eventNames) {
+      numberEvents = eventNames.length
+    } else {
+      numberEvents = " "
+    }
+
+    if (blogNames) {
+      numberBlogs = blogNames.length
+    } else {
+      numberBlogs = " "
+    }
+
   }
 
   returnObj.showcase = hasShowcase
@@ -561,6 +584,9 @@ function parseClassData(apiResponse){
   returnObj.classBlog=parseClassBlog(classInfo)
   returnObj.classProjects=parseClassProjects(classInfo)
   returnObj.classEvents=parseClassEvents(classInfo)
+  returnObj.blogCount = numberBlogs
+  returnObj.eventCount = numberEvents
+  returnObj.projectCount = numberProjects
   returnObj.thumbnailImage=parseNotionData(classInfo["Thumbnail Image"])?.[0]
   returnObj.bannerImage=parseNotionData(classInfo["Banner Image"])?.[0]
   returnObj.promoImage=parseNotionData(classInfo["Promo Images"])?.[0]
@@ -627,6 +653,7 @@ function parseClassProjects(classInfo){
   const projectNames = parseRollup(classInfo["Project Names"])
   const projectSlugs = parseRollup(classInfo["Project Slugs"])
   const projectThumb = parseRollup(classInfo["Project Thumbnails"])
+  const projectDate = parseRollup(classInfo["Project Dates"])
   const classProjects = [];
 
   if(projectNames) {
@@ -636,6 +663,7 @@ function parseClassProjects(classInfo){
           name: projectNames[i],
           slug: projectSlugs[i],
           image: projectThumb[i],
+          date: projectDate[i],
         })
       }
   }
@@ -649,6 +677,7 @@ function parseClassBlog(classInfo){
   const blogSlugs = parseRollup(classInfo["Blog Slugs"])
   const blogThumb = parseRollup(classInfo["Blog Thumbnails"])
   const blogStatus = parseRollup(classInfo["Blog Statuses"])
+  const blogDate = parseRollup(classInfo["Blog Dates"])
   const classBlog = [];
 
   if(blogNames) {
@@ -659,6 +688,7 @@ function parseClassBlog(classInfo){
           slug: blogSlugs[i],
           image: blogThumb[i],
           status: blogStatus[i],
+          date: blogDate[i],
         })
       }
   }
@@ -671,6 +701,7 @@ function parseClassEvents(classInfo){
   const eventNames = parseRollup(classInfo["Event Names"])
   const eventSlugs = parseRollup(classInfo["Event Slugs"])
   const eventThumb = parseRollup(classInfo["Event Thumbnails"])
+  const eventDate = parseRollup(classInfo["Event Dates"])
   const classEvents = [];
 
   if(eventNames) {
@@ -680,6 +711,7 @@ function parseClassEvents(classInfo){
           name: eventNames[i],
           slug: eventSlugs[i],
           image: eventThumb[i],
+          date: eventDate[i],
         })
       }
   }

@@ -1262,6 +1262,15 @@ select#allSections:focus {
         flex-direction: column;
       }
 
+      .showcase-list p {
+         margin-bottom: 0px !important;
+      }
+
+      .showcase-list.class-details {
+          line-height: 1 !important;
+      }
+
+
       .grid-2.featured h4, .grid-1.featured h4 {
         font-size: var(--medium-text);
         font-weight: lighter;

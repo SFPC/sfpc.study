@@ -1,0 +1,621 @@
+<head>
+  <title>School for Poetic Computation</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="title" content="School for Poetic Computation">
+  <meta name="description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sfpc.study/">
+  <meta property="og:title" content="School for Poetic Computation">
+  <meta property="og:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sfpc.study/">
+  <meta property="twitter:title" content="School for Poetic Computation">
+  <meta property="twitter:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <link href="/styles.css" rel="stylesheet">
+  <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
+  <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico" />
+  <link rel="stylesheet" href="https://use.typekit.net/thn3crj.css">
+
+  <script src="/jquery-3.6.0.min.js"></script>
+
+  <!-- stats -->
+  <script type="text/javascript">
+    var sc_project = 12714909;
+    var sc_invisible = 1;
+    var sc_security = "6086a46c";
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="website statistics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
+
+
+  <!-- <script data-goatcounter="https://sfpc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
+  <!-- end stats -->
+</head>
+
+
+<body>
+  {{> header}}
+  {{> footer}}
+  <div class="crt-overlay crt-overlay-fullsize"></div>
+
+  <div id="shell" class="shell shell-fullsize about {{"Session Slug"}} sex-ed">
+
+    <div class="loader-content">
+      <p tabindex="0" class="large">
+        loading<span>...</span>
+      </p>
+    </div>
+
+    <div class="selectors {{#if registrationDone}}regDone{{/if}}">
+      <select id="allSections" onchange="sectionJump(this.value)" class="{{"Session Slug"}} hide-content">
+        <option value="class">Jump to section...</option>
+        <option value="section-class-details">ABOUT </option>
+        <option value="section-class-details">--Details & Description</option>
+        {{#if showcase}}<option value="section-showcase">--Outcomes </option>{{else}}{{/if}}
+        <option value="section-course-of-study">--Course of Study</option>
+        <option value="section-expectations">--Expectations</option>
+        <option value="section-is-this-class-for-me">--Is this for me?</option>
+        <option value="section-teachers">--Teachers{{#if guests}} & Guests{{/if}}</option>
+        <option value="section-accessibility" class="hide-regDone">--Accessibility</option>
+        <option value="section-apply" class="hide-regDone">APPLY NOW</option>
+        <option value="section-cost" class="hide-regDone">FINANCES</option>
+        <option value="section-cost" class="hide-regDone">--Cost of Attendence</option>
+        <option value="section-scholarships" class="hide-regDone">--Scholarships</option>
+        <option value="section-donate" class="hide-regDone">--Donate to SFPC</option>
+        <option value="section-refund" class="hide-regDone">--Refund Policy</option>
+        <option value="section-classes">OPPORTUNITIES</option>
+      </select>
+    </div>
+
+
+
+
+
+
+    <h4 class="breadcrumb hide-content">
+      <a href="/participate.html">participate</a>
+      <span class="caret"></span>
+      <a href="">sessions</a>
+      <!-- <span class="caret"></span>
+      <a href="/sessions/{{'Session Slug'}} " id=" session-link">{{"Session Name"}}</a> -->
+    </h4>
+
+
+
+
+    <div id="class"
+      class=" hide-content {{#if applicationsOpen}}appsOpen{{else}}appsClosed{{/if}} {{#if registrationDone}}regDone{{/if}} {{#if sessionEnded}}sessionEnded{{/if}}  shell-content">
+
+
+      <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
+      <!-- <a class="fixed-apply hide-apply
+      " target="_blank" href="https://forms.gle/fiqL9h3EQ86uejqH6">Get Notified</a> -->
+
+
+
+
+            <section id="section-class-details">
+              <div class="grid-2">
+                <h1><span id="class-name">
+                     <span id="session-name">{{name}}</span>
+                  </span></h1>
+              </div>
+
+              <div class="grid-2 class-details">
+
+
+
+                <img id="class-image" class="intro-image" src="/images/sessions/sex-ed/banner.jpg">
+              </div>
+            </section>
+
+<div class="break-noline"></div>
+
+      <section class="intro {{Website-Slug}}" id="introduction">
+        <p tabindex="0" class="large">
+          <span id="introduction-text">
+
+
+            {{#if sessionEnded}}
+
+              {{#if "Session End Description"}}
+              {{{"Session End Description"}}}
+              {{else}}
+              {{{"Short Description"}}}
+              {{/if}}
+
+
+            {{else}}
+            {{{"Short Description"}}}
+            {{/if}}
+
+
+          </span>
+          <BR><BR>
+          <span id="session-name">{{"Session Name"}}</span> {{#if sessionEnded}}was{{else}}is{{/if}} organized by
+          <!-- {{#each Organizers}}
+          {{#if @last}}and{{/if}}
+          <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
+
+          <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">
+              {{this.Bio}} </span></span>{{#if @last}}.{{/if}}
+          {{/each}} -->
+
+
+          <!-- It includes classes with -->
+          {{#each teachers}}
+          {{#if @last}}and{{/if}}
+          <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
+
+          <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">
+              {{this.Bio}} </span></span>{{#if @last}}.{{/if}}
+          {{/each}}
+
+          Guests include{{#if sessionEnded}}d{{else}}{{/if}}
+          {{#each guests}}
+          {{#if @last}}
+          {{/if}}
+          <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
+
+          {{#if @last}}and
+          {{/if}}
+          <span tabindex="0" class="expand"><a class="link">  {{this.Name}}</a><span class="expanded hide-expanded">
+            {{this.Bio}}</span></span>{{/each}}.
+
+
+
+          <!-- <BR><BR> -->
+          <!-- Applications launching soon. <a href="">Get Notified</a>. -->
+
+          <!-- <a href="{{applicationLink}}" class="hide-appsClosed">Apply Now</a> -->
+        </p>
+      </section>
+
+      <div class="break-noline"></div>
+
+      <section id="section-class-details">
+        <div class="grid-2">
+          <h1><span id="class-name">
+              <!-- {{name}} -->
+              Details
+            </span></h1>
+        </div>
+
+        <div class="grid-2 class-details">
+
+
+
+          <!-- <img id="class-image" src="{{promoImage}}"> -->
+
+          <!-- <div class="details">
+            <div class="labels">Teachers</div>
+            <div class="labels-info" id="teachers-list">{{#each teachers}}{{this.Name}}{{#unless
+              @last}}, {{/unless}}{{/each}}
+            </div>
+          </div> -->
+          <div class="details">
+            <div class="labels">Date </div>
+            <div class="labels-info">
+              <span id="date">{{startDate}} to {{endDate}}</span> (<span id="number-classes">{{numberOfClasses}}</span>
+              classes)
+            </div>
+          </div>
+          <div class="details">
+            <div class="labels">Time </div>
+            <div class="labels-info" id="time">{{time}}
+            </div>
+          </div>
+          <div class="details">
+            <div class="labels">Location </div>
+            <div class="labels-info" id="location">{{location}}</div>
+          </div>
+          <div class="details">
+            <div class="labels">Cost </div>
+            <div class="labels-info"><span id="cost">${{cost}}</span> Scholarships available
+              {{#if registrationDone}}<a href="/about-scholarships.html">{{else}}<a class="more-about-cost">{{/if}}
+
+                learn more...</a></div>
+          </div>
+
+          <div class="details">
+            <div class="labels">Deadline </div>
+            <div class="labels-info">
+              <span class="">Applications {{#if applicationsOpen}}open
+                until {{else}}closed on {{/if}}</span>
+              <span id="deadline">{{applicationEndDate}}</span>
+            </div>
+          </div>
+
+          <p class="large apply hide-appsClosed">
+            <a href="{{applicationLink}}" target="_blank" id="application-link">Apply Now</a>
+          </p>
+          <!-- <p class="large apply">
+            <a href="https://forms.gle/fiqL9h3EQ86uejqH6" target="_blank" id="application-link">Get Notified</a>
+          </p> -->
+
+
+        </div>
+      </section>
+
+      <div class="break-noline"></div>
+
+
+            {{#if sessionEnded}}
+
+              {{#if sessionImages.[1]}}
+                  <div class="grid-container" id="participate-archive">
+
+                    <main class="grid-item main">
+                      <main class="grid-item main">
+                        <div class="carousel-items items carousel-content participate-content">
+                          <div id="carousel-images" class="class-images after-launch">
+
+                            {{#each sessionImages}}
+                            <figure class="item participate-img"><img src="{{this}}">
+                            </figure>
+                            {{/each}}
+                            {{#if promoGraphic}}
+                            <figure class="item participate-img"><img src="{{promoGraphic}}">
+                            </figure>
+                            {{/if}}
+
+                          </div>
+
+
+                        </div>
+
+
+                      </main>
+                    </main>
+
+                  </div>
+
+
+
+                  <section class="section-testimonials">
+                       <div class="grid-2">
+                         <p>
+                           <span  class="text-on-bg">
+                           <i>Images courtesy of teachers{{#if guests}}, participants, class documentarians and guests{{else}}, participants and class documentarians{{/if}}.</i>
+                         </span>
+                         </p>
+                       </div>
+
+                       <div class="grid-2">
+                       </div>
+                     </section>
+
+                     {{else}}
+
+                     {{#if promoImages.[1]}}
+                         <div class="grid-container" id="participate-archive">
+
+                           <main class="grid-item main">
+                             <main class="grid-item main">
+                               <div class="carousel-items items carousel-content participate-content">
+                                 <div id="carousel-images" class="class-images after-launch">
+
+                                   {{#each promoImages}}
+                                   <figure class="item participate-img"><img src="{{this}}">
+                                   </figure>
+                                   {{/each}}
+                                   {{#if promoGraphic}}
+                                   <figure class="item participate-img"><img src="{{promoGraphic}}">
+                                   </figure>
+                                   {{/if}}
+                                 </div>
+
+
+                               </div>
+
+
+                             </main>
+                           </main>
+
+                         </div>
+
+
+
+                         <section class="section-testimonials">
+                              <div class="grid-2">
+                                <p>
+                                  <span  class="text-on-bg">
+                                  <i>Images courtesy of teachers{{#if guests}} and guests{{else}}{{/if}}.</i>
+                                </span>
+                                </p>
+                              </div>
+
+                              <div class="grid-2">
+                              </div>
+                            </section>
+                         {{/if}}
+
+
+                {{/if}}
+
+
+            {{else}}
+
+
+
+                {{#if promoImages.[1]}}
+                    <div class="grid-container" id="participate-archive">
+
+                      <main class="grid-item main">
+                        <main class="grid-item main">
+                          <div class="carousel-items items carousel-content participate-content">
+                            <div id="carousel-images" class="class-images after-launch">
+
+                              {{#each promoImages}}
+                              <figure class="item participate-img"><img src="{{this}}">
+                              </figure>
+                              {{/each}}
+                              {{#if promoGraphic}}
+                              <figure class="item participate-img"><img src="{{promoGraphic}}">
+                              </figure>
+                              {{/if}}
+                            </div>
+
+
+                          </div>
+
+
+                        </main>
+                      </main>
+
+                    </div>
+
+
+
+                    <section class="section-testimonials">
+                         <div class="grid-2">
+                           <p>
+                             <span  class="text-on-bg">
+                             <i>Images courtesy of teachers{{#if guests}} and guests{{else}}{{/if}}.</i>
+                           </span>
+                           </p>
+                         </div>
+
+                         <div class="grid-2">
+                         </div>
+                       </section>
+
+
+                  {{/if}}
+
+
+
+
+            {{/if}}
+
+
+
+
+
+
+
+       {{#if showcase}}
+
+        <div class="break"></div>
+        <section id="section-showcase">
+          <div class="grid-2">
+            <h1><span id="class-name">
+                Outcomes
+              </span></h1>
+
+
+          </div>
+          <div class="grid-2 showcase-list">
+
+
+
+            {{#each classEvents}}
+            <div class="grid-1 featured showcase">
+              <div class="featured-text">
+                <div class="left">
+                  <h4 class="type">
+                    <a href="/events/{{this.slug}}">event</a>
+                  </h4>
+                    <a href="/events/{{this.slug}}" target="_blank"><h2 class="title">{{this.name}} </h2></a>
+                </div>
+                <span class="bio bio-float" style="background-image: url('{{this.image}}')" role="img"></span>
+              </div>
+            </div>
+            {{/each}}
+
+              {{#each classProjects}}
+              <div class="grid-1 featured showcase">
+                <div class="featured-text">
+                  <div class="left">
+                    <h4 class="type">
+                      <a href="/projects/{{this.slug}}">project</a>
+                    </h4>
+                      <a href="/projects/{{this.slug}}" target="_blank"><h2 class="title">{{this.name}} </h2></a>
+                  </div>
+
+                  <span class="bio bio-float" style="background-image: url('{{this.image}}')" role="img"></span>
+                </div>
+              </div>
+              {{/each}}
+
+              {{#each classBlog}}
+              {{#eq this.status.[0] "Published"}}
+              <div class="grid-1 featured showcase">
+                <div class="featured-text">
+                  <div class="top">
+                    <h4 class="type">
+                      <a href="/blog/{{this.slug}}">blog</a>
+                    </h4>
+                      <a href="/blog/{{this.slug}}" target="_blank"><h2 class="title">{{this.name}} </h2></a>
+                  </div>
+
+                  <span class="bio bio-float" style="background-image: url('{{this.image.[0]}}')" role="img"></span>
+                </div>
+              </div>
+              {{/eq}}
+              {{/each}}
+
+
+
+
+
+          </div>
+
+        </section>
+
+        {{/if}}
+
+
+
+
+
+
+
+            <!-- <section id="" class="stacked grid-1"> -->
+
+
+<!--
+              <div class="grid-2 featured sex-ed session">
+                <div class="featured-text">
+                  <div class="top">
+                    <h4 class="type">
+                    </h4>
+                    <a href="https://sfpc.study/projects/sex-ed-fundraiser" target="_blank"><h2 class="title">SFPC Sex Ed Poster Fundraiser</h2></a>
+                  </div>
+                  <div class="bottom">
+                    <h4 class="details">Purchase a poster to help raise more money for our SFPC: Sex Ed scholarship fund!</h4>
+                  </div>
+                </div>
+              </div> -->
+
+            <!-- </section> -->
+
+      <!-- <div class="break"></div> -->
+
+
+      <!-- <section id="section-description">
+        <div class="grid-2">
+          <h1>Description </h1>
+        </div>
+
+        <div class="grid-2">
+          <p style="white-space:pre-line">
+            {{trim description}}
+          </p>
+        </div>
+      </section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {{#each pageContent}}
+
+
+            <div class="break"></div>
+
+
+      <section id="section-{{dashcase @key}}" class="program-content">
+        <div class="grid-2">
+          <h1>{{@key}}</h1>
+        </div>
+
+        <div class="grid-2">
+          {{{this}}}
+        </div>
+      </section>
+
+
+      {{/each}}
+
+      <div class="break"></div>
+
+
+      <section id="section-teachers">
+        <div class="grid-2">
+          <h1>Meet the Organizers {{#if guests}}& Guests{{/if}}</h1>
+        </div>
+
+        <div class="grid-2 class-details">
+
+
+          <dl class="accordion">
+            {{#each organizers}}
+            {{>personCard person=this}}
+            {{/each}}
+
+            {{#each teachers}}
+            {{>personCard person=this}}
+            {{/each}}
+
+            {{#if guests}}
+
+              {{#each guests}}
+              {{>personCard person=this}}
+              {{/each}}
+
+              {{/if}}
+
+          </dl>
+
+
+        </div>
+
+      </section>
+
+
+
+      <div class="break"></div>
+
+
+      {{> classBoilerplate}}
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="/outside.js"></script>
+    <script src="/carousel.js"></script>
+    <script src="/closed.js"></script>
+    </p>
+
+</body>
+
+</html>
