@@ -685,7 +685,7 @@ img {
   bottom: auto;
 }
 
-.shell-fullsize iframe {
+.shell-fullsize iframe.newsletter-signup {
      border: 0;
      width: 100vw;
    height: calc(100%);
@@ -2896,7 +2896,7 @@ video {
           top: calc(var(--header-height) + 20%) ;
         }
 
-        .shell-fullsize iframe {
+        .shell-fullsize .browser-incompatible {
              border: 0;
              width: 100vw;
            height: 100%;
@@ -2905,7 +2905,7 @@ video {
            top: 0px;
            }
 
-        .shell-halfsize iframe {
+        .shell-halfsize iframe.newsletter-signup {
              border: 0;
              width: 100vw;
            height: 100%;
