@@ -8,6 +8,8 @@ const { response } = require("express")
 const app = express()
 const PORT = process.env.PORT || 3000
 
+const NOTION_STORE_DATABASE_ID = "11ee959b7fdb4204a9ce46c9224b1818";
+
 console.log("starting up")
 app.use(express.static("public"))
 app.set('views', './public/templates')
@@ -289,11 +291,29 @@ app.get("/projects/:slug", async (req,res) => {
   }
 })
 
+app.get("/store", async (req, res) => {
+  const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
+    { property: "Publish Date", direction: "descending" },
+  ]);
+  const storeItems = response.map((storeItem) => {
+    return parseNotionPage(storeItem);
+  });
 
+  console.log({ storeItems });
+  res.render("store/storeList", { storeItems });
+});
 
+app.get("/store/:slug", async (req, res) => {
+  const response = await getDatabaseEntry(NOTION_STORE_DATABASE_ID, {
+    property: "Website Slug",
+    rich_text: { equals: req.params.slug },
+  });
 
-
-
+  if (response) {
+    const storeItemData = parseNotionPage(response);
+    res.render("store/storeItem", storeItemData);
+  }
+});
 
 app.get("/people", async (req,res) => {
   // const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [{timestamp:"created_time", direction:"descending"}], {
