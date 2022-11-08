@@ -96,6 +96,9 @@ const TOGGLE_CONFIG = {
 /* Loads the shopify SDK and runs the provided onLoad function afterwards. */
 const initShopifyHelper = (setupShopifyFn) => {
   const onLoad = () => {
+    // Initialize the Shopify JS client. Note that the storefront access token
+    // provides scoped, unauthenticated access to the Shopify API from the visitor's
+    // browser and does not have any sensitive permissions.
     var client = ShopifyBuy.buildClient({
       domain: "sfpc-nyc.myshopify.com",
       storefrontAccessToken: "560b7d9768c854569b3175f1a0ad02db",
