@@ -1,26 +1,38 @@
+// The config styles below are required for styling the HTML elements within Shopify iframes.
+// They do not inherit the CSS styles and variables from the main website so we need to manually
+// reconfigure them here.
+//
+// Some of this is copied from the Shopify code and some of it is edited to match our styling.
+//
 const PRODUCT_CONFIG = {
   styles: {
     product: {
       "@media (min-width: 601px)": {
-        "max-width": "calc(25% - 20px)",
-        "margin-left": "20px",
-        "margin-bottom": "50px",
+        // "max-width": "calc(50% - 20px)",
+        // "margin-left": "20px",
+        // "margin-bottom": "50px",
       },
       "text-align": "left",
     },
     button: {
-      "font-family": "Gill Sans, sans-serif",
-      "font-size": "16px",
+      "text-underline-offset": "4px", // custom
+      "text-decoration-thickness": "3px", // custom
+      "text-decoration": "underline",
+      "font-family": "'Hershey', sans-serif !important", // Copied from var(--main-title-font)
+      "border-top-left-radius": "3px !important", // custom
+      "border-bottom-left-radius": "3px !important", // custom
+      "font-size": "calc(20px + 0.34vw)",
+      "line-height": "1.1",
       "padding-top": "16px",
       "padding-bottom": "16px",
-      color: "#000000",
+      color: "#DDDDDD",
       ":hover": {
-        color: "#000000",
-        "background-color": "#e6e6e6",
+        "text-decoration": "reset",
+        "background-color": "transparent",
       },
-      "background-color": "#ffffff",
+      "background-color": "transparent",
       ":focus": {
-        "background-color": "#e6e6e6",
+        "background-color": "transparent",
       },
       "text-shadow":
         "3px 0 1px rgba(0,30,255,0.5), -3px 0 1px rgba(255,0,80,0.3), 0 0 3px;",
