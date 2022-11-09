@@ -35,6 +35,7 @@
       content="https://sfpc.study/images/sessions/meta.jpg"
     />
     <link href="/styles.css" rel="stylesheet" />
+    <link href="/css/shopify.css" rel="stylesheet" />
     <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
     <link
       rel="shortcut icon"
@@ -113,24 +114,17 @@
 
             <h4 class="noline">
               {{!-- Status.0 --}}
-              {{[Publish Date]}}
-
-              <a href="/sessions/{{Session-Slug}}">
-                <span class="blog-tag"><span
-                    id="tag"
-                    class="{{Session-Slug}}"
-                  >{{Website-Session}}</span></span></a>
-
+              Published on {{[Publish Date].start}}
             </h4>
 
             <div class="break-noline-small"></div>
 
-            <img id="class-image" src="{{[Image URL]}}" />
+            <img id="class-image" src="{{[Image-URL]}}" />
 
             <div class="details">
               <div class="labels">Type</div>
               <div class="labels-info" id="teachers-list">{{#each
-                  [Product Type]
+                  [Product-Type]
                 }}{{this}}{{#unless @last}},{{/unless}} {{/each}}</div>
             </div>
             <div class="details">
@@ -138,13 +132,13 @@
                         <div class="labels-info" id="teachers-list">{{Status.[0]}} {{[Release Date].start}}</div> -->
             </div>
 
-            {{#if Website-Organizers}}
+            {{#if Donor-Name}}
               <div class="details">
-                <div class="labels">Organizers</div>
+                <div class="labels">Donors</div>
                 <div class="labels-info" id="teachers-list">{{#each
-                    Website-Organizers
+                    Donor-Name
                   }}{{this}}{{#unless @last}},{{/unless}} {{/each}}
-                  {{#each this.Additional organizers}} {{this}} {{/each}}</div>
+              </div>
               </div>
             {{/if}}
 

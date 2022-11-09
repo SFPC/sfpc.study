@@ -1,0 +1,218 @@
+/* Imported shopify CSS from the buy button.
+ *
+ * We use the buy button with `iframe: false` so we have better control
+ * over the button styling. However, this means that the default shopify 
+ * styling needs to be copy-pasta'd.
+ */
+.shopify-buy__layout-vertical .shopify-buy__btn-and-quantity .shopify-buy__btn,
+.shopify-buy__layout-vertical
+  .shopify-buy__btn-and-quantity
+  .shopify-buy__quantity-container,
+.shopify-buy__layout-horizontal
+  .shopify-buy__btn-and-quantity
+  .shopify-buy__btn,
+.shopify-buy__layout-horizontal
+  .shopify-buy__btn-and-quantity
+  .shopify-buy__quantity-container {
+  margin: 0 auto;
+}
+.shopify-buy__layout-vertical .shopify-buy__btn,
+.shopify-buy__layout-vertical .shopify-buy__quantity-container,
+.shopify-buy__layout-horizontal .shopify-buy__btn,
+.shopify-buy__layout-horizontal .shopify-buy__quantity-container {
+  margin: 20px auto 0;
+}
+.shopify-buy__product {
+  overflow: hidden;
+  width: 100%;
+}
+.shopify-buy__btn-and-quantity .shopify-buy__quantity-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.shopify-buy__layout-vertical .shopify-buy__btn-and-quantity:first-child,
+.shopify-buy__layout-horizontal .shopify-buy__btn-and-quantity:first-child {
+  margin: 0 auto;
+}
+.shopify-buy__btn-and-quantity .shopify-buy__quantity {
+  background: #fff;
+}
+.shopify-buy__quantity {
+  font-size: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.shopify-buy__btn-and-quantity .shopify-buy__btn-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+.shopify-buy__quantity,
+.shopify-buy__quantity-increment,
+.shopify-buy__quantity-decrement {
+  border-color: #d3dbe2;
+  border-right-color: rgb(211, 219, 226);
+  line-height: 1.2;
+  font-size: 15px;
+  height: auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.shopify-buy__quantity {
+  border-left: 1px solid;
+  border-left-color: currentcolor;
+  border-right: 1px solid;
+  color: black;
+  width: 45px;
+  height: 30px;
+  font-size: 16px;
+  border: none;
+  border-top-color: currentcolor;
+  border-top-style: none;
+  border-top-width: medium;
+  border-right-color: currentcolor;
+  border-right-style: none;
+  border-right-width: medium;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  border-left-color: currentcolor;
+  border-left-style: none;
+  border-left-width: medium;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  display: inline-block;
+  padding: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: 0;
+  border-top: 1px solid #767676;
+  border-top-color: rgb(118, 118, 118);
+  border-bottom: 1px solid #767676;
+  border-bottom-color: rgb(118, 118, 118);
+}
+
+.shopify-buy__layout-vertical .shopify-buy__btn-and-quantity .shopify-buy__btn,
+.shopify-buy__layout-vertical
+  .shopify-buy__btn-and-quantity
+  .shopify-buy__quantity-container,
+.shopify-buy__layout-horizontal
+  .shopify-buy__btn-and-quantity
+  .shopify-buy__btn,
+.shopify-buy__layout-horizontal
+  .shopify-buy__btn-and-quantity
+  .shopify-buy__quantity-container {
+  margin: 0 auto;
+}
+.shopify-buy__layout-vertical .shopify-buy__btn:first-child,
+.shopify-buy__layout-horizontal .shopify-buy__btn:first-child {
+  margin-top: 0;
+}
+.shopify-buy__layout-vertical .shopify-buy__btn,
+.shopify-buy__layout-vertical .shopify-buy__quantity-container,
+.shopify-buy__layout-horizontal .shopify-buy__btn,
+.shopify-buy__layout-horizontal .shopify-buy__quantity-container {
+  margin: 20px auto 0;
+}
+.shopify-buy__btn.shopify-buy__beside-quantity {
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid transparent;
+}
+.shopify-buy__btn {
+  display: inline-block;
+}
+.shopify-buy__btn {
+  background-color: transparent;
+  padding: 12px 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  letter-spacing: 0.3px;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1.2;
+  border: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;  
+  font-weight: lighter;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: -0.5px;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 3px;
+  text-decoration: underline;
+  font-family: "Hershey", sans-serif;
+  border-radius: var(--border-rad);
+  line-height: var(--medium-line-height);
+  padding-top: 8px;
+  padding-bottom: 16px;
+  color: var(--text-link);
+  background-color: transparent;
+  font-size: var(--medium-text);
+}
+
+.shopify-buy__btn:hover {
+  text-decoration: none;
+}
+
+.shopify-buy__btn-and-quantity .shopify-buy__quantity {
+  border-right: 0;
+  background: #fff;
+}
+.shopify-buy__quantity  {
+  font-size: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-left: 1px solid;
+  border-left-color: currentcolor;
+  border-right: 1px solid;
+  border-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: black;
+  width: 45px;
+  height: 30px;
+  font-size: 16px;
+  border: none;
+  border-top-color: currentcolor;
+  border-top-style: none;
+  border-top-width: medium;
+  border-right-color: currentcolor;
+  border-right-style: none;
+  border-right-width: medium;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  border-left-color: currentcolor;
+  border-left-style: none;
+  border-left-width: medium;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  display: inline-block;
+  padding: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: var(--border-rad);
+  border-top: 1px solid #767676;
+  border-top-color: rgb(118, 118, 118);
+  border-bottom: 1px solid #767676;
+  border-bottom-color: rgb(118, 118, 118);
+}
+.shopify-buy__quantity,
+.shopify-buy__quantity-increment,
+.shopify-buy__quantity-decrement {
+  border-color: #d3dbe2;
+  border-right-color: rgb(211, 219, 226);
+  line-height: 1.2;
+  font-size: 15px;
+  height: auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}

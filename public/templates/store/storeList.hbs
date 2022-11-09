@@ -39,35 +39,12 @@
           class="statcounter" src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
           referrerPolicy="no-referrer-when-downgrade"></a></div>
   </noscript>
+  <!-- end stats -->
 
   <script src="/js/initShopify.js"></script>
   <script>
     initShopifyCart()
   </script>
-
-
-  <!-- <script data-goatcounter="https://sfpc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
-
-
-  <style>
-    .container {
-      height: 100vh;
-      display: flex;
-      justify-content: flex-start;
-      align-content: flex-start;
-      flex-flow: column wrap;
-    }
-
-    .project-card {
-      width: 200px;
-      border: 2px solid teal;
-      border-radius: 20px;
-      margin: 10px;
-      padding: 10px;
-    }
-  </style>
-
-  <!-- end stats -->
 </head>
 
 
@@ -103,9 +80,6 @@
           <p>
             This is a store This is a store This is a store
           </p>
-          <p>
-            <a href="mailto:info@sfpc.study">work with us on a special project...</a>
-          </p>
 
         </div>
       </section>
@@ -117,12 +91,12 @@
         <div class="grid-1 participate">
 
           {{#each storeItems}}
-          <div id="{{this.[Website Slug]}}"
+          <div id="{{this.[Website-Slug]}}"
             class="grid-4 featured project sfpc {{#each this.[Project-Type]}}{{this}} {{/each}}" data-location="">
             <div class="featured-text">
-              <img src="{{this.[Image URL]}}">
+              <img src="{{this.[Image-URL]}}">
               <div class="top">
-                <h4 class="type type-list-comma"><a href="/store/{{this.[Website Slug]}}">{{#each
+                <h4 class="type type-list-comma"><a href="/store/{{this.[Website-Slug]}}">{{#each
                     this.[Project-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
                 <h2 class="title">{{this.Name}}</h2>
                 <h6>{{this.[Short Description]}}</h6>
@@ -131,7 +105,7 @@
                 <h4 class="details">
                   {{Status.[0]}} {{[Release Date].start}}
                 </h4>
-                <h4 class="details organizers-comma">Organized by {{#each this.[Website-Organizers]}}{{this}}{{#if
+                <h4 class="details">Donated by {{#each this.[Donor-Name]}}{{this}}{{#if
                   @last}}{{else}}<i class="comma">,</i> {{/if}} {{/each}}
                   {{#each this.[Additional organizers]}} {{this}} {{/each}}</h4>
                 <h4 class="details ">{{#each this.[Partnership?]}} {{this}} {{/each}} {{this.[Partners]}}</h4>

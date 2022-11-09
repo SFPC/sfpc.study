@@ -338,13 +338,14 @@ background-size: 100%;
 
 
 #shell h1
-, #shell p.large
+, #shell p.large, #shell .shopify-buy__btn
 /* , #shell p.large a */
 /* , #shell p.large:hover */
 {
   text-shadow: 3px 0 1px rgba(0,30,255,0.5), -3px 0 1px rgba(255,0,80,0.3), 0 0 3px;
     /* animation: textShadowBig 1s infinite; */
 }
+
 /*
 .crt-overlay img::after, .crt-overlay .featured::after,
 .featured::after,

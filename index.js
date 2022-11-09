@@ -332,7 +332,7 @@ app.get("/store", async (req, res) => {
 
 app.get("/store/:slug", async (req, res) => {
   const response = await getDatabaseEntry(NOTION_STORE_DATABASE_ID, {
-    property: "Website Slug",
+    property: "Website-Slug",
     rich_text: { equals: req.params.slug },
   });
 

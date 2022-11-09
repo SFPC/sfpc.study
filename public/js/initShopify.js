@@ -5,44 +5,7 @@
 // Some of this is copied from the Shopify code and some of it is edited to match our styling.
 //
 const PRODUCT_CONFIG = {
-  styles: {
-    product: {
-      "@media (min-width: 601px)": {
-        // "max-width": "calc(50% - 20px)",
-        // "margin-left": "20px",
-        // "margin-bottom": "50px",
-      },
-      "text-align": "left",
-    },
-    button: {
-      "text-underline-offset": "4px", // custom
-      "text-decoration-thickness": "3px", // custom
-      "text-decoration": "underline",
-      "font-family": "'Hershey', sans-serif !important", // Copied from var(--main-title-font)
-      "border-top-left-radius": "3px !important", // custom
-      "border-bottom-left-radius": "3px !important", // custom
-      "font-size": "calc(20px + 0.34vw)",
-      "line-height": "1.1",
-      "padding-top": "16px",
-      "padding-bottom": "16px",
-      color: "#DDDDDD",
-      ":hover": {
-        "text-decoration": "reset",
-        "background-color": "transparent",
-      },
-      "background-color": "transparent",
-      ":focus": {
-        "background-color": "transparent",
-      },
-      "text-shadow":
-        "3px 0 1px rgba(0,30,255,0.5), -3px 0 1px rgba(255,0,80,0.3), 0 0 3px;",
-    },
-    quantityInput: {
-      "font-size": "16px",
-      "padding-top": "16px",
-      "padding-bottom": "16px",
-    },
-  },
+  iframe: false,
   contents: {
     img: false,
     button: false,
@@ -145,8 +108,9 @@ const initShopifyHelper = (setupShopifyFn) => {
 /* Initializes the Add to cart / Buy button for a given product, as well as the
    shopping cart sliding window. */
 const initShopifyProduct = (shopifyProductId, buyButtonNodeId) => {
+  console.log(shopifyProductId);
   initShopifyHelper((ui) => {
-    ui.createComponent("product", {
+    const test = ui.createComponent("product", {
       id: shopifyProductId,
       node: document.getElementById(buyButtonNodeId),
       moneyFormat: "%24%7B%7Bamount%7D%7D",
@@ -206,6 +170,30 @@ const initShopifyProduct = (shopifyProductId, buyButtonNodeId) => {
         toggle: TOGGLE_CONFIG,
       },
     });
+
+    const frameHead = document.querySelector(`${buyButtonNodeId} iframe head`);
+    const styleSheet = document.createElement("style");
+    styleSheet.innerText = `
+    @font-face {
+      font-family: 'Hershey';
+      src: url('fonts/Hershey-Noailles-Futura-Duplex-Bold.woff2') format('woff2'),
+          url('fonts/Hershey-Noailles-Futura-Duplex-Bold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+      font-display: block;
+  }
+  
+  @font-face {
+      font-family: 'Hershey';
+      src: url('fonts/Hershey-Noailles-Futura-Duplex-Regular.woff2') format('woff2'),
+          url('fonts/Hershey-Noailles-Futura-Duplex-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+  }
+    `;
+
+    frameHead.appendChild(styleSheet);
   });
 };
 
