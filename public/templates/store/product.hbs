@@ -1,0 +1,468 @@
+
+
+<head>
+    <title>School for Poetic Computation</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="School for Poetic Computation">
+    <meta name="description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sfpc.study/">
+    <meta property="og:title" content="School for Poetic Computation">
+    <meta property="og:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sfpc.study/">
+    <meta property="twitter:title" content="School for Poetic Computation">
+    <meta property="twitter:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
+    <link href="/styles.css" rel="stylesheet">
+    <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
+    <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico"/>
+
+    <script src="/jquery-3.6.0.min.js"></script>
+
+    <!-- stats -->
+    <script type="text/javascript">
+    var sc_project=12714909;
+    var sc_invisible=1;
+    var sc_security="6086a46c";
+    </script>
+    <script type="text/javascript"
+    src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript><div class="statcounter"><a title="website statistics"
+    href="https://statcounter.com/" target="_blank"><img class="statcounter"
+    src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+
+    <!-- <script data-goatcounter="https://sfpc.goatcounter.com/count"
+    async src="//gc.zgo.at/count.js"></script> -->
+    <!-- end stats -->
+</head>
+
+
+<body>
+{{> header}}
+{{> footer}}
+
+      <div class="crt-overlay crt-overlay-fullsize"></div>
+
+      <div id="shell" class="shell shell-fullsize about sfpc">
+
+        <div class="loader-content">
+            <p tabindex="0" class="large">
+              loading<span>...</span>
+            </p>
+        </div>
+
+        <!-- <div class="selectors">
+        <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
+              <option value="class">Jump to section...</option>
+              <option value="section-class-details">ABOUT </option>
+            </select>
+          </div>-->
+
+
+
+
+
+            <h4 class="breadcrumb hide-content">
+              <a href="/store">store</a>
+              <!-- <span class="caret"></span>  -->
+            </h4>
+
+
+
+
+        <div id="class" class="event hide-content appsClosed beforeClass shell-content">
+
+
+                <section id="section-class-details">
+                    <div class="grid-2">
+                      <h1><span id="class-name">
+                        {{Name}}
+                      </span></h1>
+                    </div>
+
+                    <div class="grid-2 class-details">
+
+
+
+                      {{#if [Session-Slug]}}
+                      <h4 class="noline">
+                      <!-- {{Status.[0]}} {{[Release Date].start}} -->
+
+                      <a href="/sessions/{{[Session-Slug]}}"> <span class="c"><span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}}</span></span></a>
+
+
+
+                      </h4>
+
+                      <div class="break-noline-small"></div>
+
+                      {{/if}}
+                      <img id="class-image" src="{{this.[Image-URL]}}">
+
+                      {{#if Date}}
+                      <div class="details">
+                        <div class="labels">Date</div>
+                        <div class="labels-info" id="teachers-list">
+                          {{#if Cost}} {{/if}}{{this.[Date].start}}
+                          {{#if [Date].end}}— {{[Date].end}}{{/if}}
+                       </div>
+                      </div>
+                      {{/if}}
+
+
+                      {{#if Time}}
+                      <div class="details">
+                        <div class="labels">Time</div>
+                        <div class="labels-info" id="teachers-list">
+                        {{this.[Time]}}
+                       </div>
+                      </div>
+                      {{/if}}
+
+                      {{#if Location}}
+                      <div class="details">
+                        <div class="labels">Location</div>
+                        <div class="labels-info" id="teachers-list">
+                          {{#if Location-URL}}<a href="{{Location-URL}}">{{/if}}
+
+                        {{this.[Location]}}{{#if Location-URL}}</a>{{/if}}
+                       </div>
+                      </div>
+                      {{/if}}
+
+                                              <div class="details">
+                                                <div class="labels">Cost</div>
+                                                <div class="labels-info" id="">
+                                                  <h3>
+
+                                                <span id=”cost”>${{Cost}}</span>
+
+                                                 </h3>
+                                                </div>
+                                              </div>
+
+
+
+                      <p class="large apply">
+
+                        {{#if External-Website}}
+                            <a href="{{"Website-URL"}}" target="_blank" id="application-link">
+
+
+                              {{External-CTA}}
+
+                            </a>
+
+                        {{else}}
+
+                            <!-- {{#if RSVP-Open}} -->
+                            <a href="{{RSVP}}" target="_blank" id="application-link">RSVP</a>
+                            <!-- {{/if}} -->
+
+
+
+                        {{/if}}
+                      </p>
+
+
+                      <!-- {{#if Cost}}
+                        <h3>
+                      <span id=”cost”>${{Cost}}</span>
+                       {{{Cost-Details}}}</h3>
+                      {{/if}} -->
+
+                      {{#if More-Info}}
+                      <p>
+                     {{{More-Info}}}</p>
+                      {{/if}}
+
+                    </div>
+                </section>
+
+
+                <div class="break"></div>
+
+
+                <section id="section-description">
+                    <div class="grid-2">
+                      <h1>Description </h1>
+                    </div>
+
+                    <div class="grid-2">
+                        <p style="white-space:pre-line">
+                        {{Description}}
+                        </p>
+
+
+                        <div id='product-component-1667973302883'></div>
+  <script type="text/javascript">
+  /*<![CDATA[*/
+  (function () {
+    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    if (window.ShopifyBuy) {
+      if (window.ShopifyBuy.UI) {
+        ShopifyBuyInit();
+      } else {
+        loadScript();
+      }
+    } else {
+      loadScript();
+    }
+    function loadScript() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = scriptURL;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+      script.onload = ShopifyBuyInit;
+    }
+    function ShopifyBuyInit() {
+      var client = ShopifyBuy.buildClient({
+        domain: 'sfpc-nyc.myshopify.com',
+        storefrontAccessToken: '560b7d9768c854569b3175f1a0ad02db',
+      });
+      ShopifyBuy.UI.onReady(client).then(function (ui) {
+        ui.createComponent('product', {
+          id: '5657020137623',
+          node: document.getElementById('product-component-1667973302883'),
+          moneyFormat: '%24%7B%7Bamount%7D%7D',
+          options: {
+    "product": {
+      "styles": {
+        "product": {
+          "@media (min-width: 601px)": {
+            "max-width": "calc(25% - 20px)",
+            "margin-left": "20px",
+            "margin-bottom": "50px"
+          }
+        },
+        "button": {
+          "font-family": "Gill Sans, sans-serif",
+          "font-size": "16px",
+          "padding-top": "16px",
+          "padding-bottom": "16px",
+          "color": "#000000",
+          ":hover": {
+            "color": "#000000",
+            "background-color": "#e6e6e6"
+          },
+          "background-color": "#ffffff",
+          ":focus": {
+            "background-color": "#e6e6e6"
+          }
+        },
+        "quantityInput": {
+          "font-size": "16px",
+          "padding-top": "16px",
+          "padding-bottom": "16px"
+        }
+      },
+      "contents": {
+        "img": false,
+        "button": false,
+        "buttonWithQuantity": true,
+        "title": false,
+        "price": false
+      },
+      "text": {
+        "button": "Add to cart"
+      }
+    },
+    "productSet": {
+      "styles": {
+        "products": {
+          "@media (min-width: 601px)": {
+            "margin-left": "-20px"
+          }
+        }
+      }
+    },
+    "modalProduct": {
+      "contents": {
+        "img": false,
+        "imgWithCarousel": true,
+        "button": false,
+        "buttonWithQuantity": true
+      },
+      "styles": {
+        "product": {
+          "@media (min-width: 601px)": {
+            "max-width": "100%",
+            "margin-left": "0px",
+            "margin-bottom": "0px"
+          }
+        },
+        "button": {
+          "font-family": "Gill Sans, sans-serif",
+          "font-size": "16px",
+          "padding-top": "16px",
+          "padding-bottom": "16px",
+          "color": "#000000",
+          ":hover": {
+            "color": "#000000",
+            "background-color": "#e6e6e6"
+          },
+          "background-color": "#ffffff",
+          ":focus": {
+            "background-color": "#e6e6e6"
+          }
+        },
+        "quantityInput": {
+          "font-size": "16px",
+          "padding-top": "16px",
+          "padding-bottom": "16px"
+        }
+      },
+      "text": {
+        "button": "Add to cart"
+      }
+    },
+    "option": {},
+    "cart": {
+      "styles": {
+        "button": {
+          "font-family": "Gill Sans, sans-serif",
+          "font-size": "16px",
+          "padding-top": "16px",
+          "padding-bottom": "16px",
+          "color": "#000000",
+          ":hover": {
+            "color": "#000000",
+            "background-color": "#e6e6e6"
+          },
+          "background-color": "#ffffff",
+          ":focus": {
+            "background-color": "#e6e6e6"
+          }
+        }
+      },
+      "text": {
+        "total": "Subtotal",
+        "button": "Checkout"
+      }
+    },
+    "toggle": {
+      "styles": {
+        "toggle": {
+          "font-family": "Gill Sans, sans-serif",
+          "background-color": "#ffffff",
+          ":hover": {
+            "background-color": "#e6e6e6"
+          },
+          ":focus": {
+            "background-color": "#e6e6e6"
+          }
+        },
+        "count": {
+          "font-size": "16px",
+          "color": "#000000",
+          ":hover": {
+            "color": "#000000"
+          }
+        },
+        "iconPath": {
+          "fill": "#000000"
+        }
+      }
+    }
+  },
+        });
+      });
+    }
+  })();
+  /*]]>*/
+  </script>
+
+
+
+
+                    </div>
+                </section>
+
+
+
+
+                {{#if Images}}
+
+                <div class="break-noline"></div>
+
+               <div class="grid-container" id="participate-archive">
+
+                 <main class="grid-item main">
+                   <main class="grid-item main">
+                     <div class="carousel-items items carousel-content participate-content">
+
+
+                       <div id="carousel-images" class="class-images ">
+
+                         {{#each Images}}
+                         <figure class="item participate-img"><img src="{{this}}"></figure>
+                         {{/each}}
+
+                         </div>
+
+
+                     </div>
+
+
+                   </main>
+                 </main>
+
+               </div>
+               {{/if}}
+
+
+               <!-- <div class="break"></div>
+
+               <div class="break-noline"></div>
+
+
+               <section id="section-outro">
+                 <p tabindex="0" class="large">
+                   Interested in more learning opportunities at the School for Poetic Computation?
+                   Join our <a href="https://stats.sender.net/forms/e09QVa/view">newsletter</a> to stay up to date on future
+                   sessions and events, and
+                   follow us on <a href="https://instagram.com/sfpc_nyc">Instagram</a> and <a
+                     href="https://twitter.com/sfpc">Twitter</a>.
+                   Support our programming through <a
+                     href="https://withfriends.co/school_for_poetic_computation/join">scholarships</a>.
+                   Get in touch over <a href="mailto:info@sfpc.study">email</a>.
+                 </p>
+               </section> -->
+
+
+
+
+
+                <div class="break-endpage"></div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+<script src="/outside.js"></script>
+<script src="/carousel.js"></script>
+<!-- <script src="/closed.js"></script> -->
+</p>
+
+</body>
+</html>

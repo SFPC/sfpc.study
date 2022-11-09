@@ -389,6 +389,13 @@ h1 {
                   display: none
                 }
 
+                .title.Raffle,
+                 .title.Purchase
+                 {
+                  font-size: calc(var(--large-text)) !important;
+                }
+ 
+
 
 h2, .mobile-menu-content h2 a {
   font-size: var(--medium-text);
@@ -1589,6 +1596,11 @@ span.reference {
           content: ' and';
           font-style: normal;
         } */
+
+        .type-list-comma {
+          text-transform: lowercase;
+
+        }
 
 
         #projects.allProjects .project.Radio,

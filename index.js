@@ -212,6 +212,33 @@ app.get("/events/:slug", async (req,res) => {
 
 
 
+
+
+app.get("/store", async (req,res) => {
+  const response = await getDatabaseEntries("11ee959b7fdb4204a9ce46c9224b1818", [{property:"Publish Date", direction:"descending"}])
+  const projectData = response.map((project) => {
+    console.log(project)
+    return parseNotionPage(project)
+  })
+  console.log(projectData)
+  // let pageContent = getPageContent()
+  res.render("store/storefront", {projects: projectData})
+})
+
+app.get("/store/:slug", async (req,res) => {
+  //filter by slug here
+  console.log(req.params.slug)
+  const response = await getDatabaseEntry("11ee959b7fdb4204a9ce46c9224b1818", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  console.log(response)
+  if(response){
+    const projectData = parseNotionPage(response)
+    console.log(projectData)
+    res.render("store/product", projectData)
+  }
+})
+
+
+
 app.get("/participate", async (req,res) => {
   const response = await getDatabaseEntries("ba1f9876ad3e4810880d4802d3d70d6f", [{property:"Date", direction:"descending"}])
   const projectData = response.map((project) => {
