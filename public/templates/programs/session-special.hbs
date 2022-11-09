@@ -196,8 +196,8 @@
           <div class="details">
             <div class="labels">Date </div>
             <div class="labels-info">
-              <span id="date">{{startDate}} to {{endDate}}</span>{{#if numberOfClasses}}(<span id="number-classes">{{numberOfClasses}}</span> classes){{/if}}
-              classes)
+              <span id="date">{{startDate}} to {{endDate}}</span>{{#if numberOfClasses}} (<span id="number-classes">{{numberOfClasses}}</span> classes){{/if}}
+             
             </div>
           </div>
           <div class="details">
@@ -408,9 +408,6 @@
       {{#if showcase}}
 
        <div class="break"></div>
-
-
-
        <section id="section-showcase">
          <div class="grid-2">
            <h1><span id="class-name">
@@ -419,34 +416,50 @@
 
 
          </div>
+         <div class="grid-2 showcase-list class-details">
+           {{#if classEvents}}
+           <h6>Events ({{eventCount}})</h6>
+            {{#each classEvents}}
+            <div class="grid-1 featured showcase">
+              <div class="featured-text">
+                <div class="left">
+                  <h4 class="type">
+                    <a href="/events/{{this.slug}}">{{this.date.start}}</a>
+                  </h4>
+                    <a href="/events/{{this.slug}}" target="_blank"><h2 class="title">{{this.name}} </h2></a>
+                </div>
+                <span class="bio bio-float" style="background-image: url('{{this.image}}')" role="img"></span>
+              </div>
+            </div>
+            {{/each}} <BR>
+            {{/if}}
 
-
-
-         <div class="grid-2 showcase-list">
-
-
+            {{#if classProjects}}
+            <h6>Projects ({{projectCount}})</h6>
              {{#each classProjects}}
              <div class="grid-1 featured showcase">
                <div class="featured-text">
                  <div class="left">
                    <h4 class="type">
-                     <a href="/projects/{{this.slug}}">project</a>
+                     <a href="/projects/{{this.slug}}">{{this.date.start}}</a>
                    </h4>
                      <a href="/projects/{{this.slug}}" target="_blank"><h2 class="title">{{this.name}} </h2></a>
                  </div>
-
-                 <span class="bio bio-float" style="background-image: url('{{this.image}}')" role="img"></span>
+                 <span class="bio bio-float" style="background-image: url('{{this.image.[0]}}')" role="img"></span>
                </div>
              </div>
-             {{/each}}
+             {{/each}} <BR>
+             {{/if}}
 
+             {{#if classBlog}}
+             <h6>Blog Posts ({{blogCount}})</h6>
              {{#each classBlog}}
              {{#eq this.status.[0] "Published"}}
              <div class="grid-1 featured showcase">
                <div class="featured-text">
                  <div class="top">
                    <h4 class="type">
-                     <a href="/blog/{{this.slug}}">blog</a>
+                     <a href="/blog/{{this.slug}}">{{this.date.start}}</a>
                    </h4>
                      <a href="/blog/{{this.slug}}" target="_blank"><h2 class="title">{{this.name}} </h2></a>
                  </div>
@@ -455,17 +468,17 @@
                </div>
              </div>
              {{/eq}}
-             {{/each}}
+             {{/each}} <BR>
+             {{/if}}
 
 
 
+              </div>
 
+             </section>
 
-         </div>
+             {{/if}}
 
-       </section>
-
-       {{/if}}
 
 
 
