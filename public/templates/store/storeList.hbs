@@ -47,17 +47,13 @@
   </script>
 </head>
 
-
 <body>
   {{> header}}
   {{> footer}}
 
   <div class="crt-overlay crt-overlay-fullsize"></div>
-
-
+  
   <div id="shell" class="shell shell-fullsize projects projects-list sfpc">
-
-
     <div class="loader-content">
       <p tabindex="0" class="large">
         loading<span>...</span>
@@ -75,19 +71,15 @@
         </div>
 
         <div class="grid-2">
-
-
           <p>
             This is a store This is a store This is a store
           </p>
-
         </div>
       </section>
 
       <div class="break-noline"></div>
-
+      
       <section id="section-projects" class="stacked stacked-4">
-
         <div class="grid-1 participate">
 
           {{#each storeItems}}
@@ -103,83 +95,24 @@
               </div>
               <div class="bottom">
                 <h4 class="details">
-                  {{Status.[0]}} {{[Release Date].start}}
+                  {{[Release Date].start}}
                 </h4>
                 <h4 class="details">Donated by {{#each this.[Donor-Name]}}{{this}}{{#if
                   @last}}{{else}}<i class="comma">,</i> {{/if}} {{/each}}
-                  {{#each this.[Additional organizers]}} {{this}} {{/each}}</h4>
-                <h4 class="details ">{{#each this.[Partnership?]}} {{this}} {{/each}} {{this.[Partners]}}</h4>
-
-
-
-
-                {{#if [Session-Slug]}}
-                <BR>
-                <h4 class="noline">
-
-                <a href="/sessions/{{[Session-Slug]}}"> <span class="blog-tag"><span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}}</span></span></a>
-                </h4>
-                {{/if}}
-
-
-
-
               </div>
             </div>
           </div>
-
           {{/each}}
-
         </div>
-
-
-
       </section>
-
-
+      
       <div class="break"></div>
-
-
-
-
-
-
-
       <div class="break-noline"></div>
- 
-
-      <section id="section-outro">
-        <p tabindex="0" class="large">
-          Interested in working with us on a special project? Get in touch over <a
-            href="mailto:info@sfpc.study">email</a>.
-          Support our programming and future projects through <a
-            href="https://withfriends.co/school_for_poetic_computation/join">funding</a>.
-
-        </p>
-      </section>
-
-
       <div class="break-endpage"></div>
-
-
-
-
     </div>
   </div>
 
-
-
-
-
-
-
-
-
-
   <script src="/outside.js"></script>
-  <script src="/carousel.js"></script>
   </p>
-
 </body>
-
 </html>

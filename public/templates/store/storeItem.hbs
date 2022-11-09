@@ -53,24 +53,29 @@
     <script type="text/javascript">
       var sc_project=12714909; var sc_invisible=1; var sc_security="6086a46c";
     </script>
+    
     <script
       type="text/javascript"
       src="https://www.statcounter.com/counter/counter.js"
       async
     ></script>
-    <noscript><div class="statcounter"><a
+
+    <noscript>
+      <div class="statcounter">
+        <a
           title="website statistics"
           href="https://statcounter.com/"
           target="_blank"
-        ><img
+        >
+          <img
             class="statcounter"
             src="https://c.statcounter.com/12714909/0/6086a46c/1/"
             alt="website statistics"
             referrerPolicy="no-referrer-when-downgrade"
-          /></a></div></noscript>
-
-    <!-- <script data-goatcounter="https://sfpc.goatcounter.com/count"
-    async src="//gc.zgo.at/count.js"></script> -->
+          />
+        </a>
+      </div>
+    </noscript>
     <!-- end stats -->
   </head>
 
@@ -88,16 +93,8 @@
         </p>
       </div>
 
-      <!-- <div class="selectors">
-        <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
-              <option value="class">Jump to section...</option>
-              <option value="section-class-details">ABOUT </option>
-            </select>
-          </div>-->
-
       <h4 class="breadcrumb hide-content">
         <a href="/store">store</a>
-        <!-- <span class="caret"></span>  -->
       </h4>
 
       <div class="hide-content shell-content">
@@ -111,14 +108,11 @@
           </div>
 
           <div class="grid-2 class-details">
-
             <h4 class="noline">
-              {{!-- Status.0 --}}
               Published on {{[Publish Date].start}}
             </h4>
 
             <div class="break-noline-small"></div>
-
             <img id="class-image" src="{{[Image-URL]}}" />
 
             <div class="details">
@@ -126,10 +120,6 @@
               <div class="labels-info" id="teachers-list">{{#each
                   [Product-Type]
                 }}{{this}}{{#unless @last}},{{/unless}} {{/each}}</div>
-            </div>
-            <div class="details">
-              <!-- <div class="labels">Status</div>
-                        <div class="labels-info" id="teachers-list">{{Status.[0]}} {{[Release Date].start}}</div> -->
             </div>
 
             {{#if Donor-Name}}
@@ -142,64 +132,7 @@
               </div>
             {{/if}}
 
-            {{#if Website-Contributors}}
-              <div class="details">
-                <div class="labels">Contributors</div>
-                <div class="labels-info">
-                  <span tabindex="0" class="expand"><a
-                      class="link"
-                    >{{Website-Contributors.length}} contributors...</a>
-                    <span class="expanded hide-expanded">
-                      {{#each Website-Contributors}}{{this}}{{#unless
-                          @last
-                        }},{{/unless}}
-                      {{/each}}
-                    </span></span>
-                </div>
-              </div>
-            {{/if}}
-
-            {{#if Partnership?}}
-              <div class="details">
-                <div class="labels">Partners</div>
-                <div class="labels-info" id="teachers-list">{{Partnership?}}
-                  {{Partners}}</div>
-              </div>
-            {{/if}}
-
-            {{#if Website-Session}}
-              <div class="details">
-                <div class="labels">Program</div>
-                <div class="labels-info" id="program-info">
-
-                  {{#if Website-Class}}
-                    {{#each Website-Class}}{{this}}{{#unless @last}},
-                      {{/unless}}
-                    {{/each}}
-                  {{/if}}
-
-                  <!-- <span class="Session {{Class-Type}}">
-                                                  {{#if Website-Class}}— {{/if}}
-
-                                                  {{#each Website-Session}}
-                                                  {{this}}
-                                                  {{#unless @last}}, {{/unless}}{{/each}}
-
-                                                  </span> -->
-
-                  <!-- {{#if Website-Session}}
-                                                  <h4 class="noline">
-                                                  {{#if Website-Session}}<a href="{{this.[Session-External-Website]}}">{{else}}<a href="{{[Session-Slug]}}">{{/if}}
-                                                      <span class="blog-tag"> <span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}} </span> </span></a>
-                                                    </h4>
-                                                        {{/if}} -->
-
-                </div>
-              </div>
-            {{/if}}
-
             {{#if Price}}
-
               <div class="details">
                 <div class="labels">Cost</div>
                 <div class="labels-info" id="">
@@ -208,20 +141,12 @@
                     {{{Cost-Details}}}</h3>
                 </div>
               </div>
-
               <p class="large apply" id="add-to-cart-button-wrapper"/>
             {{/if}}
-
-            <!-- {{#if Cost}}
-                        <h3>
-                      <span id=”cost”>${{Cost}}</span>
-                       {{{Cost-Details}}}</h3>
-                      {{/if}} -->
 
             {{#if More-Info}}
               <p>{{{More-Info}}}</p>
             {{/if}}
-
           </div>
         </section>
 
@@ -229,74 +154,44 @@
           <div class="break"></div>
           <section id="section-description">
             <div class="grid-2">
-              <h1>Description </h1>
+              <h1>Description</h1>
             </div>
             <div class="grid-2">
               <p>
                 {{{[Product Description]}}}
               </p>
-              <!-- <p class="large apply">
-                        <a href="{{websiteURL}}" target="_blank" id="application-link">Visit Website</a>
-                      </p> -->
             </div>
           </section>
         {{/if}}
 
-        {{#if Images}}
-
+        {{#if [More Image URLs]}}
           <div class="break-noline"></div>
-
           <div class="grid-container" id="participate-archive">
-
             <main class="grid-item main">
               <main class="grid-item main">
                 <div
                   class="carousel-items items carousel-content participate-content"
                 >
-
                   <div id="carousel-images" class="class-images">
-
-                    {{#each Images}}
+                    {{#each [More Image URLs]}}
                       <figure class="item participate-img"><img
                           src="{{this}}"
                         /></figure>
                     {{/each}}
-
                   </div>
-
                 </div>
-
               </main>
             </main>
-
           </div>
         {{/if}}
 
         <div class="break"></div>
-
         <div class="break-noline"></div>
-
-        <section id="section-outro">
-          <p tabindex="0" class="large">
-            Interested in working with us on a special project? Get in touch
-            over
-            <a href="mailto:info@sfpc.study">email</a>. Support our programming
-            and future projects through
-            <a
-              href="https://withfriends.co/school_for_poetic_computation/join"
-            >funding</a>. Visit our
-            <a href="https://sfpc.study/projects">project archive</a>
-            to see more projects.
-          </p>
-        </section>
-
         <div class="break-endpage"></div>
-
       </div>
     </div>
 
     <script src="/outside.js"></script>
     <script src="/carousel.js"></script>
-    <!-- <script src="/closed.js"></script> -->
   </body>
 </html>
