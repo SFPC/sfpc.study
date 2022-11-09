@@ -2896,7 +2896,7 @@ video {
           top: calc(var(--header-height) + 20%) ;
         }
 
-        .shell-fullsize .browser-incompatible {
+        .shell-fullsize .newsletter-signup {
              border: 0;
              width: 100vw;
            height: 100%;
