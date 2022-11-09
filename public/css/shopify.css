@@ -216,3 +216,18 @@
   padding-top: 12px;
   padding-bottom: 12px;
 }
+
+.shopify-buy__select-icon {
+    display: none;
+}
+
+.shopify-buy__option-select__select {
+    padding-block: 5px;
+    padding-left: 5px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.shopify-buy__option-select__label {
+    font-size: var(--main-medium-text);
+}
