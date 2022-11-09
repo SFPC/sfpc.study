@@ -210,30 +210,28 @@ app.get("/events/:slug", async (req,res) => {
   }
 })
 
-
-
-
-
 app.get("/store", async (req,res) => {
-  const response = await getDatabaseEntries("11ee959b7fdb4204a9ce46c9224b1818", [{property:"Publish Date", direction:"descending"}])
-  const projectData = response.map((project) => {
-    console.log(project)
-    return parseNotionPage(project)
+  const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [{property:"Publish Date", direction:"descending"}])
+  console.log(response)
+
+  const productsData = response.map((product) => {
+    return parseNotionPage(product)
   })
-  console.log(projectData)
-  // let pageContent = getPageContent()
-  res.render("store/storefront", {projects: projectData})
+  
+  console.log(productsData)
+  res.render("store/storefront", {products: productsData})
 })
 
 app.get("/store/:slug", async (req,res) => {
   //filter by slug here
   console.log(req.params.slug)
-  const response = await getDatabaseEntry("11ee959b7fdb4204a9ce46c9224b1818", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  const response = await getDatabaseEntry(NOTION_STORE_DATABASE_ID, {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
   console.log(response)
+  
   if(response){
-    const projectData = parseNotionPage(response)
-    console.log(projectData)
-    res.render("store/product", projectData)
+    const productData = parseNotionPage(response)
+    console.log(productData)
+    res.render("store/product", productData)
   }
 })
 
@@ -317,30 +315,6 @@ app.get("/projects/:slug", async (req,res) => {
     res.render("projects/projectPage", projectData)
   }
 })
-
-app.get("/store", async (req, res) => {
-  const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
-    { property: "Publish Date", direction: "descending" },
-  ]);
-  const storeItems = response.map((storeItem) => {
-    return parseNotionPage(storeItem);
-  });
-
-  console.log({ storeItems });
-  res.render("store/storeList", { storeItems });
-});
-
-app.get("/store/:slug", async (req, res) => {
-  const response = await getDatabaseEntry(NOTION_STORE_DATABASE_ID, {
-    property: "Website-Slug",
-    rich_text: { equals: req.params.slug },
-  });
-
-  if (response) {
-    const storeItemData = parseNotionPage(response);
-    res.render("store/storeItem", storeItemData);
-  }
-});
 
 app.get("/people", async (req,res) => {
   // const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [{timestamp:"created_time", direction:"descending"}], {

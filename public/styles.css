@@ -1032,12 +1032,15 @@ section {
 
 
 
-        .fixed-support {
+        .fixed-support, .shopify-buy-frame--toggle {
           text-decoration: none;
           z-index: 9999999999999;
           position: fixed;
-          right: calc(4px + var(--body-margin)/2);
-          bottom: calc(4px + var(--footer-height));
+          right: calc(4px + var(--body-margin)/2) !important;
+          bottom: calc(4px + var(--footer-height)) !important;
+          transform: unset !important;
+          -webkit-transform: unset !important;
+          top: unset !important;
           border-radius: 100%;
           display: block;
           width: auto;
@@ -1064,19 +1067,19 @@ section {
           padding:1.2vw;
         }
 
-        .fixed-support span {
+        .fixed-support span, .shopify-buy__cart-toggle {
           display: table-cell;
           vertical-align: middle;
           transform: rotate(8deg);
         }
 
 
-                .fixed-support:hover {
+                .fixed-support:hover, .shopify-buy-frame--toggle:hover {
                 color: #000;
                 background: rgba(255,255,255,.8);
                 }
 
-                .fixed-support:hover span{
+                .fixed-support:hover span, .shopify-buy__cart-toggle:hover {
                 transform: rotate(-8deg);
                 }
 
@@ -2976,14 +2979,14 @@ video {
         }
 
 
-        .fixed-support {
+        .fixed-support, .shopify-buy__frame-toggle {
 
                     padding:3.2vw;
                     right: calc(8px + var(--body-margin)/2);
               bottom: calc(8px + var(--footer-height));
         }
 
-        select#allSections, .fixed-apply, .fixed-support {
+        select#allSections, .fixed-apply, .fixed-support, .shopify-buy__frame-toggle {
           font-size: var(--small-text);
         }
 
@@ -2996,8 +2999,6 @@ video {
             margin: calc(var(--body-margin)/2) calc(var(--body-margin)*3) var(--body-margin) 0;
             width: calc(50% - var(--body-margin));
         }
-
-
 
         #carousel-images figure:first-child {
             width: calc(80vw - var(--body-margin)*2) !important;

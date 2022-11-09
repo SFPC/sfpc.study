@@ -43,6 +43,15 @@ const CART_CONFIG = {
 };
 
 const TOGGLE_CONFIG = {
+  iframe: false,
+  contents: {
+    count: true,
+    icon: false,
+    title: "in cart",
+  },
+  text: {
+    title: "in cart",
+  },
   styles: {
     toggle: {
       "font-family": "Gill Sans, sans-serif",

@@ -137,7 +137,7 @@ background-size: 100%;
 
 
 
-.fixed-support {
+.fixed-support, .shopify-buy__frame-toggle {
     background: var(--text-link);
 }
 
