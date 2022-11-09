@@ -52,28 +52,6 @@ const TOGGLE_CONFIG = {
   text: {
     title: "in cart",
   },
-  styles: {
-    toggle: {
-      "font-family": "Gill Sans, sans-serif",
-      "background-color": "#ffffff",
-      ":hover": {
-        "background-color": "#e6e6e6",
-      },
-      ":focus": {
-        "background-color": "#e6e6e6",
-      },
-    },
-    count: {
-      "font-size": "16px",
-      color: "#000000",
-      ":hover": {
-        color: "#000000",
-      },
-    },
-    iconPath: {
-      fill: "#000000",
-    },
-  },
 };
 
 /* Loads the shopify SDK and runs the provided onLoad function afterwards. */
@@ -118,7 +96,7 @@ const initShopifyHelper = (setupShopifyFn) => {
 const initShopifyProduct = (shopifyProductId, buyButtonNodeId) => {
   console.log(shopifyProductId);
   initShopifyHelper((ui) => {
-    const test = ui.createComponent("product", {
+    ui.createComponent("product", {
       id: shopifyProductId,
       node: document.getElementById(buyButtonNodeId),
       moneyFormat: "%24%7B%7Bamount%7D%7D",
@@ -178,30 +156,6 @@ const initShopifyProduct = (shopifyProductId, buyButtonNodeId) => {
         toggle: TOGGLE_CONFIG,
       },
     });
-
-    const frameHead = document.querySelector(`${buyButtonNodeId} iframe head`);
-    const styleSheet = document.createElement("style");
-    styleSheet.innerText = `
-    @font-face {
-      font-family: 'Hershey';
-      src: url('fonts/Hershey-Noailles-Futura-Duplex-Bold.woff2') format('woff2'),
-          url('fonts/Hershey-Noailles-Futura-Duplex-Bold.woff') format('woff');
-      font-weight: bold;
-      font-style: normal;
-      font-display: block;
-  }
-  
-  @font-face {
-      font-family: 'Hershey';
-      src: url('fonts/Hershey-Noailles-Futura-Duplex-Regular.woff2') format('woff2'),
-          url('fonts/Hershey-Noailles-Futura-Duplex-Regular.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-      font-display: block;
-  }
-    `;
-
-    frameHead.appendChild(styleSheet);
   });
 };
 
@@ -210,9 +164,6 @@ const initShopifyProduct = (shopifyProductId, buyButtonNodeId) => {
 const initShopifyCart = (buyButtonNodeId) => {
   initShopifyHelper((ui) => {
     ui.createComponent("cart", {
-      // id: shopifyProductId,
-      // node: document.getElementById(buyButtonNodeId),
-      // moneyFormat: "%24%7B%7Bamount%7D%7D",
       options: {
         cart: CART_CONFIG,
         toggle: TOGGLE_CONFIG,
