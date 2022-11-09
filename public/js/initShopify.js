@@ -2,8 +2,7 @@
 // They do not inherit the CSS styles and variables from the main website so we need to manually
 // reconfigure them here.
 //
-// Some of this is copied from the Shopify code and some of it is edited to match our styling.
-//
+// NOTE: Need to disable the rest of the iframes and copy-pasta the default Shopify stylings into shopify.css
 const PRODUCT_CONFIG = {
   iframe: false,
   contents: {
