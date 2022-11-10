@@ -127,18 +127,18 @@ const initShopifyProduct = (shopifyProductId, buyButtonNodeId) => {
               },
             },
             button: {
-              "font-family": "Hershey, sans-serif",
+              "font-family": "'Hershey', sans-serif",
               "font-size": "16px",
               "padding-top": "16px",
               "padding-bottom": "16px",
-              color: "#000000",
+              color: "#ffffff",
               ":hover": {
-                color: "#000000",
-                "background-color": "#e6e6e6",
+                color: "#ffffff",
+                "background-color": "#000000",
               },
-              "background-color": "#ffffff",
+              "background-color": "#000000",
               ":focus": {
-                "background-color": "#e6e6e6",
+                "background-color": "#000000",
               },
             },
             quantityInput: {

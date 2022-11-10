@@ -4,7 +4,7 @@
  * over the button styling. However, this means that the default shopify
  * styling needs to be copy-pasta'd.
  */
-
+/*
 
 .shopify-buy__layout-vertical .shopify-buy__btn-and-quantity .shopify-buy__btn,
 .shopify-buy__layout-vertical
@@ -96,7 +96,7 @@
   display: inline-block;
   padding: 0;
   padding-top: 0px;
-  padding-bottom: 0px; 
+  padding-bottom: 0px;
   border-radius: : 0px;
   font-family: var(--main-title-font);
 }
@@ -270,4 +270,4 @@ h5.shopify-buy__cart-toggle__title {
     position: absolute;
     right: 0;
     -webkit-box-shadow: -5px 0 5px rgb(0 0 0 / 10%);
-}
+} */

@@ -2748,6 +2748,7 @@ video {
 
 
 
+
 /* Imported shopify CSS from the buy button.
  *
  * We use the buy button with `iframe: false` so we have better control
@@ -3017,6 +3018,7 @@ h5.shopify-buy__cart-toggle__title {
 }
 
 
+
 .shopify-buy__cart {
     /* height: 80%; */
     height: calc(100% - var(--footer-height) - var(--header-height)) !important;
@@ -3028,7 +3030,6 @@ h5.shopify-buy__cart-toggle__title {
     -webkit-box-shadow: -5px 0 5px rgb(0 0 0 / 10%);
     /* box-shadow: -5px 0 5px rgb(0 0 0 / 10%); */
 }
-
 
 
 
