@@ -394,7 +394,7 @@ h1 {
                  {
                   font-size: calc(var(--large-text)) !important;
                 }
- 
+
 
 
 h2, .mobile-menu-content h2 a {
@@ -528,6 +528,7 @@ h5 {
   font-weight: normal;
   font-family: var(--main-title-font);
 }
+
 
 
 h6  {
@@ -2728,6 +2729,321 @@ video {
   margin: 2vw 0;
   border-radius: var(--border-rad);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Imported shopify CSS from the buy button.
+ *
+ * We use the buy button with `iframe: false` so we have better control
+ * over the button styling. However, this means that the default shopify
+ * styling needs to be copy-pasta'd.
+ */
+.shopify-buy__layout-vertical .shopify-buy__btn-and-quantity .shopify-buy__btn,
+.shopify-buy__layout-vertical
+  .shopify-buy__btn-and-quantity
+  .shopify-buy__quantity-container,
+.shopify-buy__layout-horizontal
+  .shopify-buy__btn-and-quantity
+  .shopify-buy__btn,
+.shopify-buy__layout-horizontal
+  .shopify-buy__btn-and-quantity
+  .shopify-buy__quantity-container {
+  margin: 0 auto;
+  font-family: var(--main-title-font);
+}
+.shopify-buy__layout-vertical .shopify-buy__btn,
+.shopify-buy__layout-vertical .shopify-buy__quantity-container,
+.shopify-buy__layout-horizontal .shopify-buy__btn,
+.shopify-buy__layout-horizontal .shopify-buy__quantity-container {
+  margin: 20px auto 0;
+  font-family: var(--main-title-font);
+}
+.shopify-buy__product {
+  overflow: hidden;
+  width: 100%;
+  font-family: var(--main-title-font);
+}
+.shopify-buy__btn-and-quantity .shopify-buy__quantity-container {
+  display: inline-block;
+  vertical-align: top;
+  font-family: var(--main-title-font);
+}
+
+.shopify-buy__layout-vertical .shopify-buy__btn-and-quantity:first-child,
+.shopify-buy__layout-horizontal .shopify-buy__btn-and-quantity:first-child {
+  margin: 0 auto;
+  font-family: var(--main-title-font);
+}
+.shopify-buy__btn-and-quantity .shopify-buy__quantity {
+  background: #fff;
+  font-family: var(--main-title-font);
+}
+.shopify-buy__quantity {
+  font-size: var(--medium-text) !important;
+  /* padding-top: var(--medium-text);
+  padding-bottom: var(--medium-text); */
+  font-family: var(--main-title-font);
+}
+.shopify-buy__btn-and-quantity .shopify-buy__btn-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  font-family: var(--main-title-font);
+}
+.shopify-buy__quantity,
+.shopify-buy__quantity-increment,
+.shopify-buy__quantity-decrement {
+  border-color: #d3dbe2;
+  border-right-color: rgb(211, 219, 226);
+  line-height: 1.2;
+  font-size: var(--medium-text) !important;
+  height: auto;
+  border-radius: var(--border-rad);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-family: var(--main-title-font);
+}
+.shopify-buy__quantity {
+  border-left: 1px solid;
+  border-left-color: currentcolor;
+  border-right: 1px solid;
+  color: black;
+  width: 45px;
+  height: 30px;
+  font-size:  var(--medium-text);
+  border: none;
+  border-top-color: currentcolor;
+  border-top-style: none;
+  border-top-width: medium;
+  border-right-color: currentcolor;
+  border-right-style: none;
+  border-right-width: medium;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  border-left-color: currentcolor;
+  border-left-style: none;
+  border-left-width: medium;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  display: inline-block;
+  padding: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  /* border-radius: 0; */
+  border-radius: : 0px;
+  /* border-top: 1px solid #767676;
+  border-top-color: rgb(118, 118, 118);
+  border-bottom: 1px solid #767676;
+  border-bottom-color: rgb(118, 118, 118); */
+  font-family: var(--main-title-font);
+}
+
+.shopify-buy__layout-vertical .shopify-buy__btn-and-quantity .shopify-buy__btn,
+.shopify-buy__layout-vertical
+  .shopify-buy__btn-and-quantity
+  .shopify-buy__quantity-container,
+.shopify-buy__layout-horizontal
+  .shopify-buy__btn-and-quantity
+  .shopify-buy__btn,
+.shopify-buy__layout-horizontal
+  .shopify-buy__btn-and-quantity
+  .shopify-buy__quantity-container {
+  margin: 0 auto;
+  font-family: var(--main-title-font);
+}
+.shopify-buy__layout-vertical .shopify-buy__btn:first-child,
+.shopify-buy__layout-horizontal .shopify-buy__btn:first-child {
+  margin-top: 0;
+  font-family: var(--main-title-font);
+}
+.shopify-buy__layout-vertical .shopify-buy__btn,
+.shopify-buy__layout-vertical .shopify-buy__quantity-container,
+.shopify-buy__layout-horizontal .shopify-buy__btn,
+.shopify-buy__layout-horizontal .shopify-buy__quantity-container {
+  margin: 20px auto 0;
+  font-family: var(--main-title-font);
+}
+.shopify-buy__btn.shopify-buy__beside-quantity {
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid transparent;
+  font-family: var(--main-title-font);
+}
+.shopify-buy__btn {
+  display: inline-block;
+  font-family: var(--main-title-font);
+}
+.shopify-buy__btn {
+  background-color: transparent;
+  padding: 12px 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  letter-spacing: 0.3px;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1.2;
+  border: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  font-weight: lighter;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: -0.5px;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 3px;
+  text-decoration: underline;
+  font-family: "Hershey", sans-serif;
+  border-radius: var(--border-rad);
+  line-height: var(--medium-line-height);
+  padding-top: 8px;
+  padding-bottom: 16px;
+  color: var(--text-link);
+  background-color: transparent;
+  font-size: var(--large-text);
+  font-family: var(--main-title-font);
+}
+
+
+h5.shopify-buy__cart-toggle__title {
+  font-size: var(--medium-text) !important;
+}
+
+
+.shopify-buy__btn:hover {
+  text-decoration: none;
+}
+
+.shopify-buy__btn-and-quantity .shopify-buy__quantity {
+  border-right: 0;
+  background: #fff;
+  font-family: var(--main-title-font);
+}
+.shopify-buy__quantity  {
+  font-size: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-left: 1px solid;
+  border-left-color: currentcolor;
+  border-right: 1px solid;
+  border-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: black;
+  width: 45px;
+  height: 30px;
+  font-size: 16px;
+  border: none;
+  border-top-color: currentcolor;
+  border-top-style: none;
+  border-top-width: medium;
+  border-right-color: currentcolor;
+  border-right-style: none;
+  border-right-width: medium;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  border-left-color: currentcolor;
+  border-left-style: none;
+  border-left-width: medium;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  display: inline-block;
+  padding: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: var(--border-rad);
+  border-top: 1px solid #767676;
+  border-top-color: rgb(118, 118, 118);
+  border-bottom: 1px solid #767676;
+  border-bottom-color: rgb(118, 118, 118);
+  font-family: var(--main-title-font);
+}
+.shopify-buy__quantity,
+.shopify-buy__quantity-increment,
+.shopify-buy__quantity-decrement {
+  border-color: #d3dbe2;
+  border-right-color: rgb(211, 219, 226);
+  line-height: 1.2;
+  font-size: 15px;
+  height: auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-family: var(--main-title-font);
+}
+
+.shopify-buy__select-icon {
+    display: none;
+    font-family: var(--main-title-font);
+}
+
+.shopify-buy__option-select__select {
+    padding-block: 5px;
+    padding-left: 5px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-family: var(--main-title-font);
+        font-size: var(--main-medium-text);
+        border-radius: var(--border-rad);
+        border: 0px;
+        outline: 0px;
+}
+
+.shopify-buy__option-select__label {
+    font-size: var(--main-medium-text);
+    font-family: var(--main-title-font);
+}
+
+
+.shopify-buy__cart {
+    /* height: 80%; */
+    height: calc(100% - var(--footer-height) - var(--header-height)) !important;
+    box-shadow: 0px 0px 15px var(--box-shadow);
+    background-color: #000 !important;
+    width: calc(100% - 0px);
+    position: absolute;
+    right: 0;
+    -webkit-box-shadow: -5px 0 5px rgb(0 0 0 / 10%);
+    /* box-shadow: -5px 0 5px rgb(0 0 0 / 10%); */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

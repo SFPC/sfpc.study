@@ -127,7 +127,7 @@ const initShopifyProduct = (shopifyProductId, buyButtonNodeId) => {
               },
             },
             button: {
-              "font-family": "Gill Sans, sans-serif",
+              "font-family": "Hershey, sans-serif",
               "font-size": "16px",
               "padding-top": "16px",
               "padding-bottom": "16px",
@@ -159,7 +159,7 @@ const initShopifyProduct = (shopifyProductId, buyButtonNodeId) => {
   });
 };
 
-/* Initializes _just_ the sliding shopping cart experience without 
+/* Initializes _just_ the sliding shopping cart experience without
    any associated product/add-to-cart button. */
 const initShopifyCart = (buyButtonNodeId) => {
   initShopifyHelper((ui) => {

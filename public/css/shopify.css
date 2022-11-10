@@ -1,9 +1,11 @@
 /* Imported shopify CSS from the buy button.
  *
  * We use the buy button with `iframe: false` so we have better control
- * over the button styling. However, this means that the default shopify 
+ * over the button styling. However, this means that the default shopify
  * styling needs to be copy-pasta'd.
  */
+
+
 .shopify-buy__layout-vertical .shopify-buy__btn-and-quantity .shopify-buy__btn,
 .shopify-buy__layout-vertical
   .shopify-buy__btn-and-quantity
@@ -15,38 +17,44 @@
   .shopify-buy__btn-and-quantity
   .shopify-buy__quantity-container {
   margin: 0 auto;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__layout-vertical .shopify-buy__btn,
 .shopify-buy__layout-vertical .shopify-buy__quantity-container,
 .shopify-buy__layout-horizontal .shopify-buy__btn,
 .shopify-buy__layout-horizontal .shopify-buy__quantity-container {
   margin: 20px auto 0;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__product {
   overflow: hidden;
   width: 100%;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__btn-and-quantity .shopify-buy__quantity-container {
   display: inline-block;
   vertical-align: top;
+  font-family: var(--main-title-font);
 }
 
 .shopify-buy__layout-vertical .shopify-buy__btn-and-quantity:first-child,
 .shopify-buy__layout-horizontal .shopify-buy__btn-and-quantity:first-child {
   margin: 0 auto;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__btn-and-quantity .shopify-buy__quantity {
   background: #fff;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__quantity {
-  font-size: 16px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  font-size: var(--medium-text) !important;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__btn-and-quantity .shopify-buy__btn-wrapper {
   display: inline-block;
   vertical-align: top;
   margin: 0;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__quantity,
 .shopify-buy__quantity-increment,
@@ -54,10 +62,12 @@
   border-color: #d3dbe2;
   border-right-color: rgb(211, 219, 226);
   line-height: 1.2;
-  font-size: 15px;
+  font-size: var(--medium-text) !important;
   height: auto;
+  border-radius: var(--border-rad);
   padding-top: 12px;
   padding-bottom: 12px;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__quantity {
   border-left: 1px solid;
@@ -66,7 +76,7 @@
   color: black;
   width: 45px;
   height: 30px;
-  font-size: 16px;
+  font-size:  var(--medium-text);
   border: none;
   border-top-color: currentcolor;
   border-top-style: none;
@@ -86,12 +96,9 @@
   display: inline-block;
   padding: 0;
   padding-top: 0px;
-  padding-bottom: 0px;
-  border-radius: 0;
-  border-top: 1px solid #767676;
-  border-top-color: rgb(118, 118, 118);
-  border-bottom: 1px solid #767676;
-  border-bottom-color: rgb(118, 118, 118);
+  padding-bottom: 0px; 
+  border-radius: : 0px;
+  font-family: var(--main-title-font);
 }
 
 .shopify-buy__layout-vertical .shopify-buy__btn-and-quantity .shopify-buy__btn,
@@ -105,24 +112,29 @@
   .shopify-buy__btn-and-quantity
   .shopify-buy__quantity-container {
   margin: 0 auto;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__layout-vertical .shopify-buy__btn:first-child,
 .shopify-buy__layout-horizontal .shopify-buy__btn:first-child {
   margin-top: 0;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__layout-vertical .shopify-buy__btn,
 .shopify-buy__layout-vertical .shopify-buy__quantity-container,
 .shopify-buy__layout-horizontal .shopify-buy__btn,
 .shopify-buy__layout-horizontal .shopify-buy__quantity-container {
   margin: 20px auto 0;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__btn.shopify-buy__beside-quantity {
   display: inline-block;
   vertical-align: top;
   border: 1px solid transparent;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__btn {
   display: inline-block;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__btn {
   background-color: transparent;
@@ -140,7 +152,7 @@
   line-height: 1.2;
   border: 0;
   -moz-appearance: none;
-  -webkit-appearance: none;  
+  -webkit-appearance: none;
   font-weight: lighter;
   transition: all 0.2s ease-in-out;
   letter-spacing: -0.5px;
@@ -154,8 +166,15 @@
   padding-bottom: 16px;
   color: var(--text-link);
   background-color: transparent;
-  font-size: var(--medium-text);
+  font-size: var(--large-text);
+  font-family: var(--main-title-font);
 }
+
+
+h5.shopify-buy__cart-toggle__title {
+  font-size: var(--medium-text) !important;
+}
+
 
 .shopify-buy__btn:hover {
   text-decoration: none;
@@ -164,6 +183,7 @@
 .shopify-buy__btn-and-quantity .shopify-buy__quantity {
   border-right: 0;
   background: #fff;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__quantity  {
   font-size: 16px;
@@ -204,6 +224,7 @@
   border-top-color: rgb(118, 118, 118);
   border-bottom: 1px solid #767676;
   border-bottom-color: rgb(118, 118, 118);
+  font-family: var(--main-title-font);
 }
 .shopify-buy__quantity,
 .shopify-buy__quantity-increment,
@@ -213,12 +234,14 @@
   line-height: 1.2;
   font-size: 15px;
   height: auto;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-family: var(--main-title-font);
 }
 
 .shopify-buy__select-icon {
     display: none;
+    font-family: var(--main-title-font);
 }
 
 .shopify-buy__option-select__select {
@@ -226,8 +249,25 @@
     padding-left: 5px;
     margin-top: 12px;
     margin-bottom: 12px;
+    font-family: var(--main-title-font);
+        font-size: var(--main-medium-text);
+        border-radius: var(--border-rad);
+        border: 0px;
+        outline: 0px;
 }
 
 .shopify-buy__option-select__label {
     font-size: var(--main-medium-text);
+    font-family: var(--main-title-font);
+}
+
+
+.shopify-buy__cart {
+    height: calc(100% - var(--footer-height) - var(--header-height)) !important;
+    box-shadow: 0px 0px 15px var(--box-shadow);
+    background-color: #000 !important;
+    width: calc(100% - 0px);
+    position: absolute;
+    right: 0;
+    -webkit-box-shadow: -5px 0 5px rgb(0 0 0 / 10%);
 }
