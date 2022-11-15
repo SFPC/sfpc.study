@@ -2219,6 +2219,16 @@ section.stacked-4 {
     line-height: calc(var(--medium-line-height)*1.5);
 }
 
+.market-details.class-details .apply {
+    border-radius: var(--border-rad);
+    margin-top: 0px;
+}
+
+.market-details.class-details .details {
+  align-content: center;
+align-items: center;
+}
+
       .class-details .details {
               display: flex;
               gap: var(--body-margin);
@@ -2765,14 +2775,14 @@ video {
 .shopify-buy__layout-horizontal
   .shopify-buy__btn-and-quantity
   .shopify-buy__quantity-container {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   font-family: var(--main-title-font);
 }
 .shopify-buy__layout-vertical .shopify-buy__btn,
 .shopify-buy__layout-vertical .shopify-buy__quantity-container,
 .shopify-buy__layout-horizontal .shopify-buy__btn,
 .shopify-buy__layout-horizontal .shopify-buy__quantity-container {
-  margin: 20px auto 0;
+  /* margin: 0px auto 0; */
   font-family: var(--main-title-font);
 }
 .shopify-buy__product {
@@ -2788,7 +2798,7 @@ video {
 
 .shopify-buy__layout-vertical .shopify-buy__btn-and-quantity:first-child,
 .shopify-buy__layout-horizontal .shopify-buy__btn-and-quantity:first-child {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   font-family: var(--main-title-font);
 }
 .shopify-buy__btn-and-quantity .shopify-buy__quantity {
@@ -2879,7 +2889,8 @@ video {
 .shopify-buy__layout-vertical .shopify-buy__quantity-container,
 .shopify-buy__layout-horizontal .shopify-buy__btn,
 .shopify-buy__layout-horizontal .shopify-buy__quantity-container {
-  margin: 20px auto 0;
+  /* margin: 0px auto 0; */
+  margin-top: calc(var(--body-margin)/2);
   font-family: var(--main-title-font);
 }
 .shopify-buy__btn.shopify-buy__beside-quantity {
@@ -2894,9 +2905,9 @@ video {
 }
 .shopify-buy__btn {
   background-color: transparent;
-  padding: 12px 40px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  /* padding: 12px 40px; */
+  padding-top: var(--body-margin);
+  padding-bottom: var(--body-margin);
   letter-spacing: 0.3px;
   display: block;
   cursor: pointer;
@@ -2918,8 +2929,8 @@ video {
   font-family: "Hershey", sans-serif;
   border-radius: var(--border-rad);
   line-height: var(--medium-line-height);
-  padding-top: 8px;
-  padding-bottom: 16px;
+  /* padding-top: 8px;
+  padding-bottom: 16px; */
   color: var(--text-link);
   background-color: transparent;
   font-size: var(--large-text);
