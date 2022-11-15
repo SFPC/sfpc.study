@@ -1065,7 +1065,14 @@ section {
           vertical-align: middle;
           /* width: calc(var(--medium-text)*2);
           height: calc(var(--medium-text)*2); */
-          padding:1.2vw;
+          padding:1.2vw !important;
+          padding-right: 1.2vw !important;
+        }
+
+
+        .shopify-buy-frame.shopify-buy-frame--toggle{
+
+          padding-right: 1.2vw !important;
         }
 
         .fixed-support span, .shopify-buy__cart-toggle {
@@ -2906,8 +2913,8 @@ video {
 .shopify-buy__btn {
   background-color: transparent;
   /* padding: 12px 40px; */
-  padding-top: var(--body-margin);
-  padding-bottom: var(--body-margin);
+  padding-top: calc(var(--body-margin) * 2);
+  padding-bottom: 0px;
   letter-spacing: 0.3px;
   display: block;
   cursor: pointer;
@@ -2935,6 +2942,7 @@ video {
   background-color: transparent;
   font-size: var(--large-text);
   font-family: var(--main-title-font);
+  padding-left: 0px;
 }
 
 
