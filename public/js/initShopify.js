@@ -7,18 +7,13 @@ const PRODUCT_CONFIG = {
   iframe: false,
   contents: {
     img: false,
-    quantity: true,
-    button: true,
-    buttonWithQuantity: false,
+    button: false,
+    buttonWithQuantity: true,
     title: false,
     price: false,
   },
   text: {
     button: "Add to cart",
-  },
-  classes: {
-    quantity: "details shopify-buy__quantity-container",
-    // quantityInput: "labels-info shopify-buy__quantity",
   },
 };
 
@@ -116,13 +111,6 @@ const initShopifyProduct = (shopifyProductId, buyButtonNodeId) => {
             },
           },
         },
-        option: {
-          classes: {
-            option: "details shopify-buy__option-select",
-            wrapper: "shopify-buy__option-select-wrapper labels-info",
-            label: "shopify-buy__option-select__label labels",
-          },
-        },
         modalProduct: {
           contents: {
             img: false,
@@ -163,6 +151,7 @@ const initShopifyProduct = (shopifyProductId, buyButtonNodeId) => {
             button: "Add to cart",
           },
         },
+        option: {},
         cart: CART_CONFIG,
         toggle: TOGGLE_CONFIG,
       },
