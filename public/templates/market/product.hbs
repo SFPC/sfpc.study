@@ -85,7 +85,7 @@
 
     <div class="crt-overlay crt-overlay-fullsize"></div>
 
-    <div id="shell" class="shell shell-fullsize about sfpc">
+    <div id="shell" class="shell shell-fullsize market about sfpc">
 
       <div class="loader-content">
         <p tabindex="0" class="large">
@@ -100,11 +100,21 @@
       <div class="hide-content shell-content">
         <section>
           <div class="grid-2">
-            <h1>
+            <h1 class="title">
               <span>
                 {{Name}}
               </span>
             </h1>
+
+            {{#if Donor-Name}}
+              <h6 class="byline">
+                donated by {{Donor-Name}}
+
+              </h6>
+              <div class="break-noline"></div>
+            {{/if}}
+
+
           </div>
 
           <div class="grid-2 market-details class-details">
@@ -115,14 +125,28 @@
             <div class="break-noline-small"></div> -->
             <img id="class-image" src="{{[Image-URL]}}" />
 
+            {{#if [Description]}}
             <div class="details">
+
+
+                  <p>
+                    {{{[Description]}}}
+                  </p>
+
+            </div>
+
+            {{/if}}
+
+            <div class="details">
+
+
               <div class="labels">Type</div>
               <div class="labels-info" id="teachers-list">{{#each
                   [Product-Type]
                 }}{{this}}{{#unless @last}},{{/unless}} {{/each}}</div>
             </div>
 
-            {{#if Donor-Name}}
+            <!-- {{#if Donor-Name}}
               <div class="details">
                 <div class="labels">Donors</div>
                 <div class="labels-info" id="teachers-list">{{#each
@@ -130,18 +154,36 @@
                   }}{{this}}{{#unless @last}},{{/unless}} {{/each}}
               </div>
               </div>
-            {{/if}}
+            {{/if}} -->
 
             {{#if Value}}
+              <!-- <div class="details">
+                <div class="labels">Item Value</div>
+                <div class="labels-info" id="">
+                      ${{Value}}
+                </div>
+              </div> -->
+
               <div class="details">
                 <div class="labels">Cost</div>
                 <div class="labels-info" id="">
                   <h3>
-                    <span id="”cost”">${{Value}}</span>
-                    {{{Cost-Details}}}</h3>
+                    <span id="”cost”">${{Cost}}</span> </h3>
                 </div>
               </div>
-              <p class="large apply" id="add-to-cart-button-wrapper"/>
+
+
+              <p class="apply" id="add-to-cart-button-wrapper"/>
+
+              <!-- <div style="clear:both"></div>
+              <em>
+                By buying a raffle ticket, you will be donating the raffle ticket cost to fund scholarships at SFPC.
+                Your name will be entered into a draw to win the item you are buying a ticket for. For this item, the
+                raffle period begins on <b>{{[Raffle-Start].start}}</b> and ends on {{[Raffle-End].start}}.
+                Winner(s) will be announced on {{[Winner-Announce].start}}.
+              </em> -->
+
+
             {{/if}}
 
             {{#if More-Info}}
@@ -150,7 +192,7 @@
           </div>
         </section>
 
-        {{#if [Description]}}
+        <!-- {{#if [Description]}}
           <div class="break"></div>
           <section id="section-description">
             <div class="grid-2">
@@ -162,9 +204,9 @@
               </p>
             </div>
           </section>
-        {{/if}}
+        {{/if}} -->
 
-        {{#if [More Image URLs]}}
+        <!-- {{#if [More Image URLs]}}
           <div class="break-noline"></div>
           <div class="grid-container" id="participate-archive">
             <main class="grid-item main">
@@ -183,9 +225,9 @@
               </main>
             </main>
           </div>
-        {{/if}}
+        {{/if}} -->
 
-        <div class="break"></div>
+        <!-- <div class="break"></div> -->
         <div class="break-noline"></div>
         <div class="break-endpage"></div>
       </div>

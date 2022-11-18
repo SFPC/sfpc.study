@@ -90,8 +90,7 @@
                     this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
                 <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
                 {{#if [Donor-Name]}}
-                <h6>donated by {{#each
-                    this.[Donor-Name]}}{{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</h6> {{/if}}
+                <h6>donated by {{Donor-Name}} </h6> {{/if}}
                 <!-- <h6>{{this.[Short Description]}}</h6> -->
               </div>
               <div class="bottom">

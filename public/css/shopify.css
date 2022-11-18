@@ -271,3 +271,25 @@ h5.shopify-buy__cart-toggle__title {
     right: 0;
     -webkit-box-shadow: -5px 0 5px rgb(0 0 0 / 10%);
 } */
+
+.shopify-buy-frame {
+  padding-right: 0 !important;
+}
+
+.shopify-buy__quantity-container::before {
+  content: 'Quantity';
+  width: calc(25% - var(--body-margin)/2);
+  line-height: calc(var(--medium-line-height));
+  font-family: var(--main-special-font);
+  text-transform: lowercase;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+@media (max-width: 768px) {
+  .shopify-buy__quantity-container::before {
+    width: calc(40% - var(--body-margin)/2);
+  }
+}
