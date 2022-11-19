@@ -106,9 +106,9 @@
               </span>
             </h1>
 
-            {{#if Donor-Name}}
+            {{#if Contributor}}
               <h6 class="byline">
-                donated by {{Donor-Name}}
+                donated by {{Contributor}}
 
               </h6>
               <div class="break-noline"></div>
@@ -143,14 +143,16 @@
               <div class="labels">Type</div>
               <div class="labels-info" id="teachers-list">{{#each
                   [Product-Type]
-                }}{{this}}{{#unless @last}},{{/unless}} {{/each}}</div>
+                }}{{this}}{{#unless @last}},{{/unless}} {{/each}}
+                {{#if [Tags]}}({{#each [Tags]}}{{this}}{{#unless @last}},{{/unless}}{{/each}}){{/if}}
+              </div>
             </div>
 
-            <!-- {{#if Donor-Name}}
+            <!-- {{#if Contributor}}
               <div class="details">
                 <div class="labels">Donors</div>
                 <div class="labels-info" id="teachers-list">{{#each
-                    Donor-Name
+                    Contributor
                   }}{{this}}{{#unless @last}},{{/unless}} {{/each}}
               </div>
               </div>

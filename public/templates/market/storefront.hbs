@@ -89,8 +89,8 @@
                 <h4 class="type type-list-comma"><a href="/market/{{this.[Website-Slug]}}">{{#each
                     this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
                 <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
-                {{#if [Donor-Name]}}
-                <h6>donated by {{Donor-Name}} </h6> {{/if}}
+                {{#if [Contributor]}}
+                <h6>donated by {{Contributor}} </h6> {{/if}}
                 <!-- <h6>{{this.[Short Description]}}</h6> -->
               </div>
               <div class="bottom">
