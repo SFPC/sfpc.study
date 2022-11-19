@@ -22,6 +22,7 @@
     content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
   <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
   <link href="/styles.css" rel="stylesheet">
+  <link href="/css/shopify.css" rel="stylesheet" />
   <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
   <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico" />
 
@@ -77,7 +78,7 @@
 
       <div class="break-noline"></div>
 
-      <section id="section-projects" class="stacked stacked-4">
+      <section id="section-market" class="stacked stacked-4">
         <div class="grid-1 participate">
           {{#each products}}
           <div id="{{this.[Website-Slug]}}"
@@ -92,7 +93,7 @@
                 {{#if [Contributor]}}
                 <h6>donated by {{Contributor}} </h6> {{/if}}
                 <BR>
-                  <h3><span id=”cost”>${{Cost}}</span></h3> 
+                  <h3><span id=”cost”>${{Cost}}</span></h3>
               </div>
 
             </div>

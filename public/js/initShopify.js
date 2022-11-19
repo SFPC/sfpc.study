@@ -23,6 +23,7 @@ const PRODUCT_CONFIG = {
 };
 
 const CART_CONFIG = {
+  iframe: false, 
   styles: {
     button: {
       "font-family": "Gill Sans, sans-serif",
