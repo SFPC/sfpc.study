@@ -91,15 +91,10 @@
                 <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
                 {{#if [Contributor]}}
                 <h6>donated by {{Contributor}} </h6> {{/if}}
-                <!-- <h6>{{this.[Short Description]}}</h6> -->
+                <BR>
+                  <h3><span id=”cost”>${{Cost}}</span></h3> 
               </div>
-              <div class="bottom">
-                {{#eq [Sell-Type] "Purchase"}}
-                {{#if Price}}
-                <h3><span id=”cost”>${{Price}}</span></h3>
-                {{else}}{{/if}}
-                {{/eq}}
-              </div>
+
             </div>
           </div>
           {{/each}}
