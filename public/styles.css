@@ -577,7 +577,7 @@ img {
   position: fixed;
   background: var(--background);
   padding: calc(var(--body-margin)/2) calc(var(--body-margin)/2) var(--footer-height) calc(var(--body-margin)/2);
-  z-index: 999999999999999999999999999999;
+  z-index: 999999999999999999999999999999 !important;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -1593,6 +1593,15 @@ span.reference {
               webkit-hyphens: none;
              -moz-hyphens: none;
                   hyphens: none;
+        }
+
+        .product .top h2, .product .top h6 {
+            /* overflow: hidden; */
+            overflow-wrap: anywhere;
+            /* word-break: break-word; */
+            webkit-hyphens: none;
+            -moz-hyphens: none;
+            hyphens: none;
         }
 
         /* .type-list-comma i:last-of-type {

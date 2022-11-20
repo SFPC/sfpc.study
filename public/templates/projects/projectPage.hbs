@@ -94,8 +94,10 @@
                       <h4 class="noline">
                       {{Status.[0]}} {{[Release Date].start}}
 
-                      <a href="/sessions/{{[Session-Slug]}}"> <span class="blog-tag"><span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}}</span></span></a>
+                      {{#if [Session-Slug]}}
 
+                        <a href="/sessions/{{[Session-Slug]}}"> <span class="blog-tag"><span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}}</span></span></a>
+                        {{/if}}
 
 
                       </h4>

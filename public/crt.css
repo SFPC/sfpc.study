@@ -36,6 +36,11 @@ iframe {
 filter: grayscale(100%);
 }
 
+.shopify-buy__cart-item__image {
+  -webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+}
+
 .breadcrumb.fixed a, .breadcrumb.fixed {
   color: #000;
 }

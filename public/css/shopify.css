@@ -369,7 +369,7 @@ input {
 
 
 .shopify-buy-frame--cart {
-  max-width: 25vw !important;
+  max-width: calc(50vw - (var(--body-margin)/2))  !important;
 }
 .shopify-buy__cart-wrapper {
 	height: 100%;
@@ -785,6 +785,20 @@ input {
       max-width: 100vw !important;
       width: 100%;
     }
+
+    .shopify-buy__cart {
+    	height: 100% !important;
+    	width: calc(100%);
+    	position: absolute;
+    	right: 0px;
+    	-webkit-box-shadow: -5px 0 5px rgba(0, 0, 0, 0.1);
+    	box-shadow: -5px 0 5px rgba(0, 0, 0, 0.1);
+      margin-top: 0px ;
+      border-radius: var(--border-rad);
+      color: var(--background);
+
+    }
+
 
 }
 
