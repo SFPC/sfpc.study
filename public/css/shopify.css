@@ -391,13 +391,13 @@ input {
 
 }
 .shopify-buy__cart__header {
-	padding: 20px;
-	padding-right: 40px;
+	padding: var(--body-margin);
+	padding-right: var(--body-margin);
 	position: relative;
 	z-index: 2147483647;
 	background-color: inherit;
   color: var(--background);
-  var(--body-margin)
+
 }
 .shopify-buy__cart__title {
 	/* font-size: 18px; */
