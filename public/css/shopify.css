@@ -430,7 +430,7 @@ input {
 	overflow-y: auto;
 	height: 100%;
 	position: relative;
-	padding: 0 20px calc(var(--body-margin)*4) 20px;
+	padding: 0 calc(var(--body-margin)) calc(var(--body-margin)*4) calc(var(--body-margin));
 	-webkit-overflow-scrolling: touch;
 	-webkit-perspective: 400px;
 	perspective: 400px;
@@ -472,7 +472,7 @@ input {
 }
 .shopify-buy__cart-item__price {
 	float: right;
-	font-size: 14px;
+	font-size: var(--small-text);
 	font-weight: bold;
 	line-height: 26px;
 }
@@ -489,11 +489,11 @@ input {
   font-weight: normal;
 }
 .shopify-buy__cart-item__full-price {
-	font-size: 12px;
-	line-height: 12px;
+	font-size: var(--small-text);
+	line-height: var(--small-text);
 }
 .shopify-buy__cart-item__discount {
-	font-size: 12px;
+	font-size: var(--small-text);
 	word-wrap: break-word;
 	text-transform: uppercase
 }
@@ -501,8 +501,8 @@ input {
 	margin-top: 5px;
 }
 .shopify-buy__cart-item__discount__icon {
-	width: 12px;
-	height: 12px;
+	width: var(--small-text);
+	height: var(--small-text);
 	vertical-align: top;
 	fill: currentColor;
 }
@@ -510,7 +510,7 @@ input {
 	margin-left: 80px;
 	margin-bottom: 10px;
 	color: var(--background);
-	font-size: 12px;
+	font-size: var(--small-text);
 	max-width: 220px;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -561,20 +561,20 @@ input {
   font-family: var(--main-title-font);
 }
 .shopify-buy__cart__discount__text__icon {
-	width: 11px;
-	height: 11px;
+	width: var(--small-text);
+	height: var(--small-text);
 	vertical-align: top;
 	fill: currentColor;
 }
 .shopify-buy__cart__discount__amount {
-	font-size: 12px;
-	line-height: 12px;
+	font-size: var(--small-text);
+	line-height: var(--small-text);
 	-webkit-flex-shrink: 0;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
 }
 .shopify-buy__cart__currency {
-	font-size: 12px;
+	font-size: var(--small-text);
 }
 .shopify-buy__cart__notice {
 	/* font-size: 11px; */
@@ -734,7 +734,7 @@ input {
 }
 
 .shopify-buy__btn.shopify-buy__btn--cart-checkout:focus {
-	background-color: #e6e6e6;
+	/* background-color: #e6e6e6; */
 }
 
 .shopify-buy__btn.shopify-buy__btn--cart-checkout {
@@ -796,7 +796,14 @@ input {
       margin-top: 0px ;
       border-radius: var(--border-rad);
       color: var(--background);
+    }
 
+    .shopify-buy-frame--toggle {
+      padding: 3vw !important;
+    }
+
+    .shopify-buy-frame.shopify-buy-frame--toggle {
+    padding-right: 3vw !important;
     }
 
 
