@@ -391,8 +391,7 @@ input {
 
 }
 .shopify-buy__cart__header {
-	padding: var(--body-margin);
-	padding-right: var(--body-margin);
+	padding: calc(var(--body-margin)*2) var(--body-margin) var(--body-margin) var(--body-margin); 
 	position: relative;
 	z-index: 2147483647;
 	background-color: inherit;
