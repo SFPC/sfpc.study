@@ -1,8 +1,3 @@
-// The config styles below are required for styling the HTML elements within Shopify iframes.
-// They do not inherit the CSS styles and variables from the main website so we need to manually
-// reconfigure them here.
-//
-// NOTE: Need to disable the rest of the iframes and copy-pasta the default Shopify stylings into shopify.css
 const PRODUCT_CONFIG = {
   iframe: false,
   contents: {
@@ -23,7 +18,7 @@ const PRODUCT_CONFIG = {
 };
 
 const CART_CONFIG = {
-  iframe: false, 
+  iframe: false,
   styles: {
     button: {
       "font-family": "Gill Sans, sans-serif",
@@ -99,15 +94,25 @@ const initShopifyHelper = (setupShopifyFn) => {
 
 /* Initializes the Add to cart / Buy button for a given product, as well as the
    shopping cart sliding window. */
-const initShopifyProduct = (shopifyProductId, buyButtonNodeId) => {
+const initShopifyProduct = (
+  shopifyProductId,
+  buyButtonNodeId,
+  addToCartText
+) => {
   console.log(shopifyProductId);
+
   initShopifyHelper((ui) => {
     ui.createComponent("product", {
       id: shopifyProductId,
       node: document.getElementById(buyButtonNodeId),
       moneyFormat: "%24%7B%7Bamount%7D%7D",
       options: {
-        product: PRODUCT_CONFIG,
+        product: {
+          ...PRODUCT_CONFIG,
+          text: {
+            button: addToCartText,
+          },
+        },
         productSet: {
           styles: {
             products: {
