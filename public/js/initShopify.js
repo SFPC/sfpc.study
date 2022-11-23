@@ -97,7 +97,9 @@ const initShopifyHelper = (setupShopifyFn) => {
 const initShopifyProduct = (
   shopifyProductId,
   buyButtonNodeId,
-  addToCartText
+  addToCartText,
+  customButtonClasses,
+  customButtonWrapperClasses
 ) => {
   console.log(shopifyProductId);
 
@@ -111,6 +113,12 @@ const initShopifyProduct = (
           ...PRODUCT_CONFIG,
           text: {
             button: addToCartText,
+          },
+          classes: {
+            quantity: "details shopify-buy__quantity-container",
+            button: "shopify-buy__btn " + customButtonClasses,
+            buttonWrapper:
+              "shopify-buy__btn-wrapper " + customButtonWrapperClasses,
           },
         },
         productSet: {
