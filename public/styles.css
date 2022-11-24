@@ -1079,7 +1079,12 @@ section {
           display: table-cell;
           vertical-align: middle;
           transform: rotate(8deg);
+/*          line-height: 2;*/ 
         }
+
+.fixed-support span {
+    line-height: 2;
+}
 
 
                 .fixed-support:hover, .shopify-buy-frame--toggle:hover {
