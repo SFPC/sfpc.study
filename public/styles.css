@@ -3345,8 +3345,13 @@ h5.shopify-buy__cart-toggle__title {
 
                     padding:3.2vw;
                     right: calc(8px + var(--body-margin)/2);
-              bottom: calc(8px + var(--footer-height));
+              bottom: calc(8px + var(--footer-height)); 
         }
+    
+    h5.shopify-buy__cart-toggle__title, .shopify-buy__cart-toggle__count {
+        
+            font-size: var(--small-text) !important;
+    }
 
         select#allSections, .fixed-apply, .fixed-support, .shopify-buy__frame-toggle {
           font-size: var(--small-text);
