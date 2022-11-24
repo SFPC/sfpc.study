@@ -111,7 +111,7 @@
 
 
           <div id="{{this.[Website-Slug]}}"
-            class="grid-4 featured {{this.[Website-Slug]}}" data-location="
+            class="event grid-4 featured {{this.[Website-Slug]}}" data-location="
             ">
             <div class="featured-text">
               <img src="{{this.[Promo Image]}}">
@@ -133,6 +133,14 @@
                 {{#if Location}}
                 <h4 class="details">
                   {{this.[Location]}}
+                </h4>
+                {{/if}}
+
+                  {{#if [Session-Slug]}}
+                <BR>
+                <h4 class="noline">
+
+                <a href="/sessions/{{[Session-Slug]}}"> <span class="blog-tag"><span id="tag" class="{{[Session-Slug]}}">{{[Website-Session]}}</span></span></a>
                 </h4>
                 {{/if}}
 
