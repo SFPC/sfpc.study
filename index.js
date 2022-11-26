@@ -211,11 +211,11 @@ app.get("/events/:slug", async (req,res) => {
 })
 
 app.get("/market", async (req,res) => {
-  const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [{property:"Publish Date", direction:"descending"}])
+  const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [{property:"Cost", direction:"ascending"}])
   console.log(response)
 
   const productsData = response.map((product) => {
-    return parseNotionPage(product)
+    return parseProductData(product)
   })
 
   console.log(productsData)
@@ -229,7 +229,7 @@ app.get("/market/:slug", async (req,res) => {
   console.log(response)
 
   if(response){
-    const productData = parseNotionPage(response)
+    const productData = parseProductData(response)
     console.log(productData)
     res.render("market/product", productData)
   }
@@ -531,6 +531,18 @@ async function getPageContent(notionId, contentToggleName="web content"){
   //
 // Notion Parsing Functions Below
 //
+
+
+function parseProductData(apiResponse){
+  const productInfo = apiResponse.properties;
+  let returnObj = parseNotionPage(apiResponse);
+  //this is the data that will be passes to the class template
+
+  returnObj.cost=productInfo["Cost"]?.number
+
+  return returnObj
+
+}
 
 
 function parseSessionData(apiResponse){
