@@ -210,7 +210,7 @@ app.get("/events/:slug", async (req,res) => {
   }
 })
 
-app.get("/market", async (req,res) => {
+app.get("/fundraiser", async (req,res) => {
   const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [{property:"Cost", direction:"ascending"}])
   console.log(response)
 
@@ -219,10 +219,10 @@ app.get("/market", async (req,res) => {
   })
 
   console.log(productsData)
-  res.render("market/storefront", {products: productsData})
+  res.render("fundraiser/storefront", {products: productsData})
 })
 
-app.get("/market/:slug", async (req,res) => {
+app.get("/fundraiser/:slug", async (req,res) => {
   //filter by slug here
   console.log(req.params.slug)
   const response = await getDatabaseEntry(NOTION_STORE_DATABASE_ID, {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
@@ -231,7 +231,7 @@ app.get("/market/:slug", async (req,res) => {
   if(response){
     const productData = parseProductData(response)
     console.log(productData)
-    res.render("market/product", productData)
+    res.render("fundraiser/product", productData)
   }
 })
 
