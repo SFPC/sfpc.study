@@ -113,22 +113,66 @@
 
             {{#if Contributor}}
               <h6 class="byline">
-                donated by {{Contributor}}
+                by {{Contributor}}
 
               </h6>
-              <div class="break-noline"></div>
+              <!-- {{#if [moreImages].[1]}}<div class="break-noline-small"></div>{{else}} -->
+              <div class="break-noline-small"></div>
+              <!-- {{/if}} -->
             {{/if}}
 
 
           </div>
 
-          <div class="grid-2 market-details class-details">
+          <!-- <div class="grid-2 market-details class-details"> -->
             <!-- <h4 class="noline">
               Published on {{[Publish Date].start}}
             </h4>
 
             <div class="break-noline-small"></div> -->
-            <img id="class-image" src="{{[Image-URL]}}" />
+
+
+      {{#if [moreImages].[1]}}
+            <!-- </div> -->
+              <div class="grid-2"></div>
+            </section>
+
+                <div class="grid-container product-images" id="participate-archive">
+
+                  <main class="grid-item main">
+                    <main class="grid-item main">
+                      <div class="carousel-items items carousel-content participate-content">
+                        <div id="carousel-images" class="class-images after-launch">
+
+                          {{#each moreImages}}
+                          <figure class="item participate-img"><img src="{{this}}">
+                          </figure>
+                          {{/each}}
+                          {{#if promoGraphic}}
+                          <figure class="item participate-img"><img src="{{promoGraphic}}">
+                          </figure>
+                          {{/if}}
+
+                        </div>
+
+
+                      </div>
+
+
+                    </main>
+                  </main>
+
+                </div>
+              <section>
+
+                <div class="grid-2"></div>
+                <div class="grid-2 market-details class-details">
+            {{else}}
+
+                <div class="grid-2 market-details class-details">
+                 <img id="class-image" src="{{[Image-URL]}}" />
+
+            {{/if}}
 
             {{#if [Description]}}
             <div class="details">
@@ -190,11 +234,12 @@
                 Winner(s) will be announced on {{[Winner-Announce].start}}.
               </em> -->
 
-                <div class="break-noline-small"></div>
+                <div class="break-noline"></div>
 
             {{/if}}
 
 
+            <h6>Other ways to support...</h6>
             <div class="addon-item">
               <div class="item">
                 <img src="https://target.scene7.com/is/image/Target/GUEST_51adad5c-3e88-46eb-861e-c2cd0319a672?wid=488&hei=488&fmt=pjpeg">

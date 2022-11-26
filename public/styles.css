@@ -2263,6 +2263,9 @@ align-items: center;
     display: block;
     line-height: var(--small-text);
 }
+.product-images {
+  margin-bottom: calc(var(--text-margin)/4);
+}
 
       .class-details .details {
               display: flex;
@@ -2973,7 +2976,7 @@ video {
 
 .addon .shopify-buy__btn  {
   font-size: var(--medium-text);
-  padding-top: calc(var(--body-margin) );
+  padding-top: var(--program-margin);
 }
 
 .addon .details {
@@ -2981,11 +2984,11 @@ video {
 }
 
 .addon-item {
-  padding: calc(var(--body-margin)/2);
+  padding: var(--program-margin);
   border: 2px dotted var(--text-color);
   /* border-width: 2px; */
   border-radius: var(--border-rad);
-  margin-top: calc(var(--body-margin));
+  margin-top: calc(var(--body-margin)/2);
 }
 
 .addon-item .item {
@@ -2997,7 +3000,7 @@ video {
   border-radius: var(--border-rad);
   width: calc(25% - var(--body-margin));
   float: left;
-  margin-right: calc(var(--body-margin));
+  margin-right: calc(var(--program-margin)*2);
   margin-bottom: 0px !important;
 }
 
