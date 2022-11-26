@@ -610,6 +610,7 @@ input {
 .shopify-buy__cart-empty-text {
 	padding: 10px 15px;
 	text-align: center;
+  font-family: var(--main-title-font);
 }
 .shopify-buy__btn--cart-checkout {
 	clear: both;

@@ -23,10 +23,10 @@ const PRODUCT_CONFIG = {
 };
 
 const CART_CONFIG = {
-  iframe: false, 
+  iframe: false,
   styles: {
     button: {
-      "font-family": "Gill Sans, sans-serif",
+      "font-family": "'Hershey', sans-serif",
       "font-size": "16px",
       "padding-top": "16px",
       "padding-bottom": "16px",

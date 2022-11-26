@@ -1079,7 +1079,7 @@ section {
           display: table-cell;
           vertical-align: middle;
           transform: rotate(8deg);
-/*          line-height: 2;*/ 
+/*          line-height: 2;*/
         }
 
 .fixed-support span {
@@ -2964,8 +2964,6 @@ video {
   font-family: "Hershey", sans-serif;
   border-radius: var(--border-rad);
   line-height: var(--medium-line-height);
-  /* padding-top: 8px;
-  padding-bottom: 16px; */
   color: var(--text-link);
   background-color: transparent;
   font-size: var(--large-text);
@@ -2973,6 +2971,41 @@ video {
   padding-left: 0px;
 }
 
+.addon .shopify-buy__btn  {
+  font-size: var(--medium-text);
+  padding-top: calc(var(--body-margin) );
+}
+
+.addon .details {
+  display: none;
+}
+
+.addon-item {
+  padding: calc(var(--body-margin)/2);
+  border: 2px dotted var(--text-color);
+  /* border-width: 2px; */
+  border-radius: var(--border-rad);
+  margin-top: calc(var(--body-margin));
+}
+
+.addon-item .item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.addon-item .item img {
+  border-radius: var(--border-rad);
+  width: calc(25% - var(--body-margin));
+  float: left;
+  margin-right: calc(var(--body-margin));
+  margin-bottom: 0px !important;
+}
+
+.addon-item .item p {
+  width: calc(75%);
+  display: inline-block;
+  margin-bottom: 0px !important;
+}
 
 h5.shopify-buy__cart-toggle__title {
   font-size: var(--medium-text) !important;
@@ -3345,11 +3378,11 @@ h5.shopify-buy__cart-toggle__title {
 
                     padding:3.2vw;
                     right: calc(8px + var(--body-margin)/2);
-              bottom: calc(8px + var(--footer-height)); 
+              bottom: calc(8px + var(--footer-height));
         }
-    
+
     h5.shopify-buy__cart-toggle__title, .shopify-buy__cart-toggle__count {
-        
+
             font-size: var(--small-text) !important;
     }
 
