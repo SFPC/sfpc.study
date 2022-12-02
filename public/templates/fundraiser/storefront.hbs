@@ -48,13 +48,44 @@
   <script src="/js/initShopify.js"></script>
   <script>
     initShopifyCart()
+
+    initShopifyProduct("7864334090391", "addon-inkind-wrapper")
   </script>
 </head>
 
 
 <body>
   {{> header}}
-  {{> footer}}
+
+  <div id="footer" class="footer">
+          <div class="mode"><button id="mode-toggle"></button></a></div>
+        </div>
+
+
+
+        <div class="website-grid grid-hide  fundraiser-winter-23">
+          <div class="grid-inner fundraiser-winter-23">
+          <section>
+            <div class="grid-2">
+              <div class="chars chars1"></div>
+              <p class="large">School</p>
+            </div>
+            <div class="grid-2">
+              <div class="chars chars2"></div>
+              <p class="large">for</p>
+            </div>
+            <div class="grid-2">
+              <div class="chars chars3"></div>
+              <p class="large">Poetic</p>
+            </div>
+            <div class="grid-2">
+              <div class="chars chars4"></div>
+              <p class="large">Computation</p>
+            </div>
+          </section>
+        </div>
+        </div>
+
 
   <div class="crt-overlay crt-overlay-fullsize"></div>
 
@@ -83,7 +114,28 @@
         </div>
       </section>
 
-      <div class="break-noline"></div>
+      <!-- <div class="break-noline"></div> -->
+
+      <section class="stacked stacked-4">
+        <div class="grid-1 featured fundraiser-winter-23 session">
+          <div class="featured-text half">
+            <div class="top">
+              <!-- <h4 class="type"><a href="#"></a></h4> -->
+              <h2 class="title"><a href="#">Donation In-Kind</a></h2>
+            </div>
+            <div class="right">
+              <p> Make a tax deductible donation to SFPC via our fiscal sponsor, Grey Area.
+              </p>
+              <p class="item inkind" id="addon-inkind-wrapper"/>
+
+                              <!-- <span class="addon" id="addon-inkind-wrapper"/> -->
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+       <div class="break-noline-small"></div>
 
       <section id="section-market" class="stacked stacked-4">
         <div class="grid-1 participate">

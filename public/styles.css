@@ -1304,6 +1304,22 @@ select#allSections:focus {
         justify-content: space-between;
       }
 
+      .featured-text.half {
+        width: 100% !important;
+    display: flex;
+    flex-direction: row !important;
+    font-size: var(--medium-text);
+    padding-right: calc(var(--text-margin)/2);
+    gap: calc(var(--body-margin)*3);
+    /* box-sizing: border-box; */
+      }
+
+      .featured-text.half div {
+        width: calc(50%) !important;
+
+
+      }
+
       .grid-4 .featured-text, .grid-1 .featured-text {
         flex-direction: column;
         justify-content: space-between;
@@ -2974,6 +2990,17 @@ video {
   padding-left: 0px;
 }
 
+.inkind .shopify-buy__btn  {
+  font-size: var(--medium-text);
+  padding-top: var(--program-margin);
+}
+
+.inkind .shopify-buy__option-select__label,
+.inkind .shopify-buy__quantity-container
+ {
+  display: none
+}
+
 .addon .shopify-buy__btn  {
   font-size: var(--medium-text);
   padding-top: var(--program-margin);
@@ -3578,6 +3605,21 @@ h5.shopify-buy__cart-toggle__title {
                   max-width:  100%;
 
                 }
+
+
+
+                .featured-text.half {
+                  width: 100% !important;
+              display: flex;
+              flex-direction: row !important;
+              font-size: var(--medium-text);
+              padding-right: calc(var(--text-margin)/2);
+              gap: calc(var(--body-margin)*8);
+              /* box-sizing: border-box; */
+                }
+
+                .featured-text.half div {
+                  width: calc(100%) !important;
 
 
 

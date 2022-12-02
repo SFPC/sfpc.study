@@ -255,20 +255,20 @@ select#allSections {
  color: var(--fundraiser-winter-23-text);
  box-sizing: border-box;
  border-color: var(--fundraiser-winter-23-text);
- background-image: url('images/sessions/fundraiser-winter-23/bg.jpg');
+ background-image: url('images/fundraiser/winter-23/bg.jpg');
  background-position: bottom;
  background-repeat: repeat;
- background-size: 100%;
+ background-size: 40%;
 }
 
 .fundraiser-winter-23.featured:hover {
-  background-size: 150%;
+  /* background-size: 100%; */
 }
 
 
 
      .shell.fundraiser-winter-23 {
-       background-image:url('images/sessions/fundraiser-winter-23/bg.jpg');
+       background-image:url('images/fundraiser/winter-23/bg.jpg');
        /* background-position: bottom; */
        /* background-repeat: no-repeat;
        background-size: cover; */
@@ -312,8 +312,12 @@ select#allSections {
       .fundraiser-winter-23 p.large a:hover,
       .fundraiser-winter-23.featured:hover h6,
       .fundraiser-winter-23.featured:hover .title,
+      .fundraiser-winter-23 .product:hover .title,
+      .fundraiser-winter-23.featured:hover .title.Purchase,
       .fundraiser-winter-23 .details a:hover,
       .fundraiser-winter-23.featured .title:hover,
+      .fundraiser-winter-23.featured .title.Purchase:hover,
+      .fundraiser-winter-23 .product .title:hover,
       .fundraiser-winter-23 p a:hover,
       .fundraiser-winter-23 h4 a:hover,
       .fundraiser-winter-23 section .grid-2 ul li::before,
@@ -446,6 +450,23 @@ select#allSections {
       .fundraiser-winter-23 .addon-item {
         border: 2px dotted var(--fundraiser-winter-23-link) !important;
         background: var(--fundraiser-winter-23-background-dark) !important;
+      }
+
+      .fundraiser-winter-23 .shopify-buy__option-select__select,
+      .fundraiser-winter-23 .shopify-buy__quantity  {
+      background: var(--fundraiser-winter-23-text) !important;
+      color: var(--fundraiser-winter-23-background) !important;
+      }
+
+
+      .fundraiser-winter-23 .grid-1.featured {
+        background: var(--fundraiser-winter-23-background-dark) !important;
+      }
+
+      @media (max-width: 768px) {
+        .shell.fundraiser-winter-23 {
+          background-size: 100%;
+        }
       }
 
 
