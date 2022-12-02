@@ -785,6 +785,44 @@ input {
 
 
 
+
+.fixed-support, .shopify-buy-frame--toggle {
+  text-decoration: none;
+  z-index: 9999999999999;
+  position: fixed;
+  right: calc(4px + var(--body-margin)/2) !important;
+  bottom: calc(4px + var(--footer-height)) !important;
+  transform: unset !important;
+  -webkit-transform: unset !important;
+  top: unset !important;
+  border-radius: 100%;
+  display: block;
+  width: auto;
+  border: 0px;
+  cursor: pointer;
+    background: var(--text-link);
+    color: var(--background);
+  font-family: var(--main-title-font);
+  font-weight: bold;
+  font-size: var(--medium-text);
+  /* padding: var(--program-margin); */
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  ms-transition: all .2s ease-in-out;
+  o-transition: all .2s ease-in-out;
+  backdrop-filter: blur(3px);
+  line-height: var(--medium-line-height);
+  min-width: calc(var(--medium-text)*2);
+  min-height: calc(var(--medium-text)*2);
+  text-align: center;
+  vertical-align: middle;
+  /* width: calc(var(--medium-text)*2);
+  height: calc(var(--medium-text)*2); */
+  padding:1.2vw !important;
+  padding-right: 1.2vw !important;
+}
+
+
 @media (max-width: 330px) {
 	.shopify-buy__cart-item__price-and-discounts {
 		max-width: 90px;

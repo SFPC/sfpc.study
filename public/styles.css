@@ -1033,7 +1033,7 @@ section {
 
 
 
-        .fixed-support, .shopify-buy-frame--toggle {
+        .fixed-support  {
           text-decoration: none;
           z-index: 9999999999999;
           position: fixed;
