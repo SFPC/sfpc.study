@@ -3613,7 +3613,7 @@ h5.shopify-buy__cart-toggle__title {
               display: flex;
               flex-direction: row !important;
               font-size: var(--medium-text);
-              padding-right: calc(var(--text-margin)/2);
+              padding-right: 0;
               gap: calc(var(--body-margin)*8);
               /* box-sizing: border-box; */
                 }
