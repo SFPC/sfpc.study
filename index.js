@@ -669,6 +669,10 @@ function parseTeachers(classInfo){
   const teacherInstas = parseRollup(classInfo["Teacher Instagrams"])
   const teacherPronouns = parseRollup(classInfo["Teacher Pronouns"])
   const teachers = [];
+
+  if (teacherNames) {
+
+
   for(let i = 0; i < teacherNames.length; i++){
     teachers.push({
       name: teacherNames[i],
@@ -679,6 +683,8 @@ function parseTeachers(classInfo){
       instagram: teacherInstas[i] && teacherInstas[i][0] == "@" ? teacherInstas[i].slice(1) : teacherInstas[i],
       pronouns: teacherPronouns[i],
     })
+  }
+
   }
   // console.log(teachers)
   return teachers;
