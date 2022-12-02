@@ -87,7 +87,26 @@
 
       <section id="section-market" class="stacked stacked-4">
         <div class="grid-1 participate">
+
+          <div id="/tuition-gift"
+            class="grid-4 featured tuition-gift product" data-location="
+            ">
+            <div class="featured-text">
+              <img src="https://sfpc.study/images/market/tuition-gift.jpg">
+              <div class="top">
+                <h4 class="type type-list-comma"><a href="/fundraiser/tuition-gift">scholarship</a></h4>
+                <h2 class="title Purchase">Tuition Gift Certificate</h2>
+                <!-- <h6>donated by you! </h6> -->
+                <BR>
+                  <h3><span id=”cost”>$750 - $1200</span></h3>
+              </div>
+
+            </div>
+          </div>
+
+
           {{#each products}}
+          {{#if cost}}
           <div id="{{this.[Website-Slug]}}"
             class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
             ">
@@ -105,7 +124,9 @@
 
             </div>
           </div>
+          {{/if}}
           {{/each}}
+
         </div>
       </section>
 

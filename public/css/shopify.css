@@ -360,6 +360,15 @@ input {
 	position: absolute;
 	width: 1px;
 }
+
+.item .visuallyhidden {
+  height: auto !important;
+  width: auto !important;
+  margin-right: auto !important;
+  position: relative  !important;
+
+}
+
 .component-container {
 	overflow: hidden;
 }
@@ -517,6 +526,7 @@ input {
 	margin-bottom: 10px;
 	color: var(--background);
 	font-size: var(--small-text);
+  font-family: var(--main-title-font);
 	max-width: 220px;
 	overflow: hidden;
 	text-overflow: ellipsis;
