@@ -451,6 +451,10 @@ select#allSections {
         border: 2px dotted var(--fundraiser-winter-23-link) !important;
         background: var(--fundraiser-winter-23-background-dark) !important;
       }
+      /* .grid-1.featured.fundraiser-winter-23 {
+
+          border: 2px dotted var(--fundraiser-winter-23-link) !important;
+      } */
 
       .fundraiser-winter-23 .shopify-buy__option-select__select,
       .fundraiser-winter-23 .shopify-buy__quantity  {

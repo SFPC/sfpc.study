@@ -3229,7 +3229,7 @@ h5.shopify-buy__cart-toggle__title {
         }
 
         .class-details .details .labels {
-          width: calc(50% - var(--body-margin)/2);
+          width: calc(50% - var(--body-margin)/2) !important;
             line-height: calc(var(--medium-line-height));
         }
 
