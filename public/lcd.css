@@ -5,9 +5,14 @@
     --text-link: var(--winter-23-special-text) ;
     --box-shadow: rgba(0,0,0,.3);
 
+    --fundraiser-winter-23-background: #285f9e;
+   --fundraiser-winter-23-text: #fff;
+    --fundraiser-winter-23-text-on-bg: #fff;
+    --fundraiser-winter-23-link:  #74c131;
+    --fundraiser-winter-23-special-text:  #285f9e;
+
    --winter-23-background: #285f9e;
   --winter-23-text: #fff;
-   /* --winter-23-text: #285f9e; */
    --winter-23-text-on-bg: #fff;
    --winter-23-link:  #74c131;
    --winter-23-special-text:  #285f9e;
@@ -235,6 +240,209 @@ select#allSections {
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
 
 
+
+
+
+
+
+/* /////////// start fundraiser winter 23  ///////////////////////////////*/
+
+.fundraiser-winter-23,
+.fundraiser-winter-23.featured.session,
+.fundraiser-winter-23.featured  {
+ /* background-color: var(--sex-ed-background)  !important; */
+ color: var(--fundraiser-winter-23-text);
+ box-sizing: border-box;
+ border-color: var(--fundraiser-winter-23-text);
+ background-image: url('images/sessions/fundraiser-winter-23/bg.jpg');
+ background-position: bottom;
+ background-repeat: repeat;
+ background-size: 100%;
+}
+
+.fundraiser-winter-23.featured:hover {
+  background-size: 150%;
+}
+
+
+
+     .shell.fundraiser-winter-23 {
+       background-image:url('images/sessions/fundraiser-winter-23/bg.jpg');
+       /* background-position: bottom; */
+       /* background-repeat: no-repeat;
+       background-size: cover; */
+       background-position: top left;
+       background-repeat: repeat;
+       background-size: cover;
+     }
+
+
+
+.fundraiser-winter-23,
+.fundraiser-winter-23.featured.session,
+.shell .fundraiser-winter-23,
+.fundraiser-winter-23.featured  {
+  /* background-color: var(--fundraiser-winter-23-background)  !important; */
+  color: var(--fundraiser-winter-23-text);
+  box-sizing: border-box;
+  border-color: var(--fundraiser-winter-23-text);
+  text-shadow: none !important;
+}
+
+
+      .fundraiser-winter-23 p,
+      .fundraiser-winter-23 p a,
+      .fundraiser-winter-23 a,
+      .fundraiser-winter-23.featured h4,
+      .fundraiser-winter-23 h4 a,
+      .fundraiser-winter-23 .intro a,
+      .fundraiser-winter-23 p.large a,
+      .fundraiser-winter-23 p a:hover,
+      .fundraiser-winter-23.session.featured,
+      .fundraiser-winter-23.session.featured a,
+      .fundraiser-winter-23.featured h4.type a,
+      .sfpc .fundraiser-winter-23 a
+      {
+        color: var(--fundraiser-winter-23-text) !important;
+      }
+
+      .fundraiser-winter-23 h4 a:hover,
+      .fundraiser-winter-23 .intro a,
+      .fundraiser-winter-23 p.large a:hover,
+      .fundraiser-winter-23.featured:hover h6,
+      .fundraiser-winter-23.featured:hover .title,
+      .fundraiser-winter-23 .details a:hover,
+      .fundraiser-winter-23.featured .title:hover,
+      .fundraiser-winter-23 p a:hover,
+      .fundraiser-winter-23 h4 a:hover,
+      .fundraiser-winter-23 section .grid-2 ul li::before,
+      .fundraiser-winter-23 .chars,
+      .fundraiser-winter-23 p a:hover,
+      .fundraiser-winter-23 a:hover,
+      .fundraiser-winter-23 h4 a:hover,
+      .fundraiser-winter-23 .intro a:hover,
+      .fundraiser-winter-23 .details a:hover,
+      .fundraiser-winter-23 .entity:hover .accordion dt h3:after,
+      .fundraiser-winter-23 .accordion dt h3:after,
+      .fundraiser-winter-23 .expanded{
+          color: var(--fundraiser-winter-23-link) !important;
+      }
+
+      .fundraiser-winter-23 #cost,
+      .fundraiser-winter-23 .fixed-apply,
+      .fundraiser-winter-23 .fixed-support,
+      .fundraiser-winter-23 .home-intro span#session-name::after {
+          color: var(--fundraiser-winter-23-background) !important;
+          background: var(--fundraiser-winter-23-link) !important;
+      }
+
+      .fundraiser-winter-23 span#cost {
+        background: var(--fundraiser-winter-23-link) !important;
+      }
+
+
+      .fundraiser-winter-23 .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .fundraiser-winter-23 .block-text {
+        background-color: var(--fundraiser-winter-23-background);
+        color: var(--fundraiser-winter-23-link);
+      }
+
+
+
+      .fundraiser-winter-23.grid-inner, .fundraiser-winter-23 .grid-inner {
+        border: 2px dotted var(--fundraiser-winter-23-text) !important;
+        color: var(--fundraiser-winter-23-link) !important;
+      }
+
+      .fundraiser-winter-23 #class .entity,
+      .fundraiser-winter-23.website-grid .grid-2 {
+        border-color: var(--fundraiser-winter-23-text);
+      }
+
+      .fundraiser-winter-23 #class .entity:hover {
+        border-color: var(--fundraiser-winter-23-link);
+      }
+
+      .fundraiser-winter-23 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--fundraiser-winter-23-background) !important;
+      }
+
+
+      .fundraiser-winter-23 select#allSections:hover,
+      .fundraiser-winter-23 .loader-content p::after,
+      .fundraiser-winter-23 span#cost
+      {
+        background: var(--fundraiser-winter-23-link) !important;
+        color: var(--fundraiser-winter-23-background) !important;
+      }
+
+      .fundraiser-winter-23 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .fundraiser-winter-23 .breadcrumb.fixed,
+      .fundraiser-winter-23 .breadcrumb.fixed::before,
+      .fundraiser-winter-23 .breadcrumb.fixed a,
+      .fundraiser-winter-23 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .fundraiser-winter-23 .breadcrumb,
+      .fundraiser-winter-23 .breadcrumb a,
+      .fundraiser-winter-23 .text-on-bg,
+      .fundraiser-winter-23 .breadcrumb a:hover {
+          color: var(--fundraiser-winter-23-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--fundraiser-winter-23-background);
+      }
+
+
+      .fundraiser-winter-23 section#section-outro,
+      #class .intro.fundraiser-winter-23,
+      .shell.fundraiser-winter-23 .class-details,
+      .fundraiser-winter-23 #class section,
+      .fundraiser-winter-23 #class .entity,
+      .fundraiser-winter-23 .accordion dd.active,
+      .fundraiser-winter-23 section ul,
+      .fundraiser-winter-23 .website-grid
+       {
+        /* background-color: var(--fundraiser-winter-23-background); */
+        background: none;
+        color:  var(--fundraiser-winter-23-text) !important;
+        border-radius: var(--border-rad);
+      }
+
+      .fundraiser-winter-23 #class section,
+      #class .intro.fundraiser-winter-23 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .fundraiser-winter-23 #class section.stacked,
+      .fundraiser-winter-23 .section-testimonials,
+      .fundraiser-winter-23 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important
+      }
+
+      .fundraiser-winter-23 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--fundraiser-winter-23-text);
+      }
+
+      .shell.fundraiser-winter-23 {
+        background-image: url('images/fundraiser/winter-23/bg.jpg');
+        background-size: 50%;
+        background-repeat: repeat;
+      }
+
+
+/* /////////// end fundraiser winter 23  ///////////////////////////////*/
 
 
 
