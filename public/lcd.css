@@ -5,11 +5,12 @@
     --text-link: var(--winter-23-special-text) ;
     --box-shadow: rgba(0,0,0,.3);
 
-    --fundraiser-winter-23-background: #009ea7;
+    --fundraiser-winter-23-background-dark: #002061;
+    --fundraiser-winter-23-background: #00189a;
    --fundraiser-winter-23-text: #fff;
     --fundraiser-winter-23-text-on-bg: #fff;
     --fundraiser-winter-23-link:  #009ea7;
-    --fundraiser-winter-23-special-text:  #009ea7;
+    --fundraiser-winter-23-special-text:  #e3009a;
 
    --winter-23-background: #285f9e;
   --winter-23-text: #fff;
@@ -332,12 +333,13 @@ select#allSections {
       .fundraiser-winter-23 .fixed-apply,
       .fundraiser-winter-23 .fixed-support,
       .fundraiser-winter-23 .home-intro span#session-name::after {
-          color: var(--fundraiser-winter-23-background) !important;
+          color: var(--fundraiser-winter-23-text) !important;
           background: var(--fundraiser-winter-23-link) !important;
       }
 
-      .fundraiser-winter-23 span#cost {
-        background: var(--fundraiser-winter-23-link) !important;
+      .fundraiser-winter-23 span#cost,
+      .fundraiser-winter-23 h3 span {
+        background: var(--fundraiser-winter-23-special-text) !important;
       }
 
 
@@ -376,8 +378,8 @@ select#allSections {
       .fundraiser-winter-23 .loader-content p::after,
       .fundraiser-winter-23 span#cost
       {
-        background: var(--fundraiser-winter-23-link) !important;
-        color: var(--fundraiser-winter-23-background) !important;
+        background: var(--fundraiser-winter-23-special-text) !important;
+        color: var(--fundraiser-winter-23-text) !important;
       }
 
       .fundraiser-winter-23 .breadcrumb.fixed {
@@ -437,9 +439,15 @@ select#allSections {
 
       .shell.fundraiser-winter-23 {
         background-image: url('images/fundraiser/winter-23/bg.jpg');
-        background-size: 50%;
+        background-size: 40%;
         background-repeat: repeat;
       }
+
+      .fundraiser-winter-23 .addon-item {
+        border: 2px dotted var(--fundraiser-winter-23-link) !important;
+        background: var(--fundraiser-winter-23-background-dark) !important;
+      }
+
 
 
 /* /////////// end fundraiser winter 23  ///////////////////////////////*/

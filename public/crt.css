@@ -63,6 +63,15 @@ select#allSections, .fixed-apply  {
   -webkit-filter: grayscale(100%) !important;
 }
 
+.shopify-buy__cart {
+background-color: var(--text-link) !important;
+}
+
+.fixed-support, .shopify-buy-frame--toggle {
+  background: var(--text-link);
+  color: var(--background);
+}
+
 .featured {
   -webkit-filter: grayscale(100%);
   background-color: var(--background) !important;
