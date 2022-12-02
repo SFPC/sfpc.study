@@ -103,7 +103,7 @@
       <section id="section-class-details">
         <div class="grid-2">
           <h1>
-            <span id="session-name">{{name}}</span>
+            <span id="session-name">{{Name}}</span>
            </h1>
         </div>
 
@@ -254,11 +254,12 @@
       </section> -->
 
 
-            <div class="break-noline"></div>
+
 
       {{#if sessionEnded}}
 
         {{#if sessionImages.[1]}}
+        <div class="break-noline"></div>
             <div class="grid-container" id="participate-archive">
 
               <main class="grid-item main">
@@ -305,6 +306,7 @@
                {{else}}
 
                {{#if promoImages.[1]}}
+               <div class="break-noline"></div>
                    <div class="grid-container" id="participate-archive">
 
                      <main class="grid-item main">

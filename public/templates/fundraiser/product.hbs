@@ -48,7 +48,9 @@
     <script>
       initShopifyProduct("{{[Shopify ID]}}", "add-to-cart-button-wrapper")
 
-      initShopifyProduct("7855146074263", "addon-sticker-button-wrapper")
+      initShopifyProduct("7864322392215", "addon-sticker-button-wrapper")
+
+      initShopifyProduct("7864322392215", "addon-sticker-2-button-wrapper")
 
       initShopifyProduct("7855146074263", "addon-tote-button-wrapper")
 
@@ -177,15 +179,11 @@
             {{/if}}
 
             {{#if [Description]}}
-            <div class="details">
-
-
-                  <p>
-                    {{{[Description]}}}
+            <div class="details"> <p style="white-space:pre-line">
+                    {{{[Description]}}}{{#if [Product-Link]}}<a href="{{[Product-Link]}}">learn more...</a>{{/if}} {{#if [Delivery-Info]}} <BR><br>{{[Delivery-Info]}}{{/if}}
                   </p>
 
             </div>
-
             {{/if}}
 
             <div class="details">
@@ -199,12 +197,10 @@
               </div>
             </div>
 
-            <!-- {{#if Contributor}}
+            <!-- {{#if [Delivery-Info]}}
               <div class="details">
-                <div class="labels">Donors</div>
-                <div class="labels-info" id="teachers-list">{{#each
-                    Contributor
-                  }}{{this}}{{#unless @last}},{{/unless}} {{/each}}
+                <div class="labels">Delivery</div>
+                <div class="labels-info" id="">{{[Delivery-Info]}}
               </div>
               </div>
             {{/if}} -->
@@ -244,9 +240,10 @@
             <h6>Other ways to support...</h6>
             <div class="addon-item">
               <div class="item">
-                <img src="https://target.scene7.com/is/image/Target/GUEST_51adad5c-3e88-46eb-861e-c2cd0319a672?wid=488&hei=488&fmt=pjpeg">
-                <p>Add a <a href="">SFPC Sticker Pack</a> to your cart to increase your donation by <span id="cost">$15</span>.
-                Designed by Juan Miguel Marin, Ritu Ghiya, Jackie Liu and Shiraz Gallab.
+                <img src="https://cdn.shopify.com/s/files/1/0465/8626/5751/products/kiss-cut-sticker-sheet-white-front-638982d6117b9_1080x.jpg?v=1669956319">
+                <p>Add a sticker pack to your cart to increase your donation by
+                  <span id="cost">$10</span>.
+               <a href="">SFPC Sticker Pack #1</a>  is designed by Ritu Ghiya, Juan Miguel Marin, and Samantha Griffith.
 
                 <span class="addon" id="addon-sticker-button-wrapper"/>
               </p>
@@ -255,9 +252,21 @@
 
             <div class="addon-item">
               <div class="item">
+                <img src="https://cdn.shopify.com/s/files/1/0465/8626/5751/products/kiss-cut-sticker-sheet-white-front-63897cae2d525_1080x.jpg">
+                <p>Add a different sticker pack to your cart to increase your donation by
+                  <span id="cost">$10</span>.
+               <a href="">SFPC Sticker Pack #2</a> is designed by Jackie Liu, Shiraz Gallab, and Samantha Griffith.</i>
+
+                <span class="addon" id="addon-sticker-2-button-wrapper"/>
+              </p>
+              </div>
+            </div>
+
+            <div class="addon-item">
+              <div class="item">
                 <img src="https://cdn.shopify.com/s/files/1/0138/7518/3674/products/royal-01_1_1024x1024@2x.jpg">
-                <p>Add a <a href="">SFPC Tote Bag</a> to your cart to increase your donation by <span id="cost">$40</span>.
-                Designed by Zainab Aliyu.
+                <p>Add our tote bag to your cart to increase your donation by <span id="cost">$25</span>.
+                 <a href="">An Ode (LCD Mode)</a> is designed by Zainab Aliyu.
 
                 <span class="addon" id="addon-tote-button-wrapper"/>
               </p>

@@ -1539,3 +1539,167 @@ select#allSections {
          {
           color: var(--codesocieties-20-text) !important;
         }
+
+
+
+
+
+
+
+
+        .summer-20,
+        .summer-20.featured.session,
+        .shell .summer-20,
+        .summer-20.featured  {
+          background-color: var(--background)  !important;
+          color: var(--text-color);
+          box-sizing: border-box;
+          border-color: var(--text-color);
+        }
+
+
+              .summer-20 p,
+              .summer-20 p a,
+              .summer-20 a,
+              .summer-20.featured h4,
+              .summer-20 h4 a,
+              .summer-20 .intro a,
+              .summer-20 p.large a,
+              .summer-20 p a:hover,
+              .summer-20.session.featured,
+              .summer-20.session.featured a
+              {
+                color: var(--text-color) !important;
+              }
+
+              .summer-20 h4 a:hover,
+              /* .summer-20 .intro a, */
+              .summer-20 p.large a:hover,
+              .summer-20.featured:hover h6,
+              .summer-20.featured:hover .title,
+              .summer-20 .details a:hover,
+              .summer-20.featured .title:hover,
+              .summer-20 p a:hover,
+              .summer-20 h4 a:hover,
+              .summer-20 section .grid-2 ul li::before,
+              .summer-20 .chars,
+              .summer-20 p a:hover,
+              .summer-20 a:hover,
+              .summer-20 h4 a:hover,
+              .summer-20 .intro a:hover,
+              .summer-20 .details a:hover,
+              .summer-20 .entity:hover .accordion dt h3:after,
+              .summer-20 .accordion dt h3:after,
+              .summer-20 .expanded{
+                  color: var(--text-link) !important;
+              }
+
+              .summer-20 #cost,
+              .summer-20 .fixed-apply,
+              .summer-20 .fixed-support {
+                  color: var(--background) !important;
+              }
+
+              .summer-20 .fixed-apply:hover {
+                color: #000 !important;
+                background: rgba(255,255,255,.8) !important;
+              }
+
+              .summer-20 .block-text {
+                background-color: var(--background);
+                color: var(--text-link);
+              }
+
+
+              .summer-20 .break {
+                border-bottom: 1px dashed var(--text-color);
+              }
+
+              .summer-20 .grid-inner, .summer-20.grid-inner {
+                border: 2px dotted var(--text-color) ;
+                color: var(--text-link) !important;
+              }
+
+              .summer-20 #class .entity,
+              .summer-20.website-grid .grid-2 {
+                border-color: var(--text-color);
+              }
+
+              .summer-20 #class .entity:hover {
+                border-color: var(--text-link);
+              }
+
+              .summer-20 .website-grid .grid-2 p.large {
+                text-shadow: 3px 3px var(--background) !important;
+              }
+
+              .summer-20 select#allSections:hover,
+              .summer-20 .loader-content p::after,
+              .summer-20 span#cost
+              {
+                background: var(--text-link) !important;
+                color: var(--background) !important;
+              }
+
+
+              .summer-20 .breadcrumb.fixed {
+                  background: rgba(255,255,255,.8) !important;
+              }
+
+              .summer-20 .breadcrumb.fixed,
+              .summer-20 .breadcrumb.fixed::before,
+              .summer-20 .breadcrumb.fixed a,
+              .summer-20 .breadcrumb.fixed a:hover {
+                /* background: rgba(255,255,255,.8) !important; */
+                color: #000 !important;
+              }
+
+
+              .summer-20 .breadcrumb,
+              .summer-20 .breadcrumb a,
+              .summer-20 .text-on-bg,
+              .summer-20 .breadcrumb a:hover {
+                  color: var(--text-color) !important;
+                  /* text-shadow: 2px 2px 0px var(--text-link); */
+              }
+
+
+              .summer-20 section#section-outro,
+              #class .intro.summer-20,
+              .shell.summer-20 .class-details,
+              .summer-20 #class section,
+              .summer-20 #class .entity,
+              .summer-20 .accordion dd.active,
+              .summer-20 section ul,
+              .summer-20 .website-grid
+               {
+                background-color: var(--background);
+                color:  var(--text-color) !important;
+                border-radius: var(--border-rad);
+              }
+
+              .summer-20 #class section,
+              #class .intro.summer-20 {
+                /* padding: var(--body-margin) calc(var(--body-margin)/2); */
+              }
+
+              .summer-20 #class section.stacked,
+              .summer-20 .section-testimonials,
+              .summer-20 .section-testimonials p
+               {
+                background: none !important;
+                padding: 0px !important
+              }
+
+
+              .shell.summer-20 {
+                background: var(--background);
+              }
+
+              .summer-20.test, .summer-20.block-text {
+                border-color: var(--text-color);
+              }
+
+
+
+        /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/

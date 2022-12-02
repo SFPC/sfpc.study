@@ -166,7 +166,7 @@ app.get("/classes", async (req,res) => {
   const response = await getDatabaseEntries("6d5585af2f544dd1bad9d24c5e177026", [{property:"Date", direction:"descending"}])
   const projectData = response.map((project) => {
     console.log(project)
-    return parseNotionPage(project)
+    return parseClassData(project)
   })
   console.log(projectData)
   // let pageContent = getPageContent()
