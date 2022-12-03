@@ -174,8 +174,10 @@
                   <BR>
                 {{#if availableForSale}}
                   {{#if totalInventory }}
-                  <h4>{{ availableInventory }} of {{ totalInventory }} available</h4>
+                  {{#lte availableInventory 10}}
+                  <h3><span>only {{availableInventory}} left</span></h3>
                   <BR>
+                  {{/lte}}
                   {{/if}}
                   <h3><span id=”cost”>${{cost}}</span></h3>
                 {{else}}

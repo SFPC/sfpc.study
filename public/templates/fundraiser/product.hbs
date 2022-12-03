@@ -225,10 +225,12 @@
             {{/if}}
             {{#if totalInventory}}
             {{#if availableForSale}}
+            {{#lte availableInventory 10}}
             <div class="details">
-              <div class="labels">Available</div>
-              <div class="labels-info">{{availableInventory}} of {{totalInventory}}</div>
+              <div class="labels">available</div>
+              <div class="labels-info">only {{availableInventory}} left</div>
             </div>
+            {{/lte}}
             {{/if}}
             {{/if}}
 
