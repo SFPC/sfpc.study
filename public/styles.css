@@ -3015,6 +3015,11 @@ video {
   font-size: var(--medium-text);
   padding-top: var(--program-margin);
 }
+.addon-hide {
+  display: none !important;
+  opacity: 0;
+  height: 0px;
+}
 
 .addon .details {
   display: none;
