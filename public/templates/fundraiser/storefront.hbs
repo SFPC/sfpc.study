@@ -171,10 +171,11 @@
                 {{#if [Contributor]}}
                   <h6>donated by {{Contributor}} </h6> 
                 {{/if}}
-                <BR>
+                  <BR>
                 {{#if availableForSale}}
                   {{#if totalInventory }}
-                  <h3>{{ availableInventory }} of {{ totalInventory }} available</h3>
+                  <h4>{{ availableInventory }} of {{ totalInventory }} available</h4>
+                  <BR>
                   {{/if}}
                   <h3><span id=”cost”>${{cost}}</span></h3>
                 {{else}}
