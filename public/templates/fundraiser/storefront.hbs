@@ -169,13 +169,13 @@
                     this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
                 <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
                 {{#if [Contributor]}}
-                  <h6>donated by {{Contributor}} </h6> 
+                  <h6>donated by {{Contributor}} </h6>
                 {{/if}}
                   <BR>
                 {{#if availableForSale}}
                   {{#if totalInventory }}
                   {{#lte availableInventory 10}}
-                  <h3><span>only {{availableInventory}} left</span></h3>
+                  <h4><span>Only {{availableInventory}} left!</span></h4>
                   <BR>
                   {{/lte}}
                   {{/if}}
