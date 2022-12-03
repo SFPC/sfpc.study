@@ -223,16 +223,7 @@
               </div>
             </div>
             {{/if}}
-            {{#if totalInventory}}
-            {{#if availableForSale}}
-            {{#lte availableInventory 10}}
-            <div class="details">
-              <div class="labels">stock</div>
-              <div class="labels-info">Only {{availableInventory}} left!</div>
-            </div>
-            {{/lte}}
-            {{/if}}
-            {{/if}}
+
 
             <!-- {{#if [Delivery-Info]}}
               <div class="details">
@@ -258,6 +249,17 @@
                     <span id="cost">${{cost}}</span> </h3>
                 </div>
               </div>
+              {{/if}}
+
+              {{#if totalInventory}}
+              {{#if availableForSale}}
+              {{#lte availableInventory 10}}
+              <div class="details">
+                <div class="labels">stock</div>
+                <div class="labels-info">Only {{availableInventory}} left!</div>
+              </div>
+              {{/lte}}
+              {{/if}}
               {{/if}}
 
               <p class="item" id="add-to-cart-button-wrapper"/>
