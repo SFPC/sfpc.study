@@ -2,7 +2,6 @@
   "name": "sfpc-notion",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "start": "node index"
   },
@@ -12,6 +11,7 @@
   "description": "",
   "dependencies": {
     "@notionhq/client": "^0.4.12",
+    "@shopify/shopify-api": "^5.2.0",
     "dotenv": "^11.0.0",
     "express": "^4.17.2",
     "handlebars-helpers": "^0.10.0",

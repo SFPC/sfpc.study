@@ -70,6 +70,7 @@ const initShopifyHelper = (setupShopifyFn) => {
       domain: "sfpc-nyc.myshopify.com",
       storefrontAccessToken: "560b7d9768c854569b3175f1a0ad02db",
     });
+
     ShopifyBuy.UI.onReady(client).then(setupShopifyFn);
   };
 
