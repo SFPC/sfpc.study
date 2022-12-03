@@ -215,8 +215,6 @@
 
             {{#if [Product-Type]}}
             <div class="details">
-
-
               <div class="labels">Type</div>
               <div class="labels-info" id="teachers-list">{{#each
                   [Product-Type]
@@ -224,6 +222,14 @@
                 {{#if [Tags]}}({{#each [Tags]}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}){{/if}}
               </div>
             </div>
+            {{/if}}
+            {{#if totalInventory}}
+            {{#if availableForSale}}
+            <div class="details">
+              <div class="labels">Available</div>
+              <div class="labels-info">{{availableInventory}} of {{totalInventory}}</div>
+            </div>
+            {{/if}}
             {{/if}}
 
             <!-- {{#if [Delivery-Info]}}

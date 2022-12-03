@@ -7,18 +7,18 @@ const {
   getDatabaseEntry,
   getBlocks,
 } = require("./lib/notion");
+
+const {
+  getShopifyProducts,
+  getShopifyProduct,
+} = require("./lib/shopifyStorefront");
 const classList = require("./lib/classNotionPageList");
 const res = require("express/lib/response");
 const { response } = require("express");
-const { Shopify } = require("@shopify/shopify-api");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 const NOTION_STORE_DATABASE_ID = "11ee959b7fdb4204a9ce46c9224b1818";
-
-// This token is not actually sensitive, and allows
-// unauthenticated read-only access to product listings and quantities
-const SHOPIFY_STOREFRONT_TOKEN = "c0b6acf5755d397d7c34d410b115dfbe";
 
 console.log("starting up");
 app.use(express.static("public"));
@@ -229,38 +229,7 @@ app.get("/fundraiser", async (req, res) => {
     return parseProductData(product);
   });
 
-  const storefrontClient = new Shopify.Clients.Storefront(
-    "sfpc-nyc.myshopify.com",
-    SHOPIFY_STOREFRONT_TOKEN
-  );
-
-  const shopifyData = await storefrontClient.query({
-    data: `{
-      products (first: 250) {
-        edges {
-          node {
-            id
-            title
-            totalInventory
-            availableForSale
-            variants (first: 250) {
-              edges {
-                node {
-                  quantityAvailable
-                }
-              }
-            }
-          }
-        }
-      }
-    }`,
-  });
-
-  const parsedShopifyData = Object.fromEntries(
-    shopifyData.body.data.products.edges.map((edge) => {
-      return [edge.node.id, edge.node];
-    })
-  );
+  const shopifyData = await getShopifyProducts();
 
   for (const product of productsData) {
     const shopifyId = product["Shopify ID"];
@@ -269,7 +238,7 @@ app.get("/fundraiser", async (req, res) => {
       continue;
     }
 
-    const node = parsedShopifyData[`gid://shopify/Product/${shopifyId}`];
+    const node = shopifyData[`gid://shopify/Product/${shopifyId}`];
 
     if (node) {
       product.availableForSale = node.availableForSale;
@@ -295,6 +264,27 @@ app.get("/fundraiser/:slug", async (req, res) => {
 
   if (response) {
     const productData = parseProductData(response);
+    const shopifyId = productData["Shopify ID"];
+
+    if (shopifyId) {
+      try {
+        const shopifyData = await getShopifyProduct(shopifyId);
+
+        if (shopifyData) {
+          productData.availableForSale = shopifyData.availableForSale;
+          productData.totalInventory = shopifyData.totalInventory;
+          productData.availableInventory = shopifyData.variants.edges.reduce(
+            (accum, val) => {
+              return accum + val.node.quantityAvailable;
+            },
+            0
+          );
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
     console.log(productData);
     res.render("fundraiser/product", productData);
   }
@@ -883,35 +873,28 @@ function parseTeachers(classInfo) {
   const teacherInstas = parseRollup(classInfo["Teacher Instagrams"]);
   const teacherPronouns = parseRollup(classInfo["Teacher Pronouns"]);
   const teachers = [];
-<<<<<<< HEAD
-  for (let i = 0; i < teacherNames.length; i++) {
-=======
 
   if (teacherNames) {
-
-
-  for(let i = 0; i < teacherNames.length; i++){
->>>>>>> fee805ec54a6f8d983ecb6c74e89464f87cfbcb9
-    teachers.push({
-      name: teacherNames[i],
-      bio: teacherBios[i],
-      image: teacherPhotos[i],
-      website:
-        teacherWebsites[i] && teacherWebsites[i].indexOf("http") > 0
-          ? teacherWebsites[i]
-          : "http://" + teacherWebsites[i],
-      twitter:
-        teacherTwitters[i] && teacherTwitters[i][0] == "@"
-          ? teacherTwitters[i].slice(1)
-          : teacherTwitters[i],
-      instagram:
-        teacherInstas[i] && teacherInstas[i][0] == "@"
-          ? teacherInstas[i].slice(1)
-          : teacherInstas[i],
-      pronouns: teacherPronouns[i],
-    });
-  }
-
+    for (let i = 0; i < teacherNames.length; i++) {
+      teachers.push({
+        name: teacherNames[i],
+        bio: teacherBios[i],
+        image: teacherPhotos[i],
+        website:
+          teacherWebsites[i] && teacherWebsites[i].indexOf("http") > 0
+            ? teacherWebsites[i]
+            : "http://" + teacherWebsites[i],
+        twitter:
+          teacherTwitters[i] && teacherTwitters[i][0] == "@"
+            ? teacherTwitters[i].slice(1)
+            : teacherTwitters[i],
+        instagram:
+          teacherInstas[i] && teacherInstas[i][0] == "@"
+            ? teacherInstas[i].slice(1)
+            : teacherInstas[i],
+        pronouns: teacherPronouns[i],
+      });
+    }
   }
   // console.log(teachers)
   return teachers;
