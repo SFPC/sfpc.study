@@ -883,7 +883,15 @@ function parseTeachers(classInfo) {
   const teacherInstas = parseRollup(classInfo["Teacher Instagrams"]);
   const teacherPronouns = parseRollup(classInfo["Teacher Pronouns"]);
   const teachers = [];
+<<<<<<< HEAD
   for (let i = 0; i < teacherNames.length; i++) {
+=======
+
+  if (teacherNames) {
+
+
+  for(let i = 0; i < teacherNames.length; i++){
+>>>>>>> fee805ec54a6f8d983ecb6c74e89464f87cfbcb9
     teachers.push({
       name: teacherNames[i],
       bio: teacherBios[i],
@@ -902,6 +910,8 @@ function parseTeachers(classInfo) {
           : teacherInstas[i],
       pronouns: teacherPronouns[i],
     });
+  }
+
   }
   // console.log(teachers)
   return teachers;
