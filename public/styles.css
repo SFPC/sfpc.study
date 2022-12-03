@@ -354,6 +354,16 @@ h1 {
           /* margin-bottom: var(--text-margin); */
         }
 
+        h1.title.fundraiser-23::after {
+          display: inline-flex;
+            content: '';
+          background-image: url('/images/fundraiser/winter-23/logo-2.svg');
+            background-size: 100%;
+            width: 30vw;
+            min-height: 8vw;
+            background-repeat: no-repeat;
+        }
+
 .session .title, .project .title{
   font-size: var(--large-text) !important;
   transition: all .2s ease-in-out;
@@ -3222,6 +3232,12 @@ h5.shopify-buy__cart-toggle__title {
 
         #blog section .grid-2 h1 {
           margin-bottom: calc(var(--text-margin)/8) !important;
+        }
+
+        h1.title.fundraiser-23::after {
+            background-size: 100%;
+            width: 60vw;
+            min-height: 15vw;
         }
 
         section .grid-2{
