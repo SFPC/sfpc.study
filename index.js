@@ -363,7 +363,7 @@ app.get("/projects/:slug", async (req,res) => {
   }
 })
 
-app.get("/people", async (req,res) => {
+app.get("/yearbook", async (req,res) => {
   // const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [{timestamp:"created_time", direction:"descending"}], {
   const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [{property:"Name", direction:"ascending"}], {
     "or":[
@@ -379,10 +379,10 @@ app.get("/people", async (req,res) => {
     return parseNotionPage(person)
   })
   console.log(peopleData)
-  res.render("people/people", {people: peopleData})
+  res.render("yearbook/yearbook", {people: peopleData})
 })
 
-app.get("/people/:session", async (req,res) => {
+app.get("/yearbook/:session", async (req,res) => {
   const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
     "or":[
       {property:"Sessions-Organizer", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}},
@@ -396,7 +396,7 @@ app.get("/people/:session", async (req,res) => {
   })
   const sessionInfo =  await getDatabaseEntry("ce519f031eb340f58e3693cf4e041a67", {property:"Website-Slug", "rich_text": {"equals":req.params.session}})
   const classesInfo = parseNotionData(sessionInfo.properties["Website-Classes"])
-  res.render("people/peopleSession", {people: peopleData, classes:classesInfo})
+  res.render("yearbook/peopleSession", {people: peopleData, classes:classesInfo})
 })
 
 
