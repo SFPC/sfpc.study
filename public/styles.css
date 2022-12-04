@@ -3233,7 +3233,7 @@ h5.shopify-buy__cart-toggle__title {
   display: none;
 }
 .hide-mobile {
-  display: inline-block;
+  display:  block;
 }
 
 
@@ -3254,7 +3254,7 @@ h5.shopify-buy__cart-toggle__title {
 
 
   .hide-desk {
-    display: inline-block;
+    display: block;
   }
 
   .hide-mobile {
