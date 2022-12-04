@@ -1096,7 +1096,7 @@ section {
           vertical-align: middle;
           /* width: calc(var(--medium-text)*2);
           height: calc(var(--medium-text)*2); */
-          padding:1.2vw !important;
+          /* padding:1.2vw !important; */
           padding-right: 1.2vw !important;
         }
 
