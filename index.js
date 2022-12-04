@@ -223,6 +223,18 @@ app.get("/fundraiser-homepage", async (req,res) => {
 })
 
 app.get("/fundraiser", async (req, res) => {
+
+  const responseTest = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
+  const testimonialData = responseTest.map((testimonial) => {
+    console.log(testimonial)
+    return parseTestimonials(testimonial)
+  })
+  console.log(testimonialData)
+  // let pageContent = getPageContent()
+  // res.render("fundraiser/winter23-homepage", {testimonials: testimonialData})
+
+
+
   const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
     { property: "Cost", direction: "ascending" },
   ]);
@@ -253,7 +265,7 @@ app.get("/fundraiser", async (req, res) => {
   }
 
   console.log(productsData);
-  res.render("fundraiser/storefront", { products: productsData });
+  res.render("fundraiser/storefront", { products: productsData, testimonials: testimonialData });
 });
 
 app.get("/fundraiser/:slug", async (req, res) => {

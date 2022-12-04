@@ -214,7 +214,7 @@
         </div>
       </section>
 
-      <div class="break-noline-small"></div>
+      <div class="break"></div>
       <section id="section-market">
         <div class="grid-2">
          <h1>Community Market</h1>
@@ -264,6 +264,58 @@
       </section>
 
 
+
+
+
+
+      <div class="break"></div>
+      <section id="section-market">
+        <div class="grid-2">
+         <h1>Testimonials</h1>
+        </div>
+        <div class="grid-2">
+        </div>
+      </section>
+      <div class="break-noline-small"></div>
+
+      <div class="grid-container" id="participate-archive">
+
+        <main class="grid-item main">
+          <main class="grid-item main">
+            <div class="carousel-items items carousel-content press-content">
+
+              {{#each testimonials}}
+              {{#eq type "General SFPC"}}
+              {{#if publish}}
+              <figure class="block-text test show-test">
+                <span class="test-icon"> </span>{{Testimonial}}<h4>{{#if Person-Website}}
+                  {{#each Person-Website}}{{this}}{{#unless @last}},{{/unless}} {{/each}}
+                  {{else}}{{Submitter}}
+                   {{/if}}</h4>
+              </figure>
+              {{/if}}
+              {{/eq}}
+              {{/each}}
+
+
+            </div>
+          </main>
+        </main>
+      </div>
+
+
+     <section>
+         <div class="grid-2">
+           <p>
+            <a href="https://forms.gle/PvuvBQd4cmo8YL4j6" class="" target="_blank">share a testimonial...</a>
+           </p>
+         </div>
+
+         <div class="grid-2">
+         </div>
+     </section>
+
+
       <!-- <div class="break"></div> -->
       <div class="break-noline"></div>
       <div class="break-endpage"></div>
@@ -271,6 +323,7 @@
   </div>
 
   <script src="/outside.js"></script>
+  <script src="/carousel.js"></script>
   </p>
 
 </body>
