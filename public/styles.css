@@ -354,7 +354,7 @@ h1 {
           /* margin-bottom: var(--text-margin); */
         }
 
-        .title-image {
+        .title-image.fundraiser-23-square {
           z-index: 100 !important;
           position: absolute;
           top: 0px;
@@ -3229,8 +3229,12 @@ h5.shopify-buy__cart-toggle__title {
 
 
 
-
-
+.hide-desk {
+  display: none;
+}
+.hide-mobile {
+  display: inline-block;
+}
 
 
 
@@ -3247,6 +3251,15 @@ h5.shopify-buy__cart-toggle__title {
 }
 
 @media (max-width: 768px) {
+
+
+  .hide-desk {
+    display: inline-block;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
 
         :root {
           --text-margin: 10vh;
@@ -3708,7 +3721,25 @@ h5.shopify-buy__cart-toggle__title {
                 .featured-text.half div {
                   width: calc(100%) !important;
 
+                }
+                  #home .video-feature {
+                    margin-top: 35vw;
+                    margin-left: 10vw;
+                    z-index: 0;
+                    border-radius: var(--border-rad);
+                    width: 75%;
+                  }
 
+                  #video-feature {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    /* align-items: center; */
+                  }
+                  .title-image.fundraiser-23-square::after {
+                      width: 40vw;
+                      min-height: 40vw;
+                  }
 
 
 
