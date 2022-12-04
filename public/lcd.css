@@ -378,6 +378,10 @@ select#allSections {
         text-shadow: 3px 3px var(--fundraiser-winter-23-background) !important;
       }
 
+      .fundraiser-winter-23 .block-text .test-icon {
+        color: var(--fundraiser-winter-23-special-text);
+      }
+
 
       .fundraiser-winter-23 select#allSections:hover,
       .fundraiser-winter-23 .loader-content p::after,

@@ -49,112 +49,40 @@
 </head>
 
 <body>
-
-  <div id="header">
-
-    <div class="definition-marquee">
-      <marquee id="marquee-definition"></marquee>
-    </div>
-
-    <div class="grid-2">
-      <div class="grid-2 def-div">
-        <span id="definition" class="defintion"></span>
-        <nav class="mobile-menu">Menu</nav>
-      </div>
-    </div>
-
-    <div class="grid-2">
-      <div class="grid-4">
-        <ul class="nav">
-          <li><a id="link-participate" href="participate.html">participate</a></li>
-          <li><a id="link-projects" href="/projects">projects</a></li>
-        </ul>
-      </div>
-      <div class="grid-4">
-        <ul class="nav">
-          <li><a id="link-about" href="about.html">about</a></li>
-          <li><a id="link-blog" href="/blog">blog</a></li>
-          <li><a id="link-support" href="https://withfriends.co/school_for_poetic_computation/join"
-              target="_blank">support us</a></li>
-        </ul>
-      </div>
-      <div class="grid-4">
-        <ul class="nav">
-          <li><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">newsletter</a>
-          </li>
-          <li><a id="" href="mailto:info@sfpc.study">email</a></li>
-          <li><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">ig</a> / <a href="https://twitter.com/sfpc"
-              target="_blank">tw</a> / <a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a>
-          </li>
-        </ul>
-      </div>
-      <div class="grid-4">
-        <div class="nav logo">
-          <a href="index.html"><img src="images/sfpc-logo.svg"></a>
+  {{> header}}
+  <div id="footer" class="footer">
+          <div class="mode"><button id="mode-toggle"></button></a></div>
         </div>
-      </div>
-    </div>
-
-  </div>
-  </div>
-  <!--  -->
-  <div class="mobile-menu-content">
-    <h2><a id="link-participate" href="participate.html">Participate</a></h2>
-
-    <h2><a id="link-projects" href="/projects">Projects</a></h2>
-
-    <h2><a id="link-about" href="about.html">About</a></h2>
-
-    <h2><a id="link-blog" href="/blog">Blog</a></h2>
-
-    <h2><a id="link-support" href="https://withfriends.co/school_for_poetic_computation/join" target="_blank">Support
-        Us</a></h2>
-
-    <h2><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">Newsletter</a></h2>
-
-    <h2><a id="" href="mailto:info@sfpc.study">Email</a></h2>
-
-    <h2><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a></h2>
-
-    <h2><a href="https://twitter.com/sfpc" target="_blank">TW</a></h2>
-
-    <h2><a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></h2>
-
-  </div>
-
-  <div id="footer">
-    <div class="mode"><button id="mode-toggle"></button></a></div>
-
-  </div>
 
 
-  <div class="website-grid grid-hide">
-    <div class="grid-inner">
-      <section>
-        <div class="grid-2">
-          <!-- <div class="chars chars1"></div> -->
-          <p class="large">School</p>
+
+        <div class="website-grid grid-hide  fundraiser-winter-23">
+          <div class="grid-inner fundraiser-winter-23">
+          <section>
+            <div class="grid-2">
+              <div class="chars chars1"></div>
+              <p class="large">School</p>
+            </div>
+            <div class="grid-2">
+              <div class="chars chars2"></div>
+              <p class="large">for</p>
+            </div>
+            <div class="grid-2">
+              <div class="chars chars3"></div>
+              <p class="large">Poetic</p>
+            </div>
+            <div class="grid-2">
+              <div class="chars chars4"></div>
+              <p class="large">Computation</p>
+            </div>
+          </section>
         </div>
-        <div class="grid-2">
-          <!-- <div class="chars chars1"></div> -->
-          <p class="large">for</p>
         </div>
-        <div class="grid-2">
-          <!-- <div class="chars chars3"></div> -->
-          <p class="large">Poetic</p>
-        </div>
-        <div class="grid-2">
-          <!-- <div class="chars chars4"></div> -->
-          <p class="large">Computation</p>
-        </div>
-      </section>
-    </div>
-  </div>
-
 
   <div class="crt-overlay crt-overlay-fullsize"></div>
 
-  <div id="shell" class="shell shell-fullsize home animsition fundraiser-winter-23">
+
+  <div id="shell" class="shell fundraiser shell-fullsize animsition fundraiser-winter-23">
 
     <div class="loader-content">
       <p tabindex="0" class="large">
@@ -163,11 +91,11 @@
     </div>
 
 
-    <a class="fixed-support" href="/fundraiser"><span>Donate today!</span></a>
+    <a class="fixed-support donate" href="/fundraiser"><span>Donate!</span></a>
 
 
 
-    <div id="home" class="hide-content shell-content">
+    <div id="fundraiser" class="hide-content shell-content">
 
       <section id="video-feature">
 
@@ -189,12 +117,60 @@
           <p>SFPC’s first ever Community Fundraiser is an open-hearted effort to build our school on a foundation of mutual aid and reciprocity. As we reject the old financial models of private education, we’re looking to create something new, beautiful, and expansive in its place. We aim to create a learning environment where no one is ever turned away due to their inability to pay tuition. To bring this vision to life, we ask our community members with access to high salaries, generational wealth, and savings to donate generously. We are deeply grateful for every contribution.</p>
           <p><a href="/blog/fundraiser-winter-23">read more on our blog… </a></p>
         </div>
+
       </section>
+
+      <div class="break-noline-small"></div>
+
+        <div class="grid-container" id="participate-archive">
+
+          <main class="grid-item main">
+            <main class="grid-item main">
+              <div class="carousel-items items carousel-content press-content">
+
+                {{#each testimonials}}
+                {{#eq type "General SFPC"}}
+                {{#if publish}}
+                <figure class="block-text test show-test">
+                  <span class="test-icon"> </span>{{Testimonial}}<h4>{{#if Person-Website}}
+                    {{#each Person-Website}}{{this}}{{#unless @last}},{{/unless}} {{/each}}
+                    {{else}}{{Submitter}}
+                     {{/if}}</h4>
+                </figure>
+                {{/if}}
+                {{/eq}}
+                {{/each}}
+
+
+              </div>
+            </main>
+          </main>
+        </div>
+
+
+       <section>
+           <div class="grid-2">
+             <p>
+              <a href="https://forms.gle/PvuvBQd4cmo8YL4j6" class="" target="_blank">share a testimonial...</a>
+             </p>
+           </div>
+
+           <div class="grid-2">
+           </div>
+       </section>
+
+
+
+        <div class="break-endpage"></div>
+
+
+
 
       </div>
 
-      <div class="break-noline-small"></div>
-      <div class="hide-desk break-endpage"></div>
+
+
+
 
 
 
@@ -204,6 +180,7 @@
 
       <script src="outside.js"></script>
       <script src="closed.js"></script>
+      <script src="carousel.js"></script>
 
 
 </body>

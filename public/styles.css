@@ -470,6 +470,25 @@ margin-top: calc(var(--body-margin)/3);
         list-style: none;
       }
 
+      .block-text .test-icon { 
+        color: var(--text-color);
+      }
+      .block-text .test-icon::before {
+        content: "◦";
+      }
+      .block-text:nth-of-type(3n) .test-icon::before {
+      content: "*";
+      }
+      .block-text:nth-of-type(2n) .test-icon::before {
+      content: "▫";
+      }
+      .block-text:nth-of-type(4n) .test-icon::before {
+      content: "◌";
+      }
+      .block-text:nth-of-type(5n) .test-icon::before {
+      content: "‣";
+      }
+
       section .grid-2 ul li::before {
         content: "◦";
         /* color: var(--text-link); */
@@ -1099,6 +1118,10 @@ section {
           padding:1.2vw;
           padding-right: 1.2vw !important;
         }
+/*
+        .fixed-support.donate {
+          font-size: var(--medium-text);
+        } */
 
 
         .shopify-buy-frame.shopify-buy-frame--toggle{
@@ -1181,8 +1204,21 @@ select#allSections:focus {
     gap: var(--text-margin);
 }
 
+#fundraiser {
+    position: relative;
+    z-index: 100;
+    /* height: 100%; */
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-between;
+    gap: var(--text-margin);
+    overflow: visible;
+}
 
-        .home, .about, .closed, .blog, .people, .projects p{
+
+        .home, .about, .closed, .blog, .people, .projects, .fundraiser p{
             font-family: var(--main-title-font);
             color: var(--text-color);
         }
@@ -1202,7 +1238,7 @@ select#allSections:focus {
         #video-feature {
           display: flex;
           flex-direction: row;
-          height: 100%;
+          /* height: 100%; */
           /* align-items: center; */
         }
 
@@ -3737,7 +3773,7 @@ h5.shopify-buy__cart-toggle__title {
                   #video-feature {
                     display: flex;
                     flex-direction: column;
-                    height: 100%;
+                    /* height: 100%; */
                     /* align-items: center; */
                   }
                   .title-image.fundraiser-23-square::after {
