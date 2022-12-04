@@ -470,7 +470,7 @@ margin-top: calc(var(--body-margin)/3);
         list-style: none;
       }
 
-      .block-text .test-icon { 
+      .block-text .test-icon {
         color: var(--text-color);
       }
       .block-text .test-icon::before {
@@ -1103,10 +1103,10 @@ section {
           font-weight: bold;
           font-size: var(--medium-text);
           /* padding: var(--program-margin); */
-          transition: all .2s ease-in-out;
+          /* transition: all .2s ease-in-out;
           -moz-transition: all .2s ease-in-out;
           ms-transition: all .2s ease-in-out;
-          o-transition: all .2s ease-in-out;
+          o-transition: all .2s ease-in-out; */
           backdrop-filter: blur(3px);
           line-height: var(--medium-line-height);
           min-width: calc(var(--medium-text)*2);
@@ -1142,8 +1142,12 @@ section {
 
 
                 .fixed-support:hover, .shopify-buy-frame--toggle:hover {
-                color: #000;
-                background: rgba(255,255,255,.8);
+                color: #000 !important;
+                background: rgba(255,255,255,.8) !important;
+                }
+
+                .fixed-support:hover span {
+                  color: #000 !important;
                 }
 
                 .fixed-support:hover span, .shopify-buy__cart-toggle:hover {

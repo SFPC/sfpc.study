@@ -338,8 +338,8 @@ select#allSections {
       .fundraiser-winter-23 .fixed-apply,
       .fundraiser-winter-23 .fixed-support,
       .fundraiser-winter-23 .home-intro span#session-name::after {
-          color: var(--fundraiser-winter-23-text) !important;
-          background: var(--fundraiser-winter-23-link) !important;
+          color: var(--fundraiser-winter-23-text) ;
+          background: var(--fundraiser-winter-23-link) ;
       }
 
       .fundraiser-winter-23 span#cost,
@@ -354,8 +354,14 @@ select#allSections {
       }
 
       .fundraiser-winter-23 .block-text {
-        background-color: var(--fundraiser-winter-23-background);
+        background-color: var(--fundraiser-winter-23-background-dark);
+        border-color: var(--fundraiser-winter-23-link);
         color: var(--fundraiser-winter-23-link);
+        /* color: rgba(255,255,255, 60); */
+      }
+
+      .fundraiser-winter-23 .block-text h4 {
+        color: var(--fundraiser-winter-23-special-text);;
       }
 
 
