@@ -3723,11 +3723,11 @@ h5.shopify-buy__cart-toggle__title {
 
                 }
                   #home .video-feature {
-                    margin-top: 35vw;
+                    margin-top: 47vw;
                     margin-left: 10vw;
                     z-index: 0;
                     border-radius: var(--border-rad);
-                    width: 75%;
+                    width: 80%;
                   }
 
                   #video-feature {
@@ -3737,8 +3737,13 @@ h5.shopify-buy__cart-toggle__title {
                     /* align-items: center; */
                   }
                   .title-image.fundraiser-23-square::after {
-                      width: 40vw;
-                      min-height: 40vw;
+                      width: 50vw;
+                      min-height: 50vw;
+                  }
+
+                  .title-image.fundraiser-23-square {
+                  top: 2vw;
+                  left: 2vw;
                   }
 
 
