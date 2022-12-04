@@ -1187,12 +1187,16 @@ select#allSections:focus {
             color: var(--text-color);
         }
 
-        #home .video-feature {
+        .video-feature {
           margin-top: 18vw;
           margin-left: 10vw;
           z-index: 0;
           border-radius: var(--border-rad);
           width: 75%;
+        }
+
+        .video-feature iframe {
+          border-radius: var(--border-rad);
         }
 
         #video-feature {
@@ -3722,7 +3726,7 @@ h5.shopify-buy__cart-toggle__title {
                   width: calc(100%) !important;
 
                 }
-                  #home .video-feature {
+                  .video-feature {
                     margin-top: 47vw;
                     margin-left: 10vw;
                     z-index: 0;
