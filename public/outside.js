@@ -158,6 +158,14 @@ $( document ).ready(function() {
           $(this).css('transform', 'rotate(' + b + 'deg)');
         });
 
+        $('h1.no-rotate').each(function( index ) {
+            $(this).css('transform', 'rotate(' + 0 + 'deg)');
+          });
+
+        $('.title-image').each(function( index ) {
+            $(this).css('transform', 'rotate(' + b + 'deg)');
+          });
+
         $('h6.byline').each(function( index ) {
             $(this).css('transform', 'rotate(' + b + 'deg)');
         });

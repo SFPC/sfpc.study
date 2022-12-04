@@ -354,13 +354,23 @@ h1 {
           /* margin-bottom: var(--text-margin); */
         }
 
-        h1.title.fundraiser-23::after {
+        .title-image.fundraiser-23::after {
           display: inline-flex;
             content: '';
           background-image: url('/images/fundraiser/winter-23/logo-2.svg');
             background-size: 100%;
             width: 30vw;
             min-height: 8vw;
+            background-repeat: no-repeat;
+        }
+
+        .title-image.fundraiser-23-square::after {
+          display: inline-flex;
+            content: '';
+          background-image: url('/images/fundraiser/winter-23/logo-color.svg');
+            background-size: 100%;
+            width: 20vw;
+            min-height: 20vw;
             background-repeat: no-repeat;
         }
 
@@ -2804,6 +2814,23 @@ video {
   border-radius: var(--border-rad);
 }
 
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 
 
@@ -3239,11 +3266,18 @@ h5.shopify-buy__cart-toggle__title {
           margin-bottom: calc(var(--text-margin)/8) !important;
         }
 
-        h1.title.fundraiser-23::after {
+        .title-image.fundraiser-23::after {
             background-size: 100%;
             width: 60vw;
             min-height: 15vw;
         }
+
+        .title-image.fundraiser-23-square::after {
+            background-size: 100%;
+            width: 30vw;
+            min-height: 30vw;
+        }
+
 
         section .grid-2{
           width: 100%;
@@ -3434,11 +3468,11 @@ h5.shopify-buy__cart-toggle__title {
 
     h5.shopify-buy__cart-toggle__title, .shopify-buy__cart-toggle__count {
 
-            font-size: var(--small-text) !important;
+            font-size: var(--medium-text) !important;
     }
 
         select#allSections, .fixed-apply, .fixed-support, .shopify-buy__frame-toggle {
-          font-size: var(--small-text);
+          font-size: var(--medium-text);
         }
 
         .fixed-apply:hover {
