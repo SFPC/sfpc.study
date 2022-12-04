@@ -280,9 +280,38 @@
                 Winner(s) will be announced on {{[Winner-Announce].start}}.
               </em> -->
 
+
+                {{#eq [type] "Donation In-Kind"}}
+                <div class="addon-item">
+                  <div class="item">
+                    <p class="full">or <a href="" class="small-link">Become a Member</a>  for
+
+                      {{#eq [Website-Slug] "tuition-gift-daily"}}
+                      <span id="cost">$15/month</span> via WithFriends. You will receive: <span class="test-icon"></span> a generative wallpaper and <span class="test-icon"></span> access to our community Discord.
+                      {{/eq}}
+                      {{#eq [Website-Slug] "teaching-gift-daily"}}
+                      <span id="cost">$25/month</span> via WithFriends. You will receive: <span class="test-icon"></span> a generative wallpaper and <span class="test-icon"></span> access to our community Discord.
+                      {{/eq}}
+                      {{#eq [Website-Slug] "tuition-gift-full"}}
+                      <span id="cost">$65/month</span> via WithFriends. You will receive: <span class="test-icon"></span> a generative wallpaper and <span class="test-icon"></span> access to our community Discord.
+                      {{/eq}}
+                      {{#eq [Website-Slug] "teaching-gift-full"}}
+                      <span id="cost">$150/month</span> via WithFriends. You will receive: <span class="test-icon"></span> a generative wallpaper and <span class="test-icon"></span> access to our community Discord.
+                      {{/eq}}
+
+                  </p>
+                  </div>
+                </div>
+                <div class="break-noline"></div>
+                {{/eq}}
+
                 <div class="break-noline"></div>
 
             {{/if}}
+
+
+
+
 
 
             <h6>Other ways to support...</h6>
@@ -316,7 +345,7 @@
               <div class="item">
                 <img src="https://sfpc.study/images/market/an-ode.jpg">
                 <p>Add our tote bag to your cart to increase your donation by <span id="cost">$25</span>.
-                 <a href="/fundraiser/an-ode">An Ode (LCD Mode)</a> is designed by Zainab Aliyu.
+                 <a href="/fundraiser/an-ode">An Ode (Liquid Crystal Mode)</a> is designed by Zainab Aliyu.
 
                 <span class="addon" id="addon-tote-button-wrapper"/>
               </p>

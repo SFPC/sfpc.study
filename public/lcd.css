@@ -394,7 +394,7 @@ select#allSections {
         text-shadow: 3px 3px var(--fundraiser-winter-23-background) !important;
       }
 
-      .fundraiser-winter-23 .block-text .test-icon {
+      .fundraiser-winter-23  .test-icon {
         color: var(--fundraiser-winter-23-special-text);
       }
 

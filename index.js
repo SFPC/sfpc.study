@@ -609,6 +609,7 @@ function parseProductData(apiResponse){
   //this is the data that will be passes to the class template
 
   returnObj.cost=productInfo["Cost"]?.number
+  returnObj.type=productInfo["Product-Type"]?.multi_select[0]?.name
   returnObj.moreImages=parseNotionData(productInfo["More-Image-URLs"])
 
   return returnObj
