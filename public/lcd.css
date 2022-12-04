@@ -357,8 +357,18 @@ select#allSections {
         background-color: var(--fundraiser-winter-23-background-dark);
         border-color: var(--fundraiser-winter-23-link);
         color: var(--fundraiser-winter-23-link);
-        /* color: rgba(255,255,255, 60); */
+        /* color: rgba(255,255,255,.9); */
       }
+
+      /* .fundraiser-winter-23 .block-text:hover {
+        background-color: var(--fundraiser-winter-23-background-dark);
+        border-color: var(--fundraiser-winter-23-text);
+        color: var(--fundraiser-winter-23-text);
+      }
+
+      .fundraiser-winter-23 .block-text:hover h4 {
+        border-color: var(--fundraiser-winter-23-text);
+      } */
 
       .fundraiser-winter-23 .block-text h4 {
         color: var(--fundraiser-winter-23-special-text);;
