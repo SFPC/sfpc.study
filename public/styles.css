@@ -354,6 +354,13 @@ h1 {
           /* margin-bottom: var(--text-margin); */
         }
 
+        .title-image {
+          z-index: 100 !important;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+        }
+
         .title-image.fundraiser-23::after {
           display: inline-flex;
             content: '';
@@ -367,11 +374,15 @@ h1 {
         .title-image.fundraiser-23-square::after {
           display: inline-flex;
             content: '';
-          background-image: url('/images/fundraiser/winter-23/logo-color.svg');
+          background-image: url('/images/fundraiser/winter-23/logo.svg');
             background-size: 100%;
             width: 20vw;
             min-height: 20vw;
             background-repeat: no-repeat;
+        }
+
+        .title-image.fundraiser-23-square:hover::after {
+          background-image: url('/images/fundraiser/winter-23/logo.svg');
         }
 
 .session .title, .project .title{
@@ -1174,6 +1185,27 @@ select#allSections:focus {
         .home, .about, .closed, .blog, .people, .projects p{
             font-family: var(--main-title-font);
             color: var(--text-color);
+        }
+
+        #home .video-feature {
+          margin-top: 18vw;
+          margin-left: 10vw;
+          z-index: 0;
+          border-radius: var(--border-rad);
+          width: 75%;
+        }
+
+        #video-feature {
+          display: flex;
+          flex-direction: row;
+          height: 100%;
+          /* align-items: center; */
+        }
+
+        #video-feature .video-description {
+
+  margin: auto 0;
+
         }
 
 
