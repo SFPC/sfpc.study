@@ -411,9 +411,19 @@ $(document).ready(function() {
 
         // FUNDRAISER COUNTDOWN
 
-        var goal;
-        var raised;
-        var end;
+        // var goal;
+        // var raised;
+        // var end;
+
+        //goal of the fundraiser, currently $60,000
+        var goal = 60000;
+
+        // estimated amount raised
+        var raised = 9500;
+
+        // end date of fundraiser
+        var end = new Date('January 3, 2023');
+
 
         // //goal of the fundraiser, currently $60,000
         // var goal = 60000;
