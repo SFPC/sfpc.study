@@ -254,7 +254,9 @@
 
           {{else}}
 
-          {{#eq [selltype] "Purchase"}}
+          {{#eq [selltype] "Donation In-Kind"}}
+
+          {{else}}
           <div id="{{this.[Website-Slug]}}"
             class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
             ">

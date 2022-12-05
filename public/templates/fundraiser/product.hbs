@@ -260,7 +260,7 @@
                   <h3>
 
                     {{#eq [selltype] "Raffle Only"}}
-                    ${{cost}}
+                    ${{Value}}
                     {{else}}
                     <span id="cost">${{cost}}</span> </h3>
                     {{/eq}}
@@ -305,7 +305,7 @@
 
                {{#eq [selltype] "Raffle Only"}}    <p>
 
-                 For each raffle ticket you buy, your name will be entered once into a draw for a chance to win this item.
+                 For each raffle ticket you buy, your name will be entered once into a draw for a chance to win {{#eq [Website-Slug] "raffle"}}one of 6 items{{else}}this item{{/eq}}.
             </p>
                {{/eq}}
 
@@ -355,16 +355,75 @@
 
             {{#eq [selltype] "Raffle Only"}}
 
+                        {{#eq [Website-Slug] "raffle"}}
+                        <h6>Items in the raffle...</h6>
+                        {{else}}
                         <h6>Other items in the raffle...</h6>
+                        {{/eq}}
+
 
                         <div class="addon-item">
                           <div class="item">
-                            <img src="https://sfpc.study/images/market/memberships.gif">
-                            <p>
-                             x
-                           </p>
+                            <img src="https://sfpc.study/images/market/spaceplant-blanket.jpg">
+                            <p>A 54” x 72” Jacquard loom woven blanket valued at <span id="cost">$250</span>.
+                             <a href="/fundraiser/spaceplant-blanket">Spaceplant Blanket</a> is by SPACEFILLER.
+                          </p>
                           </div>
                         </div>
+
+                        <div class="addon-item">
+                          <div class="item">
+                            <img src="https://sfpc.study/images/market/an-ode.jpg">
+                            <p>A tote bag valued at <span id="cost">$25</span>.
+                             <a href="/fundraiser/an-ode">An Ode (Liquid Crystal Mode)</a> is designed by Zainab Aliyu and printed by Talking Dolls.
+                          </p>
+                          </div>
+                        </div>
+
+                        <div class="addon-item">
+                          <div class="item">
+                            <img src="https://sfpc.study/images/market/untitled-shannon-finnegan.jpg">
+                            <p>A digital stencil print valued at <span id="cost">$325</span>.
+                             <a href="/fundraiser/untitled-shannon-finnegan">Untitled</a> is by Shannon Finnegan.
+                          </p>
+                          </div>
+                        </div>
+
+                        <div class="addon-item">
+                          <div class="item">
+                            <img src="https://sfpc.study/images/market/human-computers.jpg">
+                            <p>A signed copy of a risograph print valued at <span id="cost">$15</span>.
+                             <a href="/fundraiser/human-computers">Human Computers</a> is designed and printed by Neta Bomani.
+                          </p>
+                          </div>
+                        </div>
+
+                        <div class="addon-item">
+                          <div class="item">
+                            <img src="https://sfpc.study/images/market/custom-talisman.jpg">
+                            <p>A custom talisman valued at <span id="cost">$200</span>.
+                             <a href="/fundraiser/custom-talisman">custom talisman to ward off a bad boss</a> is by ann haeyoung.
+                          </p>
+                          </div>
+                        </div>
+
+                        <div class="addon-item">
+                          <div class="item">
+                            <img src="https://sfpc.study/images/market/varying.jpg">
+                            <p>A generative art piece valued at <span id="cost">$100</span>.
+                             <a href="/fundraiser/varying">Varying</a> is by Char Stiles.
+                          </p>
+                          </div>
+                        </div> 
+
+
+
+
+
+
+                        <span class="addon addon-hide" id="addon-tote-button-wrapper"/>
+                        <span class="addon addon-hide" id="addon-sticker-button-wrapper"/>
+                        <span class="addon addon-hide" id="addon-sticker-2-button-wrapper"/>
 
 
             {{else}}
@@ -374,7 +433,7 @@
 
                   {{#eq [type] "Donation In-Kind"}}
                   {{else}}
-                  <div class="addon-item">
+                  <div class="addon-item {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
                     <div class="item">
                       <img src="https://sfpc.study/images/market/memberships.gif">
                       <p>

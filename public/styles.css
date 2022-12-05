@@ -394,7 +394,7 @@ h1 {
           background-repeat: no-repeat;
         }
 
-        .sponsorlogo.greyarea::after { 
+        .sponsorlogo.greyarea::after {
           width: 5vw;
           min-height: 1vw;
           background-image: url('/images/fundraiser/winter-23/gray-area-logo.svg');
@@ -3173,6 +3173,10 @@ video {
   width: calc(75%);
   display: inline-block;
   margin-bottom: 0px !important;
+}
+
+.addon-item span#cost {
+  line-height: 1;
 }
 
 .addon-item .item p.full {
