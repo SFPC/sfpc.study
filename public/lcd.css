@@ -252,8 +252,8 @@ select#allSections {
 
 .fundraiser-winter-23,
 .fundraiser-winter-23.featured.session,
-.fundraiser-winter-23.featured  {
- /* background-color: var(--sex-ed-background)  !important; */
+.fundraiser-winter-23.featured,
+.fundraiser-winter-23 .stacked .grid-1 .grid-4  {
  color: var(--fundraiser-winter-23-text);
  box-sizing: border-box;
  border-color: var(--fundraiser-winter-23-text);
@@ -270,13 +270,24 @@ select#allSections {
 
 
      .shell.fundraiser-winter-23 {
-       background-image:url('images/fundraiser/winter-23/bg.jpg');
-       /* background-position: bottom; */
-       /* background-repeat: no-repeat;
-       background-size: cover; */
+       /* background-image:url('images/fundraiser/winter-23/bg.jpg');
        background-position: top left;
        background-repeat: repeat;
-       background-size: cover;
+       background-size: cover; */
+     }
+
+     .shell.fundraiser-winter-23, .fundraiser-winter-23.featured.session {
+       background-image:url('images/fundraiser/winter-23/color-bg-1.png'), url('images/fundraiser/winter-23/bg.jpg');
+       background-position: 200px left;
+       background-repeat: no-repeat, repeat;
+       background-size: cover, 40%;
+     }
+
+
+     .shell.fundraiser-winter-23 {
+       /* background-image: url('images/fundraiser/winter-23/bg.jpg');
+       background-size: 40%;
+       background-repeat: repeat; */
      }
 
 
@@ -464,11 +475,7 @@ select#allSections {
         border-color: var(--fundraiser-winter-23-text);
       }
 
-      .shell.fundraiser-winter-23 {
-        background-image: url('images/fundraiser/winter-23/bg.jpg');
-        background-size: 40%;
-        background-repeat: repeat;
-      }
+
 
       .fundraiser-winter-23 .addon-item {
         border: 2px dotted var(--fundraiser-winter-23-link) !important;
