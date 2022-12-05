@@ -3642,7 +3642,7 @@ h5.shopify-buy__cart-toggle__title {
 
     h5.shopify-buy__cart-toggle__title, .shopify-buy__cart-toggle__count {
 
-            font-size: var(--medium-text) !important;
+            font-size: var(--small-text) !important;
     }
 
         select#allSections, .fixed-apply, .fixed-support {
@@ -3887,7 +3887,7 @@ h5.shopify-buy__cart-toggle__title {
 
                   .fundraiser-23-square-bg {
                     width: 50vw;
-                    height: 50vw; 
+                    height: 50vw;
                     top: 2vw;
                     left: 2vw;
                   }
