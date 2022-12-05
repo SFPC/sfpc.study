@@ -211,7 +211,7 @@ app.get("/events/:slug", async (req,res) => {
   }
 })
 
-app.get("/fundraiser-homepage", async (req,res) => {
+app.get("/", async (req,res) => {
   const response = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
   const testimonialData = response.map((testimonial) => {
     console.log(testimonial)
@@ -611,6 +611,7 @@ function parseProductData(apiResponse){
   returnObj.cost=productInfo["Cost"]?.number
   returnObj.type=productInfo["Product-Type"]?.multi_select[0]?.name
   returnObj.selltype=productInfo["Sell-Type"]?.multi_select[0]?.name
+  returnObj.goodstype=productInfo["Goods-Type"]?.multi_select[0]?.name
   returnObj.publish=productInfo["Publish"]?.checkbox
   returnObj.moreImages=parseNotionData(productInfo["More-Image-URLs"])
 

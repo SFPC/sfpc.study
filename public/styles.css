@@ -635,6 +635,16 @@ h4, .roles, caption, figure, p.small, .small {
   letter-spacing: 0px;
 }
 
+h3 span.small.block {
+  font-size: var(--small-text);
+  font-weight: bold;
+  font-family: var(--main-title-font);
+  letter-spacing: 0px;
+  display: block;
+  background: none !important;
+  padding: 3px 0px;
+}
+
         .roles {
           display: block;
           margin-top: calc(var(--body-margin)/20);

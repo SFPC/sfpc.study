@@ -635,6 +635,10 @@ $(document).ready(function() {
             $('a#link-blog').addClass('underline');
         }
 
+        if ($('.breadcrumb:contains("fundraiser")').length > 0) {
+            $('a#link-fundraiser').addClass('underline');
+        }
+
 
         //
         // if (window.location.href.indexOf("about") > -1) {
@@ -655,7 +659,7 @@ $(document).ready(function() {
             $('#current-mode').html('liquid crystal')
           } else {
             themeToggle.innerText = inCRT
-            $('#current-mode').html('cathode-ray')
+            $('#current-mode').html('cathode ray')
           }
 
 
