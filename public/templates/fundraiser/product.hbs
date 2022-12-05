@@ -48,11 +48,11 @@
     <script>
       initShopifyProduct("{{[Shopify ID]}}", "add-to-cart-button-wrapper", "Add to cart")
 
-      initShopifyProduct("7864325472407", "addon-sticker-button-wrapper", "Add sticker pack")
+      initShopifyProduct("7864325472407", "addon-sticker-button-wrapper", "Add to cart")
 
-      initShopifyProduct("7864322392215", "addon-sticker-2-button-wrapper", "Add sticker pack")
+      initShopifyProduct("7864322392215", "addon-sticker-2-button-wrapper", "Add to cart")
 
-      initShopifyProduct("7864352080023", "addon-tote-button-wrapper", "Add tote")
+      initShopifyProduct("7864352080023", "addon-tote-button-wrapper", "Add to cart")
 
       initShopifyProduct("7865691406487", "addon-raffle", "Buy raffle ticket")
 
@@ -211,7 +211,7 @@
 
             {{#if [Description]}}
             <div class="details"> <p style="white-space:pre-line">
-                    {{{[Description]}}}{{#if [Product-Link]}}<a href="{{[Product-Link]}}">learn more...</a>{{/if}} {{#if [Delivery-Info]}} <BR><br>{{[Delivery-Info]}}{{/if}} 100% of proceeds go towards scholarships at SFPC. {{#eq [selltype] "Donation In-Kind"}}Please fill out <a href="https://forms.gle/3BmgWkW8LLGPwmTw9" target="_blank">this form</a> to receive instructions for how to make your tax deductible donation.{{/eq}}
+                    {{{[Description]}}}{{#if [Product-Link]}}<a href="{{[Product-Link]}}">learn more...</a>{{/if}} {{#if [Delivery-Info]}} <BR><br>{{[Delivery-Info]}}{{/if}} 100% of proceeds go towards scholarships at SFPC. {{#eq [selltype] "Donation"}}Please fill out <a href="https://forms.gle/3BmgWkW8LLGPwmTw9" target="_blank">this form</a> to receive instructions for how to make your tax deductible donation.{{/eq}}
                   </p>
 
             </div>
@@ -312,32 +312,48 @@
                {{/eq}}
 
 
-                {{#eq [type] "Donation In-Kind"}}
+                {{#eq [type] "Donation"}}
                 <div class="addon-item">
                   <div class="item">
                     <img src="https://sfpc.study/images/market/{{Website-Slug}}.jpg">
                     <p class="">or
 
+
                       {{#eq [Website-Slug] "circuit-bender"}}
                       <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11365459" target="_blank" class="small-link">Become a Member</a>  for
                       <span id="cost">$15/month</span> via WithFriends.  As a Circuit Bender member, you will receive:
-                      <span class="test-icon"></span> a generative wallpaper and <span class="test-icon"></span> access to our community Discord.
+                      <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>
+                      and <span class="test-icon"></span> access to special channels on our community Discord.
                       {{/eq}}
                       {{#eq [Website-Slug] "thread-weaver"}}
-                      <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436509" target="_blank" class="small-link">Become a Member</a>  for
+                      <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436554" target="_blank" class="small-link">Become a Member</a>  for
                       <span id="cost">$25/month</span> via WithFriends.  As a Thread Weaver member, you will receive:
-                      <span class="test-icon"></span> a generative wallpaper, <span class="test-icon"></span> access to our community Discord, and <span class="test-icon"></span> a raffle ticket.
+                      <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>,
+                      <span class="test-icon"></span> access to special channels on our community Discord,
+                      <span class="test-icon"></span> special invites to SFPC events,
+                      and <span class="test-icon"></span> a <a href="/fundraiser/raffle">raffle ticket</a>.
                       {{/eq}}
                       {{#eq [Website-Slug] "space-maker"}}
-                      <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436524" target="_blank" class="small-link">Become a Member</a>  for
+                      <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436509" target="_blank" class="small-link">Become a Member</a>  for
                       <span id="cost">$65/month</span> via WithFriends. As a Space Maker member, you will receive:
-                      <span class="test-icon"></span> a generative wallpaper, <span class="test-icon"></span> access to our community Discord, <span class="test-icon"></span> a raffle ticket, and <span class="test-icon"></span> a tote bag.
+                      <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>,
+                      <span class="test-icon"></span> access to special channels on our community Discord,
+                      <span class="test-icon"></span> special invites to SFPC events,
+                      <span class="test-icon"></span> a <a href="/fundraiser/an-ode">tote bag</a>,
+                      and <span class="test-icon"></span> a <a href="/fundraiser/raffle">raffle ticket</a>.
                       {{/eq}}
                       {{#eq [Website-Slug] "fruit-bearer"}}
-                      <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436554" target="_blank" class="small-link">Become a Member</a>  for
+                      <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436524" target="_blank" class="small-link">Become a Member</a>  for
                       <span id="cost">$150/month</span> via WithFriends.  As a Fruit Bearer member, you will receive:
-                      <span class="test-icon"></span> a generative wallpaper, <span class="test-icon"></span> access to our community Discord, <span class="test-icon"></span> a raffle ticket, <span class="test-icon"></span> a tote bag, and <span class="test-icon"></span> access to all SFPC publications.
+                      <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>,
+                      <span class="test-icon"></span> access to special channels on our community Discord,
+                      <span class="test-icon"></span> special invites to SFPC events,
+                      <span class="test-icon"></span> a <a href="/fundraiser/an-ode">tote bag</a>,
+                      <span class="test-icon"></span> access to a digital archive of all SFPC publications,  
+                      and <span class="test-icon"></span> a <a href="/fundraiser/raffle">raffle ticket</a>.
                       {{/eq}}
+
+
 
                   </p>
                   </div>
@@ -430,15 +446,20 @@
 
                   <h6>Other ways to support...</h6>
 
-                  {{#eq [type] "Donation In-Kind"}}
+                  {{#eq [type] "Donation"}}
                   {{else}}
                   <div class="addon-item {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
                     <div class="item">
                       <img src="https://sfpc.study/images/market/memberships.gif">
                       <p>
-                        <a href="https://withfriends.co/school_for_poetic_computation" class="small-link" target="_blank">Become a Member</a> via WithFriends. Perks include:
-                        <span class="test-icon"></span> a generative wallpaper, <span class="test-icon"></span> access to our community Discord, <span class="test-icon"></span> a raffle ticket, <span class="test-icon"></span> a tote bag, and <span class="test-icon"></span> access to digital archive of all SFPC publications.
-                    </p>
+                        <a href="https://withfriends.co/school_for_poetic_computation" class="small-link" target="_blank">Become a Member</a> via WithFriends. Benefits include:
+                        <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>,
+                        <span class="test-icon"></span> access to special channels on our community Discord,
+                        <span class="test-icon"></span> a <a href="/fundraiser/raffle">raffle ticket</a>,
+                        <span class="test-icon"></span> special invites to SFPC events,
+                        <span class="test-icon"></span> a <a href="/fundraiser/an-ode">tote bag</a>,
+                        and <span class="test-icon"></span> access to a digital archive of all SFPC publications.
+</p>
                     </div>
                   </div>
                   {{/eq}}
