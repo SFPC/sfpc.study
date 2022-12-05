@@ -1,8 +1,9 @@
 :root {
     --goal: 600000;
+    --raised-amount: 9500;
+    --raised-percentage: calc(var(--raised-amount) / var(--goal) * 100%);
     --raised: 17%;
     --raised-text: '17%';
-    --date: 'Last updated December 4';
 }
 
 
@@ -46,7 +47,7 @@
 
 
 .fundraiser-progress {
-  width: var(--raised);
+  width: var(--raised-percentage);
   display: block;
   height: calc(var(--footer-height) - 4px);
   background:  var(--fundraiser-winter-23-special-text);
