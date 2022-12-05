@@ -27,6 +27,7 @@
   <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico" />
 
   <script src="/jquery-3.6.0.min.js"></script>
+  <script src="https://kit.fontawesome.com/95e6fd57f2.js" crossorigin="anonymous"></script>
 
   <!-- stats -->
   <script type="text/javascript">
@@ -105,12 +106,12 @@
     <div class="selectors">
       <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
         <option value="">How to contribute...</option>
-        <option value="">Make a one-time donation</option>
-        <option value="">Become a member</option>
-        <option value="">Purchase from Market</option>
-        <option value="">Write a testiminial</option>
-        <option value="">Share this fundraiser</option>
-        <option value="">Follow our progress</option>
+        <option value="section-donate">1. Make a donation</option>
+        <option value="section-member">2. Become a member</option>
+        <option value="section-market">3. Purchase from market</option>
+        <option value="section-testimonials">4. Write a testimonial</option>
+        <option value="section-share">5. Share this fundraiser</option>
+        <option value="section-follow">6. Follow our progress</option>
 
 
 
@@ -152,7 +153,7 @@
 
       <!-- <div class="break-noline"></div> -->
 
-      <section class="stacked stacked-4">
+      <section id="section-donate"  class="stacked stacked-4">
         <div class="grid-1 featured fundraiser-winter-23 session">
           <div class="featured-text half">
             <div class="top">
@@ -176,7 +177,7 @@
 
        <!-- <div class="break-noline-small"></div> -->
 
-      <section id="section-market" class="stacked stacked-4">
+      <section id="section-member" class="stacked stacked-4">
         <div class="grid-1 participate">
 
           <div id="/tuition-gift"
@@ -379,11 +380,17 @@
 
 
       <div class="break"></div>
-      <section id="section-market">
+      <section id="section-testimonials">
         <div class="grid-2">
          <h1>Testimonials</h1>
         </div>
         <div class="grid-2">
+          <p>
+           Our community
+          </p>
+          <p>
+           <a href="https://forms.gle/PvuvBQd4cmo8YL4j6" class="" target="_blank">share a testimonial...</a>
+          </p>
         </div>
       </section>
       <div class="break-noline-small"></div>
@@ -414,7 +421,30 @@
       </div>
 
 
-     <section>
+      <div class="break-noline"></div>
+
+      <section id="section-share"  class="stacked stacked-4">
+        <div class="grid-1 featured fundraiser-winter-23 session">
+          <div class="featured-text half">
+            <div class="top">
+              <h2 class="title"><a href="#">Share our fundraiser</a></h2>
+            </div>
+            <div class="right">
+
+               <a href="https://twitter.com/intent/tweet?url=https://sfpc.study/fundraiser&text="><img src="/images/social/twitter.svg"></a>
+
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://sfpc.study/fundraiser"><img src="/images/social/facebook.svg"></a>
+
+               <a href="mailto:info@example.com?&subject=&cc=&bcc=&body=https://sfpc.study/fundraiser%0A"><img src="/images/social/envelope-solid.svg"></a>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+     <!-- <section>
          <div class="grid-2">
            <p>
             <a href="https://forms.gle/PvuvBQd4cmo8YL4j6" class="" target="_blank">share a testimonial...</a>
@@ -423,7 +453,7 @@
 
          <div class="grid-2">
          </div>
-     </section>
+     </section> -->
 
 
       <!-- <div class="break"></div> -->
