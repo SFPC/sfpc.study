@@ -222,6 +222,20 @@ app.get("/", async (req,res) => {
   res.render("fundraiser/winter23-homepage", {testimonials: testimonialData})
 })
 
+
+app.get("/donors", async (req,res) => {
+  const response = await getDatabaseEntries("f10d523dd9b24d44ae2d9a6c26b4f5ee", [{property:"Date", direction:"descending"}])
+  const testimonialData = response.map((testimonial) => {
+    console.log(testimonial)
+    return parseTestimonials(testimonial)
+  })
+  console.log(testimonialData)
+  // let pageContent = getPageContent()
+  res.render("about/donors", {testimonials: testimonialData})
+})
+
+
+
 app.get("/fundraiser", async (req, res) => {
 
   const responseTest = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])

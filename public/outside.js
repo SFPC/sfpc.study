@@ -411,14 +411,18 @@ $(document).ready(function() {
 
         // FUNDRAISER COUNTDOWN
 
-        //goal of the fundraiser, currently $60,000
-        var goal = 60000;
+        var goal;
+        var raised;
+        var end;
 
-        // estimated amount raised
-        var raised = 9500;
-
-        // end date of fundraiser
-        var end = new Date('January 3, 2023');
+        // //goal of the fundraiser, currently $60,000
+        // var goal = 60000;
+        //
+        // // estimated amount raised
+        // var raised = 9500;
+        //
+        // // end date of fundraiser
+        // var end = new Date('January 3, 2023');
 
 
         today=new Date();
@@ -659,7 +663,7 @@ $(document).ready(function() {
             $('#current-mode').html('liquid crystal')
           } else {
             themeToggle.innerText = inCRT
-            $('#current-mode').html('cathode ray')
+            $('#current-mode').html('cathode-ray')
           }
 
 
