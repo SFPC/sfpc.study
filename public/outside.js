@@ -379,7 +379,7 @@ $(document).ready(function() {
         // FUNDRAISER COUNTDOWN
 
         today=new Date();
-        var end=new Date('January 3, 2023');
+        // var end=new Date('January 3, 2023');
         if (today.getMonth()==11 && today.getDate()>25)
         {
         end.setFullYear(end.getFullYear()+1);
@@ -387,6 +387,11 @@ $(document).ready(function() {
         var one_day=1000*60*60*24;
         var countdown = (Math.ceil((end.getTime()-today.getTime())/(one_day)));
         $('.fr-left h6').html(countdown);
+
+        var percentage = raised / goal * 100;
+        console.log(percentage)
+
+        
 
 
 

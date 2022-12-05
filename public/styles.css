@@ -3851,6 +3851,12 @@ h5.shopify-buy__cart-toggle__title {
                   left: 2vw;
                   }
 
+                  .featured-text.half.thin{
+                    align-items: start;
+                align-content: start;
+                  }
+
+
 
 
 }

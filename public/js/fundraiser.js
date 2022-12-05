@@ -1,4 +1,8 @@
+//goal of the fundraiser, currently $60,000
 var goal = 60000;
+
+// estimated amount raised
 var raised = 9500;
-var percentage = raised / goal * 100;
-console.log(percentage)
+
+// end date of fundraiser
+var end=new Date('January 3, 2023');
