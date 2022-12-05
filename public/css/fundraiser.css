@@ -51,7 +51,7 @@
   height: calc(var(--footer-height) - 4px);
   background:  var(--fundraiser-winter-23-special-text);
   box-sizing: border-box;
-  border-radius: var(--border-rad);
+  /* border-radius: var(--border-rad); */
 }
 .fundraiser-progress h6 {
   float:right;

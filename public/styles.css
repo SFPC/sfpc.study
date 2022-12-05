@@ -3599,9 +3599,13 @@ h5.shopify-buy__cart-toggle__title {
             font-size: var(--medium-text) !important;
     }
 
-        select#allSections, .fixed-apply, .fixed-support, .shopify-buy__frame-toggle {
+        select#allSections, .fixed-apply, .fixed-support {
           font-size: var(--medium-text);
         }
+        .shopify-buy__frame-toggle , .shopify-buy-frame--toggle {
+          font-size: var(--small-text) !important;
+        }
+
 
         .fixed-apply:hover {
         color: #000;
