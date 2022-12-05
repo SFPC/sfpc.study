@@ -3922,10 +3922,12 @@ h5.shopify-buy__cart-toggle__title {
                 align-content: start;
                   }
 
-                  .featured-text.half.long{
+                  /* .featured-text.half.long{
                     align-items: start;
                 align-content: start;
-                  }
+                flex-direction: column !important;
+                gap: calc(var(--body-margin)*2);
+                  } */
 
 
                   .fundraiser-23-square-bg {
