@@ -209,7 +209,7 @@
 
             {{#if [Description]}}
             <div class="details"> <p style="white-space:pre-line">
-                    {{{[Description]}}}{{#if [Product-Link]}}<a href="{{[Product-Link]}}">learn more...</a>{{/if}} {{#if [Delivery-Info]}} <BR><br>{{[Delivery-Info]}}{{/if}} 100% of proceeds go towards scholarships at SFPC.
+                    {{{[Description]}}}{{#if [Product-Link]}}<a href="{{[Product-Link]}}">learn more...</a>{{/if}} {{#if [Delivery-Info]}} <BR><br>{{[Delivery-Info]}}{{/if}} 100% of proceeds go towards scholarships at SFPC. {{#eq [selltype] "Donation In-Kind"}}Please fill out <a href="">this form</a> to receive instructions for how to make your tax deductible donation.{{/eq}}
                   </p>
 
             </div>
@@ -355,11 +355,7 @@
 
             {{#eq [selltype] "Raffle Only"}}
 
-                        {{#eq [Website-Slug] "raffle"}}
                         <h6>Items in the raffle...</h6>
-                        {{else}}
-                        <h6>Other items in the raffle...</h6>
-                        {{/eq}}
 
 
                         <div class="addon-item">
@@ -414,7 +410,7 @@
                              <a href="/fundraiser/varying">Varying</a> is by Char Stiles.
                           </p>
                           </div>
-                        </div> 
+                        </div>
 
 
 

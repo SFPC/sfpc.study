@@ -389,15 +389,19 @@ h1 {
           display: inline-flex;
           content: '';
           background-size: 100%;
-          width: 20vw;
-          min-height: 20vw;
+          /* width: 20vw;
+          min-height: 20vw; */
           background-repeat: no-repeat;
         }
 
-        .sponsorlogo.greyarea::after {
-          width: 5vw;
-          min-height: 1vw;
+        .sponsorlogo.grayarea::after {
+          width: calc(110px + 2.54vw);
+          height: calc(20px + 0.34vw);
+          /* background: red; */
           background-image: url('/images/fundraiser/winter-23/gray-area-logo.svg');
+          /* background-size: cover; */
+          background-position: bottom;
+          background-repeat: no-repeat;
         }
 
 
@@ -1363,6 +1367,10 @@ select#allSections:focus {
       .featured a, .featured-div a{
         text-decoration: none;
         color: inherit;
+      }
+
+      .featured p a {
+        text-decoration: underline;
       }
 
       .featured a:hover, .featured-div a:hover{
