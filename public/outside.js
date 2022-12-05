@@ -386,13 +386,23 @@ $(document).ready(function() {
 // FUNDRAISER animation
 
 function swapImages(){
-    var $active = $('.manual-gif .active');
-    var $next = ($('.manual-gif .active').next().length > 0) ? $('.manual-gif .active').next() : $('.manual-gif img:first');
+    var $active = $('.fundraiser-23-square-bg.manual-gif .active');
+    var $next = ($('.fundraiser-23-square-bg.manual-gif .active').next().length > 0) ? $('.fundraiser-23-square-bg.manual-gif .active').next() : $('.fundraiser-23-square-bg.manual-gif img:first');
     // $active.fadeOut(function(){
     $active.removeClass('active').addClass('inactive');
     $next.addClass('active').removeClass('inactive');
     // });
   }
+
+  function swapImagesIcons(){
+      var $active = $('.fundraiser-icons.manual-gif .active');
+      var $next = ($('.fundraiser-icons.manual-gif .active').next().length > 0) ? $('.fundraiser-icons.manual-gif .active').next() : $('.fundraiser-icons.manual-gif img:first');
+      // $active.fadeOut(function(){
+      $active.removeClass('active').addClass('inactive');
+      $next.addClass('active').removeClass('inactive');
+      // });
+    }
+
 
 
 $(document).ready(function() {
@@ -466,6 +476,7 @@ $(document).ready(function() {
 
         // FUNDRAISER animation
         setInterval('swapImages()', 300);
+          setInterval('swapImagesIcons()', 300);
 
 
 

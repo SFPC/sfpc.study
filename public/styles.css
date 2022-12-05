@@ -372,18 +372,21 @@ h1 {
           top: 0px;
           left: 0px;
         }
+        .fundraiser-23-square:hover .fundraiser-23-square-bg{
+          opacity: 0;
+        }
 
-        .title-image-bg img{
+        .manual-gif img{
           /* display:none; */
           position:absolute;
           top:0;
           left:0;
         }
-        .title-image-bg img.active{
+        .manual-gif img.active{
           display:block;
         }
 
-        .title-image-bg img.inactive{
+        .manual-gif img.inactive{
           display:none;
         }
 
@@ -410,6 +413,15 @@ h1 {
 
         .title-image.fundraiser-23-square:hover::after {
           background-image: url('/images/fundraiser/winter-23/logo.svg');
+        }
+
+        .fundraiser-icons {
+          width: 100px;
+          height: 100px;
+          position: fixed;
+          top: calc(50vh - 50px);
+          left: calc(50vw - 50px);
+          z-index: 10000000;
         }
 
         .sponsorlogo::after {
