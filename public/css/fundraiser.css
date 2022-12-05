@@ -1,0 +1,66 @@
+:root {
+    --goal: 600000;
+    --raised: 17%;
+    --raised-text: '17%';
+    --date: 'Last updated December 4';
+}
+
+
+.fundraiser-block {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--body-margin));
+  /* margin-bottom: calc(var(--body-margin)*2); */
+}
+.fundraiser-goal {
+  width: 100%;
+  display: block;
+  height: var(--footer-height);
+  background: var(--fundraiser-winter-23-background-dark);
+  border: 2px solid  var(--fundraiser-winter-23-special-text);
+  box-sizing: border-box;
+  border-radius: var(--border-rad);
+  margin-bottom: 0px !important;
+}
+
+.fundraiser-stats {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-weight: bold;
+   align-content: center;
+   align-items: center;
+}
+
+.fundraiser-stats .fr-left {
+  text-align: left;
+  width: 50%;
+}
+
+.fundraiser-stats .fr-right {
+  text-align: right;
+  width: 50%;
+  color: var(--fundraiser-winter-23-special-text);
+}
+
+
+.fundraiser-progress {
+  width: var(--raised);
+  display: block;
+  height: calc(var(--footer-height) - 4px);
+  background:  var(--fundraiser-winter-23-special-text);
+  box-sizing: border-box;
+  border-radius: var(--border-rad);
+}
+.fundraiser-progress h6 {
+  float:right;
+  color: var(--fundraiser-winter-23-text);
+  line-height: calc(var(--footer-height) - 4px);
+  /* font-weight: bold; */
+  padding-right: var(--body-margin);
+}
+.fundraiser-progress h6::after {
+  content: var(--raised-text);
+  text-align: right;
+}
