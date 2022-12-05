@@ -623,6 +623,12 @@ h6  {
    font-family: var(--main-special-font) !important;
    font-size: var(--medium-text);
  }
+
+ p.large .test-icon {
+   font-size: var(--large-text);
+ }
+
+
 .blog-post.blog-content > h6 {
   margin-bottom:  calc(var(--text-margin)/3);
 }
