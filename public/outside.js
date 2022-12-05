@@ -172,6 +172,10 @@ $( document ).ready(function() {
             $(this).css('transform', 'rotate(' + b + 'deg)');
           });
 
+          $('.title-image-bg').each(function( index ) {
+              $(this).css('transform', 'rotate(' + b + 'deg)');
+            });
+
         $('h6.byline').each(function( index ) {
             $(this).css('transform', 'rotate(' + b + 'deg)');
         });

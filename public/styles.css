@@ -361,6 +361,15 @@ h1 {
           left: 0px;
         }
 
+        .title-image.fundraiser-23-square-bg.title-image-bg {
+          z-index: -1 !important;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 30vw;
+          height: 30vw;
+        }
+
         .title-image.fundraiser-23::after {
           display: inline-flex;
             content: '';
@@ -375,6 +384,7 @@ h1 {
           display: inline-flex;
             content: '';
           background-image: url('/images/fundraiser/winter-23/logo.svg');
+        /* background-image: url('/images/fundraiser/winter-23/logocolor-4.png'); */
             background-size: 100%;
             width: 20vw;
             min-height: 20vw;
