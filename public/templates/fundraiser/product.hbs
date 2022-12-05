@@ -285,14 +285,18 @@
               {{#eq [selltype] "Raffle Only"}}
               {{else}}
               {{#if totalInventory}}
+              {{#gt totalInventory 0 }}
               {{#if availableForSale}}
               {{#lte availableInventory 10}}
+              {{#gt availableInventory 0 }}
               <div class="details">
                 <div class="labels">stock</div>
                 <div class="labels-info">Only {{availableInventory}} left!</div>
               </div>
+              {{/gt}}
               {{/lte}}
               {{/if}}
+              {{/gt}}
               {{/if}}
               {{/eq}}
 

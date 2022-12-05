@@ -307,10 +307,15 @@
                   <BR>
                 {{#if availableForSale}}
                   {{#if totalInventory }}
+                  {{#gt totalInventory 0 }}
                   {{#lte availableInventory 10}}
+                  {{#gt availableInventory 0 }}
+
                   <h4><span>Only {{availableInventory}} left!</span></h4>
                   <BR>
+                  {{/gt}}
                   {{/lte}}
+                  {{/gt}}
                   {{/if}}
 
                   <h3><span id=”cost”>${{cost}}</span></h3>
