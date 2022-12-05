@@ -404,6 +404,12 @@ h1 {
           background-repeat: no-repeat;
         }
 
+        .socials img {
+          width: 5vw;
+          height: 5vw;
+          filter: invert(100%);
+        }
+
 
 .session .title, .project .title{
   font-size: var(--large-text) !important;
@@ -1436,6 +1442,12 @@ select#allSections:focus {
     gap: calc(var(--body-margin)*3);
     /* box-sizing: border-box; */
       }
+
+      .featured-text.half.thin{
+        align-items: center;
+    align-content: center;
+      }
+
 
       .featured-text.half div {
         width: calc(50%) !important;
