@@ -2770,7 +2770,7 @@ align-items: center;
           margin-top: calc(var(--body-margin)*2);
         }
 
-        span#cost, h3 span{
+        span#cost, h3 span, p span#cost{
             background: var(--text-link);
             border-radius: var(--border-rad);
             padding: 1px 5px;
