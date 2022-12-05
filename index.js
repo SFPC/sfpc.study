@@ -236,7 +236,7 @@ app.get("/fundraiser", async (req, res) => {
 
 
   const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
-    { property: "Cost", direction: "ascending" },
+    { property: "Name", direction: "descending" },
   ]);
   console.log(response);
 
