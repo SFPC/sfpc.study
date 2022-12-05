@@ -250,7 +250,7 @@ select#allSections {
 
 /* /////////// start fundraiser winter 23  ///////////////////////////////*/
 
-.fundraiser-winter-23,
+/* .fundraiser-winter-23, */
 .fundraiser-winter-23.featured.session,
 .fundraiser-winter-23.featured,
 .fundraiser-winter-23 .stacked .grid-1 .grid-4  {
@@ -278,9 +278,13 @@ select#allSections {
 
      .shell.fundraiser-winter-23, .fundraiser-winter-23.featured.session {
        background-image:url('images/fundraiser/winter-23/color-bg-1.png'), url('images/fundraiser/winter-23/bg.jpg');
-       background-position: 200px left;
+       /* background-position: left 0%, top left; */
        background-repeat: no-repeat, repeat;
        background-size: cover, 40%;
+       transition: all .2s ease-in-out;
+       -moz-transition: all .2s ease-in-out;
+       ms-transition: all .2s ease-in-out;
+       o-transition: all .2s ease-in-out;
      }
 
 

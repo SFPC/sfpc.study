@@ -451,6 +451,17 @@ $(document).ready(function() {
         $('.fundraiser-stats .fr-right h6').html('$' + goaldollars);
 
 
+        function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+
+        var bgpos = getRandomArbitrary(0, 100)
+
+        $('.shell.fundraiser-winter-23').css('background-position', 'left ' + bgpos + '%');
+
+
+
 
 
         // FUNDRAISER animation
