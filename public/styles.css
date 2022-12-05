@@ -361,13 +361,30 @@ h1 {
           left: 0px;
         }
 
-        .title-image.fundraiser-23-square-bg.title-image-bg {
+        .title-image.title-image-bg {
           z-index: -1 !important;
           position: absolute;
+        }
+
+        .fundraiser-23-square-bg {
+          width: 20vw;
+          height: 20vw;
           top: 0px;
           left: 0px;
-          width: 30vw;
-          height: 30vw;
+        }
+
+        .title-image-bg img{
+          /* display:none; */
+          position:absolute;
+          top:0;
+          left:0;
+        }
+        .title-image-bg img.active{
+          display:block;
+        }
+
+        .title-image-bg img.inactive{
+          display:none;
         }
 
         .title-image.fundraiser-23::after {
@@ -3435,6 +3452,7 @@ h5.shopify-buy__cart-toggle__title {
         }
 
 
+
         section .grid-2{
           width: 100%;
         }
@@ -3851,7 +3869,7 @@ h5.shopify-buy__cart-toggle__title {
                     /* height: 100%; */
                     /* align-items: center; */
                   }
-                  .title-image.fundraiser-23-square::after {
+                  .title-image.fundraiser-23-square::after  {
                       width: 50vw;
                       min-height: 50vw;
                   }
@@ -3865,6 +3883,15 @@ h5.shopify-buy__cart-toggle__title {
                     align-items: start;
                 align-content: start;
                   }
+
+
+                  .fundraiser-23-square-bg {
+                    width: 50vw;
+                    height: 50vw; 
+                    top: 2vw;
+                    left: 2vw;
+                  }
+
 
 
 

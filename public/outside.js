@@ -1,7 +1,7 @@
 // import {end, goal, raised} from './js/fundraiser.js';
 
 var script = document.createElement('script');
-script.src = './js/fundraiser.js';
+script.src = '/js/fundraiser.js';
 document.getElementsByTagName('head')[0].appendChild(script);
 
 
@@ -382,11 +382,34 @@ $(document).ready(function() {
 /////////////////////// DOCU READY //////////////////////////
 // setTimeout("closed()", 1);
 
+
+// FUNDRAISER animation
+
+function swapImages(){
+    var $active = $('.manual-gif .active');
+    var $next = ($('.manual-gif .active').next().length > 0) ? $('.manual-gif .active').next() : $('.manual-gif img:first');
+    // $active.fadeOut(function(){
+    $active.removeClass('active').addClass('inactive');
+    $next.addClass('active').removeClass('inactive');
+    // });
+  }
+
+
 $(document).ready(function() {
 
 
 
         // FUNDRAISER COUNTDOWN
+
+        //goal of the fundraiser, currently $60,000
+        var goal = 60000;
+
+        // estimated amount raised
+        var raised = 9500;
+
+        // end date of fundraiser
+        var end = new Date('January 3, 2023');
+
 
         today=new Date();
         // var end=new Date('January 3, 2023');
@@ -426,6 +449,12 @@ $(document).ready(function() {
         $('.fundraiser-progress').css('width', percentage + "%");
 
         $('.fundraiser-stats .fr-right h6').html('$' + goaldollars);
+
+
+
+
+        // FUNDRAISER animation
+        setInterval('swapImages()', 300);
 
 
 

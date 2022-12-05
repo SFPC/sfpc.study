@@ -5,4 +5,4 @@ var goal = 60000;
 var raised = 9500;
 
 // end date of fundraiser
-var end=new Date('January 3, 2023');
+var end = new Date('January 3, 2023');
