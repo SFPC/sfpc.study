@@ -17,12 +17,15 @@
   width: 100%;
   display: block;
   height: var(--footer-height);
-  background: var(--fundraiser-winter-23-background-dark);
-  border: 2px solid  var(--fundraiser-winter-23-special-text);
+  background: var(--background);
+  border: 2px solid  var(--text-color);
+
   box-sizing: border-box;
   border-radius: var(--border-rad);
   margin-bottom: 0px !important;
 }
+
+
 
 .fundraiser-stats {
   width: 100%;
@@ -42,8 +45,9 @@
 .fundraiser-stats .fr-right {
   text-align: right;
   width: 50%;
-  color: var(--fundraiser-winter-23-special-text);
+  color: var(--text-color);
 }
+
 
 
 .fundraiser-progress {
@@ -51,13 +55,13 @@
   max-width: 100%;
   display: block;
   height: calc(var(--footer-height) - 4px);
-  background:  var(--fundraiser-winter-23-special-text);
+    background:  var(--text-color);
   box-sizing: border-box;
   /* border-radius: var(--border-rad); */
 }
 .fundraiser-progress h6 {
   float:right;
-  color: var(--fundraiser-winter-23-text);
+  color: var(--text-color);
   line-height: calc(var(--footer-height) - 4px);
   /* font-weight: bold; */
   padding-right: var(--body-margin);
@@ -67,3 +71,6 @@
   /* content: var(--raised-text); */
   text-align: right;
 }
+
+
+ 

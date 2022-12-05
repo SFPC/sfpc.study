@@ -501,6 +501,25 @@ select#allSections {
         background: var(--fundraiser-winter-23-background-dark) !important;
       }
 
+
+      .fundraiser-progress h6 {
+      color: var(--fundraiser-winter-23-text);
+      }
+
+      .fundraiser-winter-23 .fundraiser-progress {
+      background:  var(--fundraiser-winter-23-special-text);
+      }
+
+      .fundraiser-winter-23 .fundraiser-goal {
+        background: var(--fundraiser-winter-23-background-dark);
+        border: 2px solid  var(--fundraiser-winter-23-special-text);
+      }
+
+      .fundraiser-winter-23 .fundraiser-stats .fr-right {
+        color: var(--fundraiser-winter-23-text);
+      }
+
+
       @media (max-width: 768px) {
         .shell.fundraiser-winter-23 {
           background-size: 100%;
