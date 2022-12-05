@@ -443,6 +443,19 @@ h1 {
           background-repeat: no-repeat;
         }
 
+        .small .sponsorlogo.grayarea::after {
+          width: calc(75px + 2.54vw);
+          height: calc(9px + 0.24vw);
+          /* background: red; */
+          background-image: url('/images/fundraiser/winter-23/gray-area-logo.svg');
+          /* background-size: cover; */
+          background-position: bottom;
+          background-repeat: no-repeat;
+        }
+
+
+
+
         .socials img {
           width: 5vw;
           height: 5vw;
@@ -1497,7 +1510,10 @@ select#allSections:focus {
       .featured-text.half div {
         width: calc(50%) !important;
 
+      }
 
+      .featured-text.half .shopify-buy__product {
+        width: calc(100%) !important;
       }
 
       .grid-4 .featured-text, .grid-1 .featured-text {
