@@ -396,7 +396,7 @@ h1 {
 
         .sponsorlogo.grayarea::after {
           width: calc(110px + 2.54vw);
-          height: calc(20px + 0.34vw);
+          height: calc(16px + 0.24vw);
           /* background: red; */
           background-image: url('/images/fundraiser/winter-23/gray-area-logo.svg');
           /* background-size: cover; */
