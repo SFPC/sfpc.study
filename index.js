@@ -610,6 +610,8 @@ function parseProductData(apiResponse){
 
   returnObj.cost=productInfo["Cost"]?.number
   returnObj.type=productInfo["Product-Type"]?.multi_select[0]?.name
+  returnObj.selltype=productInfo["Sell-Type"]?.multi_select[0]?.name
+  returnObj.publish=productInfo["Publish"]?.checkbox
   returnObj.moreImages=parseNotionData(productInfo["More-Image-URLs"])
 
   return returnObj
