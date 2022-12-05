@@ -1,3 +1,9 @@
+// import {end, goal, raised} from './js/fundraiser.js';
+
+var script = document.createElement('script');
+script.src = './js/fundraiser.js';
+document.getElementsByTagName('head')[0].appendChild(script);
+
 
 // CHECK MOBILE
 let mobileBrowser = checkMobile()
