@@ -47,7 +47,8 @@
 
 
 .fundraiser-progress {
-  width: var(--raised-percentage);
+  /* width: var(--raised-percentage); */
+  max-width: 100%;
   display: block;
   height: calc(var(--footer-height) - 4px);
   background:  var(--fundraiser-winter-23-special-text);
@@ -60,8 +61,9 @@
   line-height: calc(var(--footer-height) - 4px);
   /* font-weight: bold; */
   padding-right: var(--body-margin);
+  text-align: right;
 }
 .fundraiser-progress h6::after {
-  content: var(--raised-text);
+  /* content: var(--raised-text); */
   text-align: right;
 }
