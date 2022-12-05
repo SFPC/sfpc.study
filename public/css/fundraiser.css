@@ -61,7 +61,7 @@
 }
 .fundraiser-progress h6 {
   float:right;
-  color: var(--text-color);
+  color: var(--background);
   line-height: calc(var(--footer-height) - 4px);
   /* font-weight: bold; */
   padding-right: var(--body-margin);
@@ -71,6 +71,3 @@
   /* content: var(--raised-text); */
   text-align: right;
 }
-
-
- 
