@@ -264,6 +264,9 @@
                 <h4 class="type type-list-comma"><a href="/fundraiser/{{this.[Website-Slug]}}">{{#each
                     this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
                 <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
+                {{#eq [type] "Raffle"}}
+                <h6>enter a raffle for a chance to win any of 6 special items!</h6>
+                {{/eq}}
                 {{#if [Contributor]}}
                   <h6>donated by {{Contributor}} </h6>
                 {{/if}}
