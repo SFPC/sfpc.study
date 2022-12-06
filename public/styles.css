@@ -643,8 +643,10 @@ h3 span.small.block {
   display: block;
   background: none !important;
   padding: 3px 0px;
+
 }
 
+ 
         .roles {
           display: block;
           margin-top: calc(var(--body-margin)/20);
