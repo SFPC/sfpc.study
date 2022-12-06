@@ -407,16 +407,18 @@ function swapImages(){
     var goal;
     var raised;
     var end;
-    
+
 $(document).ready(function() {
 
 
 
         // FUNDRAISER COUNTDOWN
 
-        // var goal;
-        // var raised;
-        // var end;
+        var goal;
+        var raised;
+        var end;
+        var goaldollars;
+        var percentage;
 
         //goal of the fundraiser, currently $60,000
         // var goal = 60000;
@@ -438,17 +440,6 @@ $(document).ready(function() {
         // var end = new Date('January 3, 2023');
 
 
-        today=new Date();
-        // var end=new Date('January 3, 2023');
-        if (today.getMonth()==11 && today.getDate()>25)
-        {
-        end.setFullYear(end.getFullYear()+1);
-        }
-        var one_day=1000*60*60*24;
-        var countdown = (Math.ceil((end.getTime()-today.getTime())/(one_day)));
-        $('.fr-left h6').html(countdown);
-
-        var percentage = (raised / goal * 100).toFixed(0);
 
 
         function formatMoney(number, decPlaces, decSep, thouSep) {
