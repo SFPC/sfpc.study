@@ -65,6 +65,12 @@ select#allSections, .fixed-apply  {
   -webkit-filter: grayscale(100%) !important;
 }
 
+/* Unset the filter since featured sections are already grayscale-filtered.
+   This reduces processing power and avoids crashes when there's a lot of images on mobile. */
+.featured img {
+  -webkit-filter: unset !important;
+}
+
 .shopify-buy__cart {
 background-color: var(--text-link) !important;
 }
