@@ -414,20 +414,18 @@ $(document).ready(function() {
 
         // FUNDRAISER COUNTDOWN
 
-        var goal;
-        var raised;
-        var end;
-        var goaldollars;
-        var percentage;
+        // var goal;
+        // var raised;
+        // var end;
 
-        //goal of the fundraiser, currently $60,000
-        // var goal = 60000;
-        //
-        // // estimated amount raised
-        // var raised = 9500;
-        //
-        // // end date of fundraiser
-        // var end = new Date('January 3, 2023');
+        // goal of the fundraiser, currently $60,000
+        var goal = 60000;
+
+        // estimated amount raised
+        var raised = 10500;
+
+        // end date of fundraiser
+        var end = new Date('January 3, 2023');
 
 
         // //goal of the fundraiser, currently $60,000
@@ -440,6 +438,16 @@ $(document).ready(function() {
         // var end = new Date('January 3, 2023');
 
 
+        today = new Date();
+        if (today.getMonth()==11 && today.getDate()>25)
+        {
+        end.setFullYear(end.getFullYear()+1);
+        }
+        var one_day = 1000*60*60*24;
+        var countdown = (Math.ceil((end.getTime()-today.getTime())/(one_day)));
+        $('.fr-left h6').html(countdown);
+
+        var percentage = (raised / goal * 100).toFixed(0);
 
 
         function formatMoney(number, decPlaces, decSep, thouSep) {
