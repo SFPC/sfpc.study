@@ -12,12 +12,12 @@ let loadTextArray = [];
 
 // MODES CONTENT
 
-let inCRT = 'you are in cathode-ray mode. switch to liquid crystal mode.'
-let inLCD = 'you are in liquid crystal mode. switch to cathode-ray mode.'
+let inCRT = 'you are in cathode ray mode. switch to liquid crystal mode.'
+let inLCD = 'you are in liquid crystal mode. switch to cathode ray mode.'
 
 if (checkMobile()) {
   inCRT = 'switch to liquid crystal mode'
-  inLCD = 'switch to cathode-ray mode'
+  inLCD = 'switch to cathode ray mode'
 }
 
 // var inCRT = 'switch to liquid crystal mode.'
@@ -675,7 +675,7 @@ $(document).ready(function() {
             $('#current-mode').html('liquid crystal')
           } else {
             themeToggle.innerText = inCRT
-            $('#current-mode').html('cathode-ray')
+            $('#current-mode').html('cathode ray')
           }
 
 
