@@ -3939,6 +3939,14 @@ h5.shopify-buy__cart-toggle__title {
                     left: 2vw;
                   }
 
+                  .left-disclaimer {
+                    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+                  }
+
 
 
 

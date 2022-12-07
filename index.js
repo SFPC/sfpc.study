@@ -626,6 +626,7 @@ function parseProductData(apiResponse){
   returnObj.selltype=productInfo["Sell-Type"]?.multi_select[0]?.name
   returnObj.goodstype=productInfo["Goods-Type"]?.multi_select[0]?.name
   returnObj.publish=productInfo["Publish"]?.checkbox
+  returnObj.pinned=productInfo["Publish"]?.checkbox
   returnObj.moreImages=parseNotionData(productInfo["More-Image-URLs"])
 
   return returnObj
@@ -669,10 +670,21 @@ function parseTestimonials(apiResponse){
   returnObj.type=testimonialInfo["Type of Feedback"]?.multi_select[0]?.name
   returnObj.publish=testimonialInfo["Publish"]?.checkbox
 
+  return returnObj
+}
 
+
+
+function parseDonors(apiResponse){
+  const donorInfo = apiResponse.properties;
+  let returnObj = parseNotionPage(apiResponse);
+
+  returnObj.type=donorInfo["Type of Feedback"]?.multi_select[0]?.name
+  returnObj.publish=donorInfo["Publish"]?.checkbox
 
   return returnObj
 }
+
 
 
 
