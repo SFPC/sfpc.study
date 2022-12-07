@@ -225,7 +225,7 @@ app.get("/", async (req,res) => {
 
 app.get("/donors", async (req,res) => {
   const response = await getDatabaseEntries("f10d523dd9b24d44ae2d9a6c26b4f5ee", [{property:"Start Date", direction:"descending"}])
-  const donorData = response.map((donors) => {
+  const donorData = response.map((donor) => {
     console.log(donor)
     return parseDonors(donor)
   })
@@ -679,8 +679,9 @@ function parseDonors(apiResponse){
   const donorInfo = apiResponse.properties;
   let returnObj = parseNotionPage(apiResponse);
 
-  returnObj.type=donorInfo["Type of Feedback"]?.multi_select[0]?.name
-  returnObj.publish=donorInfo["Publish"]?.checkbox
+  returnObj.type=donorInfo["Type"]?.multi_select[0]?.name
+  returnObj.detail=donorInfo["Detail"]?.multi_select[0]?.name
+  returnObj.publish=donorInfo["Public"]?.checkbox
 
   return returnObj
 }

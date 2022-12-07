@@ -1958,6 +1958,18 @@ span.reference {
            background: var(--background);
       }
 
+      .funder {
+    -moz-transition: all .2s ease-in-out;
+    ms-transition: all .2s ease-in-out;
+    o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    border-radius: var(--border-rad);
+    /* margin-bottom: var(--body-margin); */
+    border: 1px dotted var(--text-color);
+    background: var(--background);
+    padding: 4px
+ }
+
 
       .entity .bio.bio-float {
       display: inline-block;
@@ -2163,6 +2175,10 @@ section.stacked-4 {
         grid-row-gap: calc(var(--body-margin)*2);
         /* margin-bottom: calc(var(--text-margin)); */
       }
+
+      .stacked .grid-1.funders-list {
+        grid-row-gap: calc(var(--body-margin)) !important; 
+    }
 
       .stacked .grid-1:first-child {
         margin-bottom: calc(var(--text-margin));
