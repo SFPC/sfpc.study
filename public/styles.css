@@ -646,7 +646,7 @@ h3 span.small.block {
 
 }
 
- 
+
         .roles {
           display: block;
           margin-top: calc(var(--body-margin)/20);
@@ -3217,7 +3217,7 @@ video {
 }
 
 .inkind .shopify-buy__btn  {
-  font-size: var(--medium-text);
+  font-size: var(--large-text);
   padding-top: var(--program-margin);
 }
 
