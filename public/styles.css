@@ -2177,7 +2177,11 @@ section.stacked-4 {
       }
 
       .stacked .grid-1.funders-list {
-        grid-row-gap: calc(var(--body-margin)) !important; 
+        grid-row-gap: calc(var(--body-margin)) !important;
+    }
+
+    .funders-list p.medium {
+      font-size: var(--medium-text);
     }
 
       .stacked .grid-1:first-child {
@@ -3895,6 +3899,14 @@ h5.shopify-buy__cart-toggle__title {
 
                 }
 
+                .blog-content > video:nth-child(even) {
+                  margin-left: calc(-1vw + var(--body-margin));
+              }
+
+              .blog-content > video:nth-child(odd) {
+                margin-left: calc(-1vw + var(--body-margin));
+            }
+
 
 
                 .featured-text.half {
@@ -3962,6 +3974,7 @@ h5.shopify-buy__cart-toggle__title {
     justify-content: space-between;
     align-items: flex-start;
                   }
+
 
 
 

@@ -92,123 +92,32 @@
             </div>
             <div class="grid-2">
               <p>
-              We’re thankful for our generous donors, <a href="http://withfriends.co/school_for_poetic_computation/">Withfriends</a> members, and foundations for supporting scholarships directly. There’s enough wealth in our community to make SFPC the meaningful, imaginative, transformative center of poetry and justice that makes it possible for no one to be rejected because of their inability to pay. 
+              We’re thankful for our generous donors, <a href="http://withfriends.co/school_for_poetic_computation/">Withfriends</a> members, and foundations for supporting scholarships directly. There’s enough wealth in our community to make SFPC the meaningful, imaginative, transformative center of poetry and justice that makes it possible for no one to be rejected because of their inability to pay.
             </p>
             </div>
           </section>
 
           <div class="break"></div>
 
-          <section id="2022" class="stacked stacked-1">
+          <!-- <section id="2022" class="stacked stacked-1">
             <div class="grid-2">
               <h1>Foundations & Organizations</h1>
             </div>
           </section>
 
-          <div class="break-noline-small"></div>
+          <div class="break-noline-small"></div> -->
 
 
           <section id="" class="stacked stacked-8">
           <div class="grid-1 funders-list participate">
             {{#each donors}}
-            {{#eq type "Foundation / Organization"}}
             <div id="" class="grid-8 funder">
-              <p>{{this.Name}}</p>
+              <p class="{{#eq type "Foundation / Organization"}}medium{{/eq}}">{{name}}</p>
                     </div>
 
-                    {{/eq}}
             {{/each}}
             </div>
           </section>
-
-
-          <div class="break"></div>
-
-          <section id="2022" class="stacked stacked-1">
-            <div class="grid-2">
-              <h1>Individual Supporters</h1>
-            </div>
-          </section>
-
-          <div class="break-noline-small"></div>
-
-          <section id="" class="stacked stacked-8">
-          <div class="grid-1 funders-list participate">
-            {{#each donors}}
-            {{#if publish}}
-            {{#eq type "Individual Supporter"}}
-            <div id="" class="grid-8 funder">
-              <p>{{this.Name}}</p>
-                    </div>
-              {{/eq}}
-              {{/if}}
-            {{/each}}
-            </div>
-          </section>
-
-
-
-
-                    <div class="break"></div>
-
-                    <section id="2022" class="stacked stacked-1">
-                      <div class="grid-2">
-                        <h1>Community Memberships</h1>
-                      </div>
-                    </section>
-
-                    <div class="break-noline-small"></div>
-
-                    <section id="" class="stacked stacked-8">
-                    <div class="grid-1 funders-list participate">
-                      {{#each donors}}
-                      {{#if publish}}
-                      {{#eq detail "withfriends"}}
-                      <div id="" class="grid-8 funder">
-                        <p>{{this.Name}}</p>
-                              </div>
-                        {{/eq}}
-                        {{/if}}
-                      {{/each}}
-                      </div>
-                    </section>
-
-
-
-                                        <div class="break"></div>
-
-                                        <section id="2022" class="stacked stacked-1">
-                                          <div class="grid-2">
-                                            <h1>Community Donors</h1>
-                                          </div>
-                                        </section>
-
-                                        <div class="break-noline-small"></div>
-
-                                        <section id="" class="stacked stacked-8">
-                                        <div class="grid-1 funders-list participate">
-                                          {{#each donors}}
-                                          {{#if publish}}
-                                          {{#eq detail "Paid More"}}
-                                          <div id="" class="grid-8 funder">
-                                            <p>{{this.Name}}</p>
-                                                  </div>
-                                            {{/eq}}
-                                            {{/if}}
-                                          {{/each}}
-                                          </div>
-                                        </section>
-
-
-
-
-
-                        <div class="break-endpage"></div>
-
-
-
-
-
 
 
 
