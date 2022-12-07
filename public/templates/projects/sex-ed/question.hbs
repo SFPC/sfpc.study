@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>School for Poetic Computation</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="title" content="School for Poetic Computation">
+  <meta name="description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sfpc.study/">
+  <meta property="og:title" content="School for Poetic Computation">
+  <meta property="og:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sfpc.study/">
+  <meta property="twitter:title" content="School for Poetic Computation">
+  <meta property="twitter:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <!-- <link href="/styles.css" rel="stylesheet"> -->
+  <!-- <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" /> -->
+  <link id="mode" rel="stylesheet" type="text/css" href="/sex-ed.css" />
+  <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico" />
+
+  <script src="/jquery-3.6.0.min.js"></script>
+
+  <!-- stats -->
+  <script type="text/javascript">
+    var sc_project = 12714909;
+    var sc_invisible = 1;
+    var sc_security = "6086a46c";
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="website statistics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
+
+
+  <script data-goatcounter="https://sfpc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+
+  <!-- end stats -->
+</head>
+
+
+<body>
+  <!-- {{> header}}
+      {{> footer}} -->
+
+  <!-- <div class="crt-overlay crt-overlay-fullsize"></div> -->
+
+
+  <div id="shell" class="shell">
+
+    <img class="mover mover-one" onload="startMoving(this)" src="/images/sessions/sex-ed/bg1.jpg" border="0">
+    <img class="mover mover-two" onload="startMoving(this)" src="/images/sessions/sex-ed/bg2.jpg" border="0">
+    <img class="mover mover-three" onload="startMoving(this)" src="/images/sessions/sex-ed/bg3.jpg" border="0">
+
+    <!-- <a href="/sex-ed"><img class="orb" src="/images/sessions/sex-ed/orb-back.png"></a> -->
+
+    <a href="/sex-ed">
+      <div class="header">
+        <span class="logo">Ask SFPC: Sex Ed</span>
+        <span class="title">Question</span>
+      </div>
+    </a>
+
+    <div class="footer">
+      <span class="byline">A peer-to-peer sex advice column.</span>
+    </div>
+
+
+
+
+
+    <div id="main" class="">
+
+
+      <section id="queue" class="">
+
+        <div id="{{this.[Website-Slug]}}" class="question-block" data-location="">
+
+
+          <div class="metadata">
+            <div class="submission-info">
+              <span class="submitter">
+
+                {{#if Publish-Date}}
+                Posted to queue on {{#each this.[Publish-Date]}}{{this}}{{/each}}
+                {{else}} ✼ Pinned to queue
+                {{/if}}
+
+                  · Asked by
+                {{#if Submitter-Name}}{{Submitter-Name}} {{else}}Anonymous {{/if}}
+
+
+              </span>
+
+
+              · <span class="response-count">Responses: {{#if Response-Count}} {{Response-Count}} {{else}} 0 {{/if}}</a>
+
+                <span class="person-group-small questioner">
+                {{#if People}} · <a href="/sex-ed-people">
+                  {{#each this.[People]}}
+                  <span class="{{this}} person-small"></span>
+                  {{/each}} </a>
+                  {{/if}}
+                </span>
+
+            </div>
+            <div class="topic"> {{#each this.[Topic]}} {{this}} {{/each}}
+            </div>
+          </div>
+
+          <div class="question medium">
+
+            <p class="full-question ">
+              <i>Dear SFPC: Sex Ed,</i>
+              {{"Question"}}
+              <i>— {{"Sign name"}}
+
+              </i>
+
+              <span class="note-editors">{{#if Edited}} <BR><BR> ✼ Note from the Editors: {{Edited}} {{/if}}</span>
+            </p>
+
+
+
+          </div>
+
+          <div class="margin-top medium star">
+            <p>✼</p>
+          </div>
+
+          <div class="question medium ">
+
+            <p class="answer ">
+              <i>Dear {{"Sign name"}},</i>
+            </p>
+          </div>
+
+
+          <div class="about">
+
+            {{#if SFPC-Class-Notes}}
+            <div class="response sfpc small">
+              <div class="response-border">
+              </div>
+
+              <div class="response-count">Notes from SFPC: Sex Ed
+              </div>
+                <span class="notes-link">
+                <!-- Notes taken on {{#each this.[Date-of-Notes]}}{{this}}{{/each}}... <span class="three-dot"></span></span> -->
+
+              <div class="response-field class-notes">
+
+
+
+
+                <p>{{{SFPC-Class-Notes}}}</p>
+                <span></span>
+                <!-- <i>— {{Notetaker-Name}}</i> -->
+
+
+
+              </div>
+            </div>
+
+            {{/if}}
+
+
+            {{#if Shawne}}
+            <div class="response columnist small">
+              <div class="response-border">
+              </div>
+
+              <div class="response-count">
+                     Guest Columnist
+                   </div>  <span class="person-group-small questioner">
+                   <a href="/sex-ed-people">
+                     <span class="Shawne person-small"></span>
+                    </a>
+                   </span>
+
+              <div class="response-field">
+
+
+              <p>{{{Shawne}}}</p>
+
+              {{#if Shawne-Voice}}
+              <audio controls><source src="{{Shawne-Voice}}"></audio>
+              {{/if}}
+
+                <BR>
+                <i>— SHAWNÉ MICHAELAIN HOLLOWAY</i>
+              </div>
+            </div>
+
+            {{/if}}
+            
+
+            {{#if Gabriella}}
+            <div class="response columnist small">
+              <div class="response-border">
+              </div>
+
+
+              <div class="response-count">
+                Guest Columnist
+              </div>  <span class="person-group-small questioner">
+              <a href="/sex-ed-people">
+                <span class="Gabriella person-small"></span>
+               </a>
+              </span>
+
+
+
+              <div class="response-field">
+
+
+                <p>{{{Gabriella}}}</p>
+
+                {{#if Gabriella-Voice}}
+                <audio controls><source src="{{Gabriella-Voice}}"></audio>
+                {{/if}}
+                <BR>
+                <i>— Gabriella Garcia</i>
+              </div>
+            </div>
+
+            {{/if}}
+
+
+            {{#if DaemonumX}}
+            <div class="response columnist small">
+              <div class="response-border">
+              </div>
+
+              <div class="response-count">
+                     Guest Columnist
+                   </div>  <span class="person-group-small questioner">
+                   <a href="/sex-ed-people">
+                     <span class="DaemonumX person-small"></span>
+                    </a>
+                   </span>
+
+              <div class="response-field">
+
+
+              <p>{{{DaemonumX}}}</p>
+
+              {{#if DaemonumX-Voice}}
+              <audio controls><source src="{{DaemonumX-Voice}}"></audio>
+              {{/if}}
+
+                <BR>
+                <i>— Daemonum X</i>
+              </div>
+            </div>
+
+            {{/if}}
+
+            {{#if Elizabeth}}
+            <div class="response columnist small">
+              <div class="response-border">
+              </div>
+
+              <div class="response-count">
+                  Guest Columnist
+                </div>
+               <span class="person-group-small questioner">
+                <a href="/sex-ed-people">
+                  <span class="Elizabeth person-small"></span>
+                 </a>
+                </span>
+
+              <div class="response-field">
+                <p>{{{Elizabeth}}}</p>
+
+
+                  {{#if Elizabeth-Voice}}
+                  <audio controls><source src="{{Elizabeth-Voice}}"></audio>
+                  {{/if}}
+                  <BR>
+                <i>— Elizabeth Perez</i>
+              </div>
+            </div>
+
+            {{/if}}
+
+
+
+
+            {{#each responses}}
+            <div class="response participant small">
+              <div class="response-border">
+              </div>
+
+              <div class="response-field">
+
+                {{{this}}}
+                <BR>
+                <i>
+
+                {{#contains @key "applicant"}}
+                  — Anonymous applicant of SFPC: Sex Ed
+
+
+                {{else}}
+
+
+
+
+                  {{#contains @key "participant"}}
+                    — Anonymous participant of SFPC: Sex Ed
+                    {{else}}
+                      — {{@key}}
+
+                  {{/contains}}
+
+
+                {{/contains}}
+
+                </i>
+
+
+
+              </div>
+            </div>
+            {{/each}}
+
+
+<!--
+
+            <div class="response columnist small">
+              <div class="response-border">
+              </div>
+
+              <div class="response-field">
+                <div class="submission-info"><span class="response-count">Guest Columnist Response</span></div>
+                <div class="clear"></div>
+
+                I would love to understand better the irrationality of sexual preferences. Are others puzzled by the
+                incoherence in their wants and desires? In almost any other part of my life I can use reason to help me
+                to pick what I want, but when it comes to sex it makes no sense! How do others deal with this?
+                <BR><BR><i>— Shawné Michaelain Holloway</i>
+              </div>
+            </div> -->
+
+
+
+            <!-- <div class="response sfpc small">
+              <div class="response-border">
+              </div>
+
+              <div class="response-field">
+                <div class="submission-info"><span class="response-count">Notes from SFPC: Sex Ed </span></div>
+                <div class="clear"></div>
+
+                I would love to understand better the irrati
+              </div>
+            </div> -->
+
+
+
+
+
+          </div>
+
+
+        </div>
+
+
+
+      </section>
+
+      <div class="break"></div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script src="/sex-ed.js"></script>
+
+  </p>
+
+</body>
+
+</html>

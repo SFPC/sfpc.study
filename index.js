@@ -62,6 +62,10 @@ app.get("/pageContent/:id", async (req, res) => {
 
 
 
+
+
+
+
 app.get("/sex-ed", async (req,res) => {
   const response = await getDatabaseEntries("eedc3ea6ba904a9fa8631e12b03a955d", [{property:"Publish-Date", direction:"descending"}])
   const projectData = response.map((project) => {
@@ -70,7 +74,7 @@ app.get("/sex-ed", async (req,res) => {
   })
   console.log(projectData)
   // let pageContent = getPageContent()
-  res.render("programs/sessions/sex-ed/ask-sfpc-sex-ed", {projects: projectData})
+  res.render("projects/sex-ed/ask-sfpc-sex-ed", {projects: projectData})
 })
 
 // app.get("/sex-ed/:slug", async (req,res) => {
@@ -90,11 +94,11 @@ app.get("/sex-ed", async (req,res) => {
 // })
 
 app.get("/sex-ed-about", async (req,res) => {
-  res.render("programs/sessions/sex-ed/about")
+  res.render("projects/sex-ed/about")
 })
 
 app.get("/sex-ed-people", async (req,res) => {
-  res.render("programs/sessions/sex-ed/people")
+  res.render("projects/sex-ed/people")
 })
 
 
@@ -117,7 +121,7 @@ app.get("/sex-ed/:slug", async (req,res) => {
     const responses = await getPageContent(response.id, "published responses")
     projectData.responses = responses
     console.log(projectData)
-    res.render("programs/sessions/sex-ed/question", projectData)
+    res.render("projects/sex-ed/question", projectData)
   }
 })
 
@@ -223,6 +227,31 @@ app.get("/", async (req,res) => {
 })
 
 
+app.get("/about", async (req,res) => {
+  const donorinfo = await getDatabaseEntries("f10d523dd9b24d44ae2d9a6c26b4f5ee", [{property:"Name", direction:"ascending"}], {property:"Public", "checkbox": {"equals": true}})
+  const donorData = donorinfo.map((donor) => {
+    console.log(donor)
+    return parseDonors(donor)
+  })
+  console.log(donorData)
+  res.render("about/about", {donors: donorData})
+})
+
+app.get("/sex-ed/:slug", async (req,res) => {
+  //filter by slug here
+  console.log(req.params.slug)
+  const response = await getDatabaseEntry("eedc3ea6ba904a9fa8631e12b03a955d", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  console.log(response)
+  if(response){
+    const projectData = parseNotionPage(response)
+    console.log(response.id)
+    const responses = await getPageContent(response.id, "published responses")
+    projectData.responses = responses
+    console.log(projectData)
+    res.render("projects/sex-ed/question", projectData)
+  }
+})
+
 app.get("/donors", async (req,res) => {
   const response = await getDatabaseEntries("f10d523dd9b24d44ae2d9a6c26b4f5ee", [{property:"Name", direction:"ascending"}], {property:"Public", "checkbox": {"equals": true}})
   const donorData = response.map((donor) => {
@@ -322,13 +351,13 @@ app.get("/fundraiser/:slug", async (req, res) => {
 
 app.get("/participate", async (req,res) => {
   const response = await getDatabaseEntries("ba1f9876ad3e4810880d4802d3d70d6f", [{property:"Date", direction:"descending"}])
-  const projectData = response.map((project) => {
-    console.log(project)
-    return parseNotionPage(project)
+  const programData = response.map((program) => {
+    console.log(program)
+    return parsePrograms(program)
   })
-  console.log(projectData)
+  console.log(programData)
   // let pageContent = getPageContent()
-  res.render("programs/participate", {projects: projectData})
+  res.render("programs/participate", {programs: programData})
 })
 
 
@@ -672,6 +701,22 @@ function parseTestimonials(apiResponse){
 
   return returnObj
 }
+
+
+function parsePrograms(apiResponse){
+  const programInfo = apiResponse.properties;
+  let returnObj = parseNotionPage(apiResponse);
+
+
+  returnObj.name=programInfo.Name.title[0].plain_text
+
+  returnObj.type=programInfo["Type"]?.multi_select[0]?.name
+  returnObj.detail=programInfo["Detail"]?.multi_select[0]?.name
+  returnObj.publish=programInfo["Public"]?.checkbox
+
+  return returnObj
+}
+
 
 
 
