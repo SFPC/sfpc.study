@@ -237,6 +237,20 @@ app.get("/about", async (req,res) => {
   res.render("about/about", {donors: donorData})
 })
 
+app.get("/about/space", async (req,res) => {
+  res.render("about/space")
+})
+
+
+app.get("/about/participating", async (req,res) => {
+  res.render("about/participating")
+})
+
+app.get("/about/scholarships", async (req,res) => {
+  res.render("about/scholarships")
+})
+
+
 app.get("/sex-ed/:slug", async (req,res) => {
   //filter by slug here
   console.log(req.params.slug)
