@@ -779,7 +779,7 @@ function parseLinks(apiResponse){
 
 
   returnObj.type=linkInfo["Tag"]?.multi_select[0]?.name
-  returnObj.publish=linkInfo["Public"]?.checkbox
+  returnObj.public=linkInfo["Public"]?.checkbox 
 
   return returnObj
 }
