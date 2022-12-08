@@ -2411,6 +2411,7 @@ section.stacked-4 {
           .block-text h4 {
             display: block;
             margin-top: var(--program-margin);
+              color: var(--text-color);
           }
 
           .carousel-content figure {
