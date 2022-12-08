@@ -195,28 +195,18 @@
                                    <main class="grid-item main">
                                      <div class="carousel-items items carousel-content participate-content">
 
-                                       <figure class="block-text test hide-test">I appreciated the empathy, care, and patience of instructors & classmates, especially as we all were trying to navigate personal and community crises during an ongoing pandemic. My favorite moments included the smaller group discussions that often led to deeper connections and learnings with peers and teachers.
-                                         <h4>Tyler Yin</h4></figure>
-                                         <figure class="block-text test hide-test">SFPC's classes provided exactly the kind of learning experience at the intersection of art and coding that I was looking for. It was a fantastic and enriching experience, with knowledgeable teachers who create a supportive and stimulating environment for everyone.
-                                         <h4>Fall 2021 Participant</h4></figure>
-                                       <figure class="block-text test hide-test">After SFPC, I now have a stronger art practice with new technologies and tools to continue experimenting with. I’m a part of a greater community of folks working with art and technology who I can collaborate with, get inspired by, and meet across the world and for years to come.
-                                         <h4>Mathilde Mouw-Rao</h4></figure>
-                                       <figure class="block-text test hide-test">The whole SFPC experience was surreal. It felt unlike anything I’ve ever done. It was a magical space that let me explore concepts that I otherwise would not have had the time to think about. It makes a strong case for a more radically community-oriented model of pedagogy and living life that feels more complete, enriching, sustainable, and ultimately more hopeful.
-                                         <h4>Francisco Rojo</h4></figure>
-                                       <figure class="block-text test hide-test">It is a very therapeutic and rare experience to find a place where you’re able to re-examine your technical knowledge and how it relates to your place in the world and the future you want to make.
-                                         <h4>Danny Garfield</h4></figure>
-                                       <figure class="block-text test hide-test">SFPC is filled with amazing people and an open mindset to learning, and doing. It has taught me different ways of thinking, ones that I would be sure to bring back to my endeavors outside of the art world.
-                                       <h4>Ying Quan Tan</h4></figure>
-                                       <figure class="block-text test hide-test">SFPC is the purest, most honest exchange of knowledge and experience among peers I have ever experienced. It is a supportive space where everyone learns from everyone, and bridges are built that continue to be strengthened for years to come. You won’t get a certificate or a title at the end of it, but I would be amazed if you ever looked at your world the same again. I haven’t.
-                                         <h4>Ramsey Nasser</h4></figure>
-                                       <figure class="block-text test hide-test">I'm half way through the program and I'm already missing being here. SFPC was a much needed breath of fresh air in my hectic creative existence, an unlikely place to stop and remind myself what was it I was into in the first place.
-                                       <h4>Fernando Ramallo</h4></figure>
-                                       <figure class="block-text test hide-test">SFPC is the best place you can explore your interest as much as you want and the place you start to write your own poem.
-                                       <h4>Yosuke Sakai</h4></figure>
-                                       <figure class="block-text test hide-test">SFPC is not really a school or a course — it is more like a door into an extraordinary world. It is driven by passion, kindness and the thrill of teaching and learning. I would love to live those inspiring weeks all over again.
-                                       <h4>Jesse Wolpert</h4></figure>
-                                       <figure class="block-text test hide-test">School For Poetic Computation is equal parts The Factory, childhood blanket fort, and mad scientist's lab. I learned a ton from the teachers and the whole SFPC community in a huge collaborative and exploratory environment.
-                                         <h4>Lee Tusman</h4></figure>
+                                       {{#each testimonials}}
+                                       {{#eq type "General SFPC"}}
+                                       {{#if publish}}
+                                       <figure class="block-text test hide-test">
+                                         <span class="test-icon"> </span>{{Testimonial}}<h4>{{#if Person-Website}}
+                                           {{#each Person-Website}}{{this}}{{#unless @last}},{{/unless}} {{/each}}
+                                           {{else}}{{Submitter}}
+                                            {{/if}}</h4>
+                                       </figure>
+                                       {{/if}}
+                                       {{/eq}}
+                                       {{/each}}
 
                                        <div id="carousel-images">
                                          <figure class="item participate-img pi1"><img src=""></figure>
