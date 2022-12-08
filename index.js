@@ -294,6 +294,19 @@ app.get("/sex-ed/:slug", async (req,res) => {
   }
 })
 
+
+app.get("/bio", async (req,res) => {
+   const response = await getDatabaseEntries("f88fce775a7846be8296efe0ad43e84c", [{property:"Date", direction:"descending"}], {property:"Public", "checkbox": {"equals": true}})
+
+  const linkData = response.map((link) => {
+    console.log(link)
+    return parseNotionPage(link)
+  })
+  console.log(linkData)
+  res.render("about/links", {links: linkData})
+})
+
+
 app.get("/donors", async (req,res) => {
   const response = await getDatabaseEntries("f10d523dd9b24d44ae2d9a6c26b4f5ee", [{property:"Name", direction:"ascending"}], {property:"Public", "checkbox": {"equals": true}})
   const donorData = response.map((donor) => {
