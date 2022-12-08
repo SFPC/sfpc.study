@@ -422,7 +422,7 @@ $(document).ready(function() {
         var goal = 60000;
 
         // estimated amount raised
-        var raised = 23627;
+        var raised = 24972;
 
         // end date of fundraiser
         var end = new Date('January 3, 2023');
