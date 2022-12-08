@@ -295,12 +295,12 @@ app.get("/sex-ed/:slug", async (req,res) => {
 })
 
 
-app.get("/bio", async (req,res) => {
+app.get("/links", async (req,res) => {
    const response = await getDatabaseEntries("f88fce775a7846be8296efe0ad43e84c", [{property:"Date", direction:"descending"}], {property:"Public", "checkbox": {"equals": true}})
 
   const linkData = response.map((link) => {
     console.log(link)
-    return parseNotionPage(link)
+    return parseLinks(link)
   })
   console.log(linkData)
   res.render("about/links", {links: linkData})
@@ -768,6 +768,18 @@ function parsePrograms(apiResponse){
   returnObj.type=programInfo["Type"]?.multi_select[0]?.name
   returnObj.detail=programInfo["Detail"]?.multi_select[0]?.name
   returnObj.publish=programInfo["Public"]?.checkbox
+
+  return returnObj
+}
+
+
+function parseLinks(apiResponse){
+  const linkInfo = apiResponse.properties;
+  let returnObj = parseNotionPage(apiResponse);
+
+
+  returnObj.type=linkInfo["Tag"]?.multi_select[0]?.name
+  returnObj.publish=linkInfo["Public"]?.checkbox
 
   return returnObj
 }

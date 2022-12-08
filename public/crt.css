@@ -20,6 +20,12 @@
     --fallwinter-2122-link: var(--text-link);
 }
 
+
+
+.sfpc-links-avatar {
+  background-image: url('logo-crt.jpg'); 
+}
+
 body {
   color: var(--text-color);
 }

@@ -551,19 +551,19 @@ margin-top: calc(var(--body-margin)/3);
       .block-text .test-icon, p .test-icon {
         color: var(--text-color);
       }
-      .block-text .test-icon::before, p .test-icon::before {
+      .block-text .test-icon::before, p .test-icon::before, .sfpc-link .test-icon::before{
         content: "◦";
       }
-      .block-text:nth-of-type(3n) .test-icon::before, p .test-icon:nth-of-type(3n)::before {
+      .block-text:nth-of-type(3n) .test-icon::before, p .test-icon:nth-of-type(3n)::before, .sfpc-link:nth-of-type(3n) .test-icon::before {
       content: "*";
       }
-      .block-text:nth-of-type(2n) .test-icon::before, p .test-icon:nth-of-type(2n)::before {
+      .block-text:nth-of-type(2n) .test-icon::before, p .test-icon:nth-of-type(2n)::before, .sfpc-link:nth-of-type(2n) .test-icon::before{
       content: "▫";
       }
-      .block-text:nth-of-type(4n) .test-icon::before, p .test-icon:nth-of-type(4n)::before {
+      .block-text:nth-of-type(4n) .test-icon::before, p .test-icon:nth-of-type(4n)::before, .sfpc-link:nth-of-type(4n) .test-icon::before{
       content: "◌";
       }
-      .block-text:nth-of-type(5n) .test-icon::before, p .test-icon:nth-of-type(5n)::before {
+      .block-text:nth-of-type(5n) .test-icon::before, p .test-icon:nth-of-type(5n)::before, .sfpc-link:nth-of-type(5n) .test-icon::before {
       content: "‣";
       }
 
@@ -3044,7 +3044,6 @@ video {
 
 
 
-
 .sfpc-links {
     display: flex;
     flex-direction: column;
@@ -3071,8 +3070,13 @@ video {
 
 }
 
+
 a.sfpc-link {
   text-decoration: none;
+}
+
+.sfpc-link .test-icon {
+  color: var(--text-link)
 }
 
 
@@ -4004,6 +4008,23 @@ h5.shopify-buy__cart-toggle__title {
                   }
 
 
+                  .sfpc-links {
+                      gap: calc(var(--body-margin)*3);
+                    }
+
+                    .sfpc-links-header {
+                      text-align: center;
+                    }
+
+                    .sfpc-links-avatar {
+                      width: 30vw;
+                      height: 30vw;
+                      margin: calc(var(--body-margin)*2) auto 0 auto;
+                      background-image: url('favicon.ico');
+                      background-size: cover;
+                      border-radius: 30vw;
+
+                    }
 
 
 

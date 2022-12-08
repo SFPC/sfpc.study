@@ -65,11 +65,11 @@
 
 
 
-          <h4 class="breadcrumb  hide-content">
-            <!-- <a href="/about">about</a>
+          <!-- <h4 class="breadcrumb  hide-content">
+            <a href="/about">about</a>
             <span class="caret"></span>
-            <a href="/about/scholarships">scholarships</a> -->
-          </h4>
+            <a href="/about/scholarships">scholarships</a>
+          </h4> -->
 
 
 
@@ -77,21 +77,100 @@
               <div id="about" class="hide-content shell-content">
 
 
-                                <section id="scholarships">
-                                    <div class="grid-2">
-                                      <h1>School for Poetic Computation</h1>
+                                <section id="" >
+                                    <div class="grid-2 sfpc-links-header">
+                                      <h1 class="hide-mobile">School for Poetic Computation</h1>
+
+                                      <div class="hide-desk sfpc-links-avatar"> </div>
                                     </div>
 
                                     <div class="grid-2 sfpc-links">
 
+                                      <h4>featured</h4>
                                       {{#each links}}
+                                      {{#eq type "Featured"}}
 
-                                      <a href="{{URL}}" class="sfpc-link">{{Name}}</a>
+                                        <a href="{{URL}}" class="sfpc-link"><span class="test-icon"> </span> {{Name}}</a>
 
+                                       {{/eq}}
                                       {{/each}}
+
+                                      <h4>blog</h4>
+                                      {{#each links}}
+                                      {{#eq type "Blog"}}
+
+                                      <a href="{{URL}}" class="sfpc-link"><span class="test-icon"> </span> {{Name}}</a>
+
+                                       {{/eq}}
+                                      {{/each}}
+
+
+
+                                      <h4>programs</h4>
+                                      {{#each links}}
+                                      {{#eq type "Program"}}
+
+                                        <a href="{{URL}}" class="sfpc-link"><span class="test-icon"> </span> {{Name}}</a>
+
+                                       {{/eq}}
+                                      {{/each}}
+
+
+                                      <h4>projects</h4>
+                                      {{#each links}}
+                                      {{#eq type "Project"}}
+
+                                        <a href="{{URL}}" class="sfpc-link"><span class="test-icon"> </span> {{Name}}</a>
+
+                                       {{/eq}}
+                                      {{/each}}
+
+
+                                      <h4>contact</h4>
+                                      {{#each links}}
+                                      {{#eq type "Contact"}}
+
+                                        <a href="{{URL}}" class="sfpc-link"><span class="test-icon"> </span> {{Name}}</a>
+
+                                       {{/eq}}
+                                      {{/each}}
+
+
+
+                                      <a href="https://twitter.com/sfpc" class="sfpc-link"><span class="test-icon"> </span> Twitter</a>
+                                      <a href="https://instagram.com/sfpc_nyc" class="sfpc-link"><span class="test-icon"> </span> Instagram</a>
+                                      <a href="https://www.are.na/school-for-poetic-computation" class="sfpc-link"><span class="test-icon"> </span> Are.na</a>
+                                      <a href="https://twitch.tv/sfpc_nyc" class="sfpc-link"><span class="test-icon"> </span> Twitch</a>
+                                      <a href="https://stats.sender.net/forms/e09QVa/view" class="sfpc-link"><span class="test-icon"> </span> Newsletter</a>
+
+
+
+
+                                      <!-- <p>
+                                      <span class="test-icon"></span> <a href="https://twitter.com/intent/tweet?url=https://sfpc.study/fundraiser&text=">twitter</a>
+
+                                         <span class="test-icon"></span> <a href="https://www.facebook.com/sharer/sharer.php?u=https://sfpc.study/fundraiser">facebook</h6></a>
+
+                                       <span class="test-icon"></span> <a href="mailto:info@example.com?&subject=&cc=&bcc=&body=https://sfpc.study/fundraiser%0A">email</a>
+
+
+
+
+                                    </p> -->
+
+
 
                                     </div>
                                 </section>
+
+
+                                <div class="break-noline"></div>
+                                <section id="" class="hide-desk">
+                                    <div class="grid-1 sfpc-links-header">
+                                      <h1>School for Poetic Computation</h1>
+                                    </div>
+                                  </section>
+
 
 
 
