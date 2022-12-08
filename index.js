@@ -234,7 +234,26 @@ app.get("/about", async (req,res) => {
     return parseDonors(donor)
   })
   console.log(donorData)
-  res.render("about/about", {donors: donorData})
+
+  const testimonialinfo = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
+  const testimonialData = testimonialinfo.map((testimonial) => {
+    console.log(testimonial)
+    return parseTestimonials(testimonial)
+  })
+  console.log(testimonialData)
+
+
+  const pressinfo = await getDatabaseEntries("c0fcb9243b7947afb35111753c7b24c4", [{property:"Date", direction:"descending"}])
+  const pressData = pressinfo.map((press) => {
+    console.log(press)
+    return parseNotionPage(press)
+  })
+
+  console.log(pressData)
+
+
+
+  res.render("about/about", {donors: donorData, testimonials: testimonialData, presses: pressData})
 })
 
 app.get("/about/space", async (req,res) => {
@@ -243,7 +262,16 @@ app.get("/about/space", async (req,res) => {
 
 
 app.get("/about/participating", async (req,res) => {
-  res.render("about/participating")
+
+  const testimonialinfo = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
+  const testimonialData = testimonialinfo.map((testimonial) => {
+    console.log(testimonial)
+    return parseTestimonials(testimonial)
+  })
+  console.log(testimonialData)
+
+
+  res.render("about/participating", {testimonials: testimonialData})
 })
 
 app.get("/about/scholarships", async (req,res) => {
