@@ -180,7 +180,7 @@ app.get("/classes", async (req,res) => {
 
 
 app.get("/sessions", async (req,res) => {
-  const response = await getDatabaseEntries("ce519f031eb340f58e3693cf4e041a67", [{property:"Dates", direction:"descending"}])
+  const response = await getDatabaseEntries("ce519f031eb340f58e3693cf4e041a67", [{property:"Date", direction:"descending"}])
   const projectData = response.map((project) => {
     console.log(project)
     return parseNotionPage(project)
@@ -405,8 +405,10 @@ app.get("/fundraiser/:slug", async (req, res) => {
 
 
 app.get("/participate", async (req,res) => {
-  const response = await getDatabaseEntries("ba1f9876ad3e4810880d4802d3d70d6f", [{property:"Date", direction:"descending"}])
-  const programData = response.map((program) => {
+  const sessions = await getDatabaseEntries("ba1f9876ad3e4810880d4802d3d70d6f", [{property:"Date", direction:"descending"}])
+  const events = await getDatabaseEntries("10c62665c6ca4383bbdc12788c45df14", [{property:"Date", direction:"descending"}])
+
+  const programData = sessions.map((program) => {
     console.log(program)
     return parsePrograms(program)
   })
@@ -731,8 +733,8 @@ function parseSessionData(apiResponse){
 
   returnObj.classBlock=parseClassBlock(sessionInfo)
   returnObj.cost=sessionInfo["Cost"]?.number
-  returnObj.startDate=prettyDateString(sessionInfo["Dates"]?.date?.start)
-  returnObj.endDate=prettyDateString(sessionInfo["Dates"]?.date?.end)
+  returnObj.startDate=prettyDateString(sessionInfo["Date"]?.date?.start)
+  returnObj.endDate=prettyDateString(sessionInfo["Date"]?.date?.end)
   let today = new Date()
   today.setTime(today.getTime() - 600 * 60 * 1000)
   today = new Date(prettyDateString(today.toISOString().slice(0, 10)))
