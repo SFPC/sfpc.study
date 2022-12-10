@@ -109,7 +109,7 @@
         </div>
       </section>
 
-      {{> winter23classBlock}}
+      <!-- {{> winter23classBlock}} -->
 
 
       <div class="break"></div>
@@ -125,9 +125,10 @@
 
 
           <div id="{{this.[Website-Slug]}}"
-            class="grid-4 featured {{this.[Program-Type]}} {{this.[Session Slug]}}" data-location="">
+            class="grid-4 featured {{type}} {{this.[Session Slug]}}" data-location="">
             <div class="featured-text">
-              <img src="{{this.[Session-Promo-Image]}}">
+              {{#if eventImage.[0]}}<img src="{{eventImage.[0]}}">{{/if}}
+              
               <div class="top">
                 <h4 class="type type-list-comma"><a href="/projects/{{this.[Website-Slug]}}">{{#each
                     this.[Program-Type]}}{{this}}{{/each}}</a></h4>
@@ -136,8 +137,6 @@
               </div>
               <div class="bottom">
                 <h4 class="details">
-                  {{this.[Session Date].start}}
-
                   {{this.[Dates].start}}
                   {{#if [Dates].end}}— {{[Dates].end}}{{/if}}
 

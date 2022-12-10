@@ -183,7 +183,7 @@ app.get("/sessions", async (req,res) => {
   const response = await getDatabaseEntries("ce519f031eb340f58e3693cf4e041a67", [{property:"Date", direction:"descending"}])
   const projectData = response.map((project) => {
     console.log(project)
-    return parseNotionPage(project)
+    return parseSessionData(project)
   })
   console.log(projectData)
   // let pageContent = getPageContent()
@@ -748,6 +748,7 @@ function parseSessionData(apiResponse){
   returnObj.live = today >= new Date(returnObj.launchDate)
   returnObj.classCount=sessionInfo["Number-Classes"].number
   returnObj.appStatus=sessionInfo["Application Status"]?.multi_select[0]?.name
+  returnObj.publish=sessionInfo["Publish"]?.checkbox
 
   return returnObj
 }
@@ -772,9 +773,45 @@ function parsePrograms(apiResponse){
 
   returnObj.name=programInfo.Name.title[0].plain_text
 
-  returnObj.type=programInfo["Type"]?.multi_select[0]?.name
-  returnObj.detail=programInfo["Detail"]?.multi_select[0]?.name
+  returnObj.type=programInfo["Program-Type"]?.multi_select[0]?.name
   returnObj.publish=programInfo["Public"]?.checkbox
+
+  returnObj.startDate=prettyDateString(classInfo["Date"]?.date?.start)
+
+
+
+    returnObj.eventImage=parseRollup(programInfo["Event-Promo-Image"])
+    returnObj.sesssionImage=parseRollup(programInfo["Session-Promo-Image"])
+
+    //
+    // const eventImg = programInfo["Event-Promo-Image"]?.[0]
+    // const sessionImg = programInfo["Session-Promo-Image"]?.[0]
+
+    // if(eventImg) {
+      // returnObj.eventImage=parseNotionData(programInfo["Event-Promo-Image"])?.[0]
+
+
+    // } else if(sessionImg) {
+      // returnObj.sesssionImage=parseNotionData(programInfo["Session-Promo-Image"])?.[0]
+    // }
+
+
+
+      // returnObj.thumbnailthum=parseNotionData(programInfo["Event-Promo-Image"])?.[0]
+
+    //
+    // const eventDate = programInfo["Event-Date"]?.date?.start
+    // const sessionDate = programInfo["Session-Date"]?.date?.start
+
+
+    // if(eventDate) {
+    //   returnObj.startDate=prettyDateString(eventDate)
+    // } else if(sessionDate) {
+    //   returnObj.startDate=prettyDateString(sessionDate)
+    // }
+
+
+
 
   return returnObj
 }
@@ -904,7 +941,7 @@ function parseClassData(apiResponse){
   returnObj.endDescription=classInfo["Session End Description"]?.rich_text[0]?.plain_text
   returnObj.active=classInfo["Active"]?.formula.boolean
   returnObj.url=classInfo["Webpage URL"]?.url
-  returnObj.published=parseRollup(classInfo["Published"])[0]?.rich_text[0]?.plain_text
+  returnObj.publish=classInfo["Publish"]?.checkbox
   returnObj.session=parseRollup(classInfo["Session Name"])[0]?.plain_text
   returnObj.notifyDate=prettyDateString(classInfo["Notification Date"]?.date?.start)
 

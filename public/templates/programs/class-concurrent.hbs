@@ -391,7 +391,7 @@
                               </h4>
                                 <a href="/events/{{this.slug}}" target="_blank"><h2 class="title">{{this.name}} </h2></a>
                             </div>
-                            <span class="bio bio-float" style="background-image: url('{{this.image}}')" role="img"></span>
+                            <span class="bio bio-float" style="background-image: url('{{this.image.[0]}}')" role="img"></span>
                           </div>
                         </div>
                         {{/each}} <BR>
@@ -427,7 +427,7 @@
                                  <a href="/blog/{{this.slug}}" target="_blank"><h2 class="title">{{this.name}} </h2></a>
                              </div>
 
-                             <span class="bio bio-float" style="background-image: url('{{this.image.[0]}}')" role="img"></span>
+                             <span class="bio bio-float" style="background-image: url('{{this.image}}')" role="img"></span>
                            </div>
                          </div>
                          {{/eq}}

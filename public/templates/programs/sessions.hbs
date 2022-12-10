@@ -109,6 +109,7 @@
 
           {{#each projects}}
 
+            {{#if publish}}
 
           <div id="{{this.[Website-Slug]}}"
             class="grid-4 featured session {{this.[Website-Slug]}}" data-location="
@@ -122,8 +123,8 @@
               </div>
               <div class="bottom">
                 <h4 class="details">
-                  {{this.[Dates].start}}
-                  {{#if [Dates].end}}— {{[Dates].end}}{{/if}}
+                  {{this.startDate}}
+                  {{#if endDate}}— {{endDate}}{{/if}}
                 </h4>
                 {{#if Location}}
                 <h4 class="details">
@@ -145,6 +146,7 @@
             </div>
           </div>
 
+          {{/if}}
 
           {{/each}}
 
