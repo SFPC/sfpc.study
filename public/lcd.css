@@ -241,6 +241,22 @@ select#allSections {
         border-color: var(--text-color);
       }
 
+      .sfpc .fundraiser-progress h6 {
+      color: var(--background);
+      }
+
+      .sfpc .fundraiser-progress {
+      background:  var(--text-link);
+      }
+
+      .sfpc .fundraiser-goal {
+      border: 2px solid var(--text-link);
+      }
+
+
+
+
+
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
