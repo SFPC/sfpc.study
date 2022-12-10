@@ -66,6 +66,7 @@
   /* font-weight: bold; */
   padding-right: var(--body-margin);
   text-align: right;
+      margin-top:0px !important;
 }
 .fundraiser-progress h6::after {
   /* content: var(--raised-text); */
