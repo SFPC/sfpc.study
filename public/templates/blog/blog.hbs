@@ -115,7 +115,7 @@
 
                 {{#each blog}}
 
-                {{#if Publish-Date}}
+                {{#eq status "Published"}}
 
                   <div id="{{this.[Website-Slug]}}"
                   class="grid-1 table blog-list-post {{#each this.[Project-Type]}}{{this}} {{/each}}" data-location="">
@@ -140,7 +140,7 @@
                       <h2 class="title">
                       <a href="/blog/{{this.[Website-Slug]}}">  {{this.Name}}</h2>  </a>
 
-
+                      {{#if this.[Website-Authors]}}
 
                       <h6>
                         <!-- {{this.[Short Description]}}... -->
@@ -152,6 +152,7 @@
 
 
                       </h6>
+                      {{/if}}
                     </div>
 
                     {{#if Cover-Image}}
@@ -163,7 +164,9 @@
                   </div>
                 </div>
 
-                {{/if}}
+
+                {{else}}
+                {{/eq}}
 
                 {{/each}}
 

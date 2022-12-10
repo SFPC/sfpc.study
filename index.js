@@ -524,12 +524,17 @@ app.get("/blog", async (req,res) => {
   const response = await getDatabaseEntries("5fb49fe53804424a89230294206fcaee", [{property:"Publish-Date", direction:"descending"}])
   const blogData = response.map((blog) => {
     console.log(blog)
-    return parseNotionPage(blog)
+    return parseBlog(blog)
   })
   console.log(blogData)
   res.render("blog/blog", {blog: blogData})
 
 })
+
+
+
+
+
 
 
 app.get("/blog/:slug", async (req,res) => {
@@ -779,7 +784,7 @@ function parseLinks(apiResponse){
 
 
   returnObj.type=linkInfo["Tag"]?.multi_select[0]?.name
-  returnObj.public=linkInfo["Public"]?.checkbox 
+  returnObj.public=linkInfo["Public"]?.checkbox
 
   return returnObj
 }
@@ -800,6 +805,21 @@ function parseDonors(apiResponse){
 
   return returnObj
 }
+
+
+
+function parseBlog(apiResponse){
+  const blogInfo = apiResponse.properties;
+  let returnObj = parseNotionPage(apiResponse);
+
+
+  returnObj.status=blogInfo["Status"]?.multi_select[0]?.name
+
+  return returnObj
+}
+
+
+
 
 
 
