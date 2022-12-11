@@ -23,7 +23,7 @@
 
 
 .sfpc-links-avatar {
-  background-image: url('logo-crt.jpg'); 
+  background-image: url('logo-crt.jpg');
 }
 
 body {
@@ -401,6 +401,8 @@ img::after{
 
 .loader-content p::after {
   box-shadow: 3px 0 1px rgba(0,30,255,0.5), -3px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+
+  color: var(--text-color) !important;
 }
 
 @media (max-width: 768px) {

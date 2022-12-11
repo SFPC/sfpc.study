@@ -127,7 +127,57 @@
           {{#each programs}}
             {{#eq year "2022"}}
 
-            {{> participate-program}}
+
+                      <div id="{{this.[Website-Slug]}}"
+                        class="grid-4 featured {{type}} {{#eq type "session"}}{{this.[Session Slug]}}{{/eq}} {{#eq type "event"}}sfpc{{/eq}}" data-location="">
+                        <div class="featured-text">
+                         {{#if eventThumb}}<img src="{{eventThumb.[0]}}">{{/if}}
+
+                         <img src="{{image}}">
+
+                          <div class="top">
+                            <h4 class="type type-list-comma">
+                              {{#eq type "event"}}<a href="/events/{{this.[Event-Slug]}}">{{/eq}}
+                                  {{#eq type "session"}}<a href="/sessions/{{this.[Session Slug]}}">{{/eq}}
+
+                                {{#each
+                                this.[Program-Type]}}{{this}}{{/each}}</a></h4>
+                            <h2 class="title">{{this.Name}}</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">
+
+                              {{Date.start}}
+                              {{#if [Date].end}}— {{[Date].end}}{{/if}}
+
+                            </h4>
+                            {{#if Time}}
+                            <h4 class="details">
+                              {{this.[Time]}}
+                            </h4>
+                            {{/if}}
+                            {{#if location}}
+                            <h4 class="details">
+                              {{this.[location]}}
+                            </h4>
+                            {{/if}}
+                            {{#eq type "session"}}
+                            {{#if classcount}}
+                            <h4 class="details">
+                              {{this.classcount}} classes
+                            </h4>
+                            {{/if}}
+                            {{/eq}}
+                            {{#if Application-Status}}
+                            <h4 class="details">
+                             {{this.[Application-Status]}}
+                            </h4>
+                              {{/if}}
+
+                             </div>
+                        </div>
+                      </div>
+
 
 
             {{/eq}}
@@ -140,7 +190,161 @@
       </section>
 
 
-      <!-- <div class="break"></div> -->
+      <div class="break"></div>
+
+      <section id="2022" class="stacked stacked-4">
+        <div class="grid-1">
+          <h1>2021</h1>
+        </div>
+
+        <div class="grid-1 participate">
+
+
+
+
+          {{#each programs}}
+            {{#eq year "2021"}}
+
+
+                      <div id="{{this.[Website-Slug]}}"
+                        class="grid-4 featured {{type}} {{#eq type "session"}}{{this.[Session Slug]}}{{/eq}} {{#eq type "event"}}sfpc{{/eq}}" data-location="">
+                        <div class="featured-text">
+                         {{#if eventThumb}}<img src="{{eventThumb.[0]}}">{{/if}}
+
+                         <img src="{{image}}">
+
+                          <div class="top">
+                            <h4 class="type type-list-comma">
+                              {{#eq type "event"}}<a href="/events/{{this.[Event-Slug]}}">{{/eq}}
+                                  {{#eq type "session"}}<a href="/sessions/{{this.[Session Slug]}}">{{/eq}}
+
+                                {{#each
+                                this.[Program-Type]}}{{this}}{{/each}}</a></h4>
+                            <h2 class="title">{{this.Name}}</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">
+
+                              {{Date.start}}
+                              {{#if [Date].end}}— {{[Date].end}}{{/if}}
+
+                            </h4>
+                            {{#if Time}}
+                            <h4 class="details">
+                              {{this.[Time]}}
+                            </h4>
+                            {{/if}}
+                            {{#if location}}
+                            <h4 class="details">
+                              {{this.[location]}}
+                            </h4>
+                            {{/if}}
+                            {{#eq type "session"}}
+                            {{#if classcount}}
+                            <h4 class="details">
+                              {{this.classcount}} classes
+                            </h4>
+                            {{/if}}
+                            {{/eq}}
+                            {{#if Application-Status}}
+                            <h4 class="details">
+                             {{this.[Application-Status]}}
+                            </h4>
+                              {{/if}}
+
+                             </div>
+                        </div>
+                      </div>
+
+
+
+            {{/eq}}
+          {{/each}}
+
+        </div>
+
+
+
+      </section>
+
+
+
+
+
+            <div class="break"></div>
+
+            <section id="2022" class="stacked stacked-4">
+              <div class="grid-1">
+                <h1>2020</h1>
+              </div>
+
+              <div class="grid-1 participate">
+
+
+
+
+                {{#each programs}}
+                  {{#eq year "2020"}}
+
+
+                            <div id="{{this.[Website-Slug]}}"
+                              class="grid-4 featured {{type}} {{#eq type "session"}}{{this.[Session Slug]}}{{/eq}} {{#eq type "event"}}sfpc{{/eq}}" data-location="">
+                              <div class="featured-text"> 
+                               <img src="{{image}}">
+
+                                <div class="top">
+                                  <h4 class="type type-list-comma">
+                                    {{#eq type "event"}}<a href="/events/{{this.[Event-Slug]}}">{{/eq}}
+                                        {{#eq type "session"}}<a href="/sessions/{{this.[Session Slug]}}">{{/eq}}
+
+                                      {{#each
+                                      this.[Program-Type]}}{{this}}{{/each}}</a></h4>
+                                  <h2 class="title">{{this.Name}}</h2>
+                                </div>
+                                <div class="bottom">
+                                  <h4 class="details">
+
+                                    {{Date.start}}
+                                    {{#if [Date].end}}— {{[Date].end}}{{/if}}
+
+                                  </h4>
+                                  {{#if Time}}
+                                  <h4 class="details">
+                                    {{this.[Time]}}
+                                  </h4>
+                                  {{/if}}
+                                  {{#if location}}
+                                  <h4 class="details">
+                                    {{this.[location]}}
+                                  </h4>
+                                  {{/if}}
+                                  {{#eq type "session"}}
+                                  {{#if classcount}}
+                                  <h4 class="details">
+                                    {{this.classcount}} classes
+                                  </h4>
+                                  {{/if}}
+                                  {{/eq}}
+                                  {{#if Application-Status}}
+                                  <h4 class="details">
+                                   {{this.[Application-Status]}}
+                                  </h4>
+                                    {{/if}}
+
+                                   </div>
+                              </div>
+                            </div>
+
+
+
+                  {{/eq}}
+                {{/each}}
+
+              </div>
+
+
+
+            </section>
 
 
 
@@ -152,7 +356,8 @@
 
 
 
-      <div class="break-noline"></div>
+
+      <div class="break"></div>
 
 
       <section id="section-outro">

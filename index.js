@@ -308,13 +308,104 @@ app.get("/links", async (req,res) => {
 
 
 app.get("/donors", async (req,res) => {
-  const response = await getDatabaseEntries("f10d523dd9b24d44ae2d9a6c26b4f5ee", [{property:"Name", direction:"ascending"}], {property:"Public", "checkbox": {"equals": true}})
-  const donorData = response.map((donor) => {
-    console.log(donor)
-    return parseDonors(donor)
+  const memberships = await getDatabaseEntries("f10d523dd9b24d44ae2d9a6c26b4f5ee", [{property:"Name", direction:"ascending"}],
+  // {property:"Public", "checkbox": {"equals": true}}
+
+     {
+       // "filter": {
+           "and": [
+               {
+                   "property": "Public",
+                   "checkbox": {
+                       "equals": true
+                   }
+               }
+               ,
+               {
+                   "property": "Type",
+                   "multi_select": {
+                       "contains": "Community"
+                   }
+               }
+               ,
+               {
+                   "property": "Frequency",
+                   "multi_select": {
+                       "contains": "Recurring"
+                   }
+               }
+           ]
+       }
+   // }
+)
+  const membershipsDonorData = memberships.map((member) => {
+    console.log(member)
+    return parseDonors(member)
   })
-  console.log(donorData)
-  res.render("about/donors", {donors: donorData})
+
+
+  const organizations = await getDatabaseEntries("f10d523dd9b24d44ae2d9a6c26b4f5ee", [{property:"Name", direction:"ascending"}],
+     {
+           "and": [
+               {
+                   "property": "Public",
+                   "checkbox": {
+                       "equals": true
+                   }
+               }
+               ,
+               {
+                   "property": "Type",
+                   "multi_select": {
+                       "contains": "Organization"
+                   }
+               }
+           ]
+       }
+)
+  const organizationsDonorData = organizations.map((organization) => {
+    console.log(organization)
+    return parseDonors(organization)
+  })
+
+
+
+  const communityMembers = await getDatabaseEntries("f10d523dd9b24d44ae2d9a6c26b4f5ee", [{property:"Name", direction:"ascending"}],
+     {
+           "and": [
+               {
+                   "property": "Public",
+                   "checkbox": {
+                       "equals": true
+                   }
+               }
+               ,
+               {
+                   "property": "Type",
+                   "multi_select": {
+                       "contains": "Community"
+                   }
+               }
+               ,
+               {
+                   "property": "Frequency",
+                   "multi_select": {
+                       "contains": "One-Time"
+                   }
+               }
+           ]
+       }
+)
+  const communityDonorData = communityMembers.map((communityMember) => {
+    console.log(communityMember)
+    return parseDonors(communityMember)
+  })
+
+
+
+  console.log(membershipsDonorData)
+
+  res.render("about/donors", {memberDonors: membershipsDonorData, organizationDonors: organizationsDonorData, communityDonors: communityDonorData})
 })
 
 
@@ -723,6 +814,9 @@ function parseProductData(apiResponse){
   return returnObj
 
 }
+
+
+
 
 
 function parseSessionData(apiResponse){

@@ -99,7 +99,7 @@
 
 
                       </h4>
- 
+
                       <div class="break-noline-small"></div>
 
                       {{/if}}
@@ -197,7 +197,7 @@
                       <p class="large apply">
 
                         {{#if External-Website}}
-                            <a href="{{"Website-URL"}}" target="_blank" id="application-link">
+                            <a href="{{"External-Website"}}" target="_blank" id="application-link">
 
 
                               {{External-CTA}}
@@ -206,10 +206,13 @@
 
                         {{else}}
 
-                            <!-- {{#if RSVP-Open}} -->
+                        {{#if RSVP}}
+                            {{#if RSVP-Open}}
                             <a href="{{RSVP}}" target="_blank" id="application-link">RSVP</a>
-                            <!-- {{/if}} -->
-
+                            {{else}}
+                            <a href="{{RSVP}}" target="_blank" id="application-link">RSVP Closed</a>
+                            {{/if}}
+                        {{/if}}
 
 
                         {{/if}}

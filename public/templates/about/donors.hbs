@@ -99,26 +99,71 @@
 
           <div class="break"></div>
 
-          <!-- <section id="2022" class="stacked stacked-1">
+          <section id="2022" class="stacked stacked-1">
             <div class="grid-2">
-              <h1>Foundations & Organizations</h1>
+              <h6>Organizations</h6>
             </div>
           </section>
 
-          <div class="break-noline-small"></div> -->
+          <div class="break-noline-small"></div>
 
 
           <section id="" class="stacked stacked-8">
           <div class="grid-1 funders-list participate">
-            {{#each donors}}
+            {{#each organizationDonors}}
             <div id="" class="grid-8 funder">
-              <p class="{{#eq type "Foundation / Organization"}}medium{{/eq}}">{{name}}</p>
+              <p class="medium">{{name}}</p>
                     </div>
 
             {{/each}}
             </div>
           </section>
 
+
+           <section id="2022" class="stacked stacked-1">
+             <div class="grid-2">
+               <h6>Community Donors</h6>
+             </div>
+           </section>
+
+           <div class="break-noline-small"></div>
+
+
+           <section id="" class="stacked stacked-8">
+           <div class="grid-1 funders-list participate">
+             {{#each communityDonors}}
+             <div id="" class="grid-8 funder">
+               <p class="">{{name}}</p>
+                     </div>
+
+             {{/each}}
+             </div>
+           </section>
+
+
+
+          <section id="2022" class="stacked stacked-1">
+            <div class="grid-2">
+              <h6>Community Memberships</h6>
+            </div>
+          </section>
+
+          <div class="break-noline-small"></div>
+
+
+          <section id="" class="stacked stacked-8">
+          <div class="grid-1 funders-list participate">
+            {{#each memberDonors}}
+            <div id="" class="grid-8 funder">
+              <p class="">{{name}}</p>
+                    </div>
+
+            {{/each}}
+            </div>
+          </section>
+
+
+          <div class="break-endpage"></div>
 
 
 
