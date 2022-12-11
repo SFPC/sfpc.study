@@ -790,6 +790,8 @@ function parsePrograms(apiResponse){
 
     returnObj.classcount=programInfo["Class Count"]?.formula.string
 
+    // returnObj.classcount=parseRollup(programInfo["Number-of-Classes"]?.[0])
+
     // returnObj.year=programInfo["Year"]?.formula.string
 
     const prettyDate = prettyDateString(programInfo["Date"]?.date?.start)
@@ -1005,30 +1007,30 @@ function parseClassData(apiResponse){
 
 
 
-function parseEvents(programInfo){
-  const eventName = parseRollup(programInfo["Teacher Names"])
-  const eventDate = parseRollup(programInfo["Teacher Bios"])
-  const eventTime = parseRollup(programInfo["Teacher Bios"])
-  const eventLocation = parseRollup(programInfo["Teacher Bios"])
-  const eventImage = parseRollup(programInfo["Event-Promo-Image"])
-  const events = [];
-
-  if (eventName) {
-
-
-  for(let i = 0; i < eventName.length; i++){
-    events.push({
-      name: eventName[i],
-      date: eventDate[i],
-      time: eventTime[i],
-      location: eventLocation[i],
-      image: eventImage[i]
-    })
-  }
-
-  }
-  return events;
-}
+// function parseEvents(programInfo){
+//   const eventName = parseRollup(programInfo["Teacher Names"])
+//   const eventDate = parseRollup(programInfo["Teacher Bios"])
+//   const eventTime = parseRollup(programInfo["Teacher Bios"])
+//   const eventLocation = parseRollup(programInfo["Teacher Bios"])
+//   const eventImage = parseRollup(programInfo["Event-Promo-Image"])
+//   const events = [];
+//
+//   if (eventName) {
+//
+//
+//   for(let i = 0; i < eventName.length; i++){
+//     events.push({
+//       name: eventName[i],
+//       date: eventDate[i],
+//       time: eventTime[i],
+//       location: eventLocation[i],
+//       image: eventImage[i]
+//     })
+//   }
+//
+//   }
+//   return events;
+// }
 
 
 
