@@ -111,7 +111,9 @@
       <section class="intro {{Website-Slug}}" id="introduction">
         <p tabindex="0" class="large">
           <span id="introduction-text" style="white-space:pre-line">{{#if sessionEnded}}{{#if "Session End Description"}}{{"Session End Description"}}{{else}}{{Description}}{{/if}}{{else}}{{Description}}{{/if}}</span><BR><BR>
-          <span id="session-name">{{Name}}</span> {{#if sessionEnded}}was{{else}}is{{/if}} organized by
+          <span id="session-name">{{Name}}</span>
+          {{#if sessionEnded}}was{{else}}is{{/if}}
+          organized by
           {{#each organizers}}
           {{#if @last}}{{#if @first}}{{else}}and{{/if}}{{/if}}
           <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
@@ -143,7 +145,7 @@
 
 
                     {{#if [Application URL]}}
-                    <span class="hide-appsOpen">Applications closed.</span> 
+                    <span class="hide-appsOpen">Applications closed.</span>
                     <!-- on</span>
                   <span id="deadline">{{[Application End Date].[0]}}</span>. -->
                     {{else}}

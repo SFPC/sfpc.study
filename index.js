@@ -771,17 +771,70 @@ function parsePrograms(apiResponse){
   let returnObj = parseNotionPage(apiResponse);
 
 
-  returnObj.name=programInfo.Name.title[0].plain_text
+  // returnObj.name=programInfo.Name.title[0].plain_text
 
   returnObj.type=programInfo["Program-Type"]?.multi_select[0]?.name
   returnObj.publish=programInfo["Public"]?.checkbox
 
-  returnObj.startDate=prettyDateString(classInfo["Date"]?.date?.start)
+  returnObj.startDate=prettyDateString(programInfo["Date"]?.date?.start)
 
 
 
-    returnObj.eventImage=parseRollup(programInfo["Event-Promo-Image"])
-    returnObj.sesssionImage=parseRollup(programInfo["Session-Promo-Image"])
+    returnObj.eventImage=parseRollup(programInfo["Event-Promo-Image"]?.[0])
+    returnObj.sesssionImage=parseRollup(programInfo["Session-Promo-Image"]?.[0])
+
+
+    returnObj.image=programInfo["Promo Image"]?.formula.string
+
+    returnObj.location=programInfo["Location"]?.formula.string
+
+    returnObj.classcount=programInfo["Class Count"]?.formula.string
+
+    // returnObj.year=programInfo["Year"]?.formula.string
+
+    const prettyDate = prettyDateString(programInfo["Date"]?.date?.start)
+    const getYear = prettyDate.substring(prettyDate.length - 4);
+
+
+    returnObj.year=getYear
+
+    returnObj.dateim=programInfo["Date Import"]?.formula.date
+
+
+    returnObj.public=programInfo["Public"]?.checkbox
+
+    // returnObj.classcount=parseRollup(programInfo["Number-of-Classes"]?.number)
+
+    const hasDateImport = programInfo["Date Import"]?.formula.date
+
+    if (hasDateImport) {
+        returnObj.startDate=prettyDateString(hasDateImport)
+    }
+
+
+    const hasEventImg = parseRollup(programInfo["Event-Promo-Image"])
+
+
+
+        returnObj.eventThumb = hasEventImg
+
+
+
+
+    //
+    // const hasClasses = parseRollup(programInfo["Number-of-Classes"])
+    //
+    // if (hasClasses) {
+    //   returnObj.classcount=parseRollup(programInfo["Number-of-Classes"])[0]?.number
+    // }
+
+
+
+    // returnObj.session=parseRollup(classInfo["Session Name"])[0]?.plain_text
+
+
+
+
 
     //
     // const eventImg = programInfo["Event-Promo-Image"]?.[0]
@@ -947,6 +1000,39 @@ function parseClassData(apiResponse){
 
   return returnObj
 }
+
+
+
+
+
+function parseEvents(programInfo){
+  const eventName = parseRollup(programInfo["Teacher Names"])
+  const eventDate = parseRollup(programInfo["Teacher Bios"])
+  const eventTime = parseRollup(programInfo["Teacher Bios"])
+  const eventLocation = parseRollup(programInfo["Teacher Bios"])
+  const eventImage = parseRollup(programInfo["Event-Promo-Image"])
+  const events = [];
+
+  if (eventName) {
+
+
+  for(let i = 0; i < eventName.length; i++){
+    events.push({
+      name: eventName[i],
+      date: eventDate[i],
+      time: eventTime[i],
+      location: eventLocation[i],
+      image: eventImage[i]
+    })
+  }
+
+  }
+  return events;
+}
+
+
+
+
 
 
 function parseTeachers(classInfo){

@@ -114,7 +114,10 @@
 
       <div class="break"></div>
 
-      <section id="section-projects" class="stacked stacked-4">
+      <section id="2022" class="stacked stacked-4">
+        <div class="grid-1">
+          <h1>2022</h1>
+        </div>
 
         <div class="grid-1 participate">
 
@@ -122,23 +125,29 @@
 
 
           {{#each programs}}
+            {{#eq year "2022"}}
 
 
           <div id="{{this.[Website-Slug]}}"
             class="grid-4 featured {{type}} {{this.[Session Slug]}}" data-location="">
             <div class="featured-text">
-              {{#if eventImage.[0]}}<img src="{{eventImage.[0]}}">{{/if}}
-              
+             {{#if eventThumb}}<img src="{{eventThumb}}">{{/if}}
+
               <div class="top">
-                <h4 class="type type-list-comma"><a href="/projects/{{this.[Website-Slug]}}">{{#each
+                <h4 class="type type-list-comma">
+                  {{#eq type "event"}}<a href="/events/{{this.[Event-Slug]}}">{{/eq}}
+                      {{#eq type "session"}}<a href="/sessions/{{this.[Session Slug]}}">{{/eq}}
+
+                    {{#each
                     this.[Program-Type]}}{{this}}{{/each}}</a></h4>
                 <h2 class="title">{{this.Name}}</h2>
                 <!-- <h6>{{this.[Short Description]}}</h6> -->
               </div>
               <div class="bottom">
                 <h4 class="details">
-                  {{this.[Dates].start}}
-                  {{#if [Dates].end}}— {{[Dates].end}}{{/if}}
+
+                  {{Date.start}}
+                  {{#if [Date].end}}— {{[Date].end}}{{/if}}
 
                 </h4>
                 {{#if Time}}
@@ -146,14 +155,14 @@
                   {{this.[Time]}}
                 </h4>
                 {{/if}}
-                {{#if Session-Location}}
+                {{#if location}}
                 <h4 class="details">
-                  {{this.[Session-Location]}}
+                  {{this.[location]}}
                 </h4>
                 {{/if}}
-                {{#if Number-of-Classes}}
+                {{#if classcount}}
                 <h4 class="details">
-                  {{this.[Number-of-Classes]}} classes
+                  {{this.classcount}} classes
                 </h4>
                 {{/if}}
                 {{#if Application-Status}}
@@ -166,7 +175,7 @@
             </div>
           </div>
 
-
+            {{/eq}}
           {{/each}}
 
         </div>
