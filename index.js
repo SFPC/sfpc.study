@@ -307,36 +307,26 @@ app.get("/links", async (req,res) => {
 })
 
 
-app.get("/donors", async (req,res) => {
-  const memberships = await getDatabaseEntries("f10d523dd9b24d44ae2d9a6c26b4f5ee", [{property:"Name", direction:"ascending"}],
-  // {property:"Public", "checkbox": {"equals": true}}
-
-     {
-       // "filter": {
-           "and": [
-               {
-                   "property": "Public",
-                   "checkbox": {
-                       "equals": true
-                   }
-               }
-               ,
-               {
-                   "property": "Type",
-                   "multi_select": {
-                       "contains": "Community"
-                   }
-               }
-               ,
-               {
-                   "property": "Frequency",
-                   "multi_select": {
-                       "contains": "Recurring"
-                   }
-               }
-           ]
-       }
-   // }
+app.get("/about/donors", async (req,res) => {
+  const memberships = await getDatabaseEntries("8ae8edd523fc45eca1b6e6a16283032c", [{property:"Name", direction:"ascending"}]
+  , 
+  {
+        "and": [
+            {
+                "property": "Public",
+                "checkbox": {
+                    "equals": true
+                }
+            }
+            // ,
+            // {
+            //     "property": "Type",
+            //     "multi_select": {
+            //         "contains": "Individual"
+            //     }
+            // }
+        ]
+    }
 )
   const membershipsDonorData = memberships.map((member) => {
     console.log(member)
@@ -367,6 +357,32 @@ app.get("/donors", async (req,res) => {
     console.log(organization)
     return parseDonors(organization)
   })
+
+
+  const individuals = await getDatabaseEntries("f10d523dd9b24d44ae2d9a6c26b4f5ee", [{property:"Name", direction:"ascending"}],
+     {
+           "and": [
+               {
+                   "property": "Public",
+                   "checkbox": {
+                       "equals": true
+                   }
+               }
+               ,
+               {
+                   "property": "Type",
+                   "multi_select": {
+                       "contains": "Individual"
+                   }
+               }
+           ]
+       }
+)
+  const individualsDonorData = individuals.map((individual) => {
+    console.log(individual)
+    return parseDonors(individual)
+  })
+
 
 
 
@@ -405,7 +421,7 @@ app.get("/donors", async (req,res) => {
 
   console.log(membershipsDonorData)
 
-  res.render("about/donors", {memberDonors: membershipsDonorData, organizationDonors: organizationsDonorData, communityDonors: communityDonorData})
+  res.render("about/donors", {memberDonors: membershipsDonorData, individualDonors: individualsDonorData, organizationDonors: organizationsDonorData, communityDonors: communityDonorData})
 })
 
 
@@ -990,6 +1006,8 @@ function parseDonors(apiResponse){
   returnObj.type=donorInfo["Type"]?.multi_select[0]?.name
   returnObj.detail=donorInfo["Detail"]?.multi_select[0]?.name
   returnObj.publish=donorInfo["Public"]?.checkbox
+
+  returnObj.membershipstatus=donorInfo["Membership Status"]?.multi_select[0]?.name
 
   return returnObj
 }

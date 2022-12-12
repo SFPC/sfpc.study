@@ -86,7 +86,7 @@
 
 
 
-          <section id="2022" class="stacked stacked-1">
+          <section  class="stacked stacked-1">
             <div class="grid-2">
               <h1>Our Donors</h1>
             </div>
@@ -99,16 +99,16 @@
 
           <div class="break"></div>
 
-          <section id="2022" class="stacked stacked-1">
+          <section  class="stacked stacked-1">
             <div class="grid-2">
-              <h6>Organizations</h6>
+              <h6>Foundations & Organizations</h6>
             </div>
           </section>
 
           <div class="break-noline-small"></div>
 
 
-          <section id="" class="stacked stacked-8">
+          <section id="" class="stacked stacked-8 funders-list-stack">
           <div class="grid-1 funders-list participate">
             {{#each organizationDonors}}
             <div id="" class="grid-8 funder">
@@ -120,7 +120,61 @@
           </section>
 
 
-           <section id="2022" class="stacked stacked-1">
+
+          <section  class="stacked stacked-1">
+            <div class="grid-2">
+              <h6>Individual Supporters</h6>
+            </div>
+          </section>
+
+          <div class="break-noline-small"></div>
+
+
+          <section id="" class="stacked stacked-8 funders-list-stack">
+          <div class="grid-1 funders-list participate">
+            {{#each individualDonors}}
+            <div id="" class="grid-8 funder">
+              <p class="medium">{{name}}</p>
+                    </div>
+
+            {{/each}}
+            </div>
+          </section>
+
+
+                    <section  class="stacked stacked-1">
+                      <div class="grid-2">
+                        <h6>Community Memberships</h6>
+
+                          <h4>* = Expired</h4>
+                      </div>
+                    </section>
+
+                    <div class="break-noline-small"></div>
+
+
+                    <section id="" class="stacked stacked-8 funders-list-stack">
+                    <div class="grid-1 funders-list participate">
+                      {{#each memberDonors}}
+                      <div id="" class="grid-8 funder">
+                        <p class="">
+                          {{#eq membershipstatus "Expired"}}<i>{{/eq}}
+
+                          {{name}}
+                          {{#eq membershipstatus "Expired"}}</i>{{/eq}}
+
+                          {{#eq membershipstatus "Expired"}}*{{/eq}}
+
+                        </p>
+                              </div>
+
+                      {{/each}}
+
+                      </div>
+                    </section>
+
+
+           <section  class="stacked stacked-1">
              <div class="grid-2">
                <h6>Community Donors</h6>
              </div>
@@ -129,7 +183,7 @@
            <div class="break-noline-small"></div>
 
 
-           <section id="" class="stacked stacked-8">
+           <section id="" class="stacked stacked-8 funders-list-stack">
            <div class="grid-1 funders-list participate">
              {{#each communityDonors}}
              <div id="" class="grid-8 funder">
@@ -142,25 +196,6 @@
 
 
 
-          <section id="2022" class="stacked stacked-1">
-            <div class="grid-2">
-              <h6>Community Memberships</h6>
-            </div>
-          </section>
-
-          <div class="break-noline-small"></div>
-
-
-          <section id="" class="stacked stacked-8">
-          <div class="grid-1 funders-list participate">
-            {{#each memberDonors}}
-            <div id="" class="grid-8 funder">
-              <p class="">{{name}}</p>
-                    </div>
-
-            {{/each}}
-            </div>
-          </section>
 
 
           <div class="break-endpage"></div>

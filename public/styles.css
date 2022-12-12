@@ -3841,6 +3841,11 @@ h5.shopify-buy__cart-toggle__title {
           grid-template-columns: repeat(4,1.2fr) !important;
         }
 
+
+        .stacked.stacked-8.funders-list-stack, .stacked.stacked-8.funders-list-stack .grid-1 {
+          grid-template-columns: repeat(2,1.2fr) !important;
+        }
+
         .grid-8 {
           display: flex;
           width: 25%;
@@ -3850,6 +3855,11 @@ h5.shopify-buy__cart-toggle__title {
           display: flex;
           width: 100%;
         }
+
+        /* .grid-8.funder {
+          display: flex;
+          width: 50%;
+        } */
 
         .entity .bio.bio-people {
         width:  calc(23vw - var(--body-margin)*2 - var(--program-margin)/2);
