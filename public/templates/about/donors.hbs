@@ -156,19 +156,36 @@
                     <section id="" class="stacked stacked-8 funders-list-stack">
                     <div class="grid-1 funders-list participate">
                       {{#each memberDonors}}
+                      {{#eq membershipstatus "Recurring"}}
                       <div id="" class="grid-8 funder">
-                        <p class="">
-                          {{#eq membershipstatus "Expired"}}<i>{{/eq}}
+                        <p class=""> 
 
                           {{name}}
-                          {{#eq membershipstatus "Expired"}}</i>{{/eq}}
 
-                          {{#eq membershipstatus "Expired"}}*{{/eq}}
 
                         </p>
                               </div>
 
+                              {{/eq}}
                       {{/each}}
+
+
+                      {{#each memberDonors}}
+
+                      {{#eq membershipstatus "Expired"}}
+                      <div id="" class="grid-8 funder">
+                        <p class=""><i>
+
+                          {{name}}
+                           </i> *
+
+                        </p>
+                              </div>
+
+                        {{/eq}}
+                      {{/each}}
+
+
 
                       </div>
                     </section>
