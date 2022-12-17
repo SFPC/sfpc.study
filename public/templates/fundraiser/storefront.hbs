@@ -287,6 +287,8 @@
           {{#eq [selltype] "Donation"}}
 
           {{else}}
+
+
           <div id="{{this.[Website-Slug]}}"
             class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
             ">
@@ -334,6 +336,7 @@
 
             </div>
           </div>
+
           {{/eq}}
 
           {{/if}}
@@ -344,6 +347,10 @@
           {{#each products}}
 
           {{#if publish}}
+
+
+          {{#if availableForSale}}
+
           <div id="{{this.[Website-Slug]}}"
             class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
             ">
@@ -383,8 +390,67 @@
 
             </div>
           </div>
+
+          {{/if}}
           {{/if}}
           {{/each}}
+
+
+
+          {{#each products}}
+
+          {{#if publish}}
+
+
+          {{#if availableForSale}}
+
+          {{else}}
+
+          <div id="{{this.[Website-Slug]}}"
+            class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
+            ">
+            <div class="featured-text">
+              <img src="{{this.[Image-URL]}}">
+              <div class="top">
+                <h4 class="type type-list-comma"><a href="/fundraiser/{{this.[Website-Slug]}}">{{#each
+                    this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
+                <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
+                {{#if [Contributor]}}
+                  <h6>donated by {{Contributor}} </h6>
+                {{/if}}
+                  <BR>
+                {{#if availableForSale}}
+                  {{#if totalInventory }}
+                  {{#lte availableInventory 10}}
+                  <h4><span>Only {{availableInventory}} left!</span></h4>
+                  <BR>
+                  {{/lte}}
+                  {{/if}}
+
+                  <h3><span id=”cost”>${{cost}}</span></h3>
+
+
+
+                {{else}}
+
+                {{#eq [selltype] "Raffle Only"}}
+                <h3><span id=”cost”>Available via Raffle</span></h3>
+                {{else}}
+                  <h3><span id=”cost”>Out of Stock</span></h3>
+                {{/eq}}
+
+
+                {{/if}}
+              </div>
+
+            </div>
+          </div>
+
+          {{/if}}
+          {{/if}}
+          {{/each}}
+
+
 
         </div>
       </section>
