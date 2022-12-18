@@ -309,7 +309,7 @@ app.get("/links", async (req,res) => {
 
 app.get("/about/donors", async (req,res) => {
   const memberships = await getDatabaseEntries("8ae8edd523fc45eca1b6e6a16283032c", [{property:"Name", direction:"ascending"}]
-  , 
+  ,
   {
         "and": [
             {
@@ -1104,7 +1104,7 @@ function parseClassData(apiResponse){
   returnObj.sessionEnded = today >= new Date(returnObj.endDate)
   returnObj.live = today >= new Date(returnObj.launchDate)
   returnObj.applicationLink=classInfo["Application URL"]?.url
-  returnObj.description=classInfo["Short Description"]?.rich_text[0]?.plain_text
+  returnObj.description=classInfo["Description"]?.rich_text[0]?.plain_text
   returnObj.endDescription=classInfo["Session End Description"]?.rich_text[0]?.plain_text
   returnObj.active=classInfo["Active"]?.formula.boolean
   returnObj.url=classInfo["Webpage URL"]?.url
