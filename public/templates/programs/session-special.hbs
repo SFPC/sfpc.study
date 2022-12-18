@@ -119,24 +119,7 @@
 
       <section class="intro {{Website-Slug}}" id="introduction">
         <p tabindex="0" class="large">
-          <span id="introduction-text">
-
-
-            {{#if sessionEnded}}
-
-              {{#if "Session End Description"}}
-              {{{"Session End Description"}}}
-              {{else}}
-              {{{"Description"}}}
-              {{/if}}
-
-
-            {{else}}
-            {{{"Description"}}}
-            {{/if}}
-
-          </span>
-          <BR><BR>
+          <span id="introduction-text" style="white-space:pre-line">{{#if sessionEnded}}{{#if "Session End Description"}}{{"Session End Description"}}{{else}}{{Description}}{{/if}}{{else}}{{Description}}{{/if}}</span><BR><BR>
           <span id="session-name">{{"Session Name"}}</span> {{#if sessionEnded}}was{{else}}is{{/if}}
           organized by
           {{#if organizerTeachers}}
