@@ -344,6 +344,10 @@
           {{/each}}
 
 
+
+
+
+
           {{#each products}}
 
           {{#if publish}}
@@ -390,6 +394,41 @@
 
             </div>
           </div>
+
+
+
+
+
+          {{else}}
+
+
+
+                    {{#eq [selltype] "Raffle Only"}}
+
+                    <div id="{{this.[Website-Slug]}}"
+                      class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
+                      ">
+                      <div class="featured-text">
+                        <img src="{{this.[Image-URL]}}">
+                        <div class="top">
+                          <h4 class="type type-list-comma"><a href="/fundraiser/{{this.[Website-Slug]}}">{{#each
+                              this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
+                          <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
+                          {{#if [Contributor]}}
+                            <h6>donated by {{Contributor}} </h6>
+                          {{/if}}
+                            <BR>
+
+                          <h3><span id=”cost”>Available via Raffle</span></h3>
+
+
+                        </div>
+
+                      </div>
+                    </div>
+                    {{/eq}}
+
+
 
           {{/if}}
           {{/if}}
@@ -404,48 +443,57 @@
 
           {{#if availableForSale}}
 
+
+
           {{else}}
 
-          <div id="{{this.[Website-Slug]}}"
-            class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
-            ">
-            <div class="featured-text">
-              <img src="{{this.[Image-URL]}}">
-              <div class="top">
-                <h4 class="type type-list-comma"><a href="/fundraiser/{{this.[Website-Slug]}}">{{#each
-                    this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
-                <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
-                {{#if [Contributor]}}
-                  <h6>donated by {{Contributor}} </h6>
-                {{/if}}
-                  <BR>
-                {{#if availableForSale}}
-                  {{#if totalInventory }}
-                  {{#lte availableInventory 10}}
-                  <h4><span>Only {{availableInventory}} left!</span></h4>
-                  <BR>
-                  {{/lte}}
-                  {{/if}}
-
-                  <h3><span id=”cost”>${{cost}}</span></h3>
+              {{#eq [selltype] "Raffle Only"}}
 
 
+               {{else}}
 
-                {{else}}
+                  <div id="{{this.[Website-Slug]}}"
+                    class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
+                    ">
+                    <div class="featured-text">
+                      <img src="{{this.[Image-URL]}}">
+                      <div class="top">
+                        <h4 class="type type-list-comma"><a href="/fundraiser/{{this.[Website-Slug]}}">{{#each
+                            this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
+                        <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
+                        {{#if [Contributor]}}
+                          <h6>donated by {{Contributor}} </h6>
+                        {{/if}}
+                          <BR>
+                        {{#if availableForSale}}
+                          {{#if totalInventory }}
+                          {{#lte availableInventory 10}}
+                          <h4><span>Only {{availableInventory}} left!</span></h4>
+                          <BR>
+                          {{/lte}}
+                          {{/if}}
 
-                {{#eq [selltype] "Raffle Only"}}
-                <h3><span id=”cost”>Available via Raffle</span></h3>
-                {{else}}
-                  <h3><span id=”cost”>Out of Stock</span></h3>
-                {{/eq}}
+                          <h3><span id=”cost”>${{cost}}</span></h3>
 
 
-                {{/if}}
-              </div>
 
-            </div>
-          </div>
+                        {{else}}
 
+                        {{#eq [selltype] "Raffle Only"}}
+                        <h3><span id=”cost”>Available via Raffle</span></h3>
+                        {{else}}
+                          <h3><span id=”cost”>Out of Stock</span></h3>
+                        {{/eq}}
+
+
+                        {{/if}}
+                      </div>
+
+                    </div>
+                  </div>
+
+                  {{/eq}}
+                  
           {{/if}}
           {{/if}}
           {{/each}}

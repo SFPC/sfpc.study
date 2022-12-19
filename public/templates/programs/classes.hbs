@@ -184,8 +184,18 @@
                               <div class="class-list-teachers">
 
                                 <h4>
-                                  {{#each [Teacher Names]}}{{this}}{{#unless
-                                    @last}}, {{/unless}}{{/each}}
+
+
+                                    {{#if [Session Organizers]}}
+                                    {{#each [Session Organizers]}}{{this}}{{#unless
+                                      @last}}, {{/unless}}{{/each}}
+
+                                      {{else}}
+
+                                      {{#each [Teacher Names]}}{{this}}{{#unless
+                                        @last}}, {{/unless}}{{/each}}
+                                        
+                                      {{/if}}
 
                                     {{#if [Guest Teacher Names]}} and guests{{/if}}
 

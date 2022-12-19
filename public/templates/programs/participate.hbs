@@ -289,7 +289,7 @@
 
                             <div id="{{this.[Website-Slug]}}"
                               class="grid-4 featured {{type}} {{#eq type "session"}}{{this.[Session Slug]}}{{/eq}} {{#eq type "event"}}sfpc{{/eq}}" data-location="">
-                              <div class="featured-text"> 
+                              <div class="featured-text">
                                <img src="{{image}}">
 
                                 <div class="top">
@@ -330,6 +330,14 @@
                                    {{this.[Application-Status]}}
                                   </h4>
                                     {{/if}}
+
+                                    {{#if [Event-Session-Slug]}}
+                                  <BR>
+                                  <h4 class="noline">
+
+                                  <a href="/sessions/{{[Event-Session-Slug]}}"> <span class="blog-tag"><span id="tag" class="{{[Event-Session-Slug]}}">{{[Event-Session]}}</span></span></a>
+                                  </h4>
+                                  {{/if}}
 
                                    </div>
                               </div>

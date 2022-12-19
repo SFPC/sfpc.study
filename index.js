@@ -206,13 +206,24 @@ app.get("/events", async (req,res) => {
 app.get("/events/:slug", async (req,res) => {
   //filter by slug here
   console.log(req.params.slug)
-  const response = await getDatabaseEntry("10c62665c6ca4383bbdc12788c45df14", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
-  console.log(response)
-  if(response){
-    const projectData = parseNotionPage(response)
-    console.log(projectData)
-    res.render("programs/eventPage", projectData)
-  }
+  const eventData = await getDatabaseEntry("10c62665c6ca4383bbdc12788c45df14", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  if(!eventData) return
+
+  // console.log(response)
+
+  const response = await prepareEventData(eventData, req.params.slug)
+
+  res.render("programs/eventPage", response)
+
+  //
+  // if(eventData){
+  //
+  //   res.render("programs/eventPage", response)
+  //
+  // }
+  //
+
+
 })
 
 app.get("/", async (req,res) => {
@@ -683,6 +694,38 @@ app.listen(PORT, console.log(`server started on ${PORT}`))
 //
 // Rendering functions
 //
+
+
+
+
+
+
+
+async function prepareEventData(eventData, eventSlug){
+
+
+  const fullPageContent = await getBlocks(eventData.id);
+  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
+  const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
+  let response = parseEventData(eventData)
+  response.pageContent =  parsePageContentIntoKeyedObject(webContent);
+
+  return response
+}
+
+
+
+
+function parseEventData(apiResponse){
+  const eventInfo = apiResponse.properties;
+  let returnObj = parseNotionPage(apiResponse);
+
+  return returnObj
+}
+
+
+
+
 async function prepareClassData(classData, classSlug){
   const fullPageContent = await getBlocks(classData.id);
   const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
@@ -1114,7 +1157,6 @@ function parseClassData(apiResponse){
 
   return returnObj
 }
-
 
 
 
