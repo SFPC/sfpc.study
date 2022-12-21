@@ -597,7 +597,7 @@ app.get("/projects/:slug", async (req,res) => {
   const response = await getDatabaseEntry("713f24806a524c5e892971e4fbf5c9dd", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
   console.log(response)
   if(response){
-    const projectData = parseNotionPage(response)
+    const projectData = parseProjectData(response)
     console.log(projectData)
     res.render("projects/projectPage", projectData)
   }
@@ -722,6 +722,21 @@ function parseEventData(apiResponse){
 
   return returnObj
 }
+
+
+
+function parseProjectData(apiResponse){
+  const projectInfo = apiResponse.properties;
+  let returnObj = parseNotionPage(apiResponse);
+
+
+  returnObj.sessionslug=parseRollup(projectInfo["Session-Slug"])
+  returnObj.classslug=parseRollup(projectInfo["Class-Slug"])
+  returnObj.classtype=parseRollup(projectInfo["Class-Type"])
+
+  return returnObj
+}
+
 
 
 

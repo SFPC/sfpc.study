@@ -151,7 +151,10 @@
                                                 <div class="labels-info" id="program-info">
 
                                                   {{#if Website-Class}}
-                                                  {{#each Website-Class}}{{this}}{{#unless @last}}, {{/unless}} {{/each}} {{/if}}
+                                                  <a href="/sessions/{{sessionslug}}{{#eq classtype "Sesssion"}}{{else}}/{{classslug}}{{/eq}}">{{Website-Class}}</a>
+
+                                                  <!-- {{#each Website-Class}}<a href="/sessions/{{[Session-Slug]}}">{{this}}</a>{{#unless @last}}, {{/unless}} {{/each}}  -->
+                                                  {{/if}}
 
                                                   <!-- <span class="Session {{Class-Type}}">
                                                   {{#if Website-Class}}— {{/if}}
