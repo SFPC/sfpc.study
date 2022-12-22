@@ -1445,6 +1445,11 @@ function parseBlockIntoKeyedObject(block, contentObj) {
       // For a heading
       contentObj[block['heading_2'].text[0].plain_text] = "";
       break;
+    case 'heading_3':
+      // For a heading
+      // contentObj[block['heading_3'].text[0].plain_text] = "";
+      let h3Text = formatRichText(block['heading_3'].text)
+      contentObj[lastEntry] += `<h6>${h3Text}</h6>`
     case 'image':
       // For an image
       if(block['image']?.external?.url)

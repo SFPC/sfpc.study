@@ -688,6 +688,21 @@ h6  {
   ms-transition: all .2s ease-in-out;
   o-transition: all .2s ease-in-out;
 }
+
+section .grid-2 h6 {
+margin-bottom: calc(var(--text-margin)/3);
+padding-top: calc(var(--text-margin)/3);
+}
+
+section .grid-2 h6:first-of-type {
+  padding-top: 0px !important;
+}
+
+section#section-showcase   h6 {
+  padding-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
  .test-icon {
    font-family: var(--main-special-font) !important;
    font-size: var(--medium-text);
