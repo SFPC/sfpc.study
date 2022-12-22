@@ -698,7 +698,7 @@ section .grid-2 h6:first-of-type {
   padding-top: 0px !important;
 }
 
-section#section-showcase   h6 {
+section#section-showcase   h6, .fundraiser-block h6 {
   padding-top: 0px !important;
   margin-bottom: 0px !important;
 }
