@@ -422,10 +422,29 @@ $(document).ready(function() {
         var goal = 60000;
 
         // estimated amount raised
-        var raised = 35431;
+        var raised = 35640;
 
         // end date of fundraiser
+        var today = new Date();
+        var start = new Date('December 5, 2022');
         var end = new Date('January 3, 2023');
+
+
+
+        function DaysBetween(StartDate, EndDate) {
+          // The number of milliseconds in all UTC days (no DST)
+          const oneDay = 1000 * 60 * 60 * 24;
+
+          // A day in UTC always lasts 24 hours (unlike in other time formats)
+          const start = Date.UTC(EndDate.getFullYear(), EndDate.getMonth(), EndDate.getDate());
+          const end = Date.UTC(StartDate.getFullYear(), StartDate.getMonth(), StartDate.getDate());
+
+          // so it's safe to divide by 24 hours
+          return (start - end) / oneDay;
+        }
+
+        var daysLeft = DaysBetween(today, end);
+        $('.fr-left h6').html(daysLeft);
 
 
         // //goal of the fundraiser, currently $60,000
@@ -445,7 +464,7 @@ $(document).ready(function() {
         }
         var one_day = 1000*60*60*24;
         var countdown = (Math.ceil((end.getTime()-today.getTime())/(one_day)));
-        $('.fr-left h6').html(countdown);
+        // $('.fr-left h6').html(countdown);
 
         var percentage = (raised / goal * 100).toFixed(0);
 
