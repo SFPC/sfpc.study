@@ -439,7 +439,7 @@ $(document).ready(function() {
 
 
         today = new Date();
-        if (today.getMonth()==11 && today.getDate()>25)
+        if (today.getMonth()==11 && today.getDate()>26)
         {
         end.setFullYear(end.getFullYear()+1);
         }
