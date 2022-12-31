@@ -422,7 +422,7 @@ $(document).ready(function() {
         var goal = 60000;
 
         // estimated amount raised
-        var raised = 40196;
+        var raised = 40915;
 
         // end date of fundraiser
         var today = new Date();
