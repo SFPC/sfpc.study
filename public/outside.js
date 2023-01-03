@@ -527,7 +527,9 @@ $(document).ready(function() {
         if (percentage < 100) {
            $('.fundraiser-progress h6').html(percentage + '%');
         } else {
-          $('.fundraiser-progress h6').html(totaldollars);
+          // $('.fundraiser-progress h6').html(totaldollars);
+          $('.fundraiser-progress h6.left').html(percentage + '% ');
+          $('.fundraiser-progress h6.right').html(totaldollars + " <span class='h4'>raised</span>");
         }
         // $('.fundraiser-progress h6').html(percentage + '%');
 

@@ -72,3 +72,13 @@
   /* content: var(--raised-text); */
   text-align: right;
 }
+
+.fundraiser-progress h6.left {
+  float: left;
+  text-align: left;
+}
+
+.fundraiser-progress h6.right {
+  float: right;
+  text-align: right;
+}
