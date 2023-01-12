@@ -10,8 +10,8 @@
 
     --spring-23-background: #e0c2b8;
     --spring-23-text: #000;
-    --spring-23-text-on-bg: #000;
-    --spring-23-link:  #000;
+    --spring-23-text-on-bg: #e0c2b8;
+    --spring-23-link:  #fb5f8e;
      --spring-23-special-text:  #000;
 
 
@@ -288,6 +288,18 @@ select#allSections {
 }
 
 
+    .spring-23.featured .title,
+    .spring-23 #session-name, #tag.spring-23 {
+      -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--spring-23-text);
+    color: var(--spring-23-background) ;
+    }
+
+    #tag.spring-23 {
+      -webkit-text-stroke-width: 0px;
+    color: var(--spring-23-text) ;
+    }
+
       .spring-23 p,
       .spring-23 p a,
       .spring-23 a,
@@ -394,7 +406,7 @@ select#allSections {
       .spring-23 .text-on-bg,
       .spring-23 .breadcrumb a:hover {
           color: var(--spring-23-text-on-bg) !important;
-          text-shadow: 2px 2px 0px var(--spring-23-background);
+          text-shadow: 2px 2px 0px var(--spring-23-link);
       }
 
 
@@ -419,6 +431,12 @@ select#allSections {
       .spring-23 #class section,
       #class .intro.spring-23 {
         padding: var(--body-margin) calc(var(--body-margin)/2);
+        border: 2px solid  var(--spring-23-text);
+      }
+
+      .spring-23 section.stacked.stacked-4,
+      .spring-23 section.section-testimonials {
+        border: 0px !important
       }
 
       .spring-23 #class section.stacked,

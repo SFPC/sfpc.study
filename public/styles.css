@@ -216,6 +216,23 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
           font-weight: bold !important;
         } */
 
+        .spring-23.featured .title,
+        .spring-23 #session-name, #tag.spring-23 {
+          font-family: var(--spring-23-title-font) !important;
+          text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-transform: uppercase;
+    font-weight: bold !important;
+        }
+  #tag.spring-23 {
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: var(--spring-23-text);
+    color: var(--spring-23-text);
+}
+
+        .spring-23.session .title.class{
+          font-size: calc(var(--large-text) * .8) !important;
+        }
+
         .winter-23.featured .title,
         .winter-23 #session-name, #tag.winter-23 {
           font-family: var(--winter-23-title-font) !important;
