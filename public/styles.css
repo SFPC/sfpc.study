@@ -22,6 +22,10 @@
     --main-large-text: calc(24px + 2vw);
     --main-large-line-height: 1;
 
+    --spring-23-title-font: 'Times New Roman', serif;
+    --spring-23-header-font: 'Times New Roman', serif;
+    --spring-23-body-font: 'Times New Roman', serif;
+    --spring-23-special-font: 'Times New Roman', serif;
 
     --sex-ed-title-font: 'Avara', sans-serif;
     --sex-ed-header-font: 'Avara', sans-serif;

@@ -7,6 +7,14 @@
     --text-link: var(--winter-23-special-text) ;
     --box-shadow: rgba(0,0,0,.3);
 
+
+    --spring-23-background: #e0c2b8;
+    --spring-23-text: #000;
+    --spring-23-text-on-bg: #000;
+    --spring-23-link:  #000;
+     --spring-23-special-text:  #000;
+
+
     --fundraiser-winter-23-background-dark: #002061;
     --fundraiser-winter-23-background: #00189a;
    --fundraiser-winter-23-text: #fff;
@@ -256,10 +264,193 @@ select#allSections {
 
 
 
-
-
-
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+
+
+
+
+
+
+
+
+/* /////////// start spring 23  ///////////////////////////////*/
+
+.spring-23,
+.spring-23.featured.session,
+.shell .spring-23,
+.spring-23.featured,
+#tag.spring-23  {
+  background-color: var(--spring-23-background)  !important;
+  color: var(--spring-23-text) !important;
+  box-sizing: border-box !important;
+  /* border-color: var(--spring-23-text) !important; */
+  text-shadow: none !important;
+}
+
+
+      .spring-23 p,
+      .spring-23 p a,
+      .spring-23 a,
+      .spring-23.featured h4,
+      .spring-23 h4 a,
+      .spring-23 .intro a,
+      .spring-23 p.large a,
+      .spring-23 p a:hover,
+      .spring-23.session.featured,
+      .spring-23.session.featured a,
+      .spring-23.featured h4.type a,
+      .sfpc .spring-23 a
+      {
+        color: var(--spring-23-text) !important;
+      }
+
+      .spring-23 h4 a:hover,
+      .spring-23 .intro a,
+      .spring-23 p.large a:hover,
+      .spring-23.featured:hover h6,
+      .spring-23.featured:hover .title,
+      .spring-23 .details a:hover,
+      .spring-23.featured .title:hover,
+      .spring-23 p a:hover,
+      .spring-23 h4 a:hover,
+      .spring-23 section .grid-2 ul li::before,
+      .spring-23 .chars,
+      .spring-23 p a:hover,
+      .spring-23 a:hover,
+      .spring-23 h4 a:hover,
+      .spring-23 .intro a:hover,
+      .spring-23 .details a:hover,
+      .spring-23 .entity:hover .accordion dt h3:after,
+      .spring-23 .accordion dt h3:after,
+      .spring-23 .expanded{
+          color: var(--spring-23-link) !important;
+      }
+
+      .spring-23 #cost,
+      .spring-23 .fixed-apply,
+      .spring-23 .fixed-support {
+          color: var(--spring-23-background) !important;
+          background: var(--spring-23-link) !important;
+      }
+
+      .spring-23 span#cost {
+        background: var(--spring-23-link) !important;
+      }
+
+
+      .spring-23 .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .spring-23 .block-text {
+        background-color: var(--spring-23-background);
+        color: var(--spring-23-link);
+      }
+
+
+
+      .spring-23.grid-inner, .spring-23 .grid-inner {
+        border: 2px dotted var(--spring-23-text) !important;
+        color: var(--spring-23-link) !important;
+      }
+
+      .spring-23 #class .entity,
+      .spring-23.website-grid .grid-2 {
+        border-color: var(--spring-23-text);
+      }
+
+      .spring-23 #class .entity:hover {
+        border-color: var(--spring-23-link);
+      }
+
+      .spring-23 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--spring-23-background) !important;
+      }
+
+
+      .spring-23 select#allSections:hover,
+      .spring-23 .loader-content p::after,
+      .spring-23 span#cost
+      {
+        background: var(--spring-23-link) !important;
+        color: var(--spring-23-background) !important;
+      }
+
+      .spring-23 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .spring-23 .breadcrumb.fixed,
+      .spring-23 .breadcrumb.fixed::before,
+      .spring-23 .breadcrumb.fixed a,
+      .spring-23 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .spring-23 .breadcrumb,
+      .spring-23 .breadcrumb a,
+      .spring-23 .text-on-bg,
+      .spring-23 .breadcrumb a:hover {
+          color: var(--spring-23-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--spring-23-background);
+      }
+
+
+      .spring-23 section#section-outro,
+      #class .intro.spring-23,
+      .shell.spring-23 .class-details,
+      .spring-23 #class section,
+      .spring-23 #class .entity,
+      .spring-23 .accordion dd.active,
+      .spring-23 section ul,
+      .spring-23 .website-grid
+       {
+        background-color: var(--spring-23-background);
+        color:  var(--spring-23-text) !important;
+        border-radius: var(--border-rad);
+      }
+
+      .spring-23  section .intro
+      {border: 2px solid #000}
+
+
+      .spring-23 #class section,
+      #class .intro.spring-23 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .spring-23 #class section.stacked,
+      .spring-23 .section-testimonials,
+      .spring-23 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important
+      }
+
+      .spring-23 .break {
+        border: 0px !important;
+        margin-bottom: 0px !important;
+        border-color: var(--spring-23-text);
+      }
+
+      .shell.spring-23 {
+        background-image: url('images/sessions/spring-23/bg.jpg');
+        background-size: 100% calc(100% );
+        background-repeat: repeat;
+      }
+
+
+/* /////////// end spring 23  ///////////////////////////////*/
+
+
+
+
+
+
+
+
 
 
 
