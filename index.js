@@ -911,7 +911,8 @@ function parseSessionData(apiResponse){
   returnObj.notifyDate=prettyDateString(sessionInfo["Notification Date"]?.date?.start)
   returnObj.launchDate=prettyDateString(sessionInfo["Launch Date"]?.date?.start)
   returnObj.applicationsOpen = today <= new Date(returnObj.applicationEndDate)
-  returnObj.registrationDone = today >= new Date(returnObj.notifyDate)
+  // returnObj.registrationDone = today >= new Date(returnObj.notifyDate)
+  returnObj.registrationDone = today >= new Date(returnObj.endDate)
   returnObj.sessionEnded = today >= new Date(returnObj.endDate)
   returnObj.live = today >= new Date(returnObj.launchDate)
   returnObj.classCount=sessionInfo["Number-Classes"].number
