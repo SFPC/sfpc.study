@@ -746,14 +746,16 @@ async function prepareClassData(classData, classSlug){
   const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
   const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
   let response = parseClassData(classData)
+  console.log(response["Teacher Names"])
   response.pageContent =  parsePageContentIntoKeyedObject(webContent);
+  let peopleQuery = []      
+  response["Teacher Names"]?.forEach((personName)=> peopleQuery.push({property:"Name", "title": { "contains": personName } }))
+  response["Guest Teacher Names"]?.forEach((personName)=> peopleQuery.push({property:"Name", "title": { "contains": personName } }))
+  response["Session Organizers"]?.forEach((personName)=> peopleQuery.push({property:"Name", "title": { "contains": personName } }))
   const people = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
-    "or":[
-      {property:"Classes-Teacher", "rollup": { "any": { "rich_text": { "equals": classSlug } }}},
-      {property:"Classes-Guest", "rollup": { "any": { "rich_text": { "equals": classSlug } }}},
-      {property:"Classes-Organizer", "rollup": { "any": { "rich_text": { "equals": classSlug } }}}
-    ]
+      "or": peopleQuery,
   })
+  console.log(people[0].properties.Name)
   let organizers = []
   let teachers = []
   let guests = []
