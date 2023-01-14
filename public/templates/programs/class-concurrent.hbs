@@ -161,8 +161,15 @@
           <div class="details">
             <div class="labels">Date </div>
             <div class="labels-info">
-              <span id="date">{{startDate}} to {{endDate}}</span>
-              {{#if numberOfClasses}} (<span id="number-classes">{{numberOfClasses}}</span> classes){{/if}}
+              <span id="date">
+                {{#if startDate2}}
+                Section 1: {{startDate}} to {{endDate}}<BR>
+                Section 2: {{startDate2}} to {{endDate2}}
+                {{else}}
+                {{startDate}} to {{endDate}}
+                {{/if}}
+              </span>
+              {{#if startDate2}}<BR>{{/if}}{{#if numberOfClasses}} (<span id="number-classes">{{numberOfClasses}}</span> classes){{/if}}
             </div>
           </div>
           <div class="details">

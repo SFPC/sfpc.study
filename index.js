@@ -748,7 +748,7 @@ async function prepareClassData(classData, classSlug){
   let response = parseClassData(classData)
   console.log(response["Teacher Names"])
   response.pageContent =  parsePageContentIntoKeyedObject(webContent);
-  let peopleQuery = []      
+  let peopleQuery = []
   response["Teacher Names"]?.forEach((personName)=> peopleQuery.push({property:"Name", "title": { "contains": personName } }))
   response["Guest Teacher Names"]?.forEach((personName)=> peopleQuery.push({property:"Name", "title": { "contains": personName } }))
   response["Session Organizers"]?.forEach((personName)=> peopleQuery.push({property:"Name", "title": { "contains": personName } }))
@@ -1147,6 +1147,8 @@ function parseClassData(apiResponse){
   returnObj.sessionImages=parseNotionData(classInfo["Session Images"])
   returnObj.startDate=prettyDateString(classInfo["Date"]?.date?.start)
   returnObj.endDate=prettyDateString(classInfo["Date"]?.date?.end)
+  returnObj.startDate2=prettyDateString(classInfo["Date 2"]?.date?.start)
+  returnObj.endDate2=prettyDateString(classInfo["Date 2"]?.date?.end)
   returnObj.numberOfClasses=classInfo["Number of Classes"].number
   returnObj.time=classInfo["Time"].rich_text[0]?.plain_text
   returnObj.appQuestion=classInfo["Application Question"].rich_text[0]?.plain_text
