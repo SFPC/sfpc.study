@@ -1298,12 +1298,16 @@ section {
 
 
 
+
+
 .selectors {
   z-index: 9999999999999;
   position: fixed;
   left: calc(4px + var(--body-margin)/2);
   bottom: calc(4px + var(--footer-height));
 }
+
+
 
 select#allSections {
   border-radius: calc(var(--border-rad));
@@ -1402,6 +1406,14 @@ select#allSections:focus {
 }
       .currently {
         min-height: 20vh;
+      }
+
+      .rows-2 {
+        display: flex;
+        gap: var(--body-margin);
+        flex-direction: column;
+        flex-wrap: nowrap;
+
       }
 
 

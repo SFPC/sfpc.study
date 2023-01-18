@@ -228,13 +228,14 @@ app.get("/events/:slug", async (req,res) => {
 
 app.get("/", async (req,res) => {
   const response = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
-  const testimonialData = response.map((testimonial) => {
-    console.log(testimonial)
-    return parseTestimonials(testimonial)
-  })
-  console.log(testimonialData)
-  // let pageContent = getPageContent()
-  res.render("fundraiser/winter23-homepage", {testimonials: testimonialData})
+  // const testimonialData = response.map((testimonial) => {
+  //   console.log(testimonial)
+  //   return parseTestimonials(testimonial)
+  // })
+  // console.log(testimonialData)
+  // // let pageContent = getPageContent()
+  // res.render("index", {testimonials: testimonialData})
+  res.render("index")
 })
 
 
