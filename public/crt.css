@@ -107,9 +107,9 @@ background-color: var(--text-link) !important;
 
 .spring-23.featured .title,
 .spring-23 #session-name, #tag.spring-23 {
--webkit-text-stroke-color: var(--text-color);
-color: var(--background) ;
-text-shadow: -1px -1px 0 var(--text-color), 1px -1px 0 var(--text-color), -1px 1px 0 var(--text-color), 1px 1px 0 var(--text-color);
+/* -webkit-text-stroke-color: var(--text-color);
+color: var(--background) ; */
+/* text-shadow: -1px -1px 0 var(--text-color), 1px -1px 0 var(--text-color), -1px 1px 0 var(--text-color), 1px 1px 0 var(--text-color); */
 }
 
 .fallwinter-2122 {
