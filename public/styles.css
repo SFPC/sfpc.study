@@ -797,7 +797,7 @@ img {
   /* border: 2px dotted var(--text-color); */
   border-width: 2px;
   border-radius: var(--border-rad);
-  height: calc(100vh - calc(var(--body-margin)/2) - var(--footer-height));
+  height: calc(100% - calc(var(--body-margin)/2) - var(--footer-height));
   box-sizing: border-box;
   /* display: flex; */
 }
@@ -815,8 +815,8 @@ img {
     position: relative;
     border: 2px solid var(--text-color);
     border-width: 2px;
-    height: calc(100vh - calc(var(--body-margin)/2)  - var(--footer-height) - 4px);
-    line-height: calc(100vh - calc(var(--body-margin)*2));
+    height: calc(100% - calc(var(--body-margin)/2)  - var(--footer-height) - 4px);
+    line-height: calc(100% - calc(var(--body-margin)*2));
     display: block;
     border-radius: var(--border-rad);
     text-align: center;
@@ -3046,7 +3046,7 @@ align-items: center;
      padding-inline-start: 0px !important;
      margin-top: var(--body-margin);
      margin-bottom: 0px !important;
-       max-height: 100vh;
+       max-height: 100%;
        overflow: scroll;
        padding-right: 0px !important;
        font-size: var(--small-text);
