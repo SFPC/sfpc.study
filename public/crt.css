@@ -113,8 +113,9 @@ color: var(--background) ; */
 }
 
 .spring-23 .blog-tag #tag.spring-23 {
-  border-color: var(--background) !important;
-  color: var(--background) !important;
+  /* border-color: var(--background) !important;
+  color: var(--background) !important; */
+  background: var(--background) !important; 
 }
 
 .fallwinter-2122 {
