@@ -112,6 +112,11 @@ color: var(--background) ; */
 /* text-shadow: -1px -1px 0 var(--text-color), 1px -1px 0 var(--text-color), -1px 1px 0 var(--text-color), 1px 1px 0 var(--text-color); */
 }
 
+.spring-23 .blog-tag #tag.spring-23 {
+  border-color: var(--background) !important;
+  color: var(--background) !important;
+}
+
 .fallwinter-2122 {
   background-image: url('images/sessions/fallwinter-2122/bg.png');
   background-position: bottom;
