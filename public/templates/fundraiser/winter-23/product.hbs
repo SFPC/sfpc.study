@@ -46,17 +46,14 @@
     <script src="/jquery-3.6.0.min.js"></script>
     <script src="/js/initShopify.js"></script>
     <script>
-      initShopifyProduct("{{[Shopify ID]}}", "add-to-cart-button-wrapper", "Add to cart")
+      // initShopifyProduct("{{[Shopify ID]}}", "add-to-cart-button-wrapper", "Add to cart")
+      //
+      // initShopifyProduct("7864325472407", "addon-sticker-button-wrapper", "Add to cart")
+      //
+      // initShopifyProduct("7864322392215", "addon-sticker-2-button-wrapper", "Add to cart")
+      //
+      // initShopifyProduct("7864352080023", "addon-tote-button-wrapper", "Add to cart")
 
-      initShopifyProduct("7864325472407", "addon-sticker-button-wrapper", "Add to cart")
-
-      initShopifyProduct("7864322392215", "addon-sticker-2-button-wrapper", "Add to cart")
-
-      initShopifyProduct("7864352080023", "addon-tote-button-wrapper", "Add to cart")
-
-      // initShopifyProduct("7865691406487", "addon-raffle", "Buy raffle ticket")
-
-      // initShopifyProduct("7865691406487", "raffle", "Buy raffle ticket")
 
     </script>
 
@@ -254,7 +251,7 @@
               </div> -->
 
               {{#if cost}}
-              <div class="details">
+              <!-- <div class="details">
                 <div class="labels">
                   {{#eq [selltype] "Raffle Only"}}Value{{else}}Cost{{/eq}}
                 </div>
@@ -267,11 +264,11 @@
                     <span id="cost">${{cost}}</span> {{#eq [goodstype] "Physical"}}+ shipping & tax <span class="small block">Please note: We can only ship within the United States.</span> {{else}} + tax{{/eq}}</h3>
                     {{/eq}}
                 </div>
-              </div>
+              </div> -->
               {{/if}}
 
               {{#eq [selltype] "Raffle Only"}}
-              <div class="details">
+              <!-- <div class="details">
                 <div class="labels">
                  raffle
                 </div>
@@ -279,7 +276,7 @@
                   <h3>
                     <span id="cost">$25 per ticket</span> + tax </h3>
                 </div>
-              </div>
+              </div> -->
               {{/eq}}
 
               {{#eq [selltype] "Raffle Only"}}
@@ -445,11 +442,11 @@
             {{else}}
 
 
-                  <h6>Other ways to support...</h6>
+                  <!-- <h6>Other ways to support...</h6> -->
 
                   {{#eq [type] "Donation"}}
                   {{else}}
-                  <div class="addon-item {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
+                  <!-- <div class="addon-item {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
                     <div class="item">
                       <img src="https://sfpc.study/images/market/memberships.gif">
                       <p>
@@ -459,7 +456,7 @@
                         <span class="test-icon"></span> special invites to SFPC events,
                         <span class="test-icon"></span> a <a href="/fundraiser/winter-23/an-ode">tote bag</a>,
                         and <span class="test-icon"></span> access to a digital archive of all SFPC publications.
-</p>
+                        </p>
                     </div>
                   </div>
                   {{/eq}}
@@ -474,17 +471,6 @@
                     </p>
                     </div>
                   </div>
-
-                  <!-- <div class="addon-item {{#eq [Website-Slug] "stickerpack-1"}}addon-hide{{/eq}} {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
-                    <div class="item">
-                      <img src="https://sfpc.study/images/market/raffle.jpg">
-                      <p>Enter our <a href="/fundraiser/winter-23/raffle">raffle</a> with a <span id="cost">$25</span> ticket for a chance to win any of 6 special items!
-
-                      <span class="addon" id="addon-raffle"/>
-                    </p>
-                    </div>
-                  </div> -->
-
 
                   <div class="addon-item {{#eq [Website-Slug] "stickerpack-1"}}addon-hide{{/eq}} {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
                     <div class="item">
@@ -509,21 +495,16 @@
                       <span class="addon" id="addon-sticker-2-button-wrapper"/>
                     </p>
                     </div>
-                  </div>
+                  </div> -->
 
 
 
                 {{/eq}}
                 <div class="break-noline"></div>
 
-                <p><a href="/fundraiser/winter-23">go back to fundraiser...</a></p>
+                <!-- <p><a href="/fundraiser/winter-23">go back to fundraiser...</a></p> -->
 
-                <!-- <p class="large">
-                <a href="/fundraiser/winter-23" target="_blank" id="">
 
-                          Back to Fundraiser
-
-                        </a></p> -->
 
 
 
