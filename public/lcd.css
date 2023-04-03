@@ -458,7 +458,11 @@ select#allSections {
       }
 
       .summer-23.featured .title,
-      .summer-23 #session-name, #tag.summer-23 {
+      .summer-23 #session-name, #tag.summer-23,
+
+    .summer-23  #session-name > a
+
+       {
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: var(--summer-23-link);
       }
