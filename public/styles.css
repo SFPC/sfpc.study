@@ -22,6 +22,12 @@
     --main-large-text: calc(24px + 2vw);
     --main-large-line-height: 1;
 
+    --summer-23-title-font: 'Night Black', sans-serif;
+    --summer-23-header-font: 'Night Black', sans-serif;
+    --summer-23-body-font: 'Night Black', sans-serif;
+    --summer-23-special-font: 'Night Black', sans-serif;
+
+
     --spring-23-title-font: 'Times New Roman', serif;
     --spring-23-header-font: 'Times New Roman', serif;
     --spring-23-body-font: 'Times New Roman', serif;
@@ -97,6 +103,15 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 .tk-soda-script { font-family: "soda-script",sans-serif; }
 
 
+
+
+@font-face {
+    font-family: 'Night Black';
+    src: url('fonts/Night-Black.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
 
 @font-face {
     font-family: 'Arial Rounded';
@@ -215,6 +230,29 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
           font-family: var(--main-title-font) !important;
           font-weight: bold !important;
         } */
+
+
+
+                .summer-23.featured .title,
+                .summer-23 #session-name, #tag.summer-23 {
+                  font-family: var(--summer-23-title-font) !important;
+                  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: lighter;
+            /* -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: var(--summer-23-link); */
+            /* font-weight: bold !important; */
+                }
+          #tag.summer-23 {
+            color: var(--summer-23-text);
+        }
+
+        .summer-23.session .title.class{
+          font-size: calc(var(--large-text) * .7) !important;
+        }
+
+
 
         .spring-23.featured .title,
         .spring-23 #session-name, #tag.spring-23 {

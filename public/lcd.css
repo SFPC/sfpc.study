@@ -9,7 +9,7 @@
 
 
     --summer-23-background: #0c0914;
-   --summer-23-text: #b6bbb5;
+   --summer-23-text: #cdcdcd;
     --summer-23-text-on-bg: #0a70ec;
     --summer-23-link:  #0a70ec;
     --summer-23-special-text:  #0a70ec;
@@ -291,13 +291,13 @@ select#allSections {
  box-sizing: border-box;
  border-color: var(--summer-23-text);
  background-image: url('images/sessions/summer-23/bg.jpg');
- background-position: bottom;
+ background-position: center;
  background-repeat: repeat;
- background-size: 100%;
+ background-size: cover;
 }
 
 .summer-23.featured:hover {
-  background-size: 150%;
+  /* background-size: 200%; */
 }
 
 
@@ -450,10 +450,17 @@ select#allSections {
         background: none;
         color:  var(--summer-23-text) !important;
         border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--summer-23-background); */
 
 
-        -webkit-text-stroke-width: 1px;
+        /* -webkit-text-stroke-width: 1px; */
           /* -webkit-text-stroke-color: var(--summer-23-link); */
+      }
+
+      .summer-23.featured .title,
+      .summer-23 #session-name, #tag.summer-23 {
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--summer-23-link);
       }
 
       .summer-23 #class section,
@@ -466,7 +473,9 @@ select#allSections {
       .summer-23 .section-testimonials p
        {
         background: none !important;
-        padding: 0px !important
+        padding: 0px !important;
+        /* text-shadow: 2px 2px 0px var(--summer-23-background); */
+
       }
 
       .summer-23 .break {
