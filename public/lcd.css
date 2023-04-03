@@ -8,6 +8,13 @@
     --box-shadow: rgba(0,0,0,.3);
 
 
+    --summer-23-background: #0c0914;
+   --summer-23-text: #b6bbb5;
+    --summer-23-text-on-bg: #0a70ec;
+    --summer-23-link:  #0a70ec;
+    --summer-23-special-text:  #0a70ec;
+
+
     --spring-23-background: #e0c2b8;
     --spring-23-text: #000;
     --spring-23-text-on-bg: #e0c2b8;
@@ -265,6 +272,217 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+
+
+
+
+
+
+
+
+
+/* /////////// start summer 23  ///////////////////////////////*/
+
+.summer-23,
+.summer-23.featured.session,
+.summer-23.featured  {
+ /* background-color: var(--sex-ed-background)  !important; */
+ color: var(--summer-23-text);
+ box-sizing: border-box;
+ border-color: var(--summer-23-text);
+ background-image: url('images/sessions/summer-23/bg.jpg');
+ background-position: bottom;
+ background-repeat: repeat;
+ background-size: 100%;
+}
+
+.summer-23.featured:hover {
+  background-size: 150%;
+}
+
+
+
+     .shell.summer-23 {
+       background-image:url('images/sessions/summer-23/bg.jpg');
+       /* background-position: bottom; */
+       /* background-repeat: no-repeat;
+       background-size: cover; */
+       background-position: top left;
+       background-repeat: repeat;
+       background-size: cover;
+     }
+
+
+
+.summer-23,
+.summer-23.featured.session,
+.shell .summer-23,
+.summer-23.featured  {
+  /* background-color: var(--summer-23-background)  !important; */
+  color: var(--summer-23-text);
+  box-sizing: border-box;
+  border-color: var(--summer-23-text);
+  text-shadow: none !important;
+}
+
+
+      .summer-23 p,
+      .summer-23 p a,
+      .summer-23 a,
+      .summer-23.featured h4,
+      .summer-23 h4 a,
+      .summer-23 .intro a,
+      .summer-23 p.large a,
+      .summer-23 p a:hover,
+      .summer-23.session.featured,
+      .summer-23.session.featured a,
+      .summer-23.featured h4.type a,
+      .sfpc .summer-23 a
+      {
+        color: var(--summer-23-text) !important;
+      }
+
+      .summer-23 h4 a:hover,
+      .summer-23 .intro a,
+      .summer-23 p.large a:hover,
+      .summer-23.featured:hover h6,
+      .summer-23.featured:hover .title,
+      .summer-23 .details a:hover,
+      .summer-23.featured .title:hover,
+      .summer-23 p a:hover,
+      .summer-23 h4 a:hover,
+      .summer-23 section .grid-2 ul li::before,
+      .summer-23 .chars,
+      .summer-23 p a:hover,
+      .summer-23 a:hover,
+      .summer-23 h4 a:hover,
+      .summer-23 .intro a:hover,
+      .summer-23 .details a:hover,
+      .summer-23 .entity:hover .accordion dt h3:after,
+      .summer-23 .accordion dt h3:after,
+      .summer-23 .expanded{
+          color: var(--summer-23-link) !important;
+      }
+
+      .summer-23 #cost,
+      .summer-23 .fixed-apply,
+      .summer-23 .fixed-support,
+      .summer-23 .home-intro span#session-name::after {
+          color: var(--summer-23-background) !important;
+          background: var(--summer-23-link) !important;
+      }
+
+      .summer-23 span#cost {
+        background: var(--summer-23-link) !important;
+      }
+
+
+      .summer-23 .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .summer-23 .block-text {
+        background-color: var(--summer-23-background);
+        color: var(--summer-23-link);
+      }
+
+
+
+      .summer-23.grid-inner, .summer-23 .grid-inner {
+        border: 2px dotted var(--summer-23-text) !important;
+        color: var(--summer-23-link) !important;
+      }
+
+      .summer-23 #class .entity,
+      .summer-23.website-grid .grid-2 {
+        border-color: var(--summer-23-text);
+      }
+
+      .summer-23 #class .entity:hover {
+        border-color: var(--summer-23-link);
+      }
+
+      .summer-23 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--summer-23-background) !important;
+      }
+
+
+      .summer-23 select#allSections:hover,
+      .summer-23 .loader-content p::after,
+      .summer-23 span#cost
+      {
+        background: var(--summer-23-link) !important;
+        color: var(--summer-23-background) !important;
+      }
+
+      .summer-23 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .summer-23 .breadcrumb.fixed,
+      .summer-23 .breadcrumb.fixed::before,
+      .summer-23 .breadcrumb.fixed a,
+      .summer-23 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .summer-23 .breadcrumb,
+      .summer-23 .breadcrumb a,
+      .summer-23 .text-on-bg,
+      .summer-23 .breadcrumb a:hover {
+          color: var(--summer-23-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--summer-23-background);
+      }
+
+
+      .summer-23 section#section-outro,
+      #class .intro.summer-23,
+      .shell.summer-23 .class-details,
+      .summer-23 #class section,
+      .summer-23 #class .entity,
+      .summer-23 .accordion dd.active,
+      .summer-23 section ul,
+      .summer-23 .website-grid
+       {
+        /* background-color: var(--summer-23-background); */
+        background: none;
+        color:  var(--summer-23-text) !important;
+        border-radius: var(--border-rad);
+
+
+        -webkit-text-stroke-width: 1px;
+          /* -webkit-text-stroke-color: var(--summer-23-link); */
+      }
+
+      .summer-23 #class section,
+      #class .intro.summer-23 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .summer-23 #class section.stacked,
+      .summer-23 .section-testimonials,
+      .summer-23 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important
+      }
+
+      .summer-23 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--summer-23-text);
+      }
+
+      .shell.summer-23 {
+        background-image: url('images/sessions/summer-23/bg.jpg');
+        background-size: cover;
+      }
+
+
+/* /////////// end summer 23  ///////////////////////////////*/
+
 
 
 
