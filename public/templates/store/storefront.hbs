@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>School for Poetic Computation</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="title" content="School for Poetic Computation">
+  <meta name="description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sfpc.study/">
+  <meta property="og:title" content="School for Poetic Computation">
+  <meta property="og:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="og:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sfpc.study/">
+  <meta property="twitter:title" content="School for Poetic Computation">
+  <meta property="twitter:description"
+    content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+  <meta property="twitter:image" content="https://sfpc.study/images/sessions/meta.jpg">
+  <link href="/styles.css" rel="stylesheet">
+  <link href="/css/shopify.css" rel="stylesheet" />
+  <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
+  <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico" />
+
+  <script src="/jquery-3.6.0.min.js"></script>
+  <script src="/js/fundraiser.js"></script>
+  <script src="https://kit.fontawesome.com/95e6fd57f2.js" crossorigin="anonymous"></script>
+
+  <!-- stats -->
+  <script type="text/javascript">
+    var sc_project = 12714909;
+    var sc_invisible = 1;
+    var sc_security = "6086a46c";
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="website statistics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
+
+
+  <!-- <script data-goatcounter="https://sfpc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
+  <!-- end stats -->
+
+  <script src="/js/initShopify.js"></script>
+  <script>
+    initShopifyCart()
+ 
+
+  </script>
+</head>
+
+
+<body>
+  {{> header}}
+  <div id="footer" class="footer">
+          <div class="mode"><button id="mode-toggle"></button></a></div>
+        </div>
+
+
+
+        <div class="website-grid grid-hide  sfpc">
+          <div class="grid-inner sfpc">
+          <section>
+            <div class="grid-2">
+              <div class="chars chars1"></div>
+              <p class="large">School</p>
+            </div>
+            <div class="grid-2">
+              <div class="chars chars2"></div>
+              <p class="large">for</p>
+            </div>
+            <div class="grid-2">
+              <div class="chars chars3"></div>
+              <p class="large">Poetic</p>
+            </div>
+            <div class="grid-2">
+              <div class="chars chars4"></div>
+              <p class="large">Computation</p>
+            </div>
+          </section>
+        </div>
+        </div>
+
+  <div class="crt-overlay crt-overlay-fullsize"></div>
+
+  <div id="shell" class="shell shell-fullsize projects sfpc">
+    <div class="loader-content">
+      <p tabindex="0" class="large">
+        loading<span>...</span>
+      </p>
+    </div>
+<!--
+    <div class="selectors">
+      <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
+        <option value="">How to contribute...</option>
+        <option value="section-donate">1. Make a donation</option>
+        <option value="section-member">2. Become a member</option>
+        <option value="section-market">3. Shop the market</option>
+        <option value="section-testimonials">4. Write a testimonial</option>
+        <option value="section-share">5. Spread the word</option>
+        <option value="section-follow">6. Follow our progress</option>
+
+
+
+      </select>
+    </div> -->
+
+
+    <h4 class="breadcrumb  hide-content"><a href="/store">store</a></h4>
+
+    <div id="store" class="store shell-content hide-content allProjects projectsDiv">
+
+
+      <section id="section-market">
+        <div class="grid-2">
+         <h1>Our Store</h1>
+        </div>
+        <div class="grid-2">
+          <p>Artists within the SFPC community have donated a wealth of objects, art, prints, ephemera, gadgets, merchandise and more, which you can purchase. All proceeds from purchases made in our community market will go directly towards the Community Fundraiser.</p>
+        </div>
+      </section>
+      <div class="break-noline-small"></div>
+      <section id="section-market" class="stacked stacked-4">
+        <div class="grid-1 participate">
+
+          {{#each products}}
+
+          {{#if publish}}
+
+          {{else}}
+
+          {{#eq [selltype] "Donation"}}
+
+          {{else}}
+
+
+          <div id="{{this.[Website-Slug]}}"
+            class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
+            ">
+            <div class="featured-text">
+              <img src="{{this.[Image-URL]}}">
+              <div class="top">
+                <h4 class="type type-list-comma"><a href="/fundraiser/{{this.[Website-Slug]}}">{{#each
+                    this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
+                <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
+                {{#eq [type] "Raffle"}}
+                <h6>enter a raffle for a chance to win any of 6 special items!</h6>
+                {{/eq}}
+                {{#if [Contributor]}}
+                  <h6>by {{Contributor}} </h6>
+                {{/if}}
+                  <BR>
+                {{#if availableForSale}}
+                  {{#if totalInventory }}
+                  {{#gt totalInventory 0 }}
+                  {{#lte availableInventory 10}}
+                  {{#gt availableInventory 0 }}
+
+                  <h4><span>Only {{availableInventory}} left!</span></h4>
+                  <BR>
+                  {{/gt}}
+                  {{/lte}}
+                  {{/gt}}
+                  {{/if}}
+
+                  <h3><span id=”cost”>${{cost}}</span></h3>
+
+
+
+                {{else}}
+
+                {{#eq [selltype] "Raffle Only"}}
+                <h3><span id=”cost”>Available via Raffle</span></h3>
+                {{else}}
+                  <h3><span id=”cost”>Out of Stock</span></h3>
+                {{/eq}}
+
+
+                {{/if}}
+              </div>
+
+            </div>
+          </div>
+
+          {{/eq}}
+
+          {{/if}}
+
+          {{/each}}
+
+
+
+
+
+
+          {{#each products}}
+
+          {{#if publish}}
+
+
+          {{#if availableForSale}}
+
+          <div id="{{this.[Website-Slug]}}"
+            class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
+            ">
+            <div class="featured-text">
+              <img src="{{this.[Image-URL]}}">
+              <div class="top">
+                <h4 class="type type-list-comma"><a href="/fundraiser/{{this.[Website-Slug]}}">{{#each
+                    this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
+                <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
+                {{#if [Contributor]}}
+                  <h6>by {{Contributor}} </h6>
+                {{/if}}
+                  <BR>
+                {{#if availableForSale}}
+                  {{#if totalInventory }}
+                  {{#lte availableInventory 10}}
+                  <h4><span>Only {{availableInventory}} left!</span></h4>
+                  <BR>
+                  {{/lte}}
+                  {{/if}}
+
+                  <h3><span id=”cost”>${{cost}}</span></h3>
+
+
+
+                {{else}}
+
+                {{#eq [selltype] "Raffle Only"}}
+                <h3><span id=”cost”>Available via Raffle</span></h3>
+                {{else}}
+                  <h3><span id=”cost”>Out of Stock</span></h3>
+                {{/eq}}
+
+
+                {{/if}}
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+
+          {{else}}
+
+
+
+                    {{#eq [selltype] "Raffle Only"}}
+
+                    <div id="{{this.[Website-Slug]}}"
+                      class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
+                      ">
+                      <div class="featured-text">
+                        <img src="{{this.[Image-URL]}}">
+                        <div class="top">
+                          <h4 class="type type-list-comma"><a href="/fundraiser/{{this.[Website-Slug]}}">{{#each
+                              this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
+                          <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
+                          {{#if [Contributor]}}
+                            <h6>by {{Contributor}} </h6>
+                          {{/if}}
+                            <BR>
+
+                          <h3><span id=”cost”>Available via Raffle</span></h3>
+
+
+                        </div>
+
+                      </div>
+                    </div>
+                    {{/eq}}
+
+
+
+          {{/if}}
+          {{/if}}
+          {{/each}}
+
+
+
+          {{#each products}}
+
+          {{#if publish}}
+
+
+          {{#if availableForSale}}
+
+
+
+          {{else}}
+
+              {{#eq [selltype] "Raffle Only"}}
+
+
+               {{else}}
+
+                  <div id="{{this.[Website-Slug]}}"
+                    class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
+                    ">
+                    <div class="featured-text">
+                      <img src="{{this.[Image-URL]}}">
+                      <div class="top">
+                        <h4 class="type type-list-comma"><a href="/fundraiser/{{this.[Website-Slug]}}">{{#each
+                            this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
+                        <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
+                        {{#if [Contributor]}}
+                          <h6>by {{Contributor}} </h6>
+                        {{/if}}
+                          <BR>
+                        {{#if availableForSale}}
+                          {{#if totalInventory }}
+                          {{#lte availableInventory 10}}
+                          <h4><span>Only {{availableInventory}} left!</span></h4>
+                          <BR>
+                          {{/lte}}
+                          {{/if}}
+
+                          <h3><span id=”cost”>${{cost}}</span></h3>
+
+
+
+                        {{else}}
+
+                        {{#eq [selltype] "Raffle Only"}}
+                        <h3><span id=”cost”>Available via Raffle</span></h3>
+                        {{else}}
+                          <h3><span id=”cost”>Out of Stock</span></h3>
+                        {{/eq}}
+
+
+                        {{/if}}
+                      </div>
+
+                    </div>
+                  </div>
+
+                  {{/eq}}
+
+          {{/if}}
+          {{/if}}
+          {{/each}}
+
+
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+      <div class="break-noline"></div>
+
+
+
+
+
+
+     <!-- <section>
+         <div class="grid-2">
+           <p>
+            <a href="https://forms.gle/PvuvBQd4cmo8YL4j6" class="" target="_blank">share a testimonial...</a>
+           </p>
+         </div>
+
+         <div class="grid-2">
+         </div>
+     </section> -->
+
+
+      <!-- <div class="break"></div> -->
+      <div class="break-noline"></div>
+      <div class="break-endpage"></div>
+    </div>
+  </div>
+
+  <script src="/outside.js"></script>
+  <script src="/carousel.js"></script>
+  </p>
+
+</body>
+
+</html>

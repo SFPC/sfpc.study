@@ -1,0 +1,580 @@
+<html>
+  <head>
+    <title>School for Poetic Computation</title>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta name="title" content="School for Poetic Computation" />
+    <meta
+      name="description"
+      content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sfpc.study/" />
+    <meta property="og:title" content="School for Poetic Computation" />
+    <meta
+      property="og:description"
+      content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning."
+    />
+    <meta
+      property="og:image"
+      content="https://sfpc.study/images/sessions/meta.jpg"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://sfpc.study/" />
+    <meta property="twitter:title" content="School for Poetic Computation" />
+    <meta
+      property="twitter:description"
+      content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning."
+    />
+    <meta
+      property="twitter:image"
+      content="https://sfpc.study/images/sessions/meta.jpg"
+    />
+    <link href="/styles.css" rel="stylesheet" />
+    <link href="/css/shopify.css" rel="stylesheet" />
+    <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://sfpc.study/images/sessions/favicon.ico"
+    />
+
+    <script src="/jquery-3.6.0.min.js"></script>
+    <script src="/js/initShopify.js"></script>
+    <script>
+      initShopifyProduct("{{[Shopify ID]}}", "add-to-cart-button-wrapper", "Add to cart")
+
+      initShopifyProduct("7864325472407", "addon-sticker-button-wrapper", "Add to cart")
+
+      initShopifyProduct("7864322392215", "addon-sticker-2-button-wrapper", "Add to cart")
+
+      initShopifyProduct("7864352080023", "addon-tote-button-wrapper", "Add to cart")
+
+      // initShopifyProduct("7865691406487", "addon-raffle", "Buy raffle ticket")
+
+      // initShopifyProduct("7865691406487", "raffle", "Buy raffle ticket")
+
+    </script>
+
+    <!-- stats -->
+    <script type="text/javascript">
+      var sc_project=12714909; var sc_invisible=1; var sc_security="6086a46c";
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://www.statcounter.com/counter/counter.js"
+      async
+    ></script>
+
+    <noscript>
+      <div class="statcounter">
+        <a
+          title="website statistics"
+          href="https://statcounter.com/"
+          target="_blank"
+        >
+          <img
+            class="statcounter"
+            src="https://c.statcounter.com/12714909/0/6086a46c/1/"
+            alt="website statistics"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </a>
+      </div>
+    </noscript>
+    <!-- end stats -->
+  </head>
+
+  <body>
+    {{> header}}
+    <div id="footer" class="footer">
+            <div class="mode"><button id="mode-toggle"></button></a></div>
+          </div>
+
+
+
+          <div class="website-grid grid-hide  fundraiser-winter-23">
+            <div class="grid-inner fundraiser-winter-23">
+            <section>
+              <div class="grid-2">
+                <div class="chars chars1"></div>
+                <p class="large">School</p>
+              </div>
+              <div class="grid-2">
+                <div class="chars chars2"></div>
+                <p class="large">for</p>
+              </div>
+              <div class="grid-2">
+                <div class="chars chars3"></div>
+                <p class="large">Poetic</p>
+              </div>
+              <div class="grid-2">
+                <div class="chars chars4"></div>
+                <p class="large">Computation</p>
+              </div>
+            </section>
+          </div>
+          </div>
+
+    <div class="crt-overlay crt-overlay-fullsize"></div>
+
+    <div id="shell" class="shell shell-fullsize market about fundraiser-winter-23">
+
+      <div class="loader-content">
+        <p tabindex="0" class="large">
+          loading<span>...</span>
+        </p>
+      </div>
+
+      <h4 class="breadcrumb hide-content">
+        <a href="/fundraiser">fundraiser</a>
+        <span class="caret"></span>
+        <a href="/fundraiser">community fundraiser winter 2023</a>
+      </h4>
+
+      <div class="hide-content shell-content">
+        <section>
+          <div class="grid-2">
+            <h1 class="title">
+              <span>
+                {{Name}}
+              </span>
+            </h1>
+
+            {{#if Contributor}}
+              <h6 class="byline">
+                donated by {{Contributor}}
+
+              </h6>
+              <!-- {{#if [moreImages].[1]}}<div class="break-noline-small"></div>{{else}} -->
+              <div class="break-noline"></div>
+              <!-- {{/if}} -->
+            {{/if}}
+
+
+          </div>
+
+          <!-- <div class="grid-2 market-details class-details"> -->
+            <!-- <h4 class="noline">
+              Published on {{[Publish Date].start}}
+            </h4>
+
+            <div class="break-noline-small"></div> -->
+
+
+      {{#if [moreImages].[1]}}
+            <!-- </div> -->
+              <div class="grid-2"></div>
+            </section>
+
+                <div class="grid-container product-images" id="participate-archive">
+
+                  <main class="grid-item main">
+                    <main class="grid-item main">
+                      <div class="carousel-items items carousel-content participate-content">
+                        <div id="carousel-images" class="class-images after-launch">
+
+                          {{#each moreImages}}
+                          <figure class="item participate-img"><img src="{{this}}">
+                          </figure>
+                          {{/each}}
+                          {{#if promoGraphic}}
+                          <figure class="item participate-img"><img src="{{promoGraphic}}">
+                          </figure>
+                          {{/if}}
+
+                        </div>
+
+
+                      </div>
+
+
+                    </main>
+                  </main>
+
+                </div>
+              <section>
+
+                <div class="grid-2"></div>
+                <div class="grid-2 market-details class-details">
+            {{else}}
+
+                <div class="grid-2 market-details class-details">
+                 <img id="class-image" src="{{[Image-URL]}}" />
+
+            {{/if}}
+
+            {{#if [Description]}}
+            <div class="details"> <p style="white-space:pre-line">
+                    {{{[Description]}}} {{#if [Product-Link]}}<a href="{{[Product-Link]}}">learn more...</a>{{/if}} {{#if [Delivery-Info]}} <BR><br>{{[Delivery-Info]}}{{/if}} 100% of proceeds go towards scholarships at SFPC. {{#eq [selltype] "Donation"}} Only donations over $250 are eligible for tax deductions. <a href="https://grayarea.org/initiative/school-for-poetic-computation/" target="_blank">Submit a payment</a> via our fiscal sponsor. SFPC is fiscally sponsored by <span class="sponsorlogo grayarea"></span>.{{/eq}}
+                  </p>
+
+            </div>
+            {{/if}}
+
+            {{#if [Product-Type]}}
+            <div class="details">
+              <div class="labels">Type</div>
+              <div class="labels-info" id="teachers-list">{{#each
+                  [Product-Type]
+                }}{{this}}{{#unless @last}},{{/unless}} {{/each}}
+                {{#if [Tags]}}({{#each [Tags]}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}){{/if}}
+              </div>
+            </div>
+            {{/if}}
+
+            {{#if [Size]}}
+            <div class="details">
+              <div class="labels">Size</div>
+              <div class="labels-info" id=""> {{[Size]}}
+              </div>
+            </div>
+            {{/if}}
+
+
+            <!-- {{#if [Delivery-Info]}}
+              <div class="details">
+                <div class="labels">Delivery</div>
+                <div class="labels-info" id="">{{[Delivery-Info]}}
+              </div>
+              </div>
+            {{/if}} -->
+
+            {{#if Value}}
+              <!-- <div class="details">
+                <div class="labels">Item Value</div>
+                <div class="labels-info" id="">
+                      ${{Value}}
+                </div>
+              </div> -->
+
+              {{#if cost}}
+              <div class="details">
+                <div class="labels">
+                  {{#eq [selltype] "Raffle Only"}}Value{{else}}Cost{{/eq}}
+                </div>
+                <div class="labels-info" id="">
+                  <h3>
+
+                    {{#eq [selltype] "Raffle Only"}}
+                    ${{Value}}
+                    {{else}}
+                    <span id="cost">${{cost}}</span> {{#eq [goodstype] "Physical"}}+ shipping & tax <span class="small block">Please note: We can only ship within the United States.</span> {{else}} + tax{{/eq}}</h3>
+                    {{/eq}}
+                </div>
+              </div>
+              {{/if}}
+
+              {{#eq [selltype] "Raffle Only"}}
+              <div class="details">
+                <div class="labels">
+                 raffle
+                </div>
+                <div class="labels-info" id="">
+                  <h3>
+                    <span id="cost">$25 per ticket</span> + tax </h3>
+                </div>
+              </div>
+              {{/eq}}
+
+              {{#eq [selltype] "Raffle Only"}}
+              {{else}}
+              {{#if totalInventory}}
+              {{#gt totalInventory 0 }}
+              {{#if availableForSale}}
+              {{#lte availableInventory 10}}
+              {{#gt availableInventory 0 }}
+              <div class="details">
+                <div class="labels">stock</div>
+                <div class="labels-info">Only {{availableInventory}} left!</div>
+              </div>
+              {{/gt}}
+              {{/lte}}
+              {{/if}}
+              {{/gt}}
+              {{/if}}
+              {{/eq}}
+
+                {{#eq [selltype] "Raffle Only"}}
+                <p class="item" id="raffle"/>
+                <p class="item addon-hide" id="add-to-cart-button-wrapper"/>
+                {{else}}
+                <p class="item addon-hide" id="raffle"/>
+                <p class="item" id="add-to-cart-button-wrapper"/>
+                {{/eq}}
+
+
+               <!-- {{#eq [selltype] "Raffle Only"}}    <p>
+
+                 For each raffle ticket you buy, your name will be entered once into a draw for a chance to win {{#eq [Website-Slug] "raffle"}}one of 6 items{{else}}this item{{/eq}}.
+            </p>
+               {{/eq}} -->
+
+
+                {{#eq [type] "Donation"}}
+                <div class="addon-item">
+                  <div class="item">
+                    <img src="https://sfpc.study/images/market/{{Website-Slug}}.jpg">
+                    <p class="">or
+
+
+                      {{#eq [Website-Slug] "circuit-bender"}}
+                      <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11365459" target="_blank" class="small-link">become a member</a>  for
+                      <span id="cost">$15/month</span> via WithFriends.  As a Circuit Bender member, you will receive:
+                      <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>
+                      and <span class="test-icon"></span> access to special channels on our community Discord.
+                      {{/eq}}
+                      {{#eq [Website-Slug] "thread-weaver"}}
+                      <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436554" target="_blank" class="small-link">become a member</a>  for
+                      <span id="cost">$25/month</span> via WithFriends.  As a Thread Weaver member, you will receive:
+                      <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>,
+                      <span class="test-icon"></span> access to special channels on our community Discord,
+                      and <span class="test-icon"></span> special invites to SFPC events
+                      {{/eq}}
+                      {{#eq [Website-Slug] "space-maker"}}
+                      <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436509" target="_blank" class="small-link">become a member</a>  for
+                      <span id="cost">$65/month</span> via WithFriends. As a Space Maker member, you will receive:
+                      <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>,
+                      <span class="test-icon"></span> access to special channels on our community Discord,
+                      <span class="test-icon"></span> special invites to SFPC events,
+                      and <span class="test-icon"></span> a <a href="/fundraiser/an-ode">tote bag</a>.
+                      {{/eq}}
+                      {{#eq [Website-Slug] "fruit-bearer"}}
+                      <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436524" target="_blank" class="small-link">become a member</a>  for
+                      <span id="cost">$150/month</span> via WithFriends.  As a Fruit Bearer member, you will receive:
+                      <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>,
+                      <span class="test-icon"></span> access to special channels on our community Discord,
+                      <span class="test-icon"></span> special invites to SFPC events,
+                      <span class="test-icon"></span> a <a href="/fundraiser/an-ode">tote bag</a>,
+                      and <span class="test-icon"></span> access to a digital archive of all SFPC publications.
+                      {{/eq}}
+
+
+
+                  </p>
+                  </div>
+                </div>
+                <div class="break-noline"></div>
+                {{/eq}}
+
+                <div class="break-noline"></div>
+
+            {{/if}}
+
+
+
+
+
+
+
+            {{#eq [selltype] "Raffle Only"}}
+
+                        <h6>Items in the raffle...</h6>
+
+
+                        <div class="addon-item">
+                          <div class="item">
+                            <img src="https://sfpc.study/images/market/spaceplant-blanket.jpg">
+                            <p>A 54” x 72” Jacquard loom woven blanket valued at <span id="cost">$250</span>.
+                             <a href="/fundraiser/spaceplant-blanket">Spaceplant Blanket</a> is by SPACEFILLER.
+                          </p>
+                          </div>
+                        </div>
+
+                        <div class="addon-item">
+                          <div class="item">
+                            <img src="https://sfpc.study/images/market/an-ode.jpg">
+                            <p>A tote bag valued at <span id="cost">$25</span>.
+                             <a href="/fundraiser/an-ode">An Ode (Liquid Crystal Mode)</a> is designed by Zainab Aliyu and printed by Talking Dolls.
+                          </p>
+                          </div>
+                        </div>
+
+                        <div class="addon-item">
+                          <div class="item">
+                            <img src="https://sfpc.study/images/market/untitled-shannon-finnegan.jpg">
+                            <p>A digital stencil print valued at <span id="cost">$325</span>.
+                             <a href="/fundraiser/untitled-shannon-finnegan">Untitled</a> is by Shannon Finnegan.
+                          </p>
+                          </div>
+                        </div>
+
+                        <div class="addon-item">
+                          <div class="item">
+                            <img src="https://sfpc.study/images/market/human-computers.jpg">
+                            <p>A signed copy of a risograph print valued at <span id="cost">$15</span>.
+                             <a href="/fundraiser/human-computers">Human Computers</a> is designed and printed by Neta Bomani.
+                          </p>
+                          </div>
+                        </div>
+
+                        <div class="addon-item">
+                          <div class="item">
+                            <img src="https://sfpc.study/images/market/custom-talisman.jpg">
+                            <p>A custom talisman valued at <span id="cost">$200</span>.
+                             <a href="/fundraiser/custom-talisman">custom talisman to ward off a bad boss</a> is by ann haeyoung.
+                          </p>
+                          </div>
+                        </div>
+
+                        <div class="addon-item">
+                          <div class="item">
+                            <img src="https://sfpc.study/images/market/varying.jpg">
+                            <p>A generative art piece valued at <span id="cost">$100</span>.
+                             <a href="/fundraiser/varying">Varying</a> is by Char Stiles.
+                          </p>
+                          </div>
+                        </div>
+
+
+
+
+
+
+                        <span class="addon addon-hide" id="addon-tote-button-wrapper"/>
+                        <span class="addon addon-hide" id="addon-sticker-button-wrapper"/>
+                        <span class="addon addon-hide" id="addon-sticker-2-button-wrapper"/>
+                        <span class="addon addon-hide" id="addon-raffle"/>
+
+
+            {{else}}
+
+
+                  <h6>Other ways to support...</h6>
+
+                  {{#eq [type] "Donation"}}
+                  {{else}}
+                  <div class="addon-item {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
+                    <div class="item">
+                      <img src="https://sfpc.study/images/market/memberships.gif">
+                      <p>
+                        <a href="https://withfriends.co/school_for_poetic_computation" class="small-link" target="_blank">Become a member</a> via WithFriends. Benefits include:
+                        <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>,
+                        <span class="test-icon"></span> access to special channels on our community Discord,
+                        <span class="test-icon"></span> special invites to SFPC events,
+                        <span class="test-icon"></span> a <a href="/fundraiser/an-ode">tote bag</a>,
+                        and <span class="test-icon"></span> access to a digital archive of all SFPC publications.
+</p>
+                    </div>
+                  </div>
+                  {{/eq}}
+
+                  <div class="addon-item {{#eq [Website-Slug] "an-ode"}}addon-hide{{/eq}} {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
+                    <div class="item">
+                      <img src="https://sfpc.study/images/market/an-ode.jpg">
+                      <p>Add our tote bag to your cart to increase your donation by <span id="cost">$25</span>.
+                       <a href="/fundraiser/an-ode">An Ode (Liquid Crystal Mode)</a> is designed by Zainab Aliyu and printed by Talking Dolls.
+
+                      <span class="addon" id="addon-tote-button-wrapper"/>
+                    </p>
+                    </div>
+                  </div>
+
+                  <!-- <div class="addon-item {{#eq [Website-Slug] "stickerpack-1"}}addon-hide{{/eq}} {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
+                    <div class="item">
+                      <img src="https://sfpc.study/images/market/raffle.jpg">
+                      <p>Enter our <a href="/fundraiser/raffle">raffle</a> with a <span id="cost">$25</span> ticket for a chance to win any of 6 special items!
+
+                      <span class="addon" id="addon-raffle"/>
+                    </p>
+                    </div>
+                  </div> -->
+
+
+                  <div class="addon-item {{#eq [Website-Slug] "stickerpack-1"}}addon-hide{{/eq}} {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
+                    <div class="item">
+                      <img src="https://sfpc.study/images/market/stickerpack-1.jpg">
+                      <p>Add a {{#eq [Website-Slug] "stickerpack-2"}}different{{/eq}} sticker pack to your cart to increase your donation by
+                        <span id="cost">$10</span>.
+                     <a href="/fundraiser/stickerpack-1">Cathode Ray Sticker Pack</a>  is designed by Ritu Ghiya, Juan Miguel Marin, and Samantha Griffith.
+
+                      <span class="addon" id="addon-sticker-button-wrapper"/>
+                    </p>
+                    </div>
+                  </div>
+
+
+                  <div class="addon-item {{#eq [Website-Slug] "stickerpack-2"}}addon-hide{{/eq}} {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
+                    <div class="item">
+                      <img src="https://sfpc.study/images/market/stickerpack-2.jpg">
+                      <p>Add a different sticker pack to your cart to increase your donation by
+                        <span id="cost">$10</span>.
+                     <a href="/fundraiser/stickerpack-2">Liquid Crystal Sticker Pack</a> is designed by Jackie Liu, Shiraz Gallab, and Samantha Griffith.</i>
+
+                      <span class="addon" id="addon-sticker-2-button-wrapper"/>
+                    </p>
+                    </div>
+                  </div>
+
+
+
+                {{/eq}}
+                <div class="break-noline"></div>
+
+                <p><a href="/fundraiser">go back to fundraiser...</a></p>
+
+                <!-- <p class="large">
+                <a href="/fundraiser" target="_blank" id="">
+
+                          Back to Fundraiser
+
+                        </a></p> -->
+
+
+
+
+
+
+          </div>
+        </section>
+
+        <!-- {{#if [Description]}}
+          <div class="break"></div>
+          <section id="section-description">
+            <div class="grid-2">
+              <h1>Description</h1>
+            </div>
+            <div class="grid-2">
+              <p>
+                {{{[Description]}}}
+              </p>
+            </div>
+          </section>
+        {{/if}} -->
+
+        <!-- {{#if [More Image URLs]}}
+          <div class="break-noline"></div>
+          <div class="grid-container" id="participate-archive">
+            <main class="grid-item main">
+              <main class="grid-item main">
+                <div
+                  class="carousel-items items carousel-content participate-content"
+                >
+                  <div id="carousel-images" class="class-images">
+                    {{#each [More Image URLs]}}
+                      <figure class="item participate-img"><img
+                          src="{{this}}"
+                        /></figure>
+                    {{/each}}
+                  </div>
+                </div>
+              </main>
+            </main>
+          </div>
+        {{/if}} -->
+
+        <!-- <div class="break"></div> -->
+        <div class="break-noline"></div>
+        <div class="break-endpage"></div>
+      </div>
+    </div>
+
+    <script src="/outside.js"></script>
+    <script src="/carousel.js"></script>
+  </body>
+</html>
