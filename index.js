@@ -852,7 +852,16 @@ app.get("/blog/:slug", async (req,res) => {
   res.render("blog/post", {title: parsedData.Name, postHTML:postHTML, ...parsedData})
 })
 
+app.get("/ecpc/guestbook", async (req,res) => {
+  const response = await getDatabaseEntries("42196bb86b734120aa62e52e6547b5a0", [{property:"Publish-Date", direction:"descending"}])
+  const postData = response.map((post) => {
+    console.log(post)
+    return parseNotionPage(post)
+  })
+  console.log(postData)
+  res.render("ecpc/guestbook", {posts: postData})
 
+})
 // app.get("/blog/:slug", async (req,res) => {
 //   //filter by slug here
 //   console.log(req.params.slug)
