@@ -1,7 +1,8 @@
 const express = require("express")
 const hbs = require("hbs")
+const  bodyParser = require('body-parser')
 const helpers = require('handlebars-helpers')();
-const {getPage, getDatabaseEntries, getDatabaseEntry, getBlocks} = require('./lib/notion')
+const {getPage, getDatabaseEntries, getDatabaseEntry, getBlocks, createPage} = require('./lib/notion')
 const {getShopifyProduct, getShopifyProducts} = require("./lib/shopifyStorefront");
 const classList = require("./lib/classNotionPageList")
 const res = require("express/lib/response")
@@ -13,12 +14,20 @@ const NOTION_STORE_DATABASE_ID = "11ee959b7fdb4204a9ce46c9224b1818";
 
 console.log("starting up")
 app.use(express.static("public"))
+app.use( bodyParser.json() );
+app.use(bodyParser.urlencoded({ extended: true }));
 app.set('views', './public/templates')
 app.set('view engine', 'hbs');
 hbs.registerPartials("./public/templates/partials")
 for (let helper in helpers) {
   hbs.registerHelper(helper, helpers[helper]);
 }
+
+app.post("/createPage/:databaseId", async (req,res) => {
+  console.log(req.body)
+  const response = await createPage(req.params.databaseId, req.body.title, req.body.message)
+  res.json(response)
+})
 app.get("/page/:pageId", async (req,res) => {
   const pageInfo = await getPage(req.params.pageId)
   res.json(pageInfo.properties)
@@ -852,7 +861,17 @@ app.get("/blog/:slug", async (req,res) => {
   res.render("blog/post", {title: parsedData.Name, postHTML:postHTML, ...parsedData})
 })
 
+app.get("/ecpc/guestbook", async (req,res) => {
+  // const response = await getDatabaseEntries("42196bb86b734120aa62e52e6547b5a0", [{property:"Publish-Date", direction:"descending"}])
+  // const postData = response.map((post) => {
+  //   console.log(post)
+  //   return parseNotionPage(post)
+  // })
+  // console.log(postData)
+  // res.render("ecpc/guestbook", {posts: postData})
+  res.render("ecpc/guestbook")
 
+})
 // app.get("/blog/:slug", async (req,res) => {
 //   //filter by slug here
 //   console.log(req.params.slug)
