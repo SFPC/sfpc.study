@@ -50,7 +50,7 @@
   <script src="/js/initShopify.js"></script>
   <script>
     initShopifyCart()
- 
+
 
   </script>
 </head>
@@ -125,6 +125,19 @@
           <p>Artists within the SFPC community have donated a wealth of objects, art, prints, ephemera, gadgets, merchandise and more, which you can purchase. All proceeds from purchases made in our community market will go directly towards the Community Fundraiser.</p>
         </div>
       </section>
+
+
+<div class="break"></div>
+
+      <section id="section-market">
+        <div class="grid-2">
+         <h1>Merch</h1>
+        </div>
+        <div class="grid-2">
+          <!-- <p>Artists within the SFPC community have donated a wealth of objects, art, prints, ephemera, gadgets, merchandise and more, which you can purchase. All proceeds from purchases made in our community market will go directly towards the Community Fundraiser.</p> -->
+        </div>
+      </section>
+
       <div class="break-noline-small"></div>
       <section id="section-market" class="stacked stacked-4">
         <div class="grid-1 participate">
@@ -135,7 +148,172 @@
 
           {{else}}
 
-          {{#eq [selltype] "Donation"}}
+          {{#eq [type] "Merch"}}
+
+
+
+          <div id="{{this.[Website-Slug]}}"
+            class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
+            ">
+            <div class="featured-text">
+              <img src="{{this.[Image-URL]}}">
+              <div class="top">
+                <h4 class="type type-list-comma"><a href="/store/{{this.[Website-Slug]}}">{{#each
+                    this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
+                <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
+
+                  <BR>
+                {{#if availableForSale}}
+                  {{#if totalInventory }}
+                  {{#gt totalInventory 0 }}
+                  {{#lte availableInventory 10}}
+                  {{#gt availableInventory 0 }}
+
+                  <h4><span>Only {{availableInventory}} left!</span></h4>
+                  <BR>
+                  {{/gt}}
+                  {{/lte}}
+                  {{/gt}}
+                  {{/if}}
+
+                  <h3><span id=”cost”>${{cost}}</span></h3>
+
+
+
+                {{else}}
+
+                {{#eq [selltype] "Raffle Only"}}
+                {{else}}
+                  <h3><span id=”cost”>Out of Stock</span></h3>
+                {{/eq}}
+
+                {{/eq}}
+
+
+                {{/if}}
+                </div>
+
+                </div>
+                </div>
+
+
+
+
+
+                {{else}}
+                {{/eq}}
+
+                  {{/if}}
+                  {{/each}}
+
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+
+          {{else}}
+
+          {{/eq}}
+        </section>
+
+<div class="break"></div>
+
+      <section id="section-market">
+        <div class="grid-2">
+         <h1>Publications</h1>
+        </div>
+        <div class="grid-2">
+          <!-- <p>Artists within the SFPC community have donated a wealth of objects, art, prints, ephemera, gadgets, merchandise and more, which you can purchase. All proceeds from purchases made in our community market will go directly towards the Community Fundraiser.</p> -->
+        </div>
+      </section>
+
+
+<div class="break"></div>
+
+      <section id="section-market">
+        <div class="grid-2">
+         <h1>Posters</h1>
+        </div>
+        <div class="grid-2">
+          <!-- <p>Artists within the SFPC community have donated a wealth of objects, art, prints, ephemera, gadgets, merchandise and more, which you can purchase. All proceeds from purchases made in our community market will go directly towards the Community Fundraiser.</p> -->
+        </div>
+      </section>
+
+
+<div class="break"></div>
+
+      <section id="section-market">
+        <div class="grid-2">
+         <h1>Community Market</h1>
+        </div>
+        <div class="grid-2">
+          <p>Artists within the SFPC community have donated a wealth of objects, art, prints, ephemera, gadgets, merchandise and more, which you can purchase. All proceeds from purchases made in our community market will go directly towards the Community Fundraiser.</p>
+        </div>
+      </section>
+
+      <div class="break-noline-small"></div>
+      <section id="section-market" class="stacked stacked-4">
+        <div class="grid-1 participate">
+
+          {{#each products}}
+
+          {{#if publish}}
+
+          {{else}}
+
+          {{#eq [type] "Merch"}}
+
+
+
+          <div id="{{this.[Website-Slug]}}"
+            class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
+            ">
+            <div class="featured-text">
+              <img src="{{this.[Image-URL]}}">
+              <div class="top">
+                <h4 class="type type-list-comma"><a href="/store/{{this.[Website-Slug]}}">{{#each
+                    this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
+                <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
+
+                  <BR>
+                {{#if availableForSale}}
+                  {{#if totalInventory }}
+                  {{#gt totalInventory 0 }}
+                  {{#lte availableInventory 10}}
+                  {{#gt availableInventory 0 }}
+
+                  <h4><span>Only {{availableInventory}} left!</span></h4>
+                  <BR>
+                  {{/gt}}
+                  {{/lte}}
+                  {{/gt}}
+                  {{/if}}
+
+                  <h3><span id=”cost”>${{cost}}</span></h3>
+
+
+
+                {{else}}
+
+                {{#eq [selltype] "Raffle Only"}}
+                {{else}}
+                  <h3><span id=”cost”>Out of Stock</span></h3>
+                {{/eq}}
+
+
+                {{/if}}
+              </div>
+
+            </div>
+          </div>
+
+
+
+
 
           {{else}}
 
@@ -146,15 +324,10 @@
             <div class="featured-text">
               <img src="{{this.[Image-URL]}}">
               <div class="top">
-                <h4 class="type type-list-comma"><a href="/fundraiser/{{this.[Website-Slug]}}">{{#each
+                <h4 class="type type-list-comma"><a href="/store/{{this.[Website-Slug]}}">{{#each
                     this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
                 <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
-                {{#eq [type] "Raffle"}}
-                <h6>enter a raffle for a chance to win any of 6 special items!</h6>
-                {{/eq}}
-                {{#if [Contributor]}}
-                  <h6>by {{Contributor}} </h6>
-                {{/if}}
+
                   <BR>
                 {{#if availableForSale}}
                   {{#if totalInventory }}
@@ -212,11 +385,11 @@
             <div class="featured-text">
               <img src="{{this.[Image-URL]}}">
               <div class="top">
-                <h4 class="type type-list-comma"><a href="/fundraiser/{{this.[Website-Slug]}}">{{#each
+                <h4 class="type type-list-comma"><a href="/store/{{this.[Website-Slug]}}">{{#each
                     this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
                 <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
                 {{#if [Contributor]}}
-                  <h6>by {{Contributor}} </h6>
+                  <!-- <h6>by {{Contributor}} </h6> -->
                 {{/if}}
                   <BR>
                 {{#if availableForSale}}
@@ -262,11 +435,11 @@
                       <div class="featured-text">
                         <img src="{{this.[Image-URL]}}">
                         <div class="top">
-                          <h4 class="type type-list-comma"><a href="/fundraiser/{{this.[Website-Slug]}}">{{#each
+                          <h4 class="type type-list-comma"><a href="/store/{{this.[Website-Slug]}}">{{#each
                               this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
                           <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
                           {{#if [Contributor]}}
-                            <h6>by {{Contributor}} </h6>
+                            <!-- <h6>by {{Contributor}} </h6> -->
                           {{/if}}
                             <BR>
 
@@ -309,11 +482,11 @@
                     <div class="featured-text">
                       <img src="{{this.[Image-URL]}}">
                       <div class="top">
-                        <h4 class="type type-list-comma"><a href="/fundraiser/{{this.[Website-Slug]}}">{{#each
+                        <h4 class="type type-list-comma"><a href="/store/{{this.[Website-Slug]}}">{{#each
                             this.[Product-Type]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
                         <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
                         {{#if [Contributor]}}
-                          <h6>by {{Contributor}} </h6>
+                          <!-- <h6>by {{Contributor}} </h6> -->
                         {{/if}}
                           <BR>
                         {{#if availableForSale}}

@@ -48,15 +48,7 @@
     <script>
       initShopifyProduct("{{[Shopify ID]}}", "add-to-cart-button-wrapper", "Add to cart")
 
-      initShopifyProduct("7864325472407", "addon-sticker-button-wrapper", "Add to cart")
 
-      initShopifyProduct("7864322392215", "addon-sticker-2-button-wrapper", "Add to cart")
-
-      initShopifyProduct("7864352080023", "addon-tote-button-wrapper", "Add to cart")
-
-      // initShopifyProduct("7865691406487", "addon-raffle", "Buy raffle ticket")
-
-      // initShopifyProduct("7865691406487", "raffle", "Buy raffle ticket")
 
     </script>
 
@@ -98,8 +90,8 @@
 
 
 
-          <div class="website-grid grid-hide  fundraiser-winter-23">
-            <div class="grid-inner fundraiser-winter-23">
+          <div class="website-grid grid-hide  sfpc">
+            <div class="grid-inner sfpc">
             <section>
               <div class="grid-2">
                 <div class="chars chars1"></div>
@@ -123,7 +115,7 @@
 
     <div class="crt-overlay crt-overlay-fullsize"></div>
 
-    <div id="shell" class="shell shell-fullsize market about fundraiser-winter-23">
+    <div id="shell" class="shell shell-fullsize market about sfpc">
 
       <div class="loader-content">
         <p tabindex="0" class="large">
@@ -131,11 +123,7 @@
         </p>
       </div>
 
-      <h4 class="breadcrumb hide-content">
-        <a href="/fundraiser">fundraiser</a>
-        <span class="caret"></span>
-        <a href="/fundraiser">community fundraiser winter 2023</a>
-      </h4>
+      <h4 class="breadcrumb  hide-content"><a href="/store">store</a></h4>
 
       <div class="hide-content shell-content">
         <section>
@@ -270,17 +258,6 @@
               </div>
               {{/if}}
 
-              {{#eq [selltype] "Raffle Only"}}
-              <div class="details">
-                <div class="labels">
-                 raffle
-                </div>
-                <div class="labels-info" id="">
-                  <h3>
-                    <span id="cost">$25 per ticket</span> + tax </h3>
-                </div>
-              </div>
-              {{/eq}}
 
               {{#eq [selltype] "Raffle Only"}}
               {{else}}
@@ -316,52 +293,6 @@
                {{/eq}} -->
 
 
-                {{#eq [type] "Donation"}}
-                <div class="addon-item">
-                  <div class="item">
-                    <img src="https://sfpc.study/images/market/{{Website-Slug}}.jpg">
-                    <p class="">or
-
-
-                      {{#eq [Website-Slug] "circuit-bender"}}
-                      <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11365459" target="_blank" class="small-link">become a member</a>  for
-                      <span id="cost">$15/month</span> via WithFriends.  As a Circuit Bender member, you will receive:
-                      <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>
-                      and <span class="test-icon"></span> access to special channels on our community Discord.
-                      {{/eq}}
-                      {{#eq [Website-Slug] "thread-weaver"}}
-                      <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436554" target="_blank" class="small-link">become a member</a>  for
-                      <span id="cost">$25/month</span> via WithFriends.  As a Thread Weaver member, you will receive:
-                      <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>,
-                      <span class="test-icon"></span> access to special channels on our community Discord,
-                      and <span class="test-icon"></span> special invites to SFPC events
-                      {{/eq}}
-                      {{#eq [Website-Slug] "space-maker"}}
-                      <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436509" target="_blank" class="small-link">become a member</a>  for
-                      <span id="cost">$65/month</span> via WithFriends. As a Space Maker member, you will receive:
-                      <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>,
-                      <span class="test-icon"></span> access to special channels on our community Discord,
-                      <span class="test-icon"></span> special invites to SFPC events,
-                      and <span class="test-icon"></span> a <a href="/fundraiser/an-ode">tote bag</a>.
-                      {{/eq}}
-                      {{#eq [Website-Slug] "fruit-bearer"}}
-                      <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436524" target="_blank" class="small-link">become a member</a>  for
-                      <span id="cost">$150/month</span> via WithFriends.  As a Fruit Bearer member, you will receive:
-                      <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>,
-                      <span class="test-icon"></span> access to special channels on our community Discord,
-                      <span class="test-icon"></span> special invites to SFPC events,
-                      <span class="test-icon"></span> a <a href="/fundraiser/an-ode">tote bag</a>,
-                      and <span class="test-icon"></span> access to a digital archive of all SFPC publications.
-                      {{/eq}}
-
-
-
-                  </p>
-                  </div>
-                </div>
-                <div class="break-noline"></div>
-                {{/eq}}
-
                 <div class="break-noline"></div>
 
             {{/if}}
@@ -373,157 +304,15 @@
 
 
             {{#eq [selltype] "Raffle Only"}}
-
-                        <h6>Items in the raffle...</h6>
-
-
-                        <div class="addon-item">
-                          <div class="item">
-                            <img src="https://sfpc.study/images/market/spaceplant-blanket.jpg">
-                            <p>A 54” x 72” Jacquard loom woven blanket valued at <span id="cost">$250</span>.
-                             <a href="/fundraiser/spaceplant-blanket">Spaceplant Blanket</a> is by SPACEFILLER.
-                          </p>
-                          </div>
-                        </div>
-
-                        <div class="addon-item">
-                          <div class="item">
-                            <img src="https://sfpc.study/images/market/an-ode.jpg">
-                            <p>A tote bag valued at <span id="cost">$25</span>.
-                             <a href="/fundraiser/an-ode">An Ode (Liquid Crystal Mode)</a> is designed by Zainab Aliyu and printed by Talking Dolls.
-                          </p>
-                          </div>
-                        </div>
-
-                        <div class="addon-item">
-                          <div class="item">
-                            <img src="https://sfpc.study/images/market/untitled-shannon-finnegan.jpg">
-                            <p>A digital stencil print valued at <span id="cost">$325</span>.
-                             <a href="/fundraiser/untitled-shannon-finnegan">Untitled</a> is by Shannon Finnegan.
-                          </p>
-                          </div>
-                        </div>
-
-                        <div class="addon-item">
-                          <div class="item">
-                            <img src="https://sfpc.study/images/market/human-computers.jpg">
-                            <p>A signed copy of a risograph print valued at <span id="cost">$15</span>.
-                             <a href="/fundraiser/human-computers">Human Computers</a> is designed and printed by Neta Bomani.
-                          </p>
-                          </div>
-                        </div>
-
-                        <div class="addon-item">
-                          <div class="item">
-                            <img src="https://sfpc.study/images/market/custom-talisman.jpg">
-                            <p>A custom talisman valued at <span id="cost">$200</span>.
-                             <a href="/fundraiser/custom-talisman">custom talisman to ward off a bad boss</a> is by ann haeyoung.
-                          </p>
-                          </div>
-                        </div>
-
-                        <div class="addon-item">
-                          <div class="item">
-                            <img src="https://sfpc.study/images/market/varying.jpg">
-                            <p>A generative art piece valued at <span id="cost">$100</span>.
-                             <a href="/fundraiser/varying">Varying</a> is by Char Stiles.
-                          </p>
-                          </div>
-                        </div>
-
-
-
-
-
-
-                        <span class="addon addon-hide" id="addon-tote-button-wrapper"/>
-                        <span class="addon addon-hide" id="addon-sticker-button-wrapper"/>
-                        <span class="addon addon-hide" id="addon-sticker-2-button-wrapper"/>
-                        <span class="addon addon-hide" id="addon-raffle"/>
-
-
             {{else}}
-
-
-                  <h6>Other ways to support...</h6>
-
-                  {{#eq [type] "Donation"}}
-                  {{else}}
-                  <div class="addon-item {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
-                    <div class="item">
-                      <img src="https://sfpc.study/images/market/memberships.gif">
-                      <p>
-                        <a href="https://withfriends.co/school_for_poetic_computation" class="small-link" target="_blank">Become a member</a> via WithFriends. Benefits include:
-                        <span class="test-icon"></span> a <a href="/fundraiser/jamais-vu-view">generative wallpaper</a>,
-                        <span class="test-icon"></span> access to special channels on our community Discord,
-                        <span class="test-icon"></span> special invites to SFPC events,
-                        <span class="test-icon"></span> a <a href="/fundraiser/an-ode">tote bag</a>,
-                        and <span class="test-icon"></span> access to a digital archive of all SFPC publications.
-</p>
-                    </div>
-                  </div>
-                  {{/eq}}
-
-                  <div class="addon-item {{#eq [Website-Slug] "an-ode"}}addon-hide{{/eq}} {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
-                    <div class="item">
-                      <img src="https://sfpc.study/images/market/an-ode.jpg">
-                      <p>Add our tote bag to your cart to increase your donation by <span id="cost">$25</span>.
-                       <a href="/fundraiser/an-ode">An Ode (Liquid Crystal Mode)</a> is designed by Zainab Aliyu and printed by Talking Dolls.
-
-                      <span class="addon" id="addon-tote-button-wrapper"/>
-                    </p>
-                    </div>
-                  </div>
-
-                  <!-- <div class="addon-item {{#eq [Website-Slug] "stickerpack-1"}}addon-hide{{/eq}} {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
-                    <div class="item">
-                      <img src="https://sfpc.study/images/market/raffle.jpg">
-                      <p>Enter our <a href="/fundraiser/raffle">raffle</a> with a <span id="cost">$25</span> ticket for a chance to win any of 6 special items!
-
-                      <span class="addon" id="addon-raffle"/>
-                    </p>
-                    </div>
-                  </div> -->
-
-
-                  <div class="addon-item {{#eq [Website-Slug] "stickerpack-1"}}addon-hide{{/eq}} {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
-                    <div class="item">
-                      <img src="https://sfpc.study/images/market/stickerpack-1.jpg">
-                      <p>Add a {{#eq [Website-Slug] "stickerpack-2"}}different{{/eq}} sticker pack to your cart to increase your donation by
-                        <span id="cost">$10</span>.
-                     <a href="/fundraiser/stickerpack-1">Cathode Ray Sticker Pack</a>  is designed by Ritu Ghiya, Juan Miguel Marin, and Samantha Griffith.
-
-                      <span class="addon" id="addon-sticker-button-wrapper"/>
-                    </p>
-                    </div>
-                  </div>
-
-
-                  <div class="addon-item {{#eq [Website-Slug] "stickerpack-2"}}addon-hide{{/eq}} {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
-                    <div class="item">
-                      <img src="https://sfpc.study/images/market/stickerpack-2.jpg">
-                      <p>Add a different sticker pack to your cart to increase your donation by
-                        <span id="cost">$10</span>.
-                     <a href="/fundraiser/stickerpack-2">Liquid Crystal Sticker Pack</a> is designed by Jackie Liu, Shiraz Gallab, and Samantha Griffith.</i>
-
-                      <span class="addon" id="addon-sticker-2-button-wrapper"/>
-                    </p>
-                    </div>
-                  </div>
+            {{/eq}}
 
 
 
-                {{/eq}}
+
+ 
                 <div class="break-noline"></div>
 
-                <p><a href="/fundraiser">go back to fundraiser...</a></p>
-
-                <!-- <p class="large">
-                <a href="/fundraiser" target="_blank" id="">
-
-                          Back to Fundraiser
-
-                        </a></p> -->
 
 
 
