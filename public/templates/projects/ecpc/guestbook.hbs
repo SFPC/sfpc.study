@@ -1,0 +1,30 @@
+<h1>Guestbook</h1>
+<input type="text" id="name" placeholder="Name">
+<textarea id="message" placeholder="Message"></textarea>
+<button id="submit">Submit</button>
+<script src="/jquery-3.6.0.min.js"></script>
+<script>
+$('#submit').click(submit);
+async function submit(){
+    const options = {
+    method: 'POST',
+    headers: {
+        accept: 'application/json',
+        'Notion-Version': '2022-06-28',
+        'content-type': 'application/json'
+    },
+    body: JSON.stringify({
+        title: $('#name').val(),
+        message: $('#message').val()
+    })
+    };
+
+    fetch('/createPage/42196bb86b734120aa62e52e6547b5a0', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+    $('#name').val(''),
+    $('#message').val('')
+}
+
+</script>
