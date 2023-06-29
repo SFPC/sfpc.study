@@ -1,30 +1,132 @@
-<h1>Guestbook</h1>
-<input type="text" id="name" placeholder="Name">
-<textarea id="message" placeholder="Message"></textarea>
-<button id="submit">Submit</button>
-<script src="/jquery-3.6.0.min.js"></script>
-<script>
-$('#submit').click(submit);
-async function submit(){
-    const options = {
-    method: 'POST',
-    headers: {
-        accept: 'application/json',
-        'Notion-Version': '2022-06-28',
-        'content-type': 'application/json'
-    },
-    body: JSON.stringify({
-        title: $('#name').val(),
-        message: $('#message').val()
-    })
-    };
+<!DOCTYPE html>
+<html lang="en">
 
-    fetch('/createPage/42196bb86b734120aa62e52e6547b5a0', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-    $('#name').val(''),
-    $('#message').val('')
-}
+<head>
+    <title>Electronic Cafe for Poetic Computation</title>
 
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="School for Poetic Computation">
+    <meta name="description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sfpc.study/ecpc">
+    <meta property="og:title" content="School for Poetic Computation">
+    <meta property="og:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <!-- <meta property="og:image" content="https://sfpc.study/images/sessions/ecpc.jpg"> -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sfpc.study/ecpc">
+    <meta property="twitter:title" content="School for Poetic Computation">
+    <meta property="twitter:description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
+    <!-- <meta property="twitter:image" content="https://sfpc.study/images/sessions/ecpc.jpg"> -->
+    <!-- <link href="/styles.css" rel="stylesheet"> -->
+    <!-- <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" /> -->
+    <link id="mode" rel="stylesheet" type="text/css" href="/css/ecpc.css" />
+    <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico"/>
+
+    <script src="/jquery-3.6.0.min.js"></script>
+
+    <!-- stats -->
+    <script type="text/javascript">
+    var sc_project=12714909;
+    var sc_invisible=1;
+    var sc_security="6086a46c";
+    </script>
+    <script type="text/javascript"
+    src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript><div class="statcounter"><a title="website statistics"
+    href="https://statcounter.com/" target="_blank"><img class="statcounter"
+    src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+
+    <script data-goatcounter="https://sfpc.goatcounter.com/count"
+    async src="//gc.zgo.at/count.js"></script>
+
+
+
+    <!-- end stats -->
+</head>
+
+<body>
+
+  <div class="terminal">
+
+    <div class="logo-small">
+      <img src="/images/projects/ecpc/logo-small.png">
+    </div>
+
+<pre>
+##### /    ##   ###            ###
+######  /  #####    ###            ###
+/#   /  /     #####   ###            ##
+/    /  ##     # ##      ##           ##
+/  ###     #         ##           ##
+##   ##     #         ##    /##    ##      /###      /###   ### /### /###     /##
+##   ##     #         ##   / ###   ##     / ###  /  / ###  / ##/ ###/ /##  / / ###
+##   ##     #         ##  /   ###  ##    /   ###/  /   ###/   ##  ###/ ###/ /   ###
+##   ##     #         ## ##    ### ##   ##        ##    ##    ##   ##   ## ##    ###
+##   ##     #         ## ########  ##   ##        ##    ##    ##   ##   ## ########
+##  ##     #         ## #######   ##   ##        ##    ##    ##   ##   ## #######
+## #      #         /  ##        ##   ##        ##    ##    ##   ##   ## ##
+###      /##      /   ####    / ##   ###     / ##    ##    ##   ##   ## ####    /
+#######/ #######/     ######/  ### / ######/   ######     ###  ###  ### ######/
+####     ####        #####    ##/   #####     ####       ###  ###  ### #####
+</pre>
+
+
+    <div class="line"> Hello<span class="visitor"> guest2343</span>,</div>
+
+    <div class="line indent">
+      Welcome to Electronic Cafe for Poetic Computation: an internet cafe and community hub for technological liberation!
+      <span class="link" id="link-about">[A] About</span>
+    </div>
+
+    <div class="line indent datetime">
+      Today is Thursday, June 30, 2023 · 12:34pm EST. We are currently <span class="status closed"></span>.
+      <!-- <span class="link" id="link-visit">[V] Visit</span> -->
+    </div>
+
+    <div class="line indent happening">
+      HAPPENING SOON: Electronics in Networked Performance Showcase (July 8, 2023,  1pm and 8pm).
+      <span class="link" id="link-1">[L] Learn More</span>
+      <span class="link" id="link-1">[R] RSVP</span>
+      <span class="link" id="link-calendar">[C] Calendar</span>
+    </div>
+  </div>
+
+
+
+<div class="sidebar">
+  <div class="menu">
+    MAIN MENU
+      <span class="link" id="link-about">[A] About</span>
+      <span class="link" id="link-calendar">[C] Calendar</span>
+      <span class="link" id="link-visit">[V] Visit</span>
+      <span class="link" id="link-guestbook">[G] Guestbook</span>
+      <span class="link" id="link-help">[H] Help</span>
+      <span class="link" id="link-print">[P] Print</span>
+
+  </div>
+
+  <div class="info">
+    <div class="">
+      <div class="line">
+      Located @Recess<BR>
+      46 Washington Ave,  <BR>
+      Brooklyn, NY 11238
+      </div>
+      <div class="line">
+      Open Thursdays to
+      Saturdays, <BR>
+      12 - 6pm, <BR>
+      Jul 8 - Aug 12, 2023
+      </div>
+    </div>
+
+  <div class="big-logo">
+    <img src="/images/projects/ecpc/logo-big.png">
+  </div>
+  </div>
+</div>
+
+</body>

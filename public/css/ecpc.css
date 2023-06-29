@@ -1,0 +1,138 @@
+:root {
+    --font-size: calc(14px + 0.3vw);
+    --red: #FF0000;
+    --blue: #0000FF;
+    --green: #00FF00;
+    --yellow: #FFF000;
+  }
+
+
+@font-face {
+    font-family: 'Screenfont';
+    src: url('/fonts/Screenfont_8_Sans.woff2') format('woff2'),
+        url('/fonts/Screenfont_8_Sans.woff') format('woff'),
+        url('/fonts/Screenfont_8_Sans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+body {
+  background: black;
+  color: white;
+  font-family: 'Screenfont';
+  font-size: var(--font-size);
+  margin: 0px;
+  letter-spacing: 1px;
+}
+
+pre {
+  color: var(--yellow);
+  font-family: Courier;
+}
+
+.terminal {
+  padding: 3vw;
+  width: 70vw;
+}
+
+.line {
+  margin-bottom: calc(var(--font-size)*1.2);
+}
+
+    .indent {
+      margin-left: calc(var(--font-size) * 2);
+    }
+
+    .indent::before {
+      content: '>> '
+    }
+
+    .line .link {
+      margin-left: calc(var(--font-size) * 2);
+        }
+
+        .terminal .line:last-child {
+          margin-bottom: 0px !important;
+        }
+
+.logo-small {
+  width: 7vw;
+}
+
+    .logo-small img {
+      width: 100%;
+    }
+
+
+.status.open {
+  color: var(--green);
+}
+
+      .status.open::before {
+        content: 'OPEN';
+      }
+
+      .status.closed {
+        color: var(--red);
+      }
+
+      .status.closed::before {
+        content: 'CLOSED';
+      }
+
+
+.sidebar {
+  display: flex;
+    position: fixed;
+    right: 1.5vw;
+    top: 1.5vw;
+    bottom: 3vw;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: calc(100% - 3vw);
+    width: 20vw;
+    align-items: stretch;
+}
+.sidebar .menu, .sidebar .info {
+  border: 1px solid #fff;
+  padding: .7vw 1vw;
+  box-sizing: border-box;
+}
+
+.menu {
+
+}
+
+.menu .link {
+  display: block;
+  margin-left: 0px;
+  line-height: 2;
+}
+
+.info {
+  display: flex;
+    flex-direction: column;
+        justify-content: space-between;
+}
+
+    .info .line:last-child {
+      margin-bottom: 0px !important;
+    }
+
+    .info img {
+      max-width: calc(100%);
+      height: auto;
+      max-height: 100%;
+      /* min-height: 100%; */
+      margin-top: var(--font-size);
+    }
+
+
+.big-logo {
+  display: block;
+}
