@@ -55,9 +55,15 @@ pre {
       margin-left: calc(var(--font-size) * 2);
         }
 
+        .line .link-active {
+          color: var(--blue);
+            }
+
         .terminal .line:last-child {
           margin-bottom: 0px !important;
         }
+
+
 
 .logo-small {
   width: 7vw;
@@ -142,7 +148,7 @@ pre {
 
 @media (min-width: 768px) {
   .terminal .info {
-    /* display: none */
+    display: none
   }
 }
 
@@ -218,7 +224,7 @@ pre {
   		}
 
 		body {
-      background: none;
+      background: #eee;
       color: #000;
 				font-size: 12px;
 				print-color-adjust: exact;
@@ -235,14 +241,15 @@ pre {
       border: 0px solid #000;
       padding: 0px;
       color: #000;
-      width: 100vw;
-      height: 100vh;
+      width: calc(100vw - 0.5in);
+      height: calc(100vw - 0.5in);
       display: block;
       background: none;
     }
 
       .terminal .info img {
-        /* display: none; */
+        float: right;
+
       }
 
 
