@@ -946,14 +946,13 @@ app.get("/blog/:slug", async (req,res) => {
 
 
 app.get("/ecpc", async (req,res) => {
-  // const response = await getDatabaseEntries("42196bb86b734120aa62e52e6547b5a0", [{property:"Publish-Date", direction:"descending"}])
-  // const postData = response.map((post) => {
-  //   console.log(post)
-  //   return parseNotionPage(post)
-  // })
-  // console.log(postData)
-  // res.render("ecpc/guestbook", {posts: postData})
-  res.render("projects/ecpc/ecpc")
+  const response = await getDatabaseEntries("2d4d8b47e32149b5bc8f40805246446d", [{property:"Date", direction:"ascending"}])
+  const postData = response.map((post) => {
+    console.log(post)
+    return parseNotionPage(post)
+  })
+  console.log(postData)
+  res.render("projects/ecpc/ecpc", {programs: postData})
 
 })
 

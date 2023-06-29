@@ -32,6 +32,7 @@ body {
 pre {
   color: var(--yellow);
   font-family: Courier;
+  margin: var(--font-size) 0px;
 }
 
 .terminal {
@@ -43,8 +44,14 @@ pre {
   margin-bottom: calc(var(--font-size)*1.2);
 }
 
-    .indent {
+    .indent, .indent-link {
       margin-left: calc(var(--font-size) * 2);
+    }
+
+    .indent2{
+      margin-left: calc(var(--font-size) * 4);
+      border: 2px dotted #fff;
+      padding: calc(var(--font-size) );
     }
 
     .indent::before {
@@ -56,21 +63,39 @@ pre {
         }
 
         .line .link-active {
-          color: var(--blue);
+          margin-top: calc(var(--font-size) * 2);
+          display: block;
+          color: var(--yellow);
             }
 
         .terminal .line:last-child {
           margin-bottom: 0px !important;
         }
 
+        .terminal a {
+          white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+        }
 
-        .line .link:not(:last-child) {
+        /* .terminal .line:not(:last-child) .link  {
+          color: #222
+            }
+
+            .terminal .line:last-child .link{
+              color: #fff
+                } */
+
+
+
+        /* .line .link:not(:last-child) {
           color: #ddd
             }
 
             .line .link:last-child {
               color: #fff
-                }
+                } */
 
 
 
@@ -229,11 +254,20 @@ pre {
     }
 
     @page {
-  		margin: 0.25in;
+  		margin: 0in;
+      size: auto;
+      padding: 0.5in;
+
   		}
 
+
+        .pagebreak {
+          page-break-before: always;
+        }
+
+
 		body {
-      background: #eee;
+      background: none;
       color: #000;
 				font-size: 12px;
 				print-color-adjust: exact;
@@ -261,6 +295,12 @@ pre {
 
       }
 
+
+
+      .logo-small {
+        width: 7vw;
+        mix-blend-mode: difference;
+      }
 
 
 

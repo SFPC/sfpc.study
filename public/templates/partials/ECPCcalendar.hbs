@@ -1,0 +1,39 @@
+<div class="pagebreak">
+</div>
+<div class="line">
+  <span class="link-active" id="link-about">[C] Calendar</span>
+</div>
+
+<pre>
+  ,----..               ,--,
+ /   /   \            ,--.'|                              ,---,
+|   :     :           |  | :                  ,---,     ,---.'|              __  ,-.
+.   |  ;. /           :  : '              ,-+-. /  |    |   | :            ,' ,'/ /|
+.   ; /--`   ,--.--.  |  ' |      ,---.  ,--.'|'   |    |   | |   ,--.--.  '  | |' |
+;   | ;     /       \ '  | |     /     \|   |  ,"' |  ,--.__| |  /       \ |  |   ,'
+|   : |    .--.  .-. ||  | :    /    /  |   | /  | | /   ,'   | .--.  .-. |'  :  /
+.   | '___  \__\/: . .'  : |__ .    ' / |   | |  | |.   '  /  |  \__\/: . .|  | '
+'   ; : .'| ," .--.; ||  | '.'|'   ;   /|   | |  |/ '   ; |:  |  ," .--.; |;  : |
+'   | '/  :/  /  ,.  |;  :    ;'   |  / |   | |--'  |   | '/  ' /  /  ,.  ||  , ;
+|   :    /;  :   .'   \  ,   / |   :    |   |/      |   :    :|;  :   .'   \---'
+ \   \ .' |  ,     .-./---`-'   \   \  /'---'        \   \  /  |  ,     .-./
+  `---`    `--`---'              `----'               `----'    `--`---'
+</pre>
+
+
+
+<div class="line">
+  What's on at ECPC:
+</div>
+
+{{#each programs}}
+<div class="line indent">
+  {{"Day of Week"}},	{{Date.start}}{{#if Date.end}} - {{Date.end}}{{/if}}	·   {{Time}}
+  <!-- <BR> Experiments in Networked Performance Showcase with Todd Anderson and Tiri Kananuruk -->
+</div>
+
+<div class="line indent2">
+  {{Name}}
+</div>
+
+{{/each}}
