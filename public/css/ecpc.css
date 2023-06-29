@@ -31,12 +31,19 @@ body {
 
 a, a:link, a:visited {
   color: var(--blue);
+  line-break: anywhere;
+  word-break: break-all !important;
 }
 
 pre {
   color: var(--yellow);
   font-family: Courier;
   margin: var(--font-size) 0px;
+}
+
+marquee {
+  width: 100vw;
+  margin-left: -3vw;
 }
 
 .terminal {
@@ -137,6 +144,7 @@ pre {
     bottom: 3vw;
     flex-direction: column;
     justify-content: space-between;
+    /* justify-content: flex-end; */
     flex-wrap: nowrap;
     height: calc(100% - 3vw);
     width: 20vw;
@@ -163,6 +171,7 @@ pre {
     flex-direction: column;
     justify-content: space-between;
     background: #000;
+    height: 100%;
 }
 
     .info .line:last-child {
@@ -188,6 +197,10 @@ pre {
   .terminal .info {
     display: none
   }
+
+  /* marquee {
+    display: none
+  } */
 }
 
 
@@ -238,6 +251,12 @@ pre {
       box-sizing: border-box;
       margin-top: 10vw;
     }
+
+
+    pre.desk {
+      display: none;
+    }
+
 
 
 
@@ -306,6 +325,9 @@ pre {
         mix-blend-mode: difference;
       }
 
+ marquee {
+   display: none
+ }
 
 
 
