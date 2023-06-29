@@ -29,6 +29,10 @@ body {
   letter-spacing: 1px;
 }
 
+a, a:link, a:visited {
+  color: var(--blue);
+}
+
 pre {
   color: var(--yellow);
   font-family: Courier;
