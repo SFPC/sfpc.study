@@ -10,7 +10,8 @@ const { response } = require("express")
 const app = express()
 const PORT = process.env.PORT || 3000
 
-const NOTION_STORE_DATABASE_ID = "11ee959b7fdb4204a9ce46c9224b1818";
+const NOTION_FUNDRAISER_DATABASE_ID = "11ee959b7fdb4204a9ce46c9224b1818";
+const NOTION_STORE_DATABASE_ID = "7c36ef34cebb48e097706442634abaaf";
 
 console.log("starting up")
 app.use(express.static("public"))
@@ -541,6 +542,88 @@ app.get("/about/donors", async (req,res) => {
 
 
 
+
+
+
+app.get("/store", async (req, res) => {
+
+
+
+  const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
+    { property: "Name", direction: "descending" },
+  ]);
+  console.log(response);
+
+  const productsData = response.map((product) => {
+    return parseProductData(product);
+  });
+
+  const shopifyData = await getShopifyProducts();
+
+  for (const product of productsData) {
+    const shopifyId = product["Shopify ID"];
+
+    if (!shopifyId) {
+      continue;
+    }
+
+    const node = shopifyData[`gid://shopify/Product/${shopifyId}`];
+
+    if (node) {
+      product.availableForSale = node.availableForSale;
+      product.totalInventory = node.totalInventory;
+      product.availableInventory = node.variants.edges.reduce((accum, val) => {
+        return accum + val.node.quantityAvailable;
+      }, 0);
+    }
+  }
+
+  console.log(productsData);
+  res.render("store/storefront", { products: productsData });
+});
+
+
+
+app.get("/store/:slug", async (req, res) => {
+  //filter by slug here
+  console.log(req.params.slug);
+  const response = await getDatabaseEntry(NOTION_STORE_DATABASE_ID, {
+    property: "Website-Slug",
+    rich_text: { equals: req.params.slug },
+  });
+  console.log(response);
+
+  if (response) {
+    const productData = parseProductData(response);
+    const shopifyId = productData["Shopify ID"];
+
+    if (shopifyId) {
+      try {
+        const shopifyData = await getShopifyProduct(shopifyId);
+
+        if (shopifyData) {
+          productData.availableForSale = shopifyData.availableForSale;
+          productData.totalInventory = shopifyData.totalInventory;
+          productData.availableInventory = shopifyData.variants.edges.reduce(
+            (accum, val) => {
+              return accum + val.node.quantityAvailable;
+            },
+            0
+          );
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    console.log(productData);
+    res.render("store/product", productData);
+  }
+});
+
+
+
+
 app.get("/fundraiser", async (req, res) => {
 
   const responseTest = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
@@ -550,7 +633,7 @@ app.get("/fundraiser", async (req, res) => {
   })
   console.log(testimonialData)
 
-  const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
+  const response = await getDatabaseEntries(NOTION_FUNDRAISER_DATABASE_ID, [
     { property: "Name", direction: "descending" },
   ]);
   console.log(response);
@@ -588,7 +671,7 @@ app.get("/fundraiser", async (req, res) => {
 app.get("/fundraiser/:slug", async (req, res) => {
   //filter by slug here
   console.log(req.params.slug);
-  const response = await getDatabaseEntry(NOTION_STORE_DATABASE_ID, {
+  const response = await getDatabaseEntry(NOTION_FUNDRAISER_DATABASE_ID, {
     property: "Website-Slug",
     rich_text: { equals: req.params.slug },
   });
@@ -633,7 +716,7 @@ app.get("/fundraiser/winter-23", async (req, res) => {
   })
   console.log(testimonialData)
 
-  const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
+  const response = await getDatabaseEntries(NOTION_FUNDRAISER_DATABASE_ID, [
     { property: "Name", direction: "descending" },
   ]);
   console.log(response);
@@ -669,7 +752,7 @@ app.get("/fundraiser/winter-23", async (req, res) => {
 app.get("/fundraiser/winter-23/:slug", async (req, res) => {
   //filter by slug here
   console.log(req.params.slug);
-  const response = await getDatabaseEntry(NOTION_STORE_DATABASE_ID, {
+  const response = await getDatabaseEntry(NOTION_FUNDRAISER_DATABASE_ID, {
     property: "Website-Slug",
     rich_text: { equals: req.params.slug },
   });
@@ -861,6 +944,20 @@ app.get("/blog/:slug", async (req,res) => {
   res.render("blog/post", {title: parsedData.Name, postHTML:postHTML, ...parsedData})
 })
 
+
+app.get("/ecpc", async (req,res) => {
+  // const response = await getDatabaseEntries("42196bb86b734120aa62e52e6547b5a0", [{property:"Publish-Date", direction:"descending"}])
+  // const postData = response.map((post) => {
+  //   console.log(post)
+  //   return parseNotionPage(post)
+  // })
+  // console.log(postData)
+  // res.render("ecpc/guestbook", {posts: postData})
+  res.render("projects/ecpc/ecpc")
+
+})
+
+
 app.get("/ecpc/guestbook", async (req,res) => {
   // const response = await getDatabaseEntries("42196bb86b734120aa62e52e6547b5a0", [{property:"Publish-Date", direction:"descending"}])
   // const postData = response.map((post) => {
@@ -869,9 +966,12 @@ app.get("/ecpc/guestbook", async (req,res) => {
   // })
   // console.log(postData)
   // res.render("ecpc/guestbook", {posts: postData})
-  res.render("ecpc/guestbook")
+  res.render("projects/ecpc/guestbook")
 
 })
+
+
+
 // app.get("/blog/:slug", async (req,res) => {
 //   //filter by slug here
 //   console.log(req.params.slug)
@@ -1079,6 +1179,7 @@ function parseProductData(apiResponse){
   //this is the data that will be passes to the class template
 
   returnObj.cost=productInfo["Cost"]?.number
+  returnObj.tags=productInfo["Tags"]?.multi_select[0]?.name
   returnObj.type=productInfo["Product-Type"]?.multi_select[0]?.name
   returnObj.selltype=productInfo["Sell-Type"]?.multi_select[0]?.name
   returnObj.goodstype=productInfo["Goods-Type"]?.multi_select[0]?.name

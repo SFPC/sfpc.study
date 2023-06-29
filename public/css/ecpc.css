@@ -64,6 +64,15 @@ pre {
         }
 
 
+        .line .link:not(:last-child) {
+          color: #ddd
+            }
+
+            .line .link:last-child {
+              color: #fff
+                }
+
+
 
 .logo-small {
   width: 7vw;
