@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 var time = calcTime('0');
 
-$('#date').html(formatDate(d) + ' · ' +  time)
+$('#date').html(formatDate(d))
 
 
 });

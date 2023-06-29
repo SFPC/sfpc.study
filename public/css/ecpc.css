@@ -149,6 +149,7 @@ marquee {
     height: calc(100% - 3vw);
     width: 20vw;
     align-items: stretch;
+    gap: var(--font-size);
 }
 .sidebar .menu, .sidebar .info {
   border: 1px solid #fff;
