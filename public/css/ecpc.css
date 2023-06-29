@@ -105,7 +105,7 @@ pre {
 }
 
 .menu {
-
+  background: #000;
 }
 
 .menu .link {
@@ -117,7 +117,8 @@ pre {
 .info {
   display: flex;
     flex-direction: column;
-        justify-content: space-between;
+    justify-content: space-between;
+    background: #000;
 }
 
     .info .line:last-child {
@@ -135,4 +136,59 @@ pre {
 
 .big-logo {
   display: block;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+  :root {
+      --font-size: calc(12px + 0.3vw);
+    }
+
+    .terminal {
+      padding: 3vw;
+      width: 94vw;
+      overflow-x: hidden;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+
+
+    /* .sidebar {
+      display: none
+    } */
+
+    .sidebar .info {
+      display: none;
+    }
+
+    .logo-small {
+      width: 18vw;
+    }
+
+    .sidebar {
+      display: block;
+        position: fixed;
+        right: 3vw;
+        top: 3vw;
+        top: 3vw;
+        height: auto;
+        width: 40vw;
+    }
+
+    .terminal .info {
+      border: 1px solid #fff;
+      padding: 1vw 2vw;
+      box-sizing: border-box;
+      margin-top: 10vw;
+    }
+
+
+
 }
