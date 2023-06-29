@@ -7,7 +7,7 @@ function formatDate(d){
     return days[d.getDay()] + ", " + months[d.getMonth()] + " " + (d.getDate() < 10 ? "0" + d.getDate() : d.getDate()) + ", " + d.getFullYear();
 }
 
-function calcTime(city, offset) {
+function calcTime(offset) {
     // create Date object for current location
     var d = new Date();
 
@@ -27,7 +27,9 @@ function calcTime(city, offset) {
 
 $(document).ready(function() {
 
-$('#date').html(formatDate(d))
+var time = calcTime('0');
+
+$('#date').html(formatDate(d) + ' · ' +  time)
 
 
 });

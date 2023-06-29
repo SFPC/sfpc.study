@@ -24,8 +24,26 @@
   <link href="/styles.css" rel="stylesheet">
   <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
   <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico" />
+  <link rel="stylesheet" href="https://use.typekit.net/thn3crj.css">
+
+
 
   <script src="/jquery-3.6.0.min.js"></script>
+
+  <script>
+(function (s, e, n, d, er) {
+  s['Sender'] = er;
+  s[er] = s[er] || function () {
+    (s[er].q = s[er].q || []).push(arguments)
+  }, s[er].l = 1 * new Date();
+  var a = e.createElement(n),
+      m = e.getElementsByTagName(n)[0];
+  a.async = 1;
+  a.src = d;
+  m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+sender('2574a565750725')
+</script>
 
   <!-- stats -->
   <script type="text/javascript">
@@ -42,21 +60,49 @@
 
 
   <!-- <script data-goatcounter="https://sfpc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
-
-
   <!-- end stats -->
+
+ 
 </head>
 
-
 <body>
+
   {{> header}}
-  {{> footer}}
+  </div>
+
+  <div id="footer">
+    <div class="mode"><button id="mode-toggle"></button></a></div>
+
+  </div>
+
+
+  <div class="website-grid grid-hide">
+    <div class="grid-inner">
+      <section>
+        <div class="grid-2">
+          <!-- <div class="chars chars1"></div> -->
+          <p class="large">School</p>
+        </div>
+        <div class="grid-2">
+          <!-- <div class="chars chars1"></div> -->
+          <p class="large">for</p>
+        </div>
+        <div class="grid-2">
+          <!-- <div class="chars chars3"></div> -->
+          <p class="large">Poetic</p>
+        </div>
+        <div class="grid-2">
+          <!-- <div class="chars chars4"></div> -->
+          <p class="large">Computation</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
 
   <div class="crt-overlay crt-overlay-fullsize"></div>
 
-
-  <div id="shell" class="shell shell-fullsize projects sfpc">
-
+  <div id="shell" class="shell shell-fullsize home animsition sfpc">
 
     <div class="loader-content">
       <p tabindex="0" class="large">
@@ -64,25 +110,34 @@
       </p>
     </div>
 
+    <h4 class="breadcrumb hide-content">
+      <a href="/newsletter">newsletter</a>
+    </h4>
 
 
 
-    <!-- <h4 class="breadcrumb  hide-content"><a href="">{{this.[External-Website]}} participate</a></h4> -->
+    <div id="newsletter" class="hide-content shell-content">
 
 
 
-    <iframe class="newsletter-signup" src="https://stats.sender.net/forms/e09QVa/view" frameBorder="0">Browser not compatible.</iframe>
-
-
+        <div style="text-align: left" class="sender-form-field" data-sender-form-id="kuzz9gywe09qva9q3ex"></div>
 
 
 
 
+    </div>
 
-</div>
 
-  <script src="/outside.js"></script>
-  <script src="/carousel.js"></script>
+
+
+
+
+
+
+
+
+    <script src="outside.js"></script>
+    <script src="closed.js"></script>
 
 
 </body>
