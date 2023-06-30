@@ -1,13 +1,12 @@
 <div class="pagebreak">
 </div>
+<div class="page"  id="guestbook">
 <div class="line">
   <span class="link-active" id="link-about">[G] Guestbook</span>
 </div>
 
+<marquee style="width: 100vw"  scrollamount="15" scrolldelay="0"  loop="-1" behavior="scroll">
 <pre>
-
-
-
         * ***                                                     *                                *
       *  ****  *                                          *     **                               **
      *  *  ****                                          **     **                               **
@@ -23,13 +22,19 @@
      ***     *       ******* **  ****    * * **** *      **     **    **    ******     ******    **  ***
       *******         *****   **  *******     ****        **     *****       ****       ****     **   *** *
         ***                        *****                          ***                             **   ***
-
-
-
-
-
-
 </pre>
+</marquee>
 
-<div class="line">
-  TK TK</div>
+{{#each guests}}
+{{#if unpublish}}
+{{else}}
+<div class="line indent">
+{{Date}}
+</div>
+<div class="line indent2">
+{{Name}}: {{Message}}
+</div>
+{{/if}}
+{{/each}}
+
+</div>

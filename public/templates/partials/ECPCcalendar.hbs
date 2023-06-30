@@ -1,9 +1,10 @@
 <div class="pagebreak">
 </div>
+<div class="page"  id="calendar">
 <div class="line">
   <span class="link-active" id="link-about">[C] Calendar</span>
 </div>
-
+<marquee style="width: 100vw"  scrollamount="15" scrolldelay="0"  loop="-1" behavior="scroll">
 <pre>
   ,----..               ,--,
  /   /   \            ,--.'|                              ,---,
@@ -19,7 +20,7 @@
  \   \ .' |  ,     .-./---`-'   \   \  /'---'        \   \  /  |  ,     .-./
   `---`    `--`---'              `----'               `----'    `--`---'
 </pre>
-
+</marquee>
 
 
 <div class="line">
@@ -27,12 +28,55 @@
 </div>
 
 {{#each programs}}
+
 <div class="line indent">
   {{"Day of Week"}},	{{Date.start}}{{#if Date.end}} - {{Date.end}}{{/if}}	·   {{Time}}
 </div>
 
-<div class="line indent2">
-  {{Name}}
+
+<div class="accordionElement">
+ <div class="accordionTitle">{{Name}}</div>
+ <div class="accordionContent">
+
+   <div class="line indent">
+     {{Description}}
+   </div>
+
+   <div class="line indent">
+     Cost: Free {{#if "Suggested Donation"}}(Suggested donation: ${{"Suggested Donation"}}){{/if}}
+   </div>
+
+   {{#if RSVP}}
+   <div class="line indent">
+     RSVP [<a href="{{RSVP}}" target="_blank">{{RSVP}}</a>]
+   </div>
+   {{/if}}
+
+   <div class="line indent">
+     Teacher:
+   </div>
+
+   <div class="line indent2">
+     Todd anderson is...
+   </div>
+
+
+   <div class="line indent">
+     {{#if Teachers}}Assistant Teacher & {{/if}}Lab Technician: {{"Lab Technician"}}
+   </div>
+
+   <div class="line indent2">
+     Todd anderson is...
+   </div>
+
+   </div>
 </div>
 
+
+
+
+
+
 {{/each}}
+
+</div>

@@ -25,11 +25,22 @@ function calcTime(offset) {
 }
 
 
+
+
+
 $(document).ready(function() {
 
 var time = calcTime('0');
 
-$('#date').html(formatDate(d))
+$('#date').html(formatDate(d));
+
+
+$('.accordionTitle').click(function(){
+		$(this).siblings('.accordionContent').slideToggle();
+		$(this).toggleClass('contentOpen');
+	});
+
+
 
 
 });

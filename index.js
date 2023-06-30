@@ -947,25 +947,56 @@ app.get("/blog/:slug", async (req,res) => {
 
 app.get("/ecpc", async (req,res) => {
   const response = await getDatabaseEntries("2d4d8b47e32149b5bc8f40805246446d", [{property:"Date", direction:"ascending"}])
+
+
+
   const postData = response.map((post) => {
-    console.log(post)
-    return parseNotionPage(post)
-  })
+    return parseECPCData(post);
+  });
+
+
   console.log(postData)
   res.render("projects/ecpc/ecpc", {programs: postData})
 
 })
 
 
-app.get("/ecpc/guestbook", async (req,res) => {
-  // const response = await getDatabaseEntries("42196bb86b734120aa62e52e6547b5a0", [{property:"Publish-Date", direction:"descending"}])
-  // const postData = response.map((post) => {
-  //   console.log(post)
-  //   return parseNotionPage(post)
-  // })
-  // console.log(postData)
-  // res.render("ecpc/guestbook", {posts: postData})
-  res.render("projects/ecpc/guestbook")
+
+
+
+
+
+
+app.get("/ecpc-launch", async (req,res) => {
+  const response = await getDatabaseEntries("2d4d8b47e32149b5bc8f40805246446d", [{property:"Date", direction:"ascending"}])
+
+  const guestbook = await getDatabaseEntries("42196bb86b734120aa62e52e6547b5a0", [{property:"Date", direction:"descending"}])
+
+  const store = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
+    { property: "Name", direction: "ascending" },
+  ]);
+
+
+  const postData = response.map((post) => {
+    return parseECPCData(post);
+  });
+
+  const guestData = guestbook.map((post) => {
+    return parseECPCData(post)
+  })
+
+  const storeData = store.map((post) => {
+    return parseECPCData(post)
+  })
+
+  console.log(postData)
+  res.render("projects/ecpc/ecpc-launch", {programs: postData, items: storeData, guests: guestData})
+
+})
+
+
+app.get("/ecpc/login", async (req,res) => {
+  res.render("projects/ecpc/login")
 
 })
 
@@ -1170,6 +1201,22 @@ async function getPageContent(notionId, contentToggleName="web content"){
   //
 // Notion Parsing Functions Below
 //
+
+
+
+function parseECPCData(apiResponse){
+  const ecpcInfo = apiResponse.properties;
+  let returnObj = parseNotionPage(apiResponse);
+  //this is the data that will be passes to the class template
+
+  returnObj.publish=ecpcInfo["Publish"]?.checkbox
+  returnObj.unpublish=ecpcInfo["Unpublish"]?.checkbox
+  returnObj.date=prettyDateString(ecpcInfo["Date"]?.created_time?.start)
+
+  return returnObj
+
+}
+
 
 
 function parseProductData(apiResponse){

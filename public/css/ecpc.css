@@ -29,6 +29,10 @@ body {
   letter-spacing: 1px;
 }
 
+.logout {
+  font-size: calc(var(--font-size)*.75);
+  word-break: break-all;
+}
 a, a:link, a:visited {
   color: var(--blue);
   line-break: anywhere;
@@ -51,6 +55,11 @@ marquee {
   width: 70vw;
 }
 
+.terminal img {
+  height: 10vw;
+  width: auto;
+}
+
 .line {
   margin-bottom: calc(var(--font-size)*1.2);
 }
@@ -61,11 +70,9 @@ marquee {
 
     .indent2{
       margin-left: calc(var(--font-size) * 4);
-      border: 2px dotted #fff;
-      padding: calc(var(--font-size) );
     }
 
-    .indent::before {
+    .indent::before, .indent2::before {
       content: '>> '
     }
 
@@ -191,6 +198,77 @@ marquee {
 .big-logo {
   display: block;
 }
+
+.accordionElement {
+  margin-left: calc(var(--font-size) * 4);
+  border: 2px dotted #fff;
+  padding: calc(var(--font-size) );
+  margin-bottom: calc(var(--font-size)*1.2);
+  cursor:pointer;
+}
+.accordionTitle {
+    padding: 0 calc(var(--font-size) * 4) 0 0;
+    position: relative;
+    cursor:pointer;
+}
+.accordionTitle:after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: calc(var(--font-size) );
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: inherit;
+    font-size: calc(var(--font-size) );
+}
+.accordionTitle.contentOpen:after {
+    content: "-";
+}
+.accordionContent {
+    display: none;
+    margin-top: calc(var(--font-size)*1.2);
+
+}
+
+
+
+.label {
+display: block; 
+  margin-bottom: calc(var(--font-size)*1.2);
+}
+input {
+  border: 2px dotted #fff;
+  padding: calc(var(--font-size) );
+  background: #000;
+  width: 60vw;
+  display: block;
+  color: #fff;
+
+   font-family: 'Screenfont';
+   font-size: var(--font-size);
+   letter-spacing: 1px;
+}
+
+textarea
+{
+  border: 2px dotted #fff;
+  padding: calc(var(--font-size) );
+  background: #000;
+  width: 60vw;
+  display: block;
+  color: #fff;
+
+  font-family: 'Screenfont';
+  font-size: var(--font-size);
+  letter-spacing: 1px;
+}
+
+
+
 
 
 

@@ -1,11 +1,12 @@
 <div class="pagebreak">
 </div>
+<div class="page"  id="visit">
 <div class="line">
   <span class="link-active" id="link-about">[V] Visit</span>
 </div>
 
+<marquee style="width: 100vw"  scrollamount="10" scrolldelay="0"  loop="-1" behavior="scroll">
 <pre>
-
    ▄               ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄
   ▐░▌             ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
    ▐░▌           ▐░▌  ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀  ▀▀▀▀█░█▀▀▀▀  ▀▀▀▀█░█▀▀▀▀
@@ -17,19 +18,18 @@
          ▐░▐░▌        ▄▄▄▄█░█▄▄▄▄  ▄▄▄▄▄▄▄▄▄█░▌ ▄▄▄▄█░█▄▄▄▄      ▐░▌
           ▐░▌        ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌     ▐░▌
            ▀          ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀       ▀
-
-
 </pre>
+</marquee>
 
 <div class="line">
-  Electronic Cafe for Poetic Computation is located at Recess (46 Washington Ave, Brooklyn, NY 11238). We are open to public from Thursday to Satuday, 12 - 6pm, from July 8 to August 12, 2023.
+  Electronic Cafe for Poetic Computation is located at Recess (46 Washington Ave, Brooklyn, NY 11238). We are open to public from Thursday to Satuday, 12 - 6pm ET, from July 8 to August 12, 2023.
 </div>
 <div class="line">
   Prepare for your visit... <span class="link" id="link-about">[1] Accessibility</span>
-  <span class="link" id="link-about">[2] Available Tech</span>
-  <span class="link" id="link-about">[3] Covid-19 Safety</span>
-  <span class="link" id="link-about">[4] Store</span>
-  <span class="link" id="link-about">[5] Library</span>
+  <span class="link" id="link-about">[2] Covid-19 Safety</span>
+  <span class="link" id="link-about">[3] Available Tech (Hardware & Software)</span>
+  <span class="link" id="link-about">[4] Library</span>
+  <span class="link" id="link-about">[5] Store</span>
 </div>
 
 
@@ -41,22 +41,8 @@
       All program space at The Electronic Cafe for Poetic Computation at Recess (46 Washington Avenue) is fully accessible for wheelchair users. Restrooms are gender neutral and ADA compliant.
 </div>
 
-
-<div class="line indent-link">
-  <span class="link-active" id="link-about">[2] Available Tech</span>
-  </div>
-  <div class="line indent">
-    Computers: Eight computer stations and four laptops are available on a first come, first serve basis. Those who don’t own a laptop will be prioritized first.
- </div>
- <div class="line indent">
-   Printer: TK TK
-</div>
-
-
-
-
     <div class="line indent-link">
-      <span class="link-active" id="link-about">[3] Covid-19 Safety</span>
+      <span class="link-active" id="link-about">[2] Covid-19 Safety</span>
       </div>
       <div class="line indent">
         The Electronic Cafe for Poetic Computation is a mask-on space. All event attendees, workshop participants, teachers and staff are expected to be masked inside the cafe. Please bring a mask. If you don't have one, masks will be provided.
@@ -64,18 +50,40 @@
 
 
       <div class="line indent-link">
-        <span class="link-active" id="link-about">[4] Store</span>
+        <span class="link-active" id="link-about">[3] Available Tech</span>
         </div>
         <div class="line indent">
-          TK TK
+          Computers: 8 computer stations and 4 laptops are available on a first come, first serve basis. Those who don’t own a laptop will be prioritized first.
+       </div>
+       <div class="line indent">
+         Printer: TK TK
+      </div>
+      <div class="line indent">
+        Games: TK TK
+     </div>
+
+
+
+     <div class="line indent-link">
+       <span class="link-active" id="link-about">[4] Library</span>
+       </div>
+       <div class="line indent">
+         The following books are available to browse at the Library for Poetic Computation located inside ECPC. Interested in donating a book to our collection? Email us [<a href="mailto:info@sfpc.study">info@sfpc.study</a>]!
+       </div>
+
+
+      <div class="line indent-link">
+        <span class="link-active" id="link-about">[5] Store</span>
+        </div>
+        <div class="line indent">
+          Visit our space to browse a wealth of objects, art, prints, ephemera, gadgets, merchandise and more, which you can purchase. Proceeds from our store
+          go towards scolarships and running programs. Available objects include:
+          <BR><BR>
+          {{#each items}}
+          {{#if publish}}
+          <img src="{{Image-URL}}">
+          {{/if}}
+          {{/each}}
         </div>
 
-        <div class="line indent-link">
-          <span class="link-active" id="link-about">[5] Library</span>
-          </div>
-          <div class="line indent">
-            Library for Poetic Computation: TK TK
-          </div>
-          <div class="line indent">
-            Cybernetics Library: TK TK
-          </div>
+</div>
