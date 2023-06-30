@@ -65,69 +65,69 @@ $(document).ready(function() {
 
 
   $(document).on("click", ".link-about" , function() {
-      $(".terminal").append(contentAbout);
-          $("html, body").animate({ scrollTop:$('.terminal .page').last().position().top  }, "slow");
+      $(".terminal-content").append(contentAbout);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
   });
 
   $(document).on("click", ".link-aboutCredits" , function() {
-      $(".terminal").append(contentAboutCredits);
-          $("html, body").animate({ scrollTop:$('.terminal .page').last().position().top  }, "slow");
+      $(".terminal-content").append(contentAboutCredits);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
   });
 
   $(document).on("click", ".link-aboutContact" , function() {
-      $(".terminal").append(contentAboutContact);
-          $("html, body").animate({ scrollTop:$('.terminal .page').last().position().top  }, "slow");
+      $(".terminal-content").append(contentAboutContact);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
   });
 
   $(document).on("click", ".link-calendar" , function() {
-      $(".terminal").append(contentCalendar);
-          $("html, body").animate({ scrollTop:$('.terminal .page').last().position().top  }, "slow");
+      $(".terminal-content").append(contentCalendar);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
 
   });
 
   $(document).on("click", ".link-visit" , function() {
-      $(".terminal").append(contentVisit);
-          $("html, body").animate({ scrollTop:$('.terminal .page').last().position().top  }, "slow");
+      $(".terminal-content").append(contentVisit);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
   });
 
   $(document).on("click", ".link-visitAccess" , function() {
-      $(".terminal").append(contentVisitAccess);
-          $("html, body").animate({ scrollTop:$('.terminal .page').last().position().top  }, "slow");
+      $(".terminal-content").append(contentVisitAccess);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
   });
 
   $(document).on("click", ".link-visitCovid" , function() {
-      $(".terminal").append(contentVisitCovid);
-          $("html, body").animate({ scrollTop:$('.terminal .page').last().position().top  }, "slow");
+      $(".terminal-content").append(contentVisitCovid);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
   });
 
   $(document).on("click", ".link-visitTech" , function() {
-      $(".terminal").append(contentVisitTech);
-          $("html, body").animate({ scrollTop:$('.terminal .page').last().position().top  }, "slow");
+      $(".terminal-content").append(contentVisitTech);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
   });
 
   $(document).on("click", ".link-visitLibrary" , function() {
-      $(".terminal").append(contentVisitLibrary);
-          $("html, body").animate({ scrollTop:$('.terminal .page').last().position().top  }, "slow");
+      $(".terminal-content").append(contentVisitLibrary);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
   });
 
   $(document).on("click", ".link-visitStore" , function() {
-      $(".terminal").append(contentVisitStore);
-          $("html, body").animate({ scrollTop:$('.terminal .page').last().position().top  }, "slow");
+      $(".terminal-content").append(contentVisitStore);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
   });
 
   $(document).on("click", ".link-guestbook" , function() {
-      $(".terminal").append(contentGuestbook);
-          $("html, body").animate({ scrollTop:$('.terminal .page').last().position().top  }, "slow");
+      $(".terminal-content").append(contentGuestbook);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
   });
 
   $(document).on("click", ".link-help" , function() {
-      $(".terminal").append(contentHelp);
-          $("html, body").animate({ scrollTop:$('.terminal .page').last().position().top  }, "slow");
+      $(".terminal-content").append(contentHelp);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
   });
 
   $(document).on("click", ".link-print" , function() {
-      $(".terminal").append(contentPrint);
-          $("html, body").animate({ scrollTop:$('.terminal .page').last().position().top  }, "slow");
+      $(".terminal-content").append(contentPrint);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
   });
 
 
