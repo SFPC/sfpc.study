@@ -74,10 +74,25 @@ marquee {
   width: 70vw;
 }
 
-.terminal img {
-  height: 10vw;
-  width: auto;
-}
+      @keyframes cursor-blink {
+      0% {
+      opacity: 0;
+      }
+      }
+
+    .terminal::after {
+      content: "";
+      width: 7px;
+      height: 25px;
+      background: #888;
+      display: inline-block;
+      animation: cursor-blink 1.5s steps(2) infinite;
+    }
+
+    .terminal img {
+      height: 10vw;
+      width: auto;
+    }
 
 .line {
   margin-bottom: calc(var(--font-size)*1.2);

@@ -50,13 +50,13 @@ $(document).ready(function() {
   var contentHelp = $('#content-help').html();
   var contentPrint = $('#content-print').html();
 
-  var lastDiv = $('.terminal:last-child');
+  var lastDiv = $('.terminal .page').last();
   var lastDivHeight = $(lastDiv).height();
   var goToLast = $(document).height() - lastDivHeight;
 
   $(".link-about").click(function() {
       $(".terminal").append(contentAbout);
-      $("#content-about.load-content").remove();  
+      $("#content-about.load-content").remove();
       $("html, body").animate({ scrollTop:$('.terminal .page').last().position().top  }, "slow");
 
 
