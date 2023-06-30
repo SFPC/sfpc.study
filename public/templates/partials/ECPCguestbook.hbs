@@ -25,15 +25,17 @@
 </pre>
 </marquee>
 
-{{#each guests}}
+{{#each guests}} 
 {{#if unpublish}}
 {{else}}
+{{#if Message}}
 <div class="line indent">
 {{Date}}
 </div>
 <div class="line indent2">
 {{Name}}: {{Message}}
 </div>
+{{/if}}
 {{/if}}
 {{/each}}
 

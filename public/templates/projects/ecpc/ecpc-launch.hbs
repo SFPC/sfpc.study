@@ -50,7 +50,7 @@
 
 <body>
 
-  <div class="terminal">
+  <div class="terminal" id="terminal">
 
     <div class="logo-small">
       <img src="/images/projects/ecpc/logo-small.png">
@@ -131,13 +131,27 @@
    </div>
 
 
+<div class="hide-content">
+<div id="content-about">
+  {{> ECPCabout}}
+</div>
+<div id="content-calendar">
+  {{> ECPCcalendar}}
+</div>
+<div id="content-visit">
+  {{> ECPCvisit}}
+</div>
+<div id="content-guestbook">
+  {{> ECPCguestbook}}
+</div>
+<div id="content-help">
+  {{> ECPChelp}}
+</div>
+<div id="content-print">
+  {{> ECPCprint}}
+</div>
+</div>
 
-{{> ECPCabout}}
-{{> ECPCcalendar}}
-{{> ECPCvisit}}
-{{> ECPCguestbook}}
-{{> ECPChelp}}
-{{> ECPCprint}}
 
 
 </div>
@@ -148,12 +162,12 @@
 <div class="sidebar">
   <div class="menu">
     <!-- MAIN MENU -->
-      <span class="link" id="link-about">[A] About</span>
-      <span class="link" id="link-calendar">[C] Calendar</span>
-      <span class="link" id="link-visit">[V] Visit</span>
-      <span class="link" id="link-guestbook">[G] Guestbook</span>
-      <span class="link" id="link-help">[H] Help</span>
-      <span class="link" id="link-print">[P] Print</span>
+      <span class="link link-about">[A] About</span>
+      <span class="link link-calendar">[C] Calendar</span>
+      <span class="link link-visit">[V] Visit</span>
+      <span class="link link-guestbook">[G] Guestbook</span>
+      <span class="link link-help">[H] Help</span>
+      <span class="link link-print">[P] Print</span>
       <span class="logout">Signed in as Valentin_Despres_0033. <a href="https://sfpc.study/ecpc/login">Log out</a></span>
 
   </div>

@@ -29,6 +29,25 @@ body {
   letter-spacing: 1px;
 }
 
+.hide-content {
+  display: none;
+}
+.load-content {
+  /* display: none; */
+  /* display: block;
+  height: 0px;
+  overflow: hidden; */
+  /* visibility: hidden; */
+}
+
+.show-content {
+/* visibility: hidden; */
+  display: block;
+  /* display: block; */
+  /* height: 0px;
+  overflow: hidden; */
+}
+
 .logout {
   font-size: calc(var(--font-size)*.75);
   word-break: break-all;
@@ -172,6 +191,7 @@ marquee {
   display: block;
   margin-left: 0px;
   line-height: 2;
+  cursor: pointer;
 }
 
 .info {
@@ -237,7 +257,7 @@ marquee {
 
 
 .label {
-display: block; 
+display: block;
   margin-bottom: calc(var(--font-size)*1.2);
 }
 input {
