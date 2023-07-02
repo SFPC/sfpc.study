@@ -972,7 +972,20 @@ app.get("/ecpc-launch", async (req,res) => {
 
   const guestbook = await getDatabaseEntries("42196bb86b734120aa62e52e6547b5a0", [{property:"Date", direction:"descending"}])
 
-  const library = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{property:"Title", direction:"ascending"}])
+  const library = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{property:"Title", direction:"ascending"}],
+     {
+           "and": [
+               {
+ 
+                   "property": "Collection",
+                   "multi_select": {
+                       "contains": "ECPC"
+                   }
+               }
+           ]
+       }
+)
+
 
   const store = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
     { property: "Name", direction: "ascending" },

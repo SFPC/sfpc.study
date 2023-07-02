@@ -43,9 +43,9 @@ $(document).ready(function() {
   	});
 
 
-    // $(document).on("click", ".line img" , function() {
-    //     $(".line img").addClass('zoom');
-    // });
+    $(document).on("click", ".line img" , function() {
+        $(this).toggleClass('zoom');
+    });
     // $(document).on("click", ".line img.zoom" , function() {
     //     $(".line img.zoom").removeClass('zoom');
     // });
@@ -56,12 +56,13 @@ $(document).ready(function() {
            // });
            //
 
-      $( ".line img" ).each(function(index) {
-        $(this).on("click", function(){
-            $(this).toggleClass('zoom');
-            });
+      // $( ".line img" ).each(function(index) {
+      //   $(this).on("click", function(){
+      //       $(this).toggleClass('zoom');
+      //       });
+      //
+      //   });
 
-        });
 
     // $( ".line img.zoom" ).each(function(index) {
     // $(this).on("click", function(){
