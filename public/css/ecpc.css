@@ -419,6 +419,7 @@ pre.print {
         top: 3vw;
         top: 3vw;
         height: auto;
+        max-height: 40vh;
         width: 40vw;
     }
 
