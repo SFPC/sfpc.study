@@ -48,6 +48,8 @@ body {
   overflow: hidden; */
 }
 
+
+
 .logout {
   font-size: calc(var(--font-size)*.75);
   word-break: break-all;
@@ -80,7 +82,7 @@ marquee {
       }
       }
 
-    .terminal::after {
+    .terminal-content::after {
       content: "";
       width: 7px;
       height: 25px;
@@ -92,10 +94,30 @@ marquee {
     .line img {
       height: 10vw;
       width: auto;
+        position: relative;
+        top: auto;
+        left: auto;
+        cursor: pointer;
+        margin: 0 .3vw .3vw 0;
+        display: inline-block;
+        float: left;
     }
+
+    .line img.zoom {
+      display: block;
+      width: 70vw;
+      height: auto !important;
+      margin-bottom: .3vw;
+    }
+
+
+.clear {
+  clear: both;
+}
 
 .line {
   margin-bottom: calc(var(--font-size)*1.2);
+  clear: both;
 }
 
     .indent, .indent-link {
@@ -391,6 +413,18 @@ textarea
       --yellow: #000;
     }
 
+    body {
+    /* IE4-8 and 9 (deprecated). */
+    filter: Gray();
+    /* SVG version for IE10, Chrome 17, FF3.5,
+       Safari 5.2 and Opera 11.6 */
+    filter: url('#grayscale');
+    /* CSS3 filter, at the moment Webkit only. Prefix it for
+       future implementations */
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); /* future-proof */
+  }
+
     @page {
   		margin: 0in;
       size: auto;
@@ -440,9 +474,11 @@ textarea
         mix-blend-mode: difference;
       }
 
- marquee {
+ /* marquee {
    display: none
- }
+ } */
+
+ marquee { overflow:visible; -moz-binding:none; }
 
 
 

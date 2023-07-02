@@ -972,9 +972,12 @@ app.get("/ecpc-launch", async (req,res) => {
 
   const guestbook = await getDatabaseEntries("42196bb86b734120aa62e52e6547b5a0", [{property:"Date", direction:"descending"}])
 
+  const library = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{property:"Title", direction:"ascending"}])
+
   const store = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
     { property: "Name", direction: "ascending" },
   ]);
+
 
 
   const postData = response.map((post) => {
@@ -985,12 +988,16 @@ app.get("/ecpc-launch", async (req,res) => {
     return parseECPCData(post)
   })
 
+  const libData = library.map((post) => {
+    return parseECPCData(post)
+  })
+
   const storeData = store.map((post) => {
     return parseECPCData(post)
   })
 
   console.log(postData)
-  res.render("projects/ecpc/ecpc-launch", {programs: postData, items: storeData, guests: guestData})
+  res.render("projects/ecpc/ecpc-launch", {programs: postData, items: storeData, guests: guestData, books: libData})
 
 })
 

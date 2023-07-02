@@ -43,6 +43,36 @@ $(document).ready(function() {
   	});
 
 
+    // $(document).on("click", ".line img" , function() {
+    //     $(".line img").addClass('zoom');
+    // });
+    // $(document).on("click", ".line img.zoom" , function() {
+    //     $(".line img.zoom").removeClass('zoom');
+    // });
+
+
+           // $('.line img').click(function(){
+           //      $(this).toggleClass('zoom');
+           // });
+           //
+
+      $( ".line img" ).each(function(index) {
+        $(this).on("click", function(){
+            $(this).toggleClass('zoom');
+            });
+
+        });
+
+    // $( ".line img.zoom" ).each(function(index) {
+    // $(this).on("click", function(){
+    //     $(this).removeClass('zoom');
+    //     });
+    // });
+
+
+
+
+
   var contentAbout = $('#content-about').html();
   var contentAboutCredits = $('#content-aboutCredits').html();
   var contentAboutContact = $('#content-aboutContact').html();
