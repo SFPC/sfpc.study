@@ -1067,6 +1067,7 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
   });
 
   const guestData = guestbook.map((post) => {
+    console.log(post)
     return parseECPCData(post)
   })
 
@@ -1084,7 +1085,8 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
   })
 
 
-  console.log(postData)
+  // console.log(postData)
+  console.log(guestData)
   res.render("projects/ecpc/ecpc-launch", {programs: postData, items: storeData, guests: guestData, books: libData, lendedbooks: lendedlibData})
 
 })
@@ -1867,6 +1869,8 @@ function parseNotionData(dataObj){
   }
   else if (dataObj.date)
     return {start: prettyDateString(dataObj.date.start), end: prettyDateString(dataObj.date.end)}
+  else if (dataObj.created_time)
+    return new Date(dataObj.created_time).toLocaleString("en-us")
   else if (dataObj.multi_select){
     let ms = []
     for(let i = 0; i < dataObj.multi_select.length; i++){
