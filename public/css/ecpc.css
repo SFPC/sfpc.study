@@ -495,6 +495,10 @@ pre.print {
     margin-left: calc(var(--font-size) * 2);
   }
 
+  .line img {
+    height: 15vw; 
+  }
+
 
 }
 
