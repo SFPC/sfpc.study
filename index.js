@@ -1304,6 +1304,7 @@ function parseECPCData(apiResponse){
   returnObj.publish=ecpcInfo["Publish"]?.checkbox
   returnObj.unpublish=ecpcInfo["Unpublish"]?.checkbox
   returnObj.date=prettyDateString(ecpcInfo["Date"]?.created_time?.start)
+  returnObj.RSVPdate=prettyDateString(ecpcInfo["RSVP-Date"]?.date?.start)
   // returnObj.cover=ecpcInfo["Cover Photo"]?.[0]
 
 

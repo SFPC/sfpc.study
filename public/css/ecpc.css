@@ -1,5 +1,5 @@
 :root {
-    --font-size: calc(14px + 0.3vw);
+    --font-size: calc(8px + 0.65vw);
     --red: #FF0000;
     --blue: #0000FF;
     --green: #00FF00;
@@ -496,7 +496,7 @@ pre.print {
   }
 
   .line img {
-    height: 15vw; 
+    height: 15vw;
   }
 
 
