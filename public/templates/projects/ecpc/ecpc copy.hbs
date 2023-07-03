@@ -50,17 +50,10 @@
 
 <body>
 
-  <div class="terminal" id="terminal">
-
-
-    <div class="terminal-content">
-
-
-
+  <div class="terminal">
 
     <div class="logo-small">
-      <img src="/images/projects/ecpc/logo-small.png" class="light">
-      <img src="/images/projects/ecpc/logo-small-dark.png" class="dark">
+      <img src="/images/projects/ecpc/logo-small.png">
     </div>
 
 
@@ -86,120 +79,48 @@
 </pre>
 </marquee>
 
-<pre class="print">
-##### /    ##   ###            ###
-######  /  #####    ###            ###
-/#   /  /     #####   ###            ##
-/    /  ##     # ##      ##           ##
-/  ###     #         ##           ##
-##   ##     #         ##    /##    ##      /###      /###   ### /### /###     /##
-##   ##     #         ##   / ###   ##     / ###  /  / ###  / ##/ ###/ /##  / / ###
-##   ##     #         ##  /   ###  ##    /   ###/  /   ###/   ##  ###/ ###/ /   ###
-##   ##     #         ## ##    ### ##   ##        ##    ##    ##   ##   ## ##    ###
-##   ##     #         ## ########  ##   ##        ##    ##    ##   ##   ## ########
-##  ##     #         ## #######   ##   ##        ##    ##    ##   ##   ## #######
-## #      #         /  ##        ##   ##        ##    ##    ##   ##   ## ##
-###      /##      /   ####    / ##   ###     / ##    ##    ##   ##   ## ####    /
-#######/ #######/     ######/  ### / ######/   ######     ###  ###  ### ######/
-####     ####        #####    ##/   #####     ####       ###  ###  ### #####
-</pre>
-
           <div class="line"> Hello<span class="visitor"> guest</span>,</div>
 
           <div class="line indent">
             Welcome to Electronic Cafe for Poetic Computation: an internet cafe and community hub for technological liberation!
-            <!-- <span class="link" id="link-about">[A] About</span> -->
           </div>
 
           <div class="line indent datetime">
             Today is <span id="date"></span>. We are currently <span class="status closed"></span>.
-            <!-- <span class="link" id="link-visit">[V] Visit</span> -->
           </div>
 
-          <!-- <div class="line indent datetime">
+          <div class="line indent datetime">
             Our website and programs are launching soon!
             Follow us on Instagram [<a href="https://www.instagram.com/sfpc_nyc/" target="_blank">@sfpc_nyc</a>] and Twitter [<a href="https://twitter.com/sfpc" target="_blank">@sfpc</a>], or
             join our newsletter [<a href="https://sfpc.study/newsletter" target="_blank">https://sfpc.study/newsletter</a>],
            to be notified.
-          </div> -->
+          </div>
 
-    <div class="line indent happening">
-      HAPPENING SOON: Electronics in Networked Performance Showcase (July 8, 2023,  1pm and 8pm).
-      <span class="link link-calendar">[C] Calendar</span>
+
+
+
+
+
+    <div class="pagebreak">
     </div>
+        <div class="info">
+            <div class="line">
+            Located @Recess<BR>
+            46 Washington Ave,  <BR>
+            Brooklyn, NY 11238
+            </div>
+            <div class="line">
+            Open Thursdays to
+            Saturdays, <BR>
+            12 - 6pm, <BR>
+            Jul 8 - Aug 12, 2023
+            </div>
+            <div class="big-logo">
+              <img src="/images/projects/ecpc/logo-big.png">
+            </div>
+          </div>
 
-
-
-
-
-<div class="hide-content">
-<div id="content-about">
-  {{> ECPCabout}}
-</div>
-<div id="content-aboutCredits">
-  {{> ECPCaboutCredits}}
-</div>
-<div id="content-aboutContact">
-  {{> ECPCaboutContact}}
-</div>
-<div id="content-calendar">
-  {{> ECPCcalendar}}
-</div>
-<div id="content-visit">
-  {{> ECPCvisit}}
-</div>
-<div id="content-visitAccess">
-  {{> ECPCvisitAccess}}
-</div>
-<div id="content-visitCovid">
-  {{> ECPCvisitCovid}}
-</div>
-<div id="content-visitTech">
-  {{> ECPCvisitTech}}
-</div>
-<div id="content-visitLibrary">
-  {{> ECPCvisitLibrary}}
-</div>
-<div id="content-visitStore">
-  {{> ECPCvisitStore}}
-</div>
-<div id="content-guestbook">
-  {{> ECPCguestbook}}
-</div>
-<div id="content-help">
-  {{> ECPChelp}}
-</div>
-<div id="content-print">
-  {{> ECPCprint}}
-</div>
-</div>
-
-</div>
-
-
-
-</div>
-
-<div class="pagebreak">
-</div>
-    <div class="info">
-        <div class="line">
-        Located @Recess<BR>
-        46 Washington Ave,  <BR>
-        Brooklyn, NY 11238
-        </div>
-        <div class="line">
-        Open Thursdays to
-        Saturdays, <BR>
-        12 - 6pm, <BR>
-        Jul 8 - Aug 12, 2023
-        </div>
-        <div class="logo-big">
-          <img src="/images/projects/ecpc/logo-big.png" class="light">
-          <img src="/images/projects/ecpc/logo-big-dark.png" class="dark">
-        </div>
-      </div>
-
+   </div>
 
 
 
@@ -209,17 +130,16 @@
 
 
 <div class="sidebar">
-  <div class="menu">
-    <!-- MAIN MENU -->
-      <span class="link link-about">[A] About</span>
-      <span class="link link-calendar">[C] Calendar</span>
-      <span class="link link-visit">[V] Visit</span>
-      <span class="link link-guestbook">[G] Guestbook</span>
-      <span class="link link-help">[H] Help</span>
-      <span class="link link-print">[P] Print</span>
-      <!-- <span class="logout">Logged in as medium_coolaid. <a href="https://sfpc.study/ecpc/login">Log out</a></span> -->
+  <!-- <div class="menu">
+    MAIN MENU
+      <span class="link" id="link-about">[A] About</span>
+      <span class="link" id="link-calendar">[C] Calendar</span>
+      <span class="link" id="link-visit">[V] Visit</span>
+      <span class="link" id="link-guestbook">[G] Guestbook</span>
+      <span class="link" id="link-help">[H] Help</span>
+      <span class="link" id="link-print">[P] Print</span>
 
-  </div>
+  </div> -->
 
   <div class="info">
     <div class="">
