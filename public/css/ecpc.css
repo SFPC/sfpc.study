@@ -274,6 +274,7 @@ marquee {
 
 .logo-big {
   display: block;
+  cursor: pointer;
 }
 
     .logo-big img.dark {
