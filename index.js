@@ -1049,20 +1049,12 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
 
 
 
-  const postData = response.map(async (post) => {
-    // const teacherData = post.properties.Teachers.relation.map( async (teacher) => {
-    //   // console.log(teacher)
-    //   const teacherInfo = await getPage(teacher.id)
-    //   const parsedInfo = parseNotionPage(teacherInfo)
-    //   // console.log(parsedInfo)
-    //   return parsedInfo
-    // })
-    // post.properties.Teachers = await Promise.all(teacherData)
-    console.log(post)
+  const postData = response.map((post) => {
     return parseECPCData(post);
   });
 
   const guestData = guestbook.map((post) => {
+    console.log(post)
     return parseECPCData(post)
   })
 
@@ -1081,7 +1073,7 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
 
 
   // console.log(postData)
-  // console.log(guestData)
+  console.log(guestData)
   res.render("projects/ecpc/ecpc-launch", {programs: postData, items: storeData, guests: guestData, books: libData, lendedbooks: lendedlibData})
 
 })
@@ -1783,17 +1775,7 @@ function parseClassBlock(classInfo){
   return classBlock
 }
 
-async function getPerson(personName){
-  return getPeople([personName])[0]
-}
-async function getPeople(idArray){
-  let peopleQuery = [];
-  idArray.forEach((personName)=> peopleQuery.push({property:"id", "title": { "contains": personName } }))
-  const people = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
-      "or": peopleQuery,
-  })
-  return cleanPersonData(people)
-}
+
 
 function cleanPersonData(personArray){
   for(let i = 0; i < personArray.length; i++){
