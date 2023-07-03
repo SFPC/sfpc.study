@@ -554,7 +554,27 @@ app.get("/store", async (req, res) => {
   ]);
   console.log(response);
 
+
+    const merch = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [{property:"Name", direction:"ascending"}],
+       {
+             "and": [
+                 {
+
+                     "property": "Product-Type",
+                     "multi_select": {
+                         "contains": "Merch"
+                     }
+                 }
+             ]
+         }
+  )
+
+
   const productsData = response.map((product) => {
+    return parseProductData(product);
+  });
+
+  const merchData = merch.map((product) => {
     return parseProductData(product);
   });
 
@@ -579,7 +599,7 @@ app.get("/store", async (req, res) => {
   }
 
   console.log(productsData);
-  res.render("store/storefront", { products: productsData });
+  res.render("store/storefront", { products: productsData, merch: merchData });
 });
 
 
@@ -972,18 +992,67 @@ app.get("/ecpc-launch", async (req,res) => {
 
   const guestbook = await getDatabaseEntries("42196bb86b734120aa62e52e6547b5a0", [{property:"Date", direction:"descending"}])
 
-  const library = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{property:"Title", direction:"ascending"}],
-     {
-           "and": [
-               {
- 
-                   "property": "Collection",
-                   "multi_select": {
-                       "contains": "ECPC"
-                   }
-               }
-           ]
-       }
+//   const library = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{property:"Title", direction:"ascending"}],
+//      {
+//            "and": [
+//                {
+//
+//                    "property": "Collection",
+//                    "multi_select": {
+//                        "contains": "ECPC"
+//                    }
+//                }
+//            ]
+//        }
+// )
+
+
+const library = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{property:"Title", direction:"ascending"}],
+   {
+
+     "and": [
+         {
+           "property": "Ownership",
+           "multi_select": {
+               "contains": "SFPC"
+             }
+         }
+         ,
+         {
+           "property": "Collection",
+           "multi_select": {
+               "contains": "ECPC"
+             }
+         }
+     ]
+
+
+
+     }
+)
+
+const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{property:"Title", direction:"ascending"}],
+   {
+
+     "and": [
+         {
+           "property": "Ownership",
+           "multi_select": {
+               "contains": "Lended"
+             }
+         }
+         ,
+         {
+           "property": "Collection",
+           "multi_select": {
+               "contains": "ECPC"
+             }
+         }
+     ]
+
+
+
+     }
 )
 
 
@@ -1005,12 +1074,18 @@ app.get("/ecpc-launch", async (req,res) => {
     return parseECPCData(post)
   })
 
+  const lendedlibData = lended.map((post) => {
+    return parseECPCData(post)
+  })
+
+
   const storeData = store.map((post) => {
     return parseECPCData(post)
   })
 
+
   console.log(postData)
-  res.render("projects/ecpc/ecpc-launch", {programs: postData, items: storeData, guests: guestData, books: libData})
+  res.render("projects/ecpc/ecpc-launch", {programs: postData, items: storeData, guests: guestData, books: libData, lendedbooks: lendedlibData})
 
 })
 
@@ -1232,6 +1307,8 @@ function parseECPCData(apiResponse){
   returnObj.publish=ecpcInfo["Publish"]?.checkbox
   returnObj.unpublish=ecpcInfo["Unpublish"]?.checkbox
   returnObj.date=prettyDateString(ecpcInfo["Date"]?.created_time?.start)
+  // returnObj.cover=ecpcInfo["Cover Photo"]?.[0]
+
 
   return returnObj
 
@@ -1253,6 +1330,7 @@ function parseProductData(apiResponse){
   returnObj.pinned=productInfo["Publish"]?.checkbox
   returnObj.store=productInfo["Store?"]?.checkbox
   returnObj.moreImages=parseNotionData(productInfo["More-Image-URLs"])
+
 
   return returnObj
 

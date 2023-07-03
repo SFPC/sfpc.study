@@ -4,23 +4,24 @@
 
 
      <div class="line indent-link">
-       <span class="link-active" id="link-about">[4] Library</span>
+       <span class="link-active" id="link-about">[6] Library</span>
        </div>
        <div class="line indent">
          A curated selection of books, zines and printed matter are available to read and browse at the Library for Poetic Computation located inside ECPC. Interested in donating something to our collection? Visit the space to drop off, or email us [<a href="mailto:info@sfpc.study">info@sfpc.study</a>]!
-         Some titles in our collection include: 
+         Some titles in our collection include:
          <BR><BR>
+         {{#each lendedbooks}}{{#if Cover}}<img src="{{Cover}}">{{/if}}{{/each}}
          {{#each books}}{{#if Cover}}<img src="{{Cover}}">{{/if}}{{/each}}
          <BR><BR>
             <div class="clear"></div>
        </div>
 
        <div class="line">
-         Prepare for your visit... <span class="link link-visitAccess">[1] Accessibility</span>
-         <span class="link link-visitCovid">[2] Covid-19 Safety</span>
-         <span class="link link-visitTech">[3] Available Tech (Hardware & Software)</span>
-         <span class="link link-visitLibrary">[4] Library</span>
-         <span class="link link-visitStore">[5] Store</span>
+         Prepare for your visit... <span class="link link-visitAccess">[3] Accessibility</span>
+         <span class="link link-visitCovid">[4] Covid-19 Safety</span>
+         <span class="link link-visitTech">[5] Available Tech (Hardware & Software)</span>
+         <span class="link link-visitLibrary">[6] Library</span>
+         <span class="link link-visitStore">[7] Store</span>
        </div>
 
 

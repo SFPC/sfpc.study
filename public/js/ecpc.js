@@ -3,8 +3,6 @@
 
 
 
-
-
 var d = new Date();
 
 function formatDate(d){
@@ -36,10 +34,22 @@ function calcTime(offset) {
 
 $(document).ready(function() {
 
+  // $(document).keypress(function(e) {
+  //   if(e.which == 72) {
+  //     console.log("hey")
+  //   }
+  // });
+
+  // $("input").keypress(function() {
+  // alert("hello.");
+  // });
+
+
 
   $(document).on("click", ".accordionTitle" , function() {
   		$(this).siblings('.accordionContent').slideToggle();
   		$(this).toggleClass('contentOpen');
+      $(this).children('.img').toggleClass('hide');
   	});
 
 
@@ -92,6 +102,88 @@ $(document).ready(function() {
   var lastDivHeight = $(lastDiv).height();
   var goToLast = $(document).height() - lastDivHeight;
 
+
+//   $(document).keypress(function(e) {
+//   $(".terminal-content").append(contentAbout);
+//   $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
+//
+//   if(e.which == 72) {
+//
+// alert("You pressed the \"Any\"-key.");
+//     }
+//
+//
+//   });
+
+  $(document).keyup(function (e){
+
+    if (e.keyCode == 65) { //A
+      $(".terminal-content").append(contentAbout);
+        $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
+    }
+
+    if (e.keyCode == 49) { //1
+      $(".terminal-content").append(contentAboutCredits);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
+    }
+
+    if (e.keyCode == 50) { //2
+      $(".terminal-content").append(contentAboutContact);
+          $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
+    }
+
+    if (e.keyCode == 67) { //C
+      $(".terminal-content").append(contentCalendar);
+        $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
+    }
+
+    if (e.keyCode == 86) { //V
+      $(".terminal-content").append(contentVisit);
+        $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
+    }
+
+    if (e.keyCode == 51) { //3
+      $(".terminal-content").append(contentVisitAccess);
+        $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
+    }
+    if (e.keyCode == 52) { //4
+      $(".terminal-content").append(contentVisitCovid);
+        $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
+    }
+    if (e.keyCode == 53) { //5
+      $(".terminal-content").append(contentVisitTech);
+        $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
+    }
+    if (e.keyCode == 54) { //6
+      $(".terminal-content").append(contentVisitLibrary);
+        $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
+    }
+    if (e.keyCode == 55) { //7
+      $(".terminal-content").append(contentVisitStore);
+        $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
+    }
+
+    if (e.keyCode == 71) { //G
+      $(".terminal-content").append(contentGuestbook);
+        $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
+    }
+
+    if (e.keyCode == 72) { //H
+      $(".terminal-content").append(contentHelp);
+        $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
+    }
+
+    if (e.keyCode == 80) { //P
+      $(".terminal-content").append(contentPrint);
+        $("html, body").animate({ scrollTop:$('.terminal-content .page').last().position().top  }, "slow");
+    }
+
+    if (e.keyCode == 56) { //8
+      print();
+    }
+
+
+  })
 
 
 

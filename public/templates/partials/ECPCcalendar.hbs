@@ -49,13 +49,14 @@
   {{"Day of Week"}},	{{Date.start}}{{#if Date.end}} - {{Date.end}}{{/if}}	·   {{Time}}
 </div>
 
-
 <div class="accordionElement">
- <div class="accordionTitle">{{Name}}</div>
+ <div class="accordionTitle"><div class="img" style="background-image: url('{{Cover}}')"></div><span>{{Name}}</span></div>
  <div class="accordionContent">
 
    <div class="line indent">
-     {{Description}}
+     {{{Description}}}
+     <BR><BR>
+       <img src="{{Cover}}"> <div class="clear"></div><BR><BR>
    </div>
 
    <div class="line indent">
@@ -67,7 +68,7 @@
      RSVP [<a href="{{RSVP}}" target="_blank">{{RSVP}}</a>]
    </div>
    {{/if}}
-
+<!--
    <div class="line indent">
      Teacher:
    </div>
@@ -83,7 +84,7 @@
 
    <div class="line indent2">
      Todd anderson is...
-   </div>
+   </div> -->
 
    </div>
 </div>
