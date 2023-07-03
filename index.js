@@ -1054,7 +1054,6 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
   });
 
   const guestData = guestbook.map((post) => {
-    console.log(post)
     return parseECPCData(post)
   })
 
@@ -1072,8 +1071,7 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
   })
 
 
-  // console.log(postData)
-  console.log(guestData)
+  console.log(postData)
   res.render("projects/ecpc/ecpc-launch", {programs: postData, items: storeData, guests: guestData, books: libData, lendedbooks: lendedlibData})
 
 })
