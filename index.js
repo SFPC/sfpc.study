@@ -965,46 +965,33 @@ app.get("/blog/:slug", async (req,res) => {
 })
 
 
+// app.get("/ecpc", async (req,res) => {
+//   const response = await getDatabaseEntries("2d4d8b47e32149b5bc8f40805246446d", [{property:"Date", direction:"ascending"}])
+//
+//
+//
+//   const postData = response.map((post) => {
+//     return parseECPCData(post);
+//   });
+//
+//
+//   console.log(postData)
+//   res.render("projects/ecpc/ecpc", {programs: postData})
+//
+// })
+
+
+
+
+
+
+
+
 app.get("/ecpc", async (req,res) => {
-  const response = await getDatabaseEntries("2d4d8b47e32149b5bc8f40805246446d", [{property:"Date", direction:"ascending"}])
-
-
-
-  const postData = response.map((post) => {
-    return parseECPCData(post);
-  });
-
-
-  console.log(postData)
-  res.render("projects/ecpc/ecpc", {programs: postData})
-
-})
-
-
-
-
-
-
-
-
-app.get("/ecpc-launch", async (req,res) => {
   const response = await getDatabaseEntries("2d4d8b47e32149b5bc8f40805246446d", [{property:"Date", direction:"ascending"}])
 
   const guestbook = await getDatabaseEntries("42196bb86b734120aa62e52e6547b5a0", [{property:"Date", direction:"descending"}])
 
-//   const library = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{property:"Title", direction:"ascending"}],
-//      {
-//            "and": [
-//                {
-//
-//                    "property": "Collection",
-//                    "multi_select": {
-//                        "contains": "ECPC"
-//                    }
-//                }
-//            ]
-//        }
-// )
 
 
 const library = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{property:"Title", direction:"ascending"}],
