@@ -6,7 +6,8 @@ const {getPage, getDatabaseEntries, getDatabaseEntry, getBlocks, createPage} = r
 const {getShopifyProduct, getShopifyProducts} = require("./lib/shopifyStorefront");
 const classList = require("./lib/classNotionPageList")
 const res = require("express/lib/response")
-const { response } = require("express")
+const { response } = require("express");
+const { parse } = require("dotenv");
 const app = express()
 const PORT = process.env.PORT || 3000
 
@@ -1049,16 +1050,14 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
 
 
 
-  const postData =  response.map((post) => {
-    // let teacherInfo = [];
-    // post.properties["Teachers"].relation.forEach((teacher) => {
-    //   console.log(teacher.id)
-    //   const teacherData = await getPage(teacher.id);
-    //   teacherInfo.push(parseNotionPage(teacherData));
-    // });
-    // post.properties["Teachers"] = teacherInfo;
-    return parseECPCData(post);
-  });
+  const postData = await Promise.all(response.map(async (post) => {
+    const teacherData = await parseRelation(post.properties.Teachers)
+    const labTechData = await parseRelation(post.properties["Lab Technician"])
+    const parsedPost = parseECPCData(post);
+    parsedPost.Teachers = cleanPersonData(teacherData)
+    parsedPost.LabTech = cleanPersonData(labTechData)
+    return parsedPost;
+  }));
 
   const guestData = guestbook.map((post) => {
     return parseECPCData(post)
@@ -1078,7 +1077,6 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
   })
 
 
-  console.log(postData)
   res.render("projects/ecpc/ecpc-launch", {programs: postData, items: storeData, guests: guestData, books: libData, lendedbooks: lendedlibData})
 
 })
@@ -1796,6 +1794,15 @@ function prettyDateString(uglyDateString){
   let parts = uglyDateString.split('-');
   return new Date(parts[0], parts[1]-1, parts[2]).toLocaleDateString("en-us", {month:'long', day:'numeric', year:'numeric'})
 }
+async function parseRelation(relationObject){
+  const relationData = await Promise.all(relationObject.relation.map(async (data) => {
+    const fetchedData = await getPage(data.id);
+    const parsedData = parseNotionPage(fetchedData);
+    return parsedData
+  }));
+  return relationData
+}
+
 function parseRollup(rollupData){
   const rollupArray = rollupData?.rollup.array
   if(!rollupArray?.length) return null
