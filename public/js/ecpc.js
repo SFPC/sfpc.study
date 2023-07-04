@@ -45,7 +45,7 @@ $(document).ready(function() {
   // });
 
 
-
+ 
   $(document).on("click", ".accordionTitle" , function() {
   		$(this).siblings('.accordionContent').slideToggle();
   		$(this).toggleClass('contentOpen');

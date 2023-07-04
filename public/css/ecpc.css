@@ -272,6 +272,19 @@ marquee {
     }
 
 
+.flower {
+  position: fixed;
+  right: 1.5vw;
+  bottom: -2vw;
+  width: 22vw;
+  height: 22vw;
+}
+
+.flower img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
 .logo-big {
   display: block;
   cursor: pointer;
@@ -373,11 +386,34 @@ textarea
   width: 60vw;
   display: block;
   color: #fff;
-
   font-family: 'Screenfont';
   font-size: var(--font-size);
   letter-spacing: 1px;
 }
+
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000;
+  padding:  calc(var(--font-size)/2 ) calc(var(--font-size) );
+  font-family: 'Screenfont';
+  font-size: var(--font-size);
+}
+
+button:hover {
+  /* opacity: .6; */
+  background: #000;
+  color: #fff;
+}
+
 
 
 pre.print {
@@ -498,6 +534,24 @@ pre.print {
 
   .line img {
     height: 15vw;
+  }
+
+  .flower {
+    position: fixed;
+    right: 1.5vw;
+    bottom: -3vw;
+    width: 50vw;
+    height: 50vw;
+  }
+
+
+  input {
+    width: 86vw;
+  }
+
+  textarea
+  {
+    width: 86vw;
   }
 
 
