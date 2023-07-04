@@ -2,57 +2,56 @@
 <html lang="en">
 
 <head>
-    <title>Electronic Cafe for Poetic Computation</title>
+  <title>Electronic Cafe for Poetic Computation</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="title" content="Electronic Cafe for Poetic Computation">
-    <meta name="description" content="An internet cafe and community hub for technological liberation">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sfpc.study/ecpc">
-    <meta property="og:title" content="Electronic Cafe for Poetic Computation">
-    <meta property="og:description" content="An internet cafe and community hub for technological liberation">
-    <meta property="og:image" content="https://sfpc.study/images/projects/ecpc/meta.jpg">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sfpc.study/ecpc">
-    <meta property="twitter:title" content="Electronic Cafe for Poetic Computation">
-    <meta property="twitter:description" content="An internet cafe and community hub for technological liberation">
-    <meta property="twitter:image" content="https://sfpc.study/images/projects/ecpc/meta.jpg">
-    <!-- <link href="/styles.css" rel="stylesheet"> -->
-    <!-- <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" /> -->
-    <link id="mode" rel="stylesheet" type="text/css" href="/css/ecpc.css" />
-    <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/projects/ecpc/favicon.ico"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="title" content="Electronic Cafe for Poetic Computation">
+  <meta name="description" content="An internet cafe and community hub for technological liberation">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sfpc.study/ecpc">
+  <meta property="og:title" content="Electronic Cafe for Poetic Computation">
+  <meta property="og:description" content="An internet cafe and community hub for technological liberation">
+  <meta property="og:image" content="https://sfpc.study/images/projects/ecpc/meta.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sfpc.study/ecpc">
+  <meta property="twitter:title" content="Electronic Cafe for Poetic Computation">
+  <meta property="twitter:description" content="An internet cafe and community hub for technological liberation">
+  <meta property="twitter:image" content="https://sfpc.study/images/projects/ecpc/meta.jpg">
+  <!-- <link href="/styles.css" rel="stylesheet"> -->
+  <!-- <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" /> -->
+  <link id="mode" rel="stylesheet" type="text/css" href="/css/ecpc.css" />
+  <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/projects/ecpc/favicon.ico" />
 
-    <script src="/jquery-3.6.0.min.js"></script>
-    <script src="/js/ecpc.js"></script>
+  <script src="/jquery-3.6.0.min.js"></script>
+  <script src="/js/ecpc.js"></script>
 
-    <!-- stats -->
-    <script type="text/javascript">
-    var sc_project=12714909;
-    var sc_invisible=1;
-    var sc_security="6086a46c";
-    </script>
-    <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript><div class="statcounter"><a title="website statistics"
-    href="https://statcounter.com/" target="_blank"><img class="statcounter"
-    src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-
-
-    <script data-goatcounter="https://sfpc.goatcounter.com/count"
-    async src="//gc.zgo.at/count.js"></script>
+  <!-- stats -->
+  <script type="text/javascript">
+    var sc_project = 12714909;
+    var sc_invisible = 1;
+    var sc_security = "6086a46c";
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="website statistics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
 
 
+  <script data-goatcounter="https://sfpc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-    <!-- end stats -->
+
+
+  <!-- end stats -->
 </head>
 
 <body>
 
-<div class="flower">
-  <img src="/images/projects/ecpc/flower.png">
-</div>
+  <div class="flower">
+    <img src="/images/projects/ecpc/flower.png">
+  </div>
 
 
   <div class="terminal">
@@ -63,91 +62,94 @@
     <BR><BR>
 
 
-<div class="page"  id="home">
+    <div class="page" id="home">
 
 
-<form method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
-          <div class="line">
-            <span class="label">Name*</span>
-            <input type="text" id="name" placeholder="Full name or username">
-          </div>
-          <div class="line">
-            <span class="label">Message</span>
-            <textarea id="message" rows="5" placeholder="Sign our guestbook: Say hi! What are you thinking about today? What did you learn or hope to learn? "></textarea>
-          </div>
-          <div class="line">
-            <button id="submit">Login</button>
-          </div>
-</form>
-            <script src="/jquery-3.6.0.min.js"></script>
-            <script>
+      {{!-- <form method="post" enctype="multipart/form-data" onsubmit="return validateForm()"> --}}
+        <div class="line">
+          <span class="label">Name*</span>
+          <input type="text" id="name" placeholder="Full name or username">
+        </div>
+        <div class="line">
+          <span class="label">Message</span>
+          <textarea id="message" rows="5"
+            placeholder="Sign our guestbook: Say hi! What are you thinking about today? What did you learn or hope to learn? "></textarea>
+        </div>
+        <div class="line">
+          <button id="submit">Login</button>
+        </div>
+        {{!--
+      </form> --}}
+      <script src="/jquery-3.6.0.min.js"></script>
+      <script>
 
-            // $(document).ready(function() {
+        // $(document).ready(function() {
 
-              document.getElementById("submit").onclick = function () {
-                    location.href = "https://sfpc.study/ecpc";
-                };
+        //document.getElementById("submit").onclick = function () {
+        //       location.href = "https://sfpc.study/ecpc";
+        //   };
 
-            // });
+        // });
 
-            function getName() {
-              return localStorage.getItem("name");
-            }
+        function getName() {
+          return localStorage.getItem("name");
+        }
 
-            function updateHTML() {
-              var name = getName();
-              document.getElementById("login").innerHTML = "Logged in as " + name;
-              document.getElementById("storedName").innerHTML = name;
-            }
+        function updateHTML() {
+          var name = getName();
+          document.getElementById("login").innerHTML = "Logged in as " + name;
+          document.getElementById("storedName").innerHTML = name;
+        }
 
-            function updateUser() {
-              // Gets input value
-              var name = document.getElementById("name").value;
+        function updateUser() {
+          // Gets input value
+          var name = document.getElementById("name").value;
 
-              // Saves data to retrieve later
-              localStorage.setItem("name", name);
+          // Saves data to retrieve later
+          localStorage.setItem("name", name);
 
-              // Updates HTML
-              updateHTML();
-            }
-
-
-            $('#submit').click(submit);
-            async function submit(){
-                const options = {
-                method: 'POST',
-                headers: {
-                    accept: 'application/json',
-                    'Notion-Version': '2022-06-28',
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify({
-                    title: $('#name').val(),
-                    message: $('#message').val()
-                })
-                };
-
-                fetch('/createPage/42196bb86b734120aa62e52e6547b5a0', options)
-                .then(response => response.json())
-                .then(response => console.log(response))
-                .catch(err => console.error(err));
-                $('#name').val(''),
-                $('#message').val('')
-            }
-
-            </script>
-
-          </div>
+          // Updates HTML
+          updateHTML();
+        }
 
 
+        $('#submit').click(submitPost);
+        async function submitPost() {
+          const options = {
+            method: 'POST',
+            headers: {
+              accept: 'application/json',
+              'Notion-Version': '2022-06-28',
+              'content-type': 'application/json'
+            },
+            body: JSON.stringify({
+              title: $('#name').val(),
+              message: $('#message').val()
+            }),
+          };
 
+          fetch('/createPage/42196bb86b734120aa62e52e6547b5a0', options)
+            .then(response => response.json())
+            .then((data) => {
+              console.log(data)
+              location.href = "/ecpc"
+            })
 
+        }
 
+      </script>
 
+    </div>
 
 
 
-</div>
+
+
+
+
+
+
+  </div>
 
 
 

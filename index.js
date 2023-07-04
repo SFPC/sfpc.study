@@ -25,8 +25,8 @@ for (let helper in helpers) {
 }
 
 app.post("/createPage/:databaseId", async (req,res) => {
-  console.log(req.body)
   const response = await createPage(req.params.databaseId, req.body.title, req.body.message)
+  console.log(response)
   res.json(response)
 })
 app.get("/page/:pageId", async (req,res) => {
@@ -1049,9 +1049,10 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
 
 
 
-  const postData = response.map((post) => {
+  const postData =  response.map((post) => {
     // let teacherInfo = [];
-    // post.properties["Teachers"].relation.forEach(async (teacher) => {
+    // post.properties["Teachers"].relation.forEach((teacher) => {
+    //   console.log(teacher.id)
     //   const teacherData = await getPage(teacher.id);
     //   teacherInfo.push(parseNotionPage(teacherData));
     // });
