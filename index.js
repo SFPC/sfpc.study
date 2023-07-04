@@ -1049,15 +1049,18 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
   ]);
 
 
+  const postData =  response.map( (post) => {
+    return parseECPCData(post);
+  })
 
-  const postData = await Promise.all(response.map(async (post) => {
-    const teacherData = await parseRelation(post.properties.Teachers)
-    const labTechData = await parseRelation(post.properties["Lab Technician"])
-    const parsedPost = parseECPCData(post);
-    parsedPost.Teachers = cleanPersonData(teacherData)
-    parsedPost.LabTech = cleanPersonData(labTechData)
-    return parsedPost;
-  }));
+  // const postData = await Promise.all(response.map(async (post) => {
+  //   const teacherData = await parseRelation(post.properties.Teachers)
+  //   const labTechData = await parseRelation(post.properties["Lab Technician"])
+  //   const parsedPost = parseECPCData(post);
+  //   parsedPost.Teachers = cleanPersonData(teacherData)
+  //   parsedPost.LabTech = cleanPersonData(labTechData)
+  //   return parsedPost;
+  // }));
 
   const guestData = guestbook.map((post) => {
     return parseECPCData(post)
