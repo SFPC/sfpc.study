@@ -392,7 +392,7 @@ input {
 .shopify-buy__cart {
   font: var(--main-title-font);
 	height: calc(100% - var(--footer-height) - var(--header-height) - 2px) !important;
-	background-color: var(--fundraiser-winter-23-background) !important;
+	background-color: #000 !important;
 	width: calc(100% - 10px);
 	position: absolute;
 	right: calc( (var(--body-margin)/2) + 1px );
@@ -763,7 +763,8 @@ input {
 	/* font-size: 16px; */
 	padding-top: 16px;
 	padding-bottom: 16px;
-	color: var(--fundraiser-winter-23-link);
+	/* color: var(--fundraiser-winter-23-link); */
+  color: var(--background);
   cursor: pointer;
 	/* background-color: var(--fundraiser-winter-23-background); */
 
@@ -804,7 +805,7 @@ input {
   width: auto;
   border: 0px;
   cursor: pointer;
-    background: var(--fundraiser-winter-23-link);
+    background: var(--text-link);
     color: var(--fundraiser-winter-23-text);
   font-family: var(--main-title-font);
   font-weight: bold;
