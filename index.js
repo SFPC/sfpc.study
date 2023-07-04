@@ -1077,6 +1077,8 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
   })
 
 
+  console.log(postData[0].LabTech)
+  console.log(postData[1].Teachers)
   res.render("projects/ecpc/ecpc-launch", {programs: postData, items: storeData, guests: guestData, books: libData, lendedbooks: lendedlibData})
 
 })
