@@ -80,7 +80,7 @@
 
       {{#if LabTechNames}}
       <div class="line indent">
-        Lab Technician: {{LabTechNames}}
+        Lab Technician: {{#each LabTechNames}}{{this}}{{#unless @last}},{{/unless}} {{/each}}
       </div>
       {{/if}}
 
