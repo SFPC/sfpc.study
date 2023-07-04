@@ -1050,6 +1050,12 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
 
 
   const postData = response.map((post) => {
+    // let teacherInfo = [];
+    // post.properties["Teachers"].relation.forEach(async (teacher) => {
+    //   const teacherData = await getPage(teacher.id);
+    //   teacherInfo.push(parseNotionPage(teacherData));
+    // });
+    // post.properties["Teachers"] = teacherInfo;
     return parseECPCData(post);
   });
 

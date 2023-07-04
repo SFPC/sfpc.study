@@ -1,11 +1,11 @@
 <div class="pagebreak">
 </div>
-<div class="page"  id="calendar">
-<div class="line">
-  <span class="link-active" id="link-about">[C] Calendar</span>
-</div>
-<marquee style="width: 100vw"  scrollamount="15" scrolldelay="0"  loop="-1" behavior="scroll">
-<pre>
+<div class="page" id="calendar">
+  <div class="line">
+    <span class="link-active" id="link-about">[C] Calendar</span>
+  </div>
+  <marquee style="width: 100vw" scrollamount="15" scrolldelay="0" loop="-1" behavior="scroll">
+    <pre>
   ,----..               ,--,
  /   /   \            ,--.'|                              ,---,
 |   :     :           |  | :                  ,---,     ,---.'|              __  ,-.
@@ -20,9 +20,9 @@
  \   \ .' |  ,     .-./---`-'   \   \  /'---'        \   \  /  |  ,     .-./
   `---`    `--`---'              `----'               `----'    `--`---'
 </pre>
-</marquee>
+  </marquee>
 
-<pre class="print">
+  <pre class="print">
   ,----..               ,--,
  /   /   \            ,--.'|                              ,---,
 |   :     :           |  | :                  ,---,     ,---.'|              __  ,-.
@@ -39,49 +39,52 @@
 </pre>
 
 
-<div class="line">
-  What's on at ECPC:
-</div>
+  <div class="line">
+    What's on at ECPC:
+  </div>
 
-{{#each programs}}
+  {{#each programs}}
 
-<div class="line indent">
-  {{"Day of Week"}},	{{Date.start}}{{#if Date.end}} - {{Date.end}}{{/if}}	·   {{Time}}
-</div>
+  <div class="line indent">
+    {{"Day of Week"}}, {{Date.start}}{{#if Date.end}} - {{Date.end}}{{/if}} · {{Time}}
+  </div>
 
-<div class="accordionElement">
- <div class="accordionTitle"><div class="img" style="background-image: url('{{Cover}}')"></div><span>{{Name}}</span></div>
- <div class="accordionContent">
+  <div class="accordionElement">
+    <div class="accordionTitle">
+      <div class="img" style="background-image: url('{{Cover}}')"></div><span>{{Name}}</span>
+    </div>
+    <div class="accordionContent">
 
-   <div class="line indent">
-     {{{Description}}}
-     <BR><BR>
-       <img src="{{Cover}}"> <div class="clear"></div>
-   </div>
+      <div class="line indent">
+        {{{Description}}}
+        <BR><BR>
+        <img src="{{Cover}}">
+        <div class="clear"></div>
+      </div>
 
-   <div class="line indent">
-     Cost: Free {{#if Donation}}(Suggested donation: ${{Donation}}){{/if}}
-   </div>
+      <div class="line indent">
+        Cost: Free {{#if Donation}}(Suggested donation: ${{Donation}}){{/if}}
+      </div>
 
-   {{#if RSVP}}
-   <div class="line indent">
-     RSVP [<a href="{{RSVP}}" target="_blank">{{RSVP}}</a>] opens {{RSVPdate}}
-   </div>
-   {{/if}}
+      {{#if RSVP}}
+      <div class="line indent">
+        RSVP [<a href="{{RSVP}}" target="_blank">{{RSVP}}</a>] opens {{RSVPdate}}
+      </div>
+      {{/if}}
 
-   {{#if TeacherNames}}
-   <div class="line indent">
-     Teacher: {{TeacherNames}}
-   </div>
-   {{/if}}
+      {{#if TeacherNames}}
+      <div class="line indent">
+        Teacher: {{#each TeacherNames}}{{this}}{{#unless @last}},{{/unless}} {{/each}}
+      </div>
+      {{/if}}
 
-   {{#if LabTechNames}}
-   <div class="line indent">
-     Lab Technician: {{LabTechNames}}
-   </div>
-   {{/if}}
+      {{#if LabTechNames}}
+      <div class="line indent">
+        Lab Technician: {{LabTechNames}}
+      </div>
+      {{/if}}
 
-<!--
+      <!--
    <div class="line indent">
      Teacher:
    </div>
@@ -99,14 +102,14 @@
      Todd anderson is...
    </div> -->
 
-   </div>
-</div>
+    </div>
+  </div>
 
 
 
 
 
 
-{{/each}}
+  {{/each}}
 
 </div>
