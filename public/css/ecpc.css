@@ -406,6 +406,7 @@ button, input[type="submit"], input[type="reset"] {
   padding:  calc(var(--font-size)/2 ) calc(var(--font-size) );
   font-family: 'Screenfont';
   font-size: var(--font-size);
+  cursor: pointer;
 }
 
 button:hover {
