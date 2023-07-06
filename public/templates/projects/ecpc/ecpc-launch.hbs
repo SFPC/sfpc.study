@@ -112,7 +112,8 @@
           </div>
 
           <div class="line indent datetime">
-            Today is <span id="date"></span>. We are currently <span class="status closed"></span>.
+            Today is <span id="date"></span>. We are <span class="closedPre">currently </span><span class="status closed"></span>.
+            <!-- <span class="openPost"> from 12 to 6pm ET</span>. -->
             <!-- <span class="link" id="link-visit">[V] Visit</span> -->
           </div>
 
@@ -123,10 +124,12 @@
            to be notified.
           </div> -->
 
+    {{#each happenings}}
     <div class="line indent happening">
-      HAPPENING SOON: Electronics in Networked Performance Showcase (July 8, 2023,  1pm and 8pm).
+      HAPPENING SOON: "{{Name}}" on {{"Day of Week"}}, {{Date.start}}{{#if Date.end}} - {{Date.end}}{{/if}} · {{Time}}. RSVP [<a href="{{RSVP}}" target="_blank">{{RSVP}}</a>]
       <span class="link link-calendar">[C] Calendar</span>
     </div>
+    {{/each}}
 
 
 
@@ -194,6 +197,12 @@
         12 - 6pm, <BR>
         Jul 8 - Aug 12, 2023
         </div>
+
+        <div class="line">
+        Electronic Cafe for Poetic Computation [<a href="https://sfpc.study/ecpc">https://sfpc.study/ecpc</a>] is a project
+        by the School for Poetic Computation [<a href="https://sfpc.study/">https://sfpc.study/</a>].
+        </div>
+
         <div class="logo-big">
           <img src="/images/projects/ecpc/logo-big.png" class="light">
           <img src="/images/projects/ecpc/logo-big-dark.png" class="dark">

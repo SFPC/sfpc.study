@@ -2,7 +2,7 @@ const express = require("express")
 const hbs = require("hbs")
 const  bodyParser = require('body-parser')
 const helpers = require('handlebars-helpers')();
-const {getPage, getDatabaseEntries, getDatabaseEntry, getBlocks, createPage} = require('./lib/notion')
+const {getPage, getDatabaseEntries, getDatabaseEntry, getBlocks, createPage, getLastEntry} = require('./lib/notion')
 const {getShopifyProduct, getShopifyProducts} = require("./lib/shopifyStorefront");
 const classList = require("./lib/classNotionPageList")
 const res = require("express/lib/response")
@@ -990,6 +990,29 @@ app.get("/blog/:slug", async (req,res) => {
 
 app.get("/ecpc", async (req,res) => {
   const response = await getDatabaseEntries("2d4d8b47e32149b5bc8f40805246446d", [{property:"Date", direction:"ascending"}])
+ 
+    const happening = await getLastEntry("2d4d8b47e32149b5bc8f40805246446d", [{property:"Date", direction:"ascending"}]
+    ,
+    {
+          "and": [
+              {
+                  "property": "Current",
+                  "checkbox": {
+                      "equals": true
+                  }
+              }
+              // ,
+              // {
+              //     "property": "Type",
+              //     "multi_select": {
+              //         "contains": "Individual"
+              //     }
+              // }
+          ]
+      }
+  )
+
+
 
   const guestbook = await getDatabaseEntries("42196bb86b734120aa62e52e6547b5a0", [{property:"Date", direction:"descending"}])
 
@@ -1079,10 +1102,16 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
     return parseECPCData(post)
   })
 
+  // page_size: 1
+  const happeningData = happening.map((post) => {
+  return parseECPCData(post)
+  })
+
+
 
   // console.log(postData[0].LabTech)
   // console.log(postData[1].Teachers)
-  res.render("projects/ecpc/ecpc-launch", {programs: postData, items: storeData, guests: guestData, books: libData, lendedbooks: lendedlibData})
+  res.render("projects/ecpc/ecpc-launch", {happenings: happeningData, programs: postData, items: storeData, guests: guestData, books: libData, lendedbooks: lendedlibData})
 
 })
 

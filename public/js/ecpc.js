@@ -34,6 +34,29 @@ function calcTime(offset) {
 
 $(document).ready(function() {
 
+  var currentDate = formatDate(d);
+  let dayOfWeek = currentDate.split(" ")[0];
+  console.log(dayOfWeek)
+
+
+
+
+  // if (dayOfWeek == "Thursday," || dayOfWeek == "Friday," || dayOfWeek == "Saturday,") {
+  //
+  //   $(".datetime .status").removeClass("closed").addClass("open");
+  //   $(".datetime .closedPre").addClass("hide-content");
+  //   $(".datetime .openPost").removeClass("hide-content");
+  //     $(".datetime").append('<span class="link" id="link-visit">[V] Visit</span>');
+  // } else {
+  //   $(".datetime .status").removeClass("open").addClass("closed");
+  //   $(".datetime .closedPre").removeClass("hide-content");
+  //   $(".datetime .openPost").addClass("hide-content");
+  // }
+
+
+
+
+
   // $(document).keypress(function(e) {
   //   if(e.which == 72) {
   //     console.log("hey")
@@ -45,7 +68,7 @@ $(document).ready(function() {
   // });
 
 
- 
+
   $(document).on("click", ".accordionTitle" , function() {
   		$(this).siblings('.accordionContent').slideToggle();
   		$(this).toggleClass('contentOpen');
@@ -258,6 +281,7 @@ $(document).ready(function() {
 var time = calcTime('0');
 
 $('#date').html(formatDate(d));
+
 
 
 });
