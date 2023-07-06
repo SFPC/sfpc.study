@@ -27,6 +27,7 @@ body {
   font-size: var(--font-size);
   margin: 0px;
   letter-spacing: 1px;
+  overflow-x: hidden;
 }
 
 .hide-content {
