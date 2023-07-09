@@ -463,6 +463,9 @@ pre.print {
       overflow-x: hidden;
     }
 
+    .hide-mobile {
+      display: none;
+    }
 
 
     /* .sidebar {
