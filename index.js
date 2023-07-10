@@ -990,7 +990,7 @@ app.get("/blog/:slug", async (req,res) => {
 
 app.get("/ecpc", async (req,res) => {
   const response = await getDatabaseEntries("2d4d8b47e32149b5bc8f40805246446d", [{property:"Date", direction:"ascending"}])
- 
+
     const happening = await getLastEntry("2d4d8b47e32149b5bc8f40805246446d", [{property:"Date", direction:"ascending"}]
     ,
     {
@@ -1334,7 +1334,19 @@ function parseECPCData(apiResponse){
   returnObj.unpublish=ecpcInfo["Unpublish"]?.checkbox
   returnObj.date=prettyDateString(ecpcInfo["Date"]?.created_time?.start)
   returnObj.RSVPdate=prettyDateString(ecpcInfo["RSVP-Date"]?.date?.start)
+  returnObj.eventDate=prettyDateString(ecpcInfo["Date"]?.date?.start)
   // returnObj.cover=ecpcInfo["Cover Photo"]?.[0]
+
+  let today = new Date()
+  today.setTime(today.getTime() - 600 * 60 * 1000)
+  today = new Date(prettyDateString(today.toISOString().slice(0, 10)))
+  returnObj.futureEvent = today <= new Date(returnObj.eventDate)
+
+  // returnObj.applicationsOpen = today <= new Date(returnObj.applicationEndDate)
+  // returnObj.registrationDone = today >= new Date(returnObj.notifyDate)
+  // returnObj.sessionEnded = today >= new Date(returnObj.endDate)
+  // returnObj.live = today >= new Date(returnObj.launchDate)
+
 
 
   return returnObj
