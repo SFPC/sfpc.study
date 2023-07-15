@@ -67,7 +67,7 @@
 
       {{!-- <form method="post" enctype="multipart/form-data" onsubmit="return validateForm()"> --}}
         <div class="line">
-          <span class="label">Name*</span>
+          <span class="label">Name</span>
           <input type="text" id="name" placeholder="Name">
         </div>
         <div class="line">
@@ -111,6 +111,14 @@
           // Updates HTML
           updateHTML();
         }
+
+
+        $("#submit").on('click', function (event) {
+              event.preventDefault();
+              var el = $(this);
+              el.prop('disabled', true);
+              setTimeout(function(){el.prop('disabled', false); }, 3000);
+        });
 
 
         $('#submit').click(submitPost);
