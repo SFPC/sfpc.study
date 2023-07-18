@@ -184,10 +184,10 @@
           </div>
           <div class="details">
             <div class="labels">Cost </div>
-            <div class="labels-info"><span id="cost">${{cost}}</span> Scholarships available
-              {{#if registrationDone}}<a href="/about/scholarships">{{else}}<a class="more-about-cost">{{/if}}
-
-                learn more...</a></div>
+            <div class="labels-info"><span id="cost">${{cost}}</span> {{#if free}}Free / Pay-What-You-Wish <a class="more-about-cost">
+              learn more...</a>{{else}}Scholarships available
+              {{#if registrationDone}}<a href="/about/scholarships">{{else}}<a class="more-about-cost">
+                learn more...</a>{{/if}}{{/if}}</div>
           </div>
           <div class="details">
             <div class="labels">Deadline </div>

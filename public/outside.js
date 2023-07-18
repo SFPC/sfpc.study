@@ -243,6 +243,13 @@ $(".more-about-cost").click(function() {
   });
 });
 
+$(".more-about-free").click(function() {
+  document.getElementById('section-free').scrollIntoView({
+    block: 'start',
+    behavior: 'smooth',
+  });
+});
+
 // SMOOTH SCROLL TO CITATIONS
 
 $(".cit-1").click(function() {

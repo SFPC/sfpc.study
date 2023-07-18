@@ -1335,8 +1335,9 @@ function parseECPCData(apiResponse){
   returnObj.date=prettyDateString(ecpcInfo["Date"]?.created_time?.start)
   returnObj.RSVPdate=prettyDateString(ecpcInfo["RSVP-Date"]?.date?.start)
   returnObj.eventDate=prettyDateString(ecpcInfo["Date"]?.date?.start)
-  // returnObj.photos=parseNotionData(ecpcInfo["Photos"])
-  // returnObj.cover=ecpcInfo["Cover Photo"]?.[0]
+
+  returnObj.photos=parseNotionData(ecpcInfo["Photos"])
+  returnObj.cover=ecpcInfo["Photos"]?.[0]
 
   let today = new Date()
   today.setTime(today.getTime() - 600 * 60 * 1000)
@@ -1657,6 +1658,8 @@ function parseClassData(apiResponse){
   returnObj.active=classInfo["Active"]?.formula.boolean
   returnObj.url=classInfo["Webpage URL"]?.url
   returnObj.publish=classInfo["Publish"]?.checkbox
+  returnObj.free=classInfo["Free"]?.checkbox
+  returnObj.funders=classInfo["Funders"]?.multi_select[0]?.name
   returnObj.session=parseRollup(classInfo["Session Name"])[0]?.plain_text
   returnObj.notifyDate=prettyDateString(classInfo["Notification Date"]?.date?.start)
 

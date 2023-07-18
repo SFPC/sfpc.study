@@ -72,6 +72,31 @@
   </div>
 
   <div class="grid-2">
+
+    {{#if free}}
+    <p id="section-free">
+      This class is free / pay-what-you-wish through the support of external funding. </p>
+      <p>
+      <B>At SFPC we believe that no one should be denied an educational opportunity because of their inability to pay. </b>
+
+        Through the support of funders and <a href="https://withfriends.co/school_for_poetic_computation/join">community donors</a>, we are able to subsidize tuition-free classes and provide scholarships for participants.
+      </p>
+      <p>
+      Our scholarships directly redistribute wealth to those who might otherwise be unable to participate in our program. Scholarships are a critical resource on our way towards creating a more comprehensive free or donation-based model in the future.
+    </p>
+    <p>
+      We know this future is possible through the generous help of current, former and future participants, community members, and friends of the school on <a href="https://withfriends.co/school_for_poetic_computation/join">WithFriends</a>. Please <a href="https://withfriends.co/school_for_poetic_computation/join">become a member</a> to help us become a beautiful school that can offer free and low cost classes and events in the future.
+
+
+    </p>
+    <p><i>{{#eq funders "A4J"}}This class is made possible by a grant from <a href="https://artforjusticefund.org">Art for Justice Fund</a>, a sponsored project of Rockefeller Philanthropy Advisors. 
+
+Through this grant, we offer tuition-free classes that interrogate the role technology plays in the carceral system through the study of critical theory, computation, visual art and poetry.
+{{/eq}}</i>
+    </p>
+
+    {{else}}
+
     <p>For <span
       id="number-classes">{{numberOfClasses}}</span>
     classes, it costs
@@ -94,6 +119,7 @@
 
     </p>
 
+    {{/if}}
 
   </div>
 </section>
