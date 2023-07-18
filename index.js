@@ -1335,7 +1335,7 @@ function parseECPCData(apiResponse){
   returnObj.date=prettyDateString(ecpcInfo["Date"]?.created_time?.start)
   returnObj.RSVPdate=prettyDateString(ecpcInfo["RSVP-Date"]?.date?.start)
   returnObj.eventDate=prettyDateString(ecpcInfo["Date"]?.date?.start)
-  returnObj.photos=parseNotionData(ecpcInfo["Photos"])
+  // returnObj.photos=parseNotionData(ecpcInfo["Photos"])
   // returnObj.cover=ecpcInfo["Cover Photo"]?.[0]
 
   let today = new Date()
