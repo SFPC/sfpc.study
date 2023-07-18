@@ -22,6 +22,11 @@
     --main-large-text: calc(24px + 2vw);
     --main-large-line-height: 1;
 
+    --fall-23-title-font: 'Px Grotesk Screen', sans-serif;
+    --fall-23-header-font: 'Px Grotesk Screen', sans-serif;
+    --fall-23-body-font: 'Px Grotesk Screen', sans-serif;
+    --fall-23-special-font: 'Px Grotesk Screen', sans-serif;
+
     --summer-23-title-font: 'Night Black', sans-serif;
     --summer-23-header-font: 'Night Black', sans-serif;
     --summer-23-body-font: 'Night Black', sans-serif;
@@ -101,6 +106,17 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 }
 
 .tk-soda-script { font-family: "soda-script",sans-serif; }
+
+
+
+@font-face {
+    font-family: 'Px Grotesk Screen';
+    src: url('fonts/PxGrotesk-Screen.woff2') format('woff2'),
+        url('fonts/PxGrotesk-Screen.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 
@@ -231,6 +247,25 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
           font-weight: bold !important;
         } */
 
+
+        .fall-23.featured .title,
+        .fall-23 #session-name, #tag.fall-23 {
+          font-family: var(--fall-23-title-font) !important;
+          /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+      text-transform: uppercase;
+      /* letter-spacing: 2px; */
+      font-weight: lighter;
+      /* -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--summer-23-link); */
+      /* font-weight: bold !important; */
+        }
+      #tag.fall-23 {
+      color: var(--fall-23-text);
+      }
+
+      .fall-23.session .title.class{
+      font-size: calc(var(--large-text) * .7) !important;
+      }
 
 
                 .summer-23.featured .title,

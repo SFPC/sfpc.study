@@ -7,6 +7,12 @@
     --text-link: var(--summer-23-special-text) ;
     --box-shadow: rgba(0,0,0,.3);
 
+    --fall-23-background: #d3fd7a;
+   --fall-23-text: #f94b26;
+    --fall-23-text-on-bg: #f94b26;
+    --fall-23-link:  #001d19;
+    --fall-23-special-text:  #f94b26;
+
 
     --summer-23-background: #0c0914;
    --summer-23-text: #cdcdcd;
@@ -272,6 +278,229 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+
+
+
+
+
+
+
+/* /////////// start fall 23  ///////////////////////////////*/
+
+.fall-23,
+.fall-23.featured.session,
+.fall-23.featured  {
+ /* background-color: var(--sex-ed-background)  !important; */
+ color: var(--fall-23-text);
+ box-sizing: border-box;
+ border-color: var(--fall-23-text);
+ background-image: url('images/sessions/fall-23/bg.jpg');
+ background-position: center;
+ background-repeat: repeat;
+ background-size: cover;
+}
+
+.fall-23.featured:hover {
+  /* background-size: 200%; */
+}
+
+
+
+     .shell.fall-23 {
+       background-image:url('images/sessions/fall-23/bg.jpg');
+       /* background-position: bottom; */
+       /* background-repeat: no-repeat;
+       background-size: cover; */
+       background-position: top left;
+       background-repeat: repeat;
+       background-size: cover;
+     }
+
+
+
+.fall-23,
+.fall-23.featured.session,
+.shell .fall-23,
+.fall-23.featured  {
+  /* background-color: var(--fall-23-background)  !important; */
+  color: var(--fall-23-text);
+  box-sizing: border-box;
+  border-color: var(--fall-23-text);
+  text-shadow: none !important;
+}
+
+
+      .fall-23 p,
+      .fall-23 p a,
+      .fall-23 a,
+      .fall-23.featured h4,
+      .fall-23 h4 a,
+      .fall-23 .intro a,
+      .fall-23 p.large a,
+      .fall-23 p a:hover,
+      .fall-23.session.featured,
+      .fall-23.session.featured a,
+      .fall-23.featured h4.type a,
+      .sfpc .fall-23 a
+      {
+        color: var(--fall-23-text) !important;
+      }
+
+      .fall-23 h4 a:hover,
+      .fall-23 .intro a,
+      .fall-23 p.large a:hover,
+      .fall-23.featured:hover h6,
+      .fall-23.featured:hover .title,
+      .fall-23 .details a:hover,
+      .fall-23.featured .title:hover,
+      .fall-23 p a:hover,
+      .fall-23 h4 a:hover,
+      .fall-23 section .grid-2 ul li::before,
+      .fall-23 .chars,
+      .fall-23 p a:hover,
+      .fall-23 a:hover,
+      .fall-23 h4 a:hover,
+      .fall-23 .intro a:hover,
+      .fall-23 .details a:hover,
+      .fall-23 .entity:hover .accordion dt h3:after,
+      .fall-23 .accordion dt h3:after,
+      .fall-23 .expanded{
+          color: var(--fall-23-link) !important;
+      }
+
+      .fall-23 #cost,
+      .fall-23 .fixed-apply,
+      .fall-23 .fixed-support,
+      .fall-23 .home-intro span#session-name::after {
+          color: var(--fall-23-background) !important;
+          background: var(--fall-23-link) !important;
+      }
+
+      .fall-23 span#cost {
+        background: var(--fall-23-link) !important;
+      }
+
+
+      .fall-23 .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .fall-23 .block-text {
+        background-color: var(--fall-23-background);
+        color: var(--fall-23-link);
+      }
+
+
+
+      .fall-23.grid-inner, .fall-23 .grid-inner {
+        border: 2px dotted var(--fall-23-text) !important;
+        color: var(--fall-23-link) !important;
+      }
+
+      .fall-23 #class .entity,
+      .fall-23.website-grid .grid-2 {
+        border-color: var(--fall-23-text);
+      }
+
+      .fall-23 #class .entity:hover {
+        border-color: var(--fall-23-link);
+      }
+
+      .fall-23 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--fall-23-background) !important;
+      }
+
+
+      .fall-23 select#allSections:hover,
+      .fall-23 .loader-content p::after,
+      .fall-23 span#cost
+      {
+        background: var(--fall-23-link) !important;
+        color: var(--fall-23-background) !important;
+      }
+
+      .fall-23 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .fall-23 .breadcrumb.fixed,
+      .fall-23 .breadcrumb.fixed::before,
+      .fall-23 .breadcrumb.fixed a,
+      .fall-23 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .fall-23 .breadcrumb,
+      .fall-23 .breadcrumb a,
+      .fall-23 .text-on-bg,
+      .fall-23 .breadcrumb a:hover {
+          color: var(--fall-23-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--fall-23-background);
+      }
+
+
+      .fall-23 section#section-outro,
+      #class .intro.fall-23,
+      .shell.fall-23 .class-details,
+      .fall-23 #class section,
+      .fall-23 #class .entity,
+      .fall-23 .accordion dd.active,
+      .fall-23 section ul,
+      .fall-23 .website-grid
+       {
+        /* background-color: var(--fall-23-background); */
+        background: none;
+        color:  var(--fall-23-text) !important;
+        border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--fall-23-background); */
+
+
+        /* -webkit-text-stroke-width: 1px; */
+          /* -webkit-text-stroke-color: var(--fall-23-link); */
+      }
+
+      .fall-23.featured .title,
+      .fall-23 #session-name, #tag.fall-23,
+
+    .fall-23  #session-name > a
+
+       {
+      /* -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--fall-23-link); */
+      }
+
+      .fall-23 #class section,
+      #class .intro.fall-23 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .fall-23 #class section.stacked,
+      .fall-23 .section-testimonials,
+      .fall-23 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important;
+        /* text-shadow: 2px 2px 0px var(--fall-23-background); */
+
+      }
+
+      .fall-23 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--fall-23-text);
+      }
+
+      .shell.fall-23 {
+        background-image: url('images/sessions/fall-23/bg.jpg');
+        background-size: cover;
+      }
+
+
+/* /////////// end fall 23  ///////////////////////////////*/
+
+
 
 
 
