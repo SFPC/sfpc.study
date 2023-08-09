@@ -7,6 +7,11 @@
     --text-link: var(--summer-23-special-text) ;
     --box-shadow: rgba(0,0,0,.3);
 
+    --ecpc-background: #000 ;
+    --ecpc-text-color: #fff;
+    --ecpc-text-link: #fff;
+    --ecpc-box-shadow: rgba(0,0,0,.3);
+
     --fall-23-background: #d3fd7a;
    --fall-23-text: #f94b26;
     --fall-23-text-on-bg: #f94b26;
@@ -107,6 +112,53 @@ select#allSections {
 
 
 
+
+.ecpc,
+.ecpc.featured.session,
+.shell .ecpc,
+.ecpc.featured  {
+  background-color: var(--ecpc-background)  !important;
+  color: var(--ecpc-text-color);
+  box-sizing: border-box;
+  border-color: var(--ecpc-text-color);
+}
+
+      .ecpc p,
+      .ecpc p a,
+      .ecpc a,
+      .ecpc.featured h4,
+      .ecpc h4 a,
+      .ecpc .intro a,
+      .ecpc p.large a,
+      .ecpc p a:hover,
+      .ecpc.session.featured,
+      .ecpc.session.featured a
+      {
+        color: var(--ecpc-text-color) !important;
+      }
+
+      .fall-23 .ecpc a,
+      .ecpc h4 a:hover,
+      /* .sfpc .intro a, */
+      .ecpc p.large a:hover,
+      .ecpc.featured:hover h6,
+      .ecpc.featured:hover .title,
+      .ecpc .details a:hover,
+      .ecpc.featured .title:hover,
+      .ecpc p a:hover,
+      .ecpc h4 a:hover,
+      .ecpc section .grid-2 ul li::before,
+      .ecpc .chars,
+      .ecpc p a:hover,
+      .ecpc a:hover,
+      .ecpc h4 a:hover,
+      .ecpc .intro a:hover,
+      .ecpc .details a:hover,
+      .ecpc .entity:hover .accordion dt h3:after,
+      .ecpc .accordion dt h3:after,
+      .ecpc .expanded{
+          color: var(--ecpc-text-link) !important;
+      }
 
 
 .sfpc,

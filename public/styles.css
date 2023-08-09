@@ -22,6 +22,12 @@
     --main-large-text: calc(24px + 2vw);
     --main-large-line-height: 1;
 
+    --ecpc-title-font: 'Screenfont', sans-serif;
+    --ecpc-header-font: 'Screenfont', sans-serif;
+    --ecpc-body-font: 'Screenfont', sans-serif;
+    --ecpc-special-font: 'Screenfont', sans-serif;
+
+
     --fall-23-title-font: 'Px Grotesk Screen', sans-serif;
     --fall-23-header-font: 'Px Grotesk Screen', sans-serif;
     --fall-23-body-font: 'Px Grotesk Screen', sans-serif;
@@ -106,6 +112,18 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 }
 
 .tk-soda-script { font-family: "soda-script",sans-serif; }
+
+
+
+@font-face {
+    font-family: 'Screenfont';
+    src: url('/fonts/Screenfont_8_Sans.woff2') format('woff2'),
+        url('/fonts/Screenfont_8_Sans.woff') format('woff'),
+        url('/fonts/Screenfont_8_Sans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 
@@ -246,6 +264,17 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
           font-family: var(--main-title-font) !important;
           font-weight: bold !important;
         } */
+
+
+        .ecpc.featured .title,
+        .ecpc #session-name, #tag.ecpc {
+          font-family: var(--ecpc-title-font) !important;
+      /* text-transform: uppercase;  */
+      font-weight: lighter;
+        }
+      #tag.ecpc {
+      color: var(--ecpc-text);
+      }
 
 
         .fall-23.featured .title,
