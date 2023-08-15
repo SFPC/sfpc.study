@@ -269,12 +269,12 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         .ecpc.featured .title,
         .ecpc #session-name, #tag.ecpc {
           font-family: var(--ecpc-title-font) !important;
-      /* text-transform: uppercase;  */
-      font-weight: lighter;
+          font-weight: lighter;
         }
-      #tag.ecpc {
-      color: var(--ecpc-text);
-      }
+        
+        #tag.ecpc {
+        color: var(--ecpc-text);
+        }
 
 
         .fall-23.featured .title,

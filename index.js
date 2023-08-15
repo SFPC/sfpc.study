@@ -1121,8 +1121,8 @@ app.get("/ecpc/login", async (req,res) => {
 
 })
 
-app.get("/ecpc/credits", async (req,res) => {
-  res.redirect("https://sfpc.notion.site/ECPC-Credits-5087537f9932499ea8ddd3daf8c03c50")
+app.get("/ecpc/electronic-art", async (req,res) => {
+  res.redirect("https://sfpc.notion.site/ECPC-Electronic-Art-Archive-5087537f9932499ea8ddd3daf8c03c50")
 })
 
 
