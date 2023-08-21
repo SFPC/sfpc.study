@@ -48,8 +48,6 @@
     <script>
       initShopifyProduct("{{[Shopify ID]}}", "add-to-cart-button-wrapper", "Add to cart")
 
-
-
     </script>
 
     <!-- stats -->
@@ -233,7 +231,7 @@
               </div>
             {{/if}} -->
 
-            {{#if Value}}
+
               <!-- <div class="details">
                 <div class="labels">Item Value</div>
                 <div class="labels-info" id="">
@@ -276,14 +274,9 @@
               {{/gt}}
               {{/if}}
               {{/eq}}
+ 
+              <p class="item" id="add-to-cart-button-wrapper"/>
 
-                {{#eq [selltype] "Raffle Only"}}
-                <p class="item" id="raffle"/>
-                <p class="item addon-hide" id="add-to-cart-button-wrapper"/>
-                {{else}}
-                <p class="item addon-hide" id="raffle"/>
-                <p class="item" id="add-to-cart-button-wrapper"/>
-                {{/eq}}
 
 
                <!-- {{#eq [selltype] "Raffle Only"}}    <p>
@@ -295,7 +288,6 @@
 
                 <div class="break-noline"></div>
 
-            {{/if}}
 
 
 
@@ -303,9 +295,6 @@
 
 
 
-            {{#eq [selltype] "Raffle Only"}}
-            {{else}}
-            {{/eq}}
 
 
 
