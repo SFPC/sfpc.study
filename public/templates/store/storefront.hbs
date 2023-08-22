@@ -27,7 +27,7 @@
   <link rel="shortcut icon" type="image/png" href="https://sfpc.study/images/sessions/favicon.ico" />
 
   <script src="/jquery-3.6.0.min.js"></script>
-  <script src="/js/fundraiser.js"></script>
+  <script src="/js/store.js"></script>
   <script src="https://kit.fontawesome.com/95e6fd57f2.js" crossorigin="anonymous"></script>
 
   <!-- stats -->
@@ -220,7 +220,7 @@
 
 
                 {{#each products}}
-                {{#eq tags "Book / zine"}}
+                {{#eq type "Printed Matter"}}
                 {{#eq selltype "Community Market"}}
                 {{else}}
 
@@ -283,7 +283,7 @@
 
       <section id="section-market">
         <div class="grid-2">
-         <h1>Posters</h1>
+         <h1>Gift Certificates</h1>
         </div>
         <div class="grid-2">
           <!-- <p>Artists within the SFPC community have donated a wealth of objects, art, prints, ephemera, gadgets, merchandise and more, which you can purchase. All proceeds from purchases made in our community market will go directly towards the Community Fundraiser.</p> -->
@@ -298,54 +298,76 @@
                     <div class="grid-1 participate">
 
 
-                      {{#each products}}
-                      {{#eq tags "Print"}}
-                      {{#eq selltype "Community Market"}}
-                      {{else}}
+                      <div id="/tuition-gift"
+                        class="grid-4 featured tuition-gift product" data-location="
+                        ">
+                        <div class="featured-text">
+                          <img src="https://sfpc.study/images/market/circuit-bender.jpg">
+                          <div class="top">
+                            <h4 class="type type-list-comma"><a href="/store/circuit-bender">circuit bender</a></h4>
+                            <!-- <h2 class="title Purchase">Circiut Bender</h2> -->
+                            <h6 class="">Help a participant attend 1 class day!</h6>
+                            <!-- <h6>donated by you! </h6> -->
+                            <BR>
+                              <h3><span id=”cost”>$120 - $150</span>
+                                <!-- <i>or</i><BR><span id=”cost”>$15/month</span></h3> -->
+                              <!-- <p class="item inkind" id="tuition-daily"/> -->
+                          </div>
 
-                              <div id="{{this.[Website-Slug]}}"
-                                class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
-                                ">
-                                <div class="featured-text">
-                                  <img src="{{this.[Image-URL]}}">
-                                  <div class="top">
-                                    <h4 class="type type-list-comma"><a href="/store/{{this.[Website-Slug]}}">{{#each
-                                        this.[Tags]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a></h4>
-                                    <h2 class="title Purchase">{{this.Name}}</h2>
-                                    {{#if [Contributor]}}
-                                    {{/if}}
-                                      <BR>
-                                    {{#if availableForSale}}
-                                      {{#if totalInventory }}
-                                      {{#lte availableInventory 10}}
-                                      <h4><span>Only {{availableInventory}} left!</span></h4>
-                                      <BR>
-                                      {{/lte}}
-                                      {{/if}}
+                        </div>
+                      </div>
+                      <div id="/tuition-gift"
+                        class="grid-4 featured tuition-gift product" data-location="
+                        ">
+                        <div class="featured-text">
+                          <img src="https://sfpc.study/images/market/thread-weaver.jpg">
+                          <div class="top">
+                            <h4 class="type type-list-comma"><a href="/store/thread-weaver">thread weaver</a></h4>
+                            <h6 class=" Purchase">Help a teacher teach 1 class day!</h6>
+                            <!-- <h6>donated by you! </h6> -->
+                            <BR>
+                              <h3><span id=”cost”>$300 - $600</span>
+                                <!-- <i>or</i><BR><span id=”cost”>$25/month</span></h3> -->
+                              <!-- <p class="item inkind" id="teaching-daily"/> -->
+                          </div>
 
-                                      <h3><span id=”cost”>${{cost}}</span></h3>
+                        </div>
+                      </div>
+                      <div id="/tuition-gift"
+                        class="grid-4 featured tuition-gift product" data-location="
+                        ">
+                        <div class="featured-text">
+                          <img src="https://sfpc.study/images/market/space-maker.jpg">
+                          <div class="top">
+                            <h4 class="type type-list-comma"><a href="/store/space-maker">space maker</a></h4>
+                            <h6 class="Purchase">Help a participant attend 1 session!</h6>
+                            <!-- <h6>donated by you! </h6> -->
+                            <BR>
+                              <h3><span id=”cost”>$750 - $1200</span>
+                                <!-- <i>or</i><BR><span id=”cost”>$65/month</span></h3> -->
+                              <!-- <p class="item inkind" id="tuition-full"/> -->
+                          </div>
 
-                                    {{else}}
+                        </div>
+                      </div>
+                      <div id="/tuition-gift"
+                        class="grid-4 featured tuition-gift product" data-location="
+                        ">
+                        <div class="featured-text">
+                          <img src="https://sfpc.study/images/market/fruit-bearer.jpg">
+                          <div class="top">
+                            <h4 class="type type-list-comma"><a href="/store/fruit-bearer">fruit bearer</a></h4>
+                            <h6 class=" Purchase">Help a teacher teach 1 session!</h6>
+                            <!-- <h6>donated by you! </h6> -->
+                            <BR>
+                              <h3><span id=”cost”>$1500 - $6000</span>
+                                <!-- <i>or</i><BR><span id=”cost”>$150/month</span></h3> -->
+                              <!-- <BR> <h4>or $150/month membership</h4> -->
+                              <!-- <p class="item inkind" id="teaching-full"/> -->
+                          </div>
 
-                                    {{#eq [selltype] "Raffle Only"}}
-                                    <h3><span id=”cost”>Available via Raffle</span></h3>
-                                    {{else}}
-                                      <h3><span id=”cost”>Out of Stock</span></h3>
-                                    {{/eq}}
-
-
-                                    {{/if}}
-                                  </div>
-
-                                </div>
-                              </div>
-
-
-
-                      {{/eq}}
-                      {{/eq}}
-                      {{/each}}
-
+                        </div>
+                      </div>
 
 
 
@@ -373,6 +395,8 @@
 
                       {{#each products}}
                       {{#eq selltype "Community Market"}}
+
+                      {{#if availableForSale}}
 
                               <div id="{{this.[Website-Slug]}}"
                                 class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
@@ -412,7 +436,7 @@
                               </div>
 
 
-
+                                {{/if}}
                       {{/eq}}
                       {{/each}}
 
