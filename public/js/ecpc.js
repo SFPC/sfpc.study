@@ -41,17 +41,17 @@ $(document).ready(function() {
 
 
 
-  if (dayOfWeek == "Thursday," || dayOfWeek == "Friday," || dayOfWeek == "Saturday,") {
-
-    $(".datetime .status").removeClass("closed").addClass("open");
-    $(".datetime .closedPre").addClass("hide-content");
-    $(".datetime .openPost").removeClass("hide-content");
-      $(".datetime").append('<span class="link" id="link-visit">[V] Visit</span>');
-  } else {
-    $(".datetime .status").removeClass("open").addClass("closed");
-    $(".datetime .closedPre").removeClass("hide-content");
-    $(".datetime .openPost").addClass("hide-content");
-  }
+  // if (dayOfWeek == "Thursday," || dayOfWeek == "Friday," || dayOfWeek == "Saturday,") {
+  //
+  //   $(".datetime .status").removeClass("closed").addClass("open");
+  //   $(".datetime .closedPre").addClass("hide-content");
+  //   $(".datetime .openPost").removeClass("hide-content");
+  //     $(".datetime").append('<span class="link" id="link-visit">[V] Visit</span>');
+  // } else {
+  //   $(".datetime .status").removeClass("open").addClass("closed");
+  //   $(".datetime .closedPre").removeClass("hide-content");
+  //   $(".datetime .openPost").addClass("hide-content");
+  // }
 
 
 
