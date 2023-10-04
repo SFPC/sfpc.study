@@ -150,6 +150,7 @@
 
 
           {{#each products}}
+          {{#if publish}}
           {{#eq type "Merch"}}
 
           <div id="{{this.[Website-Slug]}}"
@@ -192,6 +193,7 @@
 
 
           {{/eq}}
+          {{/if}}
           {{/each}}
 
 
@@ -220,6 +222,8 @@
 
 
                 {{#each products}}
+                {{#if publish}}
+                {{#if availableForSale}}
                 {{#eq type "Printed Matter"}}
                 {{#eq selltype "Community Market"}}
                 {{else}}
@@ -265,6 +269,8 @@
 
                 {{/eq}}
                 {{/eq}}
+                {{/if}}
+                {{/if}}
                 {{/each}}
 
 
@@ -283,7 +289,7 @@
 
       <section id="section-market">
         <div class="grid-2">
-         <h1>Gift Certificates</h1>
+         <h1>Donation</h1>
         </div>
         <div class="grid-2">
           <!-- <p>Artists within the SFPC community have donated a wealth of objects, art, prints, ephemera, gadgets, merchandise and more, which you can purchase. All proceeds from purchases made in our community market will go directly towards the Community Fundraiser.</p> -->
@@ -375,7 +381,7 @@
               </section>
 
 
-
+<!--
 <div class="break"></div>
 
       <section id="section-market">
@@ -383,8 +389,7 @@
          <h1>Community Market</h1>
         </div>
         <div class="grid-2">
-          <!-- <p>Artists within the SFPC community have donated a wealth of objects, art, prints, ephemera, gadgets, merchandise and more, which you can purchase. All proceeds from purchases made in our community market will go directly towards the Community Fundraiser.</p> -->
-        </div>
+             </div>
       </section>
 
 
@@ -394,6 +399,7 @@
 
 
                       {{#each products}}
+                      {{#if publish}}
                       {{#eq selltype "Community Market"}}
 
                       {{#if availableForSale}}
@@ -438,13 +444,14 @@
 
                                 {{/if}}
                       {{/eq}}
+                      {{/if}}
                       {{/each}}
 
 
 
 
                 </div>
-              </section>
+              </section> -->
 
 
 

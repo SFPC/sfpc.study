@@ -430,6 +430,9 @@ pre.print {
   padding-top: 1vh;
 }
 
+.page img {
+  max-width: 100%;
+}
 
 
 

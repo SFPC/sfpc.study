@@ -1014,7 +1014,7 @@ app.get("/ecpc", async (req,res) => {
 
 
 
-  const guestbook = await getDatabaseEntries("42196bb86b734120aa62e52e6547b5a0", [{property:"Date", direction:"descending"}])
+  // const guestbook = await getDatabaseEntries("42196bb86b734120aa62e52e6547b5a0", [{property:"Date", direction:"descending"}])
 
 
 
@@ -1085,9 +1085,9 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
   //   return parsedPost;
   // }));
 
-  const guestData = guestbook.map((post) => {
-    return parseECPCData(post)
-  })
+  // const guestData = guestbook.map((post) => {
+  //   return parseECPCData(post)
+  // })
 
   const libData = library.map((post) => {
     return parseECPCData(post)
@@ -1111,7 +1111,10 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
 
   // console.log(postData[0].LabTech)
   // console.log(postData[1].Teachers)
-  res.render("projects/ecpc/ecpc-launch", {happenings: happeningData, programs: postData, items: storeData, guests: guestData, books: libData, lendedbooks: lendedlibData})
+  res.render("projects/ecpc/ecpc-launch", {happenings: happeningData, programs: postData, items: storeData,
+    // guests: guestData,
+    // books: libData, 
+    lendedbooks: lendedlibData})
 
 })
 
