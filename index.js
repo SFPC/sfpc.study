@@ -1113,7 +1113,7 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
   // console.log(postData[1].Teachers)
   res.render("projects/ecpc/ecpc-launch", {happenings: happeningData, programs: postData, items: storeData,
     // guests: guestData,
-    // books: libData, 
+    // books: libData,
     lendedbooks: lendedlibData})
 
 })
@@ -1376,6 +1376,8 @@ function parseProductData(apiResponse){
   returnObj.publish=productInfo["Publish"]?.checkbox
   returnObj.pinned=productInfo["Publish"]?.checkbox
   returnObj.store=productInfo["Store?"]?.checkbox
+  returnObj.mto=productInfo["Made to order"]?.checkbox
+  returnObj.special=productInfo["Special"]?.multi_select[0]?.name
   returnObj.moreImages=parseNotionData(productInfo["More-Image-URLs"])
 
 

@@ -204,6 +204,7 @@ select#allSections {
       .sfpc .details a:hover,
       .sfpc .entity:hover .accordion dt h3:after,
       .sfpc .accordion dt h3:after,
+      .sfpc i.special,
       .sfpc .expanded{
           color: var(--text-link) !important;
       }

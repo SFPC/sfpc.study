@@ -271,7 +271,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
           font-family: var(--ecpc-title-font) !important;
           font-weight: lighter;
         }
-        
+
         #tag.ecpc {
         color: var(--ecpc-text);
         }
@@ -1990,6 +1990,11 @@ span.reference {
             hyphens: none;
         }
 
+
+        i.special {
+          text-transform: lowercase;
+          font-style: normal;
+        }
         /* .type-list-comma i:last-of-type {
           display: none;
         }
