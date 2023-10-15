@@ -32,6 +32,7 @@ body {
 
 .hide-content {
   display: none;
+  opacity: 0;
 }
 .load-content {
   /* display: none; */

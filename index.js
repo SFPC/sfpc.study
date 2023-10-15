@@ -1067,6 +1067,30 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
 )
 
 
+const softwares = await getDatabaseEntries("be9b88717a154b18a80535af680ae518", [{property:"Name", direction:"ascending"}],
+   {
+
+     "and": [
+         {
+           "property": "Type",
+           "multi_select": {
+               "contains": "Software Art"
+             }
+         }
+         // ,
+         // {
+         //   "property": "Collection",
+         //   "multi_select": {
+         //       "contains": "ECPC"
+         //     }
+         // }
+     ]
+
+
+
+     }
+)
+
   const store = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
     { property: "Name", direction: "ascending" },
   ]);
@@ -1107,14 +1131,21 @@ const lended = await getDatabaseEntries("f11a196f3ad847949150fe74dc2eb9d2", [{pr
   return parseECPCData(post)
   })
 
+  const softData = softwares.map((post) => {
+  return parseECPCData(post)
+  })
+
 
 
   // console.log(postData[0].LabTech)
   // console.log(postData[1].Teachers)
-  res.render("projects/ecpc/ecpc-launch", {happenings: happeningData, programs: postData, items: storeData,
+  res.render("projects/ecpc/ecpc-launch", {happenings: happeningData, programs: postData,
+   // software: softData,
+    items: storeData
     // guests: guestData,
     // books: libData,
-    lendedbooks: lendedlibData})
+    // lendedbooks: lendedlibData
+  })
 
 })
 
