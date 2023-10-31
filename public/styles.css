@@ -28,6 +28,12 @@
     --ecpc-special-font: 'Screenfont', sans-serif;
 
 
+    --winter-24-title-font: 'Arial Narrow', sans-serif;
+    --winter-24-header-font: 'Arial Narrow', sans-serif;
+    --winter-24-body-font: 'Arial Narrow', sans-serif;
+    --winter-24-special-font: 'Arial Narrow', sans-serif;
+
+
     --fall-23-title-font: 'Px Grotesk Screen', sans-serif;
     --fall-23-header-font: 'Px Grotesk Screen', sans-serif;
     --fall-23-body-font: 'Px Grotesk Screen', sans-serif;
@@ -112,6 +118,15 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 }
 
 .tk-soda-script { font-family: "soda-script",sans-serif; }
+
+
+@font-face {
+    font-family: 'Arial Narrow';
+    src:  url('/fonts/Arial-Narrow-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 
@@ -275,6 +290,26 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         #tag.ecpc {
         color: var(--ecpc-text);
         }
+
+                .winter-24.featured .title,
+                .winter-24 #session-name, #tag.winter-24 {
+                  font-family: var(--winter-24-title-font) !important;
+                  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+              text-transform: uppercase;
+              /* letter-spacing: 2px; */
+              font-weight: lighter;
+              /* -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: var(--summer-23-link); */
+              /* font-weight: bold !important; */
+                }
+
+
+
+                .winter-24.session .title.class{
+                font-size: calc(var(--large-text) * .7) !important;
+                }
+
+
 
 
         .fall-23.featured .title,

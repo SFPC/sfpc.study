@@ -12,6 +12,13 @@
     --ecpc-text-link: #fff;
     --ecpc-box-shadow: rgba(0,0,0,.3);
 
+
+    --winter-24-background: #faf5e2;
+     --winter-24-text: #ff38ff;
+      --winter-24-text-on-bg: #ff38ff;
+    --winter-24-link:  #e74578;
+      --winter-24-special-text:  #e74578;
+
     --fall-23-background: #d3fd7a;
    --fall-23-text: #f94b26;
     --fall-23-text-on-bg: #f94b26;
@@ -331,6 +338,232 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+
+
+
+
+
+
+
+
+/* /////////// start winter 24  ///////////////////////////////*/
+
+.winter-24,
+.winter-24.featured.session,
+.winter-24.featured  {
+ /* background-color: var(--sex-ed-background)  !important; */
+ color: var(--winter-24-text);
+ box-sizing: border-box;
+ border-color: var(--winter-24-text);
+ background-image: url('images/sessions/winter-24/bg.jpg');
+ background-position: center;
+ background-repeat: repeat;
+ background-size: cover;
+}
+
+.winter-24.featured:hover {
+  /* background-size: 200%; */
+}
+
+
+
+     .shell.winter-24 {
+       background-image:url('images/sessions/winter-24/bg.jpg');
+       /* background-position: bottom; */
+       /* background-repeat: no-repeat;
+       background-size: cover; */
+       background-position: top left;
+       background-repeat: repeat;
+       background-size: cover;
+     }
+
+
+
+.winter-24,
+.winter-24.featured.session,
+.shell .winter-24,
+.winter-24.featured  {
+  /* background-color: var(--winter-24-background)  !important; */
+  color: var(--winter-24-text);
+  box-sizing: border-box;
+  border-color: var(--winter-24-text);
+  text-shadow: none !important;
+}
+
+
+      .winter-24 p,
+      .winter-24 p a,
+      .winter-24 a,
+      .winter-24.featured h4,
+      .winter-24 h4 a,
+      .winter-24 .intro a,
+      .winter-24 p.large a,
+      .winter-24 p a:hover,
+      .winter-24.session.featured,
+      .winter-24.session.featured a,
+      .winter-24.featured h4.type a,
+      .sfpc .winter-24 a
+      {
+        color: var(--winter-24-text) !important;
+      }
+
+      .winter-24 h4 a:hover,
+      .winter-24 .intro a,
+      .winter-24 p.large a:hover,
+      .winter-24.featured:hover h6,
+      .winter-24.featured:hover .title,
+      .winter-24 .details a:hover,
+      .winter-24.featured .title:hover,
+      .winter-24 p a:hover,
+      .winter-24 h4 a:hover,
+      .winter-24 section .grid-2 ul li::before,
+      .winter-24 .chars,
+      .winter-24 p a:hover,
+      .winter-24 a:hover,
+      .winter-24 h4 a:hover,
+      .winter-24 .intro a:hover,
+      .winter-24 .details a:hover,
+      .winter-24 .entity:hover .accordion dt h3:after,
+      .winter-24 .accordion dt h3:after,
+      .winter-24 .expanded{
+          color: var(--winter-24-link) !important;
+      }
+
+      .winter-24 #cost,
+      .winter-24 .fixed-apply,
+      .winter-24 .fixed-support,
+      .winter-24 .home-intro span#session-name::after {
+          color: var(--winter-24-background) !important;
+          background: var(--winter-24-link) !important;
+      }
+
+      .winter-24 span#cost {
+        background: var(--winter-24-link) !important;
+      }
+
+
+      .winter-24 .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .winter-24 .block-text {
+        background-color: var(--winter-24-background);
+        color: var(--winter-24-link);
+      }
+
+
+
+      .winter-24.grid-inner, .winter-24 .grid-inner {
+        border: 2px dotted var(--winter-24-text) !important;
+        color: var(--winter-24-link) !important;
+      }
+
+      .winter-24 #class .entity,
+      .winter-24.website-grid .grid-2 {
+        border-color: var(--winter-24-text);
+      }
+
+      .winter-24 #class .entity:hover {
+        border-color: var(--winter-24-link);
+      }
+
+      .winter-24 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--winter-24-background) !important;
+      }
+
+
+      .winter-24 select#allSections:hover,
+      .winter-24 .loader-content p::after,
+      .winter-24 span#cost
+      {
+        background: var(--winter-24-link) !important;
+        color: var(--winter-24-background) !important;
+      }
+
+      .winter-24 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .winter-24 .breadcrumb.fixed,
+      .winter-24 .breadcrumb.fixed::before,
+      .winter-24 .breadcrumb.fixed a,
+      .winter-24 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .winter-24 .breadcrumb,
+      .winter-24 .breadcrumb a,
+      .winter-24 .text-on-bg,
+      .winter-24 .breadcrumb a:hover {
+          color: var(--winter-24-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--winter-24-background);
+      }
+
+
+      .winter-24 section#section-outro,
+      #class .intro.winter-24,
+      .shell.winter-24 .class-details,
+      .winter-24 #class section,
+      .winter-24 #class .entity,
+      .winter-24 .accordion dd.active,
+      .winter-24 section ul,
+      .winter-24 .website-grid
+       {
+        /* background-color: var(--winter-24-background); */
+        background: none;
+        color:  var(--winter-24-text) !important;
+        border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--winter-24-background); */
+
+
+        /* -webkit-text-stroke-width: 1px; */
+          /* -webkit-text-stroke-color: var(--winter-24-link); */
+      }
+
+      .winter-24.featured .title,
+      .winter-24 #session-name, #tag.winter-24,
+
+    .winter-24  #session-name > a
+
+       {
+      /* -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--winter-24-link); */
+      }
+
+      .winter-24 #class section,
+      #class .intro.winter-24 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .winter-24 #class section.stacked,
+      .winter-24 .section-testimonials,
+      .winter-24 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important;
+        /* text-shadow: 2px 2px 0px var(--winter-24-background); */
+
+      }
+
+      .winter-24 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--winter-24-text);
+      }
+
+      .shell.winter-24 {
+        background-image: url('images/sessions/winter-24/bg.jpg');
+        background-size: cover;
+      }
+
+
+/* /////////// end winter 24  ///////////////////////////////*/
+
+
+
+
 
 
 
