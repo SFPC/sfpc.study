@@ -1,0 +1,481 @@
+<html>
+  <head>
+    <title>School for Poetic Computation</title>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta name="title" content="School for Poetic Computation" />
+    <meta
+      name="description"
+      content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sfpc.study/" />
+    <meta property="og:title" content="School for Poetic Computation" />
+    <meta
+      property="og:description"
+      content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning."
+    />
+    <meta
+      property="og:image"
+      content="https://sfpc.study/images/sessions/meta.jpg"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://sfpc.study/" />
+    <meta property="twitter:title" content="School for Poetic Computation" />
+    <meta
+      property="twitter:description"
+      content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning."
+    />
+    <meta
+      property="twitter:image"
+      content="https://sfpc.study/images/sessions/meta.jpg"
+    />
+    <link href="/styles.css" rel="stylesheet" />
+    <link href="/css/shopify.css" rel="stylesheet" />
+    <link id="mode" rel="stylesheet" type="text/css" href="/crt.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://sfpc.study/images/sessions/favicon.ico"
+    />
+
+    <script src="/jquery-3.6.0.min.js"></script>
+    <script src="/js/initShopify.js"></script>
+    <script>
+      initShopifyProduct("{{[Shopify ID]}}", "add-to-cart-button-wrapper", "Add to cart")
+
+            initShopifyProduct("7864325472407", "addon-sticker-button-wrapper", "Add to cart")
+
+            initShopifyProduct("7864322392215", "addon-sticker-2-button-wrapper", "Add to cart")
+
+            initShopifyProduct("7864352080023", "addon-tote-button-wrapper", "Add to cart")
+
+    </script>
+
+    <!-- stats -->
+    <script type="text/javascript">
+      var sc_project=12714909; var sc_invisible=1; var sc_security="6086a46c";
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://www.statcounter.com/counter/counter.js"
+      async
+    ></script>
+
+    <noscript>
+      <div class="statcounter">
+        <a
+          title="website statistics"
+          href="https://statcounter.com/"
+          target="_blank"
+        >
+          <img
+            class="statcounter"
+            src="https://c.statcounter.com/12714909/0/6086a46c/1/"
+            alt="website statistics"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </a>
+      </div>
+    </noscript>
+    <!-- end stats -->
+  </head>
+
+  <body>
+    {{> header}}
+    <div id="footer" class="footer">
+            <div class="mode"><button id="mode-toggle"></button></a></div>
+          </div>
+
+
+
+          <div class="website-grid grid-hide  sfpc">
+            <div class="grid-inner sfpc">
+            <section>
+              <div class="grid-2">
+                <div class="chars chars1"></div>
+                <p class="large">School</p>
+              </div>
+              <div class="grid-2">
+                <div class="chars chars2"></div>
+                <p class="large">for</p>
+              </div>
+              <div class="grid-2">
+                <div class="chars chars3"></div>
+                <p class="large">Poetic</p>
+              </div>
+              <div class="grid-2">
+                <div class="chars chars4"></div>
+                <p class="large">Computation</p>
+              </div>
+            </section>
+          </div>
+          </div>
+
+    <div class="crt-overlay crt-overlay-fullsize"></div>
+
+    <div id="shell" class="shell shell-fullsize market about sfpc">
+
+      <div class="loader-content">
+        <p tabindex="0" class="large">
+          loading<span>...</span>
+        </p>
+      </div>
+
+      <h4 class="breadcrumb  hide-content"><a href="/store">store</a></h4>
+
+      <div class="hide-content shell-content">
+        <section>
+          <div class="grid-2">
+            <h1 class="title">
+              <span>
+                {{Name}}
+              </span>
+            </h1>
+
+            {{#if Contributor}}
+              <h6 class="byline">
+                {{#eq selltype "Community Market"}}donated{{/eq}} by {{Contributor}}
+
+              </h6>
+              <!-- {{#if [moreImages].[1]}}<div class="break-noline-small"></div>{{else}} -->
+              <div class="break-noline"></div>
+              <!-- {{/if}} -->
+            {{/if}}
+
+
+          </div>
+
+          <!-- <div class="grid-2 market-details class-details"> -->
+            <!-- <h4 class="noline">
+              Published on {{[Publish Date].start}}
+            </h4>
+
+            <div class="break-noline-small"></div> -->
+
+
+      {{#if [moreImages].[1]}}
+            <!-- </div> -->
+              <div class="grid-2"></div>
+            </section>
+
+                <div class="grid-container product-images" id="participate-archive">
+
+                  <main class="grid-item main">
+                    <main class="grid-item main">
+                      <div class="carousel-items items carousel-content participate-content">
+                        <div id="carousel-images" class="class-images after-launch">
+
+                          {{#each moreImages}}
+                          <figure class="item participate-img"><img src="{{this}}">
+                          </figure>
+                          {{/each}}
+                          {{#if promoGraphic}}
+                          <figure class="item participate-img"><img src="{{promoGraphic}}">
+                          </figure>
+                          {{/if}}
+
+                        </div>
+
+
+                      </div>
+
+
+                    </main>
+                  </main>
+
+                </div>
+              <section>
+
+                <div class="grid-2"></div>
+                <div class="grid-2 market-details class-details">
+            {{else}}
+
+                <div class="grid-2 market-details class-details">
+                 <img id="class-image" src="{{[Image-URL]}}" />
+
+            {{/if}}
+
+            {{#if [Description]}}
+            <div class="details"> <p style="white-space:pre-line">
+                    {{{[Description]}}} {{#if [Product-Link]}}<a href="{{[Product-Link]}}">learn more...</a>{{/if}} {{#if mto}} <BR><br>This item is made to order and production begins immediately after purchase.{{/if}} {{#if [Delivery-Info]}} <BR><br>{{[Delivery-Info]}}{{/if}} <BR><BR> 100% of proceeds go towards scholarships and running programs at SFPC. {{#eq [selltype] "Donation"}} Only donations over $250 are eligible for tax deductions. <a href="https://grayarea.org/initiative/school-for-poetic-computation/" target="_blank">Submit a payment</a> via our fiscal sponsor. SFPC is fiscally sponsored by Gray Area<!-- <span class="sponsorlogo grayarea"></span> -->.{{/eq}}
+                  </p>
+
+            </div>
+            {{/if}}
+
+            {{#if [Product-Type]}}
+            <div class="details">
+              <div class="labels">Type</div>
+              <div class="labels-info" id="teachers-list">{{#each
+                  [Product-Type]
+                }}{{this}}{{#unless @last}},{{/unless}} {{/each}}
+                {{#if [Tags]}}({{#each [Tags]}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}){{/if}}
+              </div>
+            </div>
+            {{/if}}
+
+            {{#if [Size]}}
+            <div class="details">
+              <div class="labels">Size</div>
+              <div class="labels-info" id=""> {{[Size]}}
+              </div>
+            </div>
+            {{/if}}
+
+
+            <!-- {{#if [Delivery-Info]}}
+              <div class="details">
+                <div class="labels">Delivery</div>
+                <div class="labels-info" id="">{{[Delivery-Info]}}
+              </div>
+              </div>
+            {{/if}} -->
+
+
+              <!-- <div class="details">
+                <div class="labels">Item Value</div>
+                <div class="labels-info" id="">
+                      ${{Value}}
+                </div>
+              </div> -->
+
+              {{#eq [selltype] "Donation"}}
+              {{else}}
+              {{#if cost}}
+              <div class="details">
+                <div class="labels">
+                  {{#eq [selltype] "Raffle Only"}}Value{{else}}Cost{{/eq}}
+                </div>
+                <div class="labels-info" id="">
+                  <h3>
+
+                    {{#eq [selltype] "Raffle Only"}}
+                    ${{Value}}
+                    {{else}}
+                    <span id="cost">${{cost}}</span> {{#eq [goodstype] "Physical"}}+ shipping & tax <span class="small block">Please note: We can only ship within the United States.</span> {{else}} + tax{{/eq}}</h3>
+                    {{/eq}}
+                </div>
+              </div>
+              {{/if}}
+              {{/eq}}
+
+
+              {{#eq [selltype] "Raffle Only"}}
+              {{else}}
+              {{#if totalInventory}}
+              {{#gt totalInventory 0 }}
+              {{#if availableForSale}}
+              {{#lte availableInventory 10}}
+              {{#gt availableInventory 0 }}
+              <div class="details">
+                <div class="labels">stock</div>
+                <div class="labels-info">Only {{availableInventory}} left!</div>
+              </div>
+              {{/gt}}
+              {{/lte}}
+              {{/if}}
+              {{/gt}}
+              {{/if}}
+              {{/eq}}
+
+              <p class="item" id="add-to-cart-button-wrapper"/>
+
+
+
+               <!-- {{#eq [selltype] "Raffle Only"}}    <p>
+
+                 For each raffle ticket you buy, your name will be entered once into a draw for a chance to win {{#eq [Website-Slug] "raffle"}}one of 6 items{{else}}this item{{/eq}}.
+            </p>
+               {{/eq}} -->
+
+
+
+               <div class="addon-item">
+                 <div class="item">
+                   <img src="https://sfpc.study/images/market/{{Website-Slug}}.jpg">
+                   <p class="">or
+
+
+                     {{#eq [Website-Slug] "circuit-bender"}}
+                     <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11365459" target="_blank" class="small-link">become a member</a>  for
+                     <span id="cost">$15/month</span> via WithFriends.  As a Circuit Bender member, you will receive:
+                     <span class="test-icon"></span> a <a href="/store/jamais-vu-view">generative wallpaper</a>
+                     and <span class="test-icon"></span> access to special channels on our community Discord.
+                     {{/eq}}
+                     {{#eq [Website-Slug] "thread-weaver"}}
+                     <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436554" target="_blank" class="small-link">become a member</a>  for
+                     <span id="cost">$25/month</span> via WithFriends.  As a Thread Weaver member, you will receive:
+                     <span class="test-icon"></span> a <a href="/store/jamais-vu-view">generative wallpaper</a>,
+                     <span class="test-icon"></span> access to special channels on our community Discord,
+                     and <span class="test-icon"></span> special invites to SFPC events
+                     {{/eq}}
+                     {{#eq [Website-Slug] "space-maker"}}
+                     <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436509" target="_blank" class="small-link">become a member</a>  for
+                     <span id="cost">$65/month</span> via WithFriends. As a Space Maker member, you will receive:
+                     <span class="test-icon"></span> a <a href="/store/jamais-vu-view">generative wallpaper</a>,
+                     <span class="test-icon"></span> access to special channels on our community Discord,
+                     <span class="test-icon"></span> special invites to SFPC events,
+                     and <span class="test-icon"></span> a <a href="/store/an-ode">tote bag</a>.
+                     {{/eq}}
+                     {{#eq [Website-Slug] "fruit-bearer"}}
+                     <a href="https://withfriends.co/school_for_poetic_computation/join/:membership_id=11436524" target="_blank" class="small-link">become a member</a>  for
+                     <span id="cost">$150/month</span> via WithFriends.  As a Fruit Bearer member, you will receive:
+                     <span class="test-icon"></span> a <a href="/store/jamais-vu-view">generative wallpaper</a>,
+                     <span class="test-icon"></span> access to special channels on our community Discord,
+                     <span class="test-icon"></span> special invites to SFPC events,
+                     <span class="test-icon"></span> a <a href="/store/an-ode">tote bag</a>,
+                     and <span class="test-icon"></span> access to a digital archive of all SFPC publications.
+                     {{/eq}}
+
+                   </p>
+                 </div>
+                  </div>
+
+                  <BR><BR>
+                 <h6>Other ways to support...</h6>
+
+                 <!-- <div class="addon-item {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
+                   <div class="item">
+                     <img src="https://sfpc.study/images/market/memberships.gif">
+                     <p>
+                       <a href="https://withfriends.co/school_for_poetic_computation" class="small-link" target="_blank">Become a member</a> via WithFriends. Benefits include:
+                       <span class="test-icon"></span> a <a href="/store/jamais-vu-view">generative wallpaper</a>,
+                       <span class="test-icon"></span> access to special channels on our community Discord,
+                       <span class="test-icon"></span> special invites to SFPC events,
+                       <span class="test-icon"></span> a <a href="/store/an-ode">tote bag</a>,
+                       and <span class="test-icon"></span> access to a digital archive of all SFPC publications.
+                       </p>
+                   </div>
+                 </div>  -->
+
+
+
+                 <div class="addon-item {{#eq [Website-Slug] "stickerpack-1"}}addon-hide{{/eq}} {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
+                   <div class="item">
+                     <img src="https://sfpc.study/images/market/learn-unlearn.jpg">
+                     <p>Add our long-sleeve shirt to your cart to increase your donation by
+                       <span id="cost">$39</span>.
+                    <a href="/store/learn-unlearn">Learning / Un-Learning (CRT Mode)</a>  is designed by Lynne Yun.
+
+                     <span class="addon" id="addon-sticker-button-wrapper"/>
+                   </p>
+                   </div>
+                 </div>
+
+
+
+                  <div class="addon-item">
+                    <div class="item">
+                      <img src="https://sfpc.study/images/market/crt-hat.jpg">
+                      <p>Add our bucket hat to your cart to increase your donation by <span id="cost">$35</span>.
+                       <a href="/store/crt-hat">Cathode Ray Bucket Hat</a> is designed by Zainab Aliyu.
+
+                      <span class="addon" id="addon-tote-button-wrapper"/>
+                    </p>
+                    </div>
+                  </div>
+
+
+                 <div class="addon-item {{#eq [Website-Slug] "an-ode"}}addon-hide{{/eq}} {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
+                   <div class="item">
+                     <img src="https://sfpc.study/images/market/an-ode.jpg">
+                     <p>Add our tote bag to your cart to increase your donation by <span id="cost">$25</span>.
+                      <a href="/store/an-ode">An Ode (Liquid Crystal Mode)</a> is designed by Zainab Aliyu.
+
+                     <span class="addon" id="addon-tote-button-wrapper"/>
+                   </p>
+                   </div>
+                 </div>
+
+
+                 <div class="addon-item {{#eq [Website-Slug] "stickerpack-2"}}addon-hide{{/eq}} {{#eq [selltype] "Raffle Only"}}addon-hide{{/eq}}">
+                   <div class="item">
+                     <img src="https://sfpc.study/images/market/10yrs-stickers.jpg">
+                     <p>Add a sticker pack to your cart to increase your donation by
+                       <span id="cost">$15</span>.
+                    <a href="/store/10yrs-stickers">10 Years of Poetic Computation Sticker Pack</a> is designed by Lynne Yun.</i>
+
+                     <span class="addon" id="addon-sticker-2-button-wrapper"/>
+                   </p>
+                   </div>
+                 </div>
+
+
+               </div>
+
+                <div class="break-noline"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="break-noline"></div>
+
+
+
+
+
+
+
+          </div>
+        </section>
+
+        <!-- {{#if [Description]}}
+          <div class="break"></div>
+          <section id="section-description">
+            <div class="grid-2">
+              <h1>Description</h1>
+            </div>
+            <div class="grid-2">
+              <p>
+                {{{[Description]}}}
+              </p>
+            </div>
+          </section>
+        {{/if}} -->
+
+        <!-- {{#if [More Image URLs]}}
+          <div class="break-noline"></div>
+          <div class="grid-container" id="participate-archive">
+            <main class="grid-item main">
+              <main class="grid-item main">
+                <div
+                  class="carousel-items items carousel-content participate-content"
+                >
+                  <div id="carousel-images" class="class-images">
+                    {{#each [More Image URLs]}}
+                      <figure class="item participate-img"><img
+                          src="{{this}}"
+                        /></figure>
+                    {{/each}}
+                  </div>
+                </div>
+              </main>
+            </main>
+          </div>
+        {{/if}} -->
+
+        <!-- <div class="break"></div> -->
+        <div class="break-noline"></div>
+        <div class="break-endpage"></div>
+      </div>
+    </div>
+
+    <script src="/outside.js"></script>
+    <script src="/carousel.js"></script>
+  </body>
+</html>

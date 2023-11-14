@@ -613,6 +613,20 @@ h1 {
 
 
 
+        .sfp  .sponsorlogo.grayarea::after {
+          background-image: url('/images/fundraiser/winter-23/gray-area-logo.svg');
+          fill: var(--text-color);
+        }
+
+        .sfpc .small .sponsorlogo.grayarea::after {
+          width: calc(75px + 2.54vw);
+          height: calc(9px + 0.24vw);
+          background-image: url('/images/fundraiser/winter-23/gray-area-logo.svg');
+          fill: var(--text-color);
+        }
+
+
+
 
         .socials img {
           width: 5vw;

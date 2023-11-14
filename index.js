@@ -770,6 +770,8 @@ app.get("/fundraiser/winter-23", async (req, res) => {
   res.render("fundraiser/winter-23/storefront", { products: productsData, testimonials: testimonialData });
 });
 
+
+
 app.get("/fundraiser/winter-23/:slug", async (req, res) => {
   //filter by slug here
   console.log(req.params.slug);
@@ -809,6 +811,92 @@ app.get("/fundraiser/winter-23/:slug", async (req, res) => {
 
 
 
+
+
+
+
+
+
+app.get("/donate", async (req, res) => {
+
+  const responseTest = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
+  const testimonialData = responseTest.map((testimonial) => {
+    console.log(testimonial)
+    return parseTestimonials(testimonial)
+  })
+  console.log(testimonialData)
+
+  const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
+    { property: "Name", direction: "descending" },
+  ]);
+  console.log(response);
+
+  const productsData = response.map((product) => {
+    return parseProductData(product);
+  });
+
+  const shopifyData = await getShopifyProducts();
+
+  for (const product of productsData) {
+    const shopifyId = product["Shopify ID"];
+
+    if (!shopifyId) {
+      continue;
+    }
+
+    const node = shopifyData[`gid://shopify/Product/${shopifyId}`];
+
+    if (node) {
+      product.availableForSale = node.availableForSale;
+      product.totalInventory = node.totalInventory;
+      product.availableInventory = node.variants.edges.reduce((accum, val) => {
+        return accum + val.node.quantityAvailable;
+      }, 0);
+    }
+  }
+
+  console.log(productsData);
+  res.render("donate/storefront", { products: productsData, testimonials: testimonialData });
+});
+
+
+
+app.get("/donate/:slug", async (req, res) => {
+  //filter by slug here
+  console.log(req.params.slug);
+  const response = await getDatabaseEntry(NOTION_STORE_DATABASE_ID, {
+    property: "Website-Slug",
+    rich_text: { equals: req.params.slug },
+  });
+  console.log(response);
+
+  if (response) {
+    const productData = parseProductData(response);
+    const shopifyId = productData["Shopify ID"];
+
+    if (shopifyId) {
+      try {
+        const shopifyData = await getShopifyProduct(shopifyId);
+
+        if (shopifyData) {
+          productData.availableForSale = shopifyData.availableForSale;
+          productData.totalInventory = shopifyData.totalInventory;
+          productData.availableInventory = shopifyData.variants.edges.reduce(
+            (accum, val) => {
+              return accum + val.node.quantityAvailable;
+            },
+            0
+          );
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    console.log(productData);
+    res.render("donate/product", productData);
+  }
+});
 
 
 
