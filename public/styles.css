@@ -3492,6 +3492,13 @@ a.sfpc-link {
   display: none
 }
 
+a.addon-link   {
+  font-size: var(--medium-text);
+  padding-top: var(--program-margin);
+  display: block;
+  font-weight: lighter !important;
+}
+
 .addon .shopify-buy__btn  {
   font-size: var(--medium-text);
   padding-top: var(--program-margin);
