@@ -1,6 +1,6 @@
 :root {
-    --goal: 600000;
-    --raised-amount: 9500;
+    --goal: 400000;
+    --raised-amount: 0;
     --raised-percentage: calc(var(--raised-amount) / var(--goal) * 100%);
     --raised: 17%;
     --raised-text: '17%';

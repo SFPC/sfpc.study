@@ -2295,6 +2295,13 @@ span.reference {
           font-size: calc(1 * var(--medium-text));
         }
 
+        .classacc.accordion dt h3:after {
+          /* content: ' ⤵'; */
+          content: '' !important;
+            /* color: var(--text-link); */
+          font-size: calc(1 * var(--medium-text));
+        }
+
         .accordion dt h3.active:after, .accordion dt.active h3:after {
           content: '';
         }
