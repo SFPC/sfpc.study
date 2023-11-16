@@ -250,6 +250,13 @@ $(".more-about-free").click(function() {
   });
 });
 
+$(".jumpto-donate").click(function() {
+  document.getElementById('section-donate').scrollIntoView({
+    block: 'start',
+    behavior: 'smooth',
+  });
+});
+
 // SMOOTH SCROLL TO CITATIONS
 
 $(".cit-1").click(function() {
