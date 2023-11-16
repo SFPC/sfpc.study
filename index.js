@@ -1495,6 +1495,7 @@ function parseProductData(apiResponse){
   returnObj.publish=productInfo["Publish"]?.checkbox
   returnObj.pinned=productInfo["Publish"]?.checkbox
   returnObj.store=productInfo["Store?"]?.checkbox
+  returnObj.fundraiser=productInfo["Fundraiser"]?.checkbox
   returnObj.mto=productInfo["Made to order"]?.checkbox
   returnObj.special=productInfo["Special"]?.multi_select[0]?.name
   returnObj.moreImages=parseNotionData(productInfo["More-Image-URLs"])

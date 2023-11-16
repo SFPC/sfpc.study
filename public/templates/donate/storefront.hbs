@@ -99,12 +99,12 @@
 
     <div class="selectors">
       <select id="allSections" onchange="sectionJump(this.value)" class=" hide-content">
-        <option value="">How to contribute...</option>
+        <option value="">Ways to support...</option>
         <option value="section-donate">1. Make a donation</option>
         <option value="section-member">2. Become a member</option>
-        <!-- <option value="section-market">3. Shop the market</option> -->
-        <option value="section-testimonials">3. Write a testimonial</option>
-        <option value="section-share">4. Spread the word</option>
+        <option value="section-market">3. Buy SFPC merch</option>
+        <option value="section-testimonials">4. Write a testimonial</option>
+        <option value="section-share">5. Spread the word</option>
         <!-- <option value="section-follow">5. Follow our progress</option> -->
 
       </select>
@@ -136,8 +136,9 @@
 
             <div class="break-noline-small"></div> -->
 
-          <p>As the School for Poetic Computation approaches our 10 year anniversary, we’re prototyping a new funding model for a beautiful school. Our goal is to raise $40,000 towards two fully funded classes in 2024. We invite you to join us in creating a world where community-funded classes are possible!
-            <BR><BR>Help us offer two classes for FREE:<BR>
+          <p>As the School for Poetic Computation approaches our 10 year anniversary, we’re prototyping a new funding model for a beautiful school. Our goal is to raise $40,000 towards two fully funded classes in 2024. We invite you to join us in creating a world where tuition-free, community funded classes are possible!
+
+<BR><BR>Help us offer two classes for FREE:<BR>
             <!-- <p>We’re immensely grateful for the hundreds of community members who made one-time donations, became members on WithFriends, donated or bought items in our community market, asked their employers to match their donations, shared testimonials about their experiences at our school, and spread the word about our Winter 2023 fundraiser! Together, we raised an outstanding total of $90,981 in one month — 150% of our original goal of $60,000!   ⁣⁣</p> -->
           <!-- <p><a href="/blog/fundraiser-winter-23">learn more...</a> -->
           </p>
@@ -152,7 +153,7 @@
               <h4 id="role">with Ashley Jane Lewis</h4>
                 <div class="clear"></div>
               <dd><span class="bio" style="background-image: url('images/fundraiser/winter-24/rpwf.jpg')" role="img"></span>
-                <p>This experimental sci-fi writing workshop is informed by actual science alongside Black and Indigenous traditions. It approaches stories as visceral technologies capable of expanding imaginaries—from individual self expression to collective and systemic forms of historical documentation.
+                <p>This experimental sci-fi writing workshop is informed by science alongside Black and Indigenous traditions. It approaches stories as visceral technologies capable of expanding imaginaries—from individual self expression to collective and systemic forms of historical documentation. This is the second time we are offering this popular class and having no tuition barrier would help us prioritize Black and Indigenous applicants, who previously had the most requests for scholarship.
 
                   <!-- <BR><BR>
                   <i>she/her</i> · <a href="mailto:zai@sfpc.study">email</a> · <a href="https://zai.zone">website</a> ·
@@ -172,8 +173,9 @@
                 <h4 id="role">with Allison Parrish</h4>
                 <div class="clear"></div>
               <dd><span class="bio" style="background-image: url('images/fundraiser/winter-24/hscnlp.jpg')" role="img"></span>
-                <p>This critical coding class takes a communal approach to the subfield of AI called natural language processing. By centering the technology’s impact on people, the planet, and our creative practices, this class encourages students to think beyond its authoritarian and commercial uses.
-                  <!-- <BR><BR>
+                <p>This  critical coding class takes a communal approach to the subfield of AI called natural language processing. By centering the technology’s impact on people, the planet, and our creative practices, this class encourages students to think beyond its authoritarian and commercial uses. This is the first time we are offering a technical class about AI with a field leader who teaches at an expensive private university. We want this class to be tuition-free to remove the financial barrier to study with a thoughtful and inspirational teacher at a moment of intense public focus on AI and its social impacts.
+
+<!-- <BR><BR>
                   <i>she/her</i> · <a href="mailto:zai@sfpc.study">email</a> · <a href="https://zai.zone">website</a> ·
                   <a href="https://www.instagram.com/beatsbyzai/">instagram</a> -->
                 </p>
@@ -183,9 +185,9 @@
 
 
           </dl>
-          <BR><BR>
+          <!-- <BR><BR>
           <p>Both classes address poetic computation in complementary ways by teachers who have generously contributed interdisciplinary curricula in service of a more accessible, inclusive, and beautiful future.
-</p>
+</p> -->
 
         </div>
       </section>
@@ -335,10 +337,92 @@
 
                       </div>
                     </div>
-                  
+
 
         </div>
       </section>
+
+
+
+      <div class="break"></div>
+
+
+      <section id="section-market">
+      <div class="grid-2">
+       <h1>Merch</h1>
+      </div>
+      <div class="grid-2">
+        <p>Looking for other ways to support? Buy SFPC merch from our online store!
+         <a href="/store" class="" target="_blank">view all items...</a>
+        </p>
+      </div>
+    </section>
+
+
+      <section class="stacked stacked-4">
+
+
+
+
+        <div class="grid-1 participate">
+
+
+          {{#each products}}
+          {{#if publish}}
+          {{#eq type "Merch"}}
+
+          {{#if fundraiser}}
+
+
+          <div id="{{this.[Website-Slug]}}"
+            class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
+            ">
+            <div class="featured-text">
+              <img src="{{this.[Image-URL]}}">
+              <div class="top">
+                <h4 class="type type-list-comma"><a href="/store/{{this.[Website-Slug]}}">{{#each
+                    this.[Tags]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</a> </h4>
+                <h2 class="title {{this.[Sell-Type]}}">{{this.Name}}</h2>
+                {{#if [Contributor]}}
+                {{/if}}
+                  <BR>
+                {{#if availableForSale}}
+                  {{#if totalInventory }}
+                  {{#lte availableInventory 10}}
+                  <h4><span>Only {{availableInventory}} left!</span></h4>
+                  <BR>
+                  {{/lte}}
+                  {{/if}}
+
+                  <h3><span id=”cost”>${{cost}}</span></h3>
+
+                {{else}}
+
+                {{#eq [selltype] "Raffle Only"}}
+                <h3><span id=”cost”>Available via Raffle</span></h3>
+                {{else}}
+                  <h3><span id=”cost”>Out of Stock</span></h3>
+                {{/eq}}
+
+
+                {{/if}}
+              </div>
+
+            </div>
+          </div>
+
+
+          {{/if}}
+          {{/eq}}
+          {{/if}}
+          {{/each}}
+
+
+
+
+    </div>
+  </section>
+
 
 
 
@@ -351,7 +435,8 @@
          <h1>Testimonials</h1>
         </div>
         <div class="grid-2">
-          <p>
+          <p> For many, SFPC leaves an impact that is hard to describe. We are grateful for our community members who have put words to their experiences.
+
            <a href="https://forms.gle/PvuvBQd4cmo8YL4j6" class="" target="_blank">share a testimonial...</a>
           </p>
         </div>
