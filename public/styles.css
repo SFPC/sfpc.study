@@ -551,10 +551,12 @@ h1 {
         .title-image.fundraiser-23::after {
           display: inline-flex;
             content: '';
-          background-image: url('/images/fundraiser/winter-23/logo-2.svg');
+          /* background-image: url('/images/fundraiser/winter-23/logo-2.svg'); */
+
+        background-image: url('/images/fundraiser/winter-24/logo.png');
             background-size: 100%;
-            width: 30vw;
-            min-height: 8vw;
+            width: 25vw;
+            min-height: 18vw;
             background-repeat: no-repeat;
         }
 
@@ -1724,6 +1726,11 @@ select#allSections:focus {
     align-content: center;
       }
 
+
+      .featured-text.half.nested div {
+        width: calc(100% + var(--text-margin)/2) !important
+
+      }
 
       .featured-text.half div {
         width: calc(50%) !important;
@@ -4188,10 +4195,14 @@ h5.shopify-buy__cart-toggle__title {
               /* box-sizing: border-box; */
                 }
 
+
+
                 .featured-text.half div {
                   width: calc(100%) !important;
 
                 }
+
+
                   .video-feature {
                     margin-top: 47vw;
                     margin-left: 10vw;

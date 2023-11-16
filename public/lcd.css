@@ -13,6 +13,14 @@
     --ecpc-box-shadow: rgba(0,0,0,.3);
 
 
+    --fundraiser-winter-24-background-dark: #f9f6ee;
+    --fundraiser-winter-24-background: #f9f6ee;
+   --fundraiser-winter-24-text: #e56942;
+    --fundraiser-winter-24-text-on-bg: #e56942;
+    --fundraiser-winter-24-link:  #259afa;
+    --fundraiser-winter-24-special-text:  #259afa;
+
+
     --winter-24-background: #faf5e2;
      --winter-24-text: #ff38ff;
       --winter-24-text-on-bg: #ff38ff;
@@ -116,57 +124,6 @@ select#allSections {
 .sfpc-links-avatar {
   background-image: url('logo-lcd.jpg');
 }
-
-
-
-
-.ecpc,
-.ecpc.featured.session,
-.shell .ecpc,
-.ecpc.featured  {
-  background-color: var(--ecpc-background)  !important;
-  color: var(--ecpc-text-color);
-  box-sizing: border-box;
-  border-color: var(--ecpc-text-color);
-}
-
-      .ecpc p,
-      .ecpc p a,
-      .ecpc a,
-      .ecpc.featured h4,
-      .ecpc h4 a,
-      .ecpc .intro a,
-      .ecpc p.large a,
-      .ecpc p a:hover,
-      .ecpc.session.featured,
-      .ecpc.session.featured a
-      {
-        color: var(--ecpc-text-color) !important;
-      }
-
-      .fall-23 .ecpc a,
-      .ecpc h4 a:hover,
-      /* .sfpc .intro a, */
-      .ecpc p.large a:hover,
-      .ecpc.featured:hover h6,
-      .ecpc.featured:hover .title,
-      .ecpc .details a:hover,
-      .ecpc.featured .title:hover,
-      .ecpc p a:hover,
-      .ecpc h4 a:hover,
-      .ecpc section .grid-2 ul li::before,
-      .ecpc .chars,
-      .ecpc p a:hover,
-      .ecpc a:hover,
-      .ecpc h4 a:hover,
-      .ecpc .intro a:hover,
-      .ecpc .details a:hover,
-      .ecpc .entity:hover .accordion dt h3:after,
-      .ecpc .accordion dt h3:after,
-      .ecpc .expanded{
-          color: var(--ecpc-text-link) !important;
-      }
-
 
 .sfpc,
 .sfpc.featured.session,
@@ -338,6 +295,317 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+
+
+
+
+
+
+/* /////////// start winter 24 fundraiser  ///////////////////////////////*/
+
+.fundraiser-winter-24,
+.fundraiser-winter-24.featured.session,
+.fundraiser-winter-24.featured  {
+/* background-color: var(--sex-ed-background)  !important; */
+color: var(--fundraiser-winter-24-text);
+box-sizing: border-box;
+border-color: var(--fundraiser-winter-24-text);
+/* background-image: url('images/sessions/winter-24/bg.jpg'); */
+background-position: center;
+background-repeat: repeat;
+background-size: cover;
+}
+
+.fundraiser-winter-24.featured:hover {
+ /* background-size: 200%; */
+}
+
+
+
+    .shell.fundraiser-winter-24 {
+      /* background-image:url('images/sessions/winter-24/bg.jpg'); */
+      /* background-position: bottom; */
+      /* background-repeat: no-repeat;
+      background-size: cover; */
+      background-position: top left;
+      background-repeat: repeat;
+      background-size: cover;
+    }
+
+
+
+.fundraiser-winter-24,
+.fundraiser-winter-24.featured.session,
+.shell .fundraiser-winter-24,
+.fundraiser-winter-24.featured  {
+ background: var(--fundraiser-winter-24-background)  !important;
+ color: var(--fundraiser-winter-24-text);
+ box-sizing: border-box;
+ border-color: var(--fundraiser-winter-24-text);
+ text-shadow: none !important;
+}
+
+
+     .fundraiser-winter-24 p,
+     .fundraiser-winter-24 p a,
+     .fundraiser-winter-24 a,
+     .fundraiser-winter-24.featured h4,
+     .fundraiser-winter-24 h4 a,
+     .fundraiser-winter-24 .intro a,
+     .fundraiser-winter-24 p.large a,
+     .fundraiser-winter-24 p a:hover,
+     .fundraiser-winter-24.session.featured,
+     .fundraiser-winter-24.session.featured a,
+     .fundraiser-winter-24.featured h4.type a,
+     .sfpc .fundraiser-winter-24 a
+     {
+       color: var(--fundraiser-winter-24-text) !important;
+     }
+
+     .fundraiser-winter-24 .inkind .shopify-buy__btn,
+     .fundraiser-winter-24 h4 a:hover,
+     .fundraiser-winter-24 .intro a,
+     .fundraiser-winter-24 p.large a:hover,
+     .fundraiser-winter-24.featured:hover h6,
+     .fundraiser-winter-24.featured:hover .title,
+     .fundraiser-winter-24 .details a:hover,
+     .fundraiser-winter-24.featured .title:hover,
+     .fundraiser-winter-24 p a:hover,
+     .fundraiser-winter-24 h4 a:hover,
+     .fundraiser-winter-24 section .grid-2 ul li::before,
+     .fundraiser-winter-24 .chars,
+     .fundraiser-winter-24 p a:hover,
+     .fundraiser-winter-24 a:hover,
+     .fundraiser-winter-24 h4 a:hover,
+     .fundraiser-winter-24 .intro a:hover,
+     .fundraiser-winter-24 .details a:hover,
+     .fundraiser-winter-24 .entity:hover .accordion dt h3:after,
+     .fundraiser-winter-24 .accordion dt h3:after,
+     .fundraiser-winter-24 .expanded{
+         color: var(--fundraiser-winter-24-link) !important;
+     }
+
+     .fundraiser-winter-24 #cost,
+     .fundraiser-winter-24 span#cost, .fundraiser-winter-24 h3 span, .fundraiser-winter-24 p span#cost,
+     .fundraiser-winter-24 .fixed-apply,
+     .fundraiser-winter-24 .fixed-support,
+     .fundraiser-winter-24 .home-intro span#session-name::after {
+         color: var(--fundraiser-winter-24-background) !important;
+         background: var(--fundraiser-winter-24-link) !important;
+     }
+
+
+
+     .fundraiser-winter-24 span#cost {
+       background: var(--fundraiser-winter-24-link) !important;
+     }
+
+
+     .fundraiser-winter-24 .fixed-apply:hover {
+       color: #000 !important;
+       background: rgba(255,255,255,.8) !important;
+     }
+
+     .fundraiser-winter-24 .block-text {
+       background-color: var(--fundraiser-winter-24-background);
+       color: var(--fundraiser-winter-24-link);
+     }
+
+      .fundraiser-winter-24 .shopify-buy__option-select__select
+      {
+        color: var(--fundraiser-winter-24-link);
+        border: 2px solid var(--fundraiser-winter-24-link);
+        background: var(--fundraiser-winter-24-background);
+      }
+
+      .fundraiser-winter-24 .fixed-support, .shopify-buy-frame--toggle {
+        background: var(--fundraiser-winter-24-link);
+      }
+
+      .fundraiser-winter-24 .block-text h4,
+      .fundraiser-winter-24 .block-text .test-icon, .fundraiser-winter-24 p .test-icon
+       {
+        color: var(--fundraiser-winter-24-text);
+      }
+
+
+     .fundraiser-winter-24.grid-inner, .fundraiser-winter-24 .grid-inner {
+       border: 2px dotted var(--fundraiser-winter-24-text) !important;
+       color: var(--fundraiser-winter-24-link) !important;
+     }
+
+     .fundraiser-winter-24 #class .entity,
+     .fundraiser-winter-24 .entity,
+     .fundraiser-winter-24.website-grid .grid-2 {
+       border-color: var(--fundraiser-winter-24-text);
+     }
+
+     .fundraiser-winter-24 #class .entity:hover,
+
+          .fundraiser-winter-24 .entity:hover {
+       border-color: var(--fundraiser-winter-24-link);
+     }
+
+     .fundraiser-winter-24 .website-grid .grid-2 p.large {
+       text-shadow: 3px 3px var(--fundraiser-winter-24-background) !important;
+     }
+
+
+     .fundraiser-winter-24 select#allSections:hover,
+     .fundraiser-winter-24 .loader-content p::after,
+     .fundraiser-winter-24 span#cost
+     {
+       background: var(--fundraiser-winter-24-link) !important;
+       color: var(--fundraiser-winter-24-background) !important;
+     }
+
+     .fundraiser-winter-24 .breadcrumb.fixed {
+       background: rgba(255,255,255,.8) !important;
+     }
+     .fundraiser-winter-24 .breadcrumb.fixed,
+     .fundraiser-winter-24 .breadcrumb.fixed::before,
+     .fundraiser-winter-24 .breadcrumb.fixed a,
+     .fundraiser-winter-24 .breadcrumb.fixed a:hover {
+       color: #000 !important;
+       text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+     }
+
+
+     .fundraiser-winter-24 .breadcrumb,
+     .fundraiser-winter-24 .breadcrumb a,
+     .fundraiser-winter-24 .text-on-bg,
+     .fundraiser-winter-24 .breadcrumb a:hover {
+         color: var(--fundraiser-winter-24-text-on-bg) !important;
+         text-shadow: 2px 2px 0px var(--fundraiser-winter-24-background);
+     }
+
+
+     .fundraiser-winter-24 section#section-outro,
+     #class .intro.fundraiser-winter-24,
+     .shell.fundraiser-winter-24 .class-details,
+     .fundraiser-winter-24 #class section,
+     .fundraiser-winter-24 #class .entity,
+     .fundraiser-winter-24 .entity,
+     .fundraiser-winter-24 .accordion dd.active,
+     .fundraiser-winter-24 section ul,
+     .fundraiser-winter-24 .website-grid
+      {
+       /* background-color: var(--fundraiser-winter-24-background); */
+       background: none;
+       color:  var(--fundraiser-winter-24-text) !important;
+       border-radius: var(--border-rad);
+       /* text-shadow: 2px 2px 0px var(--fundraiser-winter-24-background); */
+
+
+       /* -webkit-text-stroke-width: 1px; */
+         /* -webkit-text-stroke-color: var(--fundraiser-winter-24-link); */
+     }
+
+     .fundraiser-winter-24.featured .title,
+     .fundraiser-winter-24 #session-name, #tag.fundraiser-winter-24,
+
+   .fundraiser-winter-24  #session-name > a
+
+      {
+     /* -webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color: var(--fundraiser-winter-24-link); */
+     }
+
+     .fundraiser-winter-24 #class section,
+     #class .intro.fundraiser-winter-24 {
+       padding: var(--body-margin) calc(var(--body-margin)/2);
+     }
+
+     .fundraiser-winter-24 #class section.stacked,
+     .fundraiser-winter-24 .section-testimonials,
+     .fundraiser-winter-24 .section-testimonials p
+      {
+       background: none !important;
+       padding: 0px !important;
+       /* text-shadow: 2px 2px 0px var(--fundraiser-winter-24-background); */
+
+     }
+
+     .fundraiser-winter-24 .break {
+       /* border: 0px !important; */
+       /* margin-bottom: 0px !important; */
+       border-color: var(--fundraiser-winter-24-text);
+     }
+
+     .shell.fundraiser-winter-24 {
+       /* background-image: url('images/sessions/winter-24/bg.jpg'); */
+       background-size: cover;
+     }
+
+
+/* /////////// end winter 24 fundraiser  ///////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /////////// end ECPC GENERAL STYLES  ///////////////////////////////*/
+
+
+
+.ecpc,
+.ecpc.featured.session,
+.shell .ecpc,
+.ecpc.featured  {
+  background-color: var(--ecpc-background)  !important;
+  color: var(--ecpc-text-color);
+  box-sizing: border-box;
+  border-color: var(--ecpc-text-color);
+}
+
+      .ecpc p,
+      .ecpc p a,
+      .ecpc a,
+      .ecpc.featured h4,
+      .ecpc h4 a,
+      .ecpc .intro a,
+      .ecpc p.large a,
+      .ecpc p a:hover,
+      .ecpc.session.featured,
+      .ecpc.session.featured a
+      {
+        color: var(--ecpc-text-color) !important;
+      }
+
+      .fall-23 .ecpc a,
+      .ecpc h4 a:hover,
+      /* .sfpc .intro a, */
+      .ecpc p.large a:hover,
+      .ecpc.featured:hover h6,
+      .ecpc.featured:hover .title,
+      .ecpc .details a:hover,
+      .ecpc.featured .title:hover,
+      .ecpc p a:hover,
+      .ecpc h4 a:hover,
+      .ecpc section .grid-2 ul li::before,
+      .ecpc .chars,
+      .ecpc p a:hover,
+      .ecpc a:hover,
+      .ecpc h4 a:hover,
+      .ecpc .intro a:hover,
+      .ecpc .details a:hover,
+      .ecpc .entity:hover .accordion dt h3:after,
+      .ecpc .accordion dt h3:after,
+      .ecpc .expanded{
+          color: var(--ecpc-text-link) !important;
+      }
+
+
+
+/* /////////// end ECPC GENERAL STYLES  ///////////////////////////////*/
 
 
 

@@ -426,10 +426,10 @@ $(document).ready(function() {
         // var end;
 
         // goal of the fundraiser, currently $60,000
-        var goal = 60000;
+        var goal = 40000;
 
         // estimated amount raised
-        var raised = 90981;
+        var raised = 400;
 
         // end date of fundraiser
         var today = new Date();
@@ -532,10 +532,11 @@ $(document).ready(function() {
 
 
         if (percentage < 100) {
-           $('.fundraiser-progress h6').html(percentage + '%');
+           // $('.fundraiser-progress h6').html(percentage + '%');
+           // $('.fundraiser-progress h6.right').html(goaldollars + " <span class='h4'>goal</span>");
         } else {
           // $('.fundraiser-progress h6').html(totaldollars);
-          $('.fundraiser-progress h6.left').html(percentage + '% ');
+          // $('.fundraiser-progress h6.left').html(percentage + '% ');
           $('.fundraiser-progress h6.right').html(totaldollars + " <span class='h4'>raised</span>");
         }
         // $('.fundraiser-progress h6').html(percentage + '%');
