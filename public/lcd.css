@@ -363,6 +363,8 @@ background-size: cover;
      }
 
      .fundraiser-winter-24 .inkind .shopify-buy__btn,
+     .fundraiser-winter-24 .shopify-buy__btn,
+      .fundraiser-winter-24 .shopify-buy__quantity,
      .fundraiser-winter-24 h4 a:hover,
      .fundraiser-winter-24 .intro a,
      .fundraiser-winter-24 p.large a:hover,
@@ -392,6 +394,15 @@ background-size: cover;
      .fundraiser-winter-24 .home-intro span#session-name::after {
          color: var(--fundraiser-winter-24-background) !important;
          background: var(--fundraiser-winter-24-link) !important;
+     }
+
+
+     .fundraiser-winter-24 sponsorlogo.grayarea::after {
+       background-image: url('/images/fundraiser/winter-24/gray-area-logo.svg');
+     }
+
+     .fundraiser-winter-24 .small .sponsorlogo.grayarea::after {
+       background-image: url('/images/fundraiser/winter-24/gray-area-logo.svg');
      }
 
 
