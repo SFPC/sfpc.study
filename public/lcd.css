@@ -429,7 +429,7 @@ background-size: cover;
         background: var(--fundraiser-winter-24-background);
       }
 
-      .fundraiser-winter-24 .fixed-support, .shopify-buy-frame--toggle {
+      .fundraiser-winter-24 .fixed-support, .fundraiser-winter-24 .shopify-buy-frame--toggle {
         background: var(--fundraiser-winter-24-link);
       }
 
