@@ -433,6 +433,10 @@ background-size: cover;
         background: var(--fundraiser-winter-24-link) !important;
       }
 
+      .fundraiser-winter-24 .jumpto-donate {
+        color: var(--fundraiser-winter-24-link) !important;
+      }
+
       .fundraiser-winter-24 .block-text h4,
       .fundraiser-winter-24 .block-text .test-icon, .fundraiser-winter-24 p .test-icon
        {

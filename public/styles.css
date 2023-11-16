@@ -2194,6 +2194,14 @@ span.reference {
  }
 
 
+ .entity .bio.bio-float.bio-rect {
+   border-radius: 0% !important;
+ }
+
+ .bio-rect {
+   border-radius: 0% !important;
+ }
+ 
       .entity .bio.bio-float {
       display: inline-block;
       float: right;
