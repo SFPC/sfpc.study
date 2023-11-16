@@ -615,6 +615,10 @@ h1 {
 
 
 
+
+
+
+
         .sfpc  .sponsorlogo.grayarea::after {
           background-image: url('/images/fundraiser/winter-23/gray-area-logo-dark.svg');
           fill: var(--text-color);
@@ -1728,7 +1732,8 @@ select#allSections:focus {
 
 
       .featured-text.half.nested div {
-        width: calc(100% + var(--text-margin)/2) !important
+        /* overflow-x: hidden; */
+        /* width: calc(100% + var(--text-margin)/2) !important */
 
       }
 
@@ -3765,6 +3770,11 @@ h5.shopify-buy__cart-toggle__title {
           margin-bottom: calc(var(--text-margin)/8) !important;
         }
 
+
+        .title-image {
+          overflow-x: hidden;
+
+        }
         .title-image.fundraiser-23::after {
             background-size: 100%;
             width: 70vw;
