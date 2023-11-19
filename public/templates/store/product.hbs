@@ -252,7 +252,9 @@
                     {{#eq [selltype] "Raffle Only"}}
                     ${{Value}}
                     {{else}}
-                    <span id="cost">${{cost}}</span> {{#eq [goodstype] "Physical"}}+ shipping & tax <span class="small block">Please note: We can only ship within the United States.</span> {{else}} + tax{{/eq}}</h3>
+                    <span id="cost">${{cost}}</span> {{#eq [goodstype] "Physical"}}+ shipping & tax
+                    <!-- <span class="small block">Please note: We can only ship within the United States.</span>  -->
+                    {{else}} + tax{{/eq}}</h3>
                     {{/eq}}
                 </div>
               </div>
