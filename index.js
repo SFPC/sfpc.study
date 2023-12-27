@@ -684,7 +684,7 @@ app.get("/fundraiser", async (req, res) => {
   }
 
   console.log(productsData);
-  res.render("fundraiser/winter-23/storefront", { products: productsData, testimonials: testimonialData });
+  res.render("donate/storefront", { products: productsData, testimonials: testimonialData });
 });
 
 
