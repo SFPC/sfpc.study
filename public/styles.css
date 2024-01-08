@@ -28,6 +28,12 @@
     --ecpc-special-font: 'Screenfont', sans-serif;
 
 
+        --spring-24-title-font: 'Wonder Type', sans-serif;
+        --spring-24-header-font: 'Wonder Type', sans-serif;
+        --spring-24-body-font: 'Wonder Type', sans-serif;
+        --spring-24-special-font: 'Wonder Type', sans-serif;
+
+
     --winter-24-title-font: 'Arial Narrow', sans-serif;
     --winter-24-header-font: 'Arial Narrow', sans-serif;
     --winter-24-body-font: 'Arial Narrow', sans-serif;
@@ -127,6 +133,15 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Wonder Type';
+    src:  url('/fonts/WonderType-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 
 
@@ -290,6 +305,27 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         #tag.ecpc {
         color: var(--ecpc-text);
         }
+
+        .spring-24.featured .title,
+        .spring-24 #session-name, #tag.spring-24 {
+          font-family: var(--spring-24-title-font) !important;
+          /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+      /* text-transform: uppercase; */
+      /* letter-spacing: 2px; */
+      font-weight: lighter;
+      /* -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--summer-23-link); */
+      /* font-weight: bold !important; */
+        }
+      #tag.spring-24 {
+      color: var(--spring-24-text);
+      }
+
+      .spring-24.session .title.class{
+      font-size: calc(var(--large-text) * .7) !important;
+      }
+
+
 
                 .winter-24.featured .title,
                 .winter-24 #session-name, #tag.winter-24 {
@@ -2201,7 +2237,7 @@ span.reference {
  .bio-rect {
    border-radius: 0% !important;
  }
- 
+
       .entity .bio.bio-float {
       display: inline-block;
       float: right;

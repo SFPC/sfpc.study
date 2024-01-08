@@ -20,6 +20,13 @@
     --fundraiser-winter-24-link:  #259afa;
     --fundraiser-winter-24-special-text:  #259afa;
 
+    --spring-24-background: #fff;
+     --spring-24-text: #0061ac;
+      --spring-24-text-on-bg: #0061ac;
+    --spring-24-link:  #000;
+      --spring-24-special-text:  #5294c7;
+
+
 
     --winter-24-background: #faf5e2;
      --winter-24-text: #ff38ff;
@@ -295,6 +302,234 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+
+
+
+
+/* /////////// start spring 24  ///////////////////////////////*/
+
+.spring-24,
+.spring-24.featured.session,
+.spring-24.featured  {
+ /* background-color: var(--sex-ed-background)  !important; */
+ color: var(--spring-24-text);
+ box-sizing: border-box;
+ border-color: var(--spring-24-text);
+ background-image: url('images/sessions/spring-24/bg.jpg');
+ background-position: center;
+ background-repeat: repeat;
+ background-size: cover;
+}
+
+.spring-24.featured:hover {
+  /* background-size: 200%; */
+}
+
+
+
+     .shell.spring-24 {
+       background-image:url('images/sessions/spring-24/bg.jpg');
+       /* background-position: bottom; */
+       /* background-repeat: no-repeat;
+       background-size: cover; */
+       background-position: top left;
+       background-repeat: repeat;
+       background-size: cover;
+     }
+
+
+
+.spring-24,
+.spring-24.featured.session,
+.shell .spring-24,
+.spring-24.featured  {
+  /* background-color: var(--spring-24-background)  !important; */
+  color: var(--spring-24-text);
+  box-sizing: border-box;
+  border-color: var(--spring-24-text);
+  text-shadow: none !important;
+}
+
+
+      .spring-24 p,
+      .spring-24 p a,
+      .spring-24 a,
+      .spring-24.featured h4,
+      .spring-24 h4 a,
+      .spring-24 .intro a,
+      .spring-24 p.large a,
+      .spring-24 p a:hover,
+      .spring-24.session.featured,
+      .spring-24.session.featured a,
+      .spring-24.featured h4.type a,
+      .sfpc .spring-24 a
+      {
+        color: var(--spring-24-text) !important;
+      }
+
+      .spring-24 h4 a:hover,
+      .spring-24 .intro a,
+      .spring-24 p.large a:hover,
+      .spring-24.featured:hover h6,
+      .spring-24.featured:hover .title,
+      .spring-24 .details a:hover,
+      .spring-24.featured .title:hover,
+      .spring-24 p a:hover,
+      .spring-24 h4 a:hover,
+      .spring-24 section .grid-2 ul li::before,
+      .spring-24 .chars,
+      .spring-24 p a:hover,
+      .spring-24 a:hover,
+      .spring-24 h4 a:hover,
+      .spring-24 .intro a:hover,
+      .spring-24 .details a:hover,
+      .spring-24 .entity:hover .accordion dt h3:after,
+      .spring-24 .accordion dt h3:after,
+      .spring-24 .expanded{
+          color: var(--spring-24-link) !important;
+      }
+
+      .spring-24 #cost,
+      .spring-24 .fixed-apply,
+      .spring-24 .fixed-support,
+      .spring-24 .home-intro span#session-name::after {
+          color: var(--spring-24-background) !important;
+          background: var(--spring-24-link) !important;
+      }
+
+      .spring-24 span#cost {
+        background: var(--spring-24-link) !important;
+      }
+
+
+      .spring-24 .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .spring-24 .block-text {
+        background-color: var(--spring-24-background);
+        color: var(--spring-24-link);
+      }
+
+
+
+      .spring-24.grid-inner, .spring-24 .grid-inner {
+        border: 2px dotted var(--spring-24-text) !important;
+        color: var(--spring-24-link) !important;
+      }
+
+      .spring-24 #class .entity,
+      .spring-24.website-grid .grid-2 {
+        border-color: var(--spring-24-text);
+      }
+
+      .spring-24 #class .entity:hover {
+        border-color: var(--spring-24-link);
+      }
+
+      .spring-24 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--spring-24-background) !important;
+      }
+
+
+      .spring-24 select#allSections:hover,
+      .spring-24 .loader-content p::after,
+      .spring-24 span#cost
+      {
+        background: var(--spring-24-link) !important;
+        color: var(--spring-24-background) !important;
+      }
+
+      .spring-24 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .spring-24 .breadcrumb.fixed,
+      .spring-24 .breadcrumb.fixed::before,
+      .spring-24 .breadcrumb.fixed a,
+      .spring-24 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .spring-24 .breadcrumb,
+      .spring-24 .breadcrumb a,
+      .spring-24 .text-on-bg,
+      .spring-24 .breadcrumb a:hover {
+          color: var(--spring-24-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--spring-24-background);
+      }
+
+
+      .spring-24 section#section-outro,
+      #class .intro.spring-24,
+      .shell.spring-24 .class-details,
+      .spring-24 #class section,
+      .spring-24 #class .entity,
+      .spring-24 .accordion dd.active,
+      .spring-24 section ul,
+      .spring-24 .website-grid
+       {
+        /* background-color: var(--spring-24-background); */
+        background: none;
+        color:  var(--spring-24-text) !important;
+        border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--spring-24-background); */
+
+
+        /* -webkit-text-stroke-width: 1px; */
+          /* -webkit-text-stroke-color: var(--spring-24-link); */
+      }
+
+      .spring-24.featured .title,
+      .spring-24 #session-name, #tag.spring-24,
+
+    .spring-24  #session-name > a
+
+       {
+      /* -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--spring-24-link); */
+      }
+
+      .spring-24 #class section,
+      #class .intro.spring-24 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .spring-24 #class section.stacked,
+      .spring-24 .section-testimonials,
+      .spring-24 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important;
+        /* text-shadow: 2px 2px 0px var(--spring-24-background); */
+
+      }
+
+      .spring-24 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--spring-24-text);
+      }
+
+      .shell.spring-24 {
+        background-image: url('images/sessions/spring-24/bg.jpg');
+        background-size: 100%;
+        background-position: bottom;
+        background-color: #fff;
+      }
+
+
+/* /////////// end spring 24  ///////////////////////////////*/
+
+
+
+
+
+
+
+
 
 
 
