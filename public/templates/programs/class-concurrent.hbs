@@ -173,11 +173,13 @@
               {{#if startDate2}}<BR>{{/if}}{{#if numberOfClasses}} (<span id="number-classes">{{numberOfClasses}}</span> classes){{/if}}
             </div>
           </div>
+          {{#if time}}
           <div class="details">
             <div class="labels">Time </div>
             <div class="labels-info" id="time"><span style="white-space:pre-line">{{time}}</span>
             </div>
           </div>
+          {{/if}}
           <div class="details">
             <div class="labels">Location </div>
             <div class="labels-info" id="location">{{location}}</div>
@@ -191,6 +193,11 @@
               {{#if registrationDone}}<a href="/about/scholarships">learn more...</a>{{else}}<a class="more-about-cost">
                 learn more...</a>{{/if}} </div>
           </div>
+          {{#if getnotified}}
+          <p class="large apply">
+            <a href="{{applicationLink}}" target="_blank" id="application-link">Get Notified</a>
+          </p>
+          {{else}}
           <div class="details">
             <div class="labels">Deadline </div>
             <div class="labels-info">
@@ -203,6 +210,7 @@
           <p class="large apply hide-appsClosed">
             <a href="{{applicationLink}}" target="_blank" id="application-link">Apply Now</a>
           </p>
+          {{/if}}
 
 
         </div>

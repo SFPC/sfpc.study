@@ -1790,6 +1790,7 @@ function parseClassData(apiResponse){
   returnObj.funders=classInfo["Funders"]?.multi_select[0]?.name
   returnObj.session=parseRollup(classInfo["Session Name"])[0]?.plain_text
   returnObj.notifyDate=prettyDateString(classInfo["Notification Date"]?.date?.start)
+  returnObj.getnotified=classInfo["Get Notified"]?.checkbox
 
   return returnObj
 }
