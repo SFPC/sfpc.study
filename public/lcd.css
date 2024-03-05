@@ -2,112 +2,112 @@
 
 :root {
 
-    --background: #e5e3e4 ;
-    --text-color: #555658  ;
-    --text-link: var(--winter-24-link) ;
-    --box-shadow: rgba(0,0,0,.3);
+  --background: #e5e3e4;
+  --text-color: #555658;
+  --text-link: var(--winter-24-link);
+  --box-shadow: rgba(0, 0, 0, .3);
 
-    --ecpc-background: #000 ;
-    --ecpc-text-color: #fff;
-    --ecpc-text-link: #fff;
-    --ecpc-box-shadow: rgba(0,0,0,.3);
-
-
-    --fundraiser-winter-24-background-dark: #f9f6ee;
-    --fundraiser-winter-24-background: #f9f6ee;
-   --fundraiser-winter-24-text: #e56942;
-    --fundraiser-winter-24-text-on-bg: #e56942;
-    --fundraiser-winter-24-link:  #259afa;
-    --fundraiser-winter-24-special-text:  #259afa;
-
-    --spring-24-background: #fff;
-     --spring-24-text: #0061ac;
-      --spring-24-text-on-bg: #0061ac;
-    --spring-24-link:  #000;
-      --spring-24-special-text:  #5294c7;
+  --ecpc-background: #000;
+  --ecpc-text-color: #fff;
+  --ecpc-text-link: #fff;
+  --ecpc-box-shadow: rgba(0, 0, 0, .3);
 
 
+  --fundraiser-winter-24-background-dark: #f9f6ee;
+  --fundraiser-winter-24-background: #f9f6ee;
+  --fundraiser-winter-24-text: #e56942;
+  --fundraiser-winter-24-text-on-bg: #e56942;
+  --fundraiser-winter-24-link: #259afa;
+  --fundraiser-winter-24-special-text: #259afa;
 
-    --winter-24-background: #faf5e2;
-     --winter-24-text: #ff38ff;
-      --winter-24-text-on-bg: #ff38ff;
-    --winter-24-link:  #e74578;
-      --winter-24-special-text:  #e74578;
-
-    --fall-23-background: #d3fd7a;
-   --fall-23-text: #f94b26;
-    --fall-23-text-on-bg: #f94b26;
-    --fall-23-link:  #001d19;
-    --fall-23-special-text:  #f94b26;
-
-
-    --summer-23-background: #0c0914;
-   --summer-23-text: #cdcdcd;
-    --summer-23-text-on-bg: #0a70ec;
-    --summer-23-link:  #0a70ec;
-    --summer-23-special-text:  #0a70ec;
+  --spring-24-background: #fff;
+  --spring-24-text: #0061ac;
+  --spring-24-text-on-bg: #0061ac;
+  --spring-24-link: #000;
+  --spring-24-special-text: #5294c7;
 
 
-    --spring-23-background: #e0c2b8;
-    --spring-23-text: #000;
-    --spring-23-text-on-bg: #e0c2b8;
-    --spring-23-link:  #fb5f8e;
-     --spring-23-special-text:  #000;
+
+  --winter-24-background: #faf5e2;
+  --winter-24-text: #ff38ff;
+  --winter-24-text-on-bg: #ff38ff;
+  --winter-24-link: #e74578;
+  --winter-24-special-text: #e74578;
+
+  --fall-23-background: #d3fd7a;
+  --fall-23-text: #f94b26;
+  --fall-23-text-on-bg: #f94b26;
+  --fall-23-link: #001d19;
+  --fall-23-special-text: #f94b26;
 
 
-    --fundraiser-winter-23-background-dark: #002061;
-    --fundraiser-winter-23-background: #00189a;
-   --fundraiser-winter-23-text: #fff;
-    --fundraiser-winter-23-text-on-bg: #fff;
-    --fundraiser-winter-23-link:  #009ea7;
-    --fundraiser-winter-23-special-text:  #e3009a;
+  --summer-23-background: #0c0914;
+  --summer-23-text: #cdcdcd;
+  --summer-23-text-on-bg: #0a70ec;
+  --summer-23-link: #0a70ec;
+  --summer-23-special-text: #0a70ec;
 
-   --winter-23-background: #285f9e;
+
+  --spring-23-background: #e0c2b8;
+  --spring-23-text: #000;
+  --spring-23-text-on-bg: #e0c2b8;
+  --spring-23-link: #fb5f8e;
+  --spring-23-special-text: #000;
+
+
+  --fundraiser-winter-23-background-dark: #002061;
+  --fundraiser-winter-23-background: #00189a;
+  --fundraiser-winter-23-text: #fff;
+  --fundraiser-winter-23-text-on-bg: #fff;
+  --fundraiser-winter-23-link: #009ea7;
+  --fundraiser-winter-23-special-text: #e3009a;
+
+  --winter-23-background: #285f9e;
   --winter-23-text: #fff;
-   --winter-23-text-on-bg: #fff;
-   --winter-23-link:  #74c131;
-   --winter-23-special-text:  #285f9e;
+  --winter-23-text-on-bg: #fff;
+  --winter-23-link: #74c131;
+  --winter-23-special-text: #285f9e;
 
 
-    --fall-22-background: #37903d;
-    --fall-22-text: #ffffff;
-    --fall-22-text-on-bg: #d3dbe0;
-    --fall-22-link:  #4c0191;
-     --fall-22-special-text:  #5b922c;
+  --fall-22-background: #37903d;
+  --fall-22-text: #ffffff;
+  --fall-22-text-on-bg: #d3dbe0;
+  --fall-22-link: #4c0191;
+  --fall-22-special-text: #5b922c;
 
-    --sex-ed-background: #33f24c ;
-    --sex-ed-text: #5d4486  ;
-    --sex-ed-link: #7358b7;
-    --sex-ed-text-on-bg:#555658  ;
-    --sex-ed-special-text:  #555658  ;
+  --sex-ed-background: #33f24c;
+  --sex-ed-text: #5d4486;
+  --sex-ed-link: #7358b7;
+  --sex-ed-text-on-bg: #555658;
+  --sex-ed-special-text: #555658;
 
-    --networked-performance-background: #2E2E2E;
-    --networked-performance-text: #fff;
-    --networked-performance-text-on-bg: #fff;
-    --networked-performance-link:  #EDBBE8;
-     --networked-performance-special-text:  #14a057;
+  --networked-performance-background: #2E2E2E;
+  --networked-performance-text: #fff;
+  --networked-performance-text-on-bg: #fff;
+  --networked-performance-link: #EDBBE8;
+  --networked-performance-special-text: #14a057;
 
-    --summer-22-background: #F5EEEE;
-    --summer-22-text: #FF4C00;
-    --summer-22-text-on-bg: #fff;
-    --summer-22-link:  #458DF9;
-     --summer-22-special-text:  #FF4C00;
+  --summer-22-background: #F5EEEE;
+  --summer-22-text: #FF4C00;
+  --summer-22-text-on-bg: #fff;
+  --summer-22-link: #458DF9;
+  --summer-22-special-text: #FF4C00;
 
-    --spring-22-background: #e5e3e4;
-    --spring-22-text: #555658;
-    --spring-22-link:  rgb(48, 155, 80);
+  --spring-22-background: #e5e3e4;
+  --spring-22-text: #555658;
+  --spring-22-link: rgb(48, 155, 80);
 
-    --fallwinter-2122-background: #fff;
-    --fallwinter-2122-text: #000;
-    --fallwinter-2122-link: #8866aa;
+  --fallwinter-2122-background: #fff;
+  --fallwinter-2122-text: #000;
+  --fallwinter-2122-link: #8866aa;
 
-    --cocoon-background: #bb905e;
-    --cocoon-text: #211060;
-    --cocoon-link: hsl(165, 53%, 25%);
+  --cocoon-background: #bb905e;
+  --cocoon-text: #211060;
+  --cocoon-link: hsl(165, 53%, 25%);
 
-    --codesocieties-20-background: blueviolet;
-    --codesocieties-20-text: #fff;
-    --codesocieties-20-link: #c78fff;
+  --codesocieties-20-background: blueviolet;
+  --codesocieties-20-text: #fff;
+  --codesocieties-20-link: #c78fff;
 
 }
 
@@ -119,7 +119,7 @@
 
 
 select#allSections {
-  background: rgba(255,255,255,.8);
+  background: rgba(255, 255, 255, .8);
   backdrop-filter: blur(3px);
 }
 
@@ -135,168 +135,166 @@ select#allSections {
 .sfpc,
 .sfpc.featured.session,
 .shell .sfpc,
-.sfpc.featured  {
-  background-color: var(--background)  !important;
+.sfpc.featured {
+  background-color: var(--background) !important;
   color: var(--text-color);
   box-sizing: border-box;
   border-color: var(--text-color);
 }
 
 
-      .sfpc p,
-      .sfpc p a,
-      .sfpc a,
-      .sfpc.featured h4,
-      .sfpc h4 a,
-      .sfpc .intro a,
-      .sfpc p.large a,
-      .sfpc p a:hover,
-      .sfpc.session.featured,
-      .sfpc.session.featured a
-      {
-        color: var(--text-color) !important;
-      }
+.sfpc p,
+.sfpc p a,
+.sfpc a,
+.sfpc.featured h4,
+.sfpc h4 a,
+.sfpc .intro a,
+.sfpc p.large a,
+.sfpc p a:hover,
+.sfpc.session.featured,
+.sfpc.session.featured a {
+  color: var(--text-color) !important;
+}
 
-      .sfpc h4 a:hover,
-      /* .sfpc .intro a, */
-      .sfpc p.large a:hover,
-      .sfpc.featured:hover h6,
-      .sfpc.featured:hover .title,
-      .sfpc .details a:hover,
-      .sfpc.featured .title:hover,
-      .sfpc p a:hover,
-      .sfpc h4 a:hover,
-      .sfpc section .grid-2 ul li::before,
-      .sfpc .chars,
-      .sfpc p a:hover,
-      .sfpc a:hover,
-      .sfpc h4 a:hover,
-      .sfpc .intro a:hover,
-      .sfpc .details a:hover,
-      .sfpc .entity:hover .accordion dt h3:after,
-      .sfpc .accordion dt h3:after,
-      .sfpc i.special,
-      .sfpc .expanded{
-          color: var(--text-link) !important;
-      }
+.sfpc h4 a:hover,
+/* .sfpc .intro a, */
+.sfpc p.large a:hover,
+.sfpc.featured:hover h6,
+.sfpc.featured:hover .title,
+.sfpc .details a:hover,
+.sfpc.featured .title:hover,
+.sfpc p a:hover,
+.sfpc h4 a:hover,
+.sfpc section .grid-2 ul li::before,
+.sfpc .chars,
+.sfpc p a:hover,
+.sfpc a:hover,
+.sfpc h4 a:hover,
+.sfpc .intro a:hover,
+.sfpc .details a:hover,
+.sfpc .entity:hover .accordion dt h3:after,
+.sfpc .accordion dt h3:after,
+.sfpc i.special,
+.sfpc .expanded {
+  color: var(--text-link) !important;
+}
 
-      .sfpc #cost,
-      .sfpc .fixed-apply,
-      .sfpc .fixed-support {
-          color: var(--background) !important;
-      }
+.sfpc #cost,
+.sfpc .fixed-apply,
+.sfpc .fixed-support {
+  color: var(--background) !important;
+}
 
-      .sfpc .fixed-apply:hover {
-        color: #000 !important;
-        background: rgba(255,255,255,.8) !important;
-      }
+.sfpc .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .sfpc .block-text {
-        background-color: var(--background);
-        color: var(--text-link);
-      }
-
-
-      .sfpc .break {
-        border-bottom: 1px dashed var(--text-color);
-      }
-
-      .sfpc .grid-inner, .sfpc.grid-inner {
-        border: 2px dotted var(--text-color) ;
-        color: var(--text-link) !important;
-      }
-
-      .sfpc #class .entity,
-      .sfpc.website-grid .grid-2 {
-        border-color: var(--text-color);
-      }
-
-      .sfpc #class .entity:hover {
-        border-color: var(--text-link);
-      }
-
-      .sfpc .website-grid .grid-2 p.large {
-        text-shadow: 3px 3px var(--background) !important;
-      }
-
-      .sfpc select#allSections:hover,
-      .sfpc .loader-content p::after,
-      .sfpc span#cost
-      {
-        background: var(--text-link) !important;
-        color: var(--background) !important;
-      }
+.sfpc .block-text {
+  background-color: var(--background);
+  color: var(--text-link);
+}
 
 
-      .sfpc .breadcrumb.fixed {
-          background: rgba(255,255,255,.8) !important;
-      }
+.sfpc .break {
+  border-bottom: 1px dashed var(--text-color);
+}
 
-      .sfpc .breadcrumb.fixed,
-      .sfpc .breadcrumb.fixed::before,
-      .sfpc .breadcrumb.fixed a,
-      .sfpc .breadcrumb.fixed a:hover {
-        /* background: rgba(255,255,255,.8) !important; */
-        color: #000 !important;
-      }
+.sfpc .grid-inner,
+.sfpc.grid-inner {
+  border: 2px dotted var(--text-color);
+  color: var(--text-link) !important;
+}
 
+.sfpc #class .entity,
+.sfpc.website-grid .grid-2 {
+  border-color: var(--text-color);
+}
 
-      .sfpc .breadcrumb,
-      .sfpc .breadcrumb a,
-      .sfpc .text-on-bg,
-      .sfpc .breadcrumb a:hover {
-          color: var(--text-color) !important;
-          /* text-shadow: 2px 2px 0px var(--text-link); */
-      }
+.sfpc #class .entity:hover {
+  border-color: var(--text-link);
+}
 
+.sfpc .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--background) !important;
+}
 
-      .sfpc section#section-outro,
-      #class .intro.sfpc,
-      .shell.sfpc .class-details,
-      .sfpc #class section,
-      .sfpc #class .entity,
-      .sfpc .accordion dd.active,
-      .sfpc section ul,
-      .sfpc .website-grid
-       {
-        background-color: var(--background);
-        color:  var(--text-color) !important;
-        border-radius: var(--border-rad);
-      }
-
-      .sfpc #class section,
-      #class .intro.sfpc {
-        /* padding: var(--body-margin) calc(var(--body-margin)/2); */
-      }
-
-      .sfpc #class section.stacked,
-      .sfpc .section-testimonials,
-      .sfpc .section-testimonials p
-       {
-        background: none !important;
-        padding: 0px !important
-      }
+.sfpc select#allSections:hover,
+.sfpc .loader-content p::after,
+.sfpc span#cost {
+  background: var(--text-link) !important;
+  color: var(--background) !important;
+}
 
 
-      .shell.sfpc {
-        background: var(--background);
-      }
+.sfpc .breadcrumb.fixed {
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .sfpc.test, .sfpc.block-text {
-        border-color: var(--text-color);
-      }
+.sfpc .breadcrumb.fixed,
+.sfpc .breadcrumb.fixed::before,
+.sfpc .breadcrumb.fixed a,
+.sfpc .breadcrumb.fixed a:hover {
+  /* background: rgba(255,255,255,.8) !important; */
+  color: #000 !important;
+}
 
-      .sfpc .fundraiser-progress h6 {
-      color: var(--background);
-      }
 
-      .sfpc .fundraiser-progress {
-      background:  var(--text-link);
-      }
+.sfpc .breadcrumb,
+.sfpc .breadcrumb a,
+.sfpc .text-on-bg,
+.sfpc .breadcrumb a:hover {
+  color: var(--text-color) !important;
+  /* text-shadow: 2px 2px 0px var(--text-link); */
+}
 
-      .sfpc .fundraiser-goal {
-      border: 2px solid var(--text-link);
-      }
+
+.sfpc section#section-outro,
+#class .intro.sfpc,
+.shell.sfpc .class-details,
+.sfpc #class section,
+.sfpc #class .entity,
+.sfpc .accordion dd.active,
+.sfpc section ul,
+.sfpc .website-grid {
+  background-color: var(--background);
+  color: var(--text-color) !important;
+  border-radius: var(--border-rad);
+}
+
+.sfpc #class section,
+#class .intro.sfpc {
+  /* padding: var(--body-margin) calc(var(--body-margin)/2); */
+}
+
+.sfpc #class section.stacked,
+.sfpc .section-testimonials,
+.sfpc .section-testimonials p {
+  background: none !important;
+  padding: 0px !important
+}
+
+
+.shell.sfpc {
+  background: var(--background);
+}
+
+.sfpc.test,
+.sfpc.block-text {
+  border-color: var(--text-color);
+}
+
+.sfpc .fundraiser-progress h6 {
+  color: var(--background);
+}
+
+.sfpc .fundraiser-progress {
+  background: var(--text-link);
+}
+
+.sfpc .fundraiser-goal {
+  border: 2px solid var(--text-link);
+}
 
 
 
@@ -310,15 +308,15 @@ select#allSections {
 
 .spring-24,
 .spring-24.featured.session,
-.spring-24.featured  {
- /* background-color: var(--sex-ed-background)  !important; */
- color: var(--spring-24-text);
- box-sizing: border-box;
- border-color: var(--spring-24-text);
- background-image: url('images/sessions/spring-24/bg.jpg');
- background-position: center;
- background-repeat: repeat;
- background-size: cover;
+.spring-24.featured {
+  /* background-color: var(--sex-ed-background)  !important; */
+  color: var(--spring-24-text);
+  box-sizing: border-box;
+  border-color: var(--spring-24-text);
+  background-image: url('images/sessions/spring-24/classes/sex-ed/WEB_BACKGROUND_.png');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 .spring-24.featured:hover {
@@ -327,22 +325,22 @@ select#allSections {
 
 
 
-     .shell.spring-24 {
-       background-image:url('images/sessions/spring-24/bg.jpg');
-       /* background-position: bottom; */
-       /* background-repeat: no-repeat;
+.shell.spring-24 {
+  background-image: url('images/sessions/spring-24/classes/sex-ed/WEB_BACKGROUND_.png');
+  /* background-position: bottom; */
+  /* background-repeat: no-repeat;
        background-size: cover; */
-       background-position: top left;
-       background-repeat: repeat;
-       background-size: cover;
-     }
+  background-position: top left;
+  background-repeat: repeat;
+  background-size: cover;
+}
 
 
 
 .spring-24,
 .spring-24.featured.session,
 .shell .spring-24,
-.spring-24.featured  {
+.spring-24.featured {
   /* background-color: var(--spring-24-background)  !important; */
   color: var(--spring-24-text);
   box-sizing: border-box;
@@ -351,174 +349,171 @@ select#allSections {
 }
 
 
-      .spring-24 p,
-      .spring-24 p a,
-      .spring-24 a,
-      .spring-24.featured h4,
-      .spring-24 h4 a,
-      .spring-24 .intro a,
-      .spring-24 p.large a,
-      .spring-24 p a:hover,
-      .spring-24.session.featured,
-      .spring-24.session.featured a,
-      .spring-24.featured h4.type a,
-      .sfpc .spring-24 a
-      {
-        color: var(--spring-24-text) !important;
-      }
+.spring-24 p,
+.spring-24 p a,
+.spring-24 a,
+.spring-24.featured h4,
+.spring-24 h4 a,
+.spring-24 .intro a,
+.spring-24 p.large a,
+.spring-24 p a:hover,
+.spring-24.session.featured,
+.spring-24.session.featured a,
+.spring-24.featured h4.type a,
+.sfpc .spring-24 a {
+  color: var(--spring-24-text) !important;
+}
 
-      .spring-24 h4 a:hover,
-      .spring-24 .intro a,
-      .spring-24 p.large a:hover,
-      .spring-24.featured:hover h6,
-      .spring-24.featured:hover .title,
-      .spring-24 .details a:hover,
-      .spring-24.featured .title:hover,
-      .spring-24 p a:hover,
-      .spring-24 h4 a:hover,
-      .spring-24 section .grid-2 ul li::before,
-      .spring-24 .chars,
-      .spring-24 p a:hover,
-      .spring-24 a:hover,
-      .spring-24 h4 a:hover,
-      .spring-24 .intro a:hover,
-      .spring-24 .details a:hover,
-      .spring-24 .entity:hover .accordion dt h3:after,
-      .spring-24 .accordion dt h3:after,
-      .spring-24 .expanded{
-          color: var(--spring-24-link) !important;
-      }
+.spring-24 h4 a:hover,
+.spring-24 .intro a,
+.spring-24 p.large a:hover,
+.spring-24.featured:hover h6,
+.spring-24.featured:hover .title,
+.spring-24 .details a:hover,
+.spring-24.featured .title:hover,
+.spring-24 p a:hover,
+.spring-24 h4 a:hover,
+.spring-24 section .grid-2 ul li::before,
+.spring-24 .chars,
+.spring-24 p a:hover,
+.spring-24 a:hover,
+.spring-24 h4 a:hover,
+.spring-24 .intro a:hover,
+.spring-24 .details a:hover,
+.spring-24 .entity:hover .accordion dt h3:after,
+.spring-24 .accordion dt h3:after,
+.spring-24 .expanded {
+  color: var(--spring-24-link) !important;
+}
 
-      .spring-24 #cost,
-      .spring-24 .fixed-apply,
-      .spring-24 .fixed-support,
-      .spring-24 .home-intro span#session-name::after {
-          color: var(--spring-24-background) !important;
-          background: var(--spring-24-link) !important;
-      }
+.spring-24 #cost,
+.spring-24 .fixed-apply,
+.spring-24 .fixed-support,
+.spring-24 .home-intro span#session-name::after {
+  color: var(--spring-24-background) !important;
+  background: var(--spring-24-link) !important;
+}
 
-      .spring-24 span#cost {
-        background: var(--spring-24-link) !important;
-      }
-
-
-      .spring-24 .fixed-apply:hover {
-        color: #000 !important;
-        background: rgba(255,255,255,.8) !important;
-      }
-
-      .spring-24 .block-text {
-        background-color: var(--spring-24-background);
-        color: var(--spring-24-link);
-      }
+.spring-24 span#cost {
+  background: var(--spring-24-link) !important;
+}
 
 
+.spring-24 .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .spring-24.grid-inner, .spring-24 .grid-inner {
-        border: 2px dotted var(--spring-24-text) !important;
-        color: var(--spring-24-link) !important;
-      }
-
-      .spring-24 #class .entity,
-      .spring-24.website-grid .grid-2 {
-        border-color: var(--spring-24-text);
-      }
-
-      .spring-24 #class .entity:hover {
-        border-color: var(--spring-24-link);
-      }
-
-      .spring-24 .website-grid .grid-2 p.large {
-        text-shadow: 3px 3px var(--spring-24-background) !important;
-      }
+.spring-24 .block-text {
+  background-color: var(--spring-24-background);
+  color: var(--spring-24-link);
+}
 
 
-      .spring-24 select#allSections:hover,
-      .spring-24 .loader-content p::after,
-      .spring-24 span#cost
-      {
-        background: var(--spring-24-link) !important;
-        color: var(--spring-24-background) !important;
-      }
 
-      .spring-24 .breadcrumb.fixed {
-        background: rgba(255,255,255,.8) !important;
-      }
-      .spring-24 .breadcrumb.fixed,
-      .spring-24 .breadcrumb.fixed::before,
-      .spring-24 .breadcrumb.fixed a,
-      .spring-24 .breadcrumb.fixed a:hover {
-        color: #000 !important;
-        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
-      }
+.spring-24.grid-inner,
+.spring-24 .grid-inner {
+  border: 2px dotted var(--spring-24-text) !important;
+  color: var(--spring-24-link) !important;
+}
 
+.spring-24 #class .entity,
+.spring-24.website-grid .grid-2 {
+  border-color: var(--spring-24-text);
+}
 
-      .spring-24 .breadcrumb,
-      .spring-24 .breadcrumb a,
-      .spring-24 .text-on-bg,
-      .spring-24 .breadcrumb a:hover {
-          color: var(--spring-24-text-on-bg) !important;
-          text-shadow: 2px 2px 0px var(--spring-24-background);
-      }
+.spring-24 #class .entity:hover {
+  border-color: var(--spring-24-link);
+}
+
+.spring-24 .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--spring-24-background) !important;
+}
 
 
-      .spring-24 section#section-outro,
-      #class .intro.spring-24,
-      .shell.spring-24 .class-details,
-      .spring-24 #class section,
-      .spring-24 #class .entity,
-      .spring-24 .accordion dd.active,
-      .spring-24 section ul,
-      .spring-24 .website-grid
-       {
-        /* background-color: var(--spring-24-background); */
-        background: none;
-        color:  var(--spring-24-text) !important;
-        border-radius: var(--border-rad);
-        /* text-shadow: 2px 2px 0px var(--spring-24-background); */
+.spring-24 select#allSections:hover,
+.spring-24 .loader-content p::after,
+.spring-24 span#cost {
+  background: var(--spring-24-link) !important;
+  color: var(--spring-24-background) !important;
+}
+
+.spring-24 .breadcrumb.fixed {
+  background: rgba(255, 255, 255, .8) !important;
+}
+
+.spring-24 .breadcrumb.fixed,
+.spring-24 .breadcrumb.fixed::before,
+.spring-24 .breadcrumb.fixed a,
+.spring-24 .breadcrumb.fixed a:hover {
+  color: #000 !important;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .8) !important;
+}
 
 
-        /* -webkit-text-stroke-width: 1px; */
-          /* -webkit-text-stroke-color: var(--spring-24-link); */
-      }
+.spring-24 .breadcrumb,
+.spring-24 .breadcrumb a,
+.spring-24 .text-on-bg,
+.spring-24 .breadcrumb a:hover {
+  color: var(--spring-24-text-on-bg) !important;
+  text-shadow: 2px 2px 0px var(--spring-24-background);
+}
 
-      .spring-24.featured .title,
-      .spring-24 #session-name, #tag.spring-24,
 
-    .spring-24  #session-name > a
+.spring-24 section#section-outro,
+#class .intro.spring-24,
+.shell.spring-24 .class-details,
+.spring-24 #class section,
+.spring-24 #class .entity,
+.spring-24 .accordion dd.active,
+.spring-24 section ul,
+.spring-24 .website-grid {
+  /* background-color: var(--spring-24-background); */
+  background: none;
+  color: var(--spring-24-text) !important;
+  border-radius: var(--border-rad);
+  /* text-shadow: 2px 2px 0px var(--spring-24-background); */
 
-       {
-      /* -webkit-text-stroke-width: 1px;
+
+  /* -webkit-text-stroke-width: 1px; */
+  /* -webkit-text-stroke-color: var(--spring-24-link); */
+}
+
+.spring-24.featured .title,
+.spring-24 #session-name,
+#tag.spring-24,
+
+.spring-24 #session-name>a {
+  /* -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: var(--spring-24-link); */
-      }
+}
 
-      .spring-24 #class section,
-      #class .intro.spring-24 {
-        padding: var(--body-margin) calc(var(--body-margin)/2);
-      }
+.spring-24 #class section,
+#class .intro.spring-24 {
+  padding: var(--body-margin) calc(var(--body-margin)/2);
+}
 
-      .spring-24 #class section.stacked,
-      .spring-24 .section-testimonials,
-      .spring-24 .section-testimonials p
-       {
-        background: none !important;
-        padding: 0px !important;
-        /* text-shadow: 2px 2px 0px var(--spring-24-background); */
+.spring-24 #class section.stacked,
+.spring-24 .section-testimonials,
+.spring-24 .section-testimonials p {
+  background: none !important;
+  padding: 0px !important;
+  /* text-shadow: 2px 2px 0px var(--spring-24-background); */
 
-      }
+}
 
-      .spring-24 .break {
-        /* border: 0px !important; */
-        /* margin-bottom: 0px !important; */
-        border-color: var(--spring-24-text);
-      }
+.spring-24 .break {
+  /* border: 0px !important; */
+  /* margin-bottom: 0px !important; */
+  border-color: var(--spring-24-text);
+}
 
-      .shell.spring-24 {
-        background-image: url('images/sessions/spring-24/bg.jpg');
-        background-size: 100%;
-        background-position: bottom;
-        background-color: #fff;
-      }
+.shell.spring-24 {
+  background-image: url('images/sessions/spring-24/classes/sex-ed/WEB_BACKGROUND_.png');
+  background-size: 100%;
+  background-position: bottom;
+  background-color: #fff;
+}
 
 
 /* /////////// end spring 24  ///////////////////////////////*/
@@ -540,252 +535,251 @@ select#allSections {
 
 .fundraiser-winter-24,
 .fundraiser-winter-24.featured.session,
-.fundraiser-winter-24.featured  {
-/* background-color: var(--sex-ed-background)  !important; */
-color: var(--fundraiser-winter-24-text);
-box-sizing: border-box;
-border-color: var(--fundraiser-winter-24-text);
-/* background-image: url('images/sessions/winter-24/bg.jpg'); */
-background-position: center;
-background-repeat: repeat;
-background-size: cover;
+.fundraiser-winter-24.featured {
+  /* background-color: var(--sex-ed-background)  !important; */
+  color: var(--fundraiser-winter-24-text);
+  box-sizing: border-box;
+  border-color: var(--fundraiser-winter-24-text);
+  /* background-image: url('images/sessions/winter-24/bg.jpg'); */
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 .fundraiser-winter-24.featured:hover {
- /* background-size: 200%; */
+  /* background-size: 200%; */
 }
 
 
 
-    .shell.fundraiser-winter-24 {
-      /* background-image:url('images/sessions/winter-24/bg.jpg'); */
-      /* background-position: bottom; */
-      /* background-repeat: no-repeat;
+.shell.fundraiser-winter-24 {
+  /* background-image:url('images/sessions/winter-24/bg.jpg'); */
+  /* background-position: bottom; */
+  /* background-repeat: no-repeat;
       background-size: cover; */
-      background-position: top left;
-      background-repeat: repeat;
-      background-size: cover;
-    }
+  background-position: top left;
+  background-repeat: repeat;
+  background-size: cover;
+}
 
 
 
 .fundraiser-winter-24,
 .fundraiser-winter-24.featured.session,
 .shell .fundraiser-winter-24,
-.fundraiser-winter-24.featured  {
- background: var(--fundraiser-winter-24-background)  !important;
- color: var(--fundraiser-winter-24-text);
- box-sizing: border-box;
- border-color: var(--fundraiser-winter-24-text);
- text-shadow: none !important;
+.fundraiser-winter-24.featured {
+  background: var(--fundraiser-winter-24-background) !important;
+  color: var(--fundraiser-winter-24-text);
+  box-sizing: border-box;
+  border-color: var(--fundraiser-winter-24-text);
+  text-shadow: none !important;
 }
 
 
-     .fundraiser-winter-24 p,
-     .fundraiser-winter-24 p a,
-     .fundraiser-winter-24 a,
-     .fundraiser-winter-24.featured h4,
-     .fundraiser-winter-24 h4 a,
-     .fundraiser-winter-24 .intro a,
-     .fundraiser-winter-24 p.large a,
-     .fundraiser-winter-24 p a:hover,
-     .fundraiser-winter-24.session.featured,
-     .fundraiser-winter-24.session.featured a,
-     .fundraiser-winter-24.featured h4.type a,
-     .sfpc .fundraiser-winter-24 a
-     {
-       color: var(--fundraiser-winter-24-text) !important;
-     }
+.fundraiser-winter-24 p,
+.fundraiser-winter-24 p a,
+.fundraiser-winter-24 a,
+.fundraiser-winter-24.featured h4,
+.fundraiser-winter-24 h4 a,
+.fundraiser-winter-24 .intro a,
+.fundraiser-winter-24 p.large a,
+.fundraiser-winter-24 p a:hover,
+.fundraiser-winter-24.session.featured,
+.fundraiser-winter-24.session.featured a,
+.fundraiser-winter-24.featured h4.type a,
+.sfpc .fundraiser-winter-24 a {
+  color: var(--fundraiser-winter-24-text) !important;
+}
 
-     .fundraiser-winter-24 .inkind .shopify-buy__btn,
-     .fundraiser-winter-24 .shopify-buy__btn,
-      .fundraiser-winter-24 .shopify-buy__quantity,
-     .fundraiser-winter-24 h4 a:hover,
-     .fundraiser-winter-24 .intro a,
-     .fundraiser-winter-24 p.large a:hover,
-     .fundraiser-winter-24.featured:hover h6,
-     .fundraiser-winter-24.featured:hover .title,
-     .fundraiser-winter-24 .details a:hover,
-     .fundraiser-winter-24.featured .title:hover,
-     .fundraiser-winter-24 p a:hover,
-     .fundraiser-winter-24 h4 a:hover,
-     .fundraiser-winter-24 section .grid-2 ul li::before,
-     .fundraiser-winter-24 .chars,
-     .fundraiser-winter-24 p a:hover,
-     .fundraiser-winter-24 a:hover,
-     .fundraiser-winter-24 h4 a:hover,
-     .fundraiser-winter-24 .intro a:hover,
-     .fundraiser-winter-24 .details a:hover,
-     .fundraiser-winter-24 .entity:hover .accordion dt h3:after,
-     .fundraiser-winter-24 .accordion dt h3:after,
-     .fundraiser-winter-24 .expanded{
-         color: var(--fundraiser-winter-24-link) !important;
-     }
+.fundraiser-winter-24 .inkind .shopify-buy__btn,
+.fundraiser-winter-24 .shopify-buy__btn,
+.fundraiser-winter-24 .shopify-buy__quantity,
+.fundraiser-winter-24 h4 a:hover,
+.fundraiser-winter-24 .intro a,
+.fundraiser-winter-24 p.large a:hover,
+.fundraiser-winter-24.featured:hover h6,
+.fundraiser-winter-24.featured:hover .title,
+.fundraiser-winter-24 .details a:hover,
+.fundraiser-winter-24.featured .title:hover,
+.fundraiser-winter-24 p a:hover,
+.fundraiser-winter-24 h4 a:hover,
+.fundraiser-winter-24 section .grid-2 ul li::before,
+.fundraiser-winter-24 .chars,
+.fundraiser-winter-24 p a:hover,
+.fundraiser-winter-24 a:hover,
+.fundraiser-winter-24 h4 a:hover,
+.fundraiser-winter-24 .intro a:hover,
+.fundraiser-winter-24 .details a:hover,
+.fundraiser-winter-24 .entity:hover .accordion dt h3:after,
+.fundraiser-winter-24 .accordion dt h3:after,
+.fundraiser-winter-24 .expanded {
+  color: var(--fundraiser-winter-24-link) !important;
+}
 
-     .fundraiser-winter-24 #cost,
-     .fundraiser-winter-24 span#cost, .fundraiser-winter-24 h3 span, .fundraiser-winter-24 p span#cost,
-     .fundraiser-winter-24 .fixed-apply,
-     .fundraiser-winter-24 .fixed-support,
-     .fundraiser-winter-24 .home-intro span#session-name::after {
-         color: var(--fundraiser-winter-24-background) !important;
-         background: var(--fundraiser-winter-24-link) !important;
-     }
-
-
-     .fundraiser-winter-24 sponsorlogo.grayarea::after {
-       background-image: url('/images/fundraiser/winter-24/gray-area-logo.svg');
-     }
-
-     .fundraiser-winter-24 .small .sponsorlogo.grayarea::after {
-       background-image: url('/images/fundraiser/winter-24/gray-area-logo.svg');
-     }
+.fundraiser-winter-24 #cost,
+.fundraiser-winter-24 span#cost,
+.fundraiser-winter-24 h3 span,
+.fundraiser-winter-24 p span#cost,
+.fundraiser-winter-24 .fixed-apply,
+.fundraiser-winter-24 .fixed-support,
+.fundraiser-winter-24 .home-intro span#session-name::after {
+  color: var(--fundraiser-winter-24-background) !important;
+  background: var(--fundraiser-winter-24-link) !important;
+}
 
 
+.fundraiser-winter-24 sponsorlogo.grayarea::after {
+  background-image: url('/images/fundraiser/winter-24/gray-area-logo.svg');
+}
 
-     .fundraiser-winter-24 span#cost {
-       background: var(--fundraiser-winter-24-link) !important;
-     }
-
-
-     .fundraiser-winter-24 .fixed-apply:hover {
-       color: #000 !important;
-       background: rgba(255,255,255,.8) !important;
-     }
-
-     .fundraiser-winter-24 .block-text {
-       background-color: var(--fundraiser-winter-24-background);
-       color: var(--fundraiser-winter-24-link);
-     }
-
-      .fundraiser-winter-24 .shopify-buy__option-select__select
-      {
-        color: var(--fundraiser-winter-24-link);
-        border: 2px solid var(--fundraiser-winter-24-link);
-        background: var(--fundraiser-winter-24-background);
-      }
-
-      .fundraiser-winter-24 .fixed-support, .fundraiser-winter-24 .shopify-buy-frame--toggle {
-        background: var(--fundraiser-winter-24-link) !important;
-      }
-
-      .fundraiser-winter-24 .jumpto-donate {
-        color: var(--fundraiser-winter-24-link) !important;
-      }
-
-      .fundraiser-winter-24 .block-text h4,
-      .fundraiser-winter-24 .block-text .test-icon, .fundraiser-winter-24 p .test-icon
-       {
-        color: var(--fundraiser-winter-24-text);
-      }
+.fundraiser-winter-24 .small .sponsorlogo.grayarea::after {
+  background-image: url('/images/fundraiser/winter-24/gray-area-logo.svg');
+}
 
 
-     .fundraiser-winter-24.grid-inner, .fundraiser-winter-24 .grid-inner {
-       border: 2px dotted var(--fundraiser-winter-24-text) !important;
-       color: var(--fundraiser-winter-24-link) !important;
-     }
 
-     .fundraiser-winter-24 #class .entity,
-     .fundraiser-winter-24 .entity,
-     .fundraiser-winter-24.website-grid .grid-2 {
-       border-color: var(--fundraiser-winter-24-text);
-     }
-
-     .fundraiser-winter-24 #class .entity:hover,
-
-          .fundraiser-winter-24 .entity:hover {
-       border-color: var(--fundraiser-winter-24-link);
-     }
-
-     .fundraiser-winter-24 .website-grid .grid-2 p.large {
-       text-shadow: 3px 3px var(--fundraiser-winter-24-background) !important;
-     }
+.fundraiser-winter-24 span#cost {
+  background: var(--fundraiser-winter-24-link) !important;
+}
 
 
-     .fundraiser-winter-24 select#allSections:hover,
-     .fundraiser-winter-24 .loader-content p::after,
-     .fundraiser-winter-24 span#cost
-     {
-       background: var(--fundraiser-winter-24-link) !important;
-       color: var(--fundraiser-winter-24-background) !important;
-     }
+.fundraiser-winter-24 .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-     .fundraiser-winter-24 .breadcrumb.fixed {
-       background: rgba(255,255,255,.8) !important;
-     }
-     .fundraiser-winter-24 .breadcrumb.fixed,
-     .fundraiser-winter-24 .breadcrumb.fixed::before,
-     .fundraiser-winter-24 .breadcrumb.fixed a,
-     .fundraiser-winter-24 .breadcrumb.fixed a:hover {
-       color: #000 !important;
-       text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
-     }
+.fundraiser-winter-24 .block-text {
+  background-color: var(--fundraiser-winter-24-background);
+  color: var(--fundraiser-winter-24-link);
+}
 
+.fundraiser-winter-24 .shopify-buy__option-select__select {
+  color: var(--fundraiser-winter-24-link);
+  border: 2px solid var(--fundraiser-winter-24-link);
+  background: var(--fundraiser-winter-24-background);
+}
 
-     .fundraiser-winter-24 .breadcrumb,
-     .fundraiser-winter-24 .breadcrumb a,
-     .fundraiser-winter-24 .text-on-bg,
-     .fundraiser-winter-24 .breadcrumb a:hover {
-         color: var(--fundraiser-winter-24-text-on-bg) !important;
-         text-shadow: 2px 2px 0px var(--fundraiser-winter-24-background);
-     }
+.fundraiser-winter-24 .fixed-support,
+.fundraiser-winter-24 .shopify-buy-frame--toggle {
+  background: var(--fundraiser-winter-24-link) !important;
+}
 
+.fundraiser-winter-24 .jumpto-donate {
+  color: var(--fundraiser-winter-24-link) !important;
+}
 
-     .fundraiser-winter-24 section#section-outro,
-     #class .intro.fundraiser-winter-24,
-     .shell.fundraiser-winter-24 .class-details,
-     .fundraiser-winter-24 #class section,
-     .fundraiser-winter-24 #class .entity,
-     .fundraiser-winter-24 .entity,
-     .fundraiser-winter-24 .accordion dd.active,
-     .fundraiser-winter-24 section ul,
-     .fundraiser-winter-24 .website-grid
-      {
-       /* background-color: var(--fundraiser-winter-24-background); */
-       background: none;
-       color:  var(--fundraiser-winter-24-text) !important;
-       border-radius: var(--border-rad);
-       /* text-shadow: 2px 2px 0px var(--fundraiser-winter-24-background); */
+.fundraiser-winter-24 .block-text h4,
+.fundraiser-winter-24 .block-text .test-icon,
+.fundraiser-winter-24 p .test-icon {
+  color: var(--fundraiser-winter-24-text);
+}
 
 
-       /* -webkit-text-stroke-width: 1px; */
-         /* -webkit-text-stroke-color: var(--fundraiser-winter-24-link); */
-     }
+.fundraiser-winter-24.grid-inner,
+.fundraiser-winter-24 .grid-inner {
+  border: 2px dotted var(--fundraiser-winter-24-text) !important;
+  color: var(--fundraiser-winter-24-link) !important;
+}
 
-     .fundraiser-winter-24.featured .title,
-     .fundraiser-winter-24 #session-name, #tag.fundraiser-winter-24,
+.fundraiser-winter-24 #class .entity,
+.fundraiser-winter-24 .entity,
+.fundraiser-winter-24.website-grid .grid-2 {
+  border-color: var(--fundraiser-winter-24-text);
+}
 
-   .fundraiser-winter-24  #session-name > a
+.fundraiser-winter-24 #class .entity:hover,
 
-      {
-     /* -webkit-text-stroke-width: 1px;
+.fundraiser-winter-24 .entity:hover {
+  border-color: var(--fundraiser-winter-24-link);
+}
+
+.fundraiser-winter-24 .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--fundraiser-winter-24-background) !important;
+}
+
+
+.fundraiser-winter-24 select#allSections:hover,
+.fundraiser-winter-24 .loader-content p::after,
+.fundraiser-winter-24 span#cost {
+  background: var(--fundraiser-winter-24-link) !important;
+  color: var(--fundraiser-winter-24-background) !important;
+}
+
+.fundraiser-winter-24 .breadcrumb.fixed {
+  background: rgba(255, 255, 255, .8) !important;
+}
+
+.fundraiser-winter-24 .breadcrumb.fixed,
+.fundraiser-winter-24 .breadcrumb.fixed::before,
+.fundraiser-winter-24 .breadcrumb.fixed a,
+.fundraiser-winter-24 .breadcrumb.fixed a:hover {
+  color: #000 !important;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .8) !important;
+}
+
+
+.fundraiser-winter-24 .breadcrumb,
+.fundraiser-winter-24 .breadcrumb a,
+.fundraiser-winter-24 .text-on-bg,
+.fundraiser-winter-24 .breadcrumb a:hover {
+  color: var(--fundraiser-winter-24-text-on-bg) !important;
+  text-shadow: 2px 2px 0px var(--fundraiser-winter-24-background);
+}
+
+
+.fundraiser-winter-24 section#section-outro,
+#class .intro.fundraiser-winter-24,
+.shell.fundraiser-winter-24 .class-details,
+.fundraiser-winter-24 #class section,
+.fundraiser-winter-24 #class .entity,
+.fundraiser-winter-24 .entity,
+.fundraiser-winter-24 .accordion dd.active,
+.fundraiser-winter-24 section ul,
+.fundraiser-winter-24 .website-grid {
+  /* background-color: var(--fundraiser-winter-24-background); */
+  background: none;
+  color: var(--fundraiser-winter-24-text) !important;
+  border-radius: var(--border-rad);
+  /* text-shadow: 2px 2px 0px var(--fundraiser-winter-24-background); */
+
+
+  /* -webkit-text-stroke-width: 1px; */
+  /* -webkit-text-stroke-color: var(--fundraiser-winter-24-link); */
+}
+
+.fundraiser-winter-24.featured .title,
+.fundraiser-winter-24 #session-name,
+#tag.fundraiser-winter-24,
+
+.fundraiser-winter-24 #session-name>a {
+  /* -webkit-text-stroke-width: 1px;
      -webkit-text-stroke-color: var(--fundraiser-winter-24-link); */
-     }
+}
 
-     .fundraiser-winter-24 #class section,
-     #class .intro.fundraiser-winter-24 {
-       padding: var(--body-margin) calc(var(--body-margin)/2);
-     }
+.fundraiser-winter-24 #class section,
+#class .intro.fundraiser-winter-24 {
+  padding: var(--body-margin) calc(var(--body-margin)/2);
+}
 
-     .fundraiser-winter-24 #class section.stacked,
-     .fundraiser-winter-24 .section-testimonials,
-     .fundraiser-winter-24 .section-testimonials p
-      {
-       background: none !important;
-       padding: 0px !important;
-       /* text-shadow: 2px 2px 0px var(--fundraiser-winter-24-background); */
+.fundraiser-winter-24 #class section.stacked,
+.fundraiser-winter-24 .section-testimonials,
+.fundraiser-winter-24 .section-testimonials p {
+  background: none !important;
+  padding: 0px !important;
+  /* text-shadow: 2px 2px 0px var(--fundraiser-winter-24-background); */
 
-     }
+}
 
-     .fundraiser-winter-24 .break {
-       /* border: 0px !important; */
-       /* margin-bottom: 0px !important; */
-       border-color: var(--fundraiser-winter-24-text);
-     }
+.fundraiser-winter-24 .break {
+  /* border: 0px !important; */
+  /* margin-bottom: 0px !important; */
+  border-color: var(--fundraiser-winter-24-text);
+}
 
-     .shell.fundraiser-winter-24 {
-       /* background-image: url('images/sessions/winter-24/bg.jpg'); */
-       background-size: cover;
-     }
+.shell.fundraiser-winter-24 {
+  /* background-image: url('images/sessions/winter-24/bg.jpg'); */
+  background-size: cover;
+}
 
 
 /* /////////// end winter 24 fundraiser  ///////////////////////////////*/
@@ -809,49 +803,48 @@ background-size: cover;
 .ecpc,
 .ecpc.featured.session,
 .shell .ecpc,
-.ecpc.featured  {
-  background-color: var(--ecpc-background)  !important;
+.ecpc.featured {
+  background-color: var(--ecpc-background) !important;
   color: var(--ecpc-text-color);
   box-sizing: border-box;
   border-color: var(--ecpc-text-color);
 }
 
-      .ecpc p,
-      .ecpc p a,
-      .ecpc a,
-      .ecpc.featured h4,
-      .ecpc h4 a,
-      .ecpc .intro a,
-      .ecpc p.large a,
-      .ecpc p a:hover,
-      .ecpc.session.featured,
-      .ecpc.session.featured a
-      {
-        color: var(--ecpc-text-color) !important;
-      }
+.ecpc p,
+.ecpc p a,
+.ecpc a,
+.ecpc.featured h4,
+.ecpc h4 a,
+.ecpc .intro a,
+.ecpc p.large a,
+.ecpc p a:hover,
+.ecpc.session.featured,
+.ecpc.session.featured a {
+  color: var(--ecpc-text-color) !important;
+}
 
-      .fall-23 .ecpc a,
-      .ecpc h4 a:hover,
-      /* .sfpc .intro a, */
-      .ecpc p.large a:hover,
-      .ecpc.featured:hover h6,
-      .ecpc.featured:hover .title,
-      .ecpc .details a:hover,
-      .ecpc.featured .title:hover,
-      .ecpc p a:hover,
-      .ecpc h4 a:hover,
-      .ecpc section .grid-2 ul li::before,
-      .ecpc .chars,
-      .ecpc p a:hover,
-      .ecpc a:hover,
-      .ecpc h4 a:hover,
-      .ecpc .intro a:hover,
-      .ecpc .details a:hover,
-      .ecpc .entity:hover .accordion dt h3:after,
-      .ecpc .accordion dt h3:after,
-      .ecpc .expanded{
-          color: var(--ecpc-text-link) !important;
-      }
+.fall-23 .ecpc a,
+.ecpc h4 a:hover,
+/* .sfpc .intro a, */
+.ecpc p.large a:hover,
+.ecpc.featured:hover h6,
+.ecpc.featured:hover .title,
+.ecpc .details a:hover,
+.ecpc.featured .title:hover,
+.ecpc p a:hover,
+.ecpc h4 a:hover,
+.ecpc section .grid-2 ul li::before,
+.ecpc .chars,
+.ecpc p a:hover,
+.ecpc a:hover,
+.ecpc h4 a:hover,
+.ecpc .intro a:hover,
+.ecpc .details a:hover,
+.ecpc .entity:hover .accordion dt h3:after,
+.ecpc .accordion dt h3:after,
+.ecpc .expanded {
+  color: var(--ecpc-text-link) !important;
+}
 
 
 
@@ -868,15 +861,15 @@ background-size: cover;
 
 .winter-24,
 .winter-24.featured.session,
-.winter-24.featured  {
- /* background-color: var(--sex-ed-background)  !important; */
- color: var(--winter-24-text);
- box-sizing: border-box;
- border-color: var(--winter-24-text);
- background-image: url('images/sessions/winter-24/bg.jpg');
- background-position: center;
- background-repeat: repeat;
- background-size: cover;
+.winter-24.featured {
+  /* background-color: var(--sex-ed-background)  !important; */
+  color: var(--winter-24-text);
+  box-sizing: border-box;
+  border-color: var(--winter-24-text);
+  background-image: url('images/sessions/winter-24/bg.jpg');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 .winter-24.featured:hover {
@@ -885,22 +878,22 @@ background-size: cover;
 
 
 
-     .shell.winter-24 {
-       background-image:url('images/sessions/winter-24/bg.jpg');
-       /* background-position: bottom; */
-       /* background-repeat: no-repeat;
+.shell.winter-24 {
+  background-image: url('images/sessions/winter-24/bg.jpg');
+  /* background-position: bottom; */
+  /* background-repeat: no-repeat;
        background-size: cover; */
-       background-position: top left;
-       background-repeat: repeat;
-       background-size: cover;
-     }
+  background-position: top left;
+  background-repeat: repeat;
+  background-size: cover;
+}
 
 
 
 .winter-24,
 .winter-24.featured.session,
 .shell .winter-24,
-.winter-24.featured  {
+.winter-24.featured {
   /* background-color: var(--winter-24-background)  !important; */
   color: var(--winter-24-text);
   box-sizing: border-box;
@@ -909,172 +902,169 @@ background-size: cover;
 }
 
 
-      .winter-24 p,
-      .winter-24 p a,
-      .winter-24 a,
-      .winter-24.featured h4,
-      .winter-24 h4 a,
-      .winter-24 .intro a,
-      .winter-24 p.large a,
-      .winter-24 p a:hover,
-      .winter-24.session.featured,
-      .winter-24.session.featured a,
-      .winter-24.featured h4.type a,
-      .sfpc .winter-24 a
-      {
-        color: var(--winter-24-text) !important;
-      }
+.winter-24 p,
+.winter-24 p a,
+.winter-24 a,
+.winter-24.featured h4,
+.winter-24 h4 a,
+.winter-24 .intro a,
+.winter-24 p.large a,
+.winter-24 p a:hover,
+.winter-24.session.featured,
+.winter-24.session.featured a,
+.winter-24.featured h4.type a,
+.sfpc .winter-24 a {
+  color: var(--winter-24-text) !important;
+}
 
-      .winter-24 h4 a:hover,
-      .winter-24 .intro a,
-      .winter-24 p.large a:hover,
-      .winter-24.featured:hover h6,
-      .winter-24.featured:hover .title,
-      .winter-24 .details a:hover,
-      .winter-24.featured .title:hover,
-      .winter-24 p a:hover,
-      .winter-24 h4 a:hover,
-      .winter-24 section .grid-2 ul li::before,
-      .winter-24 .chars,
-      .winter-24 p a:hover,
-      .winter-24 a:hover,
-      .winter-24 h4 a:hover,
-      .winter-24 .intro a:hover,
-      .winter-24 .details a:hover,
-      .winter-24 .entity:hover .accordion dt h3:after,
-      .winter-24 .accordion dt h3:after,
-      .winter-24 .expanded{
-          color: var(--winter-24-link) !important;
-      }
+.winter-24 h4 a:hover,
+.winter-24 .intro a,
+.winter-24 p.large a:hover,
+.winter-24.featured:hover h6,
+.winter-24.featured:hover .title,
+.winter-24 .details a:hover,
+.winter-24.featured .title:hover,
+.winter-24 p a:hover,
+.winter-24 h4 a:hover,
+.winter-24 section .grid-2 ul li::before,
+.winter-24 .chars,
+.winter-24 p a:hover,
+.winter-24 a:hover,
+.winter-24 h4 a:hover,
+.winter-24 .intro a:hover,
+.winter-24 .details a:hover,
+.winter-24 .entity:hover .accordion dt h3:after,
+.winter-24 .accordion dt h3:after,
+.winter-24 .expanded {
+  color: var(--winter-24-link) !important;
+}
 
-      .winter-24 #cost,
-      .winter-24 .fixed-apply,
-      .winter-24 .fixed-support,
-      .winter-24 .home-intro span#session-name::after {
-          color: var(--winter-24-background) !important;
-          background: var(--winter-24-link) !important;
-      }
+.winter-24 #cost,
+.winter-24 .fixed-apply,
+.winter-24 .fixed-support,
+.winter-24 .home-intro span#session-name::after {
+  color: var(--winter-24-background) !important;
+  background: var(--winter-24-link) !important;
+}
 
-      .winter-24 span#cost {
-        background: var(--winter-24-link) !important;
-      }
-
-
-      .winter-24 .fixed-apply:hover {
-        color: #000 !important;
-        background: rgba(255,255,255,.8) !important;
-      }
-
-      .winter-24 .block-text {
-        background-color: var(--winter-24-background);
-        color: var(--winter-24-link);
-      }
+.winter-24 span#cost {
+  background: var(--winter-24-link) !important;
+}
 
 
+.winter-24 .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .winter-24.grid-inner, .winter-24 .grid-inner {
-        border: 2px dotted var(--winter-24-text) !important;
-        color: var(--winter-24-link) !important;
-      }
-
-      .winter-24 #class .entity,
-      .winter-24.website-grid .grid-2 {
-        border-color: var(--winter-24-text);
-      }
-
-      .winter-24 #class .entity:hover {
-        border-color: var(--winter-24-link);
-      }
-
-      .winter-24 .website-grid .grid-2 p.large {
-        text-shadow: 3px 3px var(--winter-24-background) !important;
-      }
+.winter-24 .block-text {
+  background-color: var(--winter-24-background);
+  color: var(--winter-24-link);
+}
 
 
-      .winter-24 select#allSections:hover,
-      .winter-24 .loader-content p::after,
-      .winter-24 span#cost
-      {
-        background: var(--winter-24-link) !important;
-        color: var(--winter-24-background) !important;
-      }
 
-      .winter-24 .breadcrumb.fixed {
-        background: rgba(255,255,255,.8) !important;
-      }
-      .winter-24 .breadcrumb.fixed,
-      .winter-24 .breadcrumb.fixed::before,
-      .winter-24 .breadcrumb.fixed a,
-      .winter-24 .breadcrumb.fixed a:hover {
-        color: #000 !important;
-        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
-      }
+.winter-24.grid-inner,
+.winter-24 .grid-inner {
+  border: 2px dotted var(--winter-24-text) !important;
+  color: var(--winter-24-link) !important;
+}
 
+.winter-24 #class .entity,
+.winter-24.website-grid .grid-2 {
+  border-color: var(--winter-24-text);
+}
 
-      .winter-24 .breadcrumb,
-      .winter-24 .breadcrumb a,
-      .winter-24 .text-on-bg,
-      .winter-24 .breadcrumb a:hover {
-          color: var(--winter-24-text-on-bg) !important;
-          text-shadow: 2px 2px 0px var(--winter-24-background);
-      }
+.winter-24 #class .entity:hover {
+  border-color: var(--winter-24-link);
+}
+
+.winter-24 .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--winter-24-background) !important;
+}
 
 
-      .winter-24 section#section-outro,
-      #class .intro.winter-24,
-      .shell.winter-24 .class-details,
-      .winter-24 #class section,
-      .winter-24 #class .entity,
-      .winter-24 .accordion dd.active,
-      .winter-24 section ul,
-      .winter-24 .website-grid
-       {
-        /* background-color: var(--winter-24-background); */
-        background: none;
-        color:  var(--winter-24-text) !important;
-        border-radius: var(--border-rad);
-        /* text-shadow: 2px 2px 0px var(--winter-24-background); */
+.winter-24 select#allSections:hover,
+.winter-24 .loader-content p::after,
+.winter-24 span#cost {
+  background: var(--winter-24-link) !important;
+  color: var(--winter-24-background) !important;
+}
+
+.winter-24 .breadcrumb.fixed {
+  background: rgba(255, 255, 255, .8) !important;
+}
+
+.winter-24 .breadcrumb.fixed,
+.winter-24 .breadcrumb.fixed::before,
+.winter-24 .breadcrumb.fixed a,
+.winter-24 .breadcrumb.fixed a:hover {
+  color: #000 !important;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .8) !important;
+}
 
 
-        /* -webkit-text-stroke-width: 1px; */
-          /* -webkit-text-stroke-color: var(--winter-24-link); */
-      }
+.winter-24 .breadcrumb,
+.winter-24 .breadcrumb a,
+.winter-24 .text-on-bg,
+.winter-24 .breadcrumb a:hover {
+  color: var(--winter-24-text-on-bg) !important;
+  text-shadow: 2px 2px 0px var(--winter-24-background);
+}
 
-      .winter-24.featured .title,
-      .winter-24 #session-name, #tag.winter-24,
 
-    .winter-24  #session-name > a
+.winter-24 section#section-outro,
+#class .intro.winter-24,
+.shell.winter-24 .class-details,
+.winter-24 #class section,
+.winter-24 #class .entity,
+.winter-24 .accordion dd.active,
+.winter-24 section ul,
+.winter-24 .website-grid {
+  /* background-color: var(--winter-24-background); */
+  background: none;
+  color: var(--winter-24-text) !important;
+  border-radius: var(--border-rad);
+  /* text-shadow: 2px 2px 0px var(--winter-24-background); */
 
-       {
-      /* -webkit-text-stroke-width: 1px;
+
+  /* -webkit-text-stroke-width: 1px; */
+  /* -webkit-text-stroke-color: var(--winter-24-link); */
+}
+
+.winter-24.featured .title,
+.winter-24 #session-name,
+#tag.winter-24,
+
+.winter-24 #session-name>a {
+  /* -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: var(--winter-24-link); */
-      }
+}
 
-      .winter-24 #class section,
-      #class .intro.winter-24 {
-        padding: var(--body-margin) calc(var(--body-margin)/2);
-      }
+.winter-24 #class section,
+#class .intro.winter-24 {
+  padding: var(--body-margin) calc(var(--body-margin)/2);
+}
 
-      .winter-24 #class section.stacked,
-      .winter-24 .section-testimonials,
-      .winter-24 .section-testimonials p
-       {
-        background: none !important;
-        padding: 0px !important;
-        /* text-shadow: 2px 2px 0px var(--winter-24-background); */
+.winter-24 #class section.stacked,
+.winter-24 .section-testimonials,
+.winter-24 .section-testimonials p {
+  background: none !important;
+  padding: 0px !important;
+  /* text-shadow: 2px 2px 0px var(--winter-24-background); */
 
-      }
+}
 
-      .winter-24 .break {
-        /* border: 0px !important; */
-        /* margin-bottom: 0px !important; */
-        border-color: var(--winter-24-text);
-      }
+.winter-24 .break {
+  /* border: 0px !important; */
+  /* margin-bottom: 0px !important; */
+  border-color: var(--winter-24-text);
+}
 
-      .shell.winter-24 {
-        background-image: url('images/sessions/winter-24/bg.jpg');
-        background-size: cover;
-      }
+.shell.winter-24 {
+  background-image: url('images/sessions/winter-24/bg.jpg');
+  background-size: cover;
+}
 
 
 /* /////////// end winter 24  ///////////////////////////////*/
@@ -1093,15 +1083,15 @@ background-size: cover;
 
 .fall-23,
 .fall-23.featured.session,
-.fall-23.featured  {
- /* background-color: var(--sex-ed-background)  !important; */
- color: var(--fall-23-text);
- box-sizing: border-box;
- border-color: var(--fall-23-text);
- background-image: url('images/sessions/fall-23/bg.jpg');
- background-position: center;
- background-repeat: repeat;
- background-size: cover;
+.fall-23.featured {
+  /* background-color: var(--sex-ed-background)  !important; */
+  color: var(--fall-23-text);
+  box-sizing: border-box;
+  border-color: var(--fall-23-text);
+  background-image: url('images/sessions/fall-23/bg.jpg');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 .fall-23.featured:hover {
@@ -1110,22 +1100,22 @@ background-size: cover;
 
 
 
-     .shell.fall-23 {
-       background-image:url('images/sessions/fall-23/bg.jpg');
-       /* background-position: bottom; */
-       /* background-repeat: no-repeat;
+.shell.fall-23 {
+  background-image: url('images/sessions/fall-23/bg.jpg');
+  /* background-position: bottom; */
+  /* background-repeat: no-repeat;
        background-size: cover; */
-       background-position: top left;
-       background-repeat: repeat;
-       background-size: cover;
-     }
+  background-position: top left;
+  background-repeat: repeat;
+  background-size: cover;
+}
 
 
 
 .fall-23,
 .fall-23.featured.session,
 .shell .fall-23,
-.fall-23.featured  {
+.fall-23.featured {
   /* background-color: var(--fall-23-background)  !important; */
   color: var(--fall-23-text);
   box-sizing: border-box;
@@ -1134,172 +1124,169 @@ background-size: cover;
 }
 
 
-      .fall-23 p,
-      .fall-23 p a,
-      .fall-23 a,
-      .fall-23.featured h4,
-      .fall-23 h4 a,
-      .fall-23 .intro a,
-      .fall-23 p.large a,
-      .fall-23 p a:hover,
-      .fall-23.session.featured,
-      .fall-23.session.featured a,
-      .fall-23.featured h4.type a,
-      .sfpc .fall-23 a
-      {
-        color: var(--fall-23-text) !important;
-      }
+.fall-23 p,
+.fall-23 p a,
+.fall-23 a,
+.fall-23.featured h4,
+.fall-23 h4 a,
+.fall-23 .intro a,
+.fall-23 p.large a,
+.fall-23 p a:hover,
+.fall-23.session.featured,
+.fall-23.session.featured a,
+.fall-23.featured h4.type a,
+.sfpc .fall-23 a {
+  color: var(--fall-23-text) !important;
+}
 
-      .fall-23 h4 a:hover,
-      .fall-23 .intro a,
-      .fall-23 p.large a:hover,
-      .fall-23.featured:hover h6,
-      .fall-23.featured:hover .title,
-      .fall-23 .details a:hover,
-      .fall-23.featured .title:hover,
-      .fall-23 p a:hover,
-      .fall-23 h4 a:hover,
-      .fall-23 section .grid-2 ul li::before,
-      .fall-23 .chars,
-      .fall-23 p a:hover,
-      .fall-23 a:hover,
-      .fall-23 h4 a:hover,
-      .fall-23 .intro a:hover,
-      .fall-23 .details a:hover,
-      .fall-23 .entity:hover .accordion dt h3:after,
-      .fall-23 .accordion dt h3:after,
-      .fall-23 .expanded{
-          color: var(--fall-23-link) !important;
-      }
+.fall-23 h4 a:hover,
+.fall-23 .intro a,
+.fall-23 p.large a:hover,
+.fall-23.featured:hover h6,
+.fall-23.featured:hover .title,
+.fall-23 .details a:hover,
+.fall-23.featured .title:hover,
+.fall-23 p a:hover,
+.fall-23 h4 a:hover,
+.fall-23 section .grid-2 ul li::before,
+.fall-23 .chars,
+.fall-23 p a:hover,
+.fall-23 a:hover,
+.fall-23 h4 a:hover,
+.fall-23 .intro a:hover,
+.fall-23 .details a:hover,
+.fall-23 .entity:hover .accordion dt h3:after,
+.fall-23 .accordion dt h3:after,
+.fall-23 .expanded {
+  color: var(--fall-23-link) !important;
+}
 
-      .fall-23 #cost,
-      .fall-23 .fixed-apply,
-      .fall-23 .fixed-support,
-      .fall-23 .home-intro span#session-name::after {
-          color: var(--fall-23-background) !important;
-          background: var(--fall-23-link) !important;
-      }
+.fall-23 #cost,
+.fall-23 .fixed-apply,
+.fall-23 .fixed-support,
+.fall-23 .home-intro span#session-name::after {
+  color: var(--fall-23-background) !important;
+  background: var(--fall-23-link) !important;
+}
 
-      .fall-23 span#cost {
-        background: var(--fall-23-link) !important;
-      }
-
-
-      .fall-23 .fixed-apply:hover {
-        color: #000 !important;
-        background: rgba(255,255,255,.8) !important;
-      }
-
-      .fall-23 .block-text {
-        background-color: var(--fall-23-background);
-        color: var(--fall-23-link);
-      }
+.fall-23 span#cost {
+  background: var(--fall-23-link) !important;
+}
 
 
+.fall-23 .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .fall-23.grid-inner, .fall-23 .grid-inner {
-        border: 2px dotted var(--fall-23-text) !important;
-        color: var(--fall-23-link) !important;
-      }
-
-      .fall-23 #class .entity,
-      .fall-23.website-grid .grid-2 {
-        border-color: var(--fall-23-text);
-      }
-
-      .fall-23 #class .entity:hover {
-        border-color: var(--fall-23-link);
-      }
-
-      .fall-23 .website-grid .grid-2 p.large {
-        text-shadow: 3px 3px var(--fall-23-background) !important;
-      }
+.fall-23 .block-text {
+  background-color: var(--fall-23-background);
+  color: var(--fall-23-link);
+}
 
 
-      .fall-23 select#allSections:hover,
-      .fall-23 .loader-content p::after,
-      .fall-23 span#cost
-      {
-        background: var(--fall-23-link) !important;
-        color: var(--fall-23-background) !important;
-      }
 
-      .fall-23 .breadcrumb.fixed {
-        background: rgba(255,255,255,.8) !important;
-      }
-      .fall-23 .breadcrumb.fixed,
-      .fall-23 .breadcrumb.fixed::before,
-      .fall-23 .breadcrumb.fixed a,
-      .fall-23 .breadcrumb.fixed a:hover {
-        color: #000 !important;
-        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
-      }
+.fall-23.grid-inner,
+.fall-23 .grid-inner {
+  border: 2px dotted var(--fall-23-text) !important;
+  color: var(--fall-23-link) !important;
+}
 
+.fall-23 #class .entity,
+.fall-23.website-grid .grid-2 {
+  border-color: var(--fall-23-text);
+}
 
-      .fall-23 .breadcrumb,
-      .fall-23 .breadcrumb a,
-      .fall-23 .text-on-bg,
-      .fall-23 .breadcrumb a:hover {
-          color: var(--fall-23-text-on-bg) !important;
-          text-shadow: 2px 2px 0px var(--fall-23-background);
-      }
+.fall-23 #class .entity:hover {
+  border-color: var(--fall-23-link);
+}
+
+.fall-23 .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--fall-23-background) !important;
+}
 
 
-      .fall-23 section#section-outro,
-      #class .intro.fall-23,
-      .shell.fall-23 .class-details,
-      .fall-23 #class section,
-      .fall-23 #class .entity,
-      .fall-23 .accordion dd.active,
-      .fall-23 section ul,
-      .fall-23 .website-grid
-       {
-        /* background-color: var(--fall-23-background); */
-        background: none;
-        color:  var(--fall-23-text) !important;
-        border-radius: var(--border-rad);
-        /* text-shadow: 2px 2px 0px var(--fall-23-background); */
+.fall-23 select#allSections:hover,
+.fall-23 .loader-content p::after,
+.fall-23 span#cost {
+  background: var(--fall-23-link) !important;
+  color: var(--fall-23-background) !important;
+}
+
+.fall-23 .breadcrumb.fixed {
+  background: rgba(255, 255, 255, .8) !important;
+}
+
+.fall-23 .breadcrumb.fixed,
+.fall-23 .breadcrumb.fixed::before,
+.fall-23 .breadcrumb.fixed a,
+.fall-23 .breadcrumb.fixed a:hover {
+  color: #000 !important;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .8) !important;
+}
 
 
-        /* -webkit-text-stroke-width: 1px; */
-          /* -webkit-text-stroke-color: var(--fall-23-link); */
-      }
+.fall-23 .breadcrumb,
+.fall-23 .breadcrumb a,
+.fall-23 .text-on-bg,
+.fall-23 .breadcrumb a:hover {
+  color: var(--fall-23-text-on-bg) !important;
+  text-shadow: 2px 2px 0px var(--fall-23-background);
+}
 
-      .fall-23.featured .title,
-      .fall-23 #session-name, #tag.fall-23,
 
-    .fall-23  #session-name > a
+.fall-23 section#section-outro,
+#class .intro.fall-23,
+.shell.fall-23 .class-details,
+.fall-23 #class section,
+.fall-23 #class .entity,
+.fall-23 .accordion dd.active,
+.fall-23 section ul,
+.fall-23 .website-grid {
+  /* background-color: var(--fall-23-background); */
+  background: none;
+  color: var(--fall-23-text) !important;
+  border-radius: var(--border-rad);
+  /* text-shadow: 2px 2px 0px var(--fall-23-background); */
 
-       {
-      /* -webkit-text-stroke-width: 1px;
+
+  /* -webkit-text-stroke-width: 1px; */
+  /* -webkit-text-stroke-color: var(--fall-23-link); */
+}
+
+.fall-23.featured .title,
+.fall-23 #session-name,
+#tag.fall-23,
+
+.fall-23 #session-name>a {
+  /* -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: var(--fall-23-link); */
-      }
+}
 
-      .fall-23 #class section,
-      #class .intro.fall-23 {
-        padding: var(--body-margin) calc(var(--body-margin)/2);
-      }
+.fall-23 #class section,
+#class .intro.fall-23 {
+  padding: var(--body-margin) calc(var(--body-margin)/2);
+}
 
-      .fall-23 #class section.stacked,
-      .fall-23 .section-testimonials,
-      .fall-23 .section-testimonials p
-       {
-        background: none !important;
-        padding: 0px !important;
-        /* text-shadow: 2px 2px 0px var(--fall-23-background); */
+.fall-23 #class section.stacked,
+.fall-23 .section-testimonials,
+.fall-23 .section-testimonials p {
+  background: none !important;
+  padding: 0px !important;
+  /* text-shadow: 2px 2px 0px var(--fall-23-background); */
 
-      }
+}
 
-      .fall-23 .break {
-        /* border: 0px !important; */
-        /* margin-bottom: 0px !important; */
-        border-color: var(--fall-23-text);
-      }
+.fall-23 .break {
+  /* border: 0px !important; */
+  /* margin-bottom: 0px !important; */
+  border-color: var(--fall-23-text);
+}
 
-      .shell.fall-23 {
-        background-image: url('images/sessions/fall-23/bg.jpg');
-        background-size: cover;
-      }
+.shell.fall-23 {
+  background-image: url('images/sessions/fall-23/bg.jpg');
+  background-size: cover;
+}
 
 
 /* /////////// end fall 23  ///////////////////////////////*/
@@ -1318,15 +1305,15 @@ background-size: cover;
 
 .summer-23,
 .summer-23.featured.session,
-.summer-23.featured  {
- /* background-color: var(--sex-ed-background)  !important; */
- color: var(--summer-23-text);
- box-sizing: border-box;
- border-color: var(--summer-23-text);
- background-image: url('images/sessions/summer-23/bg.jpg');
- background-position: center;
- background-repeat: repeat;
- background-size: cover;
+.summer-23.featured {
+  /* background-color: var(--sex-ed-background)  !important; */
+  color: var(--summer-23-text);
+  box-sizing: border-box;
+  border-color: var(--summer-23-text);
+  background-image: url('images/sessions/summer-23/bg.jpg');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 .summer-23.featured:hover {
@@ -1335,22 +1322,22 @@ background-size: cover;
 
 
 
-     .shell.summer-23 {
-       background-image:url('images/sessions/summer-23/bg.jpg');
-       /* background-position: bottom; */
-       /* background-repeat: no-repeat;
+.shell.summer-23 {
+  background-image: url('images/sessions/summer-23/bg.jpg');
+  /* background-position: bottom; */
+  /* background-repeat: no-repeat;
        background-size: cover; */
-       background-position: top left;
-       background-repeat: repeat;
-       background-size: cover;
-     }
+  background-position: top left;
+  background-repeat: repeat;
+  background-size: cover;
+}
 
 
 
 .summer-23,
 .summer-23.featured.session,
 .shell .summer-23,
-.summer-23.featured  {
+.summer-23.featured {
   /* background-color: var(--summer-23-background)  !important; */
   color: var(--summer-23-text);
   box-sizing: border-box;
@@ -1359,172 +1346,169 @@ background-size: cover;
 }
 
 
-      .summer-23 p,
-      .summer-23 p a,
-      .summer-23 a,
-      .summer-23.featured h4,
-      .summer-23 h4 a,
-      .summer-23 .intro a,
-      .summer-23 p.large a,
-      .summer-23 p a:hover,
-      .summer-23.session.featured,
-      .summer-23.session.featured a,
-      .summer-23.featured h4.type a,
-      .sfpc .summer-23 a
-      {
-        color: var(--summer-23-text) !important;
-      }
+.summer-23 p,
+.summer-23 p a,
+.summer-23 a,
+.summer-23.featured h4,
+.summer-23 h4 a,
+.summer-23 .intro a,
+.summer-23 p.large a,
+.summer-23 p a:hover,
+.summer-23.session.featured,
+.summer-23.session.featured a,
+.summer-23.featured h4.type a,
+.sfpc .summer-23 a {
+  color: var(--summer-23-text) !important;
+}
 
-      .summer-23 h4 a:hover,
-      .summer-23 .intro a,
-      .summer-23 p.large a:hover,
-      .summer-23.featured:hover h6,
-      .summer-23.featured:hover .title,
-      .summer-23 .details a:hover,
-      .summer-23.featured .title:hover,
-      .summer-23 p a:hover,
-      .summer-23 h4 a:hover,
-      .summer-23 section .grid-2 ul li::before,
-      .summer-23 .chars,
-      .summer-23 p a:hover,
-      .summer-23 a:hover,
-      .summer-23 h4 a:hover,
-      .summer-23 .intro a:hover,
-      .summer-23 .details a:hover,
-      .summer-23 .entity:hover .accordion dt h3:after,
-      .summer-23 .accordion dt h3:after,
-      .summer-23 .expanded{
-          color: var(--summer-23-link) !important;
-      }
+.summer-23 h4 a:hover,
+.summer-23 .intro a,
+.summer-23 p.large a:hover,
+.summer-23.featured:hover h6,
+.summer-23.featured:hover .title,
+.summer-23 .details a:hover,
+.summer-23.featured .title:hover,
+.summer-23 p a:hover,
+.summer-23 h4 a:hover,
+.summer-23 section .grid-2 ul li::before,
+.summer-23 .chars,
+.summer-23 p a:hover,
+.summer-23 a:hover,
+.summer-23 h4 a:hover,
+.summer-23 .intro a:hover,
+.summer-23 .details a:hover,
+.summer-23 .entity:hover .accordion dt h3:after,
+.summer-23 .accordion dt h3:after,
+.summer-23 .expanded {
+  color: var(--summer-23-link) !important;
+}
 
-      .summer-23 #cost,
-      .summer-23 .fixed-apply,
-      .summer-23 .fixed-support,
-      .summer-23 .home-intro span#session-name::after {
-          color: var(--summer-23-background) !important;
-          background: var(--summer-23-link) !important;
-      }
+.summer-23 #cost,
+.summer-23 .fixed-apply,
+.summer-23 .fixed-support,
+.summer-23 .home-intro span#session-name::after {
+  color: var(--summer-23-background) !important;
+  background: var(--summer-23-link) !important;
+}
 
-      .summer-23 span#cost {
-        background: var(--summer-23-link) !important;
-      }
-
-
-      .summer-23 .fixed-apply:hover {
-        color: #000 !important;
-        background: rgba(255,255,255,.8) !important;
-      }
-
-      .summer-23 .block-text {
-        background-color: var(--summer-23-background);
-        color: var(--summer-23-link);
-      }
+.summer-23 span#cost {
+  background: var(--summer-23-link) !important;
+}
 
 
+.summer-23 .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .summer-23.grid-inner, .summer-23 .grid-inner {
-        border: 2px dotted var(--summer-23-text) !important;
-        color: var(--summer-23-link) !important;
-      }
-
-      .summer-23 #class .entity,
-      .summer-23.website-grid .grid-2 {
-        border-color: var(--summer-23-text);
-      }
-
-      .summer-23 #class .entity:hover {
-        border-color: var(--summer-23-link);
-      }
-
-      .summer-23 .website-grid .grid-2 p.large {
-        text-shadow: 3px 3px var(--summer-23-background) !important;
-      }
+.summer-23 .block-text {
+  background-color: var(--summer-23-background);
+  color: var(--summer-23-link);
+}
 
 
-      .summer-23 select#allSections:hover,
-      .summer-23 .loader-content p::after,
-      .summer-23 span#cost
-      {
-        background: var(--summer-23-link) !important;
-        color: var(--summer-23-background) !important;
-      }
 
-      .summer-23 .breadcrumb.fixed {
-        background: rgba(255,255,255,.8) !important;
-      }
-      .summer-23 .breadcrumb.fixed,
-      .summer-23 .breadcrumb.fixed::before,
-      .summer-23 .breadcrumb.fixed a,
-      .summer-23 .breadcrumb.fixed a:hover {
-        color: #000 !important;
-        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
-      }
+.summer-23.grid-inner,
+.summer-23 .grid-inner {
+  border: 2px dotted var(--summer-23-text) !important;
+  color: var(--summer-23-link) !important;
+}
 
+.summer-23 #class .entity,
+.summer-23.website-grid .grid-2 {
+  border-color: var(--summer-23-text);
+}
 
-      .summer-23 .breadcrumb,
-      .summer-23 .breadcrumb a,
-      .summer-23 .text-on-bg,
-      .summer-23 .breadcrumb a:hover {
-          color: var(--summer-23-text-on-bg) !important;
-          text-shadow: 2px 2px 0px var(--summer-23-background);
-      }
+.summer-23 #class .entity:hover {
+  border-color: var(--summer-23-link);
+}
+
+.summer-23 .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--summer-23-background) !important;
+}
 
 
-      .summer-23 section#section-outro,
-      #class .intro.summer-23,
-      .shell.summer-23 .class-details,
-      .summer-23 #class section,
-      .summer-23 #class .entity,
-      .summer-23 .accordion dd.active,
-      .summer-23 section ul,
-      .summer-23 .website-grid
-       {
-        /* background-color: var(--summer-23-background); */
-        background: none;
-        color:  var(--summer-23-text) !important;
-        border-radius: var(--border-rad);
-        /* text-shadow: 2px 2px 0px var(--summer-23-background); */
+.summer-23 select#allSections:hover,
+.summer-23 .loader-content p::after,
+.summer-23 span#cost {
+  background: var(--summer-23-link) !important;
+  color: var(--summer-23-background) !important;
+}
+
+.summer-23 .breadcrumb.fixed {
+  background: rgba(255, 255, 255, .8) !important;
+}
+
+.summer-23 .breadcrumb.fixed,
+.summer-23 .breadcrumb.fixed::before,
+.summer-23 .breadcrumb.fixed a,
+.summer-23 .breadcrumb.fixed a:hover {
+  color: #000 !important;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .8) !important;
+}
 
 
-        /* -webkit-text-stroke-width: 1px; */
-          /* -webkit-text-stroke-color: var(--summer-23-link); */
-      }
+.summer-23 .breadcrumb,
+.summer-23 .breadcrumb a,
+.summer-23 .text-on-bg,
+.summer-23 .breadcrumb a:hover {
+  color: var(--summer-23-text-on-bg) !important;
+  text-shadow: 2px 2px 0px var(--summer-23-background);
+}
 
-      .summer-23.featured .title,
-      .summer-23 #session-name, #tag.summer-23,
 
-    .summer-23  #session-name > a
+.summer-23 section#section-outro,
+#class .intro.summer-23,
+.shell.summer-23 .class-details,
+.summer-23 #class section,
+.summer-23 #class .entity,
+.summer-23 .accordion dd.active,
+.summer-23 section ul,
+.summer-23 .website-grid {
+  /* background-color: var(--summer-23-background); */
+  background: none;
+  color: var(--summer-23-text) !important;
+  border-radius: var(--border-rad);
+  /* text-shadow: 2px 2px 0px var(--summer-23-background); */
 
-       {
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: var(--summer-23-link);
-      }
 
-      .summer-23 #class section,
-      #class .intro.summer-23 {
-        padding: var(--body-margin) calc(var(--body-margin)/2);
-      }
+  /* -webkit-text-stroke-width: 1px; */
+  /* -webkit-text-stroke-color: var(--summer-23-link); */
+}
 
-      .summer-23 #class section.stacked,
-      .summer-23 .section-testimonials,
-      .summer-23 .section-testimonials p
-       {
-        background: none !important;
-        padding: 0px !important;
-        /* text-shadow: 2px 2px 0px var(--summer-23-background); */
+.summer-23.featured .title,
+.summer-23 #session-name,
+#tag.summer-23,
 
-      }
+.summer-23 #session-name>a {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--summer-23-link);
+}
 
-      .summer-23 .break {
-        /* border: 0px !important; */
-        /* margin-bottom: 0px !important; */
-        border-color: var(--summer-23-text);
-      }
+.summer-23 #class section,
+#class .intro.summer-23 {
+  padding: var(--body-margin) calc(var(--body-margin)/2);
+}
 
-      .shell.summer-23 {
-        background-image: url('images/sessions/summer-23/bg.jpg');
-        background-size: cover;
-      }
+.summer-23 #class section.stacked,
+.summer-23 .section-testimonials,
+.summer-23 .section-testimonials p {
+  background: none !important;
+  padding: 0px !important;
+  /* text-shadow: 2px 2px 0px var(--summer-23-background); */
+
+}
+
+.summer-23 .break {
+  /* border: 0px !important; */
+  /* margin-bottom: 0px !important; */
+  border-color: var(--summer-23-text);
+}
+
+.shell.summer-23 {
+  background-image: url('images/sessions/summer-23/bg.jpg');
+  background-size: cover;
+}
 
 
 /* /////////// end summer 23  ///////////////////////////////*/
@@ -1543,8 +1527,8 @@ background-size: cover;
 .spring-23.featured.session,
 .shell .spring-23,
 .spring-23.featured,
-#tag.spring-23  {
-  background-color: var(--spring-23-background)  !important;
+#tag.spring-23 {
+  background-color: var(--spring-23-background) !important;
   color: var(--spring-23-text) !important;
   box-sizing: border-box !important;
   /* border-color: var(--spring-23-text) !important; */
@@ -1552,177 +1536,177 @@ background-size: cover;
 }
 
 
-    .spring-23.featured .title,
-    .spring-23 #session-name, #tag.spring-23 {
-      /* -webkit-text-stroke-width: 1px; */
-      -webkit-text-stroke-width: 0px;
-    /* -webkit-text-stroke-color: var(--spring-23-text); */
-    color: var(--spring-23-text) ;
-    }
+.spring-23.featured .title,
+.spring-23 #session-name,
+#tag.spring-23 {
+  /* -webkit-text-stroke-width: 1px; */
+  -webkit-text-stroke-width: 0px;
+  /* -webkit-text-stroke-color: var(--spring-23-text); */
+  color: var(--spring-23-text);
+}
 
-    #tag.spring-23 {
-      -webkit-text-stroke-width: 0px;
-    color: var(--spring-23-text) ;
-    }
+#tag.spring-23 {
+  -webkit-text-stroke-width: 0px;
+  color: var(--spring-23-text);
+}
 
-      .spring-23 p,
-      .spring-23 p a,
-      .spring-23 a,
-      .spring-23.featured h4,
-      .spring-23 h4 a,
-      .spring-23 .intro a,
-      .spring-23 p.large a,
-      .spring-23 p a:hover,
-      .spring-23.session.featured,
-      .spring-23.session.featured a,
-      .spring-23.featured h4.type a,
-      .sfpc .spring-23 a
-      {
-        color: var(--spring-23-text) !important;
-      }
+.spring-23 p,
+.spring-23 p a,
+.spring-23 a,
+.spring-23.featured h4,
+.spring-23 h4 a,
+.spring-23 .intro a,
+.spring-23 p.large a,
+.spring-23 p a:hover,
+.spring-23.session.featured,
+.spring-23.session.featured a,
+.spring-23.featured h4.type a,
+.sfpc .spring-23 a {
+  color: var(--spring-23-text) !important;
+}
 
-      .spring-23 h4 a:hover,
-      .spring-23 .intro a,
-      .spring-23 p.large a:hover,
-      .spring-23.featured:hover h6,
-      .spring-23.featured:hover .title,
-      .spring-23 .details a:hover,
-      .spring-23.featured .title:hover,
-      .spring-23 p a:hover,
-      .spring-23 h4 a:hover,
-      .spring-23 section .grid-2 ul li::before,
-      .spring-23 .chars,
-      .spring-23 p a:hover,
-      .spring-23 a:hover,
-      .spring-23 h4 a:hover,
-      .spring-23 .intro a:hover,
-      .spring-23 .details a:hover,
-      .spring-23 .entity:hover .accordion dt h3:after,
-      .spring-23 .accordion dt h3:after,
-      .spring-23 .expanded{
-          color: var(--spring-23-link) !important;
-      }
+.spring-23 h4 a:hover,
+.spring-23 .intro a,
+.spring-23 p.large a:hover,
+.spring-23.featured:hover h6,
+.spring-23.featured:hover .title,
+.spring-23 .details a:hover,
+.spring-23.featured .title:hover,
+.spring-23 p a:hover,
+.spring-23 h4 a:hover,
+.spring-23 section .grid-2 ul li::before,
+.spring-23 .chars,
+.spring-23 p a:hover,
+.spring-23 a:hover,
+.spring-23 h4 a:hover,
+.spring-23 .intro a:hover,
+.spring-23 .details a:hover,
+.spring-23 .entity:hover .accordion dt h3:after,
+.spring-23 .accordion dt h3:after,
+.spring-23 .expanded {
+  color: var(--spring-23-link) !important;
+}
 
-      .spring-23 #cost,
-      .spring-23 .fixed-apply,
-      .spring-23 .fixed-support {
-          color: var(--spring-23-background) !important;
-          background: var(--spring-23-link) !important;
-      }
+.spring-23 #cost,
+.spring-23 .fixed-apply,
+.spring-23 .fixed-support {
+  color: var(--spring-23-background) !important;
+  background: var(--spring-23-link) !important;
+}
 
-      .spring-23 span#cost {
-        background: var(--spring-23-link) !important;
-      }
-
-
-      .spring-23 .fixed-apply:hover {
-        color: #000 !important;
-        background: rgba(255,255,255,.8) !important;
-      }
-
-      .spring-23 .block-text {
-        background-color: var(--spring-23-background);
-        color: var(--spring-23-link);
-      }
+.spring-23 span#cost {
+  background: var(--spring-23-link) !important;
+}
 
 
+.spring-23 .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .spring-23.grid-inner, .spring-23 .grid-inner {
-        border: 2px dotted var(--spring-23-text) !important;
-        color: var(--spring-23-link) !important;
-      }
-
-      .spring-23 #class .entity,
-      .spring-23.website-grid .grid-2 {
-        border-color: var(--spring-23-text);
-      }
-
-      .spring-23 #class .entity:hover {
-        border-color: var(--spring-23-link);
-      }
-
-      .spring-23 .website-grid .grid-2 p.large {
-        text-shadow: 3px 3px var(--spring-23-background) !important;
-      }
+.spring-23 .block-text {
+  background-color: var(--spring-23-background);
+  color: var(--spring-23-link);
+}
 
 
-      .spring-23 select#allSections:hover,
-      .spring-23 .loader-content p::after,
-      .spring-23 span#cost
-      {
-        background: var(--spring-23-link) !important;
-        color: var(--spring-23-background) !important;
-      }
 
-      .spring-23 .breadcrumb.fixed {
-        background: rgba(255,255,255,.8) !important;
-      }
-      .spring-23 .breadcrumb.fixed,
-      .spring-23 .breadcrumb.fixed::before,
-      .spring-23 .breadcrumb.fixed a,
-      .spring-23 .breadcrumb.fixed a:hover {
-        color: #000 !important;
-        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
-      }
+.spring-23.grid-inner,
+.spring-23 .grid-inner {
+  border: 2px dotted var(--spring-23-text) !important;
+  color: var(--spring-23-link) !important;
+}
 
+.spring-23 #class .entity,
+.spring-23.website-grid .grid-2 {
+  border-color: var(--spring-23-text);
+}
 
-      .spring-23 .breadcrumb,
-      .spring-23 .breadcrumb a,
-      .spring-23 .text-on-bg,
-      .spring-23 .breadcrumb a:hover {
-          color: var(--spring-23-text-on-bg) !important;
-          text-shadow: 2px 2px 0px var(--spring-23-link);
-      }
+.spring-23 #class .entity:hover {
+  border-color: var(--spring-23-link);
+}
+
+.spring-23 .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--spring-23-background) !important;
+}
 
 
-      .spring-23 section#section-outro,
-      #class .intro.spring-23,
-      .shell.spring-23 .class-details,
-      .spring-23 #class section,
-      .spring-23 #class .entity,
-      .spring-23 .accordion dd.active,
-      .spring-23 section ul,
-      .spring-23 .website-grid
-       {
-        background-color: var(--spring-23-background);
-        color:  var(--spring-23-text) !important;
-        border-radius: var(--border-rad);
-      }
+.spring-23 select#allSections:hover,
+.spring-23 .loader-content p::after,
+.spring-23 span#cost {
+  background: var(--spring-23-link) !important;
+  color: var(--spring-23-background) !important;
+}
 
-      .spring-23  section .intro
-      {border: 2px solid #000}
+.spring-23 .breadcrumb.fixed {
+  background: rgba(255, 255, 255, .8) !important;
+}
+
+.spring-23 .breadcrumb.fixed,
+.spring-23 .breadcrumb.fixed::before,
+.spring-23 .breadcrumb.fixed a,
+.spring-23 .breadcrumb.fixed a:hover {
+  color: #000 !important;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .8) !important;
+}
 
 
-      .spring-23 #class section,
-      #class .intro.spring-23 {
-        padding: var(--body-margin) calc(var(--body-margin)/2);
-        border: 2px solid  var(--spring-23-text);
-      }
+.spring-23 .breadcrumb,
+.spring-23 .breadcrumb a,
+.spring-23 .text-on-bg,
+.spring-23 .breadcrumb a:hover {
+  color: var(--spring-23-text-on-bg) !important;
+  text-shadow: 2px 2px 0px var(--spring-23-link);
+}
 
-      .spring-23 section.stacked.stacked-4,
-      .spring-23 section.section-testimonials {
-        border: 0px !important
-      }
 
-      .spring-23 #class section.stacked,
-      .spring-23 .section-testimonials,
-      .spring-23 .section-testimonials p
-       {
-        background: none !important;
-        padding: 0px !important
-      }
+.spring-23 section#section-outro,
+#class .intro.spring-23,
+.shell.spring-23 .class-details,
+.spring-23 #class section,
+.spring-23 #class .entity,
+.spring-23 .accordion dd.active,
+.spring-23 section ul,
+.spring-23 .website-grid {
+  background-color: var(--spring-23-background);
+  color: var(--spring-23-text) !important;
+  border-radius: var(--border-rad);
+}
 
-      .spring-23 .break {
-        border: 0px !important;
-        margin-bottom: 0px !important;
-        border-color: var(--spring-23-text);
-      }
+.spring-23 section .intro {
+  border: 2px solid #000
+}
 
-      .shell.spring-23 {
-        background-image: url('images/sessions/spring-23/bg.jpg');
-        background-size: 100% calc(100% );
-        background-repeat: repeat;
-      }
+
+.spring-23 #class section,
+#class .intro.spring-23 {
+  padding: var(--body-margin) calc(var(--body-margin)/2);
+  border: 2px solid var(--spring-23-text);
+}
+
+.spring-23 section.stacked.stacked-4,
+.spring-23 section.section-testimonials {
+  border: 0px !important
+}
+
+.spring-23 #class section.stacked,
+.spring-23 .section-testimonials,
+.spring-23 .section-testimonials p {
+  background: none !important;
+  padding: 0px !important
+}
+
+.spring-23 .break {
+  border: 0px !important;
+  margin-bottom: 0px !important;
+  border-color: var(--spring-23-text);
+}
+
+.shell.spring-23 {
+  background-image: url('images/sessions/spring-23/bg.jpg');
+  background-size: 100% calc(100%);
+  background-repeat: repeat;
+}
 
 
 /* /////////// end spring 23  ///////////////////////////////*/
@@ -1746,14 +1730,14 @@ background-size: cover;
 .fundraiser-winter-23,
 .fundraiser-winter-23.featured.session,
 .fundraiser-winter-23.featured,
-.fundraiser-winter-23 .stacked .grid-1 .grid-4  {
- color: var(--fundraiser-winter-23-text);
- box-sizing: border-box;
- border-color: var(--fundraiser-winter-23-text);
- background-image: url('images/fundraiser/winter-23/bg.jpg');
- background-position: bottom;
- background-repeat: repeat;
- background-size: 40%;
+.fundraiser-winter-23 .stacked .grid-1 .grid-4 {
+  color: var(--fundraiser-winter-23-text);
+  box-sizing: border-box;
+  border-color: var(--fundraiser-winter-23-text);
+  background-image: url('images/fundraiser/winter-23/bg.jpg');
+  background-position: bottom;
+  background-repeat: repeat;
+  background-size: 40%;
 }
 
 .fundraiser-winter-23.featured:hover {
@@ -1762,37 +1746,38 @@ background-size: cover;
 
 
 
-     .shell.fundraiser-winter-23 {
-       /* background-image:url('images/fundraiser/winter-23/bg.jpg');
+.shell.fundraiser-winter-23 {
+  /* background-image:url('images/fundraiser/winter-23/bg.jpg');
        background-position: top left;
        background-repeat: repeat;
        background-size: cover; */
-     }
+}
 
-     .shell.fundraiser-winter-23, .fundraiser-winter-23.featured.session {
-       background-image:url('images/fundraiser/winter-23/color-bg-1.png'), url('images/fundraiser/winter-23/bg.jpg');
-       /* background-position: left 0%, top left; */
-       background-repeat: no-repeat, repeat;
-       background-size: cover, 40%;
-       transition: all .2s ease-in-out;
-       -moz-transition: all .2s ease-in-out;
-       ms-transition: all .2s ease-in-out;
-       o-transition: all .2s ease-in-out;
-     }
+.shell.fundraiser-winter-23,
+.fundraiser-winter-23.featured.session {
+  background-image: url('images/fundraiser/winter-23/color-bg-1.png'), url('images/fundraiser/winter-23/bg.jpg');
+  /* background-position: left 0%, top left; */
+  background-repeat: no-repeat, repeat;
+  background-size: cover, 40%;
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  ms-transition: all .2s ease-in-out;
+  o-transition: all .2s ease-in-out;
+}
 
 
-     .shell.fundraiser-winter-23 {
-       /* background-image: url('images/fundraiser/winter-23/bg.jpg');
+.shell.fundraiser-winter-23 {
+  /* background-image: url('images/fundraiser/winter-23/bg.jpg');
        background-size: 40%;
        background-repeat: repeat; */
-     }
+}
 
 
 
 .fundraiser-winter-23,
 .fundraiser-winter-23.featured.session,
 .shell .fundraiser-winter-23,
-.fundraiser-winter-23.featured  {
+.fundraiser-winter-23.featured {
   /* background-color: var(--fundraiser-winter-23-background)  !important; */
   color: var(--fundraiser-winter-23-text);
   box-sizing: border-box;
@@ -1801,76 +1786,75 @@ background-size: cover;
 }
 
 
-      .fundraiser-winter-23 p,
-      .fundraiser-winter-23 p a,
-      .fundraiser-winter-23 a,
-      .fundraiser-winter-23.featured h4,
-      .fundraiser-winter-23 h4 a,
-      .fundraiser-winter-23 .intro a,
-      .fundraiser-winter-23 p.large a,
-      .fundraiser-winter-23 p a:hover,
-      .fundraiser-winter-23.session.featured,
-      .fundraiser-winter-23.session.featured a,
-      .fundraiser-winter-23.featured h4.type a,
-      .sfpc .fundraiser-winter-23 a
-      {
-        color: var(--fundraiser-winter-23-text) !important;
-      }
+.fundraiser-winter-23 p,
+.fundraiser-winter-23 p a,
+.fundraiser-winter-23 a,
+.fundraiser-winter-23.featured h4,
+.fundraiser-winter-23 h4 a,
+.fundraiser-winter-23 .intro a,
+.fundraiser-winter-23 p.large a,
+.fundraiser-winter-23 p a:hover,
+.fundraiser-winter-23.session.featured,
+.fundraiser-winter-23.session.featured a,
+.fundraiser-winter-23.featured h4.type a,
+.sfpc .fundraiser-winter-23 a {
+  color: var(--fundraiser-winter-23-text) !important;
+}
 
-      .fundraiser-winter-23 h4 a:hover,
-      .fundraiser-winter-23 .intro a,
-      .fundraiser-winter-23 p.large a:hover,
-      .fundraiser-winter-23.featured:hover h6,
-      .fundraiser-winter-23.featured:hover .title,
-      .fundraiser-winter-23 .product:hover .title,
-      .fundraiser-winter-23.featured:hover .title.Purchase,
-      .fundraiser-winter-23 .tuition-gift:hover h6,
-      .fundraiser-winter-23 .details a:hover,
-      .fundraiser-winter-23.featured .title:hover,
-      .fundraiser-winter-23.featured .title.Purchase:hover,
-      .fundraiser-winter-23 .product .title:hover,
-      .fundraiser-winter-23 p a:hover,
-      .fundraiser-winter-23 h4 a:hover,
-      .fundraiser-winter-23 section .grid-2 ul li::before,
-      .fundraiser-winter-23 .chars,
-      .fundraiser-winter-23 p a:hover,
-      .fundraiser-winter-23 a:hover,
-      .fundraiser-winter-23 h4 a:hover,
-      .fundraiser-winter-23 .intro a:hover,
-      .fundraiser-winter-23 .details a:hover,
-      .fundraiser-winter-23 .entity:hover .accordion dt h3:after,
-      .fundraiser-winter-23 .accordion dt h3:after,
-      .fundraiser-winter-23 .expanded{
-          color: var(--fundraiser-winter-23-link) !important;
-      }
+.fundraiser-winter-23 h4 a:hover,
+.fundraiser-winter-23 .intro a,
+.fundraiser-winter-23 p.large a:hover,
+.fundraiser-winter-23.featured:hover h6,
+.fundraiser-winter-23.featured:hover .title,
+.fundraiser-winter-23 .product:hover .title,
+.fundraiser-winter-23.featured:hover .title.Purchase,
+.fundraiser-winter-23 .tuition-gift:hover h6,
+.fundraiser-winter-23 .details a:hover,
+.fundraiser-winter-23.featured .title:hover,
+.fundraiser-winter-23.featured .title.Purchase:hover,
+.fundraiser-winter-23 .product .title:hover,
+.fundraiser-winter-23 p a:hover,
+.fundraiser-winter-23 h4 a:hover,
+.fundraiser-winter-23 section .grid-2 ul li::before,
+.fundraiser-winter-23 .chars,
+.fundraiser-winter-23 p a:hover,
+.fundraiser-winter-23 a:hover,
+.fundraiser-winter-23 h4 a:hover,
+.fundraiser-winter-23 .intro a:hover,
+.fundraiser-winter-23 .details a:hover,
+.fundraiser-winter-23 .entity:hover .accordion dt h3:after,
+.fundraiser-winter-23 .accordion dt h3:after,
+.fundraiser-winter-23 .expanded {
+  color: var(--fundraiser-winter-23-link) !important;
+}
 
-      .fundraiser-winter-23 #cost,
-      .fundraiser-winter-23 .fixed-apply,
-      .fundraiser-winter-23 .fixed-support,
-      .fundraiser-winter-23 .home-intro span#session-name::after {
-          color: var(--fundraiser-winter-23-text) ;
-          background: var(--fundraiser-winter-23-link) ;
-      }
+.fundraiser-winter-23 #cost,
+.fundraiser-winter-23 .fixed-apply,
+.fundraiser-winter-23 .fixed-support,
+.fundraiser-winter-23 .home-intro span#session-name::after {
+  color: var(--fundraiser-winter-23-text);
+  background: var(--fundraiser-winter-23-link);
+}
 
-      .fundraiser-winter-23 span#cost,
-      .fundraiser-winter-23 h3 span {
-        background: var(--fundraiser-winter-23-special-text) !important;
-      }
+.fundraiser-winter-23 span#cost,
+.fundraiser-winter-23 h3 span {
+  background: var(--fundraiser-winter-23-special-text) !important;
+}
 
 
-      .fundraiser-winter-23 .fixed-apply:hover {
-        color: #000 !important;
-        background: rgba(255,255,255,.8) !important;
-      }
+.fundraiser-winter-23 .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .fundraiser-winter-23 .block-text {
-        background-color: var(--fundraiser-winter-23-background-dark);
-        border-color: var(--fundraiser-winter-23-link);
-        color: var(--fundraiser-winter-23-link);
-        /* color: rgba(255,255,255,.9); */
-      }
+.fundraiser-winter-23 .block-text {
+  background-color: var(--fundraiser-winter-23-background-dark);
+  border-color: var(--fundraiser-winter-23-link);
+  color: var(--fundraiser-winter-23-link);
+  /* color: rgba(255,255,255,.9); */
+}
 
-      /* .fundraiser-winter-23 .block-text:hover {
+/* .fundraiser-winter-23 .block-text:hover {
         background-color: var(--fundraiser-winter-23-background-dark);
         border-color: var(--fundraiser-winter-23-text);
         color: var(--fundraiser-winter-23-text);
@@ -1880,144 +1864,145 @@ background-size: cover;
         border-color: var(--fundraiser-winter-23-text);
       } */
 
-      .fundraiser-winter-23 .block-text h4 {
-        color: var(--fundraiser-winter-23-special-text);;
-      }
+.fundraiser-winter-23 .block-text h4 {
+  color: var(--fundraiser-winter-23-special-text);
+  ;
+}
 
 
 
-      .fundraiser-winter-23.grid-inner, .fundraiser-winter-23 .grid-inner {
-        border: 2px dotted var(--fundraiser-winter-23-text) !important;
-        color: var(--fundraiser-winter-23-link) !important;
-      }
+.fundraiser-winter-23.grid-inner,
+.fundraiser-winter-23 .grid-inner {
+  border: 2px dotted var(--fundraiser-winter-23-text) !important;
+  color: var(--fundraiser-winter-23-link) !important;
+}
 
-      .fundraiser-winter-23 #class .entity,
-      .fundraiser-winter-23.website-grid .grid-2 {
-        border-color: var(--fundraiser-winter-23-text);
-      }
+.fundraiser-winter-23 #class .entity,
+.fundraiser-winter-23.website-grid .grid-2 {
+  border-color: var(--fundraiser-winter-23-text);
+}
 
-      .fundraiser-winter-23 #class .entity:hover {
-        border-color: var(--fundraiser-winter-23-link);
-      }
+.fundraiser-winter-23 #class .entity:hover {
+  border-color: var(--fundraiser-winter-23-link);
+}
 
-      .fundraiser-winter-23 .website-grid .grid-2 p.large {
-        text-shadow: 3px 3px var(--fundraiser-winter-23-background) !important;
-      }
+.fundraiser-winter-23 .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--fundraiser-winter-23-background) !important;
+}
 
-      .fundraiser-winter-23  .test-icon {
-        color: var(--fundraiser-winter-23-special-text);
-      }
-
-
-      .fundraiser-winter-23 select#allSections:hover,
-      .fundraiser-winter-23 .loader-content p::after,
-      .fundraiser-winter-23 span#cost
-      {
-        background: var(--fundraiser-winter-23-special-text) !important;
-        color: var(--fundraiser-winter-23-text) !important;
-      }
-
-      .fundraiser-winter-23 .breadcrumb.fixed {
-        background: rgba(255,255,255,.8) !important;
-      }
-      .fundraiser-winter-23 .breadcrumb.fixed,
-      .fundraiser-winter-23 .breadcrumb.fixed::before,
-      .fundraiser-winter-23 .breadcrumb.fixed a,
-      .fundraiser-winter-23 .breadcrumb.fixed a:hover {
-        color: #000 !important;
-        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
-      }
+.fundraiser-winter-23 .test-icon {
+  color: var(--fundraiser-winter-23-special-text);
+}
 
 
-      .fundraiser-winter-23 .breadcrumb,
-      .fundraiser-winter-23 .breadcrumb a,
-      .fundraiser-winter-23 .text-on-bg,
-      .fundraiser-winter-23 .breadcrumb a:hover {
-          color: var(--fundraiser-winter-23-text-on-bg) !important;
-          text-shadow: 2px 2px 0px var(--fundraiser-winter-23-background);
-      }
+.fundraiser-winter-23 select#allSections:hover,
+.fundraiser-winter-23 .loader-content p::after,
+.fundraiser-winter-23 span#cost {
+  background: var(--fundraiser-winter-23-special-text) !important;
+  color: var(--fundraiser-winter-23-text) !important;
+}
+
+.fundraiser-winter-23 .breadcrumb.fixed {
+  background: rgba(255, 255, 255, .8) !important;
+}
+
+.fundraiser-winter-23 .breadcrumb.fixed,
+.fundraiser-winter-23 .breadcrumb.fixed::before,
+.fundraiser-winter-23 .breadcrumb.fixed a,
+.fundraiser-winter-23 .breadcrumb.fixed a:hover {
+  color: #000 !important;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .8) !important;
+}
 
 
-      .fundraiser-winter-23 section#section-outro,
-      #class .intro.fundraiser-winter-23,
-      .shell.fundraiser-winter-23 .class-details,
-      .fundraiser-winter-23 #class section,
-      .fundraiser-winter-23 #class .entity,
-      .fundraiser-winter-23 .accordion dd.active,
-      .fundraiser-winter-23 section ul,
-      .fundraiser-winter-23 .website-grid
-       {
-        /* background-color: var(--fundraiser-winter-23-background); */
-        background: none;
-        color:  var(--fundraiser-winter-23-text) !important;
-        border-radius: var(--border-rad);
-      }
-
-      .fundraiser-winter-23 #class section,
-      #class .intro.fundraiser-winter-23 {
-        padding: var(--body-margin) calc(var(--body-margin)/2);
-      }
-
-      .fundraiser-winter-23 #class section.stacked,
-      .fundraiser-winter-23 .section-testimonials,
-      .fundraiser-winter-23 .section-testimonials p
-       {
-        background: none !important;
-        padding: 0px !important
-      }
-
-      .fundraiser-winter-23 .break {
-        /* border: 0px !important; */
-        /* margin-bottom: 0px !important; */
-        border-color: var(--fundraiser-winter-23-text);
-      }
+.fundraiser-winter-23 .breadcrumb,
+.fundraiser-winter-23 .breadcrumb a,
+.fundraiser-winter-23 .text-on-bg,
+.fundraiser-winter-23 .breadcrumb a:hover {
+  color: var(--fundraiser-winter-23-text-on-bg) !important;
+  text-shadow: 2px 2px 0px var(--fundraiser-winter-23-background);
+}
 
 
+.fundraiser-winter-23 section#section-outro,
+#class .intro.fundraiser-winter-23,
+.shell.fundraiser-winter-23 .class-details,
+.fundraiser-winter-23 #class section,
+.fundraiser-winter-23 #class .entity,
+.fundraiser-winter-23 .accordion dd.active,
+.fundraiser-winter-23 section ul,
+.fundraiser-winter-23 .website-grid {
+  /* background-color: var(--fundraiser-winter-23-background); */
+  background: none;
+  color: var(--fundraiser-winter-23-text) !important;
+  border-radius: var(--border-rad);
+}
 
-      .fundraiser-winter-23 .addon-item {
-        border: 2px dotted var(--fundraiser-winter-23-link) !important;
-        background: var(--fundraiser-winter-23-background-dark) !important;
-      }
-      /* .grid-1.featured.fundraiser-winter-23 {
+.fundraiser-winter-23 #class section,
+#class .intro.fundraiser-winter-23 {
+  padding: var(--body-margin) calc(var(--body-margin)/2);
+}
+
+.fundraiser-winter-23 #class section.stacked,
+.fundraiser-winter-23 .section-testimonials,
+.fundraiser-winter-23 .section-testimonials p {
+  background: none !important;
+  padding: 0px !important
+}
+
+.fundraiser-winter-23 .break {
+  /* border: 0px !important; */
+  /* margin-bottom: 0px !important; */
+  border-color: var(--fundraiser-winter-23-text);
+}
+
+
+
+.fundraiser-winter-23 .addon-item {
+  border: 2px dotted var(--fundraiser-winter-23-link) !important;
+  background: var(--fundraiser-winter-23-background-dark) !important;
+}
+
+/* .grid-1.featured.fundraiser-winter-23 {
 
           border: 2px dotted var(--fundraiser-winter-23-link) !important;
       } */
 
-      .fundraiser-winter-23 .shopify-buy__option-select__select,
-      .fundraiser-winter-23 .shopify-buy__quantity  {
-      background: var(--fundraiser-winter-23-text) !important;
-      color: var(--fundraiser-winter-23-background) !important;
-      }
+.fundraiser-winter-23 .shopify-buy__option-select__select,
+.fundraiser-winter-23 .shopify-buy__quantity {
+  background: var(--fundraiser-winter-23-text) !important;
+  color: var(--fundraiser-winter-23-background) !important;
+}
 
 
-      .fundraiser-winter-23 .grid-1.featured {
-        background: var(--fundraiser-winter-23-background-dark) !important;
-      }
+.fundraiser-winter-23 .grid-1.featured {
+  background: var(--fundraiser-winter-23-background-dark) !important;
+}
 
 
-      .fundraiser-progress h6 {
-      color: var(--fundraiser-winter-23-text);
-      }
+.fundraiser-progress h6 {
+  color: var(--fundraiser-winter-23-text);
+}
 
-      .fundraiser-winter-23 .fundraiser-progress {
-      background:  var(--fundraiser-winter-23-special-text);
-      }
+.fundraiser-winter-23 .fundraiser-progress {
+  background: var(--fundraiser-winter-23-special-text);
+}
 
-      .fundraiser-winter-23 .fundraiser-goal {
-        background: var(--fundraiser-winter-23-background-dark);
-        border: 2px solid  var(--fundraiser-winter-23-special-text);
-      }
+.fundraiser-winter-23 .fundraiser-goal {
+  background: var(--fundraiser-winter-23-background-dark);
+  border: 2px solid var(--fundraiser-winter-23-special-text);
+}
 
-      .fundraiser-winter-23 .fundraiser-stats .fr-right {
-        color: var(--fundraiser-winter-23-text);
-      }
+.fundraiser-winter-23 .fundraiser-stats .fr-right {
+  color: var(--fundraiser-winter-23-text);
+}
 
 
-      @media (max-width: 768px) {
-        .shell.fundraiser-winter-23 {
-          background-size: 100%;
-        }
-      }
+@media (max-width: 768px) {
+  .shell.fundraiser-winter-23 {
+    background-size: 100%;
+  }
+}
 
 
 
@@ -2033,15 +2018,15 @@ background-size: cover;
 
 .winter-23,
 .winter-23.featured.session,
-.winter-23.featured  {
- /* background-color: var(--sex-ed-background)  !important; */
- color: var(--winter-23-text);
- box-sizing: border-box;
- border-color: var(--winter-23-text);
- background-image: url('images/sessions/winter-23/bg.jpg');
- background-position: bottom;
- background-repeat: repeat;
- background-size: 100%;
+.winter-23.featured {
+  /* background-color: var(--sex-ed-background)  !important; */
+  color: var(--winter-23-text);
+  box-sizing: border-box;
+  border-color: var(--winter-23-text);
+  background-image: url('images/sessions/winter-23/bg.jpg');
+  background-position: bottom;
+  background-repeat: repeat;
+  background-size: 100%;
 }
 
 .winter-23.featured:hover {
@@ -2050,22 +2035,22 @@ background-size: cover;
 
 
 
-     .shell.winter-23 {
-       background-image:url('images/sessions/winter-23/bg.jpg');
-       /* background-position: bottom; */
-       /* background-repeat: no-repeat;
+.shell.winter-23 {
+  background-image: url('images/sessions/winter-23/bg.jpg');
+  /* background-position: bottom; */
+  /* background-repeat: no-repeat;
        background-size: cover; */
-       background-position: top left;
-       background-repeat: repeat;
-       background-size: cover;
-     }
+  background-position: top left;
+  background-repeat: repeat;
+  background-size: cover;
+}
 
 
 
 .winter-23,
 .winter-23.featured.session,
 .shell .winter-23,
-.winter-23.featured  {
+.winter-23.featured {
   /* background-color: var(--winter-23-background)  !important; */
   color: var(--winter-23-text);
   box-sizing: border-box;
@@ -2074,155 +2059,153 @@ background-size: cover;
 }
 
 
-      .winter-23 p,
-      .winter-23 p a,
-      .winter-23 a,
-      .winter-23.featured h4,
-      .winter-23 h4 a,
-      .winter-23 .intro a,
-      .winter-23 p.large a,
-      .winter-23 p a:hover,
-      .winter-23.session.featured,
-      .winter-23.session.featured a,
-      .winter-23.featured h4.type a,
-      .sfpc .winter-23 a
-      {
-        color: var(--winter-23-text) !important;
-      }
+.winter-23 p,
+.winter-23 p a,
+.winter-23 a,
+.winter-23.featured h4,
+.winter-23 h4 a,
+.winter-23 .intro a,
+.winter-23 p.large a,
+.winter-23 p a:hover,
+.winter-23.session.featured,
+.winter-23.session.featured a,
+.winter-23.featured h4.type a,
+.sfpc .winter-23 a {
+  color: var(--winter-23-text) !important;
+}
 
-      .winter-23 h4 a:hover,
-      .winter-23 .intro a,
-      .winter-23 p.large a:hover,
-      .winter-23.featured:hover h6,
-      .winter-23.featured:hover .title,
-      .winter-23 .details a:hover,
-      .winter-23.featured .title:hover,
-      .winter-23 p a:hover,
-      .winter-23 h4 a:hover,
-      .winter-23 section .grid-2 ul li::before,
-      .winter-23 .chars,
-      .winter-23 p a:hover,
-      .winter-23 a:hover,
-      .winter-23 h4 a:hover,
-      .winter-23 .intro a:hover,
-      .winter-23 .details a:hover,
-      .winter-23 .entity:hover .accordion dt h3:after,
-      .winter-23 .accordion dt h3:after,
-      .winter-23 .expanded{
-          color: var(--winter-23-link) !important;
-      }
+.winter-23 h4 a:hover,
+.winter-23 .intro a,
+.winter-23 p.large a:hover,
+.winter-23.featured:hover h6,
+.winter-23.featured:hover .title,
+.winter-23 .details a:hover,
+.winter-23.featured .title:hover,
+.winter-23 p a:hover,
+.winter-23 h4 a:hover,
+.winter-23 section .grid-2 ul li::before,
+.winter-23 .chars,
+.winter-23 p a:hover,
+.winter-23 a:hover,
+.winter-23 h4 a:hover,
+.winter-23 .intro a:hover,
+.winter-23 .details a:hover,
+.winter-23 .entity:hover .accordion dt h3:after,
+.winter-23 .accordion dt h3:after,
+.winter-23 .expanded {
+  color: var(--winter-23-link) !important;
+}
 
-      .winter-23 #cost,
-      .winter-23 .fixed-apply,
-      .winter-23 .fixed-support,
-      .winter-23 .home-intro span#session-name::after {
-          color: var(--winter-23-background) !important;
-          background: var(--winter-23-link) !important;
-      }
+.winter-23 #cost,
+.winter-23 .fixed-apply,
+.winter-23 .fixed-support,
+.winter-23 .home-intro span#session-name::after {
+  color: var(--winter-23-background) !important;
+  background: var(--winter-23-link) !important;
+}
 
-      .winter-23 span#cost {
-        background: var(--winter-23-link) !important;
-      }
-
-
-      .winter-23 .fixed-apply:hover {
-        color: #000 !important;
-        background: rgba(255,255,255,.8) !important;
-      }
-
-      .winter-23 .block-text {
-        background-color: var(--winter-23-background);
-        color: var(--winter-23-link);
-      }
+.winter-23 span#cost {
+  background: var(--winter-23-link) !important;
+}
 
 
+.winter-23 .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .winter-23.grid-inner, .winter-23 .grid-inner {
-        border: 2px dotted var(--winter-23-text) !important;
-        color: var(--winter-23-link) !important;
-      }
-
-      .winter-23 #class .entity,
-      .winter-23.website-grid .grid-2 {
-        border-color: var(--winter-23-text);
-      }
-
-      .winter-23 #class .entity:hover {
-        border-color: var(--winter-23-link);
-      }
-
-      .winter-23 .website-grid .grid-2 p.large {
-        text-shadow: 3px 3px var(--winter-23-background) !important;
-      }
+.winter-23 .block-text {
+  background-color: var(--winter-23-background);
+  color: var(--winter-23-link);
+}
 
 
-      .winter-23 select#allSections:hover,
-      .winter-23 .loader-content p::after,
-      .winter-23 span#cost
-      {
-        background: var(--winter-23-link) !important;
-        color: var(--winter-23-background) !important;
-      }
 
-      .winter-23 .breadcrumb.fixed {
-        background: rgba(255,255,255,.8) !important;
-      }
-      .winter-23 .breadcrumb.fixed,
-      .winter-23 .breadcrumb.fixed::before,
-      .winter-23 .breadcrumb.fixed a,
-      .winter-23 .breadcrumb.fixed a:hover {
-        color: #000 !important;
-        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
-      }
+.winter-23.grid-inner,
+.winter-23 .grid-inner {
+  border: 2px dotted var(--winter-23-text) !important;
+  color: var(--winter-23-link) !important;
+}
 
+.winter-23 #class .entity,
+.winter-23.website-grid .grid-2 {
+  border-color: var(--winter-23-text);
+}
 
-      .winter-23 .breadcrumb,
-      .winter-23 .breadcrumb a,
-      .winter-23 .text-on-bg,
-      .winter-23 .breadcrumb a:hover {
-          color: var(--winter-23-text-on-bg) !important;
-          text-shadow: 2px 2px 0px var(--winter-23-background);
-      }
+.winter-23 #class .entity:hover {
+  border-color: var(--winter-23-link);
+}
+
+.winter-23 .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--winter-23-background) !important;
+}
 
 
-      .winter-23 section#section-outro,
-      #class .intro.winter-23,
-      .shell.winter-23 .class-details,
-      .winter-23 #class section,
-      .winter-23 #class .entity,
-      .winter-23 .accordion dd.active,
-      .winter-23 section ul,
-      .winter-23 .website-grid
-       {
-        /* background-color: var(--winter-23-background); */
-        background: none;
-        color:  var(--winter-23-text) !important;
-        border-radius: var(--border-rad);
-      }
+.winter-23 select#allSections:hover,
+.winter-23 .loader-content p::after,
+.winter-23 span#cost {
+  background: var(--winter-23-link) !important;
+  color: var(--winter-23-background) !important;
+}
 
-      .winter-23 #class section,
-      #class .intro.winter-23 {
-        padding: var(--body-margin) calc(var(--body-margin)/2);
-      }
+.winter-23 .breadcrumb.fixed {
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .winter-23 #class section.stacked,
-      .winter-23 .section-testimonials,
-      .winter-23 .section-testimonials p
-       {
-        background: none !important;
-        padding: 0px !important
-      }
+.winter-23 .breadcrumb.fixed,
+.winter-23 .breadcrumb.fixed::before,
+.winter-23 .breadcrumb.fixed a,
+.winter-23 .breadcrumb.fixed a:hover {
+  color: #000 !important;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .8) !important;
+}
 
-      .winter-23 .break {
-        /* border: 0px !important; */
-        /* margin-bottom: 0px !important; */
-        border-color: var(--winter-23-text);
-      }
 
-      .shell.winter-23 {
-        background-image: url('images/sessions/winter-23/bg.jpg');
-        background-size: cover;
-      }
+.winter-23 .breadcrumb,
+.winter-23 .breadcrumb a,
+.winter-23 .text-on-bg,
+.winter-23 .breadcrumb a:hover {
+  color: var(--winter-23-text-on-bg) !important;
+  text-shadow: 2px 2px 0px var(--winter-23-background);
+}
+
+
+.winter-23 section#section-outro,
+#class .intro.winter-23,
+.shell.winter-23 .class-details,
+.winter-23 #class section,
+.winter-23 #class .entity,
+.winter-23 .accordion dd.active,
+.winter-23 section ul,
+.winter-23 .website-grid {
+  /* background-color: var(--winter-23-background); */
+  background: none;
+  color: var(--winter-23-text) !important;
+  border-radius: var(--border-rad);
+}
+
+.winter-23 #class section,
+#class .intro.winter-23 {
+  padding: var(--body-margin) calc(var(--body-margin)/2);
+}
+
+.winter-23 #class section.stacked,
+.winter-23 .section-testimonials,
+.winter-23 .section-testimonials p {
+  background: none !important;
+  padding: 0px !important
+}
+
+.winter-23 .break {
+  /* border: 0px !important; */
+  /* margin-bottom: 0px !important; */
+  border-color: var(--winter-23-text);
+}
+
+.shell.winter-23 {
+  background-image: url('images/sessions/winter-23/bg.jpg');
+  background-size: cover;
+}
 
 
 /* /////////// end winter 23  ///////////////////////////////*/
@@ -2242,15 +2225,15 @@ background-size: cover;
 
 .fall-22,
 .fall-22.featured.session,
-.fall-22.featured  {
- /* background-color: var(--sex-ed-background)  !important; */
- color: var(--fall-22-text);
- box-sizing: border-box;
- border-color: var(--fall-22-text);
- background-image: url('images/sessions/fall-22/bg.jpg');
- background-position: bottom;
- background-repeat: repeat;
- background-size: 100%;
+.fall-22.featured {
+  /* background-color: var(--sex-ed-background)  !important; */
+  color: var(--fall-22-text);
+  box-sizing: border-box;
+  border-color: var(--fall-22-text);
+  background-image: url('images/sessions/fall-22/bg.jpg');
+  background-position: bottom;
+  background-repeat: repeat;
+  background-size: 100%;
 }
 
 .fall-22.featured:hover {
@@ -2259,22 +2242,22 @@ background-size: cover;
 
 
 
-     .shell.fall-22 {
-       background-image:url('images/sessions/fall-22/bg.jpg');
-       /* background-position: bottom; */
-       /* background-repeat: no-repeat;
+.shell.fall-22 {
+  background-image: url('images/sessions/fall-22/bg.jpg');
+  /* background-position: bottom; */
+  /* background-repeat: no-repeat;
        background-size: cover; */
-       background-position: top left;
-       background-repeat: repeat;
-       background-size: 100% auto;
-     }
+  background-position: top left;
+  background-repeat: repeat;
+  background-size: 100% auto;
+}
 
 
 
 .fall-22,
 .fall-22.featured.session,
 .shell .fall-22,
-.fall-22.featured  {
+.fall-22.featured {
   /* background-color: var(--fall-22-background)  !important; */
   color: var(--fall-22-text);
   box-sizing: border-box;
@@ -2283,159 +2266,157 @@ background-size: cover;
 }
 
 
-      .fall-22 p,
-      .fall-22 p a,
-      .fall-22 a,
-      .fall-22.featured h4,
-      .fall-22 h4 a,
-      .fall-22 .intro a,
-      .fall-22 p.large a,
-      .fall-22 p a:hover,
-      .fall-22.session.featured,
-      .fall-22.session.featured a,
-      .fall-22.featured h4.type a,
-      .sfpc .fall-22 a
-      {
-        color: var(--fall-22-text) !important;
-      }
+.fall-22 p,
+.fall-22 p a,
+.fall-22 a,
+.fall-22.featured h4,
+.fall-22 h4 a,
+.fall-22 .intro a,
+.fall-22 p.large a,
+.fall-22 p a:hover,
+.fall-22.session.featured,
+.fall-22.session.featured a,
+.fall-22.featured h4.type a,
+.sfpc .fall-22 a {
+  color: var(--fall-22-text) !important;
+}
 
-      .fall-22 h4 a:hover,
-      .fall-22 .intro a,
-      .fall-22 p.large a:hover,
-      .fall-22.featured:hover h6,
-      .fall-22.featured:hover .title,
-      .fall-22 .details a:hover,
-      .fall-22.featured .title:hover,
-      .fall-22 p a:hover,
-      .fall-22 h4 a:hover,
-      .fall-22 section .grid-2 ul li::before,
-      .fall-22 .chars,
-      .fall-22 p a:hover,
-      .fall-22 a:hover,
-      .fall-22 h4 a:hover,
-      .fall-22 .intro a:hover,
-      .fall-22 .details a:hover,
-      .fall-22 .entity:hover .accordion dt h3:after,
-      .fall-22 .accordion dt h3:after,
-      .fall-22 .expanded{
-          color: var(--fall-22-link) !important;
-      }
+.fall-22 h4 a:hover,
+.fall-22 .intro a,
+.fall-22 p.large a:hover,
+.fall-22.featured:hover h6,
+.fall-22.featured:hover .title,
+.fall-22 .details a:hover,
+.fall-22.featured .title:hover,
+.fall-22 p a:hover,
+.fall-22 h4 a:hover,
+.fall-22 section .grid-2 ul li::before,
+.fall-22 .chars,
+.fall-22 p a:hover,
+.fall-22 a:hover,
+.fall-22 h4 a:hover,
+.fall-22 .intro a:hover,
+.fall-22 .details a:hover,
+.fall-22 .entity:hover .accordion dt h3:after,
+.fall-22 .accordion dt h3:after,
+.fall-22 .expanded {
+  color: var(--fall-22-link) !important;
+}
 
-      .fall-22 #cost,
-      .fall-22 .fixed-apply,
-      .fall-22 .fixed-support {
-          color: var(--fall-22-background) !important;
-          background: var(--fall-22-link) !important;
-      }
+.fall-22 #cost,
+.fall-22 .fixed-apply,
+.fall-22 .fixed-support {
+  color: var(--fall-22-background) !important;
+  background: var(--fall-22-link) !important;
+}
 
-      .fall-22 span#cost {
-        background: var(--fall-22-link) !important;
-      }
-
-
-      .fall-22 .fixed-apply:hover {
-        color: #000 !important;
-        background: rgba(255,255,255,.8) !important;
-      }
-
-      .fall-22 .block-text {
-        background-color: var(--fall-22-background);
-      color: var(--fall-22-link) ;
-      }
+.fall-22 span#cost {
+  background: var(--fall-22-link) !important;
+}
 
 
+.fall-22 .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .fall-22.grid-inner, .fall-22 .grid-inner {
-        border: 2px dotted var(--fall-22-text) !important;
-        color: var(--fall-22-link) !important;
-      }
-
-      .fall-22 #class .entity,
-      .fall-22.website-grid .grid-2 {
-        border-color: var(--fall-22-text);
-      }
-
-      .fall-22 #class .entity:hover {
-        border-color: var(--fall-22-link);
-      }
-
-      .fall-22 .website-grid .grid-2 p.large {
-        text-shadow: 3px 3px var(--fall-22-background) !important;
-      }
+.fall-22 .block-text {
+  background-color: var(--fall-22-background);
+  color: var(--fall-22-link);
+}
 
 
-      .fall-22 select#allSections:hover,
-      .fall-22 .loader-content p::after,
-      .fall-22 span#cost
-      {
-        background: var(--fall-22-link) !important;
-        color: var(--fall-22-background) !important;
-      }
 
-      .fall-22 .breadcrumb.fixed {
-        background: rgba(255,255,255,.8) !important;
-      }
-      .fall-22 .breadcrumb.fixed,
-      .fall-22 .breadcrumb.fixed::before,
-      .fall-22 .breadcrumb.fixed a,
-      .fall-22 .breadcrumb.fixed a:hover {
-        color: #000 !important;
-        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
-      }
+.fall-22.grid-inner,
+.fall-22 .grid-inner {
+  border: 2px dotted var(--fall-22-text) !important;
+  color: var(--fall-22-link) !important;
+}
 
+.fall-22 #class .entity,
+.fall-22.website-grid .grid-2 {
+  border-color: var(--fall-22-text);
+}
 
-      .fall-22 .breadcrumb,
-      .fall-22 .breadcrumb a,
-      .fall-22 .text-on-bg,
-      .fall-22 .breadcrumb a:hover {
-          color: var(--fall-22-text-on-bg) !important;
-          text-shadow: 2px 2px 0px var(--fall-22-link);
-      }
+.fall-22 #class .entity:hover {
+  border-color: var(--fall-22-link);
+}
+
+.fall-22 .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--fall-22-background) !important;
+}
 
 
-      .fall-22 .breadcrumb .blog-tag a {
-        text-shadow: 0px !important;
-      }
+.fall-22 select#allSections:hover,
+.fall-22 .loader-content p::after,
+.fall-22 span#cost {
+  background: var(--fall-22-link) !important;
+  color: var(--fall-22-background) !important;
+}
+
+.fall-22 .breadcrumb.fixed {
+  background: rgba(255, 255, 255, .8) !important;
+}
+
+.fall-22 .breadcrumb.fixed,
+.fall-22 .breadcrumb.fixed::before,
+.fall-22 .breadcrumb.fixed a,
+.fall-22 .breadcrumb.fixed a:hover {
+  color: #000 !important;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .8) !important;
+}
 
 
-      .fall-22 section#section-outro,
-      #class .intro.fall-22,
-      .shell.fall-22 .class-details,
-      .fall-22 #class section,
-      .fall-22 #class .entity,
-      .fall-22 .accordion dd.active,
-      .fall-22 section ul,
-      .fall-22 .website-grid
-       {
-        /* background-color: var(--fall-22-background); */
-        background: none;
-        color:  var(--fall-22-text) !important;
-        border-radius: var(--border-rad);
-      }
+.fall-22 .breadcrumb,
+.fall-22 .breadcrumb a,
+.fall-22 .text-on-bg,
+.fall-22 .breadcrumb a:hover {
+  color: var(--fall-22-text-on-bg) !important;
+  text-shadow: 2px 2px 0px var(--fall-22-link);
+}
 
-      .fall-22 #class section,
-      #class .intro.fall-22 {
-        padding: var(--body-margin) calc(var(--body-margin)/2);
-      }
 
-      .fall-22 #class section.stacked,
-      .fall-22 .section-testimonials,
-      .fall-22 .section-testimonials p
-       {
-        background: none !important;
-        padding: 0px !important
-      }
+.fall-22 .breadcrumb .blog-tag a {
+  text-shadow: 0px !important;
+}
 
-      .fall-22 .break {
-        /* border: 0px !important; */
-        /* margin-bottom: 0px !important; */
-        border-color: var(--fall-22-text);
-      }
 
-      .shell.fall-22 {
-        background-image: url('images/sessions/fall-22/bg.jpg');
-        background-size: cover;
-      }
+.fall-22 section#section-outro,
+#class .intro.fall-22,
+.shell.fall-22 .class-details,
+.fall-22 #class section,
+.fall-22 #class .entity,
+.fall-22 .accordion dd.active,
+.fall-22 section ul,
+.fall-22 .website-grid {
+  /* background-color: var(--fall-22-background); */
+  background: none;
+  color: var(--fall-22-text) !important;
+  border-radius: var(--border-rad);
+}
+
+.fall-22 #class section,
+#class .intro.fall-22 {
+  padding: var(--body-margin) calc(var(--body-margin)/2);
+}
+
+.fall-22 #class section.stacked,
+.fall-22 .section-testimonials,
+.fall-22 .section-testimonials p {
+  background: none !important;
+  padding: 0px !important
+}
+
+.fall-22 .break {
+  /* border: 0px !important; */
+  /* margin-bottom: 0px !important; */
+  border-color: var(--fall-22-text);
+}
+
+.shell.fall-22 {
+  background-image: url('images/sessions/fall-22/bg.jpg');
+  background-size: cover;
+}
 
 
 /* /////////// end fall 22  ///////////////////////////////*/
@@ -2455,14 +2436,14 @@ background-size: cover;
 .sex-ed.featured.session,
 .sex-ed.featured,
 #tag.sex-ed {
- /* background-color: var(--sex-ed-background)  !important; */
- color: var(--sex-ed-text);
- box-sizing: border-box;
- border-color: var(--sex-ed-text);
- background-image:url('images/sessions/sex-ed/bg.jpg');
- background-position: bottom;
- background-repeat: repeat;
- background-size: 300%;
+  /* background-color: var(--sex-ed-background)  !important; */
+  color: var(--sex-ed-text);
+  box-sizing: border-box;
+  border-color: var(--sex-ed-text);
+  background-image: url('images/sessions/sex-ed/bg.jpg');
+  background-position: bottom;
+  background-repeat: repeat;
+  background-size: 300%;
 }
 
 .sex-ed.featured:hover {
@@ -2471,204 +2452,199 @@ background-size: cover;
 
 
 
-     .shell.sex-ed {
-       background-image:url('images/sessions/sex-ed/bg.jpg');
-       /* background-position: bottom; */
-       /* background-repeat: no-repeat;
+.shell.sex-ed {
+  background-image: url('images/sessions/sex-ed/bg.jpg');
+  /* background-position: bottom; */
+  /* background-repeat: no-repeat;
        background-size: cover; */
-       background-position: top left;
-       background-repeat: repeat;
-       background-size: 500% auto;
-     }
+  background-position: top left;
+  background-repeat: repeat;
+  background-size: 500% auto;
+}
 
 
-     .sex-ed p,
-     .sex-ed p a,
-     .sex-ed a,
-     .sex-ed.featured h4,
-     .sex-ed h4 a,
-     .sex-ed .intro a,
-     .sex-ed p.large a,
-     .sex-ed p a:hover,
-     .sex-ed.session.featured,
-     .sex-ed.session.featured a
-     {
-       color: var(--sex-ed-text) !important;
+.sex-ed p,
+.sex-ed p a,
+.sex-ed a,
+.sex-ed.featured h4,
+.sex-ed h4 a,
+.sex-ed .intro a,
+.sex-ed p.large a,
+.sex-ed p a:hover,
+.sex-ed.session.featured,
+.sex-ed.session.featured a {
+  color: var(--sex-ed-text) !important;
 
-     }
+}
 
-     .sex-ed p,
-     .sex-ed.featured h4,
-     .sex-ed p.large,
-     .sex-ed .intro,
-     .sex-ed h1,
-    .sex-ed .details .labels,
-    .sex-ed .details .labels-info,
-    .sex-ed li,
-    .sex-ed ul,
-    .sex-ed .class-details
-        {
-       text-shadow:  0 0 7px #fff,  0 0 10px #fff;
-      }
+.sex-ed p,
+.sex-ed.featured h4,
+.sex-ed p.large,
+.sex-ed .intro,
+.sex-ed h1,
+.sex-ed .details .labels,
+.sex-ed .details .labels-info,
+.sex-ed li,
+.sex-ed ul,
+.sex-ed .class-details {
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff;
+}
 
-      .sex-ed .details .labels-info #cost,
-      .sex-ed span#cost
-          {
-         text-shadow:  0 0 7px var(--sex-ed-link),  0 0 10px var(--sex-ed-link);
-        }
+.sex-ed .details .labels-info #cost,
+.sex-ed span#cost {
+  text-shadow: 0 0 7px var(--sex-ed-link), 0 0 10px var(--sex-ed-link);
+}
 
-     .sex-ed h4 a:hover,
-     /* .sex-ed .intro a, */
-     .sex-ed p.large a:hover,
-     .sex-ed.featured:hover h6,
-     .sex-ed.featured:hover .title,
-     .sex-ed .details a:hover,
-     .sex-ed.featured .title:hover,
-     .sex-ed p a:hover,
-     .sex-ed h4 a:hover,
-     .sex-ed section .grid-2 ul li::before,
-     .sex-ed .chars,
-     .sex-ed p a:hover,
-     .sex-ed a:hover,
-     .sex-ed h4 a:hover,
-     .sex-ed .intro a:hover,
-     .sex-ed .details a:hover,
-     .sex-ed .entity:hover .accordion dt h3:after,
-     .sex-ed .accordion dt h3:after,
-     .sex-ed .expanded{
-         color: var(--sex-ed-link) !important;
-     }
+.sex-ed h4 a:hover,
+/* .sex-ed .intro a, */
+.sex-ed p.large a:hover,
+.sex-ed.featured:hover h6,
+.sex-ed.featured:hover .title,
+.sex-ed .details a:hover,
+.sex-ed.featured .title:hover,
+.sex-ed p a:hover,
+.sex-ed h4 a:hover,
+.sex-ed section .grid-2 ul li::before,
+.sex-ed .chars,
+.sex-ed p a:hover,
+.sex-ed a:hover,
+.sex-ed h4 a:hover,
+.sex-ed .intro a:hover,
+.sex-ed .details a:hover,
+.sex-ed .entity:hover .accordion dt h3:after,
+.sex-ed .accordion dt h3:after,
+.sex-ed .expanded {
+  color: var(--sex-ed-link) !important;
+}
 
-     .sex-ed.featured .title{
-       text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #fff,
-      0 0 82px #fff;
-     }
+.sex-ed.featured .title {
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #fff,
+    0 0 82px #fff;
+}
 
 
-     .sex-ed.featured:hover .title {
-       text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #fff,
-      0 0 82px #fff,
-      0 0 92px #fff;
-     }
+.sex-ed.featured:hover .title {
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #fff,
+    0 0 82px #fff,
+    0 0 92px #fff;
+}
 
 
 
 
 
-     .sex-ed #cost,
-     .sex-ed .fixed-apply,
-     .sex-ed .fixed-support {
-         color: var(--sex-ed-background) !important;
-         background: var(--sex-ed-link) !important;
-     }
+.sex-ed #cost,
+.sex-ed .fixed-apply,
+.sex-ed .fixed-support {
+  color: var(--sex-ed-background) !important;
+  background: var(--sex-ed-link) !important;
+}
 
-     .sex-ed .fixed-apply:hover {
-       color: #000 !important;
-       background: rgba(255,255,255,.8) !important;
-     }
+.sex-ed .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-     .sex-ed .block-text {
-       background-color: var(--sex-ed-background);
-     }
-
-
+.sex-ed .block-text {
+  background-color: var(--sex-ed-background);
+}
 
 
-     .sex-ed .break {
-       border-bottom: 1px dashed var(--sex-ed-text);
-     }
-
-     .sex-ed .grid-inner, .sex-ed.grid-inner {
-       border: 2px dotted var(--sex-ed-text) !important;
-       color: var(--sex-ed-link) !important;
-     }
-
-     .sex-ed #class .entity,
-     .sex-ed.website-grid .grid-2 {
-       border-color: var(--sex-ed-text);
-       background: none !important;
-     }
-
-     .sex-ed #class .entity:hover {
-       border-color: var(--sex-ed-link);
-     }
-
-     .sex-ed .website-grid .grid-2 p.large {
-       text-shadow: 3px 3px var(--sex-ed-background) !important;
-     }
-
-     .sex-ed select#allSections:hover,
-     .sex-ed .loader-content p::after,
-     .sex-ed span#cost
-     {
-       background: var(--sex-ed-link) !important;
-       color: var(--sex-ed-background) !important;
-     }
 
 
-     .sex-ed .breadcrumb.fixed {
+.sex-ed .break {
+  border-bottom: 1px dashed var(--sex-ed-text);
+}
 
-         background: rgba(255,255,255,.8) !important;
-     }
+.sex-ed .grid-inner,
+.sex-ed.grid-inner {
+  border: 2px dotted var(--sex-ed-text) !important;
+  color: var(--sex-ed-link) !important;
+}
+
+.sex-ed #class .entity,
+.sex-ed.website-grid .grid-2 {
+  border-color: var(--sex-ed-text);
+  background: none !important;
+}
+
+.sex-ed #class .entity:hover {
+  border-color: var(--sex-ed-link);
+}
+
+.sex-ed .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--sex-ed-background) !important;
+}
+
+.sex-ed select#allSections:hover,
+.sex-ed .loader-content p::after,
+.sex-ed span#cost {
+  background: var(--sex-ed-link) !important;
+  color: var(--sex-ed-background) !important;
+}
+
+
+.sex-ed .breadcrumb.fixed {
+
+  background: rgba(255, 255, 255, .8) !important;
+}
 
 
 
 
 
 
-     .sex-ed .breadcrumb.fixed,
-     .sex-ed .breadcrumb.fixed::before,
-     .sex-ed .breadcrumb.fixed a,
-     .sex-ed .breadcrumb.fixed a:hover {
-       /* background: rgba(255,255,255,.8) !important; */
-       color: #000 !important;
-     }
+.sex-ed .breadcrumb.fixed,
+.sex-ed .breadcrumb.fixed::before,
+.sex-ed .breadcrumb.fixed a,
+.sex-ed .breadcrumb.fixed a:hover {
+  /* background: rgba(255,255,255,.8) !important; */
+  color: #000 !important;
+}
 
 
-     .sex-ed .breadcrumb,
-     .sex-ed .breadcrumb a,
-     .sex-ed .text-on-bg,
-     .sex-ed .breadcrumb a:hover {
-         color: var(--sex-ed-text) !important;
-         /* text-shadow: 2px 2px 0px var(--sex-ed-link); */
-     }
+.sex-ed .breadcrumb,
+.sex-ed .breadcrumb a,
+.sex-ed .text-on-bg,
+.sex-ed .breadcrumb a:hover {
+  color: var(--sex-ed-text) !important;
+  /* text-shadow: 2px 2px 0px var(--sex-ed-link); */
+}
 
 
-     .sex-ed section#section-outro,
-     #class .intro.sex-ed,
-     .shell.sex-ed .class-details,
-     .sex-ed #class section,
-     .sex-ed #class .entity,
-     .sex-ed .accordion dd.active,
-     .sex-ed section ul,
-     .sex-ed .website-grid
-      {
-       /* background-color: var(--sex-ed-background); */
-       color:  var(--sex-ed-text) !important;
-       border-radius: var(--border-rad);
-       background: none !important;
-     }
+.sex-ed section#section-outro,
+#class .intro.sex-ed,
+.shell.sex-ed .class-details,
+.sex-ed #class section,
+.sex-ed #class .entity,
+.sex-ed .accordion dd.active,
+.sex-ed section ul,
+.sex-ed .website-grid {
+  /* background-color: var(--sex-ed-background); */
+  color: var(--sex-ed-text) !important;
+  border-radius: var(--border-rad);
+  background: none !important;
+}
 
-     .sex-ed #class section,
-     #class .intro.sex-ed {
-       /* padding: var(--body-margin) calc(var(--body-margin)/2); */
-     }
+.sex-ed #class section,
+#class .intro.sex-ed {
+  /* padding: var(--body-margin) calc(var(--body-margin)/2); */
+}
 
-     .sex-ed #class section.stacked,
-     .sex-ed .section-testimonials,
-     .sex-ed .section-testimonials p
-      {
-       background: none !important;
-       padding: 0px !important
-     }
+.sex-ed #class section.stacked,
+.sex-ed .section-testimonials,
+.sex-ed .section-testimonials p {
+  background: none !important;
+  padding: 0px !important
+}
 
 
 
@@ -2691,133 +2667,130 @@ background-size: cover;
 #tag.networked-peformace,
 .networked-performance.featured.session,
 .shell .networked-performance,
-.networked-performance.featured  {
-  background-color: var(--networked-performance-background)  !important;
+.networked-performance.featured {
+  background-color: var(--networked-performance-background) !important;
   color: var(--networked-performance-text);
   box-sizing: border-box;
   border-color: var(--networked-performance-text);
 }
 
 
-      .networked-performance p,
-      .networked-performance p a,
-      .networked-performance a,
-      .networked-performance.featured h4,
-      .networked-performance h4 a,
-      .networked-performance .intro a,
-      .networked-performance p.large a,
-      .networked-performance p a:hover,
-      .networked-performance.session.featured,
-      .networked-performance.session.featured a,
-      .networked-performance.featured h4.type a,
-      .sfpc .networked-performance a
-      {
-        color: var(--networked-performance-text) !important;
-      }
+.networked-performance p,
+.networked-performance p a,
+.networked-performance a,
+.networked-performance.featured h4,
+.networked-performance h4 a,
+.networked-performance .intro a,
+.networked-performance p.large a,
+.networked-performance p a:hover,
+.networked-performance.session.featured,
+.networked-performance.session.featured a,
+.networked-performance.featured h4.type a,
+.sfpc .networked-performance a {
+  color: var(--networked-performance-text) !important;
+}
 
-      .networked-performance .class-details img {
-        margin-bottom: 0px;
-      }
+.networked-performance .class-details img {
+  margin-bottom: 0px;
+}
 
-      .networked-performance h4 a:hover,
-      .networked-performance .intro a,
-      .networked-performance p.large a:hover,
-      .networked-performance.featured:hover h6,
-      .networked-performance.featured:hover .title,
-      .networked-performance .details a:hover,
-      .networked-performance.featured .title:hover,
-      .networked-performance p a:hover,
-      .networked-performance h4 a:hover,
-      .networked-performance section .grid-2 ul li::before,
-      .networked-performance .chars,
-      .networked-performance p a:hover,
-      .networked-performance a:hover,
-      .networked-performance h4 a:hover,
-      .networked-performance .intro a:hover,
-      .networked-performance .details a:hover,
-      .networked-performance .entity:hover .accordion dt h3:after,
-      .networked-performance .accordion dt h3:after,
-      .networked-performance .expanded
-      {
-          color: var(--networked-performance-link) !important;
-      }
+.networked-performance h4 a:hover,
+.networked-performance .intro a,
+.networked-performance p.large a:hover,
+.networked-performance.featured:hover h6,
+.networked-performance.featured:hover .title,
+.networked-performance .details a:hover,
+.networked-performance.featured .title:hover,
+.networked-performance p a:hover,
+.networked-performance h4 a:hover,
+.networked-performance section .grid-2 ul li::before,
+.networked-performance .chars,
+.networked-performance p a:hover,
+.networked-performance a:hover,
+.networked-performance h4 a:hover,
+.networked-performance .intro a:hover,
+.networked-performance .details a:hover,
+.networked-performance .entity:hover .accordion dt h3:after,
+.networked-performance .accordion dt h3:after,
+.networked-performance .expanded {
+  color: var(--networked-performance-link) !important;
+}
 
-      .networked-performance #cost,
-      .networked-performance .fixed-apply,
-      .networked-performance .fixed-support {
-          color: var(--networked-performance-background) !important;
-          background: var(--networked-performance-link) !important;
-      }
+.networked-performance #cost,
+.networked-performance .fixed-apply,
+.networked-performance .fixed-support {
+  color: var(--networked-performance-background) !important;
+  background: var(--networked-performance-link) !important;
+}
 
-      .networked-performance span#cost {
-        background: var(--networked-performance-link) !important;
-      }
+.networked-performance span#cost {
+  background: var(--networked-performance-link) !important;
+}
 
 
-      .networked-performance .fixed-apply:hover {
-        color: #000 !important;
-        background: rgba(255,255,255,.8) !important;
-      }
+.networked-performance .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .networked-performance .block-text {
-        background-color: var(--networked-performance-background);
-      }
+.networked-performance .block-text {
+  background-color: var(--networked-performance-background);
+}
 
 
 
 
 
-      .networked-performance.grid-inner, .networked-performance .grid-inner {
-        border: 2px dotted var(--networked-performance-text) !important;
-        color: var(--networked-performance-link) !important;
-      }
+.networked-performance.grid-inner,
+.networked-performance .grid-inner {
+  border: 2px dotted var(--networked-performance-text) !important;
+  color: var(--networked-performance-link) !important;
+}
 
-      .networked-performance #class .entity,
-      .networked-performance.website-grid .grid-2 {
-        border-color: var(--networked-performance-text);
-      }
+.networked-performance #class .entity,
+.networked-performance.website-grid .grid-2 {
+  border-color: var(--networked-performance-text);
+}
 
-      .networked-performance #class .entity:hover {
-        border-color: var(--networked-performance-link);
-      }
+.networked-performance #class .entity:hover {
+  border-color: var(--networked-performance-link);
+}
 
-      .networked-performance .website-grid .grid-2 p.large {
-        text-shadow: 3px 3px var(--networked-performance-background) !important;
-      }
-
-
-      .networked-performance select#allSections:hover,
-      .networked-performance .loader-content p::after,
-      .networked-performance span#cost
-      {
-        background: var(--networked-performance-link) !important;
-        color: var(--networked-performance-background) !important;
-      }
+.networked-performance .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--networked-performance-background) !important;
+}
 
 
-      .networked-performance .breadcrumb.fixed {
-        background: rgba(255,255,255,.8) !important;
-
-        }
-
-        .networked-performance .breadcrumb.fixed,
-      .networked-performance .breadcrumb.fixed::before,
-      .networked-performance .breadcrumb.fixed a,
-      .networked-performance .breadcrumb.fixed a:hover {
-        color: #000 !important;
-        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
-        background: none;
-      }
+.networked-performance select#allSections:hover,
+.networked-performance .loader-content p::after,
+.networked-performance span#cost {
+  background: var(--networked-performance-link) !important;
+  color: var(--networked-performance-background) !important;
+}
 
 
-      .networked-performance .breadcrumb,
-      .networked-performance .breadcrumb a,
-      .networked-performance .text-on-bg,
-      .networked-performance .breadcrumb a:hover
-      {
-          color: var(--networked-performance-text-on-bg) !important;
-          text-shadow: 2px 2px 0px var(--networked-performance-special-text);
-      }
+.networked-performance .breadcrumb.fixed {
+  background: rgba(255, 255, 255, .8) !important;
+
+}
+
+.networked-performance .breadcrumb.fixed,
+.networked-performance .breadcrumb.fixed::before,
+.networked-performance .breadcrumb.fixed a,
+.networked-performance .breadcrumb.fixed a:hover {
+  color: #000 !important;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .8) !important;
+  background: none;
+}
+
+
+.networked-performance .breadcrumb,
+.networked-performance .breadcrumb a,
+.networked-performance .text-on-bg,
+.networked-performance .breadcrumb a:hover {
+  color: var(--networked-performance-text-on-bg) !important;
+  text-shadow: 2px 2px 0px var(--networked-performance-special-text);
+}
 
 
 
@@ -2825,43 +2798,41 @@ background-size: cover;
 
 
 
-      .networked-performance section#section-outro,
-      #class .intro.networked-performance,
-      .shell.networked-performance .class-details,
-      .networked-performance #class section,
-      .networked-performance #class .entity,
-      .networked-performance .accordion dd.active,
-      .networked-performance section ul,
-      .networked-performance .website-grid
-       {
-        background-color: var(--networked-performance-background);
-        color:  var(--networked-performance-text) !important;
-        border-radius: var(--border-rad);
-      }
+.networked-performance section#section-outro,
+#class .intro.networked-performance,
+.shell.networked-performance .class-details,
+.networked-performance #class section,
+.networked-performance #class .entity,
+.networked-performance .accordion dd.active,
+.networked-performance section ul,
+.networked-performance .website-grid {
+  background-color: var(--networked-performance-background);
+  color: var(--networked-performance-text) !important;
+  border-radius: var(--border-rad);
+}
 
-      .networked-performance #class section,
-      #class .intro.networked-performance {
-        padding: var(--body-margin) calc(var(--body-margin)/2);
-      }
+.networked-performance #class section,
+#class .intro.networked-performance {
+  padding: var(--body-margin) calc(var(--body-margin)/2);
+}
 
-      .networked-performance #class section.stacked,
-      .networked-performance .section-testimonials,
-      .networked-performance .section-testimonials p
-       {
-        background: none !important;
-        padding: 0px !important
-      }
+.networked-performance #class section.stacked,
+.networked-performance .section-testimonials,
+.networked-performance .section-testimonials p {
+  background: none !important;
+  padding: 0px !important
+}
 
-      .networked-performance .break {
-        border: 0px !important;
-        margin-bottom: 0px !important;
-        border-color: var(--networked-performance-text);
-      }
+.networked-performance .break {
+  border: 0px !important;
+  margin-bottom: 0px !important;
+  border-color: var(--networked-performance-text);
+}
 
-      .shell.networked-performance {
-        background-image: url('images/sessions/networked-performance/bg.jpg');
-        background-size: cover;
-      }
+.shell.networked-performance {
+  background-image: url('images/sessions/networked-performance/bg.jpg');
+  background-size: cover;
+}
 
 
 /* /////////// end NETWORKED PERFORMANCE  ///////////////////////////////*/
@@ -2880,8 +2851,8 @@ background-size: cover;
 .summer-22.featured.session,
 .shell .summer-22,
 .summer-22.featured,
-#tag.summer-22  {
-  background-color: var(--summer-22-background)  !important;
+#tag.summer-22 {
+  background-color: var(--summer-22-background) !important;
   color: var(--summer-22-text) !important;
   box-sizing: border-box !important;
   /* border-color: var(--summer-22-text) !important; */
@@ -2889,153 +2860,151 @@ background-size: cover;
 }
 
 
-      .summer-22 p,
-      .summer-22 p a,
-      .summer-22 a,
-      .summer-22.featured h4,
-      .summer-22 h4 a,
-      .summer-22 .intro a,
-      .summer-22 p.large a,
-      .summer-22 p a:hover,
-      .summer-22.session.featured,
-      .summer-22.session.featured a,
-      .summer-22.featured h4.type a,
-      .sfpc .summer-22 a
-      {
-        color: var(--summer-22-text) !important;
-      }
+.summer-22 p,
+.summer-22 p a,
+.summer-22 a,
+.summer-22.featured h4,
+.summer-22 h4 a,
+.summer-22 .intro a,
+.summer-22 p.large a,
+.summer-22 p a:hover,
+.summer-22.session.featured,
+.summer-22.session.featured a,
+.summer-22.featured h4.type a,
+.sfpc .summer-22 a {
+  color: var(--summer-22-text) !important;
+}
 
-      .summer-22 h4 a:hover,
-      .summer-22 .intro a,
-      .summer-22 p.large a:hover,
-      .summer-22.featured:hover h6,
-      .summer-22.featured:hover .title,
-      .summer-22 .details a:hover,
-      .summer-22.featured .title:hover,
-      .summer-22 p a:hover,
-      .summer-22 h4 a:hover,
-      .summer-22 section .grid-2 ul li::before,
-      .summer-22 .chars,
-      .summer-22 p a:hover,
-      .summer-22 a:hover,
-      .summer-22 h4 a:hover,
-      .summer-22 .intro a:hover,
-      .summer-22 .details a:hover,
-      .summer-22 .entity:hover .accordion dt h3:after,
-      .summer-22 .accordion dt h3:after,
-      .summer-22 .expanded{
-          color: var(--summer-22-link) !important;
-      }
+.summer-22 h4 a:hover,
+.summer-22 .intro a,
+.summer-22 p.large a:hover,
+.summer-22.featured:hover h6,
+.summer-22.featured:hover .title,
+.summer-22 .details a:hover,
+.summer-22.featured .title:hover,
+.summer-22 p a:hover,
+.summer-22 h4 a:hover,
+.summer-22 section .grid-2 ul li::before,
+.summer-22 .chars,
+.summer-22 p a:hover,
+.summer-22 a:hover,
+.summer-22 h4 a:hover,
+.summer-22 .intro a:hover,
+.summer-22 .details a:hover,
+.summer-22 .entity:hover .accordion dt h3:after,
+.summer-22 .accordion dt h3:after,
+.summer-22 .expanded {
+  color: var(--summer-22-link) !important;
+}
 
-      .summer-22 #cost,
-      .summer-22 .fixed-apply,
-      .summer-22 .fixed-support {
-          color: var(--summer-22-background) !important;
-          background: var(--summer-22-link) !important;
-      }
+.summer-22 #cost,
+.summer-22 .fixed-apply,
+.summer-22 .fixed-support {
+  color: var(--summer-22-background) !important;
+  background: var(--summer-22-link) !important;
+}
 
-      .summer-22 span#cost {
-        background: var(--summer-22-link) !important;
-      }
-
-
-      .summer-22 .fixed-apply:hover {
-        color: #000 !important;
-        background: rgba(255,255,255,.8) !important;
-      }
-
-      .summer-22 .block-text {
-        background-color: var(--summer-22-background);
-        color: var(--summer-22-link);
-      }
+.summer-22 span#cost {
+  background: var(--summer-22-link) !important;
+}
 
 
+.summer-22 .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .summer-22.grid-inner, .summer-22 .grid-inner {
-        border: 2px dotted var(--summer-22-text) !important;
-        color: var(--summer-22-link) !important;
-      }
-
-      .summer-22 #class .entity,
-      .summer-22.website-grid .grid-2 {
-        border-color: var(--summer-22-text);
-      }
-
-      .summer-22 #class .entity:hover {
-        border-color: var(--summer-22-link);
-      }
-
-      .summer-22 .website-grid .grid-2 p.large {
-        text-shadow: 3px 3px var(--summer-22-background) !important;
-      }
+.summer-22 .block-text {
+  background-color: var(--summer-22-background);
+  color: var(--summer-22-link);
+}
 
 
-      .summer-22 select#allSections:hover,
-      .summer-22 .loader-content p::after,
-      .summer-22 span#cost
-      {
-        background: var(--summer-22-link) !important;
-        color: var(--summer-22-background) !important;
-      }
 
-      .summer-22 .breadcrumb.fixed {
-        background: rgba(255,255,255,.8) !important;
-      }
-      .summer-22 .breadcrumb.fixed,
-      .summer-22 .breadcrumb.fixed::before,
-      .summer-22 .breadcrumb.fixed a,
-      .summer-22 .breadcrumb.fixed a:hover {
-        color: #000 !important;
-        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
-      }
+.summer-22.grid-inner,
+.summer-22 .grid-inner {
+  border: 2px dotted var(--summer-22-text) !important;
+  color: var(--summer-22-link) !important;
+}
 
+.summer-22 #class .entity,
+.summer-22.website-grid .grid-2 {
+  border-color: var(--summer-22-text);
+}
 
-      .summer-22 .breadcrumb,
-      .summer-22 .breadcrumb a,
-      .summer-22 .text-on-bg,
-      .summer-22 .breadcrumb a:hover {
-          color: var(--summer-22-text-on-bg) !important;
-          text-shadow: 2px 2px 0px var(--summer-22-link);
-      }
+.summer-22 #class .entity:hover {
+  border-color: var(--summer-22-link);
+}
+
+.summer-22 .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--summer-22-background) !important;
+}
 
 
-      .summer-22 section#section-outro,
-      #class .intro.summer-22,
-      .shell.summer-22 .class-details,
-      .summer-22 #class section,
-      .summer-22 #class .entity,
-      .summer-22 .accordion dd.active,
-      .summer-22 section ul,
-      .summer-22 .website-grid
-       {
-        background-color: var(--summer-22-background);
-        color:  var(--summer-22-text) !important;
-        border-radius: var(--border-rad);
-      }
+.summer-22 select#allSections:hover,
+.summer-22 .loader-content p::after,
+.summer-22 span#cost {
+  background: var(--summer-22-link) !important;
+  color: var(--summer-22-background) !important;
+}
 
-      .summer-22 #class section,
-      #class .intro.summer-22 {
-        padding: var(--body-margin) calc(var(--body-margin)/2);
-      }
+.summer-22 .breadcrumb.fixed {
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .summer-22 #class section.stacked,
-      .summer-22 .section-testimonials,
-      .summer-22 .section-testimonials p
-       {
-        background: none !important;
-        padding: 0px !important
-      }
+.summer-22 .breadcrumb.fixed,
+.summer-22 .breadcrumb.fixed::before,
+.summer-22 .breadcrumb.fixed a,
+.summer-22 .breadcrumb.fixed a:hover {
+  color: #000 !important;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .8) !important;
+}
 
-      .summer-22 .break {
-        border: 0px !important;
-        margin-bottom: 0px !important;
-        border-color: var(--summer-22-text);
-      }
 
-      .shell.summer-22 {
-        background-image: url('images/sessions/summer-22/bg-b.jpg');
-        background-size: cover;
-      }
+.summer-22 .breadcrumb,
+.summer-22 .breadcrumb a,
+.summer-22 .text-on-bg,
+.summer-22 .breadcrumb a:hover {
+  color: var(--summer-22-text-on-bg) !important;
+  text-shadow: 2px 2px 0px var(--summer-22-link);
+}
+
+
+.summer-22 section#section-outro,
+#class .intro.summer-22,
+.shell.summer-22 .class-details,
+.summer-22 #class section,
+.summer-22 #class .entity,
+.summer-22 .accordion dd.active,
+.summer-22 section ul,
+.summer-22 .website-grid {
+  background-color: var(--summer-22-background);
+  color: var(--summer-22-text) !important;
+  border-radius: var(--border-rad);
+}
+
+.summer-22 #class section,
+#class .intro.summer-22 {
+  padding: var(--body-margin) calc(var(--body-margin)/2);
+}
+
+.summer-22 #class section.stacked,
+.summer-22 .section-testimonials,
+.summer-22 .section-testimonials p {
+  background: none !important;
+  padding: 0px !important
+}
+
+.summer-22 .break {
+  border: 0px !important;
+  margin-bottom: 0px !important;
+  border-color: var(--summer-22-text);
+}
+
+.shell.summer-22 {
+  background-image: url('images/sessions/summer-22/bg-b.jpg');
+  background-size: cover;
+}
 
 
 /* /////////// end SUMMER 22  ///////////////////////////////*/
@@ -3053,147 +3022,143 @@ background-size: cover;
 .spring-22.featured.session,
 .shell .spring-22,
 .spring-22.featured,
-#tag.spring-22  {
-  background-color: var(--spring-22-background)  !important;
+#tag.spring-22 {
+  background-color: var(--spring-22-background) !important;
   color: var(--spring-22-text);
   box-sizing: border-box;
   border-color: var(--spring-22-text);
 }
 
 
-      .spring-22 p,
-      .spring-22 p a,
-      .spring-22 a,
-      .spring-22.featured h4,
-      .spring-22 h4 a,
-      .spring-22 .intro a,
-      .spring-22 p.large a,
-      .spring-22 p a:hover,
-      .spring-22.session.featured,
-      .spring-22.session.featured a
-      {
-        color: var(--spring-22-text) !important;
-      }
+.spring-22 p,
+.spring-22 p a,
+.spring-22 a,
+.spring-22.featured h4,
+.spring-22 h4 a,
+.spring-22 .intro a,
+.spring-22 p.large a,
+.spring-22 p a:hover,
+.spring-22.session.featured,
+.spring-22.session.featured a {
+  color: var(--spring-22-text) !important;
+}
 
-      .spring-22 h4 a:hover,
-      .spring-22 .intro a,
-      .spring-22 p.large a:hover,
-      .spring-22.featured:hover h6,
-      .spring-22.featured:hover .title,
-      .spring-22.featured .title:hover,
-      .spring-22 p a:hover,
-      .spring-22 h4 a:hover,
-      .spring-22 section .grid-2 ul li::before,
-      .spring-22 .chars,
-      .spring-22 p a:hover,
-      .spring-22 a:hover,
-      .spring-22 h4 a:hover,
-      .spring-22 .intro a:hover,
-      .spring-22 .details a:hover,
-      .spring-22 .entity:hover .accordion dt h3:after,
-      .spring-22 .accordion dt h3:after,
-      .spring-22 .expanded
-      {
-          color: var(--spring-22-link) !important;
-      }
+.spring-22 h4 a:hover,
+.spring-22 .intro a,
+.spring-22 p.large a:hover,
+.spring-22.featured:hover h6,
+.spring-22.featured:hover .title,
+.spring-22.featured .title:hover,
+.spring-22 p a:hover,
+.spring-22 h4 a:hover,
+.spring-22 section .grid-2 ul li::before,
+.spring-22 .chars,
+.spring-22 p a:hover,
+.spring-22 a:hover,
+.spring-22 h4 a:hover,
+.spring-22 .intro a:hover,
+.spring-22 .details a:hover,
+.spring-22 .entity:hover .accordion dt h3:after,
+.spring-22 .accordion dt h3:after,
+.spring-22 .expanded {
+  color: var(--spring-22-link) !important;
+}
 
-      .spring-22 #cost,
-      .spring-22 .fixed-apply,
-      .spring-22 .fixed-support {
-          color: var(--spring-22-background) !important;
-          background: var(--spring-22-link) !important;
-      }
+.spring-22 #cost,
+.spring-22 .fixed-apply,
+.spring-22 .fixed-support {
+  color: var(--spring-22-background) !important;
+  background: var(--spring-22-link) !important;
+}
 
-      .spring-22 .fixed-apply:hover {
-        color: #000 !important;
-        background: rgba(255,255,255,.8) !important;
-      }
+.spring-22 .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
 
-      .spring-22 .block-text {
-        background-color: var(--spring-22-background);
-        color: var(--spring-22-link);
-      }
+.spring-22 .block-text {
+  background-color: var(--spring-22-background);
+  color: var(--spring-22-link);
+}
 
 
-      .spring-22 .break {
-        border-bottom: 1px dashed var(--spring-22-text) !important;
-      }
+.spring-22 .break {
+  border-bottom: 1px dashed var(--spring-22-text) !important;
+}
 
-      .spring-22 .grid-inner, .spring-22.grid-inner {
-        border: 2px dotted var(--spring-22-text) !important;
-        color: var(--spring-22-link) !important;
-      }
+.spring-22 .grid-inner,
+.spring-22.grid-inner {
+  border: 2px dotted var(--spring-22-text) !important;
+  color: var(--spring-22-link) !important;
+}
 
-      .spring-22 #class .entity,
-      .spring-22.website-grid .grid-2 {
-        border-color: var(--spring-22-text);
-      }
+.spring-22 #class .entity,
+.spring-22.website-grid .grid-2 {
+  border-color: var(--spring-22-text);
+}
 
-      .spring-22 #class .entity:hover {
-        border-color: var(--spring-22-link);
-      }
+.spring-22 #class .entity:hover {
+  border-color: var(--spring-22-link);
+}
 
-      .spring-22 .website-grid .grid-2 p.large {
-        text-shadow: 3px 3px var(--spring-22-background) !important;
-      }
-
-
-      .spring-22 .breadcrumb.fixed,
-      .spring-22 .breadcrumb.fixed::before,
-      .spring-22 .breadcrumb.fixed a,
-      .spring-22 .breadcrumb.fixed a:hover {
-        background: rgba(255,255,255,.8) !important;
-        color: #000 !important;
-      }
-
-      .spring-22 select#allSections:hover,
-      .spring-22 .loader-content p::after,
-      .spring-22 span#cost
-      {
-        background: var(--spring-22-link) !important;
-        color: var(--spring-22-background) !important;
-      }
-
-      .spring-22 .breadcrumb,
-      .spring-22 .breadcrumb a,
-      .spring-22 .text-on-bg,
-      .spring-22 .breadcrumb a:hover {
-          color: var(--spring-22-text-on-bg) !important;
-      }
+.spring-22 .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--spring-22-background) !important;
+}
 
 
-      .spring-22 section#section-outro,
-      #class .intro.spring-22,
-      .shell.spring-22 .class-details,
-      .spring-22 #class section,
-      .spring-22 #class .entity,
-      .spring-22 .accordion dd.active,
-      .spring-22 section ul,
-      .spring-22 .website-grid
-       {
-        background-color: var(--spring-22-background);
-        color:  var(--spring-22-text) !important;
-        border-radius: var(--border-rad);
-      }
+.spring-22 .breadcrumb.fixed,
+.spring-22 .breadcrumb.fixed::before,
+.spring-22 .breadcrumb.fixed a,
+.spring-22 .breadcrumb.fixed a:hover {
+  background: rgba(255, 255, 255, .8) !important;
+  color: #000 !important;
+}
 
-      .spring-22 #class section,
-      #class .intro.spring-22 {
-        /* padding: var(--body-margin) calc(var(--body-margin)/2); */
-      }
+.spring-22 select#allSections:hover,
+.spring-22 .loader-content p::after,
+.spring-22 span#cost {
+  background: var(--spring-22-link) !important;
+  color: var(--spring-22-background) !important;
+}
 
-      .spring-22 #class section.stacked,
-      .spring-22 .section-testimonials,
-      .spring-22 .section-testimonials p
-       {
-        background: none !important;
-        padding: 0px !important
-      }
+.spring-22 .breadcrumb,
+.spring-22 .breadcrumb a,
+.spring-22 .text-on-bg,
+.spring-22 .breadcrumb a:hover {
+  color: var(--spring-22-text-on-bg) !important;
+}
 
 
-      .shell.spring-22 {
-        background-image: url('images/sessions/spring-22/bg-b.jpg');
-        background-size: cover;
-      }
+.spring-22 section#section-outro,
+#class .intro.spring-22,
+.shell.spring-22 .class-details,
+.spring-22 #class section,
+.spring-22 #class .entity,
+.spring-22 .accordion dd.active,
+.spring-22 section ul,
+.spring-22 .website-grid {
+  background-color: var(--spring-22-background);
+  color: var(--spring-22-text) !important;
+  border-radius: var(--border-rad);
+}
+
+.spring-22 #class section,
+#class .intro.spring-22 {
+  /* padding: var(--body-margin) calc(var(--body-margin)/2); */
+}
+
+.spring-22 #class section.stacked,
+.spring-22 .section-testimonials,
+.spring-22 .section-testimonials p {
+  background: none !important;
+  padding: 0px !important
+}
+
+
+.shell.spring-22 {
+  background-image: url('images/sessions/spring-22/bg-b.jpg');
+  background-size: cover;
+}
 
 
 /* /////////// end SPRING 22  ///////////////////////////////*/
@@ -3229,7 +3194,9 @@ background-size: cover;
         } */
 
 
-.fallwinter-2122, .fall-21, #tag.fallwinter-2122 {
+.fallwinter-2122,
+.fall-21,
+#tag.fallwinter-2122 {
   background-color: var(--fallwinter-2122-background);
   background-image: url('images/sessions/fallwinter-2122/bg.png');
   background-position: bottom;
@@ -3241,16 +3208,18 @@ background-size: cover;
 }
 
 
-        .fallwinter-2122 a:hover, .fallwinter-2122.featured:hover h2 {
-          color: var(--fallwinter-2122-link) !important;
-        }
+.fallwinter-2122 a:hover,
+.fallwinter-2122.featured:hover h2 {
+  color: var(--fallwinter-2122-link) !important;
+}
 
 
-#class.cocoon  {
+#class.cocoon {
   background: none;
 }
 
-.cocoon, #tag.cocoon {
+.cocoon,
+#tag.cocoon {
   background-color: var(--cocoon-background);
   color: var(--cocoon-text);
   box-sizing: border-box;
@@ -3270,27 +3239,27 @@ background-size: cover;
 
 
 
-        .cocoon a:hover, .cocoon.featured:hover h2  {
-          color: var(--cocoon-link) !important;
-        }
+.cocoon a:hover,
+.cocoon.featured:hover h2 {
+  color: var(--cocoon-link) !important;
+}
 
-        .cocoon.featured h4 a,
-        .cocoon p,
-        .cocoon p a,
-        .cocoon a,
-        .cocoon.featured h4,
-        .cocoon h4 a,
-        .cocoon .intro a,
-        .cocoon p.large a,
-        .cocoon p a:hover,
-        .cocoon.session.featured,
-        .cocoon.session.featured a,
-        .cocoon.featured h4.type a,
-        .sfpc .cocoon a,
-        .sfpc .cocoon h4 a
-         {
-          color: var(--cocoon-text) !important;
-        }
+.cocoon.featured h4 a,
+.cocoon p,
+.cocoon p a,
+.cocoon a,
+.cocoon.featured h4,
+.cocoon h4 a,
+.cocoon .intro a,
+.cocoon p.large a,
+.cocoon p a:hover,
+.cocoon.session.featured,
+.cocoon.session.featured a,
+.cocoon.featured h4.type a,
+.sfpc .cocoon a,
+.sfpc .cocoon h4 a {
+  color: var(--cocoon-text) !important;
+}
 
 
 .codesocieties-20 {
@@ -3304,189 +3273,187 @@ background-size: cover;
   background-size: 100%;
 }
 
-        .codesocieties-20 a:hover, .codesocieties-20.featured:hover h2 {
-          color: var(--codesocieties-20-link) !important;
-        }
+.codesocieties-20 a:hover,
+.codesocieties-20.featured:hover h2 {
+  color: var(--codesocieties-20-link) !important;
+}
 
 
-        .codesocieties-20.featured h4 a,
-        .codesocieties-20 p,
-        .codesocieties-20 p a,
-        .codesocieties-20 a,
-        .codesocieties-20.featured h4,
-        .codesocieties-20 h4 a,
-        .codesocieties-20 .intro a,
-        .codesocieties-20 p.large a,
-        .codesocieties-20 p a:hover,
-        .codesocieties-20.session.featured,
-        .codesocieties-20.session.featured a,
-        .codesocieties-20.featured h4.type a,
-        .sfpc .codesocieties-20 a,
-        .sfpc .codesocieties-20 h4 a
-         {
-          color: var(--codesocieties-20-text) !important;
-        }
-
-
-
+.codesocieties-20.featured h4 a,
+.codesocieties-20 p,
+.codesocieties-20 p a,
+.codesocieties-20 a,
+.codesocieties-20.featured h4,
+.codesocieties-20 h4 a,
+.codesocieties-20 .intro a,
+.codesocieties-20 p.large a,
+.codesocieties-20 p a:hover,
+.codesocieties-20.session.featured,
+.codesocieties-20.session.featured a,
+.codesocieties-20.featured h4.type a,
+.sfpc .codesocieties-20 a,
+.sfpc .codesocieties-20 h4 a {
+  color: var(--codesocieties-20-text) !important;
+}
 
 
 
 
 
-        .summer-20,
-        .summer-20.featured.session,
-        .shell .summer-20,
-        .summer-20.featured  {
-          background-color: var(--background)  !important;
-          color: var(--text-color);
-          box-sizing: border-box;
-          border-color: var(--text-color);
-        }
-
-
-              .summer-20 p,
-              .summer-20 p a,
-              .summer-20 a,
-              .summer-20.featured h4,
-              .summer-20 h4 a,
-              .summer-20 .intro a,
-              .summer-20 p.large a,
-              .summer-20 p a:hover,
-              .summer-20.session.featured,
-              .summer-20.session.featured a
-              {
-                color: var(--text-color) !important;
-              }
-
-              .summer-20 h4 a:hover,
-              /* .summer-20 .intro a, */
-              .summer-20 p.large a:hover,
-              .summer-20.featured:hover h6,
-              .summer-20.featured:hover .title,
-              .summer-20 .details a:hover,
-              .summer-20.featured .title:hover,
-              .summer-20 p a:hover,
-              .summer-20 h4 a:hover,
-              .summer-20 section .grid-2 ul li::before,
-              .summer-20 .chars,
-              .summer-20 p a:hover,
-              .summer-20 a:hover,
-              .summer-20 h4 a:hover,
-              .summer-20 .intro a:hover,
-              .summer-20 .details a:hover,
-              .summer-20 .entity:hover .accordion dt h3:after,
-              .summer-20 .accordion dt h3:after,
-              .summer-20 .expanded{
-                  color: var(--text-link) !important;
-              }
-
-              .summer-20 #cost,
-              .summer-20 .fixed-apply,
-              .summer-20 .fixed-support {
-                  color: var(--background) !important;
-              }
-
-              .summer-20 .fixed-apply:hover {
-                color: #000 !important;
-                background: rgba(255,255,255,.8) !important;
-              }
-
-              .summer-20 .block-text {
-                background-color: var(--background);
-                color: var(--text-link);
-              }
-
-
-              .summer-20 .break {
-                border-bottom: 1px dashed var(--text-color);
-              }
-
-              .summer-20 .grid-inner, .summer-20.grid-inner {
-                border: 2px dotted var(--text-color) ;
-                color: var(--text-link) !important;
-              }
-
-              .summer-20 #class .entity,
-              .summer-20.website-grid .grid-2 {
-                border-color: var(--text-color);
-              }
-
-              .summer-20 #class .entity:hover {
-                border-color: var(--text-link);
-              }
-
-              .summer-20 .website-grid .grid-2 p.large {
-                text-shadow: 3px 3px var(--background) !important;
-              }
-
-              .summer-20 select#allSections:hover,
-              .summer-20 .loader-content p::after,
-              .summer-20 span#cost
-              {
-                background: var(--text-link) !important;
-                color: var(--background) !important;
-              }
-
-
-              .summer-20 .breadcrumb.fixed {
-                  background: rgba(255,255,255,.8) !important;
-              }
-
-              .summer-20 .breadcrumb.fixed,
-              .summer-20 .breadcrumb.fixed::before,
-              .summer-20 .breadcrumb.fixed a,
-              .summer-20 .breadcrumb.fixed a:hover {
-                /* background: rgba(255,255,255,.8) !important; */
-                color: #000 !important;
-              }
-
-
-              .summer-20 .breadcrumb,
-              .summer-20 .breadcrumb a,
-              .summer-20 .text-on-bg,
-              .summer-20 .breadcrumb a:hover {
-                  color: var(--text-color) !important;
-                  /* text-shadow: 2px 2px 0px var(--text-link); */
-              }
-
-
-              .summer-20 section#section-outro,
-              #class .intro.summer-20,
-              .shell.summer-20 .class-details,
-              .summer-20 #class section,
-              .summer-20 #class .entity,
-              .summer-20 .accordion dd.active,
-              .summer-20 section ul,
-              .summer-20 .website-grid
-               {
-                background-color: var(--background);
-                color:  var(--text-color) !important;
-                border-radius: var(--border-rad);
-              }
-
-              .summer-20 #class section,
-              #class .intro.summer-20 {
-                /* padding: var(--body-margin) calc(var(--body-margin)/2); */
-              }
-
-              .summer-20 #class section.stacked,
-              .summer-20 .section-testimonials,
-              .summer-20 .section-testimonials p
-               {
-                background: none !important;
-                padding: 0px !important
-              }
-
-
-              .shell.summer-20 {
-                background: var(--background);
-              }
-
-              .summer-20.test, .summer-20.block-text {
-                border-color: var(--text-color);
-              }
 
 
 
-        /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+.summer-20,
+.summer-20.featured.session,
+.shell .summer-20,
+.summer-20.featured {
+  background-color: var(--background) !important;
+  color: var(--text-color);
+  box-sizing: border-box;
+  border-color: var(--text-color);
+}
+
+
+.summer-20 p,
+.summer-20 p a,
+.summer-20 a,
+.summer-20.featured h4,
+.summer-20 h4 a,
+.summer-20 .intro a,
+.summer-20 p.large a,
+.summer-20 p a:hover,
+.summer-20.session.featured,
+.summer-20.session.featured a {
+  color: var(--text-color) !important;
+}
+
+.summer-20 h4 a:hover,
+/* .summer-20 .intro a, */
+.summer-20 p.large a:hover,
+.summer-20.featured:hover h6,
+.summer-20.featured:hover .title,
+.summer-20 .details a:hover,
+.summer-20.featured .title:hover,
+.summer-20 p a:hover,
+.summer-20 h4 a:hover,
+.summer-20 section .grid-2 ul li::before,
+.summer-20 .chars,
+.summer-20 p a:hover,
+.summer-20 a:hover,
+.summer-20 h4 a:hover,
+.summer-20 .intro a:hover,
+.summer-20 .details a:hover,
+.summer-20 .entity:hover .accordion dt h3:after,
+.summer-20 .accordion dt h3:after,
+.summer-20 .expanded {
+  color: var(--text-link) !important;
+}
+
+.summer-20 #cost,
+.summer-20 .fixed-apply,
+.summer-20 .fixed-support {
+  color: var(--background) !important;
+}
+
+.summer-20 .fixed-apply:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
+
+.summer-20 .block-text {
+  background-color: var(--background);
+  color: var(--text-link);
+}
+
+
+.summer-20 .break {
+  border-bottom: 1px dashed var(--text-color);
+}
+
+.summer-20 .grid-inner,
+.summer-20.grid-inner {
+  border: 2px dotted var(--text-color);
+  color: var(--text-link) !important;
+}
+
+.summer-20 #class .entity,
+.summer-20.website-grid .grid-2 {
+  border-color: var(--text-color);
+}
+
+.summer-20 #class .entity:hover {
+  border-color: var(--text-link);
+}
+
+.summer-20 .website-grid .grid-2 p.large {
+  text-shadow: 3px 3px var(--background) !important;
+}
+
+.summer-20 select#allSections:hover,
+.summer-20 .loader-content p::after,
+.summer-20 span#cost {
+  background: var(--text-link) !important;
+  color: var(--background) !important;
+}
+
+
+.summer-20 .breadcrumb.fixed {
+  background: rgba(255, 255, 255, .8) !important;
+}
+
+.summer-20 .breadcrumb.fixed,
+.summer-20 .breadcrumb.fixed::before,
+.summer-20 .breadcrumb.fixed a,
+.summer-20 .breadcrumb.fixed a:hover {
+  /* background: rgba(255,255,255,.8) !important; */
+  color: #000 !important;
+}
+
+
+.summer-20 .breadcrumb,
+.summer-20 .breadcrumb a,
+.summer-20 .text-on-bg,
+.summer-20 .breadcrumb a:hover {
+  color: var(--text-color) !important;
+  /* text-shadow: 2px 2px 0px var(--text-link); */
+}
+
+
+.summer-20 section#section-outro,
+#class .intro.summer-20,
+.shell.summer-20 .class-details,
+.summer-20 #class section,
+.summer-20 #class .entity,
+.summer-20 .accordion dd.active,
+.summer-20 section ul,
+.summer-20 .website-grid {
+  background-color: var(--background);
+  color: var(--text-color) !important;
+  border-radius: var(--border-rad);
+}
+
+.summer-20 #class section,
+#class .intro.summer-20 {
+  /* padding: var(--body-margin) calc(var(--body-margin)/2); */
+}
+
+.summer-20 #class section.stacked,
+.summer-20 .section-testimonials,
+.summer-20 .section-testimonials p {
+  background: none !important;
+  padding: 0px !important
+}
+
+
+.shell.summer-20 {
+  background: var(--background);
+}
+
+.summer-20.test,
+.summer-20.block-text {
+  border-color: var(--text-color);
+}
+
+
+
+/* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/

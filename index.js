@@ -1370,11 +1370,13 @@ async function prepareClassData(classData, classSlug){
   const foundItem = teachers[foundIdx]
   teachers.splice(foundIdx, 1)
   teachers.unshift(foundItem)
-  const foundOrgIdx = organizers.findIndex(el => el.Name == response['Session Organizers'][0])
-  const foundOrgItem = organizers[foundOrgIdx]
-  organizers.splice(foundOrgIdx, 1)
-  organizers.unshift(foundOrgItem)
-  console.log(organizers)
+  if(organizers.length > 1){
+    const foundOrgIdx = organizers.findIndex(el => el.Name == response['Session Organizers'][0])
+    const foundOrgItem = organizers[foundOrgIdx]
+    organizers.splice(foundOrgIdx, 1)
+    organizers.unshift(foundOrgItem)
+    console.log(organizers)
+  }
   response.guests = cleanPersonData(guests);
   response.teachers = cleanPersonData(teachers);
   response.organizers = cleanPersonData(organizers);
@@ -1963,6 +1965,7 @@ function parseClassBlock(classInfo){
 
 
 function cleanPersonData(personArray){
+  if(personArray.length == 0) return personArray
   for(let i = 0; i < personArray.length; i++){
     personArray[i].Website = personArray[i].Website && personArray[i].Website.indexOf("http") < 0 ?  "http://"+personArray[i].Website : personArray[i].Website
     personArray[i].Twitter = personArray[i].Twitter && personArray[i].Twitter[0] == "@" ? personArray[i].Twitter.slice(1) : personArray[i].Twitter
