@@ -313,7 +313,7 @@ select#allSections {
   color: var(--spring-24-text);
   box-sizing: border-box;
   border-color: var(--spring-24-text);
-  background-image: url('images/sessions/spring-24/classes/sex-ed/WEB_BACKGROUND_.png');
+  background-image: url('images/sessions/spring-24/bg.jpg');
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
@@ -326,7 +326,7 @@ select#allSections {
 
 
 .shell.spring-24 {
-  background-image: url('images/sessions/spring-24/classes/sex-ed/WEB_BACKGROUND_.png');
+  background-image: url('images/sessions/spring-24/bg.jpg');
   /* background-position: bottom; */
   /* background-repeat: no-repeat;
        background-size: cover; */
@@ -509,7 +509,7 @@ select#allSections {
 }
 
 .shell.spring-24 {
-  background-image: url('images/sessions/spring-24/classes/sex-ed/WEB_BACKGROUND_.png');
+  background-image: url('images/sessions/spring-24/bg.jpg');
   background-size: 100%;
   background-position: bottom;
   background-color: #fff;
