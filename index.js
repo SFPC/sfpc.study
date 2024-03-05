@@ -1321,7 +1321,6 @@ async function prepareClassData(classData, classSlug){
   const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
   const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
   let response = parseClassData(classData)
-  console.log(response["Teacher Names"])
   response.pageContent =  parsePageContentIntoKeyedObject(webContent);
   let peopleQuery = []
   response["Teacher Names"]?.forEach((personName)=> peopleQuery.push({property:"Name", "title": { "contains": personName } }))
@@ -1330,7 +1329,6 @@ async function prepareClassData(classData, classSlug){
   const people = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
       "or": peopleQuery,
   })
-  console.log(people[0].properties.Name)
   let organizers = []
   let teachers = []
   let guests = []
@@ -1367,11 +1365,16 @@ async function prepareClassData(classData, classSlug){
         organizers.unshift(personData)
       }
   })
-  //list main teacher first
+  //list main teacher & organizer first
   const foundIdx = teachers.findIndex(el => el.Name == response['Teacher Names'][0])
   const foundItem = teachers[foundIdx]
   teachers.splice(foundIdx, 1)
   teachers.unshift(foundItem)
+  const foundOrgIdx = organizers.findIndex(el => el.Name == response['Session Organizers'][0])
+  const foundOrgItem = organizers[foundOrgIdx]
+  organizers.splice(foundOrgIdx, 1)
+  organizers.unshift(foundOrgItem)
+  console.log(organizers)
   response.guests = cleanPersonData(guests);
   response.teachers = cleanPersonData(teachers);
   response.organizers = cleanPersonData(organizers);
