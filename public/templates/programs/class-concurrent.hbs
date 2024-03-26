@@ -152,12 +152,14 @@
           </div>
           {{/if}}
 
+          {{#if organizers}}
           <div class="details">
             <div class="labels">Organizers</div>
             <div class="labels-info" id="organizers-list">{{#each organizers}}{{this.Name}}{{#unless
               @last}}, {{/unless}}{{/each}}
             </div>
           </div>
+          {{/if}}
 
           <div class="details">
             <div class="labels">Date </div>

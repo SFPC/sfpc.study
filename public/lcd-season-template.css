@@ -1,0 +1,218 @@
+
+
+/* /////////// start season-year  ///////////////////////////////*/
+
+.season-year,
+.season-year.featured.session,
+.season-year.featured  {
+ /* background-color: var(--sex-ed-background)  !important; */
+ color: var(--season-year-text);
+ box-sizing: border-box;
+ border-color: var(--season-year-text);
+ background-image: url('images/sessions/season-year/bg.jpg');
+ background-position: center;
+ background-repeat: repeat;
+ background-size: cover;
+}
+
+.season-year.featured:hover {
+  /* background-size: 200%; */
+}
+
+
+
+     .shell.season-year {
+       background-image:url('images/sessions/season-year/bg.jpg');
+       /* background-position: bottom; */
+       /* background-repeat: no-repeat;
+       background-size: cover; */
+       background-position: top left;
+       background-repeat: repeat;
+       background-size: cover;
+     }
+
+
+
+.season-year,
+.season-year.featured.session,
+.shell .season-year,
+.season-year.featured  {
+  /* background-color: var(--season-year-background)  !important; */
+  color: var(--season-year-text);
+  box-sizing: border-box;
+  border-color: var(--season-year-text);
+  text-shadow: none !important;
+}
+
+
+      .season-year p,
+      .season-year p a,
+      .season-year a,
+      .season-year.featured h4,
+      .season-year h4 a,
+      .season-year .intro a,
+      .season-year p.large a,
+      .season-year p a:hover,
+      .season-year.session.featured,
+      .season-year.session.featured a,
+      .season-year.featured h4.type a,
+      .sfpc .season-year a
+      {
+        color: var(--season-year-text) !important;
+      }
+
+      .season-year h4 a:hover,
+      .season-year .intro a,
+      .season-year p.large a:hover,
+      .season-year.featured:hover h6,
+      .season-year.featured:hover .title,
+      .season-year .details a:hover,
+      .season-year.featured .title:hover,
+      .season-year p a:hover,
+      .season-year h4 a:hover,
+      .season-year section .grid-2 ul li::before,
+      .season-year .chars,
+      .season-year p a:hover,
+      .season-year a:hover,
+      .season-year h4 a:hover,
+      .season-year .intro a:hover,
+      .season-year .details a:hover,
+      .season-year .entity:hover .accordion dt h3:after,
+      .season-year .accordion dt h3:after,
+      .season-year .expanded{
+          color: var(--season-year-link) !important;
+      }
+
+      .season-year #cost,
+      .season-year .fixed-apply,
+      .season-year .fixed-support,
+      .season-year .home-intro span#session-name::after {
+          color: var(--season-year-background) !important;
+          background: var(--season-year-link) !important;
+      }
+
+      .season-year span#cost {
+        background: var(--season-year-link) !important;
+      }
+
+
+      .season-year .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .season-year .block-text {
+        background-color: var(--season-year-background);
+        color: var(--season-year-link);
+      }
+
+
+
+      .season-year.grid-inner, .season-year .grid-inner {
+        border: 2px dotted var(--season-year-text) !important;
+        color: var(--season-year-link) !important;
+      }
+
+      .season-year #class .entity,
+      .season-year.website-grid .grid-2 {
+        border-color: var(--season-year-text);
+      }
+
+      .season-year #class .entity:hover {
+        border-color: var(--season-year-link);
+      }
+
+      .season-year .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--season-year-background) !important;
+      }
+
+
+      .season-year select#allSections:hover,
+      .season-year .loader-content p::after,
+      .season-year span#cost
+      {
+        background: var(--season-year-link) !important;
+        color: var(--season-year-background) !important;
+      }
+
+      .season-year .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .season-year .breadcrumb.fixed,
+      .season-year .breadcrumb.fixed::before,
+      .season-year .breadcrumb.fixed a,
+      .season-year .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .season-year .breadcrumb,
+      .season-year .breadcrumb a,
+      .season-year .text-on-bg,
+      .season-year .breadcrumb a:hover {
+          color: var(--season-year-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--season-year-background);
+      }
+
+
+      .season-year section#section-outro,
+      #class .intro.season-year,
+      .shell.season-year .class-details,
+      .season-year #class section,
+      .season-year #class .entity,
+      .season-year .accordion dd.active,
+      .season-year section ul,
+      .season-year .website-grid
+       {
+        /* background-color: var(--season-year-background); */
+        background: none;
+        color:  var(--season-year-text) !important;
+        border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--season-year-background); */
+
+
+        /* -webkit-text-stroke-width: 1px; */
+          /* -webkit-text-stroke-color: var(--season-year-link); */
+      }
+
+      .season-year.featured .title,
+      .season-year #session-name, #tag.season-year,
+
+    .season-year  #session-name > a
+
+       {
+      /* -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--season-year-link); */
+      }
+
+      .season-year #class section,
+      #class .intro.season-year {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .season-year #class section.stacked,
+      .season-year .section-testimonials,
+      .season-year .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important;
+        /* text-shadow: 2px 2px 0px var(--season-year-background); */
+
+      }
+
+      .season-year .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--season-year-text);
+      }
+
+      .shell.season-year {
+        background-image: url('images/sessions/season-year/bg.jpg');
+        background-size: 100%;
+        background-position: bottom;
+        background-color: #fff;
+      }
+
+
+/* /////////// end sseason-year  ///////////////////////////////*/

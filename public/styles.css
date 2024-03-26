@@ -28,10 +28,24 @@
     --ecpc-special-font: 'Screenfont', sans-serif;
 
 
-        --spring-24-title-font: 'Wonder Type', sans-serif;
-        --spring-24-header-font: 'Wonder Type', sans-serif;
-        --spring-24-body-font: 'Wonder Type', sans-serif;
-        --spring-24-special-font: 'Wonder Type', sans-serif;
+    /* DUPLICATE FOR SEASON, CHANGE SEASON NAME AND ADD TYPE USING @font-face BELOW */
+
+    /* --spring-24-title-font: 'Wonder Type', sans-serif;
+    --spring-24-header-font: 'Wonder Type', sans-serif;
+    --spring-24-body-font: 'Wonder Type', sans-serif;
+    --spring-24-special-font: 'Wonder Type', sans-serif; */
+
+
+    --summer-24-title-font: 'Ball Pill', sans-serif;
+    --summer-24-header-font: 'Ball Pill', sans-serif;
+    --summer-24-body-font: 'Ball Pill', sans-serif;
+    --summer-24-special-font: 'Ball Pill', sans-serif;
+
+
+    --spring-24-title-font: 'Wonder Type', sans-serif;
+    --spring-24-header-font: 'Wonder Type', sans-serif;
+    --spring-24-body-font: 'Wonder Type', sans-serif;
+    --spring-24-special-font: 'Wonder Type', sans-serif;
 
 
     --winter-24-title-font: 'Arial Narrow', sans-serif;
@@ -143,6 +157,13 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 }
 
 
+@font-face {
+    font-family: 'Ball Pill';
+    src:  url('/fonts/BallPill-medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 @font-face {
@@ -306,6 +327,45 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         color: var(--ecpc-text);
         }
 
+
+
+
+
+/* DUPLICATE THIS AND CREATE TYPE STYLE FOR SEASON */
+/*
+        .spring-24.featured .title,
+        .spring-24 #session-name, #tag.spring-24 {
+          font-family: var(--spring-24-title-font) !important;
+        }
+
+        #tag.spring-24 {
+        color: var(--spring-24-text);
+        }
+
+        .spring-24.session .title.class{
+        font-size: calc(var(--large-text) * .7) !important;
+        } */
+
+
+
+        .summer-24.featured .title,
+        .summer-24 #session-name, #tag.summer-24 {
+          font-family: var(--summer-24-title-font) !important;
+          text-transform: uppercase;
+        }
+
+        #tag.summer-24 {
+        color: var(--summer-24-text);
+        }
+
+        .summer-24.session .title.class{
+        font-size: calc(var(--large-text) * .7) !important;
+        }
+
+
+
+
+
         .spring-24.featured .title,
         .spring-24 #session-name, #tag.spring-24 {
           font-family: var(--spring-24-title-font) !important;
@@ -317,6 +377,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
       -webkit-text-stroke-color: var(--summer-23-link); */
       /* font-weight: bold !important; */
         }
+
       #tag.spring-24 {
       color: var(--spring-24-text);
       }
@@ -2346,7 +2407,7 @@ span.reference {
 
         .accordion dt h3:after {
           /* content: ' ⤵'; */
-          content: ' ⤵\FE0E';
+          content: ' ↘\FE0E';
             /* color: var(--text-link); */
           font-size: calc(1 * var(--medium-text));
         }
