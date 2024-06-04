@@ -1247,6 +1247,10 @@ app.get("/ecpc/electronic-art", async (req,res) => {
   res.redirect("https://sfpc.notion.site/ECPC-Electronic-Art-Archive-5087537f9932499ea8ddd3daf8c03c50")
 })
 
+app.get("/share/:slug", async (req,res) => {
+  const response = await getDatabaseEntry("a87da8f70f0849108d84d9a2f3bdd0a2", {property:"Name", "title": {"equals":req.params.slug}})
+  res.redirect(response.properties.URL.url)
+})
 
 // app.get("/blog/:slug", async (req,res) => {
 //   //filter by slug here
