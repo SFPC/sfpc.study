@@ -546,101 +546,101 @@ app.get("/about/donors", async (req,res) => {
 
 
 
-// app.get("/store", async (req, res) => {
+app.get("/store", async (req, res) => {
 
 
 
-//   const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
-//     { property: "Name", direction: "descending" },
-//   ]);
-//   console.log(response);
+  const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
+    { property: "Name", direction: "descending" },
+  ]);
+  console.log(response);
 
 
-//     const merch = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [{property:"Name", direction:"ascending"}],
-//        {
-//              "and": [
-//                  {
+    const merch = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [{property:"Name", direction:"ascending"}],
+       {
+             "and": [
+                 {
 
-//                      "property": "Product-Type",
-//                      "multi_select": {
-//                          "contains": "Merch"
-//                      }
-//                  }
-//              ]
-//          }
-//   )
-
-
-//   const productsData = response.map((product) => {
-//     return parseProductData(product);
-//   });
-
-//   const merchData = merch.map((product) => {
-//     return parseProductData(product);
-//   });
-
-//   const shopifyData = await getShopifyProducts();
-
-//   for (const product of productsData) {
-//     const shopifyId = product["Shopify ID"];
-
-//     if (!shopifyId) {
-//       continue;
-//     }
-
-//     const node = shopifyData[`gid://shopify/Product/${shopifyId}`];
-
-//     if (node) {
-//       product.availableForSale = node.availableForSale;
-//       product.totalInventory = node.totalInventory;
-//       product.availableInventory = node.variants.edges.reduce((accum, val) => {
-//         return accum + val.node.quantityAvailable;
-//       }, 0);
-//     }
-//   }
-
-//   console.log(productsData);
-//   res.render("store/storefront", { products: productsData, merch: merchData });
-// });
+                     "property": "Product-Type",
+                     "multi_select": {
+                         "contains": "Merch"
+                     }
+                 }
+             ]
+         }
+  )
 
 
+  const productsData = response.map((product) => {
+    return parseProductData(product);
+  });
 
-// app.get("/store/:slug", async (req, res) => {
-//   //filter by slug here
-//   console.log(req.params.slug);
-//   const response = await getDatabaseEntry(NOTION_STORE_DATABASE_ID, {
-//     property: "Website-Slug",
-//     rich_text: { equals: req.params.slug },
-//   });
-//   console.log(response);
+  const merchData = merch.map((product) => {
+    return parseProductData(product);
+  });
 
-//   if (response) {
-//     const productData = parseProductData(response);
-//     const shopifyId = productData["Shopify ID"];
+  const shopifyData = await getShopifyProducts();
 
-//     if (shopifyId) {
-//       try {
-//         const shopifyData = await getShopifyProduct(shopifyId);
+  for (const product of productsData) {
+    const shopifyId = product["Shopify ID"];
 
-//         if (shopifyData) {
-//           productData.availableForSale = shopifyData.availableForSale;
-//           productData.totalInventory = shopifyData.totalInventory;
-//           productData.availableInventory = shopifyData.variants.edges.reduce(
-//             (accum, val) => {
-//               return accum + val.node.quantityAvailable;
-//             },
-//             0
-//           );
-//         }
-//       } catch (e) {
-//         console.error(e);
-//       }
-//     }
+    if (!shopifyId) {
+      continue;
+    }
 
-//     console.log(productData);
-//     res.render("store/product", productData);
-//   }
-// });
+    const node = shopifyData[`gid://shopify/Product/${shopifyId}`];
+
+    if (node) {
+      product.availableForSale = node.availableForSale;
+      product.totalInventory = node.totalInventory;
+      product.availableInventory = node.variants.edges.reduce((accum, val) => {
+        return accum + val.node.quantityAvailable;
+      }, 0);
+    }
+  }
+
+  console.log(productsData);
+  res.render("store/storefront", { products: productsData, merch: merchData });
+});
+
+
+
+app.get("/store/:slug", async (req, res) => {
+  //filter by slug here
+  console.log(req.params.slug);
+  const response = await getDatabaseEntry(NOTION_STORE_DATABASE_ID, {
+    property: "Website-Slug",
+    rich_text: { equals: req.params.slug },
+  });
+  console.log(response);
+
+  if (response) {
+    const productData = parseProductData(response);
+    const shopifyId = productData["Shopify ID"];
+
+    if (shopifyId) {
+      try {
+        const shopifyData = await getShopifyProduct(shopifyId);
+
+        if (shopifyData) {
+          productData.availableForSale = shopifyData.availableForSale;
+          productData.totalInventory = shopifyData.totalInventory;
+          productData.availableInventory = shopifyData.variants.edges.reduce(
+            (accum, val) => {
+              return accum + val.node.quantityAvailable;
+            },
+            0
+          );
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    console.log(productData);
+    res.render("store/product", productData);
+  }
+});
 
 
 
