@@ -80,6 +80,14 @@
     width: 288px;
     height: 191px;
   }
+
+  #section-donate {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding:2vw;
+    border: 2px solid rgb(85, 86, 88);
+
+  }
 </style>
 </head>
 
@@ -221,30 +229,27 @@
 
       <!-- <div class="break-noline"></div> -->
 
-      <section id="section-donate"  class="stacked stacked-4">
+      <section id="section-donate"  >
 
 
 
-        <div class="grid-1 featured session" >
-          <div class="featured-text half long nested" style="cursor:auto">
-            <div class="top left-disclaimer">
+            <div class="grid-2">
               <!-- <h4 class="type"><a href="#"></a></h4> -->
-              <h2 class="title"><a href="#">Support School for Poetic Computation!</a></h2>
+              <h1>Support School for Poetic Computation!</h1>
               <div class="break-noline-small hide-desk"></div>
               <img style="margin:1vw; max-height:450px; " src="/images/community/IOTBGU_Project.jpg" />
     
 
 
             </div>
-            <div class="right">
+            <div class="grid-2">
               <p>
                 
                 School for Poetic Computation (SFPC) is a nonprofit 501(c)(3) organization for the study of art, code, hardware, and critical theory through lenses of decolonization and transformative justice. Please consider making a tax-deductible donation to support scholarships for people who have been historically excluded from art and technology fields. We need your help to increase access to learn at SFPC to create an inclusive school where no one faces a financial barrier to study.
-              </p><br><br>
-                <p></p><p>Make a donation below or <a href="mailto:giving@sfpc.study">email us</a> to arrange a larger gift.</p>
+              </p><p>Make a donation below or <a href="mailto:giving@sfpc.study">email us</a> to arrange a larger gift.</p>
                       </p><BR>
                       
-                      <div style="display:block; margin:auto;">
+                      <div style="display:block; margin:auto; width:288px;">
                         <select id="donationSelect" onchange="changeDonationAmount()" style="width:288px">
                           <option value="10">$10</option>
                           <option value="25">$25</option>
@@ -257,154 +262,90 @@
                           <option value="5000">$5000</option>
                           <option value="Custom">Custom Amount</option>
                       </select>
-<div id="donateFormHolder">
-<div  class="donateForm donate10">
+                      <div id="donateFormHolder">
+                      <div  class="donateForm donate10">
 
-<stripe-buy-button
-  buy-button-id="buy_btn_1PYE0KKDA8CFvfBqNty4eSuz"
-  publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
->
-</stripe-buy-button>
-</div>
+                      <stripe-buy-button
+                        buy-button-id="buy_btn_1PYE0KKDA8CFvfBqNty4eSuz"
+                        publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
+                      >
+                      </stripe-buy-button>
+                      </div>
 
-<div  class="donateForm donate25">
+                      <div  class="donateForm donate25">
 
-<stripe-buy-button
-  buy-button-id="buy_btn_1PYE0rKDA8CFvfBq4LxcJtxw"
-  publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
->
-</stripe-buy-button>
-</div>
-<div id="currentDonationForm" class="donateForm donate50">
-  <stripe-buy-button
-  buy-button-id="buy_btn_1PYBfIKDA8CFvfBqJ2FMS9kG"
-  publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
->
-</stripe-buy-button>
-</div>
-<div  class="donateForm donate100">
-<stripe-buy-button
-  buy-button-id="buy_btn_1PYE5IKDA8CFvfBqzLTJwNGg"
-  publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
->
-</stripe-buy-button>
-</div>
-<div  class="donateForm donate250">
+                      <stripe-buy-button
+                        buy-button-id="buy_btn_1PYE0rKDA8CFvfBq4LxcJtxw"
+                        publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
+                      >
+                      </stripe-buy-button>
+                      </div>
+                      <div id="currentDonationForm" class="donateForm donate50">
+                        <stripe-buy-button
+                        buy-button-id="buy_btn_1PYBfIKDA8CFvfBqJ2FMS9kG"
+                        publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
+                      >
+                      </stripe-buy-button>
+                      </div>
+                      <div  class="donateForm donate100">
+                      <stripe-buy-button
+                        buy-button-id="buy_btn_1PYE5IKDA8CFvfBqzLTJwNGg"
+                        publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
+                      >
+                      </stripe-buy-button>
+                      </div>
+                      <div  class="donateForm donate250">
 
-<stripe-buy-button
-  buy-button-id="buy_btn_1PYE6zKDA8CFvfBqCbVKggxn"
-  publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
->
-</stripe-buy-button>
-</div>
-<div  class="donateForm donate500">
-
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1PYE7VKDA8CFvfBqXFpL6d4d"
-  publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
->
-</stripe-buy-button>
-</div>
-<div  class="donateForm donate1000">
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1PYE8nKDA8CFvfBqs1Q6z2Po"
-  publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
->
-</stripe-buy-button>
-</div>
-<div  class="donateForm donate2500">
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1PYEGUKDA8CFvfBq0iegbhSB"
-  publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
->
-</stripe-buy-button>
-</div>
-<div  class="donateForm donate5000">
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1PYEAGKDA8CFvfBqRPpnpcGU"
-  publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
->
-</stripe-buy-button>
-</div>
-<div class="donateForm donateCustom"><stripe-buy-button
-  buy-button-id="buy_btn_1PXon2KDA8CFvfBqyF9SIVbL"
-  publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
->
-</stripe-buy-button></div>
-</div>
-
-</div>
+                      <stripe-buy-button
+                        buy-button-id="buy_btn_1PYE6zKDA8CFvfBqCbVKggxn"
+                        publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
+                      >
+                      </stripe-buy-button>
+                      </div>
+                      <div  class="donateForm donate500">
 
 
-      
+                      <stripe-buy-button
+                        buy-button-id="buy_btn_1PYE7VKDA8CFvfBqXFpL6d4d"
+                        publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
+                      >
+                      </stripe-buy-button>
+                      </div>
+                      <div  class="donateForm donate1000">
 
-                      <!-- <dl class="accordion classacc a-stewards">
-                        <div class="entity">
+                      <stripe-buy-button
+                        buy-button-id="buy_btn_1PYE8nKDA8CFvfBqs1Q6z2Po"
+                        publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
+                      >
+                      </stripe-buy-button>
+                      </div>
+                      <div  class="donateForm donate2500">
 
-                          <dt>
-                            <span class="bio bio-float" style="background-image: url('images/fundraiser/winter-24/rpwf.jpg')"
-                              role="img"></span>
-                            <h3>Reading into the Past / Writing into the Future</h3>
-                          <h4 id="role" class="type">with Ashley Jane Lewis</h4>
-                            <div class="clear"></div>
-                          <dd><span class="bio" style="background-image: url('images/fundraiser/winter-24/rpwf.jpg')" role="img"></span>
-                            <p>This experimental sci-fi writing workshop is informed by science alongside Black and Indigenous traditions. It approaches stories as visceral technologies capable of expanding imaginaries—from individual self expression to collective and systemic forms of historical documentation. This is the third time we are offering this popular class and having no tuition barrier would help us prioritize Black and Indigenous applicants, who previously had the most requests for scholarship.
+                      <stripe-buy-button
+                        buy-button-id="buy_btn_1PYEGUKDA8CFvfBq0iegbhSB"
+                        publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
+                      >
+                      </stripe-buy-button>
+                      </div>
+                      <div  class="donateForm donate5000">
 
-                            </p>
-                          </dd>
-                          </dt>
-                        </div>
+                      <stripe-buy-button
+                        buy-button-id="buy_btn_1PYEAGKDA8CFvfBqRPpnpcGU"
+                        publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
+                      >
+                      </stripe-buy-button>
+                      </div>
+                      <div class="donateForm donateCustom"><stripe-buy-button
+                        buy-button-id="buy_btn_1PXon2KDA8CFvfBqyF9SIVbL"
+                        publishable-key="pk_live_51PXoRwKDA8CFvfBqRoSBbxHTy7rYVmJjQ8BGM0FfjCw2qcGaMoVFkHMdflYzLxMk2inml8IzaQouAWCP01Ny25Sb0060CTnDon"
+                      >
+                      </stripe-buy-button></div>
+                      </div>
 
-                        <div class="entity">
-
-                          <dt>
-                            <span class="bio bio-float" style="background-image: url('images/fundraiser/winter-24/hscnlp.jpg')"
-                              role="img"></span>
-                            <h3>Human-scale Communal Natural Language Processing
-                            </h3>
-                            <h4 id="role" class="type">with Allison Parrish</h4>
-                            <div class="clear"></div>
-                          <dd><span class="bio" style="background-image: url('images/fundraiser/winter-24/hscnlp.jpg')" role="img"></span>
-                            <p>This  critical coding class takes a communal approach to the subfield of AI called natural language processing. By centering the technology’s impact on people, the planet, and our creative practices, this class encourages students to think beyond its authoritarian and commercial uses. This is the first time we are offering a technical class about AI with a field leader who teaches at an expensive private university. We want this class to be tuition-free to remove the financial barrier to study with a thoughtful and inspirational teacher at a moment of intense public focus on AI and its social impacts.
-
-                            </p>
-                          </dd>
-                          </dt>
-                        </div>
-                      </dl> -->
-
-
+                      </div>
 
             </div>
-          </div>
-        </div>
-
-
-        {{!-- <div class="grid-1 featured fundraiser-winter-24 session" style="margin-top: 0px !important">
-          <div class="featured-text half long">
-            <div class="top left-disclaimer">
-              <h2 class="title"><a href="#">Tax deductible donation</a></h2>
-
-              <div class="break-noline-small"></div>
-
             </div>
-            <div class="right">
-              <p>
-                Only donations over $250 are eligible for tax deductions.
-                <a href="https://grayarea.org/initiative/school-for-poetic-computation/" target="_blank">Donate</a> via our fiscal sponsor, or <a href="mailto:celine@sfpc.study">email us directly</a> to make a donation of a custom amount.
-                      </p>
-              <div class="break-noline-small"></div>
-              <p class ="small">
-                 <i>SFPC is fiscally sponsored by</i> <span class="sponsorlogo grayarea"></span>
-              </p>
-
-            </div>
-          </div>
-        </div> --}}
 
 
 
