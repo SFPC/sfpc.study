@@ -279,6 +279,35 @@ app.get("/about", async (req,res) => {
   res.render("about/about", {donors: donorData, testimonials: testimonialData, presses: pressData})
 })
 
+app.get("/about2", async (req,res) => {
+  const donorinfo = await getDatabaseEntries("f10d523dd9b24d44ae2d9a6c26b4f5ee", [{property:"Name", direction:"ascending"}], {property:"Public", "checkbox": {"equals": true}})
+  const donorData = donorinfo.map((donor) => {
+    console.log(donor)
+    return parseDonors(donor)
+  })
+  console.log(donorData)
+
+  const testimonialinfo = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
+  const testimonialData = testimonialinfo.map((testimonial) => {
+    console.log(testimonial)
+    return parseTestimonials(testimonial)
+  })
+  console.log(testimonialData)
+
+
+  const pressinfo = await getDatabaseEntries("c0fcb9243b7947afb35111753c7b24c4", [{property:"Date", direction:"descending"}])
+  const pressData = pressinfo.map((press) => {
+    console.log(press)
+    return parseNotionPage(press)
+  })
+
+  console.log(pressData)
+
+
+
+  res.render("about/about2", {donors: donorData, testimonials: testimonialData, presses: pressData})
+})
+
 app.get("/about/space", async (req,res) => {
   res.render("about/space")
 })
