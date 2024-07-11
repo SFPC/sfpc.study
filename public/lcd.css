@@ -27,7 +27,11 @@
       --spring-24-text-on-bg: #0061ac; //
     --spring-24-link:  #000; // link color
       --spring-24-special-text:  #5294c7; */
-
+      --fall-24-background: #BB94A0;
+      --fall-24-text: #5A4148;
+       --fall-24-text-on-bg: #5A4148;
+     --fall-24-link:  #181510;
+       --fall-24-special-text:  #D68E56;
 
       --summer-24-background: #ea7c53;
       --summer-24-text: #1234c2;
@@ -320,7 +324,221 @@ select#allSections {
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
 
 
+/* /////////// start summer-24  ///////////////////////////////*/
 
+.fall-24,
+.fall-24.featured.session,
+.fall-24.featured  {
+ color: var(--fall-24-text);
+ box-sizing: border-box;
+ border-color: var(--fall-24-text);
+ background-image: url('images/sessions/fall-24/bg.png');
+ background-position: center;
+ background-repeat: repeat;
+ background-size: cover;
+}
+
+.fall-24.featured:hover {
+  /* background-size: 200%; */
+}
+
+
+
+     .shell.fall-24 {
+       background-image:url('images/sessions/fall-24/bg.png');
+       /* background-position: bottom; */
+       /* background-repeat: no-repeat;
+       background-size: cover; */
+       background-position: top left;
+       background-repeat: repeat;
+       background-size: cover;
+     }
+
+
+
+.fall-24,
+.fall-24.featured.session,
+.shell .fall-24,
+.fall-24.featured  {
+  /* background-color: var(--fall-24-background)  !important; */
+  color: var(--fall-24-text);
+  box-sizing: border-box;
+  border-color: var(--fall-24-text);
+  text-shadow: none !important;
+}
+
+
+      .fall-24 p,
+      .fall-24 p a,
+      .fall-24 a,
+      .fall-24.featured h4,
+      .fall-24 h4 a,
+      .fall-24 .intro a,
+      .fall-24 p.large a,
+      .fall-24 p a:hover,
+      .fall-24.session.featured,
+      .fall-24.session.featured a,
+      .fall-24.featured h4.type a,
+      .sfpc .fall-24 a
+      {
+        color: var(--fall-24-text) !important;
+      }
+
+      .fall-24 h4 a:hover,
+      .fall-24 .intro a,
+      .fall-24 p.large a:hover,
+      .fall-24.featured:hover h6,
+      .fall-24.featured:hover .title,
+      .fall-24 .details a:hover,
+      .fall-24.featured .title:hover,
+      .fall-24 p a:hover,
+      .fall-24 h4 a:hover,
+      .fall-24 section .grid-2 ul li::before,
+      .fall-24 .chars,
+      .fall-24 p a:hover,
+      .fall-24 a:hover,
+      .fall-24 h4 a:hover,
+      .fall-24 .intro a:hover,
+      .fall-24 .details a:hover,
+      .fall-24 .entity:hover .accordion dt h3:after,
+      .fall-24 .accordion dt h3:after,
+      .fall-24 .expanded{
+          color: var(--fall-24-link) !important;
+      }
+
+      .fall-24 #cost,
+      .fall-24 .fixed-apply,
+      .fall-24 .fixed-support,
+      .fall-24 .home-intro span#session-name::after {
+          color: var(--fall-24-background) !important;
+          background: var(--fall-24-link) !important;
+      }
+
+      .fall-24 span#cost {
+        background: var(--fall-24-link) !important;
+      }
+
+
+      .fall-24 .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .fall-24 .block-text {
+        background-color: var(--fall-24-background);
+        color: var(--fall-24-link);
+      }
+
+
+
+      .fall-24.grid-inner, .fall-24 .grid-inner {
+        border: 2px dotted var(--fall-24-text) !important;
+        color: var(--fall-24-link) !important;
+      }
+
+      .fall-24 #class .entity,
+      .fall-24.website-grid .grid-2 {
+        border-color: var(--fall-24-text);
+      }
+
+      .fall-24 #class .entity:hover {
+        border-color: var(--fall-24-link);
+      }
+
+      .fall-24 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--fall-24-background) !important;
+      }
+
+
+      .fall-24 select#allSections:hover,
+      .fall-24 .loader-content p::after,
+      .fall-24 span#cost
+      {
+        background: var(--fall-24-link) !important;
+        color: var(--fall-24-background) !important;
+      }
+
+      .fall-24 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .fall-24 .breadcrumb.fixed,
+      .fall-24 .breadcrumb.fixed::before,
+      .fall-24 .breadcrumb.fixed a,
+      .fall-24 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .fall-24 .breadcrumb,
+      .fall-24 .breadcrumb a,
+      .fall-24 .text-on-bg,
+      .fall-24 .breadcrumb a:hover {
+          color: var(--fall-24-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--fall-24-background);
+      }
+
+
+      .fall-24 section#section-outro,
+      #class .intro.fall-24,
+      .shell.fall-24 .class-details,
+      .fall-24 #class section,
+      .fall-24 #class .entity,
+      .fall-24 .accordion dd.active,
+      .fall-24 section ul,
+      .fall-24 .website-grid
+       {
+        /* background-color: var(--fall-24-background); */
+        background: none;
+        color:  var(--fall-24-text) !important;
+        border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--summer-24-background); */
+
+
+        /* -webkit-text-stroke-width: 1px; */
+          /* -webkit-text-stroke-color: var(--summer-24-link); */
+      }
+
+      .fall-24.featured .title,
+      .fall-24 #session-name, #tag.fall-24,
+
+    .fall-24  #session-name > a
+
+       {
+      /* -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--fall-24-link); */
+      }
+
+      .fall-24 #class section,
+      #class .intro.fall-24 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .fall-24 #class section.stacked,
+      .fall-24 .section-testimonials,
+      .fall-24 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important;
+        /* text-shadow: 2px 2px 0px var(--fall-24-background); */
+
+      }
+
+      .fall-24 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--fall-24-text);
+      }
+
+      .shell.fall-24 {
+        background-image: url('images/sessions/fall-24/bg.png');
+        background-size: 100%;
+        background-position: bottom;
+        background-color: #fff;
+      }
+
+
+/* /////////// end fall-24  ///////////////////////////////*/
 
 
 

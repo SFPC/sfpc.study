@@ -35,6 +35,10 @@
     --spring-24-body-font: 'Wonder Type', sans-serif;
     --spring-24-special-font: 'Wonder Type', sans-serif; */
 
+    --fall-24-title-font: 'Bootzy', sans-serif;
+    --fall-24-header-font: 'Bootzy', sans-serif;
+    --fall-24-body-font: 'Bootzy', sans-serif;
+    --fall-24-special-font: 'Bootzy', sans-serif;
 
     --summer-24-title-font: 'Ball Pill', sans-serif;
     --summer-24-header-font: 'Ball Pill', sans-serif;
@@ -125,6 +129,8 @@
 
 @import url("https://p.typekit.net/p.css?s=1&k=thn3crj&ht=tk&f=28524.28525&a=79545553&app=typekit&e=css");
 
+
+
 @font-face {
 font-family:"soda-script";
 src:url("https://use.typekit.net/af/63dc51/00000000000000007735b2da/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/63dc51/00000000000000007735b2da/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/63dc51/00000000000000007735b2da/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
@@ -164,7 +170,20 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
     font-style: normal;
     font-display: swap;
 }
-
+@font-face {
+  font-family: 'Dreamer';
+  src:  url('/fonts/Dreamer TM.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bootzy';
+  src:  url('/fonts/Bootzy TM.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
     font-family: 'Screenfont';
@@ -346,7 +365,19 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         font-size: calc(var(--large-text) * .7) !important;
         } */
 
+        .fall-24.featured .title,
+        .fall-24 #session-name, #tag.fall-24 {
+          font-family: var(--fall-24-title-font) !important;
+          text-transform: uppercase;
+        }
 
+        #tag.fall-24 {
+        color: var(--fall-24-text);
+        }
+
+        .fall-24.session .title.class{
+        font-size: calc(var(--large-text) * .7) !important;
+        }
 
         .summer-24.featured .title,
         .summer-24 #session-name, #tag.summer-24 {
