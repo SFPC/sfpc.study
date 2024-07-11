@@ -86,98 +86,6 @@
 
 
 
-
-
-
-
-
-            <section id="section-class-details">
-              <div class="grid-2">
-                <h1><span id="class-name">
-                  <span id="session-name">{{Name}}</span>
-                  </span></h1>
-              </div>
-
-              <div class="grid-2 class-details">
-
-
-
-                <img id="class-image" class="intro-image"  src="{{[Banner Image].[0]}}">
-              </div>
-            </section>
-
-            <div class="break-noline"></div>
-
-
-      <section class="intro {{Website-Slug}}" id="introduction">
-        <p tabindex="0" class="large">
-          <span id="introduction-text" style="white-space:pre-line">{{#if sessionEnded}}{{#if "Session End Description"}}{{"Session End Description"}}{{else}}{{Description}}{{/if}}{{else}}{{Description}}{{/if}}</span><BR><BR>
-          <span id="session-name">{{Name}}</span>
-          {{#if sessionEnded}}was{{else}}is{{/if}}
-          organized by
-          {{#each organizers}}
-          {{#if @last}}{{#if @first}}{{else}}and{{/if}}{{/if}}
-          <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
-
-          <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">
-              {{this.Bio}} </span></span>{{#if @last}}{{#if @first}}{{else}}.{{/if}}{{/if}}
-          {{/each}}
-
-
-          It include{{#if sessionEnded}}d{{else}}s{{/if}} classes with
-          {{#each teachers}}
-          {{#if @last}}{{#if @first}}{{else}}and{{/if}}{{/if}}
-          <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
-
-          <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">
-              {{this.Bio}} </span></span>{{#if @last}}{{#if @first}}{{else}}.{{/if}}{{/if}}
-          {{/each}}
-
-          <BR><BR>
-
-
-            {{#if applicationsOpen}}
-
-                <a href="{{[Application URL]}}" class="hide-appsClosed">Apply Now</a> until {{applicationEndDate}}.
-
-
-                {{else}}
-
-
-
-                    {{#if [Application URL]}}
-                    <span class="hide-appsOpen">Applications closed.</span>
-                    <!-- on</span>
-                  <span id="deadline">{{[Application End Date].[0]}}</span>. -->
-                    {{else}}
-
-                     Applications launching soon.
-                     {{#if [Get Notified Link]}}<a href="{{[Get Notified Link]}}">Get Notified</a>.{{/if}}
-
-                    {{/if}}
-
-
-                {{/if}}
-
-
-
-
-
-
-
-
-
-        </p>
-      </section>
-
-      <!-- <div class="break"></div> -->
-
-
-
-      <div class="break-noline"></div>
-
-
-
       <section id="classes" class="stacked stacked-4">
 
 
@@ -259,9 +167,103 @@
         {{#eq [Website-Slug] "summer-24"}}
         {{> summer24classBlock}}
         {{/eq}}
-
+        {{#eq [Website-Slug] "fall-24"}}
+        {{> fall24classBlock}}
+        {{/eq}}
 
       </section>
+
+
+
+
+
+
+
+            <div class="break-noline"></div>
+
+
+      <section class="intro {{Website-Slug}}" id="introduction">
+        <p tabindex="0" class="large">
+          <span id="introduction-text" style="white-space:pre-line">{{#if sessionEnded}}{{#if "Session End Description"}}{{"Session End Description"}}{{else}}{{Description}}{{/if}}{{else}}{{Description}}{{/if}}</span><BR><BR>
+          <span id="session-name">{{Name}}</span>
+          {{#if sessionEnded}}was{{else}}is{{/if}}
+          organized by
+          {{#each organizers}}
+          {{#if @last}}{{#if @first}}{{else}}and{{/if}}{{/if}}
+          <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
+
+          <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">
+              {{this.Bio}} </span></span>{{#if @last}}{{#if @first}}{{else}}.{{/if}}{{/if}}
+          {{/each}}
+
+
+          It include{{#if sessionEnded}}d{{else}}s{{/if}} classes with
+          {{#each teachers}}
+          {{#if @last}}{{#if @first}}{{else}}and{{/if}}{{/if}}
+          <span class="bio" style="background-image: url('{{this.Image.[0]}}')" role="img"></span>
+
+          <span tabindex="0" class="expand"><a class="link">{{this.Name}}</a><span class="expanded hide-expanded">
+              {{this.Bio}} </span></span>{{#if @last}}{{#if @first}}{{else}}.{{/if}}{{/if}}
+          {{/each}}
+
+          <BR><BR>
+
+
+            {{#if applicationsOpen}}
+
+                <a href="{{[Application URL]}}" class="hide-appsClosed">Apply Now</a> until {{applicationEndDate}}.
+
+
+                {{else}}
+
+
+
+                    {{#if [Application URL]}}
+                    <span class="hide-appsOpen">Applications closed.</span>
+                    <!-- on</span>
+                  <span id="deadline">{{[Application End Date].[0]}}</span>. -->
+                    {{else}}
+
+                     Applications launching soon.
+                     {{#if [Get Notified Link]}}<a href="{{[Get Notified Link]}}">Get Notified</a>.{{/if}}
+
+                    {{/if}}
+
+
+                {{/if}}
+
+
+
+
+
+
+
+
+
+        </p>
+      </section>
+
+      <!-- <div class="break"></div> -->
+
+
+
+      <div class="break-noline"></div>
+
+
+            <section id="section-class-details">
+              <div class="grid-2">
+                <h1><span id="class-name">
+                  <span id="session-name">{{Name}}</span>
+                  </span></h1>
+              </div>
+
+              <div class="grid-2 class-details">
+
+
+
+                <img id="class-image" class="intro-image"  src="{{[Banner Image].[0]}}">
+              </div>
+            </section>
 
       {{#if [Promotion Designer]}}  <section class="section-testimonials">
           <div class="grid-2">
