@@ -369,6 +369,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         .fall-24 #session-name, #tag.fall-24 {
           font-family: var(--fall-24-title-font) !important;
           text-transform: uppercase;
+          letter-spacing: .25rem;
         }
 
         #tag.fall-24 {
