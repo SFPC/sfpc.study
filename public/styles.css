@@ -395,7 +395,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
           position:relative;
         }
         .fall-24 p.large {
-          font-size: calc(20px + 1.5vw);
+          font-size: calc(20px + 1.5vw) !important;
         }
 
         .summer-24.featured .title,
