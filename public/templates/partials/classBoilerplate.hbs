@@ -24,7 +24,7 @@
 
 <div class="break"></div>
 
-
+<div class="hide-appsClosed">
 <section id="section-apply"  class="">
   <div class="grid-2">
     <h1>How do I apply?</h1>
@@ -140,9 +140,8 @@ Through this grant, we offer tuition-free classes that interrogate the role tech
       pay. We will offer subsidized positions in all of our classes, once each one has enough participants enrolled that
       we’re able to do so.
     </p>
-    <p>We have also started a <a href="https://withfriends.co/school_for_poetic_computation">scholarship fund</a>, and
-      we will be offering additional scholarships as community members <a
-        href="https://withfriends.co/school_for_poetic_computation">redistribute their wealth</a> through SFPC.
+    <p>We have also started a <a href="/donate">scholarship fund</a>, and
+      we will be offering additional scholarships as community members redistribute their wealth through SFPC.
       We direct scholarship funds towards participants who are low-income, Black, Indigenous, racialized, gendered,
       disabled, Queer, trans, oppressed, historicially excluded and underrepresented.
     </p>
@@ -169,7 +168,7 @@ Through this grant, we offer tuition-free classes that interrogate the role tech
     <p>
       For SFPC to be the kind of place the community has always meant it to be, it needs to become a platform for wealth
       redistribution. If you are a former participant, prospective participant, or friend of the school, and you have
-      the financial privilege to do so, <a href="https://withfriends.co/school_for_poetic_computation/join">please
+      the financial privilege to do so, <a href="/donate">please
         donate generously</a>. There is enough wealth in this community to make sure no one is ever rejected because of
       their inability to pay, and becoming that school will make SFPC the impactful, imaginative, transformative center
       of poetry and justice that we know it can be.
@@ -177,7 +176,7 @@ Through this grant, we offer tuition-free classes that interrogate the role tech
     </p>
   </div>
 </section>
-
+</div>
 <div class="break"></div>
 
 <section id="section-refund" class="">
@@ -187,15 +186,15 @@ Through this grant, we offer tuition-free classes that interrogate the role tech
 
   <div class="grid-2">
     <ul id="expectations-list">
-      <li>Yes, we can give you 100% refund up to 10 days before class starts
-      <li>50% refund after 10 days, until the first day of the class
-      <li>No refunds can be given after the first day of the class
+      <li>Yes, we can give you 100% refund up to 14 days before class starts
+      <li>50% refund after 14 days, until the first day of the class
+      <li>No refunds can be given after the first day of the class, including for payment plans
     </ul>
   </div>
 </section>
 
 
-<div class="break hide-regDone"></div>
+<div class="break"></div>
 {{#eq [Session Slug].[0] "spring-22"}}
 {{> spring22classBlock}}
 {{/eq}}
@@ -226,6 +225,9 @@ Through this grant, we offer tuition-free classes that interrogate the role tech
 {{#eq [Session Slug].[0] "summer-24"}}
 {{> summer24classBlock}}
 {{/eq}}
+{{#eq [Session Slug].[0] "fall-24"}}
+{{> fall24classBlock}}
+{{/eq}}
 
 
 <div class="break-noline"></div>
@@ -237,7 +239,7 @@ Through this grant, we offer tuition-free classes that interrogate the role tech
     and events, and
     follow us on <a href="https://instagram.com/sfpc_nyc">Instagram</a> and <a
       href="https://twitter.com/sfpc">Twitter</a>.
-    Support our programming through <a href="https://withfriends.co/school_for_poetic_computation">scholarships</a>.
+    Support our programming through <a href="/donate">scholarships</a>.
     Get in touch over <a href="mailto:info@sfpc.study">email</a>.
   </p>
 </section>
