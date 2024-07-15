@@ -90,8 +90,11 @@
 
 
 
+    {{!-- TODO: Work here! --}}
     <div id="projects" class="shell-content hide-content allProjects projectsDiv">
+    {{!-- Highlight Information on Current Application status --}}
 
+      {{!-- Current & Upcoming *Remove?* --}}
       <section>
         <div class="grid-2">
           <h1>Current & Upcoming</h1>
@@ -102,10 +105,10 @@
           <p>
             For each program at SFPC, we assemble a cohort of participants with a wide range of passions, skills, experiences, and technical abilities. We look for participants who are interested in learning from each other and who would thrive in a horizontal learning environment.
 
-We center people who are often excluded from art, technology, and education spaces to create equitable and empowering conditions for study.
+            We center people who are often excluded from art, technology, and education spaces to create equitable and empowering conditions for study.
           </p>
           <p>
-            <a href="about/participating">Learn what we look for in participants.</a>
+            <a href="#participating">Learn what we look for in participants.</a>
           </p>
 
         </div>
@@ -113,14 +116,104 @@ We center people who are often excluded from art, technology, and education spac
 
      {{> summer24classBlock}}
 
+      {{!-- What we look for --}}
+      <div class="break"></div>
+      <section id="participating">
+        <div class="grid-2">
+          <h1>What do you look for in a participant? </h1>
+        </div>
 
-      <!-- <div class="break"></div> -->
+        <div class="grid-2">
+          <p>If you’re interested in applying to programs at SFPC but are unsure about how to write your application, these are our considerations in our admissions process.</p>
+
+          <p>
+            The main thing that we are trying to do in our selection process is to put together a cohort of people with diverse backgrounds and interests who will have a lot to offer to each other as peers. We center people from identities and backgrounds that are often marginalized and excluded from art, technology, and higher education spaces, and look for a cohort with a wide range of passions, skills, experiences, and technical abilities. Above all, we are selecting for openness to building a shared experience around learning, critical theory, art making, and technology.
+
+            Please email us at <a href="mailto:admissions@sfpc.study">admissions@sfpc.study</a> with any questions you may have.
+
+            </p>
 
 
-{{!-- Tyler was here --}}
+                            <div class="break-noline"></div>
 
-{{!-- sections from about page --}}
-   {{!-- <section id="scholarships">
+            <dl class="accordion a-stewards">
+
+
+              <div class="entity">
+                  <dt>
+                    <h3>Artistic merit and technical expertise</h3>
+                    <div class="clear"></div>
+                      <dd>
+                      <p>Artistic merit and technical expertise are both qualities we look for in applications, but they are not the central concern. If an applicant has a polished portfolio, or an active github page (for instance) it’s worthwhile to ask—what would this person like to learn from their peers? What would they be interested in offering? And if an applicant has less experience with code/tech, or does not identify as an artist, the same questions apply. A central belief is that people of varying levels of experience have a lot to learn and unlearn from each other in the fields of art and technology, so striking a balance of participants is the most important thing.
+                      </p>
+                      </dd>
+                  </dt>
+              </div>
+              <div class="entity">
+                  <dt>
+                    <h3>Access to art and tech education</h3>
+                    <div class="clear"></div>
+                      <dd>
+                      <p>We get many applications from current students, researchers, and teachers in academia. Many of these students get into SFPC programs! However, where we can, we look to give opportunities to people who may not have other access to art, technology and critical theory education.
+                        </p>
+                      </dd>
+                  </dt>
+              </div>
+              <div class="entity">
+                  <dt>
+                    <h3>Interest in each other</h3>
+                    <div class="clear"></div>
+                      <dd>
+                      <p>We really value hearing that applicants are interested in each other. We are trying to move towards future possibilities in education where the role of teacher is less and less entrenched. When an application gives the sense that a person is eager to participate in creating a horizontal learning environment, that means a lot to us.
+                      </p>
+                      </dd>
+                  </dt>
+              </div>
+              <div class="entity">
+                  <dt>
+                    <h3>Time and place in life</h3>
+                    <div class="clear"></div>
+                      <dd>
+                      <p>We love having a wide range of ages and geographies in classes, and having participants coming to class for all different reasons—connection, joy, personal interest, professional development and self-discovery to name a few.
+                      </p>
+                      </dd>
+                  </dt>
+              </div>
+              <div class="entity">
+                  <dt>
+                    <h3>History with SFPC</h3>
+                    <div class="clear"></div>
+                      <dd>
+                      <p>We want to provide pathways for alumni to come back to the school, and for new folks to join. In a class of 20, we look to reserve between 4-6 seats for alumni who apply. When making difficult decisions between applicants who the admissions team is roughly equally excited about, the team is encouraged to check applicants against a list of past applicants, giving priority first to folks who have been waitlisted in the past, and then to folks who have been rejected in the past.
+                      </p>
+                      </dd>
+                  </dt>
+              </div>
+              <div class="entity">
+                  <dt>
+                    <h3>Ability to pay</h3>
+                    <div class="clear"></div>
+                      <dd>
+                      <p>We do not look at applicants’ ability to pay any amount of tuition in the first round of reviewing applications. In the first round, we admit as many applicants as we can, regardless of their ability to pay, until we run out of scholarship funds. After we run out of scholarship funds, we begin a second round where ability to pay influences admissions decisions. Unfortunately we do not currently have the funding to fully disregard ability to pay in our application process, but we hope to move towards a system in which we make admissions decisions that are not based on an applicants’ ability to pay.
+
+                      </p>
+                      </dd>
+                  </dt>
+              </div>
+
+
+
+            </dl>
+
+
+
+        </div>
+      </section>
+      <div class="break-noline"></div>
+
+      {{!-- Scholarship Info --}}
+      <div class="break"></div>
+      <section id="scholarships">
         <div class="grid-2">
           <h1>Scholarships</h1>
         </div>
@@ -141,9 +234,10 @@ We center people who are often excluded from art, technology, and education spac
             <a href="/about/scholarships">more on scholarships...</a>
           </p>
         </div>
-      </section> --}}
-            {{!-- <div class="break"></div>
+      </section>
 
+      {{!-- Accessibility Info --}}
+      <div class="break"></div>
       <section id="accessibility">
         <div class="grid-2">
           <h1>Accessibility </h1>
@@ -157,8 +251,10 @@ We center people who are often excluded from art, technology, and education spac
 
           </p>
         </div>
-      </section> --}}
-{{!-- 
+      </section>
+
+      {{!-- Community Agreement --}}
+      <div class="break"></div>
       <section id="community-agreement">
         <div class="grid-2">
           <h1>Community Agreement</h1>
@@ -175,144 +271,239 @@ We center people who are often excluded from art, technology, and education spac
               Agreement</a>
           </p>
         </div>
-      </section> --}}
+      </section>
 
+      {{!-- Other FAQs ? --}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="break"></div>
-
-
-    <section id="2024" class="stacked stacked-4">
-      <div class="grid-1">
-        <h1>2024</h1>
-      </div>
-
-      <div class="grid-1 participate">
-
-
-
-        <div class="grid-4 featured spring-24 session">
-          <div class="featured-text">
-            <img src="images/sessions/spring-24/cover.jpg">
-            <div class="top">
-              <h4 class="type"><a href="/sessions/spring-24">session</a></h4>
-              <h2 class="title">Spring 2024</h2>
-            </div>
-            <div class="bottom">
-              <h4 class="details">January 20 - March 26, 2024<span class="dot">·</span>Online (Zoom) and In-Person (NYC)<span
-                  class="dot">·</span> 4 classes<span class="dot">·</span>Applications closed</h4>
-            </div>
+      {{!-- Past Programs (Link??) --}}
+        <div class="break"></div>
+        <section id="2024" class="stacked stacked-4">
+          <div class="grid-1">
+            <h1>2024</h1>
           </div>
-        </div>
+
+          <div class="grid-1 participate">
 
 
 
-
-        <div class="grid-4 featured winter-24 session">
-          <div class="featured-text">
-            <img src="images/sessions/winter-24/cover.jpg">
-            <div class="top">
-              <h4 class="type"><a href="/sessions/winter-24">session</a></h4>
-              <h2 class="title">Winter 2024</h2>
-            </div>
-            <div class="bottom">
-              <h4 class="details">January 20 - March 26, 2024<span class="dot">·</span>Online (Zoom) and In-Person (NYC)<span
-                  class="dot">·</span> 4 classes<span class="dot">·</span>Applications closed</h4>
-            </div>
-          </div>
-        </div>
-
-
-
-      </div>
-
-    </section>
-
-
-          <div class="break"></div>
-
-
-          <section id="2023" class="stacked stacked-4">
-            <div class="grid-1">
-              <h1>2023</h1>
-            </div>
-
-            <div class="grid-1 participate">
-
-
-              <div class="grid-4 featured fall-23 session">
-                <div class="featured-text">
-                  <img src="images/sessions/fall-23/cover.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="/sessions/fall-23">session</a></h4>
-                    <h2 class="title">Fall 2023</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">September 17 - November 17, 2023<span class="dot">·</span>Online (Zoom) and In-Person (NYC)<span
-                        class="dot">·</span> 5 classes<span class="dot">·</span>Applications closed</h4>
-                  </div>
-                </div>
-              </div>
-
-
-
-
-              <div class="grid-4 featured summer-23 session">
-                <div class="featured-text">
-                  <img src="images/sessions/summer-23/cover.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="/sessions/summer-23">session</a></h4>
-                    <h2 class="title">Summer 2023</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">June 4 - August 6, 2023<span class="dot">·</span>Online (Zoom) and In-Person (NYC)<span
-                        class="dot">·</span> 2 classes<span class="dot">·</span>Applications closed</h4>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="grid-4 featured spring-23 session">
-                <div class="featured-text">
-                  <img src="images/sessions/spring-23/cover.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="/sessions/spring-23">session</a></h4>
-                    <h2 class="title">Spring 2023</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">March 6 - May 17, 2023<span class="dot">·</span>Online (Zoom) and <span
-                        class="dot">·</span> 5 classes<span class="dot">·</span>Applications closed</h4>
-                  </div>
-                </div>
-              </div>
-
-
-
-
-            <div class="grid-4 featured winter-23 session">
+            <div class="grid-4 featured spring-24 session">
               <div class="featured-text">
-                <img src="images/sessions/winter-23/cover.jpg">
+                <img src="images/sessions/spring-24/cover.jpg">
                 <div class="top">
-                  <h4 class="type"><a href="/sessions/winter-23">session</a></h4>
-                  <h2 class="title">Winter 2023</h2>
+                  <h4 class="type"><a href="/sessions/spring-24">session</a></h4>
+                  <h2 class="title">Spring 2024</h2>
                 </div>
                 <div class="bottom">
-                  <h4 class="details">January 18 - April 4, 2023<span class="dot">·</span>Online (Zoom) <span
+                  <h4 class="details">January 20 - March 26, 2024<span class="dot">·</span>Online (Zoom) and In-Person (NYC)<span
+                      class="dot">·</span> 4 classes<span class="dot">·</span>Applications closed</h4>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="grid-4 featured winter-24 session">
+              <div class="featured-text">
+                <img src="images/sessions/winter-24/cover.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="/sessions/winter-24">session</a></h4>
+                  <h2 class="title">Winter 2024</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">January 20 - March 26, 2024<span class="dot">·</span>Online (Zoom) and In-Person (NYC)<span
+                      class="dot">·</span> 4 classes<span class="dot">·</span>Applications closed</h4>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </section>
+
+        <div class="break"></div>
+        <section id="2023" class="stacked stacked-4">
+          <div class="grid-1">
+            <h1>2023</h1>
+          </div>
+
+          <div class="grid-1 participate">
+
+
+            <div class="grid-4 featured fall-23 session">
+              <div class="featured-text">
+                <img src="images/sessions/fall-23/cover.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="/sessions/fall-23">session</a></h4>
+                  <h2 class="title">Fall 2023</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">September 17 - November 17, 2023<span class="dot">·</span>Online (Zoom) and In-Person (NYC)<span
+                      class="dot">·</span> 5 classes<span class="dot">·</span>Applications closed</h4>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="grid-4 featured summer-23 session">
+              <div class="featured-text">
+                <img src="images/sessions/summer-23/cover.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="/sessions/summer-23">session</a></h4>
+                  <h2 class="title">Summer 2023</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">June 4 - August 6, 2023<span class="dot">·</span>Online (Zoom) and In-Person (NYC)<span
+                      class="dot">·</span> 2 classes<span class="dot">·</span>Applications closed</h4>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="grid-4 featured spring-23 session">
+              <div class="featured-text">
+                <img src="images/sessions/spring-23/cover.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="/sessions/spring-23">session</a></h4>
+                  <h2 class="title">Spring 2023</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">March 6 - May 17, 2023<span class="dot">·</span>Online (Zoom) and <span
+                      class="dot">·</span> 5 classes<span class="dot">·</span>Applications closed</h4>
+                </div>
+              </div>
+            </div>
+
+
+
+
+          <div class="grid-4 featured winter-23 session">
+            <div class="featured-text">
+              <img src="images/sessions/winter-23/cover.jpg">
+              <div class="top">
+                <h4 class="type"><a href="/sessions/winter-23">session</a></h4>
+                <h2 class="title">Winter 2023</h2>
+              </div>
+              <div class="bottom">
+                <h4 class="details">January 18 - April 4, 2023<span class="dot">·</span>Online (Zoom) <span
+                    class="dot">·</span> 3 classes<span class="dot">·</span>Applications closed</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </section>
+
+        <div class="break"></div>
+        <section id="2022" class="stacked stacked-4">
+          <div class="grid-1">
+            <h1>2022</h1>
+          </div>
+
+
+
+
+
+
+
+          <div class="grid-1 participate">
+
+
+            <div class="grid-4 featured fall-22 session">
+              <div class="featured-text">
+                <img src="images/sessions/fall-22/cover.png">
+                <div class="top">
+                  <h4 class="type"><a href="/sessions/fall-22">session</a></h4>
+                  <h2 class="title">Fall 2022</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">October 4 - December 8, 2022<span class="dot">·</span>Online (Zoom) <span
+                      class="dot">·</span> 3 classes<span class="dot">·</span>Applications closed</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured sex-ed session">
+              <div class="featured-text">
+                <img src="images/sessions/sex-ed/cover.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="/sessions/sex-ed">session</a></h4>
+                  <h2 class="title">SFPC: Sex Ed</h2>
+                  <!-- <h6>with Melanie Hoff, Neta Bomani, Zainab Aliyu and special guests</h6> -->
+                </div>
+                <div class="bottom">
+                  <h4 class="details">August 1 - August 12, 2022<span class="dot">·</span>New York City
+                    <span class="dot">·</span>
+                    Applications closed
+                  </h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2022-mtp-summer.jpg">
+                <div class="top">
+                  <h4 class="type"><a
+                      href="https://withfriends.co/event/14711999/meet_the_participants_of_summer_2022">event</a></h4>
+                  <h2 class="title">Meet the Participants of Summer 2022</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">July 28, 2022 <span class="dot">·</span>7pm ET<span class="dot">·</span>Online
+                    (Twitch) </h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2022-experiments-showcase.jpg">
+                <div class="top">
+                  <h4 class="type"><a
+                      href="https://withfriends.co/event/14687536/experiments_in_networked_performance_final_show">event</a>
+                  </h4>
+                  <h2 class="title">Experiments in Networked Performance: Final Show</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">July 16, 2022 <span class="dot">·</span>7pm ET<span class="dot">·</span>Online
+                    (Twitch) </h4>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="grid-4 featured networked-performance sfpc session">
+              <div class="featured-text">
+                <img src="images/sessions/networked-performance/cover.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="/sessions/networked-performance">session</a></h4>
+                  <h2 class="title">Experiments in Networked Performance</h2>
+                  <!-- <h6>with Todd Anderson, Tiri Kananuruk and special guests</h6> -->
+                </div>
+                <div class="bottom">
+                  <h4 class="details">July 5 - July 16, 2022<span class="dot">·</span>New York City <span
+                      class="dot">·</span>
+                    <!-- 4 classes<span class="dot">·</span> -->
+                    Applications closed</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured summer-22 session">
+              <div class="featured-text">
+                <img src="images/sessions/summer-22/cover.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="/sessions/summer-22">session</a></h4>
+                  <h2 class="title">Summer 2022</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">June 21 - August 22, 2022<span class="dot">·</span>Online (Zoom) <span
                       class="dot">·</span> 3 classes<span class="dot">·</span>Applications closed</h4>
                 </div>
               </div>
@@ -320,529 +511,386 @@ We center people who are often excluded from art, technology, and education spac
 
 
 
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2022-rpwf-spring.jpg">
+                <div class="top">
+                  <h4 class="type"><a
+                      href="https://withfriends.co/event/14445903/reading_into_the_past_writing_into_the_future_spring_showcase">event</a>
+                  </h4>
+                  <h2 class="title">Reading into the Past / Writing into the Future Spring Showcase</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">May 29, 2022 <span class="dot">·</span>12pm ET<span class="dot">·</span>Online
+                    (Twitch) </h4>
+                </div>
+              </div>
+            </div>
 
-          </section>
 
-
-
-
-
-
-
-          <div class="break"></div>
-
-
-          <section id="2022" class="stacked stacked-4">
-            <div class="grid-1">
-              <h1>2022</h1>
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2022-dll-garden.jpg">
+                <div class="top">
+                  <h4 class="type"><a
+                      href="https://withfriends.co/event/14385881/thurs_and_friday_digital_garden_party_digital_love_languages_communion_consent_refusal_renewal">event</a>
+                  </h4>
+                  <h2 class="title">⚘ Digital Garden Party ⚘ Digital Love Languages: Communion Consent Refusal Renewal</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">May 20 - 21, 2022 <span class="dot">·</span>1pm ET<span class="dot">·</span>Online
+                    (Twitch) </h4>
+                </div>
+              </div>
             </div>
 
 
 
-
-
-
-
-            <div class="grid-1 participate">
-
-
-
-              <div class="grid-4 featured fall-22 session">
-                <div class="featured-text">
-                  <img src="images/sessions/fall-22/cover.png">
-                  <div class="top">
-                    <h4 class="type"><a href="/sessions/fall-22">session</a></h4>
-                    <h2 class="title">Fall 2022</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">October 4 - December 8, 2022<span class="dot">·</span>Online (Zoom) <span
-                        class="dot">·</span> 3 classes<span class="dot">·</span>Applications closed</h4>
-                  </div>
-                </div>
-              </div>
-
-
-
-              <div class="grid-4 featured sex-ed session">
-                <div class="featured-text">
-                  <img src="images/sessions/sex-ed/cover.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="/sessions/sex-ed">session</a></h4>
-                    <h2 class="title">SFPC: Sex Ed</h2>
-                    <!-- <h6>with Melanie Hoff, Neta Bomani, Zainab Aliyu and special guests</h6> -->
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">August 1 - August 12, 2022<span class="dot">·</span>New York City
-                      <span class="dot">·</span>
-                      Applications closed
-                    </h4>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2022-mtp-summer.jpg">
-                  <div class="top">
-                    <h4 class="type"><a
-                        href="https://withfriends.co/event/14711999/meet_the_participants_of_summer_2022">event</a></h4>
-                    <h2 class="title">Meet the Participants of Summer 2022</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">July 28, 2022 <span class="dot">·</span>7pm ET<span class="dot">·</span>Online
-                      (Twitch) </h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2022-experiments-showcase.jpg">
-                  <div class="top">
-                    <h4 class="type"><a
-                        href="https://withfriends.co/event/14687536/experiments_in_networked_performance_final_show">event</a>
-                    </h4>
-                    <h2 class="title">Experiments in Networked Performance: Final Show</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">July 16, 2022 <span class="dot">·</span>7pm ET<span class="dot">·</span>Online
-                      (Twitch) </h4>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="grid-4 featured networked-performance sfpc session">
-                <div class="featured-text">
-                  <img src="images/sessions/networked-performance/cover.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="/sessions/networked-performance">session</a></h4>
-                    <h2 class="title">Experiments in Networked Performance</h2>
-                    <!-- <h6>with Todd Anderson, Tiri Kananuruk and special guests</h6> -->
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">July 5 - July 16, 2022<span class="dot">·</span>New York City <span
-                        class="dot">·</span>
-                      <!-- 4 classes<span class="dot">·</span> -->
-                      Applications closed</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="grid-4 featured summer-22 session">
-                <div class="featured-text">
-                  <img src="images/sessions/summer-22/cover.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="/sessions/summer-22">session</a></h4>
-                    <h2 class="title">Summer 2022</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">June 21 - August 22, 2022<span class="dot">·</span>Online (Zoom) <span
-                        class="dot">·</span> 3 classes<span class="dot">·</span>Applications closed</h4>
-                  </div>
-                </div>
-              </div>
-
-
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2022-rpwf-spring.jpg">
-                  <div class="top">
-                    <h4 class="type"><a
-                        href="https://withfriends.co/event/14445903/reading_into_the_past_writing_into_the_future_spring_showcase">event</a>
-                    </h4>
-                    <h2 class="title">Reading into the Past / Writing into the Future Spring Showcase</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">May 29, 2022 <span class="dot">·</span>12pm ET<span class="dot">·</span>Online
-                      (Twitch) </h4>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2022-dll-garden.jpg">
-                  <div class="top">
-                    <h4 class="type"><a
-                        href="https://withfriends.co/event/14385881/thurs_and_friday_digital_garden_party_digital_love_languages_communion_consent_refusal_renewal">event</a>
-                    </h4>
-                    <h2 class="title">⚘ Digital Garden Party ⚘ Digital Love Languages: Communion Consent Refusal Renewal</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">May 20 - 21, 2022 <span class="dot">·</span>1pm ET<span class="dot">·</span>Online
-                      (Twitch) </h4>
-                  </div>
-                </div>
-              </div>
-
-
-
-                      <div class="grid-4 featured sfpc">
-                        <div class="featured-text">
-                          <img src="images/events/2022-mtp-spring.jpg">
-                          <div class="top">
-                            <h4 class="type"><a
-                                href="https://withfriends.co/event/14230627/meet_the_participants_of_spring_2022">event</a></h4>
-                            <h2 class="title">Meet the Participants of Spring 2022</h2>
-                          </div>
-                          <div class="bottom">
-                            <h4 class="details">April 13, 2022 <span class="dot">·</span>7pm ET<span class="dot">·</span>Online
-                              (Twitch) </h4>
-                          </div>
+                    <div class="grid-4 featured sfpc">
+                      <div class="featured-text">
+                        <img src="images/events/2022-mtp-spring.jpg">
+                        <div class="top">
+                          <h4 class="type"><a
+                              href="https://withfriends.co/event/14230627/meet_the_participants_of_spring_2022">event</a></h4>
+                          <h2 class="title">Meet the Participants of Spring 2022</h2>
+                        </div>
+                        <div class="bottom">
+                          <h4 class="details">April 13, 2022 <span class="dot">·</span>7pm ET<span class="dot">·</span>Online
+                            (Twitch) </h4>
                         </div>
                       </div>
+                    </div>
 
 
 
 
-              <div class="grid-4 featured spring-22 session">
-                <div class="featured-text">
-                  <img src="images/sessions/spring-22/cover.gif">
-                  <div class="top">
-                    <h4 class="type"><a href="/sessions/spring-22">session</a></h4>
-                    <h2 class="title">Spring 2022</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">March 15 - May 29, 2022<span class="dot">·</span>Online (Zoom) <span
-                        class="dot">·</span> 4 classes<span class="dot">·</span>Applications closed</h4>
-                  </div>
+            <div class="grid-4 featured spring-22 session">
+              <div class="featured-text">
+                <img src="images/sessions/spring-22/cover.gif">
+                <div class="top">
+                  <h4 class="type"><a href="/sessions/spring-22">session</a></h4>
+                  <h2 class="title">Spring 2022</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">March 15 - May 29, 2022<span class="dot">·</span>Online (Zoom) <span
+                      class="dot">·</span> 4 classes<span class="dot">·</span>Applications closed</h4>
                 </div>
               </div>
-
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2022-rpwf.jpg">
-                  <div class="top">
-                    <h4 class="type"><a
-                        href="https://withfriends.co/event/14125440/reading_into_the_past_writing_into_the_future_showcase">event</a>
-                    </h4>
-                    <h2 class="title">Reading into the Past / Writing into the Future Winter Showcase</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">April 3, 2022 <span class="dot">·</span>10am ET<span class="dot">·</span>Online
-                      (Twitch) </h4>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="grid-4 featured fallwinter-2122 session">
-                <div class="featured-text">
-                  <img src="images/sessions/fallwinter-2122/cover.gif">
-                  <div class="top">
-                    <h4 class="type"><a href="/sessions/fallwinter-2122/">session</a></h4>
-                    <h2 class="title">Fall/Winter 2021-22</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">October 26, 2021 - March 10, 2022<span class="dot">·</span>Online (Zoom) <span
-                        class="dot">·</span> 2 classes<span class="dot">·</span>Applications closed </h4>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2022-winter-mtp.jpg">
-                  <div class="top">
-                    <h4 class="type"><a
-                        href="https://withfriends.co/event/13579550/meet_the_participants_of_winter_2022">event</a></h4>
-                    <h2 class="title">Meet the Participants of Winter 2022</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">February 13, 2022 <span class="dot">·</span>11am ET<span class="dot">·</span>Online
-                      (Twitch) </h4>
-                  </div>
-                </div>
-              </div>
-
-
             </div>
 
-          </section>
 
-
-
-          <div class="break"></div>
-
-          <section id="2021" class="stacked stacked-4">
-            <div class="grid-1">
-              <h1>2021</h1>
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2022-rpwf.jpg">
+                <div class="top">
+                  <h4 class="type"><a
+                      href="https://withfriends.co/event/14125440/reading_into_the_past_writing_into_the_future_showcase">event</a>
+                  </h4>
+                  <h2 class="title">Reading into the Past / Writing into the Future Winter Showcase</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">April 3, 2022 <span class="dot">·</span>10am ET<span class="dot">·</span>Online
+                    (Twitch) </h4>
+                </div>
+              </div>
             </div>
 
-            <div class="grid-1 participate">
 
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2021-fall-mtp.jpg">
-                  <div class="top">
-                    <h4 class="type"><a
-                        href="https://withfriends.co/event/13268385/meet_the_participants_of_fall_2021">event</a></h4>
-                    <h2 class="title">Meet the Participants of Fall 2021</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">January 4, 2021 <span class="dot">·</span>6pm ET<span class="dot">·</span>Online
-                      (Twitch) </h4>
-                  </div>
+            <div class="grid-4 featured fallwinter-2122 session">
+              <div class="featured-text">
+                <img src="images/sessions/fallwinter-2122/cover.gif">
+                <div class="top">
+                  <h4 class="type"><a href="/sessions/fallwinter-2122/">session</a></h4>
+                  <h2 class="title">Fall/Winter 2021-22</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">October 26, 2021 - March 10, 2022<span class="dot">·</span>Online (Zoom) <span
+                      class="dot">·</span> 2 classes<span class="dot">·</span>Applications closed </h4>
                 </div>
               </div>
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2021-aandme-montez.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="https://radio.montezpress.com/#/show/2297">event</a></h4>
-                    <h2 class="title">AncestryandMe x Montez Press Radio</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">January 4, 2021 <span class="dot">·</span> 4pm ET <span class="dot">·</span>Online
-                      (Zoom)</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2021-rwc-show.jpg">
-                  <div class="top">
-                    <h4 class="type"><a
-                        href="https://withfriends.co/event/13268385/meet_the_participants_of_fall_2021">event</a></h4>
-                    <h2 class="title">Reading, Writing & Compiling Showcase</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">January 4, 2021 <span class="dot">·</span>6pm ET <span class="dot">·</span>Online
-                      (Zoom)</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="grid-4 featured cocoon session">
-
-                <div class="featured-text">
-                  <img src="images/sessions/cocoon/cover.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="/sessions/cocoon/">session</a></h4>
-                    <h2 class="title">COCOON</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">July 11 - August 26, 2021 <span class="dot">·</span>Online (Zoom)<span
-                        class="dot">·</span> 5 classes </h4>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-          </section>
-
-
-          <div class="break"></div>
-
-
-
-          <section id="2020" class="stacked stacked-4">
-            <div class="grid-1">
-              <h1>2020</h1>
             </div>
 
-            <div class="grid-1 participate">
 
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2020-poetic-hardware-screen-walk.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="https://www.eventbrite.com/e/121234590925">event</a></h4>
-                    <h2 class="title">Poetic Hardware Open Screen Walk</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">September 18, 2020 <span class="dot">·</span> 1-4pm ET <span
-                        class="dot">·</span>Online (Zoom)</h4>
-                  </div>
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2022-winter-mtp.jpg">
+                <div class="top">
+                  <h4 class="type"><a
+                      href="https://withfriends.co/event/13579550/meet_the_participants_of_winter_2022">event</a></h4>
+                  <h2 class="title">Meet the Participants of Winter 2022</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">February 13, 2022 <span class="dot">·</span>11am ET<span class="dot">·</span>Online
+                    (Twitch) </h4>
                 </div>
               </div>
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2020-dll-sharing-sessions.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="https://www.eventbrite.com/e/116379382867">event</a></h4>
-                    <h2 class="title">Digital Love Languages Sharing Sessions</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">August 18, 2020, 1-3:30pm ET <span class="dot">·</span> August 19, 2020, 5-7:30pm ET
-                      <span class="dot">·</span>Online (Zoom)
-                    </h4>
-                  </div>
-                </div>
-              </div>
-
-
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2020-reading-ddm.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="https://www.eventbrite.com/e/113676605788">event</a></h4>
-                    <h2 class="title">Reading the Dictionary of Dark Matters</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">July 22, 2020 <span class="dot">·</span> 1:30-3pm ET & 6:30-8pm ET <span
-                        class="dot">·</span>Online (Zoom)</h4>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="grid-4 featured sfpc session">
-                <div class="featured-text">
-                  <img src="images/sessions/summer-20/cover.gif">
-                  <div class="top">
-                    <h4 class="type"><a href="/sessions/summer-20">session</a></h4>
-                    <h2 class="title">Summer 2020</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">May 20 - September 15, 2020 <span class="dot">·</span>Online (Zoom)<span
-                        class="dot">·</span> 6 classes</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2020-critical-writing-workshop.jpg">
-                  <div class="top">
-                    <h4 class="type"><a
-                        href="https://www.eventbrite.com/e/critical-writing-workshop-tickets-87741305607#">event</a></h4>
-                    <h2 class="title">Crticial Writing Workshop</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">February 18 — February 23, 2020 <span class="dot">·</span> 4pm ET <span
-                        class="dot">·</span>155 Bank St., NYC</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2020-code-societies-showcase.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="https://www.eventbrite.com/e/89326430759">event</a></h4>
-                    <h2 class="title">Code Societies Showcase</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">January 25, 2020 <span class="dot">·</span> 3 - 6pm ET <span
-                        class="dot">·</span>Westbeth Gallery, NYC</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2020-perf-night.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="https://www.eventbrite.com/e/88842413049">event</a></h4>
-                    <h2 class="title">Performance Night</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">January 18, 2020 <span class="dot">·</span> 6-10pm ET <span
-                        class="dot">·</span>Westbeth Gallery, NYC</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2020-math-as-rel.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="https://www.eventbrite.com/e/87636969535">event</a></h4>
-                    <h2 class="title">Math as a Religious Experience</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">January 18, 2020 <span class="dot">·</span> 12-3pm ET <span class="dot">·</span>155
-                      Bank St., NYC</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2020-first-seven-years-opening.jpeg">
-                  <div class="top">
-                    <h4 class="type"><a href="https://www.eventbrite.com/e/87324900127">event</a></h4>
-                    <h2 class="title">Poetic Computation: The First Seven years Opening</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">January 16, 2020 <span class="dot">·</span> 6pm ET
-                      <span class="dot">·</span>Westbeth Gallery, NYC
-                    </h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2020-crit-theory-retro.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="https://www.eventbrite.com/e/87642734779">event</a></h4>
-                    <h2 class="title">Critical Theory Retrospective</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">January 12, 2020 <span class="dot">·</span> 4pm ET<span class="dot">·</span>Westbeth
-                      Gallery, NYC</h4>
-                  </div>
-                </div>
-              </div>
-
-
-
-              <div class="grid-4 featured sfpc">
-                <div class="featured-text">
-                  <img src="images/events/2020-seven-years.jpg">
-                  <div class="top">
-                    <h4 class="type"><a href="https://www.eventbrite.com/e/87324900127">event</a></h4>
-                    <h2 class="title">Seven Years of Poetic Computation</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">January 12 - 23, 2020 <span class="dot">·</span> 4pm ET <span
-                        class="dot">·</span>Westbeth Gallery, NYC</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="grid-4 featured codesocieties-20 session">
-                <div class="featured-text">
-                  <img src="images/sessions/codesocieties-20/cover.gif">
-                  <div class="top">
-                    <h4 class="type"><a href="/sessions/codesocieties-20">session</a></h4>
-                    <h2 class="title">Code Societies</h2>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="details">Jan 4 - Jan 25, 2020 <span class="dot">·</span>155 Bank St., NYC<span
-                        class="dot">·</span> 14 workshops</h4>
-                  </div>
-                </div>
-              </div>
-
-
             </div>
 
-</section>
+
+          </div>
+
+        </section>
+
+        <div class="break"></div>
+        <section id="2021" class="stacked stacked-4">
+          <div class="grid-1">
+            <h1>2021</h1>
+          </div>
+
+          <div class="grid-1 participate">
+
+
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2021-fall-mtp.jpg">
+                <div class="top">
+                  <h4 class="type"><a
+                      href="https://withfriends.co/event/13268385/meet_the_participants_of_fall_2021">event</a></h4>
+                  <h2 class="title">Meet the Participants of Fall 2021</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">January 4, 2021 <span class="dot">·</span>6pm ET<span class="dot">·</span>Online
+                    (Twitch) </h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2021-aandme-montez.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="https://radio.montezpress.com/#/show/2297">event</a></h4>
+                  <h2 class="title">AncestryandMe x Montez Press Radio</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">January 4, 2021 <span class="dot">·</span> 4pm ET <span class="dot">·</span>Online
+                    (Zoom)</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2021-rwc-show.jpg">
+                <div class="top">
+                  <h4 class="type"><a
+                      href="https://withfriends.co/event/13268385/meet_the_participants_of_fall_2021">event</a></h4>
+                  <h2 class="title">Reading, Writing & Compiling Showcase</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">January 4, 2021 <span class="dot">·</span>6pm ET <span class="dot">·</span>Online
+                    (Zoom)</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured cocoon session">
+
+              <div class="featured-text">
+                <img src="images/sessions/cocoon/cover.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="/sessions/cocoon/">session</a></h4>
+                  <h2 class="title">COCOON</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">July 11 - August 26, 2021 <span class="dot">·</span>Online (Zoom)<span
+                      class="dot">·</span> 5 classes </h4>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </section>
+
+        <div class="break"></div>
+        <section id="2020" class="stacked stacked-4">
+          <div class="grid-1">
+            <h1>2020</h1>
+          </div>
+
+          <div class="grid-1 participate">
+
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2020-poetic-hardware-screen-walk.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="https://www.eventbrite.com/e/121234590925">event</a></h4>
+                  <h2 class="title">Poetic Hardware Open Screen Walk</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">September 18, 2020 <span class="dot">·</span> 1-4pm ET <span
+                      class="dot">·</span>Online (Zoom)</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2020-dll-sharing-sessions.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="https://www.eventbrite.com/e/116379382867">event</a></h4>
+                  <h2 class="title">Digital Love Languages Sharing Sessions</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">August 18, 2020, 1-3:30pm ET <span class="dot">·</span> August 19, 2020, 5-7:30pm ET
+                    <span class="dot">·</span>Online (Zoom)
+                  </h4>
+                </div>
+              </div>
+            </div>
 
 
 
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2020-reading-ddm.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="https://www.eventbrite.com/e/113676605788">event</a></h4>
+                  <h2 class="title">Reading the Dictionary of Dark Matters</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">July 22, 2020 <span class="dot">·</span> 1:30-3pm ET & 6:30-8pm ET <span
+                      class="dot">·</span>Online (Zoom)</h4>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="grid-4 featured sfpc session">
+              <div class="featured-text">
+                <img src="images/sessions/summer-20/cover.gif">
+                <div class="top">
+                  <h4 class="type"><a href="/sessions/summer-20">session</a></h4>
+                  <h2 class="title">Summer 2020</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">May 20 - September 15, 2020 <span class="dot">·</span>Online (Zoom)<span
+                      class="dot">·</span> 6 classes</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2020-critical-writing-workshop.jpg">
+                <div class="top">
+                  <h4 class="type"><a
+                      href="https://www.eventbrite.com/e/critical-writing-workshop-tickets-87741305607#">event</a></h4>
+                  <h2 class="title">Crticial Writing Workshop</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">February 18 — February 23, 2020 <span class="dot">·</span> 4pm ET <span
+                      class="dot">·</span>155 Bank St., NYC</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2020-code-societies-showcase.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="https://www.eventbrite.com/e/89326430759">event</a></h4>
+                  <h2 class="title">Code Societies Showcase</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">January 25, 2020 <span class="dot">·</span> 3 - 6pm ET <span
+                      class="dot">·</span>Westbeth Gallery, NYC</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2020-perf-night.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="https://www.eventbrite.com/e/88842413049">event</a></h4>
+                  <h2 class="title">Performance Night</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">January 18, 2020 <span class="dot">·</span> 6-10pm ET <span
+                      class="dot">·</span>Westbeth Gallery, NYC</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2020-math-as-rel.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="https://www.eventbrite.com/e/87636969535">event</a></h4>
+                  <h2 class="title">Math as a Religious Experience</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">January 18, 2020 <span class="dot">·</span> 12-3pm ET <span class="dot">·</span>155
+                    Bank St., NYC</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2020-first-seven-years-opening.jpeg">
+                <div class="top">
+                  <h4 class="type"><a href="https://www.eventbrite.com/e/87324900127">event</a></h4>
+                  <h2 class="title">Poetic Computation: The First Seven years Opening</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">January 16, 2020 <span class="dot">·</span> 6pm ET
+                    <span class="dot">·</span>Westbeth Gallery, NYC
+                  </h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2020-crit-theory-retro.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="https://www.eventbrite.com/e/87642734779">event</a></h4>
+                  <h2 class="title">Critical Theory Retrospective</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">January 12, 2020 <span class="dot">·</span> 4pm ET<span class="dot">·</span>Westbeth
+                    Gallery, NYC</h4>
+                </div>
+              </div>
+            </div>
 
 
 
+            <div class="grid-4 featured sfpc">
+              <div class="featured-text">
+                <img src="images/events/2020-seven-years.jpg">
+                <div class="top">
+                  <h4 class="type"><a href="https://www.eventbrite.com/e/87324900127">event</a></h4>
+                  <h2 class="title">Seven Years of Poetic Computation</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">January 12 - 23, 2020 <span class="dot">·</span> 4pm ET <span
+                      class="dot">·</span>Westbeth Gallery, NYC</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4 featured codesocieties-20 session">
+              <div class="featured-text">
+                <img src="images/sessions/codesocieties-20/cover.gif">
+                <div class="top">
+                  <h4 class="type"><a href="/sessions/codesocieties-20">session</a></h4>
+                  <h2 class="title">Code Societies</h2>
+                </div>
+                <div class="bottom">
+                  <h4 class="details">Jan 4 - Jan 25, 2020 <span class="dot">·</span>155 Bank St., NYC<span
+                      class="dot">·</span> 14 workshops</h4>
+                </div>
+              </div>
+            </div>
 
 
+          </div>
 
-
+        </section>
 
 
 
@@ -1102,6 +1150,7 @@ We center people who are often excluded from art, technology, and education spac
       <div class="break"></div>
 
 
+      {{!-- TODO: REPLACE OUTDATED LINKS --}}
       <section id="section-outro">
         <p tabindex="0" class="large">
           We are still working on archiving all our past programs. View our past programs <a
