@@ -380,6 +380,24 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         font-size: calc(var(--large-text) * .7) !important;
         }
 
+        .fall-24 .sticker {
+          position:absolute;
+          width:calc(50px + 2vw);
+          z-index:9999;
+          pointer-events: none;
+
+        }
+        .fall-24 #home {
+          gap:0px;
+          position:relative;
+        }
+        .currently .fall-24, .fall-24 .home-intro {
+          position:relative;
+        }
+        .fall-24 p.large {
+          font-size: calc(20px + 1.5vw);
+        }
+
         .summer-24.featured .title,
         .summer-24 #session-name, #tag.summer-24 {
           font-family: var(--summer-24-title-font) !important;
