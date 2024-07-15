@@ -1,4 +1,4 @@
-<section id="section-accessibility" class="">
+{{!-- <section id="section-accessibility" class="">
   <div class="grid-2">
     <h1>Accessibility</h1>
   </div>
@@ -15,7 +15,7 @@
     <p><a href="mailto:admissions@sfpc.study">reach out with questions about access...</a>
     </p>
   </div>
-</section>
+</section> --}}
 
 
 
@@ -39,11 +39,6 @@
       <a href="{{applicationLink}}" id="application-link">Apply Now</a>
     </p>
 
-    {{#if appQuestion}}  <p>
-        <i><span class="hide-appsClosed">{{appQuestion}}</span></i>
-
-      </p>{{/if}}
-
     <p>
       <span class="hide-appsClosed">Applications open until</span>
       <span class="hide-appsOpen">Applications closed on</span>
@@ -54,9 +49,6 @@
 
     <p>You can expect to hear back from us about the status of your application on {{notifyDate}}. Please email us at <a
         href="mailto:admissions@sfpc.study">admissions@sfpc.study</a> with any questions you have.
-    </p>
-    <p>
-      <a href="/about/participating">more about what we look for in participants...</a>
     </p>
   </div>
 </section>
@@ -129,7 +121,7 @@ Through this grant, we offer tuition-free classes that interrogate the role tech
 
 
 
-<section id="section-scholarships" class="">
+{{!-- <section id="section-scholarships" class="">
   <div class="grid-2">
     <h1>I can’t pay for SFPC. Can I come at a reduced rate, or for free?</h1>
   </div>
@@ -156,10 +148,10 @@ Through this grant, we offer tuition-free classes that interrogate the role tech
   </div>
 </section>
 
-<div class="break"></div>
+<div class="break"></div> --}}
 
 
-<section id="section-donate" class="">
+{{!-- <section id="section-donate" class="">
   <div class="grid-2">
     <h1>How can I help others to attend SFPC?</h1>
   </div>
@@ -177,9 +169,9 @@ Through this grant, we offer tuition-free classes that interrogate the role tech
   </div>
 </section>
 </div>
-<div class="break"></div>
+<div class="break"></div> --}}
 
-<section id="section-refund" class="">
+{{!-- <section id="section-refund" class="">
   <div class="grid-2">
     <h1>What if I can’t go, can I get a refund?</h1>
   </div>
@@ -191,10 +183,10 @@ Through this grant, we offer tuition-free classes that interrogate the role tech
       <li>No refunds can be given after the first day of the class, including for payment plans
     </ul>
   </div>
-</section>
+</section> --}}
 
 
-<div class="break"></div>
+{{!-- <div class="break"></div> --}}
 {{#eq [Session Slug].[0] "spring-22"}}
 {{> spring22classBlock}}
 {{/eq}}
