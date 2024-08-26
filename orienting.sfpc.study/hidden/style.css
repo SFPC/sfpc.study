@@ -1,0 +1,58 @@
+@font-face {
+  			font-family: 'Steps-Mono';
+  			src:  url('/hidden/steps-mono/steps-mono-webfont.woff2') format('woff2'),
+        url('steps-mono.otf') format('opentype');
+			}
+			@font-face {
+					font-family: 'Nostra';
+					src:  url('/hidden/Nostrav1.0-Stream.otf') format('opentype');
+				}
+      body {
+      	background-color: lightgrey;
+      	margin: 33px;
+      	color: #333;
+        font-family: "Courier New", Courier;
+      	}
+
+
+      a {
+      	text-decoration: underline;
+      	color: blue;
+				font-weight: bold;
+				font-size: 1.3em;
+      	}
+      a:visited {
+      	color: blue;
+      	}
+      a:hover {
+      	color: blue;
+      	}
+      pre {
+      	font: 0.9em/1.3em "Courier New", Courier;
+      	margin: 13px 0;
+      	color: #777;
+      	}
+      pre img {
+      	display: inline;
+      	}
+      img {
+      	margin: 13px 0;
+				width: 3em;
+    		margin-bottom: -0.2em;
+      	}
+
+				#myVideo {
+					position: fixed;
+			    right: 0;
+			    bottom: 0;
+			    min-width: 100%;
+			    min-height: 100%;
+			    z-index: -1;
+			    opacity: .6;
+					filter: grayscale(100%);
+					pointer-events: none;
+				}
+
+        h1 {
+          font-family: "Courier New", Courier;
+        }

@@ -1,0 +1,315 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Welcome to SFPC</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="assets/favicon.ico?v=2" />
+        <link rel="stylesheet" href="/hidden/style.css">
+        <style media="screen">
+
+        #discordData,#discordInfo{
+    display:flex;
+    height:50px
+}
+#callToAction,#callToAction-clicked{
+    bottom:0;
+    cursor:pointer;
+    height:40px;
+    left:0;
+    min-height:32px;
+    min-width:73px;
+    position:relative;
+    right:0;
+    top:0;
+    align-self:center;
+    margin:0 0 0 10px;
+    padding:2px 16px
+}
+/* #buttonText, */
+#introText,#serverNameBox,#status{
+    text-overflow:ellipsis;
+    overflow:hidden
+}
+@font-face{
+    font-family:Whitney;
+    font-weight:300;
+    src:url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff) format("woff")
+}
+@font-face{
+    font-family:Whitney;
+    font-weight:400;
+    src:url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff) format("woff")
+}
+@font-face{
+    font-family:Whitney;
+    font-weight:500;
+    src:url(https://discordapp.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff) format("woff")
+}
+@font-face{
+    font-family:Whitney;
+    font-weight:600;
+    src:url(https://discordapp.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff) format("woff")
+}
+@font-face{
+    font-family:Whitney;
+    font-weight:700;
+    src:url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff) format("woff")
+}
+.noselect{
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+#discordInviteBox{
+    background-color:#37393e;
+    display:inline-block;
+    margin-left: calc(50vw - 250px);
+
+}
+#discordInvite{
+    text-align:left;
+    box-sizing:border-box;
+    color:#fff;
+    background:rgba(47,49,54,.6);
+    border:1px solid rgba(47,49,54,.9);
+    border-radius:3px;
+    font:normal normal 400 normal 16px/16px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin:0;
+    padding:10px 15px 10px 10px;
+    display:inline-block;
+}
+#offlineInd,#onlineInd{
+    height:8px;
+    width:8px;
+    border-radius:50%;
+    margin:0 4px 0 0;
+    display:block
+}
+#introText{
+    color:#b9bbbe;
+    height:16px;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+    flex:1 1 0%;
+    font:normal normal 600 normal 12px/16px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin:0 0 8px
+}
+#serverImg{
+    background-position:50% 50%;
+    bottom:0;
+    cursor:pointer;
+    height:50px;
+    left:0;
+    position:relative;
+    right:0;
+    top:0;
+    width:50px;
+    border-radius:15px;
+    flex:0 0 auto;
+    margin:0 10px 0 0
+}
+#discordInviteError{
+    background-color:red;
+    color:#fff
+}
+#discordInfo{
+    align-items:stretch;
+    justify-content:center;
+    flex:1 1 auto;
+    flex-flow:column nowrap
+}
+#callToAction,#statusIndicators{
+    align-items:center;
+    display:flex
+}
+#serverNameBox{
+    color:#f6f6f7;
+    cursor:pointer;
+    height:20px;
+    font:normal normal 600 normal 16px/20px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin:0 0 4px
+}
+#serverNameBox:hover{
+    text-decoration:underline;
+}
+#status,#statusIndicators{
+    font:normal normal 600 normal 12px/16px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color:#72767d;
+    height:16px
+}
+#statusIndicators{
+    justify-content:flex-start
+}
+#onlineInd{
+    color:#72767d;
+    column-rule-color:#72767d;
+    background:#43b581;
+    font:italic normal 600 normal 12px/16px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif
+}
+#numOnline{
+    color:#72767d;
+    display:block;
+    height:16px;
+    font:normal normal 600 normal 12px/16px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin:0 8px 0 0
+}
+#offlineInd{
+    color:#72767d;
+    background:#747f8d;
+    font:italic normal 600 normal 12px/16px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif
+}
+#numTotal{
+    color:#72767d;
+    display:block;
+    height:16px;
+    font:normal normal 600 normal 12px/16px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif
+}
+#callToAction{
+    color:#fff;
+    border:0;
+    justify-content:center;
+    background:#43b581;
+    border-radius:3px;
+    font:normal normal 500 normal 14px/20px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    transition:background-color .17s ease 0s;
+}
+#callToAction:hover{
+    background-color:#3ca374
+}
+#callToAction-clicked{
+    color:#dcddde;
+    display:flex;
+    overflow-wrap:break-word;
+    word-wrap:break-word;
+    align-items:center;
+    justify-content:center;
+    user-select:none;
+    background:rgba(0,0,0,0);
+    border:1px solid rgba(114,118,126,.298);
+    border-radius:3px;
+    font:normal normal 500 normal 14px/20px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    transition:color .17s ease 0s,background-color .17s ease 0s,border-color .17s ease 0s
+}
+#discordPoly,#gDiscord{
+    white-space:nowrap;
+    word-wrap:break-word;
+    column-rule-color:#dcddde;
+    user-select:none;
+    fill:none;
+    border:0 #dcddde;
+    overflow-wrap:break-word;
+    cursor:pointer;
+    text-align:center;
+    font:normal normal 500 normal 14px/20px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif
+}
+#callToAction-clicked:hover{
+    border-color:hsla(218,5%,47%,.6)
+}
+#discordSVG{
+    color:#dcddde;
+    height:18px;
+    width:18px;
+    margin:0 0 0 8px
+}
+#gDiscord{
+    fill-rule:evenodd
+}
+#discordPoly{
+    text-decoration:none solid #dcddde;
+    fill-rule:evenodd;
+    stroke:#dcddde;
+    stroke-width:2px;
+    caret-color:#dcddde;
+    outline:#dcddde 0
+}
+#joinedDiscord{
+    color:#dcddde;
+    cursor:pointer;
+    display:flex;
+    height:20px;
+    overflow-wrap:break-word;
+    text-align:center;
+    font:normal normal 500 normal 14px/20px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    overflow:hidden
+}
+#buttonText{
+    cursor:pointer;
+    display:flex;
+    height:20px;
+    text-align:center;
+    font:normal normal 500 normal 14px/20px Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin:0 8.83px
+}
+.loadHidden{
+    display:none
+}
+
+        </style>
+
+        <script>
+
+        var discordInvite = discordInvite || function() {
+    var i = {},
+        e = "1.0";
+    return {
+        init: function(e) {
+            e.inviteCode = void 0 !== e.inviteCode && e.inviteCode, e.title = void 0 !== e.title ? e.title : "", e.introText = void 0 !== e.introText ? e.introText : "YOU'VE BEEN INVITED TO JOIN A SERVER", e.joinText = void 0 !== e.joinText ? e.joinText : "Join", e.joinedText = void 0 !== e.joinedText ? e.joinedText : "Joined", e.width = void 0 !== e.width ? e.width : 500, e.miniMode = void 0 !== e.miniMode && e.miniMode, e.hideIntro = void 0 !== e.hideIntro && e.hideIntro, e.targetElement = void 0 !== e.targetElement ? e.targetElement : "#discordInviteBox", i.inviteCode = e.inviteCode, i.title = e.title, i.introText = e.introText, i.joinText = e.joinText, i.joinedText = e.joinedText, i.miniMode = e.miniMode, i.hideIntro = e.hideIntro, i.width = e.width, i.targetElement = e.targetElement
+        },
+        render: function() {
+            if (window.jQuery) d();
+            else {
+                var t = document.createElement("script");
+                t.type = "text/javascript", t.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", document.head.appendChild(t), t.onload = function() {
+                    d()
+                }
+            }
+
+            function d() {
+                if (discordCode = i.inviteCode, discordCode && "" != discordCode) {
+                    i.miniMode ? i.width = "auto" : "number" == typeof i.width && (i.width = i.width + "px");
+                    var t = '<div id="discordInvite" style="width: ' + i.width + ';"><h5 id="introText" class="noselect loadHidden">' + i.introText + '</h5><div id="discordData"><div id="serverImg" class="discordLink loadHidden" style="background: rgb(54, 57, 63) repeat scroll 50% 50% / 100% 100% padding-box padding-box;"></div><div id="discordInfo"><div id="serverNameBox" class="discordLink"><span class="noselect" id="serverName">' + i.title + '</span></div><div id="status" class="loadHidden"><div id="statusIndicators" class="noselect"><i id="onlineInd"></i><span id="numOnline">... Online</span><i id="offlineInd"></i><span id="numTotal">... Members</span></div></div></div><button type="button" class="discordLink" id="callToAction"><div id="buttonText" class="noselect">' + i.joinText + "</div></button></div></div>",
+                        d = '<div id="joinedDiscord">' + i.joinedText + '<svg name="Checkmark" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" id="discordSVG"><g fill="none" fill-rule="evenodd" id="gDiscord"><polyline stroke="currentColor" stroke-width="2" points="3.5 9.5 7 13 15 5" id="discordPolyline"></polyline></g></svg></div>';
+                    $(i.targetElement).append(t).attr("version", e), $.ajax({
+                        url: "https://discordapp.com/api/v6/invite/" + discordCode + "?with_counts=true",
+                        success: function(e) {
+                            e.code;
+                            var t = e.approximate_member_count.toLocaleString("en") + " Members",
+                                o = e.approximate_presence_count.toLocaleString("en") + " Online",
+                                n = e.guild.name,
+                                r = "https://cdn.discordapp.com/icons/" + e.guild.id + "/" + e.guild.icon + ".jpg";
+                            $("#serverName").html(n), $("#serverImg").css("background-image", "url(" + r + ")"), $("#numTotal").html(t), $("#numOnline").html(o), $(".discordLink").click(function() {
+                                $("#callToAction").html(d).attr("id", "callToAction-clicked"), url = "https://discordapp.com/invite/" + i.inviteCode, window.open(url, "_blank")
+                            }), $(".loadHidden").show(), i.miniMode && $("#offlineInd, #numTotal").hide(), i.hideIntro && $("#introText").hide()
+                        },
+                        error: function(i) {
+                            $("#discordInvite").css("width", "auto");
+                            var e = null;
+                            void 0 !== i.responseJSON ? ($("#buttonText").html(i.responseJSON.message), $("#discordInfo").remove()) : ($("#discordData").remove(), e = !0), e ? $("#introText").html("ERROR: Invalid Data URL.") : $("#introText").html("An error has occurred."), $("#introText").css("margin", 0).show()
+                        }
+                    })
+                } else $(i.targetElement).html("Error: No Invite Code Provided").attr("id", "discordInviteError").css("display", "inline-block")
+            }
+        }
+    }
+}();
+
+  discordInvite.init({
+  inviteCode: 'BBWGEtSMxh',
+  title: 'SFPC Discord',
+});
+discordInvite.render();
+</script>
+
+
+    </head>
+    <body>
+
+      <div id="discordInviteBox"></div>
+
+    </body>
+</html>

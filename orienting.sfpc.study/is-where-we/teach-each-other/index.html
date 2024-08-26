@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Welcome to SFPC</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="assets/favicon.ico?v=2" />
+        <link rel="stylesheet" href="/hidden/style.css">
+        <style media="screen">
+        /* iframe {
+              border: 0;
+              width: 100vw;
+            height: 100vh;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            }
+
+        body{
+          margin: 1em;
+        } */
+        </style>
+
+
+        <SCRIPT>
+        function passWord() {
+        var testV = 1;
+        var pass1 = prompt('Please Enter Your Password',' ');
+        while (testV < 3) {
+        if (!pass1)
+        history.go(-1);
+        if (pass1.toLowerCase() == "study") {
+        alert('Welcome! Be sure to enable popups in order to enter.');
+        window.open('how-to');
+        history.back();
+        break;
+        }
+        testV+=1;
+        var pass1 =
+        prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+        }
+        if (pass1.toLowerCase()!="password" & testV ==3)
+        history.go(-1);
+        return " ";
+        }
+        </SCRIPT>
+
+
+    </head>
+    <body>
+
+      <CENTER>
+      <FORM>
+      <input type="button" value="Enter: For Teachers Only" onClick="passWord()">
+      </FORM>
+    </center>
+
+
+    </body>
+</html>
