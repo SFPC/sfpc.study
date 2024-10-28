@@ -402,12 +402,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
           font-size: 1rem;
 
         }
-        @media (width > 1400px) {
-          .winter-25.grid-4.featured {
-            aspect-ratio: 1.8;
-          }
 
-        }
         .winter-25.featured {
           border: 3px double var(--winter-25-text);
           border-left: 10px double var(--winter-25-text);
