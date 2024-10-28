@@ -238,7 +238,7 @@ app.get("/events/:slug", async (req,res) => {
 })
 
 app.get("/", async (req,res) => {
-  const response = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
+  // const response = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
   // const testimonialData = response.map((testimonial) => {
   //   console.log(testimonial)
   //   return parseTestimonials(testimonial)
@@ -249,7 +249,17 @@ app.get("/", async (req,res) => {
   res.render("index")
 })
 
-
+app.get("/index_staging", async (req,res) => {
+  // const response = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
+  // const testimonialData = response.map((testimonial) => {
+  //   console.log(testimonial)
+  //   return parseTestimonials(testimonial)
+  // })
+  // console.log(testimonialData)
+  // // let pageContent = getPageContent()
+  // res.render("index", {testimonials: testimonialData})
+  res.render("index_staging")
+})
 app.get("/about", async (req,res) => {
   const donorinfo = await getDatabaseEntries("f10d523dd9b24d44ae2d9a6c26b4f5ee", [{property:"Name", direction:"ascending"}], {property:"Public", "checkbox": {"equals": true}})
   const donorData = donorinfo.map((donor) => {

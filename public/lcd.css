@@ -27,6 +27,12 @@
       --spring-24-text-on-bg: #0061ac; //
     --spring-24-link:  #000; // link color
       --spring-24-special-text:  #5294c7; */
+      --winter-25-background: #DCD7CE;
+      --winter-25-text: #242424;
+       --winter-25-text-on-bg: #242424;
+     --winter-25-link:  #5676CB;
+       --winter-25-special-text:  #5676CB;
+
       --fall-24-background: #BB94A0;
       --fall-24-text: #5A4148;
        --fall-24-text-on-bg: #5A4148;
@@ -322,9 +328,213 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+/* /////////// start winter-25  ///////////////////////////////*/
+
+.winter-25,
+.winter-25.featured.session,
+.winter-25.featured  {
+ color: var(--winter-25-text);
+ box-sizing: border-box;
+ border-color: var(--winter-25-text);
+ /* background-image: url('images/sessions/winter-25/bg.png'); */
+ background-position: center;
+ background-repeat: repeat;
+ background-size: cover;
+}
+
+.winter-25.featured:hover {
+  /* background-size: 200%; */
+}
 
 
-/* /////////// start summer-24  ///////////////////////////////*/
+
+
+.winter-25,
+.winter-25.featured.session,
+.shell .winter-25,
+.winter-25.featured  {
+  /* background-color: var(--winter-25-background)  !important; */
+  color: var(--winter-25-text);
+  box-sizing: border-box;
+  border-color: var(--winter-25-text);
+  text-shadow: none !important;
+}
+
+
+      .winter-25 p,
+      .winter-25 p a,
+      .winter-25 a,
+      .winter-25.featured h4,
+      .winter-25 h4 a,
+      .winter-25 .intro a,
+      .winter-25 p.large a,
+      .winter-25 p a:hover,
+      .winter-25.session.featured,
+      .winter-25.session.featured a,
+      .winter-25.featured h4.type a,
+      .sfpc .winter-25 a
+      {
+        color: var(--winter-25-text) !important;
+      }
+
+      .winter-25 h4 a:hover,
+      .winter-25 .intro a,
+      .winter-25 p.large a:hover,
+      .winter-25.featured:hover h6,
+      .winter-25.featured:hover .title,
+      .winter-25 .details a:hover,
+      .winter-25.featured .title:hover,
+      .winter-25 p a:hover,
+      .winter-25 h4 a:hover,
+      .winter-25 section .grid-2 ul li::before,
+      .winter-25 .chars,
+      .winter-25 p a:hover,
+      .winter-25 a:hover,
+      .winter-25 h4 a:hover,
+      .winter-25 .intro a:hover,
+      .winter-25 .details a:hover,
+      .winter-25 .entity:hover .accordion dt h3:after,
+      .winter-25 .accordion dt h3:after,
+      .winter-25 .expanded{
+          color: var(--winter-25-link) !important;
+      }
+
+      .winter-25 #cost,
+      .winter-25 .fixed-apply,
+      .winter-25 .fixed-support,
+      .winter-25 .home-intro span#session-name::after {
+          color: var(--winter-25-background) !important;
+          background: var(--winter-25-link) !important;
+      }
+
+      .winter-25 span#cost {
+        background: var(--winter-25-link) !important;
+      }
+
+
+      .winter-25 .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .winter-25 .block-text {
+        background-color: var(--winter-25-background);
+        color: var(--winter-25-link);
+      }
+
+
+
+      .winter-25.grid-inner, .winter-25 .grid-inner {
+        border: 2px dotted var(--winter-25-text) !important;
+        color: var(--winter-25-link) !important;
+      }
+
+      .winter-25 #class .entity,
+      .winter-25.website-grid .grid-2 {
+        border-color: var(--winter-25-text);
+      }
+
+      .winter-25 #class .entity:hover {
+        border-color: var(--winter-25-link);
+      }
+
+      .winter-25 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--winter-25-background) !important;
+      }
+
+
+      .winter-25 select#allSections:hover,
+      .winter-25 .loader-content p::after,
+      .winter-25 span#cost
+      {
+        background: var(--winter-25-link) !important;
+        color: var(--winter-25-background) !important;
+      }
+
+      .winter-25 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .winter-25 .breadcrumb.fixed,
+      .winter-25 .breadcrumb.fixed::before,
+      .winter-25 .breadcrumb.fixed a,
+      .winter-25 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .winter-25 .breadcrumb,
+      .winter-25 .breadcrumb a,
+      .winter-25 .text-on-bg,
+      .winter-25 .breadcrumb a:hover {
+          color: var(--winter-25-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--winter-25-background);
+      }
+
+
+      .winter-25 section#section-outro,
+      #class .intro.winter-25,
+      .shell.winter-25 .class-details,
+      .winter-25 #class section,
+      .winter-25 #class .entity,
+      .winter-25 .accordion dd.active,
+      .winter-25 section ul,
+      .winter-25 .website-grid
+       {
+        /* background-color: var(--winter-25-background); */
+        background: none;
+        color:  var(--winter-25-text) !important;
+        border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--summer-24-background); */
+
+
+        /* -webkit-text-stroke-width: 1px; */
+          /* -webkit-text-stroke-color: var(--summer-24-link); */
+      }
+
+      .winter-25.featured .title,
+      .winter-25 #session-name, #tag.winter-25,
+
+    .winter-25  #session-name > a
+
+       {
+      /* -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--winter-25-link); */
+      }
+
+      .winter-25 #class section,
+      #class .intro.winter-25 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .winter-25 #class section.stacked,
+      .winter-25 .section-testimonials,
+      .winter-25 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important;
+        /* text-shadow: 2px 2px 0px var(--winter-25-background); */
+
+      }
+
+      .winter-25 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--winter-25-text);
+      }
+
+      .shell.winter-25 {
+        background-image: url('images/sessions/winter-25/bg.png');
+        /* background-size: 100%; */
+        background-position: bottom;
+        background-color: #fff;
+      }
+
+
+/* /////////// end winter-25  ///////////////////////////////*/
+
+
+/* /////////// start fall-24  ///////////////////////////////*/
 
 .fall-24,
 .fall-24.featured.session,

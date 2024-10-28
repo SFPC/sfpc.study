@@ -34,6 +34,10 @@
     --spring-24-header-font: 'Wonder Type', sans-serif;
     --spring-24-body-font: 'Wonder Type', sans-serif;
     --spring-24-special-font: 'Wonder Type', sans-serif; */
+    --winter-25-title-font: 'Soft Serve', sans-serif;
+    --winter-25-header-font: 'Arial Rounded Bold', sans-serif;
+    --winter-25-body-font: 'Happy Times', sans-serif;
+    --winter-25-special-font: 'Arial Rounded Bold', sans-serif;
 
     --fall-24-title-font: 'Bootzy', sans-serif;
     --fall-24-header-font: 'Bootzy', sans-serif;
@@ -145,7 +149,27 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 
 .tk-soda-script { font-family: "soda-script",sans-serif; }
 
-
+@font-face {
+  font-family: 'Happy Times';
+  src:  url('/fonts/happy-times.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Soft Serve';
+  src:  url('/fonts/SoftServe_SCD.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Arial Rounded Bold';
+  src:  url('/fonts/Arial Rounded Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
     font-family: 'Arial Narrow';
     src:  url('/fonts/Arial-Narrow-Bold.ttf') format('truetype');
@@ -364,6 +388,48 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         .spring-24.session .title.class{
         font-size: calc(var(--large-text) * .7) !important;
         } */
+        .winter-25.featured .title,
+        .winter-25 #session-name, #tag.winter-25 {
+          font-family: var(--winter-25-title-font) !important;
+          text-transform: uppercase;
+          line-height:1em;
+
+        }
+
+        .winter-25 .index-teachers {
+          font-family: var(--winter-25-title-font) !important;
+          letter-spacing: .05rem;
+          font-size: 1rem;
+
+        }
+
+        .winter-25.featured {
+          border: 3px double var(--winter-25-text);
+          border-left: 10px double var(--winter-25-text);
+        }
+        .winter-25.featured .title {
+          font-size: 2rem;
+          line-height:1em;
+        }
+
+        #tag.winter-25 {
+        color: var(--winter-25-text);
+        }
+
+        .winter-25.session .title.class{
+        font-size: calc(var(--large-text) * .7) !important;
+        }
+
+        .winter-25 #home {
+          gap:0px;
+          position:relative;
+        }
+        .currently .winter-25, .winter-25 .home-intro {
+          position:relative;
+        }
+        .winter-25 p.large {
+          font-size: calc(20px + 1.5vw) !important;
+        }
 
         .fall-24.featured .title,
         .fall-24 #session-name, #tag.fall-24 {
