@@ -359,7 +359,10 @@ select#allSections {
   border-color: var(--winter-25-text);
   text-shadow: none !important;
 }
-
+.winter-25.featured {
+  border: 3px double var(--winter-25-text);
+  border-left: 10px double var(--winter-25-text);
+}
 
       .winter-25 p,
       .winter-25 p a,

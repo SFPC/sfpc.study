@@ -404,8 +404,8 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         }
 
         .winter-25.featured {
-          border: 3px double var(--winter-25-text);
-          border-left: 10px double var(--winter-25-text);
+          border: 3px double var(--text-color);
+          border-left: 10px double var(--text-color);
         }
         .winter-25.featured .title {
           font-size: 2rem;
