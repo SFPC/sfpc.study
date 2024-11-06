@@ -117,21 +117,7 @@
     <div id="store" class="store shell-content hide-content allProjects projectsDiv">
 
 
-      <section id="section-market">
-        <div class="grid-2">
-         <h1>Our Store</h1>
-        </div>
-        <div class="grid-2">
-          <p>
-            Your purchase supports scholarships for people who have been historically excluded from art and technology fields and increases access to learn at SFPC <3
-          </p>
-        </div>
-      </section>
-
-
-<div class="break"></div>
-
-      <section id="section-market">
+      {{!-- <section id="section-market">
         <div class="grid-2">
          <h1>Merch</h1>
         </div>
@@ -142,7 +128,7 @@
       </section>
 
 
-      <div class="break-noline-small"></div>
+      <div class="break-noline-small"></div> --}}
       <section id="section-market" class="stacked stacked-4">
         <div class="grid-1 participate">
 
@@ -194,6 +180,64 @@
           {{/eq}}
           {{/if}}
           {{/each}}
+                          {{#each products}}
+                {{#if publish}}
+                {{#if availableForSale}}
+                {{#eq type "Printed Matter"}}
+                {{#eq selltype "Community Market"}}
+                {{else}}
+
+                        <div id="{{this.[Website-Slug]}}"
+                          class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
+                          ">
+                          <div class="featured-text">
+                            <img src="{{this.[Image-URL]}}">
+                            <div class="top">
+                              <h4 class="type type-list-comma"><a href="/store/{{this.[Website-Slug]}}">{{#each
+                                  this.[Tags]}} {{this}}{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}
+                                 </a> {{#each
+                                     this.[Special]}} · <i class="special">{{this}}</i>{{#if @last}}{{else}}<i class="comma">,</i> {{/if}}{{/each}}</h4>
+                              <h2 class="title Purchase">{{this.Name}}</h2>
+                              {{#if [Contributor]}}
+                              {{/if}}
+                                <BR>
+
+
+                                  {{#if availableForSale}}
+                                    {{#if mto}}
+                                    {{else}}
+                                      {{#if totalInventory }}
+                                      {{#lte availableInventory 10}}
+                                      <h4><span>Only {{availableInventory}} left!</span></h4>
+                                      <BR>
+                                      {{/lte}}
+                                      {{/if}}
+
+                                    {{/if}}
+
+                                    <h3><span id=”cost”>${{cost}}</span></h3>
+
+                                  {{else}}
+
+                                  {{#eq [selltype] "Raffle Only"}}
+                                  <h3><span id=”cost”>Available via Raffle</span></h3>
+                                  {{else}}
+                                    <h3><span id=”cost”>Out of Stock</span></h3>
+                                  {{/eq}}
+
+                              {{/if}}
+                            </div>
+
+                          </div>
+                        </div>
+
+
+
+                {{/eq}}
+                {{/eq}}
+                {{/if}}
+                {{/if}}
+                {{/each}}
 
 
 
@@ -205,7 +249,7 @@
 
 <div class="break"></div>
 
-      <section id="section-market">
+      {{!-- <section id="section-market">
         <div class="grid-2">
          <h1>Publications</h1>
         </div>
@@ -283,7 +327,7 @@
 
 
           </div>
-        </section>
+        </section> --}}
 
 
 
