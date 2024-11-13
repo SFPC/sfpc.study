@@ -590,7 +590,7 @@ app.get("/store", async (req, res) => {
 
 
   const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
-    { property: "Name", direction: "descending" },
+    { property: "Cost", direction: "ascending" },
   ]);
   console.log(response);
 

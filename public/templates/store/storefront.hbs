@@ -135,7 +135,7 @@
 
           {{#each products}}
           {{#if publish}}
-          {{#eq type "Merch"}}
+          {{!-- {{#eq type "Merch"}} --}}
 
           <div id="{{this.[Website-Slug]}}"
             class="grid-4 featured {{this.[Website-Slug]}} product" data-location="
@@ -177,10 +177,10 @@
 
 
 
-          {{/eq}}
+          {{!-- {{/eq}} --}}
           {{/if}}
           {{/each}}
-                          {{#each products}}
+          {{!-- {{#each products}}
                 {{#if publish}}
                 {{#if availableForSale}}
                 {{#eq type "Printed Matter"}}
@@ -237,7 +237,7 @@
                 {{/eq}}
                 {{/if}}
                 {{/if}}
-                {{/each}}
+                {{/each}} --}}
 
 
 
