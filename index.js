@@ -943,16 +943,16 @@ app.get("/donate/:slug", async (req, res) => {
 
 
 app.get("/participate", async (req,res) => {
-  const sessions = await getDatabaseEntries("ba1f9876ad3e4810880d4802d3d70d6f", [{property:"Date", direction:"descending"}])
-  const events = await getDatabaseEntries("10c62665c6ca4383bbdc12788c45df14", [{property:"Date", direction:"descending"}])
+  // const sessions = await getDatabaseEntries("ba1f9876ad3e4810880d4802d3d70d6f", [{property:"Date", direction:"descending"}])
+  // const events = await getDatabaseEntries("10c62665c6ca4383bbdc12788c45df14", [{property:"Date", direction:"descending"}])
 
-  const programData = sessions.map((program) => {
-    console.log(program)
-    return parsePrograms(program)
-  })
-  console.log(programData)
+  // const programData = sessions.map((program) => {
+  //   console.log(program)
+  //   return parsePrograms(program)
+  // })
+  // console.log(programData)
   // let pageContent = getPageContent()
-  res.render("programs/participate", {programs: programData})
+  res.render("programs/participate")
 })
 app.get("/participateTest", async (req,res) => {
   const sessions = await getDatabaseEntries("ba1f9876ad3e4810880d4802d3d70d6f", [{property:"Date", direction:"descending"}])
