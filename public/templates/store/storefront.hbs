@@ -152,10 +152,12 @@
                   <BR>
                 {{#if availableForSale}}
                   {{#if totalInventory }}
+                  {{#gte availableInventory 1}}
                   {{#lte availableInventory 10}}
                   <h4><span>Only {{availableInventory}} left!</span></h4>
                   <BR>
                   {{/lte}}
+                  {{/gte}}
                   {{/if}}
 
                   <h3><span id=”cost”>${{cost}}</span></h3>
