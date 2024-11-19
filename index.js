@@ -859,44 +859,45 @@ app.get("/fundraiser/winter-23/:slug", async (req, res) => {
 
 app.get("/donate", async (req, res) => {
 
-  const responseTest = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
-  const testimonialData = responseTest.map((testimonial) => {
-    console.log(testimonial)
-    return parseTestimonials(testimonial)
-  })
-  console.log(testimonialData)
+  // const responseTest = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
+  // const testimonialData = responseTest.map((testimonial) => {
+  //   console.log(testimonial)
+  //   return parseTestimonials(testimonial)
+  // })
+  // console.log(testimonialData)
 
-  const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
-    { property: "Name", direction: "descending" },
-  ]);
-  console.log(response);
+  // const response = await getDatabaseEntries(NOTION_STORE_DATABASE_ID, [
+  //   { property: "Name", direction: "descending" },
+  // ]);
+  // console.log(response);
 
-  const productsData = response.map((product) => {
-    return parseProductData(product);
-  });
+  // const productsData = response.map((product) => {
+  //   return parseProductData(product);
+  // });
 
-  const shopifyData = await getShopifyProducts();
+  // const shopifyData = await getShopifyProducts();
 
-  for (const product of productsData) {
-    const shopifyId = product["Shopify ID"];
+  // for (const product of productsData) {
+  //   const shopifyId = product["Shopify ID"];
 
-    if (!shopifyId) {
-      continue;
-    }
+  //   if (!shopifyId) {
+  //     continue;
+  //   }
 
-    const node = shopifyData[`gid://shopify/Product/${shopifyId}`];
+  //   const node = shopifyData[`gid://shopify/Product/${shopifyId}`];
 
-    if (node) {
-      product.availableForSale = node.availableForSale;
-      product.totalInventory = node.totalInventory;
-      product.availableInventory = node.variants.edges.reduce((accum, val) => {
-        return accum + val.node.quantityAvailable;
-      }, 0);
-    }
-  }
+  //   if (node) {
+  //     product.availableForSale = node.availableForSale;
+  //     product.totalInventory = node.totalInventory;
+  //     product.availableInventory = node.variants.edges.reduce((accum, val) => {
+  //       return accum + val.node.quantityAvailable;
+  //     }, 0);
+  //   }
+  // }
 
-  console.log(productsData);
-  res.render("donate/storefront", { products: productsData, testimonials: testimonialData });
+  // console.log(productsData);
+  // res.render("donate/storefront", { products: productsData, testimonials: testimonialData });
+  res.render("donate/storefront");
 });
 
 
