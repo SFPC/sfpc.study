@@ -85,7 +85,8 @@ for (let i = 0; i <= 2; i += 1) {
 var pi1 = participateImagesFeatured[Math.floor( Math.random() * participateImagesFeatured.length )];
 var si1 = spaceImagesFeatured[Math.floor( Math.random() * spaceImagesFeatured.length )];
 
-for (var a=[],i=0;i<121;++i) a[i]=i; //community images
+for (var a=[],i=0;i<21;++i) a[i]=i; //community images
+for (i=98;i<120;++i) a.push(i); //community images
 for (var b=[],i=0;i<17;++i) b[i]=i; //space images
 
 function shuffle(array) {
@@ -113,7 +114,7 @@ for (let i = 0; i <= 19; i += 1) {
 var c1 = participateImages[Math.floor( Math.random() * participateImages.length )];
 
 
-$(".pi1 img").attr("src", pi1);
+$(".pi1 img").attr("src", participateImages[1]);
 $(".pi2 img").attr("src", participateImages[2]);
 $(".pi3 img").attr("src", participateImages[3]);
 $(".pi4 img").attr("src", participateImages[4]);
@@ -121,17 +122,7 @@ $(".pi5 img").attr("src", participateImages[5]);
 $(".pi6 img").attr("src", participateImages[6]);
 $(".pi7 img").attr("src", participateImages[7]);
 $(".pi8 img").attr("src", participateImages[8]);
-$(".pi9 img").attr("src", participateImages[9]);
-$(".pi10 img").attr("src", participateImages[10]);
-$(".pi11 img").attr("src", participateImages[11]);
-$(".pi12 img").attr("src", participateImages[12]);
-$(".pi13 img").attr("src", participateImages[13]);
-$(".pi14 img").attr("src", participateImages[14]);
-$(".pi15 img").attr("src", participateImages[15]);
-$(".pi16 img").attr("src", participateImages[16]);
-$(".pi17 img").attr("src", participateImages[17]);
-$(".pi18 img").attr("src", participateImages[18]);
-$(".pi19 img").attr("src", participateImages[19]);
+
 
 $(".si1 img").attr("src", si1);
 $(".si2 img").attr("src", spaceImages[2]);
@@ -141,8 +132,7 @@ $(".si5 img").attr("src", spaceImages[5]);
 $(".si6 img").attr("src", spaceImages[6]);
 $(".si7 img").attr("src", spaceImages[7]);
 $(".si8 img").attr("src", spaceImages[8]);
-$(".si9 img").attr("src", spaceImages[9]);
-$(".si10 img").attr("src", spaceImages[10]);
+
 
 
 $("img.c1").attr("src", c1);
