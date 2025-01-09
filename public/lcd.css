@@ -27,6 +27,12 @@
       --spring-24-text-on-bg: #0061ac; //
     --spring-24-link:  #000; // link color
       --spring-24-special-text:  #5294c7; */
+      --spring-25-background: #131313;
+      --spring-25-text: #eeeeee;
+       --spring-25-text-on-bg: #eeeeee;
+     --spring-25-link:  #ba7ff1;
+       --spring-25-special-text:  #ee3737;
+
       --winter-25-background: #DCD7CE;
       --winter-25-text: #242424;
        --winter-25-text-on-bg: #242424;
@@ -328,6 +334,213 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+/* /////////// start spring-25  ///////////////////////////////*/
+
+.spring-25,
+.spring-25.featured.session,
+.spring-25.featured  {
+ color: var(--spring-25-text);
+ box-sizing: border-box;
+ border-color: var(--spring-25-text);
+ /* background-image: url('images/sessions/spring-25/bg.png'); */
+ background-position: center;
+ background-repeat: repeat;
+ background-size: cover;
+}
+
+.spring-25.featured:hover {
+  /* background-size: 200%; */
+}
+
+
+
+
+.spring-25,
+.spring-25.featured.session,
+.shell .spring-25,
+.spring-25.featured  {
+  /* background-color: var(--spring-25-background)  !important; */
+  color: var(--spring-25-text);
+  box-sizing: border-box;
+  border-color: var(--spring-25-text);
+  text-shadow: none !important;
+}
+.spring-25.featured {
+  border: 3px double var(--spring-25-text);
+  border-left: 10px double var(--spring-25-text);
+}
+
+      .spring-25 p,
+      .spring-25 p a,
+      .spring-25 a,
+      .spring-25.featured h4,
+      .spring-25 h4 a,
+      .spring-25 .intro a,
+      .spring-25 p.large a,
+      .spring-25 p a:hover,
+      .spring-25.session.featured,
+      .spring-25.session.featured a,
+      .spring-25.featured h4.type a,
+      .sfpc .spring-25 a
+      {
+        color: var(--spring-25-text) !important;
+      }
+
+      .spring-25 h4 a:hover,
+      .spring-25 .intro a,
+      .spring-25 p.large a:hover,
+      .spring-25.featured:hover h6,
+      .spring-25.featured:hover .title,
+      .spring-25 .details a:hover,
+      .spring-25.featured .title:hover,
+      .spring-25 p a:hover,
+      .spring-25 h4 a:hover,
+      .spring-25 section .grid-2 ul li::before,
+      .spring-25 .chars,
+      .spring-25 p a:hover,
+      .spring-25 a:hover,
+      .spring-25 h4 a:hover,
+      .spring-25 .intro a:hover,
+      .spring-25 .details a:hover,
+      .spring-25 .entity:hover .accordion dt h3:after,
+      .spring-25 .accordion dt h3:after,
+      .spring-25 .expanded{
+          color: var(--spring-25-link) !important;
+      }
+
+      .spring-25 #cost,
+      .spring-25 .fixed-apply,
+      .spring-25 .fixed-support,
+      .spring-25 .home-intro span#session-name::after {
+          color: var(--spring-25-background) !important;
+          background: var(--spring-25-link) !important;
+      }
+
+      .spring-25 span#cost {
+        background: var(--spring-25-link) !important;
+      }
+
+
+      .spring-25 .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .spring-25 .block-text {
+        background-color: var(--spring-25-background);
+        color: var(--spring-25-link);
+      }
+
+
+
+      .spring-25.grid-inner, .spring-25 .grid-inner {
+        border: 2px dotted var(--spring-25-text) !important;
+        color: var(--spring-25-link) !important;
+      }
+
+      .spring-25 #class .entity,
+      .spring-25.website-grid .grid-2 {
+        border-color: var(--spring-25-text);
+      }
+
+      .spring-25 #class .entity:hover {
+        border-color: var(--spring-25-link);
+      }
+
+      .spring-25 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--spring-25-background) !important;
+      }
+
+
+      .spring-25 select#allSections:hover,
+      .spring-25 .loader-content p::after,
+      .spring-25 span#cost
+      {
+        background: var(--spring-25-link) !important;
+        color: var(--spring-25-background) !important;
+      }
+
+      .spring-25 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .spring-25 .breadcrumb.fixed,
+      .spring-25 .breadcrumb.fixed::before,
+      .spring-25 .breadcrumb.fixed a,
+      .spring-25 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .spring-25 .breadcrumb,
+      .spring-25 .breadcrumb a,
+      .spring-25 .text-on-bg,
+      .spring-25 .breadcrumb a:hover {
+          color: var(--spring-25-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--spring-25-background);
+      }
+
+
+      .spring-25 section#section-outro,
+      #class .intro.spring-25,
+      .shell.spring-25 .class-details,
+      .spring-25 #class section,
+      .spring-25 #class .entity,
+      .spring-25 .accordion dd.active,
+      .spring-25 section ul,
+      .spring-25 .website-grid
+       {
+        /* background-color: var(--spring-25-background); */
+        background: none;
+        color:  var(--spring-25-text) !important;
+        border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--summer-24-background); */
+
+
+        /* -webkit-text-stroke-width: 1px; */
+          /* -webkit-text-stroke-color: var(--summer-24-link); */
+      }
+
+      .spring-25.featured .title,
+      .spring-25 #session-name, #tag.spring-25,
+
+    .spring-25  #session-name > a
+
+       {
+      /* -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--spring-25-link); */
+      }
+
+      .spring-25 #class section,
+      #class .intro.spring-25 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .spring-25 #class section.stacked,
+      .spring-25 .section-testimonials,
+      .spring-25 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important;
+        /* text-shadow: 2px 2px 0px var(--spring-25-background); */
+
+      }
+
+      .spring-25 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--spring-25-text);
+      }
+
+      .shell.spring-25 {
+        /* background-image: url('images/sessions/spring-25/bg.png'); */
+        /* background-size: 100%; */
+        /* background-position: bottom; */
+        background-color: #131313;
+      }
+
+
+/* /////////// end winter-25  ///////////////////////////////*/
 /* /////////// start winter-25  ///////////////////////////////*/
 
 .winter-25,

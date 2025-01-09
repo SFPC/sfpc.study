@@ -34,6 +34,11 @@
     --spring-24-header-font: 'Wonder Type', sans-serif;
     --spring-24-body-font: 'Wonder Type', sans-serif;
     --spring-24-special-font: 'Wonder Type', sans-serif; */
+    --spring-25-title-font: 'Geneva 9', sans-serif;
+    --spring-25-header-font: 'Geneva 9', sans-serif;
+    --spring-25-body-font: 'Geneva 9', sans-serif;
+    --spring-25-special-font: 'Geneva 9', sans-serif;
+
     --winter-25-title-font: 'Soft Serve', sans-serif;
     --winter-25-header-font: 'Arial Rounded Bold', sans-serif;
     --winter-25-body-font: 'Happy Times', sans-serif;
@@ -133,7 +138,15 @@
 
 @import url("https://p.typekit.net/p.css?s=1&k=thn3crj&ht=tk&f=28524.28525&a=79545553&app=typekit&e=css");
 
-
+@font-face {
+  font-family: 'Geneva 9';
+  src: url('/fonts/Geneva-9.woff2') format('woff2'),
+  url('/fonts/Geneva-9.woff') format('woff'),
+  url('/fonts/geneva_9.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
 font-family:"soda-script";
@@ -346,6 +359,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
     font-display: block;
 }
 
+
          #session-name a {
           text-decoration: none !important
         }
@@ -388,10 +402,61 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         .spring-24.session .title.class{
         font-size: calc(var(--large-text) * .7) !important;
         } */
+        .spring-25.featured .title,
+        .spring-25 #session-name, #tag.spring-25 {
+          font-family: var(--spring-25-title-font) !important;
+          /* text-transform: uppercase; */
+          line-height:3rem;
+        }
+        .spring-25 #ascii {
+          font-size: 1vw;
+
+        }
+        .spring-25 .index-teachers {
+          font-family: var(--spring-25-title-font) !important;
+          letter-spacing: .05rem;
+          font-size: 2rem;
+
+        }
+        .spring-25 .index-teachers-small {
+          font-family: var(--spring-25-title-font) !important;
+          letter-spacing: .05rem;
+          font-size: 1.5rem;
+
+        }
+
+        .spring-25.featured {
+          border: 3px double var(--text-color);
+          border-left: 10px double var(--text-color);
+        }
+        .spring-25.featured .title {
+          font-size: 3rem;
+          line-height:0.7em;
+        }
+
+        #tag.spring-25 {
+        color: var(--spring-25-text);
+        }
+
+        .spring-25.session .title.class{
+        font-size: calc(var(--large-text) * .7) !important;
+        }
+
+        .spring-25 #home {
+          gap:0px;
+          position:relative;
+        }
+        .currently .spring-25, .spring-25 .home-intro {
+          position:relative;
+        }
+        .spring-25 p.large {
+          font-size: calc(20px + 1.5vw) !important;
+        }
+        /* winter-25 */
         .winter-25.featured .title,
         .winter-25 #session-name, #tag.winter-25 {
           font-family: var(--winter-25-title-font) !important;
-          text-transform: uppercase;
+          /* text-transform: uppercase; */
           line-height:1em;
 
         }
@@ -434,7 +499,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         .fall-24.featured .title,
         .fall-24 #session-name, #tag.fall-24 {
           font-family: var(--fall-24-title-font) !important;
-          text-transform: uppercase;
+          /* text-transform: uppercase; */
           letter-spacing: .3rem;
         }
 
@@ -467,7 +532,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         .summer-24.featured .title,
         .summer-24 #session-name, #tag.summer-24 {
           font-family: var(--summer-24-title-font) !important;
-          text-transform: uppercase;
+          /* text-transform: uppercase; */
         }
 
         #tag.summer-24 {
@@ -486,7 +551,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         .spring-24 #session-name, #tag.spring-24 {
           font-family: var(--spring-24-title-font) !important;
           /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
-      /* text-transform: uppercase; */
+      text-transform: uppercase;
       /* letter-spacing: 2px; */
       font-weight: lighter;
       /* -webkit-text-stroke-width: 1px;
@@ -3931,7 +3996,7 @@ h5.shopify-buy__cart-toggle__title {
 }
 
 @media (max-width: 768px) {
-
+ 
 
   .hide-desk {
     display: block;
@@ -3940,7 +4005,9 @@ h5.shopify-buy__cart-toggle__title {
   .hide-mobile {
     display: none;
   }
-
+        .spring-25 #ascii{
+          font-size: 2vw;
+        }
         :root {
           --text-margin: 10vh;
           --body-margin: 1.25vw;

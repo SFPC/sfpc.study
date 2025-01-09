@@ -118,6 +118,10 @@ background-color: var(--text-link) !important;
 .invert {
   filter:invert(1) !important;
 }
+.spring-25.featured {
+  -webkit-filter: none !important;
+  filter: none !important;
+}
 .spring-23.featured .title,
 .spring-23 #session-name, #tag.spring-23 {
 /* -webkit-text-stroke-color: var(--text-color);
