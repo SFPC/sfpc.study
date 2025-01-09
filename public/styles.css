@@ -408,6 +408,9 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
           /* text-transform: uppercase; */
           line-height:3rem;
         }
+        .spring-25 #session-name {
+          font-size: 5rem;
+        }
         .spring-25 #ascii {
           font-size: 1vw;
 

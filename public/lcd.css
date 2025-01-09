@@ -31,7 +31,7 @@
       --spring-25-text: #eeeeee;
        --spring-25-text-on-bg: #eeeeee;
      --spring-25-link:  #ba7ff1;
-       --spring-25-special-text:  #ee3737;
+       --spring-25-special-text:  #37ee91;
 
       --winter-25-background: #DCD7CE;
       --winter-25-text: #242424;
@@ -353,13 +353,15 @@ select#allSections {
 }
 
 
-
+.spring-25 #session-name {
+  color: var(--spring-25-special-text)
+}
 
 .spring-25,
 .spring-25.featured.session,
 .shell .spring-25,
 .spring-25.featured  {
-  /* background-color: var(--spring-25-background)  !important; */
+  background-color: var(--spring-25-background)  !important;
   color: var(--spring-25-text);
   box-sizing: border-box;
   border-color: var(--spring-25-text);
@@ -540,7 +542,7 @@ select#allSections {
       }
 
 
-/* /////////// end winter-25  ///////////////////////////////*/
+/* /////////// end spring-25  ///////////////////////////////*/
 /* /////////// start winter-25  ///////////////////////////////*/
 
 .winter-25,
