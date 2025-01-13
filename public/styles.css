@@ -2950,7 +2950,7 @@ section.stacked-4 {
           }
 
            #carousel-images figure:first-child {
-              width: calc(50vw - var(--body-margin)*2) !important;
+              /* width: calc(50vw - var(--body-margin)*2) !important; */
               height: 50vh !important;
               display: inline-block;
               overflow: hidden;
@@ -4291,7 +4291,7 @@ h5.shopify-buy__cart-toggle__title {
         }
 
         #carousel-images figure:first-child {
-            width: calc(80vw - var(--body-margin)*2) !important;
+            /* width: calc(80vw - var(--body-margin)*2) !important; */
             height: 30vh !important;
         }
 
