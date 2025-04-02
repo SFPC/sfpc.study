@@ -116,7 +116,7 @@
       class=" hide-content {{#if applicationsOpen}}appsOpen{{else}}appsClosed{{/if}}  {{#if registrationDone}}regDone{{/if}} {{#if sessionEnded}}sessionEnded{{/if}}  shell-content">
 
 
-      <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">Apply Now</a>
+      <a class="fixed-apply hide-apply hide-appsClosed" href="{{applicationLink}}">{{#if weekendIntensive}}Sign Up Now{{else}}Apply Now{{/if}}</a>
 
       <section id="section-class-details">
         <div class="grid-2">
@@ -135,7 +135,12 @@
 
 
           <img id="class-image" src="{{bannerImage}}">
-
+          {{#if weekendIntensive}}
+          <div class="details">
+            <div class="labels">Format</div>
+            <div class="labels-info">Weekend Intensive</div>
+          </div>
+          {{/if}}
           <div class="details">
             <div class="labels">Teachers</div>
             <div class="labels-info" id="teachers-list">{{#each teachers}}{{this.Name}}{{#unless
@@ -178,7 +183,7 @@
           </div>
           {{#if time}}
           <div class="details">
-            <div class="labels">Time </div>
+            <div class="labels">{{#if weekendIntensive}}schedule{{else}}Time{{/if}}</div>
             <div class="labels-info" id="time"><span style="white-space:pre-line">{{time}}</span>
             </div>
           </div>
@@ -191,10 +196,13 @@
             <div class="labels">Cost </div>
             <div class="labels-info">
               <span id="cost">${{cost}}</span>
+              {{#if weekendIntensive}}Early bird discount and scholarships available
+              {{else}}
               {{#if free}}Full scholarships for all{{else}}Scholarships available{{/if}}
 
               {{#if registrationDone}}<a href="/about/scholarships">learn more...</a>{{else}}<a class="more-about-cost">
                 learn more...</a>{{/if}}
+              {{/if}}
             </div>
           </div>
           {{#if getnotified}}
@@ -205,14 +213,20 @@
           <div class="details">
             <div class="labels">Deadline </div>
             <div class="labels-info">
+              {{#if weekendIntensive}}
+              <span class="">Sign-ups {{#if applicationsOpen}}open
+                until {{else}}closed on {{/if}}</span>
+              <span id="deadline">{{applicationEndDate}}</span>. No application necessary.
+              {{else}}
               <span class="">Applications {{#if applicationsOpen}}open
                 until {{else}}closed on {{/if}}</span>
               <span id="deadline">{{applicationEndDate}}</span>
+              {{/if}}
             </div>
           </div>
 
           <p class="large apply hide-appsClosed">
-            <a href="{{applicationLink}}" target="_blank" id="application-link">Apply Now</a>
+            <a href="{{applicationLink}}" target="_blank" id="application-link">{{#if weekendIntensive}}Sign Up{{else}}Apply{{/if}} Now</a>
           </p>
           {{/if}}
 

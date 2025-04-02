@@ -1806,6 +1806,8 @@ function parseClassData(apiResponse){
   returnObj.showcase = hasShowcase
   returnObj.name=classInfo.Name.title[0].plain_text
   returnObj.subtitle=classInfo["Subtitle"].rich_text[0]?.plain_text
+  returnObj.classType=classInfo["Class Type"]?.select?.name
+  if(returnObj.classType == "Weekend Intensive") returnObj.weekendIntensive = true
   returnObj.teachers=parseTeachers(classInfo)
   returnObj.classBlog=parseClassBlog(classInfo)
   returnObj.classProjects=parseClassProjects(classInfo)
