@@ -430,6 +430,10 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         font-size: calc(var(--large-text) * .7) !important;
         } */
                 /* summer-25 */
+                .grid-4.featured.summer-25{
+                  padding:1.2em;
+                  /* background-color: #fffefb !important; */
+                }
                 .summer-25 .pill {
                   padding:5px 8px;
                   border-radius:10px;
@@ -439,6 +443,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
                   font-family: var(--summer-25-title-font) !important;
                   /* text-transform: uppercase; */
                   letter-spacing: .3rem;
+                  -webkit-text-stroke: 2px;
                 }
         
                 #tag.summer-25 {

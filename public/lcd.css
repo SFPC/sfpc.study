@@ -439,9 +439,8 @@ select#allSections {
         text-decoration: none;
       }
       .summer-25 .special-button:hover {
-        color: #fff !important;
 
-        background-color: var(--summer-25-special-text) !important;
+        background-color: #fffefb;
       }
       .summer-25 #cost,
       .summer-25 .fixed-apply,
@@ -455,7 +454,7 @@ select#allSections {
 
 
       .summer-25 .fixed-apply:hover {
-        color: #000 !important;
+        color: var(--summer-25-link) !important;
         background: rgba(255,255,255,.8) !important;
       }
 
@@ -566,10 +565,10 @@ select#allSections {
       }
 
       .grid-4.featured.summer-25{
-        background-color: #fff !important;
+        background-color: #fffefb !important;
       }
       .summer-25.shell.home {
-        background-color: #fff !important;
+        background-color: #fffefb !important;
       }
       .shell.summer-25 {
         /* background-image: url('images/sessions/summer-25/bg.png'); */
@@ -593,7 +592,20 @@ select#allSections {
       }
       .summer-25.weekend-intensive .pill {
         background-color: #FF000F;
+        color: #fffefb !important;
       }
+      #class-block .summer-25.online-class {
+        border-color:#00BC00;
+      }
+      #class-block .summer-25.online-class .pill {
+        background-color: #00BC00;
+        color: #fffefb;
+      }
+
+      #class-block .weekend-intensive h2:hover, #class-block .weekend-intensive h6:hover, {
+        color:#FF000F !important;
+      }
+
 
 
 /* /////////// end summer-25  ///////////////////////////////*/
