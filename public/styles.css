@@ -442,7 +442,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
                 .summer-25 #session-name, #tag.summer-25 {
                   font-family: var(--summer-25-title-font) !important;
                   /* text-transform: uppercase; */
-                  letter-spacing: .3rem;
+                  letter-spacing: 0.1rem;
                   -webkit-text-stroke: 2px;
                 }
         
