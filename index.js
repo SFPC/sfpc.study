@@ -994,8 +994,10 @@ app.get("/sessions/:slug", async (req, res) => {
     res.render("programs/session-intensive", response)
   }
   else if(sessionType == "Concurrent" && sessionType != "External"){
-    const response = await prepareSessionData(sessionData, req.params.slug)
-    console.log("Concurrent Session data", response)
+    // console.log(sessionData)
+    // const response = parseSessionData(sessionData)
+    const response = await prepareSessionDataSimple(sessionData, req.params.slug)
+    // console.log("Concurrent Session data", response)
     // res.render("programs/sessions/"+req.params.slug+"/session", response)
     res.render("programs/session-concurrent", response)
   }
@@ -1493,7 +1495,42 @@ async function prepareSessionData(sessionData, session){
   return response
 }
 
+async function prepareSessionDataSimple(sessionData, session){
+  
+  let response = parseSessionData(sessionData)
 
+
+  const people = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
+  "or":[
+    {property:"Sessions-Organizer", "rollup": { "any": { "rich_text": { "equals": session } }}},
+    {property:"Sessions-Teacher", "rollup": { "any": { "rich_text": { "equals": session } }}},
+    {property:"Sessions-Guest", "rollup": { "any": { "rich_text": { "equals": session } }}},
+  ]
+  })
+  let teachers = []
+  let organizers = []
+  let guests = []
+  people.map((person) => {
+    const personData = parseNotionPage(person)
+    if(typeof personData["Sessions-Teacher"]  == 'string') personData["Sessions-Teacher"] = [personData["Sessions-Teacher"]]
+    if(personData["Sessions-Teacher"] && personData["Sessions-Teacher"].includes(session)){
+      personData.role = "teacher"
+      teachers.unshift(personData)
+    }
+    if(personData["Sessions-Organizer"] && personData["Sessions-Organizer"].includes(session)){
+      personData.role = "organizer"
+      organizers.unshift(personData)
+    }
+    if(personData["Sessions-Guest"] && personData["Sessions-Guest"].includes(session)){
+      personData.role = "guest teacher"
+      guests.unshift(personData)
+    }
+  })
+  response.guests = cleanPersonData(guests);
+  response.organizers = cleanPersonData(organizers);
+  response.teachers = cleanPersonData(teachers);
+  return response
+}
 
 async function getPageContent(notionId, contentToggleName="web content"){
   const fullPageContent = await getBlocks(notionId);
