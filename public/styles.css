@@ -34,6 +34,11 @@
     --spring-24-header-font: 'Wonder Type', sans-serif;
     --spring-24-body-font: 'Wonder Type', sans-serif;
     --spring-24-special-font: 'Wonder Type', sans-serif; */
+    --summer-25-title-font: 'Ductus', sans-serif;
+    --summer-25-header-font: 'Arastin Pro', sans-serif;
+    --summer-25-body-font: 'DIN Alternate', sans-serif;
+    --summer-25-special-font: 'Ductus', sans-serif;
+
     --spring-25-title-font: 'Geneva 9', sans-serif;
     --spring-25-header-font: 'Geneva 9', sans-serif;
     --spring-25-body-font: 'Geneva 9', sans-serif;
@@ -162,6 +167,28 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 
 .tk-soda-script { font-family: "soda-script",sans-serif; }
 
+
+@font-face {
+  font-family: 'Arastin Pro';
+  src:  url('/fonts/Arastin-Pro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DIN Alternate';
+  src:  url('/fonts/DIN-Alternate-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ductus';
+  src:  url('/fonts/DuctusMonoRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: 'Happy Times';
   src:  url('/fonts/happy-times.otf') format('opentype');
@@ -402,6 +429,44 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         .spring-24.session .title.class{
         font-size: calc(var(--large-text) * .7) !important;
         } */
+                /* summer-25 */
+                .summer-25 .pill {
+                  padding:5px 8px;
+                  border-radius:10px;
+                }
+                .summer-25.featured .title,
+                .summer-25 #session-name, #tag.summer-25 {
+                  font-family: var(--summer-25-title-font) !important;
+                  /* text-transform: uppercase; */
+                  letter-spacing: .3rem;
+                }
+        
+                #tag.summer-25 {
+                color: var(--summer-25-text);
+                }
+        
+                .summer-25.session .title.class{
+                font-size: calc(var(--large-text) * .7) !important;
+                }
+                .summer-25 .index-teachers {
+                  /* font-family: var(--summer-25-title-font) !important; */
+                  letter-spacing: .05rem;
+                  font-size: 1.7rem;
+        
+                }
+
+        
+                .summer-25 #home {
+                  gap:0px;
+                  position:relative;
+                }
+                .currently .summer-25, .summer-25 .home-intro {
+                  position:relative;
+                }
+                .summer-25 p.large {
+                  font-size: calc(20px + 1.5vw) !important;
+                }
+        
         .spring-25.featured .title,
         .spring-25 #session-name, #tag.spring-25 {
           font-family: var(--spring-25-title-font) !important;
@@ -428,10 +493,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 
         }
 
-        .spring-25.featured {
-          border: 3px double var(--text-color);
-          border-left: 10px double var(--text-color);
-        }
+
         .spring-25.featured .title {
           font-size: 3rem;
           line-height:0.7em;

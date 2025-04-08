@@ -27,6 +27,20 @@
       --spring-24-text-on-bg: #0061ac; //
     --spring-24-link:  #000; // link color
       --spring-24-special-text:  #5294c7; */
+      /* green 00BC00
+      red FF000F
+      purple FF06C4
+      pink FFBAD9
+      black 231F20
+      white #FFFFFF */
+      /* --summer-25-background: #FFF; */
+      --summer-25-background: #FFBAD9;
+      --summer-25-text: #231F20;
+       --summer-25-text-on-bg: #231F20;
+     --summer-25-link:  #00BC00;
+       --summer-25-special-text:  #FF06C4;
+       --summer-25-weekend-intensive: #FF000F;
+
       --spring-25-background: #131313;
       --spring-25-text: #eeeeee;
        --spring-25-text-on-bg: #eeeeee;
@@ -186,11 +200,11 @@ select#allSections {
       .sfpc.session.featured,
       .sfpc.session.featured a
       {
-        color: var(--text-color) !important;
+        color: var(--text-color) ;
       }
 
       .sfpc h4 a:hover,
-      /* .sfpc .intro a, */
+      .sfpc .intro a,
       .sfpc p.large a:hover,
       .sfpc.featured:hover h6,
       .sfpc.featured:hover .title,
@@ -334,6 +348,255 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+/* /////////// start summer-25  ///////////////////////////////*/
+
+.summer-25,
+.summer-25.featured.session,
+.summer-25.featured  {
+ color: var(--summer-25-text);
+ box-sizing: border-box;
+ border-color: var(--summer-25-text);
+ /* background-image: url('images/sessions/summer-25/bg.png'); */
+ background-color: var(--summer-25-background);
+ background-position: center;
+ background-repeat: repeat;
+ background-size: cover;
+}
+
+.summer-25.featured:hover {
+  /* background-size: 200%; */
+}
+
+
+
+     .shell.summer-25 {
+ background-color: var(--summer-25-background);
+ /* background-image:url('images/sessions/summer-25/bg.png'); */
+       /* background-position: bottom; */
+       /* background-repeat: no-repeat;
+       background-size: cover; */
+       /* background-position: top left;
+       background-repeat: repeat;
+       background-size: cover; */
+     }
+
+
+
+.summer-25,
+.summer-25.featured.session,
+.shell .summer-25,
+.summer-25.featured  {
+  background-color: var(--summer-25-background)  !important;
+  color: var(--summer-25-text);
+  box-sizing: border-box;
+  border-color: var(--summer-25-text);
+  text-shadow: none !important;
+}
+
+
+      .summer-25 p,
+      .summer-25 p a,
+      .summer-25 a,
+      .summer-25.featured h4,
+      .summer-25 h4 a,
+      .summer-25 .intro a,
+      .summer-25 p.large a,
+      .summer-25 p a:hover,
+      .summer-25.session.featured,
+      .summer-25.session.featured a,
+      .summer-25.featured h4.type a,
+      .sfpc .summer-25 a
+      {
+        color: var(--summer-25-text);
+      }
+
+      .summer-25 h4 a:hover,
+      .summer-25 .intro a,
+      .summer-25 p.large a:hover,
+      .summer-25.featured:hover h6,
+      .summer-25.featured:hover .title,
+      .summer-25 .details a:hover,
+      .summer-25.featured .title:hover,
+      .summer-25 p a:hover,
+      .summer-25 h4 a:hover,
+      .summer-25 section .grid-2 ul li::before,
+      .summer-25 .chars,
+      .summer-25 p a:hover,
+      .summer-25 a:hover,
+      .summer-25 h4 a:hover,
+      .summer-25 .intro a:hover,
+      .summer-25 .details a:hover,
+      .summer-25 .entity:hover .accordion dt h3:after,
+      .summer-25 .accordion dt h3:after,
+      .summer-25 .expanded{
+          color: var(--summer-25-link) !important;
+      }
+      .summer-25 .special-button {
+        background-color: var(--summer-25-link);
+        color: #fff !important;
+        border-radius: 1.5vw;
+        padding:calc(10px + 0.5vw);
+        text-decoration: none;
+      }
+      .summer-25 .special-button:hover {
+        color: #fff !important;
+
+        background-color: var(--summer-25-special-text) !important;
+      }
+      .summer-25 #cost,
+      .summer-25 .fixed-apply,
+      .summer-25 .fixed-support,
+      .summer-25 .home-intro span#session-name::after {
+          color: #fff !important;
+          background: var(--summer-25-link) !important;
+      }
+
+
+
+
+      .summer-25 .fixed-apply:hover {
+        color: #000 !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .summer-25 .block-text {
+        background-color: var(--summer-25-background);
+        color: var(--summer-25-link);
+      }
+
+
+
+      .summer-25.grid-inner, .summer-25 .grid-inner {
+        border: 2px dotted var(--summer-25-text) !important;
+        color: var(--summer-25-link) !important;
+      }
+
+      .summer-25 #class .entity,
+      .summer-25.website-grid .grid-2 {
+        border-color: var(--summer-25-text);
+      }
+
+      .summer-25 #class .entity:hover {
+        border-color: var(--summer-25-link);
+      }
+
+      .summer-25 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--summer-25-background) !important;
+      }
+
+
+      .summer-25 select#allSections:hover,
+      .summer-25 .loader-content p::after,
+      .summer-25 span#cost
+      {
+        background: var(--summer-25-link) !important;
+        color: #fff !important;
+      }
+
+      .summer-25 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .summer-25 .breadcrumb.fixed,
+      .summer-25 .breadcrumb.fixed::before,
+      .summer-25 .breadcrumb.fixed a,
+      .summer-25 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .summer-25 .breadcrumb,
+      .summer-25 .breadcrumb a,
+      .summer-25 .text-on-bg,
+      .summer-25 .breadcrumb a:hover {
+          color: var(--summer-25-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--summer-25-background);
+      }
+
+
+      .summer-25 section#section-outro,
+      #class .intro.summer-25,
+      .shell.summer-25 .class-details,
+      .summer-25 #class section,
+      .summer-25 #class .entity,
+      .summer-25 .accordion dd.active,
+      .summer-25 section ul,
+      .summer-25 .website-grid
+       {
+        /* background-color: var(--summer-25-background); */
+        background: none;
+        color:  var(--summer-25-text) !important;
+        border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--summer-24-background); */
+
+
+        /* -webkit-text-stroke-width: 1px; */
+          /* -webkit-text-stroke-color: var(--summer-24-link); */
+      }
+
+      .summer-25.featured .title,
+      .summer-25 #session-name, #tag.summer-25,
+
+    .summer-25  #session-name > a
+
+       {
+      /* -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--summer-25-link); */
+      }
+
+      .summer-25 #class section,
+      #class .intro.summer-25 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .summer-25 #class section.stacked,
+      .summer-25 .section-testimonials,
+      .summer-25 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important;
+        /* text-shadow: 2px 2px 0px var(--summer-25-background); */
+
+      }
+
+      .summer-25 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--summer-25-text);
+      }
+
+      .grid-4.featured.summer-25{
+        background-color: #fff !important;
+      }
+      .summer-25.shell.home {
+        background-color: #fff !important;
+      }
+      .shell.summer-25 {
+        /* background-image: url('images/sessions/summer-25/bg.png'); */
+        background-size: 100%;
+        background-position: bottom;
+        background-color: #fff;
+      }
+      .labels-info .weekend-intensive {
+        padding:5px 8px;
+        border-radius:10px;
+        background-color: var(--summer-25-weekend-intensive);
+      }
+      .summer-25.online-class {
+        border-color:#FFBAD9;
+      }
+      .summer-25.weekend-intensive {
+        border-color:#FF000F;
+      }
+      .summer-25.online-class .pill {
+        background-color: #FFBAD9;
+      }
+      .summer-25.weekend-intensive .pill {
+        background-color: #FF000F;
+      }
+
+
+/* /////////// end summer-25  ///////////////////////////////*/
 /* /////////// start spring-25  ///////////////////////////////*/
 
 .spring-25,

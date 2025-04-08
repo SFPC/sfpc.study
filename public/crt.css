@@ -7,6 +7,8 @@
     --text-link: #DDDDDD;
     --box-shadow: rgba(255,255,255,.5);
 
+    --weekend-intensive-bg: #ABABAB;
+
     --fundraiser-winter-24-background: var(--background);
     --fundraiser-winter-24-text: var(--text-color);
     --fundraiser-winter-24-link: var(--text-link);
@@ -117,6 +119,28 @@ background-color: var(--text-link) !important;
 
 .invert {
   filter:invert(1) !important;
+}
+.labels-info .weekend-intensive {
+  padding:5px 8px;
+  border-radius:10px;
+  background-color: var(--weekend-intensive-bg);
+  color: var(--background);
+}
+.summer-25.online-class {
+  border-color:#FFBAD9;
+}
+.summer-25.weekend-intensive {
+  border-color:#FF000F;
+}
+.summer-25.online-class .pill {
+  background-color: #FFBAD9;
+  color: #111;
+
+}
+.summer-25.weekend-intensive .pill {
+  background-color: #FF000F;
+  color: #eee;
+
 }
 .spring-25.featured {
   -webkit-filter: none !important;
