@@ -567,6 +567,9 @@ select#allSections {
       .grid-4.featured.summer-25{
         background-color: #fffefb !important;
       }
+      .grid-2.featured.summer-25{
+        background-color: #fffefb !important;
+      }
       .summer-25.shell.home {
         background-color: #fffefb !important;
       }
