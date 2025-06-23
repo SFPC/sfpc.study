@@ -700,6 +700,9 @@ $(document).ready(function() {
         if ($('.breadcrumb:contains("participate")').length > 0) {
             $('a#link-participate').addClass('underline');
         }
+        if ($('.breadcrumb:contains("classes")').length > 0) {
+          $('a#link-classes').addClass('underline');
+      }
 
         if ($('.breadcrumb:contains("about")').length > 0) {
             $('a#link-about').addClass('underline');
