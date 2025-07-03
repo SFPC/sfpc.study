@@ -348,6 +348,270 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+/* /////////// start fall-25  ///////////////////////////////*/
+
+.fall-25,
+.fall-25.featured.session,
+.fall-25.featured  {
+ color: var(--fall-25-text);
+ box-sizing: border-box;
+ border-color: var(--fall-25-text);
+ /* background-image: url('images/sessions/fall-25/bg.png'); */
+ background-color: var(--fall-25-background);
+ background-position: center;
+ background-repeat: repeat;
+ background-size: cover;
+}
+
+.fall-25.featured:hover {
+  /* background-size: 200%; */
+}
+
+
+
+     .shell.fall-25 {
+ background-color: var(--fall-25-background);
+ /* background-image:url('images/sessions/fall-25/bg.png'); */
+       /* background-position: bottom; */
+       /* background-repeat: no-repeat;
+       background-size: cover; */
+       /* background-position: top left;
+       background-repeat: repeat;
+       background-size: cover; */
+     }
+
+
+
+.fall-25,
+.fall-25.featured.session,
+.shell .fall-25,
+.fall-25.featured  {
+  background-color: var(--fall-25-background)  !important;
+  color: var(--fall-25-text);
+  box-sizing: border-box;
+  border-color: var(--fall-25-text);
+  text-shadow: none !important;
+}
+
+
+      .fall-25 p,
+      .fall-25 p a,
+      .fall-25 a,
+      .fall-25.featured h4,
+      .fall-25 h4 a,
+      .fall-25 .intro a,
+      .fall-25 p.large a,
+      .fall-25 p a:hover,
+      .fall-25.session.featured,
+      .fall-25.session.featured a,
+      .fall-25.featured h4.type a,
+      .sfpc .fall-25 a
+      {
+        color: var(--fall-25-text);
+      }
+
+      .fall-25 h4 a:hover,
+      .fall-25 .intro a,
+      .fall-25 p.large a:hover,
+      .fall-25.featured:hover h6,
+      .fall-25.featured:hover .title,
+      .fall-25 .details a:hover,
+      .fall-25.featured .title:hover,
+      .fall-25 p a:hover,
+      .fall-25 h4 a:hover,
+      .fall-25 section .grid-2 ul li::before,
+      .fall-25 .chars,
+      .fall-25 p a:hover,
+      .fall-25 a:hover,
+      .fall-25 h4 a:hover,
+      .fall-25 .intro a:hover,
+      .fall-25 .details a:hover,
+      .fall-25 .entity:hover .accordion dt h3:after,
+      .fall-25 .accordion dt h3:after,
+      .fall-25 .expanded{
+          color: var(--fall-25-link) !important;
+      }
+      .fall-25 .special-button {
+        background-color: var(--fall-25-link);
+        color: #fff !important;
+        border-radius: 1.5vw;
+        padding:calc(10px + 0.5vw);
+        text-decoration: none;
+      }
+      .fall-25 .special-button:hover {
+
+        background-color: #fffefb;
+      }
+      .fall-25 #cost,
+      .fall-25 .fixed-apply,
+      .fall-25 .fixed-support,
+      .fall-25 .home-intro span#session-name::after {
+          color: #fff !important;
+          background: var(--fall-25-link) !important;
+      }
+
+
+
+
+      .fall-25 .fixed-apply:hover {
+        color: var(--fall-25-link) !important;
+        background: rgba(255,255,255,.8) !important;
+      }
+
+      .fall-25 .block-text {
+        background-color: var(--fall-25-background);
+        color: var(--fall-25-link);
+      }
+
+
+
+      .fall-25.grid-inner, .fall-25 .grid-inner {
+        border: 2px dotted var(--fall-25-text) !important;
+        color: var(--fall-25-link) !important;
+      }
+
+      .fall-25 #class .entity,
+      .fall-25.website-grid .grid-2 {
+        border-color: var(--fall-25-text);
+      }
+
+      .fall-25 #class .entity:hover {
+        border-color: var(--fall-25-link);
+      }
+
+      .fall-25 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--fall-25-background) !important;
+      }
+
+
+      .fall-25 select#allSections:hover,
+      .fall-25 .loader-content p::after,
+      .fall-25 span#cost
+      {
+        background: var(--fall-25-link) !important;
+        color: #fff !important;
+      }
+
+      .fall-25 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .fall-25 .breadcrumb.fixed,
+      .fall-25 .breadcrumb.fixed::before,
+      .fall-25 .breadcrumb.fixed a,
+      .fall-25 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .fall-25 .breadcrumb,
+      .fall-25 .breadcrumb a,
+      .fall-25 .text-on-bg,
+      .fall-25 .breadcrumb a:hover {
+          color: var(--fall-25-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--fall-25-background);
+      }
+
+
+      .fall-25 section#section-outro,
+      #class .intro.fall-25,
+      .shell.fall-25 .class-details,
+      .fall-25 #class section,
+      .fall-25 #class .entity,
+      .fall-25 .accordion dd.active,
+      .fall-25 section ul,
+      .fall-25 .website-grid
+       {
+        /* background-color: var(--fall-25-background); */
+        background: none;
+        color:  var(--fall-25-text) !important;
+        border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--summer-24-background); */
+
+
+        /* -webkit-text-stroke-width: 1px; */
+          /* -webkit-text-stroke-color: var(--summer-24-link); */
+      }
+
+      .fall-25.featured .title,
+      .fall-25 #session-name, #tag.fall-25,
+
+    .fall-25  #session-name > a
+
+       {
+      /* -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--fall-25-link); */
+      }
+
+      .fall-25 #class section,
+      #class .intro.fall-25 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .fall-25 #class section.stacked,
+      .fall-25 .section-testimonials,
+      .fall-25 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important;
+        /* text-shadow: 2px 2px 0px var(--fall-25-background); */
+
+      }
+
+      .fall-25 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--fall-25-text);
+      }
+
+      .grid-4.featured.fall-25{
+        background-color: #fffefb !important;
+      }
+      .grid-2.featured.fall-25{
+        background-color: #fffefb !important;
+      }
+      .fall-25.shell.home {
+        background-color: #fffefb !important;
+      }
+      .shell.fall-25 {
+        /* background-image: url('images/sessions/fall-25/bg.png'); */
+        background-size: 100%;
+        background-position: bottom;
+        background-color: #fff;
+      }
+      .labels-info .weekend-intensive {
+        padding:5px 8px;
+        border-radius:10px;
+        background-color: var(--fall-25-weekend-intensive);
+      }
+      .fall-25.online-class {
+        border-color:#FFBAD9;
+      }
+      .fall-25.weekend-intensive {
+        border-color:#FF000F;
+      }
+      .fall-25.online-class .pill {
+        background-color: #FFBAD9;
+      }
+      .fall-25.weekend-intensive .pill {
+        background-color: #FF000F;
+        color: #fffefb !important;
+      }
+      #class-block .fall-25.online-class {
+        border-color:#00BC00;
+      }
+      #class-block .fall-25.online-class .pill {
+        background-color: #00BC00;
+        color: #fffefb;
+      }
+
+      #class-block .weekend-intensive h2:hover, #class-block .weekend-intensive h6:hover, {
+        color:#FF000F !important;
+      }
+
+
+*/
+/* /////////// end fall-25  ///////////////////////////////*/
 /* /////////// start summer-25  ///////////////////////////////*/
 
 .summer-25,

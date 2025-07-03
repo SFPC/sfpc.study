@@ -30,10 +30,12 @@
 
     /* DUPLICATE FOR SEASON, CHANGE SEASON NAME AND ADD TYPE USING @font-face BELOW */
 
-    /* --spring-24-title-font: 'Wonder Type', sans-serif;
-    --spring-24-header-font: 'Wonder Type', sans-serif;
-    --spring-24-body-font: 'Wonder Type', sans-serif;
-    --spring-24-special-font: 'Wonder Type', sans-serif; */
+
+    /* --fall-25-title-font: 'Ductus', sans-serif;
+    --fall-25-header-font: 'Arastin Pro', sans-serif;
+    --fall-25-body-font: 'DIN Alternate', sans-serif;
+    --fall-25-special-font: 'Ductus', sans-serif; */
+
     --summer-25-title-font: 'Ductus', sans-serif;
     --summer-25-header-font: 'Arastin Pro', sans-serif;
     --summer-25-body-font: 'DIN Alternate', sans-serif;
@@ -427,6 +429,21 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         }
 
         .spring-24.session .title.class{
+        font-size: calc(var(--large-text) * .7) !important;
+        } */
+        
+        /* fall-25 */
+         /*
+        .fall-25.featured .title,
+        .fall-25 #session-name, #tag.fall-25 {
+          font-family: var(--fall-25-title-font) !important;
+        }
+
+        #tag.fall-25 {
+        color: var(--fall-25-text);
+        }
+
+        .fall-25.session .title.class{
         font-size: calc(var(--large-text) * .7) !important;
         } */
                 /* summer-25 */
