@@ -34,6 +34,13 @@
       black 231F20
       white #FFFFFF */
       /* --summer-25-background: #FFF; */
+      --fall-25-background: #131313;
+      --fall-25-text: #feadad;
+       --fall-25-text-on-bg: #231F20;
+     --fall-25-link:  #00BC00;
+       --fall-25-special-text:  #FF06C4;
+       --fall-25-weekend-intensive: #FF000F;
+
       --summer-25-background: #FFBAD9;
       --summer-25-text: #231F20;
        --summer-25-text-on-bg: #231F20;
@@ -356,8 +363,8 @@ select#allSections {
  color: var(--fall-25-text);
  box-sizing: border-box;
  border-color: var(--fall-25-text);
- /* background-image: url('images/sessions/fall-25/bg.png'); */
- background-color: var(--fall-25-background);
+ background-image: url('images/sessions/winter-25/bg.png');
+ /* background-color: var(--fall-25-background); */
  background-position: center;
  background-repeat: repeat;
  background-size: cover;
@@ -370,11 +377,11 @@ select#allSections {
 
 
      .shell.fall-25 {
- background-color: var(--fall-25-background);
- /* background-image:url('images/sessions/fall-25/bg.png'); */
+ /* background-color: var(--fall-25-background); */
+ background-image:url('images/sessions/winter-25/bg.png');
        /* background-position: bottom; */
-       /* background-repeat: no-repeat;
-       background-size: cover; */
+       background-repeat: no-repeat;
+       background-size: cover;
        /* background-position: top left;
        background-repeat: repeat;
        background-size: cover; */
@@ -564,21 +571,12 @@ select#allSections {
         border-color: var(--fall-25-text);
       }
 
-      .grid-4.featured.fall-25{
-        background-color: #fffefb !important;
-      }
-      .grid-2.featured.fall-25{
-        background-color: #fffefb !important;
-      }
-      .fall-25.shell.home {
-        background-color: #fffefb !important;
-      }
-      .shell.fall-25 {
-        /* background-image: url('images/sessions/fall-25/bg.png'); */
+      /* .shell.fall-25 {
+        background-image: url('images/sessions/fall-25/bg.png');
         background-size: 100%;
         background-position: bottom;
         background-color: #fff;
-      }
+      } */
       .labels-info .weekend-intensive {
         padding:5px 8px;
         border-radius:10px;
