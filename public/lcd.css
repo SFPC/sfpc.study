@@ -603,12 +603,13 @@ select#allSections {
         color: #fffefb;
       }
 
-      #class-block .weekend-intensive h2:hover, #class-block .weekend-intensive h6:hover{
+      #class-block .weekend-intensive h2:hover, #class-block .weekend-intensive h6:hover, {
         color:#FF000F !important;
       }
 
 
-/* /////////// end fall-25  //////////////////////////////*/
+*/
+/* /////////// end fall-25  ///////////////////////////////*/
 /* /////////// start summer-25  ///////////////////////////////*/
 
 .summer-25,
@@ -866,7 +867,7 @@ select#allSections {
         color: #fffefb;
       }
 
-      #class-block .weekend-intensive h2:hover, #class-block .weekend-intensive h6:hover {
+      #class-block .weekend-intensive h2:hover, #class-block .weekend-intensive h6:hover, {
         color:#FF000F !important;
       }
 
