@@ -31,10 +31,10 @@
     /* DUPLICATE FOR SEASON, CHANGE SEASON NAME AND ADD TYPE USING @font-face BELOW */
 
 
-    --fall-25-title-font: 'Ductus', sans-serif;
-    --fall-25-header-font: 'Arastin Pro', sans-serif;
-    --fall-25-body-font: 'DIN Alternate', sans-serif;
-    --fall-25-special-font: 'Ductus', sans-serif;
+    --fall-25-title-font: 'Cardinal', sans-serif;
+    --fall-25-header-font: 'Cardinal', sans-serif;
+    --fall-25-body-font: 'Authentic Sans', sans-serif;
+    --fall-25-special-font: 'Cardinal', sans-serif;
 
     --summer-25-title-font: 'Ductus', sans-serif;
     --summer-25-header-font: 'Arastin Pro', sans-serif;
@@ -144,6 +144,22 @@
 }
 
 @import url("https://p.typekit.net/p.css?s=1&k=thn3crj&ht=tk&f=28524.28525&a=79545553&app=typekit&e=css");
+
+
+@font-face {
+  font-family: 'Authentic Sans';
+  src: url('/fonts/authentic-sans-90.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cardinal';
+  src: url('/fonts/Cardinal.ttf') format('trueType');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 @font-face {
   font-family: 'Geneva 9';
