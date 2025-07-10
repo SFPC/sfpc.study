@@ -2262,7 +2262,7 @@ h4.breadcrumb  a:not:last-child {
         }
 
         .breadcrumb .blog-tag  {
-          text-shadow: 0px !important:
+          text-shadow: 0px !important;
           font: inherit;
         }
 
