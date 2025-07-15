@@ -453,6 +453,9 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         .fall-25.featured .title,
         .fall-25 #session-name, #tag.fall-25 {
           font-family: var(--fall-25-title-font) !important;
+          font-size: calc(var(--large-text) * 0.9);
+          line-height: 1em;
+          padding-top: 0.3em;
         }
 
         #tag.fall-25 {
@@ -460,8 +463,17 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         }
 
         .fall-25.session .title.class{
-        font-size: calc(var(--large-text) * 1.5) !important;
+        /*font-size: calc(var(--large-text) * 1.5) !important;*/
         }
+
+
+        .fall-25,
+.fall-25.featured.session,
+.fall-25.featured  {
+ box-sizing: border-box;
+ background-position: center;
+ background-size: cover;
+}
                 /* summer-25 */
                 .grid-4.featured.summer-25{
                   padding:1.2em;
@@ -2095,7 +2107,7 @@ select#allSections:focus {
         padding: 0.5em;
         flex-direction: column;
         justify-content: space-between;
-        backdrop-filter: blur(5px); /* Fall 2025 styling adaptation */
+       /* backdrop-filter: blur(5px);  Fall 2025 styling adaptation */
       }
 
       .featured-text.half {
