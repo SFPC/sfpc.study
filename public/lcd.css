@@ -366,7 +366,6 @@ select#allSections {
  background-image: url('images/sessions/winter-25/bg.png');
  /* background-color: var(--fall-25-background); */
  background-position: center;
- background-repeat: repeat;
  background-size: cover;
 }
 
@@ -381,7 +380,7 @@ select#allSections {
  background-image:url('images/sessions/winter-25/bg.png');
        /* background-position: bottom; */
        background-repeat: no-repeat;
-       background-size: cover;
+       background-size: 150%;
        /* background-position: top left;
        background-repeat: repeat;
        background-size: cover; */
@@ -583,7 +582,8 @@ select#allSections {
         background-color: var(--fall-25-weekend-intensive);
       }
       .fall-25.online-class {
-        border-color:#FFBAD9;
+        box-shadow: inset 0px 0px 5px 2px #f2ff26;
+        border-color:#f2ff26;
       }
       .fall-25.weekend-intensive {
         border-color:#FF000F;
