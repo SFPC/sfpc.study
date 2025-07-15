@@ -34,7 +34,7 @@
       black 231F20
       white #FFFFFF */
       /* --summer-25-background: #FFF; */
-      
+
       --fall-25-background: #0f261f;
       --fall-25-text: #f2ff26;
        --fall-25-text-on-bg: #f2ff26;
@@ -587,18 +587,23 @@ select#allSections {
         border-color:#FF000F;
       }
       .fall-25.online-class .pill {
-        background-color: #FFBAD9;
+        color: black !important;
+      background-color: #f2ff26;
+      padding: 0.2em;
+      border-radius: 1em;
       }
       .fall-25.weekend-intensive .pill {
         background-color: #FF000F;
         color: #fffefb !important;
       }
       #class-block .fall-25.online-class {
-        border-color:#00BC00;
+        border-color:#f2ff26;
       }
       #class-block .fall-25.online-class .pill {
-        background-color: #00BC00;
-        color: #fffefb;
+        color: black !important;
+      background-color: #f2ff26;
+      padding: 0.2em;
+      border-radius: 1em;
       }
 
       #class-block .weekend-intensive h2:hover, #class-block .weekend-intensive h6:hover, {
