@@ -34,10 +34,11 @@
       black 231F20
       white #FFFFFF */
       /* --summer-25-background: #FFF; */
-      --fall-25-background: #131313;
-      --fall-25-text: #feadad;
-       --fall-25-text-on-bg: #231F20;
-     --fall-25-link:  #00BC00;
+      
+      --fall-25-background: #0f261f;
+      --fall-25-text: #f2ff26;
+       --fall-25-text-on-bg: #f2ff26;
+     --fall-25-link:  #fa2b00;
        --fall-25-special-text:  #FF06C4;
        --fall-25-weekend-intensive: #FF000F;
 
@@ -363,8 +364,6 @@ select#allSections {
  color: var(--fall-25-text);
  box-sizing: border-box;
  border-color: var(--fall-25-text);
- background-image: url('images/sessions/winter-25/bg.png');
- /* background-color: var(--fall-25-background); */
  background-position: center;
  background-size: cover;
 }
@@ -376,8 +375,7 @@ select#allSections {
 
 
      .shell.fall-25 {
- /* background-color: var(--fall-25-background); */
- background-image:url('images/sessions/winter-25/bg.png');
+       background-color: var(--fall-25-background);
        /* background-position: bottom; */
        background-repeat: no-repeat;
        background-size: 150%;
