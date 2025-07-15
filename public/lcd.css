@@ -592,6 +592,7 @@ select#allSections {
         background-color: var(--fall-25-weekend-intensive);
       }
       .fall-25.online-class {
+        box-shadow: inset 0px 0px 5px 2px #f2ff26;
         border-color:#f2ff26;
       }
       .fall-25.weekend-intensive {

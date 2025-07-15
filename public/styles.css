@@ -17,7 +17,7 @@
     /* default font */
     --main-small-text: calc(14px + 0.1vw);
     --main-small-line-height: 1;
-    --main-medium-text: calc(20px + 0.34vw);
+    --main-medium-text: calc(20px + 0.24vw);
     --main-medium-line-height: 1.1;
     --main-large-text: calc(24px + 2vw);
     --main-large-line-height: 1;
@@ -460,7 +460,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         }
 
         .fall-25.session .title.class{
-        font-size: calc(var(--large-text) * 1.2) !important;
+        font-size: calc(var(--large-text) * 1.5) !important;
         }
                 /* summer-25 */
                 .grid-4.featured.summer-25{
@@ -2092,6 +2092,7 @@ select#allSections:focus {
       }
 
       .grid-2 .featured-text, .grid-1 .featured-text {
+        padding: 0.5em;
         flex-direction: column;
         justify-content: space-between;
         backdrop-filter: blur(5px); /* Fall 2025 styling adaptation */
