@@ -34,11 +34,11 @@
       black 231F20
       white #FFFFFF */
       /* --summer-25-background: #FFF; */
-      --fall-25-background: #0f261f;
-      --fall-25-text: #f2ff26;
+      --fall-25-background: #131313;
+      --fall-25-text: #feadad;
        --fall-25-text-on-bg: #231F20;
-     --fall-25-link:  #e70bf7;
-       --fall-25-special-text:  #ffcfc4;
+     --fall-25-link:  #00BC00;
+       --fall-25-special-text:  #FF06C4;
        --fall-25-weekend-intensive: #FF000F;
 
       --summer-25-background: #FFBAD9;
@@ -363,19 +363,10 @@ select#allSections {
  color: var(--fall-25-text);
  box-sizing: border-box;
  border-color: var(--fall-25-text);
- /*background-image: url('images/sessions/winter-25/bg.png');*/
- background-color: var(--fall-25-background); 
+ background-image: url('images/sessions/winter-25/bg.png');
+ /* background-color: var(--fall-25-background); */
  background-position: center;
  background-size: cover;
-}
-
-.fall-25-cardstyle{
-  padding: 1em;
-    border-radius: 0px;
-    background-image: url(/images/sessions/fall-25/si.png);
-    background-repeat: repeat;
-    box-shadow: inset -1px -1px 15px 3px #f2ff26;
-    border-color: #f2ff26bf;
 }
 
 .fall-25.featured:hover {
@@ -385,8 +376,8 @@ select#allSections {
 
 
      .shell.fall-25 {
-  background-color: var(--fall-25-background);
- /*background-image:url('images/sessions/winter-25/bg.png');*/
+ /* background-color: var(--fall-25-background); */
+ background-image:url('images/sessions/winter-25/bg.png');
        /* background-position: bottom; */
        background-repeat: no-repeat;
        background-size: 150%;
@@ -598,23 +589,18 @@ select#allSections {
         border-color:#FF000F;
       }
       .fall-25.online-class .pill {
-        background-color: #f2ff26;
-        padding: 0.2em;
-        border-radius: 2em;
-        color: black!important;
+        background-color: #FFBAD9;
       }
       .fall-25.weekend-intensive .pill {
         background-color: #FF000F;
         color: #fffefb !important;
       }
       #class-block .fall-25.online-class {
-        border-color:#ffcfc4;
+        border-color:#00BC00;
       }
       #class-block .fall-25.online-class .pill {
-        background-color: #ffcfc4;
-        color: #000000;
-        padding: 0.2em;
-        border-radius: 2em;
+        background-color: #00BC00;
+        color: #fffefb;
       }
 
       #class-block .weekend-intensive h2:hover, #class-block .weekend-intensive h6:hover, {
