@@ -7,7 +7,7 @@ on:
 
 jobs:
   deployment:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     environment: .env
     steps:
       - name: Checkout main branch
