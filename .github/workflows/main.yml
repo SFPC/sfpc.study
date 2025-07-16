@@ -31,8 +31,8 @@ jobs:
           echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} >> .env
           cat .env
 
-      - name: Ensure target directory exists
-        run: mkdir -p /var/www/orienting.sfpc.study/html/
+      # - name: Ensure target directory exists
+      #   run: mkdir -p /var/www/orienting.sfpc.study/html/
 
      # - name: Copy Orienting Directory
      #   run: rsync -a --delete orienting.sfpc.study/ /var/www/orienting.sfpc.study/html/
