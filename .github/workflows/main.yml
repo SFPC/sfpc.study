@@ -7,32 +7,21 @@ on:
 
 jobs:
   deployment:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     environment: .env
     steps:
       - name: Checkout main branch
-        uses: actions/checkout@v3
-
+        uses: actions/checkout@v2
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v1
         with:
-          node-version: '16'
-
-      - name: Clean npm cache
-        run: npm cache clean --force
-
+          node-version: '16.x'
       - name: Install dependencies
-        run: npm ci --verbose
-        timeout-minutes: 5
-
+        run: npm ci
       - name: Create env file
         run: |
           touch .env
           echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} >> .env
           cat .env
-
-      # - name: Ensure target directory exists
-      #   run: mkdir -p /var/www/orienting.sfpc.study/html/
-
-     # - name: Copy Orienting Directory
-     #   run: rsync -a --delete orienting.sfpc.study/ /var/www/orienting.sfpc.study/html/
+      - name: Copy Orienting Directory
+        run: rsync -a --delete orienting.sfpc.study/ /var/www/orienting.sfpc.study/html/
