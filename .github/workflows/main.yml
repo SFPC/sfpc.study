@@ -34,5 +34,5 @@ jobs:
       - name: Ensure target directory exists
         run: mkdir -p /var/www/orienting.sfpc.study/html/
 
-      - name: Copy Orienting Directory
-        run: rsync -a --delete orienting.sfpc.study/ /var/www/orienting.sfpc.study/html/
+     # - name: Copy Orienting Directory
+     #   run: rsync -a --delete orienting.sfpc.study/ /var/www/orienting.sfpc.study/html/
