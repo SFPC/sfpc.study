@@ -16,8 +16,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'
-      - name: Install dependencies
-        run: npm ci
+      - name: Install dependencies (verbose)
+        run: npm ci --verbose
       - name: Create env file
         run: |
           touch .env
