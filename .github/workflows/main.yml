@@ -1,27 +1,35 @@
 name: Continuous Deployment
-
 on:
   push:
     branches:
       - main
-
 jobs:
   deployment:
     runs-on: self-hosted
     environment: .env
     steps:
       - name: Checkout main branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+        
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
-      - name: Install dependencies (verbose)
-        run: npm ci --verbose
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Clear npm cache
+        run: npm cache clean --force
+        
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+        env:
+          NODE_OPTIONS: '--max-old-space-size=4096'
+          
       - name: Create env file
         run: |
           touch .env
           echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} >> .env
           cat .env
+          
       - name: Copy Orienting Directory
         run: rsync -a --delete orienting.sfpc.study/ /var/www/orienting.sfpc.study/html/
