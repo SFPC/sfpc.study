@@ -463,7 +463,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         }
 
         .fall-25.session .title.class{
-        font-size: calc(var(--large-text) * 1.1);
+        font-size: calc(var(--large-text) * 1.2);
         }
 
 
