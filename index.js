@@ -972,7 +972,9 @@ app.get("/participateTest", async (req,res) => {
 
 
 app.get("/sessions/:slug", async (req, res) => {
-  const sessionData = await getDatabaseEntry("51d48d4644b2439cb64c2018ad05d2b1", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  
+  const sessionData = await getDatabaseEntry("ce519f031eb340f58e3693cf4e041a67", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
+  // const sessionData = await getDatabaseEntry("51d48d4644b2439cb64c2018ad05d2b1", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
   const sessionType = sessionData.properties['Session Type']?.multi_select[0]?.name
   console.log(sessionType)
 
@@ -1008,7 +1010,8 @@ app.get("/sessions/:slug", async (req, res) => {
 
 
 app.get("/sessions/:session/:class", async(req,res) => {
-  const data = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.class}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}]})
+  const data = await getDatabaseEntry("6d5585af2f544dd1bad9d24c5e177026", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.class}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}]})
+  // const data = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.class}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}]})
   if(!data) return
   const response = await prepareClassData(data, req.params.class)
   res.render("programs/class-concurrent", response);
