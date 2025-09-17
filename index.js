@@ -954,23 +954,12 @@ app.get("/participate", async (req,res) => {
   // })
   // console.log(programData)
   // let pageContent = getPageContent()
-  res.render("programs/participate")
+  res.render("programs/faq")
 })
 app.get("/faq", async (req,res) => {
   res.render("programs/faq")
 })
-app.get("/participateTest", async (req,res) => {
-  const sessions = await getDatabaseEntries("ba1f9876ad3e4810880d4802d3d70d6f", [{property:"Date", direction:"descending"}])
-  const events = await getDatabaseEntries("10c62665c6ca4383bbdc12788c45df14", [{property:"Date", direction:"descending"}])
 
-  const programData = sessions.map((program) => {
-    console.log(program)
-    return parsePrograms(program)
-  })
-  console.log(programData)
-  // let pageContent = getPageContent()
-  res.render("programs/participateTest", {programs: programData})
-})
 
 
 
