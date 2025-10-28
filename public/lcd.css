@@ -438,27 +438,27 @@ select#allSections {
       }
       .winter-26 .special-button {
         background-color: var(--winter-26-link);
-        color: #fff !important;
+        color: #000 !important;
         border-radius: 1.5vw;
         padding:calc(10px + 0.5vw);
         text-decoration: none;
       }
       .winter-26 .special-button:hover {
 
-        background-color: #fffefb;
+        background-color: #222;
       }
       .winter-26 #cost,
       .winter-26 .fixed-apply,
       .winter-26 .fixed-support,
       .winter-26 .home-intro span#session-name::after {
-          color: #fff !important;
+          color: #000 !important;
           background: var(--winter-26-link) !important;
       }
 
 
       .winter-26 .fixed-apply:hover {
         color: var(--winter-26-link) !important;
-        background: rgba(255,255,255,.8) !important;
+        background: rgba(0,0,0,.8) !important;
       }
 
       .winter-26 .block-text {
@@ -492,7 +492,7 @@ select#allSections {
       .winter-26 span#cost
       {
         background: var(--winter-26-link) !important;
-        color: #fff !important;
+        color: #000 !important;
       }
 
       .winter-26 .breadcrumb.fixed {
@@ -582,12 +582,12 @@ select#allSections {
         box-shadow: inset 0px 0px 5px 2px #ffffff;
         border-color: #ffffff;
     }
-      .winter-26.online-class .pill {
-        color: black !important;
-        background-color: #79bef2;
-        padding: 0.2em;
-        border-radius: 1em;
-    }
+    .winter-26.online-class .pill {
+      color: black !important;
+      background-color: #79bef2;
+      padding: 0.2em;
+      border-radius: 1em;
+  }
 
       .winter-26.weekend-intensive .pill {
         background-color: #FF000F;
