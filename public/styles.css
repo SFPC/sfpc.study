@@ -472,14 +472,14 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         /* winter 26 */         
         .winter-26.featured .title,
         .winter-26 #session-name, #tag.winter-26 {
-          font-family: var(--fall-25-title-font) !important;
+          font-family: var(--winter-26-title-font) !important;
           font-size: calc(var(--large-text) * 0.6);
           line-height: 1em;
           padding-top: 0.3em;
         }
 
         #tag.winter-26 {
-        color: var(--fall-25-text);
+        color: var(--winter-26-text);
         }
 
         .winter-26.session .title.class{
