@@ -456,8 +456,6 @@ select#allSections {
       }
 
 
-
-
       .winter-26 .fixed-apply:hover {
         color: var(--winter-26-link) !important;
         background: rgba(255,255,255,.8) !important;
@@ -581,18 +579,16 @@ select#allSections {
         background-color: var(--winter-26-weekend-intensive);
       }
       .winter-26.online-class {
-        box-shadow: inset 0px 0px 5px 2px #f2ff26;
-        border-color:#f2ff26;
-      }
-      .winter-26.weekend-intensive {
-        border-color:#FF000F;
-      }
+        box-shadow: inset 0px 0px 5px 2px #ffffff;
+        border-color: #ffffff;
+    }
       .winter-26.online-class .pill {
         color: black !important;
-      background-color: #f2ff26;
-      padding: 0.2em;
-      border-radius: 1em;
-      }
+        background-color: #79bef2;
+        padding: 0.2em;
+        border-radius: 1em;
+    }
+
       .winter-26.weekend-intensive .pill {
         background-color: #FF000F;
         color: #fffefb !important;
