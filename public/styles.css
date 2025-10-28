@@ -487,13 +487,13 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         }
 
 
-        .winter-26,
-.winter-26.featured.session,
-.winter-26.featured  {
- box-sizing: border-box;
- background-position: center;
- background-size: cover;
-}
+                .winter-26,
+        .winter-26.featured.session,
+        .winter-26.featured  {
+        box-sizing: border-box;
+        background-position: center;
+        background-size: cover;
+        }
         
         /* fall-25 */
          
