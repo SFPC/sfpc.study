@@ -477,9 +477,13 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
           line-height: 1em;
           padding-top: 0.3em;
         }
-
+        .winter-26 #session-name {
+          font-size: calc(var(--large-text) * 1.6);
+        }
         #tag.winter-26 {
         color: var(--winter-26-text);
+        font-size: calc(var(--large-text) * 0.3);
+
         }
 
         .winter-26.session .title.class{
