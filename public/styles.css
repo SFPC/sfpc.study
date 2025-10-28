@@ -494,7 +494,18 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         background-position: center;
         background-size: cover;
         }
-        
+        .winter-26 .index-teachers {
+          font-family: var(--winter-26-special-font) !important;
+          letter-spacing: .05rem;
+          font-size: 2rem;
+
+        }
+        .winter-26 .index-teachers-small {
+          font-family: var(--winter-26-special-font) !important;
+          letter-spacing: .05rem;
+          font-size: 1.5rem;
+
+        }
         /* fall-25 */
          
         .fall-25.featured .title,
