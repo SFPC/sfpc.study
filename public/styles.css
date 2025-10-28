@@ -29,8 +29,11 @@
 
 
     /* DUPLICATE FOR SEASON, CHANGE SEASON NAME AND ADD TYPE USING @font-face BELOW */
-
-
+    --winter-26-title-font: 'Buzzer TM', sans-serif;
+    --winter-26-header-font: 'Buzzer TM', sans-serif;
+    --winter-26-body-font: 'Unifont', sans-serif;
+    --winter-26-special-font: 'Unifont', sans-serif;
+   
    
     --fall-25-title-font: 'Cardinal', sans-serif;
     --fall-25-header-font: 'Cardinal', sans-serif;
@@ -145,6 +148,23 @@
 }
 
 @import url("https://p.typekit.net/p.css?s=1&k=thn3crj&ht=tk&f=28524.28525&a=79545553&app=typekit&e=css");
+
+@font-face {
+  font-family: 'Buzzer TM';
+  src: url('/fonts/Buzzer TM.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Unifont';
+  src: url('/fonts/Unifont17.0.01.otf') format('trueType');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 
 @font-face {
   font-family: 'Authentic Sans';
@@ -447,6 +467,33 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         .spring-24.session .title.class{
         font-size: calc(var(--large-text) * .7) !important;
         } */
+
+
+        /* winter 26 */         
+        .winter-26.featured .title,
+        .winter-26 #session-name, #tag.winter-26 {
+          font-family: var(--fall-25-title-font) !important;
+          font-size: calc(var(--large-text) * 0.6);
+          line-height: 1em;
+          padding-top: 0.3em;
+        }
+
+        #tag.winter-26 {
+        color: var(--fall-25-text);
+        }
+
+        .winter-26.session .title.class{
+        font-size: calc(var(--large-text) * 1.2);
+        }
+
+
+        .winter-26,
+.winter-26.featured.session,
+.winter-26.featured  {
+ box-sizing: border-box;
+ background-position: center;
+ background-size: cover;
+}
         
         /* fall-25 */
          

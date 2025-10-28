@@ -35,6 +35,28 @@
       white #FFFFFF */
       /* --summer-25-background: #FFF; */
 
+
+      /* START WINTER 2026 */
+    --winter-26-background: #000000; // bg color
+     --winter-26-text: #fff;  // main color
+      --winter-26-text-on-bg: #fff; //
+    --winter-26-link:  #d6e51a; // link color
+      --winter-26-special-text:  #5294c7; */
+       --winter-26-background: #000; 
+
+       .shell.winter-26 {
+ background-color: var(--winter-26-background);
+ /* background-image:url('images/sessions/winter-26/w26bg.png'); */
+       /* background-position: bottom; */
+       /* background-repeat: no-repeat;
+       background-size: cover; */
+       /* background-position: top left;
+       background-repeat: repeat;
+       background-size: cover; */
+     }
+
+       /* END WINTER 2026 */
+
       --fall-25-background: #0f261f;
       --fall-25-text: #f2ff26;
        --fall-25-text-on-bg: #f2ff26;
