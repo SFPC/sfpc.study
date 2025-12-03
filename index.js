@@ -2284,6 +2284,10 @@ function parseBlockHTML(block, pageHTML, prevType) {
         return pageHTML += "<br />"
       let pText = formatRichText(block['paragraph'].text)
       return pageHTML += `<p>${pText}</p>`
+    case 'callout':
+      // For a boxed quote 
+      let specialQuote = formatRichText(block['callout'].text)
+      return pageHTML += `<p class="specialquote">${specialQuote}</p>`
     case 'quote':
       // For a caption
       let quoteText = formatRichText(block['quote'].text)
