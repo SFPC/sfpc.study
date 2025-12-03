@@ -362,6 +362,12 @@ select#allSections {
       border: 2px solid var(--text-link);
       }
 
+       .specialquote {
+      border: 2px dotted blue;
+      padding: 1.4em;
+      font-size: 1em;
+    }
+
 
 
 
