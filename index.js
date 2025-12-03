@@ -1098,7 +1098,8 @@ app.get("/blog/:slug", async (req,res) => {
 
   console.log(parsedData)
   const pageContent = await getBlocks(response.id)
-  const postHTML = parsePageContentHTML(pageContent)
+  let postHTML = parsePageContentHTML(pageContent)
+  console.log(postHTML)
   res.render("blog/post", {title: parsedData.Name, postHTML:postHTML, ...parsedData})
 })
 
@@ -2215,13 +2216,19 @@ function parseBlockIntoKeyedObject(block, contentObj) {
   }
 }
 function parsePageContentHTML(data) {
-  let pageHTML = ""
+  let pageHTML = []
+  let htmlString = ""
   let prevType = ""
   console.log("parsing")
   for (let i = 0; i < data.length; i++) {
-    pageHTML = parseBlockHTML(data[i], pageHTML, prevType)
+    htmlString = parseBlockHTML(data[i], htmlString, prevType)
+    if(htmlString.length > 10000){
+      pageHTML.push(htmlString)
+      htmlString = ""
+    }
     prevType = data[i].type
   }
+  pageHTML.push(htmlString)
   return pageHTML
 }
 
@@ -2239,7 +2246,7 @@ function parseBlockHTML(block, pageHTML, prevType) {
     case 'heading_3':
       // For a heading
       console.log(block['heading_3'])
-      if(block['heading_3']?.text[0].plain_text?.indexOf("http") == 0){
+      if(block['heading_3']?.text[0]?.plain_text?.indexOf("http") == 0){
         console.log("URL DETECTED")
         return pageHTML += `<iframe src='${block['heading_3'].text[0].href}'></iframe>`
       }
