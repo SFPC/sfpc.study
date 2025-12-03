@@ -2231,7 +2231,6 @@ function parseBlockHTML(block, pageHTML, prevType) {
     case 'heading_1':
       // For a heading
       let h1Text = formatRichText(block['heading_1'].text)
-      console.log(h1Text)
       return pageHTML += `<h2>${h1Text}</h2>`
     case 'heading_2':
       // For a heading
@@ -2239,6 +2238,11 @@ function parseBlockHTML(block, pageHTML, prevType) {
       return pageHTML += `<h2>${h2Text}</h2>`
     case 'heading_3':
       // For a heading
+      console.log(block['heading_3'])
+      if(block['heading_3']?.text[0].plain_text?.indexOf("http") == 0){
+        console.log("URL DETECTED")
+        return pageHTML += `<iframe src='${block['heading_3'].text[0].href}'></iframe>`
+      }
       let h3Text = formatRichText(block['heading_3'].text)
       return pageHTML += `<h6>${h3Text}</h6>`
     case 'image':
