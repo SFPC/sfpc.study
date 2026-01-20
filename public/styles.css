@@ -29,6 +29,11 @@
 
 
     /* DUPLICATE FOR SEASON, CHANGE SEASON NAME AND ADD TYPE USING @font-face BELOW */
+    --spring-26-title-font: 'Buzzer TM', sans-serif;
+    --spring-26-header-font: 'Buzzer TM', sans-serif;
+    --spring-26-body-font: 'Unifont', sans-serif;
+    --spring-26-special-font: 'Unifont', sans-serif;
+
     --winter-26-title-font: 'Buzzer TM', sans-serif;
     --winter-26-header-font: 'Buzzer TM', sans-serif;
     --winter-26-body-font: 'Unifont', sans-serif;
@@ -468,7 +473,47 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         font-size: calc(var(--large-text) * .7) !important;
         } */
 
+/* spring 26 */         
+        .spring-26.featured .title,
+        .spring-26 #session-name, #tag.spring-26 {
+          font-family: var(--spring-26-title-font) !important;
+          font-size: calc(var(--large-text) * 0.6);
+          line-height: 1em;
+          padding-top: 0.3em;
+        }
+        .spring-26 #session-name {
+          font-size: calc(var(--large-text) * 1.6);
+        }
+        #tag.spring-26 {
+        color: var(--spring-26-text);
+        font-size: calc(var(--large-text) * 0.3);
 
+        }
+
+        .spring-26.session .title.class{
+        font-size: calc(var(--large-text) * 1.2);
+        }
+
+
+                .spring-26,
+        .spring-26.featured.session,
+        .spring-26.featured  {
+        box-sizing: border-box;
+        background-position: center;
+        background-size: cover;
+        }
+        .spring-26 .index-teachers {
+          font-family: var(--spring-26-special-font) !important;
+          letter-spacing: .05rem;
+          font-size: 2rem;
+
+        }
+        .spring-26 .index-teachers-small {
+          font-family: var(--spring-26-special-font) !important;
+          letter-spacing: .05rem;
+          font-size: 1.5rem;
+
+        }
         /* winter 26 */         
         .winter-26.featured .title,
         .winter-26 #session-name, #tag.winter-26 {

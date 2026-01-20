@@ -36,14 +36,18 @@
       /* --summer-25-background: #FFF; */
 
 
+    --spring-26-background: rgb(0 0 0 / 0%); 
+    --spring-26-text: #fff;  
+      --spring-26-text-on-bg: #fff; 
+    --spring-26-link:  #d6e51a; 
+      --spring-26-special-text:  #5294c7;
+
 
     --winter-26-background: rgb(0 0 0 / 0%); 
     --winter-26-text: #fff;  
       --winter-26-text-on-bg: #fff; 
     --winter-26-link:  #d6e51a; 
       --winter-26-special-text:  #5294c7;
-
-      
 
       --fall-25-background: #0f261f;
       --fall-25-text: #f2ff26;
@@ -372,6 +376,248 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+/* /////////// start spring-26  ///////////////////////////////*/
+.shell.spring-26 {
+  background-color: var(--spring-26-background);
+
+        /* background-position: top left;
+        background-repeat: repeat;
+        background-size: cover; */
+      }
+      .spring-26,
+      .spring-26.featured.session,
+      .spring-26.featured  {
+       color: var(--spring-26-text);
+       box-sizing: border-box;
+       border-color: var(--spring-26-text);
+       background-position: center;
+       background-size: cover;
+      }
+      
+      .spring-26.featured:hover {
+        /* background-size: 200%; */
+      }
+      .spring-26,
+.spring-26.featured.session,
+.shell .spring-26,
+.spring-26.featured  {
+  background-color: var(--spring-26-background)  !important;
+  color: var(--spring-26-text);
+  box-sizing: border-box;
+  border-color: var(--spring-26-text);
+  text-shadow: none !important;
+}
+
+
+      .spring-26 p,
+      .spring-26 p a,
+      .spring-26 a,
+      .spring-26.featured h4,
+      .spring-26 h4 a,
+      .spring-26 .intro a,
+      .spring-26 p.large a,
+      .spring-26 p a:hover,
+      .spring-26.session.featured,
+      .spring-26.session.featured a,
+      .spring-26.featured h4.type a,
+      .sfpc .spring-26 a
+      {
+        color: var(--spring-26-text);
+      }
+
+      .spring-26 h4 a:hover,
+      .spring-26 .intro a,
+      .spring-26 p.large a:hover,
+      .spring-26.featured:hover h6,
+      .spring-26.featured:hover .title,
+      .spring-26 .details a:hover,
+      .spring-26.featured .title:hover,
+      .spring-26 p a:hover,
+      .spring-26 h4 a:hover,
+      .spring-26 section .grid-2 ul li::before,
+      .spring-26 .chars,
+      .spring-26 p a:hover,
+      .spring-26 a:hover,
+      .spring-26 h4 a:hover,
+      .spring-26 .intro a:hover,
+      .spring-26 .details a:hover,
+      .spring-26 .entity:hover .accordion dt h3:after,
+      .spring-26 .accordion dt h3:after,
+      .spring-26 .expanded{
+          color: var(--spring-26-link) !important;
+      }
+      .spring-26 .special-button {
+        background-color: var(--spring-26-link);
+        color: #000 !important;
+        border-radius: 1.5vw;
+        padding:calc(10px + 0.5vw);
+        text-decoration: none;
+      }
+      .spring-26 .special-button:hover {
+
+        background-color: #222;
+      }
+      .spring-26 #cost,
+      .spring-26 .fixed-apply,
+      .spring-26 .fixed-support,
+      .spring-26 .home-intro span#session-name::after {
+          color: #000 !important;
+          background: var(--spring-26-link) !important;
+      }
+
+
+      .spring-26 .fixed-apply:hover {
+        color: var(--spring-26-link) !important;
+        background: rgba(0,0,0,.8) !important;
+      }
+
+      .spring-26 .block-text {
+        background-color: var(--spring-26-background);
+        color: var(--spring-26-link);
+      }
+
+
+
+      .spring-26.grid-inner, .spring-26 .grid-inner {
+        border: 2px dotted var(--spring-26-text) !important;
+        color: var(--spring-26-link) !important;
+      }
+
+      .spring-26 #class .entity,
+      .spring-26.website-grid .grid-2 {
+        border-color: var(--spring-26-text);
+      }
+
+      .spring-26 #class .entity:hover {
+        border-color: var(--spring-26-link);
+      }
+
+      .spring-26 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--spring-26-background) !important;
+      }
+
+
+      .spring-26 select#allSections:hover,
+      .spring-26 .loader-content p::after,
+      .spring-26 span#cost
+      {
+        background: var(--spring-26-link) !important;
+        color: #000 !important;
+      }
+
+      .spring-26 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .spring-26 .breadcrumb.fixed,
+      .spring-26 .breadcrumb.fixed::before,
+      .spring-26 .breadcrumb.fixed a,
+      .spring-26 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .spring-26 .breadcrumb,
+      .spring-26 .breadcrumb a,
+      .spring-26 .text-on-bg,
+      .spring-26 .breadcrumb a:hover {
+          color: var(--spring-26-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--spring-26-background);
+      }
+
+
+      .spring-26 section#section-outro,
+      #class .intro.spring-26,
+      .shell.spring-26 .class-details,
+      .spring-26 #class section,
+      .spring-26 #class .entity,
+      .spring-26 .accordion dd.active,
+      .spring-26 section ul,
+      .spring-26 .website-grid
+       {
+        /* background-color: var(--spring-26-background); */
+        background: none;
+        color:  var(--spring-26-text) !important;
+        border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--summer-24-background); */
+
+
+        /* -webkit-text-stroke-width: 1px; */
+          /* -webkit-text-stroke-color: var(--summer-24-link); */
+      }
+
+      .spring-26.featured .title,
+      .spring-26 #session-name, #tag.spring-26,
+
+    .spring-26  #session-name > a
+
+       {
+      /* -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--spring-26-link); */
+      }
+
+      .spring-26 #class section,
+      #class .intro.spring-26 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .spring-26 #class section.stacked,
+      .spring-26 .section-testimonials,
+      .spring-26 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important;
+        /* text-shadow: 2px 2px 0px var(--spring-26-background); */
+
+      }
+
+      .spring-26 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--spring-26-text);
+      }
+
+      /* .shell.spring-26 {
+        background-image: url('images/sessions/spring-26/bg.png');
+        background-size: 100%;
+        background-position: bottom;
+        background-color: #fff;
+      } */
+      .labels-info .weekend-intensive {
+        padding:5px 8px;
+        border-radius:10px;
+        background-color: var(--spring-26-weekend-intensive);
+      }
+      .spring-26.online-class {
+        box-shadow: inset 0px 0px 5px 2px #ffffff;
+        border-color: #ffffff;
+    }
+    .spring-26.online-class .pill {
+      color: black !important;
+      background-color: #79bef2;
+      padding: 0.2em;
+      border-radius: 1em;
+  }
+
+      .spring-26.weekend-intensive .pill {
+        background-color: #FF000F;
+        color: #fffefb !important;
+      }
+      #class-block .spring-26.online-class {
+        border-color:#f2ff26;
+      }
+      #class-block .spring-26.online-class .pill {
+        color: black !important;
+      background-color: #f2ff26;
+      padding: 0.2em;
+      border-radius: 1em;
+      }
+
+      #class-block .spring-26.weekend-intensive h2:hover, #class-block .spring-26.weekend-intensive h6:hover, {
+        color:#FF000F !important;
+      }
+
+/* END spring 2026 */
 /* /////////// start winter-26  ///////////////////////////////*/
 .shell.winter-26 {
   background-color: var(--winter-26-background);
