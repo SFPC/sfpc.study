@@ -518,8 +518,8 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         }
         .spring-26 .index-teachers-small {
           font-family: 'Courier New' !important;
-          letter-spacing: .05rem;
-          font-size: 1.2rem;
+          padding-top: 0.2em;
+          font-size: 1rem;
 
         }
         /* winter 26 */         
