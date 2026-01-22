@@ -1318,6 +1318,21 @@ app.get("/share/:slug", async (req,res) => {
 // })
 
 
+// Global error handlers to prevent crashes
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+});
+
+process.on('uncaughtException', (error) => {
+  console.error('Uncaught Exception:', error);
+});
+
+// Express error handling middleware
+app.use((err, req, res, next) => {
+  console.error('Express Error:', err);
+  res.status(500).send('Internal Server Error');
+});
+
 app.listen(PORT, console.log(`server started on ${PORT}`))
 
 //

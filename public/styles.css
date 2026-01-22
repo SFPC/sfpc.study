@@ -29,10 +29,10 @@
 
 
     /* DUPLICATE FOR SEASON, CHANGE SEASON NAME AND ADD TYPE USING @font-face BELOW */
-    --spring-26-title-font: 'Buzzer TM', sans-serif;
-    --spring-26-header-font: 'Buzzer TM', sans-serif;
-    --spring-26-body-font: 'Unifont', sans-serif;
-    --spring-26-special-font: 'Unifont', sans-serif;
+    --spring-26-title-font: 'Bubble Club', sans-serif;
+    --spring-26-header-font: 'Bubble Club', sans-serif;
+    --spring-26-body-font: 'Helvetica', sans-serif;
+    --spring-26-special-font: 'Helvetica', sans-serif;
 
     --winter-26-title-font: 'Buzzer TM', sans-serif;
     --winter-26-header-font: 'Buzzer TM', sans-serif;
@@ -153,6 +153,13 @@
 }
 
 @import url("https://p.typekit.net/p.css?s=1&k=thn3crj&ht=tk&f=28524.28525&a=79545553&app=typekit&e=css");
+
+@font-face {
+  font-family: 'Bubble Club';
+  src: url('/fonts/Bubble Club.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'Buzzer TM';
@@ -477,9 +484,10 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         .spring-26.featured .title,
         .spring-26 #session-name, #tag.spring-26 {
           font-family: var(--spring-26-title-font) !important;
-          font-size: calc(var(--large-text) * 0.6);
-          line-height: 1em;
-          padding-top: 0.3em;
+        font-size: calc(var(--large-text) * 0.4);
+        text-transform: uppercase;
+        line-height: 1.2em;
+        padding-top: 0.3em;
         }
         .spring-26 #session-name {
           font-size: calc(var(--large-text) * 1.6);
@@ -504,14 +512,14 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         }
         .spring-26 .index-teachers {
           font-family: var(--spring-26-special-font) !important;
-          letter-spacing: .05rem;
-          font-size: 2rem;
+          padding-top: 0.2em;
+          font-size: 1.2rem;
 
         }
         .spring-26 .index-teachers-small {
           font-family: var(--spring-26-special-font) !important;
           letter-spacing: .05rem;
-          font-size: 1.5rem;
+          font-size: 1.2rem;
 
         }
         /* winter 26 */         

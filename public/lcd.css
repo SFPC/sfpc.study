@@ -36,11 +36,11 @@
       /* --summer-25-background: #FFF; */
 
 
-    --spring-26-background: rgb(0 0 0 / 0%); 
+    --spring-26-background: #818181; 
     --spring-26-text: #fff;  
-      --spring-26-text-on-bg: #fff; 
+      --spring-26-text-on-bg: #020827; 
     --spring-26-link:  #d6e51a; 
-      --spring-26-special-text:  #5294c7;
+      --spring-26-special-text:  #f2ff26;
 
 
     --winter-26-background: rgb(0 0 0 / 0%); 
@@ -455,7 +455,7 @@ select#allSections {
       }
       .spring-26 .special-button:hover {
 
-        background-color: #222;
+        background-color: #f2ff26;
       }
       .spring-26 #cost,
       .spring-26 .fixed-apply,
@@ -552,8 +552,7 @@ select#allSections {
     .spring-26  #session-name > a
 
        {
-      /* -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: var(--spring-26-link); */
+        
       }
 
       .spring-26 #class section,
@@ -589,12 +588,13 @@ select#allSections {
         background-color: var(--spring-26-weekend-intensive);
       }
       .spring-26.online-class {
-        box-shadow: inset 0px 0px 5px 2px #ffffff;
-        border-color: #ffffff;
+        box-shadow: inset 0px 0px 13px 6px #3e3b3b;
+        border: 1px #3e3b3b solid;
+        padding: 1em;
     }
     .spring-26.online-class .pill {
       color: black !important;
-      background-color: #79bef2;
+      background-color: #1dbe0d;
       padding: 0.2em;
       border-radius: 1em;
   }
