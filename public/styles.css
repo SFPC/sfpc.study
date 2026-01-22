@@ -156,7 +156,7 @@
 
 @font-face {
   font-family: 'Bubble Club';
-  src: url('/fonts/Bubble Club.ttf') format('opentype');
+  src: url('/fonts/Bubble Club.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
