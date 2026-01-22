@@ -511,13 +511,13 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         background-size: cover;
         }
         .spring-26 .index-teachers {
-          font-family: var(--spring-26-special-font) !important;
+          font-family: 'Courier New' !important;
           padding-top: 0.2em;
           font-size: 1.2rem;
 
         }
         .spring-26 .index-teachers-small {
-          font-family: var(--spring-26-special-font) !important;
+          font-family: 'Courier New' !important;
           letter-spacing: .05rem;
           font-size: 1.2rem;
 
