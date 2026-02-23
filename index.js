@@ -1874,7 +1874,7 @@ function parseClassData(apiResponse){
   returnObj.endDate=prettyDateString(classInfo["Date"]?.date?.end)
   returnObj.startDate2=prettyDateString(classInfo["Date 2"]?.date?.start)
   returnObj.endDate2=prettyDateString(classInfo["Date 2"]?.date?.end)
-  returnObj.numberOfClasses=classInfo["Number of Classes"].number
+  returnObj.numberOfClasses=classInfo["Sections"].number
   returnObj.time=classInfo["Time"].rich_text[0]?.plain_text
   returnObj.appQuestion=classInfo["Application Question"].rich_text[0]?.plain_text
   returnObj.location=classInfo["Location"].rich_text[0]?.plain_text
