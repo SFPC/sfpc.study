@@ -147,12 +147,19 @@
     --codesocieties-20-header-font: 'Violet', 'Hershey', sans-serif;
     --codesocieties-20-body-font: 'Violet', 'Hershey', sans-serif;
     --codesocieties-20-special-font: 'Violet', 'Hershey', sans-serif;
-
+ 
+    --sw-26-title-font: 'FlorDeRuina', 'Hershey', sans-serif;
 
 
 }
 
 @import url("https://p.typekit.net/p.css?s=1&k=thn3crj&ht=tk&f=28524.28525&a=79545553&app=typekit&e=css");
+
+@font-face{
+  font-family: 'FlorDeRuina';
+  src: irl('/fonts/FlorDeRuina-Semilla.ttf') format('truetype');
+  font-weight: normal;
+}
 
 @font-face {
   font-family: 'Bubble Club';
@@ -479,6 +486,18 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         .spring-24.session .title.class{
         font-size: calc(var(--large-text) * .7) !important;
         } */
+
+
+/* spring 26 workshops */
+.spring-sw-26.featured .title,
+        .spring-sw-26 #session-name, #tag.spring-sw-26 {
+    font-family: var(--sw-26-title-font) !important;
+    font-size: calc(var(--large-text) * 0.7); 
+    line-height: 1.2em;
+    padding-top: 0.3em;
+    font-weight: normal !important;
+    font-kerning: none;
+        }
 
 /* spring 26 */         
         .spring-26.featured .title,
