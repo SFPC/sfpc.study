@@ -407,7 +407,9 @@ select#allSections {
     color: var(--sw-lightblue);
 }
 
-
+   .spring-26 .workshop.shell{
+          background: var(--sw-lightblue);   
+        }
 
 
 /* /////////// start spring-26  ///////////////////////////////*/
