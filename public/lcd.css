@@ -384,10 +384,14 @@ select#allSections {
 
 /* /////////// start spring-26 extra workshop styles  ///////////////////////////////*/
 
-.spring-26 .workshop{
+.shell.spring-sw-26{
   background-color: var(--sw-lightblue);
   color: white;
 }
+
+.shell.spring-26 .workshop{
+  background-color: var(--sw-lightblue);
+      }
 
 .spring-sw-26.online-class {
     box-shadow: inset 0px 0px 13px 6px var(--sw-lime);

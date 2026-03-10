@@ -501,11 +501,12 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 
         .spring-26 .workshop  #session-name {
           font-family: var(--sw-26-title-font)!important;
-        font-size: calc(var(--large-text) * 0.4);
+        font-size: calc(var(--large-text));
         line-height: 1.2em;
         padding-top: 0.3em;
         font-weight: normal;
       font-kerning: normal;
+      text-transform: none;
         }
 
      
