@@ -404,6 +404,18 @@ select#allSections {
     font-kerning: 200;
 }
 
+@media only screen and (max-width: 600px) {
+  .spring-sw-26.featured .title{
+    font-size: calc(var(--large-text) * 0.9);
+  }
+
+.spring-26 .special-button {
+    font-size: 0.8em !important;
+}
+
+
+  }
+
 .spring-sw-26.online-class .pill{
   box-shadow: inset 1px 1px 8px 1px var(--sw-lightblue);
     padding: 0.4em;
