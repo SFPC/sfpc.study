@@ -389,7 +389,7 @@ select#allSections {
   color: white;
 }
 
-.shell.spring-26 .workshop{
+.shell .spring-26 .workshop{
   background-color: var(--sw-lightblue);
       }
 
@@ -492,8 +492,9 @@ select#allSections {
         background-color: var(--spring-26-link);
         color: #000 !important;
         border-radius: 1.5vw;
-        padding:calc(10px + 0.5vw);
+        padding:calc(10px + 0.7vw);
         text-decoration: none;
+        font-size: 0.6em !important;
       }
       .spring-26 .special-button:hover {
 

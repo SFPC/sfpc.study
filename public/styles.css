@@ -157,7 +157,7 @@
 
 @font-face{
   font-family: 'FlorDeRuina';
-  src: irl('/fonts/FlorDeRuina-Semilla.ttf') format('truetype');
+  src: url('/fonts/FlorDeRuina-Semilla.ttf') format('truetype');
   font-weight: normal;
 }
 
