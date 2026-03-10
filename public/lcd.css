@@ -380,9 +380,11 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+
+
 /* /////////// start spring-26 extra workshop styles  ///////////////////////////////*/
 
-.shell.spring-sw-26{
+.spring-26 .workshop{
   background-color: var(--sw-lightblue);
   color: white;
 }
