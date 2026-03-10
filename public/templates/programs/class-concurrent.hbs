@@ -72,7 +72,7 @@ src="https://www.facebook.com/tr?id=702080505718294&ev=PageView&noscript=1"
   {{> footer}}
   <div class="crt-overlay crt-overlay-fullsize"></div>
 
-  <div id="shell" class="shell shell-fullsize about {{"Session Slug"}}  sfpc">
+  <div id="shell" class="shell shell-fullsize about {{"Session Slug"}}  sfpc {{#if workshop}}workshop{{/if}}">
 
     <div class="selectors {{#if registrationDone}}regDone{{/if}}">
       <select id="allSections" onchange="sectionJump(this.value)" class="{{"Session Slug"}} hide-content">
