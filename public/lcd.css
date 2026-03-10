@@ -429,6 +429,9 @@ select#allSections {
    .shell.workshop{
           background: var(--sw-lightblue)!important;   
         }
+        .spring-26 .workshop #class-block {
+          background: var(--sw-lightblue)!important;   
+        }
 
 
 /* /////////// start spring-26  ///////////////////////////////*/
