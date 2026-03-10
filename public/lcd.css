@@ -413,8 +413,8 @@ select#allSections {
     color: var(--sw-lightblue);
 }
 
-   .spring-26 .workshop.shell{
-          background: var(--sw-lightblue);   
+   .shell.workshop{
+          background: var(--sw-lightblue)!important;   
         }
 
 
