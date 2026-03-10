@@ -407,6 +407,7 @@ select#allSections {
 @media only screen and (max-width: 600px) {
   .spring-sw-26.featured .title{
     font-size: calc(var(--large-text) * 0.9);
+    font-weight: normal;
   }
 
 .spring-26 .special-button {

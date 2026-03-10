@@ -509,6 +509,13 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
       text-transform: none;
         }
 
+        @media only screen and (max-width: 600px) 
+        {
+  .spring-sw-26.featured .title{
+    font-size: calc(var(--large-text) * 0.9);
+    font-weight: normal;
+  }
+}
      
 
 /* spring 26 */         
