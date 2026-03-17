@@ -1855,7 +1855,7 @@ function parseClassData(apiResponse){
   returnObj.name=classInfo.Name.title[0].plain_text
   returnObj.subtitle=classInfo["Subtitle"].rich_text[0]?.plain_text
   returnObj.classType=classInfo["Class Type"]?.select?.name
-  if(returnObj.classType == "Weekend Intensive" || returnObj.classType.includes("Workshop") || returnObj.classType.includes("workshop")) returnObj.workshop = true
+  if(returnObj.classType == "Weekend Intensive" || returnObj.classType?.includes("Workshop") || returnObj.classType?.includes("workshop")) returnObj.workshop = true
   returnObj.teachers=parseTeachers(classInfo)
   returnObj.classBlog=parseClassBlog(classInfo)
   returnObj.classProjects=parseClassProjects(classInfo)
