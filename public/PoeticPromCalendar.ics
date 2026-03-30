@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//YourSite//ICS Event Generator//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:event-1774889273878-cl65aala@yourdomain.com
+DTSTAMP:20260330T164753Z
+DTSTART;TZID=America/New_York:20260620T200000
+DTEND;TZID=America/New_York:20260621T000000
+SUMMARY:Poetic Promenade
+DESCRIPTION:SFPC's first annual\, large-scale hallmark event that reimagines prom and graduation through art\, code\, and collective care
+LOCATION:Roulette (509 Atlantic Ave\, Brooklyn\, NY 11217\, United States)
+END:VEVENT
+BEGIN:VEVENT
+UID:event-1774889273878-cl65aala-2@yourdomain.com
+DTSTAMP:20260330T164753Z
+DTSTART;TZID=America/New_York:20260621T150000
+DTEND;TZID=America/New_York:20260621T183000
+SUMMARY:Poetic Promenade
+DESCRIPTION:SFPC's first annual\, large-scale hallmark event that reimagines prom and graduation through art\, code\, and collective care
+LOCATION:Roulette (509 Atlantic Ave\, Brooklyn\, NY 11217\, United States)
+END:VEVENT
+END:VCALENDAR
