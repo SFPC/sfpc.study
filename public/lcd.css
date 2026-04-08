@@ -430,9 +430,6 @@ select#allSections {
     color: var(--sw-lightblue);
 }
 
-   .shell.workshop{
-          background: var(--sw-lightblue)!important;   
-        }
         .future-schools .workshop #class-block {
           background: var(--sw-lightblue)!important;   
         }
@@ -480,9 +477,7 @@ select#allSections {
     color: var(--sw-lightblue);
 }
 
-   .shell.workshop{
-          background: var(--sw-lightblue)!important;   
-        }
+
         .prom-26 .workshop #class-block {
           background: var(--sw-lightblue)!important;   
         }
@@ -776,9 +771,9 @@ select#allSections {
     color: var(--sw-lightblue);
 }
 
-   .shell.workshop{
+   .shell.spring-26.workshop{
           background: var(--sw-lightblue)!important;   
-        }
+    }
         .spring-26 .workshop #class-block {
           background: var(--sw-lightblue)!important;   
         }
