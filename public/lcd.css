@@ -560,7 +560,7 @@ select#allSections {
       }
       .summer-26 .special-button {
         background-color: var(--summer-26-link);
-        color: #f8cc8b !important;
+        color: black !important;
         border-radius: 1.5vw;
         padding:calc(10px + 0.7vw);
         text-decoration: none;
