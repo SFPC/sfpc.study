@@ -130,6 +130,7 @@ background-color: var(--text-link) !important;
 
 .summer-26.online-class, .future-schools.workshop, .future-schools.talk {
   color:#222 !important;
+  background-size: 150%;
 }
 
 .summer-25.online-class {
