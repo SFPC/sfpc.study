@@ -529,7 +529,12 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         } */
 
 /* future-schools */         
-
+.summer-26.online-class .pill, .future-schools.workshop .pill, .future-schools.talk .pill, .spring-sw-26.workshop .pill {
+  color: black !important; 
+  background-color: white;
+  padding: 0.2em;
+  border-radius: 1em;
+}
 .future-schools.featured .title,
 .future-schools #session-name, #tag.future-schools {
   font-family: var(--future-schools-title-font) !important;
