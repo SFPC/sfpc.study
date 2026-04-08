@@ -615,6 +615,10 @@ background-size: cover;
 }
 /* summer 26 */         
 
+.summer-26.online-class.title-class, .future-schools.workshop.title-class, .future-schools.talk.title-class{
+  backdrop-filter: contrast(0.5);
+  border-radius: 5px;
+}
 
 
 .summer-26.featured .title,
