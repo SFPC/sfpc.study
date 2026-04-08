@@ -2383,7 +2383,7 @@ select#allSections:focus {
       }
 
 
-      .grid-2.featured h4.type, .grid-1.featured h4.type {
+       .grid-1.featured h4.type {
         /* display: none; */
           font-size: var(--small-text);
           font-weight: bold;
@@ -2393,7 +2393,7 @@ select#allSections:focus {
         margin-bottom: var(--program-margin);
       }
 
-      .grid-2.featured h2, .grid-1.featured h2 {
+       .grid-1.featured h2 {
         font-size: var(--large-text);
         font-weight: lighter !important;
       }
@@ -2422,12 +2422,12 @@ select#allSections:focus {
       }
 
 
-      .grid-2.featured h4, .grid-1.featured h4 {
+       .grid-1.featured h4 {
         font-size: var(--medium-text);
         font-weight: lighter;
       }
 
-      .grid-2 .featured-text, .grid-1 .featured-text {
+      .grid-1 .featured-text {
         flex-direction: column;
         justify-content: space-between;
         padding: 0.6em 0.2em;

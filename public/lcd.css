@@ -487,14 +487,14 @@ select#allSections {
           background: var(--sw-lightblue)!important;   
         }
 /* /////////// start summer-26  ///////////////////////////////*/
-.shell.summer-26 {
+.shell.april-26-shell {
   background-color: var(--summer-26-background);
 
         /* background-position: top left;
         background-repeat: repeat;
         background-size: cover; */
       }
-      .summer-26,
+      .summer-26, .april-26-shell
       .summer-26.featured.session,
       .summer-26.featured  {
        color: var(--summer-26-text);
@@ -507,7 +507,7 @@ select#allSections {
       .summer-26.featured:hover {
         /* background-size: 200%; */
       }
-      .summer-26,
+      .summer-26, .april-26-shell,
 .summer-26.featured.session,
 .shell .summer-26,
 .summer-26.featured  {
