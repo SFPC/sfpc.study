@@ -39,6 +39,9 @@
       white #FFFFFF */
       /* --summer-25-background: #FFF; */
 
+      --summer-26-background: black;
+      --summer-26-text: white;
+
 
     --spring-26-background: #818181; 
     --spring-26-text: #fff;  
@@ -510,7 +513,9 @@ select#allSections {
   box-sizing: border-box;
   border-color: var(--summer-26-text);
   text-shadow: none !important;
+  
 }
+
 
 
       .summer-26 p,

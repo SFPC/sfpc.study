@@ -26,9 +26,31 @@
     --ecpc-header-font: 'Screenfont', sans-serif;
     --ecpc-body-font: 'Screenfont', sans-serif;
     --ecpc-special-font: 'Screenfont', sans-serif;
+  
+  
+    /* SUMMER FULL PROGRAM STYLING BEGINS HERE */
+    --summer-26-title-font: 'Arkdes Hershey', sans-serif;
+    --summer-26-header-font: 'Arkdes Hershey', sans-serif;
+    --summer-26-body-font: 'submarine', sans-serif;
+    --summer-26-special-font: 'submarine', sans-serif;
 
+     --prom-26-title-font: 'Lucid Wake Script', sans-serif;
+    --prom-26-header-font: 'Lucid Wake Scrip', sans-serif;
+    --prom-26-body-font: 'FlorDeRuina', sans-serif;
+    --prom-26-special-font: 'Submarine', sans-serif;
+
+    --future-schools-title-font: 'Arkdes Hershey', sans-serif;
+    --future-schools-header-font: 'Arkdes Hershey', sans-serif;
+    --future-schools-body-font: 'submarine', sans-serif;
+    --future-schools-special-font: 'submarine', sans-serif;
 
     /* DUPLICATE FOR SEASON, CHANGE SEASON NAME AND ADD TYPE USING @font-face BELOW */
+    --spring-sw-26-title-font: 'FlorDeRuina', sans-serif;
+     --spring-sw-26-header-font: 'FlorDeRuina', sans-serif;
+
+
+
+
     --spring-26-title-font: 'Bubble Club', sans-serif;
     --spring-26-header-font: 'Bubble Club', sans-serif;
     --spring-26-body-font: 'Helvetica', sans-serif;
@@ -154,6 +176,25 @@
 }
 
 @import url("https://p.typekit.net/p.css?s=1&k=thn3crj&ht=tk&f=28524.28525&a=79545553&app=typekit&e=css");
+
+@font-face{
+  font-family: 'Arkdes Hershey';
+  src: url('/fonts/Arkdes-Hershey-40.otf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: 'Lucid Wake Script';
+  src: url('/fonts/LucidWakeScript.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: 'submarine';
+  src: url('/fonts/sub-marine.otf') format('truetype');
+  font-weight: normal;
+}
+
 
 @font-face{
   font-family: 'FlorDeRuina';
@@ -492,10 +533,10 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 .future-schools.featured .title,
 .future-schools #session-name, #tag.future-schools {
   font-family: var(--future-schools-title-font) !important;
-font-size: calc(var(--large-text) * 0.4);
-text-transform: uppercase;
-line-height: 1.2em;
+font-size: calc(var(--large-text) * 0.8);
+line-height: 0.9em;
 padding-top: 0.3em;
+font-weight:
 }
 .future-schools #session-name {
   font-size: calc(var(--large-text) * 1.15);
@@ -519,7 +560,7 @@ background-position: center;
 background-size: cover;
 }
 .future-schools .index-teachers {
-  font-family: 'Courier New' !important;
+  font-family: 'submarine' !important;
   padding-top: 0.2em;
   font-size: 1.2rem;
 
@@ -536,7 +577,6 @@ background-size: cover;
 .prom-26 #session-name, #tag.prom-26 {
   font-family: var(--prom-26-title-font) !important;
 font-size: calc(var(--large-text) * 0.4);
-text-transform: uppercase;
 line-height: 1.2em;
 padding-top: 0.3em;
 }
@@ -575,20 +615,22 @@ background-size: cover;
 }
 /* summer 26 */         
 
+
+
 .summer-26.featured .title,
 .summer-26 #session-name, #tag.summer-26 {
-  font-family: var(--summer-26-title-font) !important;
-font-size: calc(var(--large-text) * 0.4);
-text-transform: uppercase;
-line-height: 1.2em;
+ font-family: var(--future-schools-title-font) !important;
+font-size: calc(var(--large-text) * 0.8);
+line-height: 0.9em;
 padding-top: 0.3em;
+font-weight:
 }
 .summer-26 #session-name {
   font-size: calc(var(--large-text) * 1.15);
 }
 #tag.summer-26 {
 color: var(--summer-26-text);
-font-size: calc(var(--large-text) * 0.3);
+font-size: calc(var(--large-text) * 0.2);
 
 }
 
@@ -605,9 +647,9 @@ background-position: center;
 background-size: cover;
 }
 .summer-26 .index-teachers {
-  font-family: 'Courier New' !important;
+  font-family: 'submarine' !important;
   padding-top: 0.2em;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 
 }
 .summer-26 .index-teachers-small {
@@ -2388,7 +2430,6 @@ select#allSections:focus {
       .grid-2 .featured-text, .grid-1 .featured-text {
         flex-direction: column;
         justify-content: space-between;
-        backdrop-filter: blur(5px); /* Fall 2025 styling adaptation */
         padding: 0.6em 0.2em;
       }
 
