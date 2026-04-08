@@ -126,6 +126,12 @@ background-color: var(--text-link) !important;
   background-color: var(--weekend-intensive-bg);
   color: var(--background);
 }
+
+
+.summer-26.online-class, .future-schools.workshop, .future-schools.talk {
+  color:#222 !important;
+}
+
 .summer-25.online-class {
   border-color:#FFBAD9;
 }
