@@ -380,7 +380,349 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+/* /////////// start future-schools styles  ///////////////////////////////*/
 
+.shell.future-schools{
+  background-color: var(--sw-lightblue);
+  color: white;
+}
+
+.shell .future-schools .workshop{
+  background-color: var(--sw-lightblue);
+      }
+
+.future-schools.online-class {
+    box-shadow: inset 0px 0px 13px 6px var(--sw-lime);
+    border: 0px solid;
+    padding: 1em;
+    background-image: url(images/sessions/future-schools/Spring-WS-BG.jpg);
+    background-size: cover;
+    font-family: 'FlorDeRuina';
+    font-weight: light !important;
+    font-kerning: 200;
+}
+
+@media only screen and (max-width: 600px) {
+  .future-schools.featured .title{
+    font-size: calc(var(--large-text) * 0.9);
+    font-weight: normal;
+  }
+
+.future-schools .special-button {
+    font-size: 0.8em !important;
+}
+
+
+  }
+
+.future-schools.online-class .pill{
+  box-shadow: inset 1px 1px 8px 1px var(--sw-lightblue);
+    padding: 0.4em;
+    border-radius: 10px;
+    border: 1px solid;
+    background: white;
+    color: var(--sw-lightblue);
+}
+
+   .shell.workshop{
+          background: var(--sw-lightblue)!important;   
+        }
+        .future-schools .workshop #class-block {
+          background: var(--sw-lightblue)!important;   
+        }
+/* /////////// start prom styles  ///////////////////////////////*/
+
+.shell.prom-26{
+  background-color: var(--sw-lightblue);
+  color: white;
+}
+
+.shell .prom-26 .workshop{
+  background-color: var(--sw-lightblue);
+      }
+
+.prom-26.online-class {
+    box-shadow: inset 0px 0px 13px 6px var(--sw-lime);
+    border: 0px solid;
+    padding: 1em;
+    background-image: url(images/sessions/prom-26/Spring-WS-BG.jpg);
+    background-size: cover;
+    font-family: 'FlorDeRuina';
+    font-weight: light !important;
+    font-kerning: 200;
+}
+
+@media only screen and (max-width: 600px) {
+  .prom-26.featured .title{
+    font-size: calc(var(--large-text) * 0.9);
+    font-weight: normal;
+  }
+
+.prom-26 .special-button {
+    font-size: 0.8em !important;
+}
+
+
+  }
+
+.prom-26.online-class .pill{
+  box-shadow: inset 1px 1px 8px 1px var(--sw-lightblue);
+    padding: 0.4em;
+    border-radius: 10px;
+    border: 1px solid;
+    background: white;
+    color: var(--sw-lightblue);
+}
+
+   .shell.workshop{
+          background: var(--sw-lightblue)!important;   
+        }
+        .prom-26 .workshop #class-block {
+          background: var(--sw-lightblue)!important;   
+        }
+/* /////////// start summer-26  ///////////////////////////////*/
+.shell.summer-26 {
+  background-color: var(--summer-26-background);
+
+        /* background-position: top left;
+        background-repeat: repeat;
+        background-size: cover; */
+      }
+      .summer-26,
+      .summer-26.featured.session,
+      .summer-26.featured  {
+       color: var(--summer-26-text);
+       box-sizing: border-box;
+       border-color: var(--summer-26-text);
+       background-position: center;
+       background-size: cover;
+      }
+      
+      .summer-26.featured:hover {
+        /* background-size: 200%; */
+      }
+      .summer-26,
+.summer-26.featured.session,
+.shell .summer-26,
+.summer-26.featured  {
+  background-color: var(--summer-26-background)  !important;
+  color: var(--summer-26-text);
+  box-sizing: border-box;
+  border-color: var(--summer-26-text);
+  text-shadow: none !important;
+}
+
+
+      .summer-26 p,
+      .summer-26 p a,
+      .summer-26 a,
+      .summer-26.featured h4,
+      .summer-26 h4 a,
+      .summer-26 .intro a,
+      .summer-26 p.large a,
+      .summer-26 p a:hover,
+      .summer-26.session.featured,
+      .summer-26.session.featured a,
+      .summer-26.featured h4.type a,
+      .sfpc .summer-26 a
+      {
+        color: var(--summer-26-text);
+      }
+
+      .summer-26 h4 a:hover,
+      .summer-26 .intro a,
+      .summer-26 p.large a:hover,
+      .summer-26.featured:hover h6,
+      .summer-26.featured:hover .title,
+      .summer-26 .details a:hover,
+      .summer-26.featured .title:hover,
+      .summer-26 p a:hover,
+      .summer-26 h4 a:hover,
+      .summer-26 section .grid-2 ul li::before,
+      .summer-26 .chars,
+      .summer-26 p a:hover,
+      .summer-26 a:hover,
+      .summer-26 h4 a:hover,
+      .summer-26 .intro a:hover,
+      .summer-26 .details a:hover,
+      .summer-26 .entity:hover .accordion dt h3:after,
+      .summer-26 .accordion dt h3:after,
+      .summer-26 .expanded{
+          color: var(--summer-26-link) !important;
+      }
+      .summer-26 .special-button {
+        background-color: var(--summer-26-link);
+        color: #000 !important;
+        border-radius: 1.5vw;
+        padding:calc(10px + 0.7vw);
+        text-decoration: none;
+        font-size: 0.6em !important;
+      }
+      .summer-26 .special-button:hover {
+
+        background-color: #f2ff26;
+      }
+      .summer-26 #cost,
+      .summer-26 .fixed-apply,
+      .summer-26 .fixed-support,
+      .summer-26 .home-intro span#session-name::after {
+          color: #000 !important;
+          background: var(--summer-26-link) !important;
+      }
+
+
+      .summer-26 .fixed-apply:hover {
+        color: var(--summer-26-link) !important;
+        background: rgba(0,0,0,.8) !important;
+      }
+
+      .summer-26 .block-text {
+        background-color: var(--summer-26-background);
+        color: var(--summer-26-link);
+      }
+
+
+
+      .summer-26.grid-inner, .summer-26 .grid-inner {
+        border: 2px dotted var(--summer-26-text) !important;
+        color: var(--summer-26-link) !important;
+      }
+
+      .summer-26 #class .entity,
+      .summer-26.website-grid .grid-2 {
+        border-color: var(--summer-26-text);
+      }
+
+      .summer-26 #class .entity:hover {
+        border-color: var(--summer-26-link);
+      }
+
+      .summer-26 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--summer-26-background) !important;
+      }
+
+
+      .summer-26 select#allSections:hover,
+      .summer-26 .loader-content p::after,
+      .summer-26 span#cost
+      {
+        background: var(--summer-26-link) !important;
+        color: #000 !important;
+      }
+
+      .summer-26 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .summer-26 .breadcrumb.fixed,
+      .summer-26 .breadcrumb.fixed::before,
+      .summer-26 .breadcrumb.fixed a,
+      .summer-26 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .summer-26 .breadcrumb,
+      .summer-26 .breadcrumb a,
+      .summer-26 .text-on-bg,
+      .summer-26 .breadcrumb a:hover {
+          color: var(--summer-26-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--summer-26-background);
+      }
+
+
+      .summer-26 section#section-outro,
+      #class .intro.summer-26,
+      .shell.summer-26 .class-details,
+      .summer-26 #class section,
+      .summer-26 #class .entity,
+      .summer-26 .accordion dd.active,
+      .summer-26 section ul,
+      .summer-26 .website-grid
+       {
+        /* background-color: var(--summer-26-background); */
+        background: none;
+        color:  var(--summer-26-text) !important;
+        border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--summer-24-background); */
+
+
+        /* -webkit-text-stroke-width: 1px; */
+          /* -webkit-text-stroke-color: var(--summer-24-link); */
+      }
+
+      .summer-26.featured .title,
+      .summer-26 #session-name, #tag.summer-26,
+
+    .summer-26  #session-name > a
+
+       {
+        
+      }
+
+      .summer-26 #class section,
+      #class .intro.summer-26 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .summer-26 #class section.stacked,
+      .summer-26 .section-testimonials,
+      .summer-26 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important;
+        /* text-shadow: 2px 2px 0px var(--summer-26-background); */
+
+      }
+
+      .summer-26 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--summer-26-text);
+      }
+
+      /* .shell.summer-26 {
+        background-image: url('images/sessions/summer-26/bg.png');
+        background-size: 100%;
+        background-position: bottom;
+        background-color: #fff;
+      } */
+      .labels-info .weekend-intensive {
+        padding:5px 8px;
+        border-radius:10px;
+        background-color: var(--summer-26-weekend-intensive);
+      }
+      .summer-26.online-class {
+        box-shadow: inset 0px 0px 13px 6px #3e3b3b;
+        border: 1px #3e3b3b solid;
+        padding: 1em;
+    }
+    .summer-26.online-class .pill {
+      color: black !important;
+      background-color: #1dbe0d;
+      padding: 0.2em;
+      border-radius: 1em;
+  }
+
+      .summer-26.weekend-intensive .pill {
+        background-color: #FF000F;
+        color: #fffefb !important;
+      }
+      #class-block .summer-26.online-class {
+        border-color:#f2ff26;
+      }
+      #class-block .summer-26.online-class .pill {
+        color: black !important;
+      background-color: #f2ff26;
+      padding: 0.2em;
+      border-radius: 1em;
+      }
+
+      #class-block .summer-26.weekend-intensive h2:hover, #class-block .summer-26.weekend-intensive h6:hover, {
+        color:#FF000F !important;
+      }
+
+/* END spring 2026 */
 
 /* /////////// start spring-26 extra workshop styles  ///////////////////////////////*/
 

@@ -487,7 +487,135 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         font-size: calc(var(--large-text) * .7) !important;
         } */
 
+/* future-schools */         
 
+.future-schools.featured .title,
+.future-schools #session-name, #tag.future-schools {
+  font-family: var(--future-schools-title-font) !important;
+font-size: calc(var(--large-text) * 0.4);
+text-transform: uppercase;
+line-height: 1.2em;
+padding-top: 0.3em;
+}
+.future-schools #session-name {
+  font-size: calc(var(--large-text) * 1.15);
+}
+#tag.future-schools {
+color: var(--future-schools-text);
+font-size: calc(var(--large-text) * 0.3);
+
+}
+
+.future-schools.session .title.class{
+font-size: calc(var(--large-text) * 1.2);
+}
+
+
+        .future-schools,
+.future-schools.featured.session,
+.future-schools.featured  {
+box-sizing: border-box;
+background-position: center;
+background-size: cover;
+}
+.future-schools .index-teachers {
+  font-family: 'Courier New' !important;
+  padding-top: 0.2em;
+  font-size: 1.2rem;
+
+}
+.future-schools .index-teachers-small {
+  font-family: 'Courier New' !important;
+  padding-top: 0.2em;
+  font-size: 1rem;
+
+}
+ /* prom-26 */         
+
+.prom-26.featured .title,
+.prom-26 #session-name, #tag.prom-26 {
+  font-family: var(--prom-26-title-font) !important;
+font-size: calc(var(--large-text) * 0.4);
+text-transform: uppercase;
+line-height: 1.2em;
+padding-top: 0.3em;
+}
+.prom-26 #session-name {
+  font-size: calc(var(--large-text) * 1.15);
+}
+#tag.prom-26 {
+color: var(--prom-26-text);
+font-size: calc(var(--large-text) * 0.3);
+
+}
+
+.prom-26.session .title.class{
+font-size: calc(var(--large-text) * 1.2);
+}
+
+
+        .prom-26,
+.prom-26.featured.session,
+.prom-26.featured  {
+box-sizing: border-box;
+background-position: center;
+background-size: cover;
+}
+.prom-26 .index-teachers {
+  font-family: 'Courier New' !important;
+  padding-top: 0.2em;
+  font-size: 1.2rem;
+
+}
+.prom-26 .index-teachers-small {
+  font-family: 'Courier New' !important;
+  padding-top: 0.2em;
+  font-size: 1rem;
+
+}
+/* summer 26 */         
+
+.summer-26.featured .title,
+.summer-26 #session-name, #tag.summer-26 {
+  font-family: var(--summer-26-title-font) !important;
+font-size: calc(var(--large-text) * 0.4);
+text-transform: uppercase;
+line-height: 1.2em;
+padding-top: 0.3em;
+}
+.summer-26 #session-name {
+  font-size: calc(var(--large-text) * 1.15);
+}
+#tag.summer-26 {
+color: var(--summer-26-text);
+font-size: calc(var(--large-text) * 0.3);
+
+}
+
+.summer-26.session .title.class{
+font-size: calc(var(--large-text) * 1.2);
+}
+
+
+        .summer-26,
+.summer-26.featured.session,
+.summer-26.featured  {
+box-sizing: border-box;
+background-position: center;
+background-size: cover;
+}
+.summer-26 .index-teachers {
+  font-family: 'Courier New' !important;
+  padding-top: 0.2em;
+  font-size: 1.2rem;
+
+}
+.summer-26 .index-teachers-small {
+  font-family: 'Courier New' !important;
+  padding-top: 0.2em;
+  font-size: 1rem;
+
+}
 /* spring 26 workshops */
 .spring-sw-26.featured .title,
         .spring-sw-26 #session-name, #tag.spring-sw-26 {
