@@ -1871,7 +1871,7 @@ img {
 }
 
 .hide-content {
-  /* display: none; */
+  display: none;
 }
 
 .show {
@@ -3394,6 +3394,14 @@ section.stacked-4 {
             -moz-transition: all .2s ease-in-out;
             ms-transition: all .2s ease-in-out;
             o-transition: all .2s ease-in-out;
+          }
+
+          .classpage-image {
+            opacity:0;
+          }
+
+          .classpage-image.loaded {
+            opacity:1;
           }
 
            #carousel-images figure:first-child {

@@ -343,7 +343,7 @@ $('#shell').bind('scroll', function()
 $(window).on("load", function() {
 // $(".hide-content").fadeIn(2000);
 // $(".loader-content").fadeOut(200);
-// $(".hide-content").fadeIn(200);
+$(".hide-content").fadeIn(200);
 
 // setTimeout(function() {
 //        $('.website-grid').addClass('grid-hide')
