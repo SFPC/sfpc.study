@@ -1779,7 +1779,7 @@ img {
 
         .loader-content {
           padding-top: 4vh;
-          display: block;
+          display: none;
           z-index:99999999999999999999999999999999;
           width: 100%;
           height: 100%;
@@ -1871,7 +1871,7 @@ img {
 }
 
 .hide-content {
-  display: none;
+  /* display: none; */
 }
 
 .show {

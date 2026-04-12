@@ -13,7 +13,12 @@ const PORT = process.env.PORT || 3000
 
 const NOTION_FUNDRAISER_DATABASE_ID = "11ee959b7fdb4204a9ce46c9224b1818";
 const NOTION_STORE_DATABASE_ID = "7c36ef34cebb48e097706442634abaaf";
+const redis = require('redis');
+const client = redis.createClient(); // Connects to default 127.0.0.1:6379 on your Droplet
 
+client.on('error', (err) => console.log('Redis Client Error', err));
+client.connect(); // v4 of redis requires explicit connect
+const CACHE_TTL = 3500; // 60 minutes in seconds
 console.log("starting up")
 app.use(express.static("public"))
 app.use( bodyParser.json() );
@@ -178,16 +183,21 @@ app.get("/sex-ed/:slug", async (req,res) => {
 //   res.render("networked-performance/session")
 // })
 
-app.get("/classes", async (req,res) => {
-  const response = await getDatabaseEntries("6d5585af2f544dd1bad9d24c5e177026", [{property:"Date", direction:"descending"}])
-  const projectData = response.map((project) => {
-    console.log(project)
-    return parseClassData(project)
-  })
-  console.log(projectData)
-  // let pageContent = getPageContent()
-  res.render("programs/classes", {projects: projectData})
-})
+app.get("/classes", async (req, res) => {
+  try {
+    const classes = await getCachedData("notion:classes:list", async () => {
+      const response = await getDatabaseEntries("6d5585af2f544dd1bad9d24c5e177026", [
+        { property: "Date", direction: "descending" }
+      ]);
+      return response.map(project => parseClassData(project));
+    });
+
+    res.render("programs/classes", { projects:classes });
+  } catch (error) {
+    console.error("Classes Error:", error);
+    res.status(500).send("Error loading classes");
+  }
+});
 
 
 app.get("/sessions", async (req,res) => {
@@ -1002,36 +1012,72 @@ app.get("/sessions/:slug", async (req, res) => {
 
 
 app.get("/sessions/:session/:class", async(req,res) => {
-  const data = await getDatabaseEntry("6d5585af2f544dd1bad9d24c5e177026", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.class}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}]})
-  // const data = await getDatabaseEntry("57406c3b209e4bfba3953de6328086ac", {"and":[{property:"Website-Slug", "rich_text": {"equals":req.params.class}}, {property:"Session Slug", "rollup": { "any": { "rich_text": { "equals": req.params.session } }}}]})
-  if(!data) return
-  const response = await prepareClassData(data, req.params.class)
-  res.render("programs/class-concurrent", response);
+  const { session, class: className } = req.params;
+  const cacheKey = `cache:session:${session}:class:${className}`;
 
-})
+  try {
+    // 1. Try to get data from Redis
+    const cachedData = await client.get(cacheKey);
 
+    if (cachedData) {
+      // 2. Serve from cache immediately
+      const parsedCache = JSON.parse(cachedData);
+      res.render("programs/class-concurrent", parsedCache);
 
-app.get("/projects", async (req,res) => {
-  const response = await getDatabaseEntries("713f24806a524c5e892971e4fbf5c9dd", [{property:"Release Date", direction:"descending"}])
-  const projectData = response.map((project) => {
-    console.log(project)
-    return parseNotionPage(project)
-  })
-  console.log(projectData)
-  res.render("projects/projectList", {projects: projectData})
-})
-
-app.get("/projects/:slug", async (req,res) => {
-  //filter by slug here
-  console.log(req.params.slug)
-  const response = await getDatabaseEntry("713f24806a524c5e892971e4fbf5c9dd", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
-  console.log(response)
-  if(response){
-    const projectData = parseProjectData(response)
-    console.log(projectData)
-    res.render("projects/projectPage", projectData)
+      // 3. Background Revalidation: Update cache without making user wait
+      revalidateClassData(session, className, cacheKey).catch(console.error);
+    } else {
+      // 4. Cache Miss: Fetch from Notion (Only happens once per TTL)
+      const freshData = await revalidateClassData(session, className, cacheKey);
+      if (freshData) {
+        res.render("programs/class-concurrent", freshData);
+      } else {
+        res.status(404).send("Class not found");
+      }
+    }
+  } catch (error) {
+    console.error("Route Error:", error);
+    res.status(500).send("Internal Server Error");
   }
+
 })
+
+
+app.get("/projects", async (req, res) => {
+  try {
+    const projects = await getCachedData("notion:projects:list", async () => {
+      const response = await getDatabaseEntries("713f24806a524c5e892971e4fbf5c9dd", [
+        { property: "Release Date", direction: "descending" }
+      ]);
+      return response.map(project => parseNotionPage(project));
+    });
+
+    res.render("projects/projectList", { projects });
+  } catch (error) {
+    res.status(500).send("Error");
+  }
+});
+
+app.get("/projects/:slug", async (req, res) => {
+  const { slug } = req.params;
+  try {
+    const projectData = await getCachedData(`notion:project:${slug}`, async () => {
+      const response = await getDatabaseEntry("713f24806a524c5e892971e4fbf5c9dd", {
+        property: "Website-Slug",
+        rich_text: { equals: slug }
+      });
+      return response ? parseProjectData(response) : null;
+    });
+
+    if (projectData) {
+      res.render("projects/projectPage", projectData);
+    } else {
+      res.status(404).send("Project not found");
+    }
+  } catch (error) {
+    res.status(500).send("Error");
+  }
+});
 
 app.get("/yearbook", async (req,res) => {
   // const response = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [{timestamp:"created_time", direction:"descending"}], {
@@ -1070,38 +1116,62 @@ app.get("/yearbook/:session", async (req,res) => {
 })
 
 
-app.get("/blog", async (req,res) => {
-  const response = await getDatabaseEntries("5fb49fe53804424a89230294206fcaee", [{property:"Publish-Date", direction:"descending"}])
-  const blogData = response.map((blog) => {
-    console.log(blog)
-    return parseBlog(blog)
-  })
-  console.log(blogData)
-  res.render("blog/blog", {blog: blogData})
+app.get("/blog", async (req, res) => {
+  try {
+    const blog = await getCachedData("cache:blog:list", async () => {
+      const response = await getDatabaseEntries("5fb49fe53804424a89230294206fcaee", [
+        { property: "Publish-Date", direction: "descending" }
+      ]);
+      return response.map(post => parseBlog(post));
+    });
 
-})
+    res.render("blog/blog", { blog });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error loading blog");
+  }
+});
 
 
 
 
 
+app.get("/blog/:slug", async (req, res) => {
+  const { slug } = req.params;
+  const cacheKey = `cache:blog:${slug}`;
 
+  try {
+    const cachedData = await client.get(cacheKey);
 
-app.get("/blog/:slug", async (req,res) => {
-  const response = await getDatabaseEntry("5fb49fe53804424a89230294206fcaee", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
-  const parsedData = parseNotionPage(response)
+    if (cachedData) {
+      // 1. Serve immediately from Redis
+      const parsedCache = JSON.parse(cachedData);
+      res.render("blog/post", {
+        title: parsedCache.Name, 
+        postHTML: parsedCache.postHTML, 
+        ...parsedCache
+      });
 
-  // const blogData = response.map((blog) => {
-  //   console.log(blog)
-  //   return parseNotionPage(blog)
-  // })
-
-  console.log(parsedData)
-  const pageContent = await getBlocks(response.id)
-  let postHTML = parsePageContentHTML(pageContent)
-  console.log(postHTML)
-  res.render("blog/post", {title: parsedData.Name, postHTML:postHTML, ...parsedData})
-})
+      // 2. Update the cache in the background for the next person
+      revalidateBlogData(slug, cacheKey).catch(console.error);
+    } else {
+      // 3. Cache Miss: Fetch and wait
+      const freshData = await revalidateBlogData(slug, cacheKey);
+      if (freshData) {
+        res.render("blog/post", {
+          title: freshData.Name, 
+          postHTML: freshData.postHTML, 
+          ...freshData
+        });
+      } else {
+        res.status(404).send("Post not found");
+      }
+    }
+  } catch (error) {
+    console.error("Blog Route Error:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
 
 
 // app.get("/ecpc", async (req,res) => {
@@ -2348,4 +2418,67 @@ function formatRichText(textArray) {
     formattedText += tempText
   }
   return formattedText
+}
+
+async function getCachedData(key, fetcher) {
+  const cached = await client.get(key);
+  
+  if (cached) {
+      // Optional: Trigger background update if stale (Advanced ISR)
+      return JSON.parse(cached);
+  }
+
+  // Cache Miss: Fetch fresh data
+  const freshData = await fetcher();
+  
+  // Store in Redis
+  await client.set(key, JSON.stringify(freshData), {
+      EX: CACHE_TTL
+  });
+  
+  return freshData;
+}
+async function revalidateClassData(sessionSlug, classSlug, cacheKey) {
+  // Your original query logic from index.js
+  const data = await getDatabaseEntry("6d5585af2f544dd1bad9d24c5e177026", {
+    "and": [
+      { property: "Website-Slug", "rich_text": { "equals": classSlug } },
+      { property: "Session Slug", "rollup": { "any": { "rich_text": { "equals": sessionSlug } } } }
+    ]
+  });
+
+  if (!data) return null;
+
+  // Your original processing logic
+  const response = await prepareClassData(data, classSlug);
+
+  // Store in Redis (Expire after 1 hour to account for image URL expiration)
+  await client.set(cacheKey, JSON.stringify(response), {
+    EX: 3500 
+  });
+
+  return response;
+}
+async function revalidateBlogData(slug, cacheKey) {
+  const response = await getDatabaseEntry("5fb49fe53804424a89230294206fcaee", {
+    property: "Website-Slug", 
+    rich_text: { "equals": slug }
+  });
+
+  if (!response) return null;
+
+  const parsedData = parseNotionPage(response);
+  const pageContent = await getBlocks(response.id);
+  
+  // Note: If you implement image downloading, make sure this is awaited
+  const postHTML = parsePageContentHTML(pageContent); 
+  
+  const finalData = { ...parsedData, postHTML };
+
+  // Update Redis with a TTL (e.g., 1 hour)
+  await client.set(cacheKey, JSON.stringify(finalData), {
+    EX: 3500 
+  });
+
+  return finalData;
 }
