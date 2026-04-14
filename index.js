@@ -246,7 +246,27 @@ app.get("/events/:slug", async (req,res) => {
 
 
 })
+app.get("/poetic-promenade", async (req,res) => {
+  //filter by slug here
+  const eventData = await getDatabaseEntry("10c62665c6ca4383bbdc12788c45df14", {property:"Website-Slug", "rich_text": {"equals":"poetic-promenade"}})
+  if(!eventData) return
 
+  // console.log(response)
+
+  const response = await prepareEventData(eventData, "poetic-promenade")
+
+  res.render("programs/prom", response)
+
+  //
+  // if(eventData){
+  //
+  //   res.render("programs/eventPage", response)
+  //
+  // }
+  //
+
+
+})
 app.get("/", async (req,res) => {
   // const response = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
   // const testimonialData = response.map((testimonial) => {
