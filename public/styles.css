@@ -35,7 +35,7 @@
     --summer-26-special-font: 'submarine', sans-serif;
 
      --prom-26-title-font: 'Lucid Wake Script', sans-serif;
-    --prom-26-header-font: 'Lucid Wake Scrip', sans-serif;
+    --prom-26-header-font: 'Lucid Wake Script', sans-serif;
     --prom-26-body-font: 'FlorDeRuina', sans-serif;
     --prom-26-special-font: 'Submarine', sans-serif;
 
@@ -579,7 +579,7 @@ background-size: cover;
  /* prom-26 */         
 
 .prom-26.featured .title,
-.prom-26 #session-name, #tag.prom-26 {
+.prom-26 #session-name, #tag.prom-26, .prom-26 #class-name {
   font-family: var(--prom-26-title-font) !important;
 font-size: calc(var(--large-text) * 0.4);
 line-height: 1.2em;
