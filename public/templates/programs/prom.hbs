@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="title" content="School for Poetic Computation">
+    <meta name="title" content="Poetic Promenade - SFPC">
     <meta name="description" content="The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It's a place for learning and unlearning.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sfpc.study/">
@@ -49,7 +49,7 @@
 
       <div class="crt-overlay crt-overlay-fullsize"></div>
 
-      <div id="shell" class="shell shell-fullsize about sfpc">
+      <div id="shell" class="shell shell-fullsize about sfpc summer-26">
 
         <div class="loader-content">
             <p tabindex="0" class="large">
@@ -67,11 +67,6 @@
 
 
 
-
-            <h4 class="breadcrumb hide-content">
-              <a href="/events">events</a>
-              <!-- <span class="caret"></span>  -->
-            </h4>
 
 
 
@@ -136,47 +131,6 @@
                       </div>
                       {{/if}}
 
-<!--
-                      {{#if Website-Organizers}}
-                      <div class="details">
-                        <div class="labels">Organizers</div>
-                        <div class="labels-info" id="teachers-list">{{#each Website-Organizers}}{{this}}{{#unless @last}},{{/unless}} {{/each}} {{#each this.[Additional organizers]}} {{this}} {{/each}}</div>
-                      </div>
-                      {{/if}}
-
-                      {{#if Website-Contributors}}
-                      <div class="details">
-                        <div class="labels">Contributors</div>
-                        <div class="labels-info">
-                          <span tabindex="0" class="expand"><a class="link">{{Website-Contributors.length}} contributors...</a>
-                          <span class="expanded hide-expanded">
-                          {{#each Website-Contributors}}{{this}}{{#unless @last}},{{/unless}} {{/each}}
-                        </span></span>
-                        </div>
-                      </div>
-                      {{/if}}
-
-                      {{#if Partnership?}}
-                      <div class="details">
-                        <div class="labels">Partners</div>
-                        <div class="labels-info" id="teachers-list">{{Partnership?}} {{Partners}}</div>
-                      </div>
-                      {{/if}} -->
-
-
-                                              <!-- {{#if Website-Session}}
-                                              <div class="details">
-                                                <div class="labels">Program</div>
-                                                <div class="labels-info" id="program-info">
-
-                                                  {{#if Website-Class}}
-                                                  {{#each Website-Class}}{{this}}{{#unless @last}}, {{/unless}} {{/each}} {{/if}}
-
-
-
-                                                </div>
-                                              </div>
-                                              {{/if}} -->
 
 
                                               <div class="details">
@@ -197,19 +151,9 @@
                       <p class="large apply">
 
                         {{#if External-Website}}
-                            <a href="{{"External-Website"}}" target="_blank" id="application-link">
-
-
-                              {{External-CTA}}
-
-                            </a>
-
-                        {{else}}
-
-                        {{#if RSVP}}
-                            <a href="{{RSVP}}" target="_blank" id="application-link">RSVP</a>
-                        {{/if}}
-
+                        <p class="large">
+                          <a  class="special-button" href="{{"External-Website"}}" target="_blank" id="application-link">{{External-CTA}}</a>
+                        </p>
 
                         {{/if}}
                       </p>
@@ -251,30 +195,6 @@
                     </div>
                 </section>
                 {{/if}}
-
-                {{#each pageContent}}
-
-
-                      <div class="break"></div>
-
-
-                <section id="section-{{dashcase @key}}" class="program-content">
-                  <div class="grid-2">
-                    <h1>{{@key}}</h1>
-                  </div>
-
-                  <div class="grid-2">
-                    {{{this}}}
-                  </div>
-                </section>
-
-
-                {{/each}}
-                
-
-
-
-
                 {{#if Images}}
 
                 <div class="break-noline"></div>
@@ -303,6 +223,30 @@
 
                </div>
                {{/if}}
+                {{#each pageContent}}
+
+
+                      <div class="break"></div>
+
+
+                <section id="section-{{dashcase @key}}" class="program-content">
+                  <div class="grid-2">
+                    <h1>{{@key}}</h1>
+                  </div>
+
+                  <div class="grid-2">
+                    {{{this}}}
+                  </div>
+                </section>
+
+
+                {{/each}}
+                
+
+
+
+
+
 
 
                <div class="break"></div>

@@ -39,6 +39,12 @@
       white #FFFFFF */
       /* --summer-25-background: #FFF; */
 
+    --prom-26-background: black;
+      --prom-26-text: white;
+      --prom-26-text-on-bg: #cad1f7; 
+    --prom-26-link:  #7c9efb; 
+      --prom-26-special-text:  #fdad78;
+
       --summer-26-background: black;
       --summer-26-text: white;
       --summer-26-text-on-bg: #cad1f7; 
@@ -436,7 +442,7 @@ select#allSections {
 /* /////////// start prom styles  ///////////////////////////////*/
 
 .shell.prom-26{
-  background-color: var(--sw-lightblue);
+  background-color: black !important;
   color: white;
 }
 
@@ -481,6 +487,25 @@ select#allSections {
         .prom-26 .workshop #class-block {
           background: var(--sw-lightblue)!important;   
         }
+        .prom-26 section#section-outro,
+      #class .intro.prom-26,
+      .shell.prom-26 .class-details,
+      .prom-26 #class section,
+      .prom-26 #class .entity,
+      .prom-26 .accordion dd.active,
+      .prom-26 section ul,
+      .prom-26 .website-grid
+       {
+        /* background-color: var(--summer-26-background); */
+        background: var(--prom-26-background);
+        color:  var(--summer-26-text) !important;
+        border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--summer-24-background); */
+
+
+        /* -webkit-text-stroke-width: 1px; */
+          /* -webkit-text-stroke-color: var(--summer-24-link); */
+      }
 /* /////////// start summer-26  ///////////////////////////////*/
 .shell.april-26-shell {
   background-color: var(--summer-26-background);

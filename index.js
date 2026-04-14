@@ -16,8 +16,22 @@ const NOTION_STORE_DATABASE_ID = "7c36ef34cebb48e097706442634abaaf";
 const redis = require('redis');
 const client = redis.createClient(); // Connects to default 127.0.0.1:6379 on your Droplet
 
-client.on('error', (err) => console.log('Redis Client Error', err));
-client.connect(); // v4 of redis requires explicit connect
+client.on('error', (err) => {
+  // console.log('Redis Client Error:', err.message);
+  // This prevents the app from crashing; it just logs the error
+});
+let redisIsReady = false;
+async function connectRedis() {
+  try {
+    await client.connect();
+    redisIsReady = true;
+    console.log("Connected to Redis");
+  } catch (err) {
+    console.log("Redis not found. Running in 'No-Cache' mode.");
+    redisIsReady = false;
+  }
+}
+connectRedis();
 const CACHE_TTL = 3500; // 60 minutes in seconds
 console.log("starting up")
 app.use(express.static("public"))
@@ -254,7 +268,7 @@ app.get("/poetic-promenade", async (req,res) => {
   // console.log(response)
 
   const response = await prepareEventData(eventData, "poetic-promenade")
-
+  console.log(response)
   res.render("programs/prom", response)
 
   //
@@ -1036,6 +1050,7 @@ app.get("/sessions/:session/:class", async(req,res) => {
   const cacheKey = `cache:session:${session}:class:${className}`;
 
   try {
+    if(redisIsReady){
     // 1. Try to get data from Redis
     const cachedData = await client.get(cacheKey);
 
@@ -1055,6 +1070,14 @@ app.get("/sessions/:session/:class", async(req,res) => {
         res.status(404).send("Class not found");
       }
     }
+  } else {
+    const freshData = await revalidateClassData(session, className, cacheKey);
+      if (freshData) {
+        res.render("programs/class-concurrent", freshData);
+      } else {
+        res.status(404).send("Class not found");
+      }
+  }
   } catch (error) {
     console.error("Route Error:", error);
     res.status(500).send("Internal Server Error");
@@ -1161,6 +1184,7 @@ app.get("/blog/:slug", async (req, res) => {
   const cacheKey = `cache:blog:${slug}`;
 
   try {
+    if(redisIsReady){
     const cachedData = await client.get(cacheKey);
 
     if (cachedData) {
@@ -1187,6 +1211,19 @@ app.get("/blog/:slug", async (req, res) => {
         res.status(404).send("Post not found");
       }
     }
+  } else {
+    console.log("skipping redis")
+    const freshData = await revalidateBlogData(slug, cacheKey);
+      if (freshData) {
+        res.render("blog/post", {
+          title: freshData.Name, 
+          postHTML: freshData.postHTML, 
+          ...freshData
+        });
+      } else {
+        res.status(404).send("Post not found");
+      }
+  }
   } catch (error) {
     console.error("Blog Route Error:", error);
     res.status(500).send("Internal Server Error");
@@ -1443,6 +1480,7 @@ async function prepareEventData(eventData, eventSlug){
   const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
   let response = parseEventData(eventData)
   response.pageContent =  parsePageContentIntoKeyedObject(webContent);
+  response.Images = response["Event Photos"]
 
   return response
 }
@@ -2441,6 +2479,10 @@ function formatRichText(textArray) {
 }
 
 async function getCachedData(key, fetcher) {
+  if (!redisIsReady) {
+    console.log(`[Local] Skipping cache for: ${key}`);
+    return await fetcher();
+  }
   const cached = await client.get(key);
   
   if (cached) {
@@ -2471,11 +2513,14 @@ async function revalidateClassData(sessionSlug, classSlug, cacheKey) {
 
   // Your original processing logic
   const response = await prepareClassData(data, classSlug);
-
+  if(redisIsReady){
   // Store in Redis (Expire after 1 hour to account for image URL expiration)
-  await client.set(cacheKey, JSON.stringify(response), {
-    EX: 3500 
-  });
+    await client.set(cacheKey, JSON.stringify(response), {
+      EX: 3500 
+    });
+  } else {
+    console.log("skipping redis")
+  }
 
   return response;
 }
@@ -2494,11 +2539,15 @@ async function revalidateBlogData(slug, cacheKey) {
   const postHTML = parsePageContentHTML(pageContent); 
   
   const finalData = { ...parsedData, postHTML };
+  if(redisIsReady){
+    // Update Redis with a TTL (e.g., 1 hour)
+    await client.set(cacheKey, JSON.stringify(finalData), {
+      EX: 3500 
+    });
+  } else {
+    console.log("skipping redis")
+  }
 
-  // Update Redis with a TTL (e.g., 1 hour)
-  await client.set(cacheKey, JSON.stringify(finalData), {
-    EX: 3500 
-  });
 
   return finalData;
 }
