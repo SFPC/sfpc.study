@@ -3904,7 +3904,10 @@ align-items: center;
       line-height: var(--large-line-height);
   }
 
-
+ #class section,
+      #class  {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
 
 #class .intro {
   border-radius: var(--border-rad) !important;
