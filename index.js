@@ -260,27 +260,39 @@ app.get("/events/:slug", async (req,res) => {
 
 
 })
-app.get("/poetic-promenade", async (req,res) => {
-  //filter by slug here
-  const eventData = await getDatabaseEntry("10c62665c6ca4383bbdc12788c45df14", {property:"Website-Slug", "rich_text": {"equals":"poetic-promenade"}})
-  if(!eventData) return
+app.get("/poetic-promenade", async (req, res) => {
+  const cacheKey = "cache:event:poetic-promenade";
 
-  // console.log(response)
+  try {
+    if (redisIsReady) {
+      // 1. Try to get from Cache
+      const cachedData = await client.get(cacheKey);
 
-  const response = await prepareEventData(eventData, "poetic-promenade")
-  console.log(response)
-  res.render("programs/prom", response)
+      if (cachedData) {
+        // Serve immediately
+        const parsedCache = JSON.parse(cachedData);
+        res.render("programs/prom", parsedCache);
 
-  //
-  // if(eventData){
-  //
-  //   res.render("programs/eventPage", response)
-  //
-  // }
-  //
+        // Background Update (SWR)
+        revalidatePromenadeData(cacheKey).catch(console.error);
+        return;
+      }
+    }
 
+    // 2. Cache Miss or Redis Offline: Fetch live
+    const freshData = await revalidatePromenadeData(cacheKey);
 
-})
+    if (freshData) {
+      res.render("programs/prom", freshData);
+    } else {
+      res.status(404).send("Event not found");
+    }
+
+  } catch (error) {
+    console.error("Promenade Route Error:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
 app.get("/", async (req,res) => {
   // const response = await getDatabaseEntries("16ea90c83765437c86f87bd13a205ca6", [{property:"Date", direction:"descending"}])
   // const testimonialData = response.map((testimonial) => {
@@ -2550,4 +2562,25 @@ async function revalidateBlogData(slug, cacheKey) {
 
 
   return finalData;
+}
+async function revalidatePromenadeData(cacheKey) {
+  // 1. Fetch from Notion
+  const eventData = await getDatabaseEntry("10c62665c6ca4383bbdc12788c45df14", {
+    property: "Website-Slug", 
+    rich_text: { "equals": "poetic-promenade" }
+  });
+
+  if (!eventData) return null;
+
+  // 2. Process data using your existing helper
+  const response = await prepareEventData(eventData, "poetic-promenade");
+
+  // 3. Store in Redis if active
+  if (redisIsReady) {
+    await client.set(cacheKey, JSON.stringify(response), {
+      EX: 3500 // 1 hour TTL
+    });
+  }
+
+  return response;
 }
