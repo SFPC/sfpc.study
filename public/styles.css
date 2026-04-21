@@ -593,7 +593,13 @@ color: var(--prom-26-text);
 font-size: calc(var(--large-text) * 0.3);
 
 }
-
+.prom-26 .ticket-pill {
+  color: black !important; 
+background-color: white;
+padding: 0.3em;
+border-radius: 0.75em;
+font-size: 0.75em;
+}
 .prom-26.session .title.class{
 font-size: calc(var(--large-text) * 1.2);
 }
