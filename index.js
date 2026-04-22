@@ -2004,7 +2004,7 @@ function parseClassData(apiResponse){
   returnObj.eventCount = numberEvents
   returnObj.projectCount = numberProjects
   returnObj.thumbnailImage=parseNotionData(classInfo["Thumbnail Image"])?.[0]
-  returnObj.bannerImage=parseNotionData(classInfo["Banner Image"])?.[0]
+  returnObj.bannerImage=parseNotionData(classInfo["Main Image"])?.[0]
   returnObj.promoImage=parseNotionData(classInfo["Promo Images"])?.[0]
   returnObj.promoGraphic=parseNotionData(classInfo["Promo Graphic"])?.[0]
   returnObj.promoImages=parseNotionData(classInfo["Promo Images"])
