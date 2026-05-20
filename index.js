@@ -1442,7 +1442,7 @@ app.get("/share/:slug", async (req,res) => {
 })
 
 app.get("/download/:filename", async (req,res) => {
-  let file = "/downloadable/"+req.params.filename
+  let file = "https://sfpcdn.nyc3.cdn.digitaloceanspaces.com/"+req.params.filename
   res.render("download", {file:file})
 })
 
