@@ -1441,6 +1441,11 @@ app.get("/share/:slug", async (req,res) => {
   res.redirect(response.properties.URL.url)
 })
 
+app.get("/download/:filename", async (req,res) => {
+  let file = "/downloadable/"+req.params.filename
+  res.render("download", {file:file})
+})
+
 // app.get("/blog/:slug", async (req,res) => {
 //   //filter by slug here
 //   console.log(req.params.slug)
