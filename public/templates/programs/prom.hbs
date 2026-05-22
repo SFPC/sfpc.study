@@ -35,7 +35,11 @@
     href="https://statcounter.com/" target="_blank"><img class="statcounter"
     src="https://c.statcounter.com/12714909/0/6086a46c/1/" alt="website statistics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-
+    <script>
+      function metaTrack(){
+        fbq('track', 'ViewContent');
+      }    
+    </script>
 
     <!-- <script data-goatcounter="https://sfpc.goatcounter.com/count"
     async src="//gc.zgo.at/count.js"></script> -->
@@ -160,7 +164,7 @@
 
                         {{#if External-Website}}
                         <p class="large">
-                          <a  class="special-button" href="{{"External-Website"}}" target="_blank" id="application-link">{{External-CTA}}</a>
+                          <a  class="special-button" href="{{"External-Website"}}" target="_blank" id="application-link" onclick="metaTrack()">{{External-CTA}}</a>
                         </p>
 
                         {{/if}}
