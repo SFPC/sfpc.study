@@ -192,6 +192,9 @@
         {{#eq [Website-Slug] "summer-26"}}
         {{> summer26classBlock}}
         {{/eq}}
+        {{#eq [Website-Slug] "future-schools"}}
+        {{> futureSchoolsclassBlock}}
+        {{/eq}}
         {{#eq [Website-Slug] "fall-26"}}
         {{> fall26classBlock}}
         {{/eq}}
@@ -238,8 +241,8 @@
                   <span id="deadline">{{[Application End Date].[0]}}</span>. -->
                     {{else}}
 
-                     Applications launching soon.
-                     {{#if [Get Notified Link]}}<a href="{{[Get Notified Link]}}">Get Notified</a>.{{/if}}
+                     
+                     {{#if [Get Notified Link]}}Applications launching soon. <a href="{{[Get Notified Link]}}">Get Notified</a>.{{/if}}
 
                     {{/if}}
 
