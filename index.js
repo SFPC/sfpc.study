@@ -158,7 +158,6 @@ app.get("/sex-ed/:slug", async (req,res) => {
 
 
 
-
 // app.get("/sex-ed/:slug", async (req,res) => {
 //   console.log(req.params.slug)
 //   const response = await getDatabaseEntry("eedc3ea6ba904a9fa8631e12b03a955d", {property:"Website-Slug", "rich_text": {"equals":req.params.slug}})
@@ -1058,7 +1057,9 @@ app.get("/sessions/:slug", async (req, res) => {
 
 
 app.get("/sessions/:session/:class", async(req,res) => {
-  const { session, class: className } = req.params;
+  let { session, class: className } = req.params;
+  if(session == "summer-26" && ["poetic-hardware", "consensual-hacking", "extending-poetry-through-computation", "becoming-hypertext","double-tap-long-press"].includes(className)) session = "future-schools";
+
   const cacheKey = `cache:session:${session}:class:${className}`;
 
   try {
