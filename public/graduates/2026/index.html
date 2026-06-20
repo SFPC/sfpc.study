@@ -1,0 +1,89 @@
+<style>
+    body {
+        background: url(bg.gif) no-repeat center center fixed;
+        background-size:cover;
+        background-color: black;
+    }
+    #cert {
+        background: url() no-repeat center center fixed;
+        background-size:contain;
+        width: 100%;
+        height:100%;
+    }
+    #explosion {
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        height:100%;
+        opacity:0;
+        top:0;
+        left:0;
+    }
+</style>
+<body>
+<audio id="explosion1" src="1.mp3" volume="0.25"></audio>
+<audio id="explosion2" src="2.mp3" volume="0.25"></audio>
+<audio id="explosion3" src="3.mp3" volume="0.25"></audio>
+<audio id="explosion4" src="4.mp3" volume="0.25"></audio>
+<div id="cert"></div>
+<img id="explosion" src="explosion.gif" />
+</body>
+<script>
+    let slideCount = -1;
+    let slides = [
+        "ahmed.png",
+        "arushi.png",
+        "c.png",
+        "charis.png",
+        "daniel.png",
+        "dragon.png",
+        "helen.png",
+        "jf.png",
+        "la.png",
+        "lauren.png",
+        "meira.png",
+        "melody.png",
+        "natasha.png",
+        "tasneem.png",
+    ]
+document.body.addEventListener("keydown", function(e){
+    if(e.key == "ArrowLeft") prevSlide()
+    if(e.key == "ArrowRight") nextSlide()
+})
+document.body.addEventListener("click", function(e){
+    nextSlide();
+})
+document.body.addEventListener("contextmenu", function(e){
+    prevSlide();
+})
+let clips = document.getElementsByTagName("audio")
+let explosion = document.getElementById("explosion")
+function nextSlide () {
+	slideCount += 1;
+	if (slideCount >= slides.length){
+		slideCount = 1;
+	}
+    playExplosion();
+    explosion.style.opacity = 1;
+    setTimeout(function(){
+        document.querySelector("#cert").style.backgroundImage = `url(${slides[slideCount]})`;
+    }, 1000);
+    setTimeout(function(){
+        explosion.style.opacity = 0;
+    }, 2000);
+}
+function prevSlide () {
+	slideCount -= 1;
+	if (slideCount < 0){
+		slideCount = slides.length -1;
+	}
+	document.querySelector("#cert").style.backgroundImage = `url(${slides[slideCount]})`;
+}
+function choice(arr){
+    return arr[Math.floor(Math.random() * arr.length)]
+}
+function playExplosion(){
+    let sound = choice(clips);
+    sound.play();
+}
+</script>
