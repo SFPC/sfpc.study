@@ -1538,7 +1538,9 @@ async function prepareClassData(classData, classSlug){
   let response = parseClassData(classData)
   response.pageContent =  parsePageContentIntoKeyedObject(webContent);
   let peopleQuery = []
+  console.log(response["Assistant Teacher Names"])
   response["Teacher Names"]?.forEach((personName)=> peopleQuery.push({property:"Name", "title": { "contains": personName } }))
+  response["Assistant Teacher Names"]?.forEach((personName)=> peopleQuery.push({property:"Name", "title": { "contains": personName } }))
   response["Guest Teacher Names"]?.forEach((personName)=> peopleQuery.push({property:"Name", "title": { "contains": personName } }))
   response["Session Organizers"]?.forEach((personName)=> peopleQuery.push({property:"Name", "title": { "contains": personName } }))
   const people = await getDatabaseEntries("ea99608272e446cd880cbcb8d2ee1e13", [], {
@@ -1546,6 +1548,7 @@ async function prepareClassData(classData, classSlug){
   })
   let organizers = []
   let teachers = []
+  let assistantTeachers = []
   let guests = []
   let organizerTeachers = []
   let justTeachers = []
@@ -1565,6 +1568,12 @@ async function prepareClassData(classData, classSlug){
           justTeachers.unshift(personData)
         }
         teachers.unshift(personData)
+      }
+      if(personData["Classes-Assistant-Teacher"] && personData["Classes-Assistant-Teacher"].includes(classSlug)){
+        personData.role = "assistant teacher"
+        console.log(personData);
+        teachers.push(personData);
+        justTeachers.push(personData);
       }
       if(personData["Classes-Guest"] && personData["Classes-Guest"].includes(classSlug)){
         personData.role = "guest"
@@ -1592,6 +1601,7 @@ async function prepareClassData(classData, classSlug){
     organizers.unshift(foundOrgItem)
     console.log(organizers)
   }
+  console.log(teachers);
   response.guests = cleanPersonData(guests);
   response.teachers = cleanPersonData(teachers);
   response.organizers = cleanPersonData(organizers);
