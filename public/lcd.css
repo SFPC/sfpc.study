@@ -392,6 +392,241 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+/* /////////// begin FALL 2026 STYLES  ///////////////////////////////*/
+
+      .fall-26, 
+      .fall-26.featured.session,
+      .fall-26.featured  {
+       color: var(--fall-26-text);
+       box-sizing: border-box;
+       border-color: var(--fall-26-text);
+       background-position: center;
+       background-size: cover;
+      }
+      
+      .fall-26.featured:hover {
+        /* background-size: 200%; */
+      }
+      .fall-26, .april-26-shell,
+.fall-26.featured.session,
+.shell .fall-26,
+.fall-26.featured  {
+  background-color: var(--fall-26-background)  !important;
+  color: var(--fall-26-text);
+  box-sizing: border-box;
+  border-color: var(--fall-26-text);
+  text-shadow: none !important;
+  
+}
+
+
+
+      .fall-26 p,
+      .fall-26 p a,
+      .fall-26 a,
+      .fall-26.featured h4,
+      .fall-26 h4 a,
+      .fall-26 .intro a,
+      .fall-26 p.large a,
+      .fall-26 p a:hover,
+      .fall-26.session.featured,
+      .fall-26.session.featured a,
+      .fall-26.featured h4.type a,
+      .sfpc .fall-26 a
+      {
+        color: var(--fall-26-text);
+      }
+
+      .fall-26 h4 a:hover,
+      .fall-26 .intro a,
+      .fall-26 p.large a:hover,
+      .fall-26.featured:hover h6,
+      .fall-26.featured:hover .title,
+      .fall-26 .details a:hover,
+      .fall-26.featured .title:hover,
+      .fall-26 p a:hover,
+      .fall-26 h4 a:hover,
+      .fall-26 section .grid-2 ul li::before,
+      .fall-26 .chars,
+      .fall-26 p a:hover,
+      .fall-26 a:hover,
+      .fall-26 h4 a:hover,
+      .fall-26 .intro a:hover,
+      .fall-26 .details a:hover,
+      .fall-26 .entity:hover .accordion dt h3:after,
+      .fall-26 .accordion dt h3:after,
+      .fall-26 .expanded{
+          color: var(--fall-26-link) !important;
+      }
+      .fall-26 .special-button {
+        background-color: var(--fall-26-link);
+        color: black !important;
+        border-radius: 1.5vw;
+        padding:calc(10px + 0.7vw);
+        text-decoration: none;
+        font-size: 0.6em !important;
+      }
+      .fall-26 .special-button:hover {
+
+        background-color: #9cadee;
+      }
+      .fall-26 #cost,
+      .fall-26 .fixed-apply,
+      .fall-26 .fixed-support,
+      .fall-26 .home-intro span#session-name::after {
+          color: #000 !important;
+          background: var(--fall-26-link) !important;
+      }
+
+
+      .fall-26 .fixed-apply:hover {
+        color: var(--fall-26-link) !important;
+        background: rgba(76, 134, 235, 0.757) !important;
+      }
+
+      .fall-26 .block-text {
+        background-color: var(--fall-26-background);
+        color: var(--fall-26-link);
+      }
+
+
+
+      .fall-26.grid-inner, .fall-26 .grid-inner {
+        border: 2px dotted var(--fall-26-text) !important;
+        color: var(--fall-26-link) !important;
+      }
+
+      .fall-26 #class .entity,
+      .fall-26.website-grid .grid-2 {
+        border-color: var(--fall-26-text);
+      }
+
+      .fall-26 #class .entity:hover {
+        border-color: var(--fall-26-link);
+      }
+
+      .fall-26 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--fall-26-background) !important;
+      }
+
+
+      .fall-26 select#allSections:hover,
+      .fall-26 .loader-content p::after,
+      .fall-26 span#cost
+      {
+        background: var(--fall-26-link) !important;
+        color: #000 !important;
+      }
+
+      .fall-26 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .fall-26 .breadcrumb.fixed,
+      .fall-26 .breadcrumb.fixed::before,
+      .fall-26 .breadcrumb.fixed a,
+      .fall-26 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .fall-26 .breadcrumb,
+      .fall-26 .breadcrumb a,
+      .fall-26 .text-on-bg,
+      .fall-26 .breadcrumb a:hover {
+          color: var(--fall-26-text-on-bg) !important;
+          text-shadow: 2px 2px 0px var(--fall-26-background);
+      }
+
+
+      .fall-26 section#section-outro,
+      #class .intro.fall-26,
+      .shell.fall-26 .class-details,
+      .fall-26 #class section,
+      .fall-26 #class .entity,
+      .fall-26 .accordion dd.active,
+      .fall-26 section ul,
+      .fall-26 .website-grid
+       {
+        /* background-color: var(--fall-26-background); */
+        background: none;
+        color:  var(--fall-26-text) !important;
+        border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--fall-24-background); */
+
+
+        /* -webkit-text-stroke-width: 1px; */
+          /* -webkit-text-stroke-color: var(--fall-24-link); */
+      }
+
+      .fall-26.featured .title,
+      .fall-26 #session-name, #tag.fall-26,
+
+    .fall-26  #session-name > a
+
+       {
+        
+      }
+
+      .fall-26 #class section,
+      #class .intro.fall-26 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .fall-26 #class section.stacked,
+      .fall-26 .section-testimonials,
+      .fall-26 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important;
+        /* text-shadow: 2px 2px 0px var(--fall-26-background); */
+
+      }
+
+      .fall-26 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--fall-26-text);
+      }
+
+      /* .shell.fall-26 {
+        background-image: url('images/sessions/fall-26/bg.png');
+        background-size: 100%;
+        background-position: bottom;
+        background-color: #fff;
+      } */
+      .labels-info .weekend-intensive {
+        padding:5px 8px;
+        border-radius:10px;
+        background-color: var(--fall-26-weekend-intensive);
+      }
+      .fall-26.online-class {
+        /* box-shadow: inset 0px 0px 13px 6px #3e3b3b;
+        border: 1px #3e3b3b solid;
+        padding: 1em; */
+    }
+    .fall-26.online-class .pill {
+      color: black !important;
+      background-color: white;
+      padding: 0.2em;
+      border-radius: 1em;
+  }
+
+      .fall-26.weekend-intensive .pill {
+        background-color: #FF000F;
+        color: #fffefb !important;
+      }
+      #class-block .fall-26.online-class {
+        border-color:#f2ff26;
+      }
+      #class-block .fall-26.online-class .pill {
+        color: black !important;
+      background-color: #f2ff26;
+      padding: 0.2em;
+      border-radius: 1em;
+      }
+
+      
 /* /////////// start future-schools styles  ///////////////////////////////*/
 
 .shell.future-schools{
