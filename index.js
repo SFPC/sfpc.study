@@ -1494,7 +1494,7 @@ async function prepareEventData(eventData, eventSlug){
 
 
   const fullPageContent = await getBlocks(eventData.id);
-  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
+  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase().includes("web content"))?.id
   const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
   let response = parseEventData(eventData)
   response.pageContent =  parsePageContentIntoKeyedObject(webContent);
@@ -1533,7 +1533,7 @@ function parseProjectData(apiResponse){
 
 async function prepareClassData(classData, classSlug){
   const fullPageContent = await getBlocks(classData.id);
-  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
+  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase().includes("web content"))?.id
   const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
   let response = parseClassData(classData)
   response.pageContent =  parsePageContentIntoKeyedObject(webContent);
@@ -1613,7 +1613,7 @@ async function prepareClassData(classData, classSlug){
 
 async function prepareSessionData(sessionData, session){
   const fullPageContent = await getBlocks(sessionData.id);
-  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase() == "web content")?.id
+  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase().includes("web content"))?.id
   const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
 
 
@@ -1703,7 +1703,7 @@ async function getPageContent(notionId, contentToggleName="web content"){
   const fullPageContent = await getBlocks(notionId);
   console.log(contentToggleName)
   console.log(contentToggleName.toLowerCase())
-  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase().trim() == contentToggleName.toLowerCase().trim())?.id
+  const contentBlockId = fullPageContent.find(block => block.type == "toggle" && block.toggle.text[0].plain_text.toLowerCase().trim().includes(contentToggleName.toLowerCase().trim()))?.id
   console.log(contentBlockId)
   const webContent = contentBlockId ? await getBlocks(contentBlockId) : [];
   console.log(webContent)
