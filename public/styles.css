@@ -28,10 +28,10 @@
     --ecpc-special-font: 'Screenfont', sans-serif;
   
   
-    --fall-26-title-font: 'Arkdes Hershey', sans-serif;
-    --fall-26-header-font: 'Arkdes Hershey', sans-serif;
-    --fall-26-body-font: 'submarine', sans-serif;
-    --fall-26-special-font: 'submarine', sans-serif;
+    --fall-26-title-font: 'Career', sans-serif;
+    --fall-26-header-font: 'Career', sans-serif;
+    --fall-26-body-font: 'Career', sans-serif;
+    --fall-26-special-font: 'Career', sans-serif;
     /* SUMMER FULL PROGRAM STYLING BEGINS HERE */
     --summer-26-title-font: 'Arkdes Hershey', sans-serif;
     --summer-26-header-font: 'Arkdes Hershey', sans-serif;
@@ -180,6 +180,19 @@
 }
 
 @import url("https://p.typekit.net/p.css?s=1&k=thn3crj&ht=tk&f=28524.28525&a=79545553&app=typekit&e=css");
+
+@font-face{
+  font-family: 'Career';
+  src: url('/fonts/CursiveFontSalle 13.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: 'Dirty Stains';
+  src: url('/fonts/DirtyStains.otf') format('truetype');
+  font-weight: normal;
+}
+
 
 @font-face{
   font-family: 'Arkdes Hershey';

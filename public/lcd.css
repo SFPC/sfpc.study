@@ -39,13 +39,13 @@
       white #FFFFFF */
       /* --summer-25-background: #FFF; */
 
-      --fall-26-background: black;
-      --fall-26-text: white;
-      --fall-26-text-on-bg: #cad1f7; 
-    --fall-26-link:  #7c9efb; 
-      --fall-26-special-text:  #fdad78;
-
-    --prom-26-background: black;
+    --fall-26-text: white;
+    --fall-26-background: black;
+    --fall-26-text-on-bg: #2153cc;
+    --fall-26-link: #fd7dff;
+    
+    
+      --prom-26-background: black;
       --prom-26-text: white;
       --prom-26-text-on-bg: #cad1f7; 
     --prom-26-link:  #7c9efb; 
@@ -408,6 +408,7 @@ select#allSections {
        border-color: var(--fall-26-text);
        background-position: center;
        background-size: cover;
+       background-image: url("images/sessions/fall-26/BG.jpg");
       }
       
       .fall-26.featured:hover {
@@ -417,11 +418,12 @@ select#allSections {
 .fall-26.featured.session,
 .shell .fall-26,
 .fall-26.featured  {
-  background-color: var(--fall-26-background)  !important;
+  
   color: var(--fall-26-text);
   box-sizing: border-box;
   border-color: var(--fall-26-text);
   text-shadow: none !important;
+  background-color: #2253cc !important;
   
 }
 
@@ -466,7 +468,7 @@ select#allSections {
       }
       .fall-26 .special-button {
         background-color: var(--fall-26-link);
-        color: black !important;
+        color: white !important;
         border-radius: 1.5vw;
         padding:calc(10px + 0.7vw);
         text-decoration: none;
@@ -487,7 +489,7 @@ select#allSections {
 
       .fall-26 .fixed-apply:hover {
         color: var(--fall-26-link) !important;
-        background: rgba(76, 134, 235, 0.757) !important;
+        background: #fd7dff !important;
       }
 
       .fall-26 .block-text {
@@ -612,8 +614,8 @@ select#allSections {
         padding: 1em; */
     }
     .fall-26.online-class .pill {
-      color: black !important;
-      background-color: white;
+      color: white!important;
+      background-color: var(--fall-26-text) ;
       padding: 0.2em;
       border-radius: 1em;
   }
