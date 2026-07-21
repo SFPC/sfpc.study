@@ -39,6 +39,12 @@
       white #FFFFFF */
       /* --summer-25-background: #FFF; */
 
+      --fall-26-background: black;
+      --fall-26-text: white;
+      --fall-26-text-on-bg: #cad1f7; 
+    --fall-26-link:  #7c9efb; 
+      --fall-26-special-text:  #fdad78;
+
     --prom-26-background: black;
       --prom-26-text: white;
       --prom-26-text-on-bg: #cad1f7; 
