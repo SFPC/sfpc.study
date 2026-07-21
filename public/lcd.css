@@ -43,6 +43,7 @@
     --fall-26-background: black;
     --fall-26-text-on-bg: #2153cc;
     --fall-26-link: #fd7dff;
+    --fall-26-pill: #f550f8;
     
     
       --prom-26-background: black;
@@ -400,49 +401,60 @@ select#allSections {
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
 /* /////////// begin FALL 2026 STYLES  ///////////////////////////////*/
 
+      .shell.fall-26 {
+        background: var(--fall-26-text-on-bg);
+      }
       .fall-26, 
       .fall-26.featured.session,
       .fall-26.featured  {
        color: var(--fall-26-text);
        box-sizing: border-box;
        border-color: var(--fall-26-text);
-       background-position: center;
+       /* background-position: center;
        background-size: cover;
-       background-image: url("images/sessions/fall-26/BG.jpg");
+       background-image: url("images/sessions/fall-26/BG.jpg"); */
+      }
+      .fall-26.featured {
+        background-position: center;
+        background-size: cover;
+        background-image: url("images/sessions/fall-26/BG.jpg");
       }
       
-      .fall-26.featured:hover {
-        /* background-size: 200%; */
-      }
-      .fall-26, .april-26-shell,
+      .fall-26, 
 .fall-26.featured.session,
 .shell .fall-26,
 .fall-26.featured  {
   
-  color: var(--fall-26-text);
+  color: var(--fall-26-pill);
   box-sizing: border-box;
-  border-color: var(--fall-26-text);
+  border-color: var(--fall-26-pill);
   text-shadow: none !important;
   background-color: #2253cc !important;
+
   
 }
 
 
 
       .fall-26 p,
+      .shell.fall-26 .class-details,
       .fall-26 p a,
-      .fall-26 a,
-      .fall-26.featured h4,
-      .fall-26 h4 a,
       .fall-26 .intro a,
       .fall-26 p.large a,
       .fall-26 p a:hover,
-      .fall-26.session.featured,
-      .fall-26.session.featured a,
-      .fall-26.featured h4.type a,
       .sfpc .fall-26 a
       {
         color: var(--fall-26-text);
+      }
+
+      .fall-26.featured h4,
+      .fall-26 a,
+      .fall-26 h4 a,
+      .fall-26.session.featured,
+      .fall-26.session.featured a,
+      .fall-26.featured h4.type a
+      {
+        color: var(--fall-26-pill);
       }
 
       .fall-26 h4 a:hover,
@@ -506,7 +518,7 @@ select#allSections {
 
       .fall-26 #class .entity,
       .fall-26.website-grid .grid-2 {
-        border-color: var(--fall-26-text);
+        border-color: var(--fall-26-pill);
       }
 
       .fall-26 #class .entity:hover {
@@ -549,9 +561,9 @@ select#allSections {
 
       .fall-26 section#section-outro,
       #class .intro.fall-26,
-      .shell.fall-26 .class-details,
       .fall-26 #class section,
       .fall-26 #class .entity,
+      .shell.fall-26 .class-details,
       .fall-26 .accordion dd.active,
       .fall-26 section ul,
       .fall-26 .website-grid
@@ -567,14 +579,6 @@ select#allSections {
           /* -webkit-text-stroke-color: var(--fall-24-link); */
       }
 
-      .fall-26.featured .title,
-      .fall-26 #session-name, #tag.fall-26,
-
-    .fall-26  #session-name > a
-
-       {
-        
-      }
 
       .fall-26 #class section,
       #class .intro.fall-26 {
@@ -615,7 +619,7 @@ select#allSections {
     }
     .fall-26.online-class .pill {
       color: white!important;
-      background-color: var(--fall-26-text) ;
+      background-color: var(--fall-26-pill) ;
       padding: 0.2em;
       border-radius: 1em;
   }
@@ -627,7 +631,9 @@ select#allSections {
   background-color: var(--sw-lightblue);
   color: white;
 }
-
+.future-schools {
+  color:white;
+}
 .shell .future-schools .workshop{
   background-color: var(--sw-lightblue);
       }

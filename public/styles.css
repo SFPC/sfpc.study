@@ -557,8 +557,8 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 .fall-26.featured .title,
 .fall-26 #session-name, #tag.fall-26 {
  font-family: var(--fall-26-title-font) !important;
-font-size: calc(var(--large-text) * 0.8);
-line-height: 0.9em;
+ font-size: calc(var(--large-text) * 0.6);
+ line-height: 1.1em;
 padding-top: 0.3em;
 }
 .fall-26 #session-name {
