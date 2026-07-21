@@ -488,7 +488,7 @@ select#allSections {
       }
       .fall-26 .special-button:hover {
 
-        background-color: #9cadee;
+        background-color: var(--fall-26-text)
       }
       .fall-26 #cost,
       .fall-26 .fixed-apply,
@@ -501,7 +501,7 @@ select#allSections {
 
       .fall-26 .fixed-apply:hover {
         color: var(--fall-26-link) !important;
-        background: #fd7dff !important;
+        background: var(--fall-26-text) !important;
       }
 
       .fall-26 .block-text {
@@ -554,7 +554,7 @@ select#allSections {
       .fall-26 .breadcrumb a,
       .fall-26 .text-on-bg,
       .fall-26 .breadcrumb a:hover {
-          color: var(--fall-26-text-on-bg) !important;
+          color: var(--fall-26-text) !important;
           text-shadow: 2px 2px 0px var(--fall-26-background);
       }
 
@@ -835,8 +835,7 @@ select#allSections {
 
 
       .summer-26 .fixed-apply:hover {
-        color: var(--summer-26-link) !important;
-        background: rgba(76, 134, 235, 0.757) !important;
+        color: var(--summer-26-text) !important;
       }
 
       .summer-26 .block-text {
