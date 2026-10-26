@@ -27,6 +27,11 @@
     --ecpc-body-font: 'Screenfont', sans-serif;
     --ecpc-special-font: 'Screenfont', sans-serif;
   
+
+    --winter-27-title-font: 'Career', sans-serif;
+    --winter-27-header-font: 'Career', sans-serif;
+    --winter-27-body-font: 'Career', sans-serif;
+    --winter-27-special-font: 'Career', sans-serif;
   
     --fall-26-title-font: 'Career', sans-serif;
     --fall-26-header-font: 'Career', sans-serif;
@@ -526,7 +531,25 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         color: var(--ecpc-text);
         }
 
+        
+.featured.session,
+.fall-26.featured  {
+box-sizing: border-box;
+background-position: center;
+background-size: cover;
+}
+ .index-teachers {
+  font-family: 'Courier New' !important;
+  padding-top: 0.2em;
+  font-size: 1.4rem;
 
+}
+ .index-teachers-small {
+  font-family: 'Courier New' !important;
+  padding-top: 0.2em;
+  font-size: 1rem;
+
+}
 
 
 
@@ -544,7 +567,29 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         .spring-24.session .title.class{
         font-size: calc(var(--large-text) * .7) !important;
         } */
-/* fall 26 */         
+
+/* winter 27 */
+.winter-27.featured .title,
+.winter-27 #session-name, #tag.winter-27 {
+ font-family: var(--winter-27-title-font) !important;
+ font-size: calc(var(--large-text) * 0.6);
+ line-height: 1.1em;
+padding-top: 0.3em;
+}
+.winter-27 #session-name {
+  font-size: calc(var(--large-text) * 1.15);
+}
+#tag.winter-27 {
+color: var(--winter-27-text);
+font-size: calc(var(--large-text) * 0.2);
+
+}
+
+.winter-27.session .title.class{
+font-size: calc(var(--large-text) * 1.2);
+}
+
+        /* fall 26 */         
 
 .fall-26.online-class .featured-text,
 .future-schools.workshop .featured-text,

@@ -39,6 +39,12 @@
       white #FFFFFF */
       /* --summer-25-background: #FFF; */
 
+    --winter-27-text: white;
+    --winter-27-background: black;
+    --winter-27-text-on-bg: #2153cc;
+    --winter-27-link: #fd7dff;
+    --winter-27-pill: #f550f8;
+
     --fall-26-text: white;
     --fall-26-background: black;
     --fall-26-text-on-bg: #2153cc;
@@ -399,6 +405,230 @@ select#allSections {
 
 
 /* /////////// end SFPC GENERAL STYLES  ///////////////////////////////*/
+/* /////////// begin WINTER 2027 STYLES  ///////////////////////////////*/
+
+      .shell.winter-27 {
+        background: var(--winter-27-text-on-bg);
+      }
+      .winter-27, 
+      .winter-27.featured.session,
+      .winter-27.featured  {
+       color: var(--winter-27-text);
+       box-sizing: border-box;
+       border-color: var(--winter-27-text);
+       /* background-position: center;
+       background-size: cover;
+       background-image: url("images/sessions/winter-27/BG.jpg"); */
+      }
+      .winter-27.featured {
+        background-position: center;
+        background-size: cover;
+        background-image: url("images/sessions/winter-27/BG.jpg");
+      }
+      
+      .winter-27, 
+.winter-27.featured.session,
+.shell .winter-27,
+.winter-27.featured  {
+  
+  color: var(--winter-27-pill);
+  box-sizing: border-box;
+  border-color: var(--winter-27-pill);
+  text-shadow: none !important;
+  background-color: #2253cc !important;
+
+  
+}
+
+
+
+      .winter-27 p,
+      .shell.winter-27 .class-details,
+      .winter-27 p a,
+      .winter-27 .intro a,
+      .winter-27 p.large a,
+      .winter-27 p a:hover,
+      .sfpc .winter-27 a
+      {
+        color: var(--winter-27-text);
+      }
+
+      .winter-27.featured h4,
+      .winter-27 a,
+      .winter-27 h4 a,
+      .winter-27.session.featured,
+      .winter-27.session.featured a,
+      .winter-27.featured h4.type a
+      {
+        color: var(--winter-27-pill);
+      }
+
+      .winter-27 h4 a:hover,
+      .winter-27 .intro a,
+      .winter-27 p.large a:hover,
+      .winter-27.featured:hover h6,
+      .winter-27.featured:hover .title,
+      .winter-27 .details a:hover,
+      .winter-27.featured .title:hover,
+      .winter-27 p a:hover,
+      .winter-27 h4 a:hover,
+      .winter-27 section .grid-2 ul li::before,
+      .winter-27 .chars,
+      .winter-27 p a:hover,
+      .winter-27 a:hover,
+      .winter-27 h4 a:hover,
+      .winter-27 .intro a:hover,
+      .winter-27 .details a:hover,
+      .winter-27 .entity:hover .accordion dt h3:after,
+      .winter-27 .accordion dt h3:after,
+      .winter-27 .expanded{
+          color: var(--winter-27-link) !important;
+      }
+      .winter-27 .special-button {
+        background-color: var(--winter-27-link);
+        color: white !important;
+        border-radius: 1.5vw;
+        padding:calc(10px + 0.7vw);
+        text-decoration: none;
+        font-size: 0.6em !important;
+      }
+      .winter-27 .special-button:hover {
+
+        background-color: var(--winter-27-text)
+      }
+      .winter-27 #cost,
+      .winter-27 .fixed-apply,
+      .winter-27 .fixed-support,
+      .winter-27 .home-intro span#session-name::after {
+          color: #000 !important;
+          background: var(--winter-27-link) !important;
+      }
+
+
+      .winter-27 .fixed-apply:hover {
+        color: var(--winter-27-link) !important;
+        background: var(--winter-27-text) !important;
+      }
+
+      .winter-27 .block-text {
+        background-color: var(--winter-27-background);
+        color: var(--winter-27-link);
+      }
+
+
+
+      .winter-27.grid-inner, .winter-27 .grid-inner {
+        border: 2px dotted var(--winter-27-text) !important;
+        color: var(--winter-27-link) !important;
+      }
+
+      .winter-27 #class .entity,
+      .winter-27.website-grid .grid-2 {
+        border-color: var(--winter-27-pill);
+      }
+
+      .winter-27 #class .entity:hover {
+        border-color: var(--winter-27-link);
+      }
+
+      .winter-27 .website-grid .grid-2 p.large {
+        text-shadow: 3px 3px var(--winter-27-background) !important;
+      }
+
+
+      .winter-27 select#allSections:hover,
+      .winter-27 .loader-content p::after,
+      .winter-27 span#cost
+      {
+        background: var(--winter-27-link) !important;
+        color: #000 !important;
+      }
+
+      .winter-27 .breadcrumb.fixed {
+        background: rgba(255,255,255,.8) !important;
+      }
+      .winter-27 .breadcrumb.fixed,
+      .winter-27 .breadcrumb.fixed::before,
+      .winter-27 .breadcrumb.fixed a,
+      .winter-27 .breadcrumb.fixed a:hover {
+        color: #000 !important;
+        text-shadow: 0px 0px 0px rgba(255,255,255,.8) !important;
+      }
+
+
+      .winter-27 .breadcrumb,
+      .winter-27 .breadcrumb a,
+      .winter-27 .text-on-bg,
+      .winter-27 .breadcrumb a:hover {
+          color: var(--winter-27-text) !important;
+          text-shadow: 2px 2px 0px var(--winter-27-background);
+      }
+
+
+      .winter-27 section#section-outro,
+      #class .intro.winter-27,
+      .winter-27 #class section,
+      .winter-27 #class .entity,
+      .shell.winter-27 .class-details,
+      .winter-27 .accordion dd.active,
+      .winter-27 section ul,
+      .winter-27 .website-grid
+       {
+        /* background-color: var(--winter-27-background); */
+        background: none;
+        color:  var(--winter-27-text) !important;
+        border-radius: var(--border-rad);
+        /* text-shadow: 2px 2px 0px var(--fall-24-background); */
+
+
+        /* -webkit-text-stroke-width: 1px; */
+          /* -webkit-text-stroke-color: var(--fall-24-link); */
+      }
+
+
+      .winter-27 #class section,
+      #class .intro.winter-27 {
+        padding: var(--body-margin) calc(var(--body-margin)/2);
+      }
+
+      .winter-27 #class section.stacked,
+      .winter-27 .section-testimonials,
+      .winter-27 .section-testimonials p
+       {
+        background: none !important;
+        padding: 0px !important;
+        /* text-shadow: 2px 2px 0px var(--winter-27-background); */
+
+      }
+
+      .winter-27 .break {
+        /* border: 0px !important; */
+        /* margin-bottom: 0px !important; */
+        border-color: var(--winter-27-text);
+      }
+
+      /* .shell.winter-27 {
+        background-image: url('images/sessions/winter-27/bg.png');
+        background-size: 100%;
+        background-position: bottom;
+        background-color: #fff;
+      } */
+      .labels-info .weekend-intensive {
+        padding:5px 8px;
+        border-radius:10px;
+        background-color: var(--winter-27-weekend-intensive);
+      }
+      .winter-27.online-class {
+        /* box-shadow: inset 0px 0px 13px 6px #3e3b3b;
+        border: 1px #3e3b3b solid;
+        padding: 1em; */
+    }
+    .winter-27.online-class .pill {
+      color: white!important;
+      background-color: var(--fall-26-pill) ;
+      padding: 0.2em;
+      border-radius: 1em;
+  }
 /* /////////// begin FALL 2026 STYLES  ///////////////////////////////*/
 
       .shell.fall-26 {
