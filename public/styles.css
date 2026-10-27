@@ -4597,7 +4597,14 @@ h5.shopify-buy__cart-toggle__title {
 @media all and (orientation: portrait) {
 
 }
-
+@media (min-width: 768px){
+  section .grid-2:first-of-type {
+    position: sticky; 
+    top:5vh;    
+    align-self: flex-start;
+  }
+  
+}
 @media (max-width: 768px) {
  
 
