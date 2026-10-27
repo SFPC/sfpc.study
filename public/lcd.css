@@ -485,10 +485,6 @@ select#allSections {
       .winter-27 .special-button {
         background-color: var(--winter-27-link);
         color: white !important;
-        border-radius: 1.5vw;
-        padding:calc(10px + 0.7vw);
-        text-decoration: none;
-        font-size: 0.6em !important;
       }
       .winter-27 .special-button:hover {
 
