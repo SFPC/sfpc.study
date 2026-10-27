@@ -28,10 +28,10 @@
     --ecpc-special-font: 'Screenfont', sans-serif;
   
 
-    --winter-27-title-font: 'Career', sans-serif;
-    --winter-27-header-font: 'Career', sans-serif;
-    --winter-27-body-font: 'Career', sans-serif;
-    --winter-27-special-font: 'Career', sans-serif;
+    --winter-27-title-font: 'Garamondt', sans-serif;
+    --winter-27-header-font: 'Garamondt', sans-serif;
+    --winter-27-body-font: 'Overused Grotesk', sans-serif;
+    --winter-27-special-font: 'Garamondt', sans-serif;
   
     --fall-26-title-font: 'Career', sans-serif;
     --fall-26-header-font: 'Career', sans-serif;
@@ -185,6 +185,20 @@
 }
 
 @import url("https://p.typekit.net/p.css?s=1&k=thn3crj&ht=tk&f=28524.28525&a=79545553&app=typekit&e=css");
+@font-face{
+  font-family: 'Garamondt';
+  src: url('/fonts/Garamondt-Regular.otf') format('truetype');
+  font-weight: normal;
+}
+
+
+@font-face{
+  font-family: 'Overused Grotesk';
+  src: url('/fonts/OverusedGrotesk-VF.ttf') format('truetype');
+  font-weight: normal;
+}
+
+
 
 @font-face{
   font-family: 'Career';
@@ -2463,7 +2477,7 @@ select#allSections:focus {
 }
 
       .featured h2.title, .featured-div h2.title {
-        font-weight: lighter;
+        font-weight: bold;
           transition: all .2s ease-in-out;
           -moz-transition: all .2s ease-in-out;
           ms-transition: all .2s ease-in-out;

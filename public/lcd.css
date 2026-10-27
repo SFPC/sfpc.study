@@ -39,11 +39,11 @@
       white #FFFFFF */
       /* --summer-25-background: #FFF; */
 
-    --winter-27-text: white;
-    --winter-27-background: black;
-    --winter-27-text-on-bg: #2153cc;
-    --winter-27-link: #fd7dff;
-    --winter-27-pill: #f550f8;
+    --winter-27-text: #DB5659;
+    --winter-27-background: #f0ebeb;
+    --winter-27-text-on-bg: #DB5659;
+    --winter-27-link: #DB5659;
+    --winter-27-pill: #DB5659;
 
     --fall-26-text: white;
     --fall-26-background: black;
@@ -408,7 +408,7 @@ select#allSections {
 /* /////////// begin WINTER 2027 STYLES  ///////////////////////////////*/
 
       .shell.winter-27 {
-        background: var(--winter-27-text-on-bg);
+        background: var(--winter-27-background);
       }
       .winter-27, 
       .winter-27.featured.session,
@@ -423,7 +423,6 @@ select#allSections {
       .winter-27.featured {
         background-position: center;
         background-size: cover;
-        background-image: url("images/sessions/winter-27/BG.jpg");
       }
       
       .winter-27, 
@@ -435,9 +434,8 @@ select#allSections {
   box-sizing: border-box;
   border-color: var(--winter-27-pill);
   text-shadow: none !important;
-  background-color: #2253cc !important;
 
-  
+
 }
 
 
@@ -625,7 +623,7 @@ select#allSections {
     }
     .winter-27.online-class .pill {
       color: white!important;
-      background-color: var(--fall-26-pill) ;
+      background-color: var(--winter-27-pill) ;
       padding: 0.2em;
       border-radius: 1em;
   }
