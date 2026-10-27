@@ -4598,7 +4598,7 @@ h5.shopify-buy__cart-toggle__title {
 
 }
 @media (min-width: 768px){
-  section .grid-2:first-of-type {
+  section:not(#blog *) .grid-2:first-of-type {
     position: sticky; 
     top:5vh;    
     align-self: flex-start;
