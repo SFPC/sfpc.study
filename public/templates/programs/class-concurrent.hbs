@@ -229,6 +229,13 @@
               {{/if}}
             </div>
           </div>
+          {{#if sponsor}}
+          <div class="details">
+            <div class="labels">sponsor</div>
+            <div class="labels-info" id="sponsor"><span style="">Scholarship support for this class provided by {{#if sponsorLogo}}<br><a href="{{sponsorLink}}"><img id="sponsorLogo" src="{{sponsorLogo}}"></a>{{else}}<a href="{{sponsorLink}}">{{sponsor}}</a>{{/if}}</span>
+            </div>
+          </div>
+          {{/if}}
 
           <p class="large apply hide-appsClosed">
             <a onclick="metaTrack()" class="special-button" href="{{applicationLink}}" target="_blank" id="application-link">{{#if workshop}}Sign Up{{else}}Apply{{/if}} Now</a>

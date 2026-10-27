@@ -551,7 +551,14 @@ background-size: cover;
 
 }
 
-
+.special-button {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 0.75em !important;
+    border-radius: 1.5vw;
+    padding: calc(10px + 0.7vw);
+}
 
 /* DUPLICATE THIS AND CREATE TYPE STYLE FOR SEASON */
 /*
@@ -588,6 +595,7 @@ font-size: calc(var(--large-text) * 0.2);
 .winter-27.session .title.class{
 font-size: calc(var(--large-text) * 1.2);
 }
+
 
         /* fall 26 */         
 
@@ -4539,7 +4547,10 @@ h5.shopify-buy__cart-toggle__title {
 
 
 
-
+#sponsorLogo {
+  width: 65%;
+  margin-bottom: 0.5vh;
+}
 
 
 

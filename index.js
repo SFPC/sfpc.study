@@ -2058,6 +2058,9 @@ function parseClassData(apiResponse){
   returnObj.session=parseRollup(classInfo["Session Name"])[0]?.plain_text
   returnObj.notifyDate=prettyDateString(classInfo["Notification Date"]?.date?.start)
   returnObj.getnotified=classInfo["Get Notified"]?.checkbox
+  returnObj.sponsor = classInfo["Sponsor"].rich_text[0]?.plain_text
+  returnObj.sponsorLogo=parseNotionData(classInfo["Sponsor Logo"])?.[0]
+  returnObj.sponsorLink = classInfo["Sponsor Link"]?.url
 
   return returnObj
 }
