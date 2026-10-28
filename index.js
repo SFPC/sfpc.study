@@ -1042,7 +1042,10 @@ app.get("/sessions/:slug", async (req, res) => {
     console.log("Intensive Session data", response)
     res.render("programs/session-intensive", response)
   }
-  else if(sessionType == "Concurrent" && sessionType != "External"){
+  else if(sessionType == "External"){
+    //skip
+  }
+  else {
     // console.log(sessionData)
     // const response = parseSessionData(sessionData)
     const response = await prepareSessionDataSimple(sessionData, req.params.slug)
