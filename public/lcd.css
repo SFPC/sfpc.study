@@ -488,20 +488,20 @@ select#allSections {
       }
       .winter-27 .special-button:hover {
 
-        background-color: var(--winter-27-text)
+        background-color: white !important;
       }
       .winter-27 #cost,
       .winter-27 .fixed-apply,
       .winter-27 .fixed-support,
       .winter-27 .home-intro span#session-name::after {
-          color: #000 !important;
+          color: #FFF !important;
           background: var(--winter-27-link) !important;
       }
 
 
       .winter-27 .fixed-apply:hover {
         color: var(--winter-27-link) !important;
-        background: var(--winter-27-text) !important;
+        background: white !important;
       }
 
       .winter-27 .block-text {
