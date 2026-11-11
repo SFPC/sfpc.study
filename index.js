@@ -1602,9 +1602,9 @@ async function prepareClassData(classData, classSlug){
     const foundOrgItem = organizers[foundOrgIdx]
     organizers.splice(foundOrgIdx, 1)
     organizers.unshift(foundOrgItem)
-    console.log(organizers)
+    // console.log(organizers)
   }
-  console.log(teachers);
+  // console.log(teachers);
   response.guests = cleanPersonData(guests);
   response.teachers = cleanPersonData(teachers);
   response.organizers = cleanPersonData(organizers);
@@ -2033,8 +2033,18 @@ function parseClassData(apiResponse){
   returnObj.endDate=prettyDateString(classInfo["Date"]?.date?.end)
   returnObj.startDate2=prettyDateString(classInfo["Date 2"]?.date?.start)
   returnObj.endDate2=prettyDateString(classInfo["Date 2"]?.date?.end)
+  returnObj.startDate3=prettyDateString(classInfo["Date 3"]?.date?.start)
+  returnObj.endDate3=prettyDateString(classInfo["Date 3"]?.date?.end)
   returnObj.numberOfClasses=classInfo["Classes"].number
-  returnObj.time=classInfo["Time"].rich_text[0]?.plain_text
+  let timeString = classInfo["Time"].rich_text[0]?.plain_text
+  console.log(timeString)
+  if(timeString?.includes(":")){
+    let times = timeString.split("\n")
+    returnObj.time = times.map((time) => time.slice(time.indexOf(":")+ 2).trim())
+  } else {
+    returnObj.time = [timeString];
+  }
+  console.log(returnObj.time);
   returnObj.appQuestion=classInfo["Application Question"].rich_text[0]?.plain_text
   returnObj.location=classInfo["Location"].rich_text[0]?.plain_text
   returnObj.cost=classInfo["Cost"]?.number

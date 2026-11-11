@@ -171,29 +171,32 @@
           {{/if}}
 
           <div class="details">
-            <div class="labels">Date </div>
+            <div class="labels">Date & Time </div>
             <div class="labels-info">
               <span id="date">
-                {{#if startDate2}}
-                Section 1: {{startDate}} to {{endDate}}<BR>
-                Section 2: {{startDate2}} to {{endDate2}}
+                {{#if startDate3}}
+                <strong>Section 1:</strong> {{time.[0]}}<br> {{startDate}} to {{endDate}}<BR>
+                <strong>Section 2:</strong> {{time.[1]}}<br> {{startDate2}} to {{endDate2}}<BR>
+                <strong>Section 3:</strong> {{time.[2]}}<br> {{startDate3}} to {{endDate3}}
+                {{else if startDate2}}
+                <strong>Section 1:</strong> {{time.[0]}}<br> {{startDate}} to {{endDate}}<BR>
+                <strong>Section 2:</strong> {{time.[1]}}<br> {{startDate2}} to {{endDate2}}
                 {{else if endDate}}
-                {{startDate}} to {{endDate}}
+                {{time.[0]}}<br> {{startDate}} to {{endDate}}
                 {{else}}
-                {{startDate}}
+                {{time.[0]}} {{startDate}}
                 {{/if}}
               </span>
-              {{#if startDate2}}<BR>{{/if}}{{#if numberOfClasses}}{{#if endDate}} (<span id="number-classes">{{numberOfClasses}}</span>
-              classes){{/if}}{{/if}}
+              {{#if startDate2}}<BR>{{/if}}
             </div>
           </div>
-          {{#if time}}
+          {{#if numberOfClasses}}{{#if endDate}}
           <div class="details">
-            <div class="labels">{{#if workshop}}schedule{{else}}Time{{/if}}</div>
-            <div class="labels-info" id="time"><span style="white-space:pre-line">{{time}}</span>
+            <div class="labels">length</div>
+            <div class="labels-info" id="time"> <span id="number-classes">{{numberOfClasses}}</span> weeks
             </div>
           </div>
-          {{/if}}
+          {{/if}}{{/if}}
           <div class="details">
             <div class="labels">Location </div>
             <div class="labels-info" id="location">{{location}}</div>
