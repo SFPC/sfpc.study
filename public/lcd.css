@@ -623,6 +623,12 @@ select#allSections {
       padding: 0.2em;
       border-radius: 1em;
   }
+      .winter-27.online-class .pill.closed {
+      color: var(--winter-27-pill) !important;
+      background-color:white  ;
+      padding: 0.2em;
+      border-radius: 1em;
+  }
 /* /////////// begin FALL 2026 STYLES  ///////////////////////////////*/
 
       .shell.fall-26 {
