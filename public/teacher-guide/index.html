@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SFPC Teacher Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Karla', sans-serif;
+        }
+
+        .spread {
+            display: none;
+            height: 100dvh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .spread.active {
+            display: flex;
+        }
+
+        .guide-header,
+        .bottom {
+            flex-shrink: 0;
+        }
+
+        .pages {
+            display: flex;
+            flex: 1;
+            min-height: 0;
+            overflow-y: auto;
+            /* 1px centre rule between the two pages */
+            background: linear-gradient(to right,
+                transparent calc(50% - .5px),
+                currentColor calc(50% - .5px),
+                currentColor calc(50% + .5px),
+                transparent calc(50% + .5px));
+        }
+
+        .page {
+            box-sizing: border-box;
+            width: 50%;
+            min-width: 0;
+            min-height: 100%;
+            padding: clamp(1.5rem, 4vw, 4rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #index .page {
+            justify-content: flex-start;
+        }
+
+        /* Tight lists under "Who to contact" and "Documents" */
+        #index .page + .page p {
+            margin: .3em 0;
+        }
+
+        #index h2 ~ h2 {
+            margin-top: 2rem;
+        }
+
+        .guide-header {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .guide-header strong {
+            font-size: 1.3rem;
+            font-weight: normal;
+        }
+
+        .path {
+            margin-top: .4rem;
+            font-size: .85rem;
+            overflow-wrap: anywhere;
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 3.2vw, 3.25rem);
+            line-height: 1.18;
+            font-weight: normal;
+            max-width: 22ch;
+            margin: 0;
+        }
+
+        nav.choices {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.35rem;
+        }
+
+        nav.choices a {
+            font-size: clamp(1rem, 1.4vw, 1.2rem);
+        }
+
+        .notes {
+            margin-top: 2rem;
+            max-width: 36rem;
+            font-size: .95rem;
+        }
+
+        details {
+            margin-top: .65rem;
+        }
+
+        details p {
+            line-height: 1.45;
+        }
+
+        .bottom {
+            border-top: 1px solid;
+            padding: .8rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            font-size: 1.1rem;
+        }
+
+        .bottom small {
+            font-size: inherit;
+        }
+
+        .start-over {
+            font-size: 1.07em;
+            color: black;
+            text-decoration: none;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        @media (max-width: 650px) {
+            .guide-header {
+                flex-wrap: wrap;
+            }
+
+            /* Stack pages; only the content area scrolls. */
+            .pages {
+                flex-direction: column;
+                overflow-x: hidden;
+                background: none;
+            }
+
+            .page,
+            #index .page {
+                width: 100%;
+                min-height: 0;
+                flex: none;
+                justify-content: flex-start;
+            }
+
+            .page + .page {
+                border-top: 1px solid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="book"></div>
+
+    <script>
+        // Content lives in a published Google Sheet (a copy is kept as "SFPC Teacher Guide.xlsx").
+        const SHEET_URL =
+            'https://docs.google.com/spreadsheets/d/e/2PACX-1vQSVVTa27xG-zav0HM_TsG-bMJTO6iTtbxM2R-u-iep7aeYBG2Zow8gAmLQ7Hga_0ylzVf4luHKsxEB/pub';
+
+        const GIDS = {
+            spreads: '1547447383',
+            choices: '1545884217',
+            annotations: '411763681',
+            resources: '946967862',
+            contacts: '772977064',
+            version: '1785782314'
+        };
+
+        const book = document.getElementById('book');
+        const esc = v => String(v ?? '').replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);
+        const currentId = () => decodeURIComponent(location.hash.slice(1)) || 'welcome';
+
+        let pages = [], resourceRows = [], contactRows = [];
+        let updatedDate = 'Date unavailable';
+
+        // CSV → array of objects keyed by the header row
+        function parseCSV(text) {
+            const rows = [];
+            let row = [], cell = '', quoted = false;
+            text = text.replace(/^﻿/, '');
+
+            for (let i = 0; i < text.length; i++) {
+                const c = text[i];
+                if (c === '"') {
+                    if (quoted && text[i + 1] === '"') { cell += '"'; i++; }
+                    else quoted = !quoted;
+                } else if (c === ',' && !quoted) {
+                    row.push(cell); cell = '';
+                } else if ((c === '\n' || c === '\r') && !quoted) {
+                    if (c === '\r' && text[i + 1] === '\n') i++;
+                    row.push(cell);
+                    if (row.some(Boolean)) rows.push(row);
+                    row = []; cell = '';
+                } else {
+                    cell += c;
+                }
+            }
+            row.push(cell);
+            if (row.some(Boolean)) rows.push(row);
+
+            const headers = (rows.shift() || []).map(h => h.trim());
+            return rows.map(cells =>
+                Object.fromEntries(headers.map((h, i) => [h, (cells[i] || '').trim()])));
+        }
+
+        function formatDate(value) {
+            const date = /^\d{4}-\d{2}-\d{2}$/.test(value || '')
+                ? new Date(`${value}T12:00:00`) : new Date(value);
+            return value && !isNaN(date)
+                ? date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+                : 'Date unavailable';
+        }
+
+        const header = (path, id = 'welcome') => `
+    <header class="guide-header">
+      <div>
+        <strong>SFPC Teacher Guide</strong>
+        <div class="path"><a href="#${esc(id)}">/teaching-at-sfpc/${esc(path)}/</a></div>
+      </div>
+      <a href="#index">Index</a>
+    </header>`;
+
+        const footer = () => `
+    <footer class="bottom">
+      <div class="navigation">
+        <a href="#welcome" class="start-over">⌂</a>
+        <a href="#" class="previous" hidden>Prev</a>
+        <a href="#" class="next" hidden>Next</a>
+      </div>
+      <small>Last updated on ${esc(updatedDate)}</small>
+    </footer>`;
+
+        const spread = (id, path, left, right) => `
+    <section id="${esc(id)}" class="spread">
+      ${header(path, id)}
+      <div class="pages">
+        <div class="page">${left}</div>
+        <div class="page">${right}</div>
+      </div>
+      ${footer()}
+    </section>`;
+
+        const resourceLinks = rows => rows
+            .filter(r => r.url)
+            .map(r => `<p><a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.label)}</a></p>`)
+            .join('');
+
+        const resourceHTML = id => resourceLinks(resourceRows
+            .filter(r => r.spread_ids.split('|').map(x => x.trim()).includes(id)));
+
+        function render() {
+            const spreads = pages.map(page => {
+                const notes = page.notes.map(([title, body]) =>
+                    `<details><summary>${esc(title)}</summary><p>${esc(body)}</p></details>`).join('');
+                const resources = resourceHTML(page.id);
+                const choices = page.choices.map(([id, label]) =>
+                    `<a href="#${esc(id)}">${esc(label)}</a>`).join('');
+
+                return spread(page.id, page.path, `
+          <h1>${esc(page.headline)}</h1>
+          ${notes ? `<div class="notes">${notes}</div>` : ''}
+          ${resources ? `<div class="notes"><details><summary>Related documents</summary>${resources}</details></div>` : ''}`,
+                    `<nav class="choices" aria-label="Choose what happens next">${choices}</nav>`);
+            }).join('');
+
+            const links = pages.map(p => `<p><a href="#${esc(p.id)}">${esc(p.headline)}</a></p>`).join('');
+            const contacts = contactRows.map(c =>
+                `<p>${esc(c.topic)}: <a href="mailto:${esc(c.email)}">${esc(c.name)}</a></p>`).join('');
+
+            book.innerHTML = spreads + spread('index', 'index',
+                `<h1>Index</h1><div class="notes">${links}</div>`,
+                `<h2>Who to contact</h2>${contacts || '<p>Contact information unavailable.</p>'}
+                 <h2>Documents</h2>${resourceLinks(resourceRows) || '<p>Documents unavailable.</p>'}`);
+            syncSpread();
+        }
+
+        function showOffline() {
+            book.innerHTML = spread('welcome', 'temporarily-out-of-office',
+                '<h1>This guide is currently offline. Please check back again later.</h1>',
+                '<nav><a href="">Try loading the guide again</a></nav>');
+            syncSpread();
+        }
+
+        async function loadSheets() {
+            try {
+                const [spreads, choices, annotations, resources, contacts, version] =
+                    await Promise.all(Object.entries(GIDS).map(async ([tab, gid]) => {
+                        const res = await fetch(`${SHEET_URL}?output=csv&gid=${gid}`, { cache: 'no-store' });
+                        if (!res.ok) throw Error(`Unable to load ${tab}: ${res.status}`);
+                        return parseCSV(await res.text());
+                    }));
+
+                const ids = new Set(spreads.map(p => p.id));
+                if (!ids.has('welcome')) throw Error('Spreads must include a welcome row.');
+                for (const c of choices) {
+                    if (!ids.has(c.from_id) || !ids.has(c.to_id)) {
+                        throw Error(`Unknown spread: ${c.from_id} → ${c.to_id}`);
+                    }
+                }
+
+                pages = spreads.map(page => ({
+                    ...page,
+                    choices: choices
+                        .filter(c => c.from_id === page.id)
+                        .sort((a, b) => a.order - b.order)
+                        .map(c => [c.to_id, c.question]),
+                    notes: annotations
+                        .filter(n => n.spread_id === page.id && n.title)
+                        .map(n => [n.title, n.body])
+                }));
+                resourceRows = resources;
+                contactRows = contacts;
+                updatedDate = formatDate(version.find(r => r.key === 'last_updated')?.value);
+                render();
+            } catch (error) {
+                console.warn('Google Sheets unavailable:', error);
+                showOffline();
+            }
+        }
+
+        // Show the spread named in the URL hash and update Prev/Next
+        function syncSpread() {
+            const id = currentId();
+            const target = document.getElementById(id) || document.getElementById('welcome');
+            if (target?.id !== id) console.warn(`Unknown spread ID: ${id}. Check the Spreads sheet.`);
+            document.querySelectorAll('.spread').forEach(s => s.classList.toggle('active', s === target));
+
+            const i = pages.findIndex(p => p.id === id);
+            const links = { previous: pages[i - 1], next: i >= 0 ? pages[i + 1] : null };
+            for (const [cls, page] of Object.entries(links)) {
+                document.querySelectorAll(`.${cls}`).forEach(a => {
+                    a.hidden = !page;
+                    if (page) a.href = `#${page.id}`;
+                });
+            }
+        }
+
+        window.addEventListener('hashchange', syncSpread);
+        loadSheets();
+    </script>
+</body>
+
+</html>
